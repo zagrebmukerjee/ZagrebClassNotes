@@ -6,7 +6,6 @@ cssclass: math-class-note
 
 tags: 
 - '#classnotes'
-- '#gov2001'
 - '#classIndex'
 ---
 

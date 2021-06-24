@@ -6,6 +6,7 @@ cssclass: math-class-note
 
 tags: 
 - '#classnotes'
+- '#classIndex'
 ---
 
 ### [[@Review of Calculus Index]]

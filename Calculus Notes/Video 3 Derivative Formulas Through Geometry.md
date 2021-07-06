@@ -53,7 +53,7 @@ $$ \frac{d}{dx} x^n = nx^{n-1}$$
 title: Algebraic Derivation of the above
 collapse:true
 
-![[Digression - properties of derivative#Derivative of powers of x]]
+![[Digression - properties of derivative algebraically#Derivative of powers of x]]
 
 ```
 

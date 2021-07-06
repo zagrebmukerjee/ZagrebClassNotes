@@ -18,17 +18,17 @@ https://www.youtube.com/watch?v=OprNqnHsVIA
 Let $x_1, \ldots$ be iid with mean $\mu$ and variance $\sigma^2$.
 These theorems tell us what happens with sampling from this population.
 
-$\bar{x}_n$ is the sample mean of a sample with size $n$. Take the average of the sample.  What can we say?
+$\bar{x}_n$ is the sample mean of a sample with size $n$.  What can we say about it?
 
 #### Law of Large Numbers: Intro
 
-$\bar{x}_n$ converges to $\mu$ as $n \to \infty$ with probability 1 - that is to say, the sample mean converges to the true mean. Sample mean is an RV but converges to a constant. 
+$\bar{x}_n$ converges to $\mu$ as $n \to \infty$ with probability 1 - that is to say, the sample mean (a random variable) converges to the true mean (a constant).
 
 What is the limit of a random variable? For each value of $\bar{x}$, those values converge to $\mu$.  
 
 Eg. What if $x_j \sim \text{Bernoulli}(p)$. Infinite sequence of coin tosses where prob of heads is $p$.
 
-Add up all these Bernoullis $1-n$ - converges to $p$ with probability $1$.  Probability $1$ means that we can't say it's _impossible_ to land HHHH... forever, but it won't. This is a result underpinning all parameter estimation. 
+Add up all these Bernoullis $1-n$ - converges to $p$ with probability $1$.  Probability $1$ means that we can't say it's _impossible_ to flip HHHH... forever, but it won't happen. This is a result underpinning all parameter estimation. 
 
 This is **not** the gambler's fallacy - I got tails 10 times in a row on a fair coin, I'm due for heads. The coin is memoryless. It works through "swamping" - the 10 tails in a row will be swamped as $n$ gets incredibly large relative to 10. 
 
@@ -77,7 +77,7 @@ Equivalent to the left side:
 
 $$\frac{\sum x_j - n\mu}{\sqrt{n}   \sigma}$$
 
-Assume that MGF (moment-generating function - what is that) of $x_i$ exists. 
+Assume that MGF ([[moment-generating function]]) of $x_i$ exists. 
 
 It suffices to show that the MGFs converge to the normal's MGF (a homework problem). 
 

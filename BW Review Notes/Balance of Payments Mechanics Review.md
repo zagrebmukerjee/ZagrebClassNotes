@@ -6,6 +6,7 @@ cssclass: BW-class-note
 
 tags: 
 - '#classnotes'
+- '#🚧'
 ---
 
 ### [[Balance of Payments Mechanics Review]]

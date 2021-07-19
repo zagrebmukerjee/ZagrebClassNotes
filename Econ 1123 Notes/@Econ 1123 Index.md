@@ -15,6 +15,8 @@ tags:
 [[1123 Class 2 - Intro to Sampling, Normal Distribution and Parameter Estimation]]
 [[1123 Class 3 - Hypothesis Testing]]
 [[1123 Class 4 - Univariate Regression, Regression Hypothesis Testing]]
+[[🚧1123 Class 5 - Intro to multivariate, causality, ceteris paribus, omitted variables]]
+[[1123 Class 6 - Multivariate Sampling Distribution, Hypothesis Testing, multicollinearity]]
 
 
 

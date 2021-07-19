@@ -38,7 +38,7 @@ This is the cumulative probability that a draw from $X$ will be at or below $a$.
 One of the most important distributions is the normal distribution. Why is it so important?
 
 - It crops up a lot in random places - human height in populations seems to be normally distributed, as are the circumferences of trees in a forest. 
-- More importantly, the [[Central Limit Theorem]] tells us that our estimators are normally distributed. 
+- More importantly, the [[Central Limit Thm and Law of Large Numbers|Central Limit Theorem]] tells us that our estimators are normally distributed. 
 
 The normal distribution is a symmetric bell shape. It's described by the mean $\mu$, the center of the bell, and the standard deviation $\sigma$, which gives the width of the bell. If $X$ is normally distributed, we write $X \sim \mathcal{N}(\mu, \sigma)$.
 
@@ -80,7 +80,7 @@ For large enough sample size $n$, the sample mean $\bar{x}$ approaches the popul
 
 Suppose that you can keep drawing (with replacements) samples of size $n$. For each sample, you'll get another $\bar{x}$. As we do this over and over, the histogram of those $\bar{x}$ describes the density of a distribution.^[This process of resampling over and over is called [[Monte Carlo Simulation.]]] This distribution is called the ==sampling distribution==. 
 
-The sampling distribution varies with $n$. For small $n$, it will approach the distribution of the underlying variable. However, as $n$ grows large, the [[Central Limit Theorem]] tells us that $\bar{x}$ becomes normally distributed with mean $\mu_X$ - more tightly distributed as $n$ gets bigger. This is true for all distributions of underlying $X$, making the CLT an extremely useful result. 
+The sampling distribution varies with $n$. For small $n$, it will approach the distribution of the underlying variable. However, as $n$ grows large, the [[Central Limit Thm and Law of Large Numbers|Central Limit Theorem]] tells us that $\bar{x}$ becomes normally distributed with mean $\mu_X$ - more tightly distributed as $n$ gets bigger. This is true for all distributions of underlying $X$, making the CLT an extremely useful result. 
 
 We can describe the bias of an estimator $\overset{\approx}{x}$  as $E(\overset{\approx}{x}) - \mu_X$. The quality of being centered on $\mu_X$ means that $\bar{x}$ is an ==unbiased== estimator of $\mu_X$. 
 
@@ -94,7 +94,7 @@ It turns out we can do this <font color="red">why??</font> based on one sample. 
 
 The estimate of the sampling error of the estimate is called the ==standard error==. This is crucial for hypothesis testing. 
 
-In summary - the Central Limit Theorem tells us that, as $n$ grows larger, $\bar{x} \sim \mathcal{N}(\mu_X, \sigma_X/\sqrt{n})$.
+In summary - the [[Central Limit Thm and Law of Large Numbers|Central Limit Theorem]] tells us that, as $n$ grows larger, $\bar{x} \sim \mathcal{N}(\mu_X, \sigma_X/\sqrt{n})$.
 
 
 <font color="red"> Discussion of hypothesis testing from this class moved to next class for coherence. </font>

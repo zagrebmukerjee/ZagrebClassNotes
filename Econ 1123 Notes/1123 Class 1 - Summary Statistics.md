@@ -1,4 +1,4 @@
----
+	---
 date updated: 2021-06-23 15:23
 
 notetype: "Math Class Note"

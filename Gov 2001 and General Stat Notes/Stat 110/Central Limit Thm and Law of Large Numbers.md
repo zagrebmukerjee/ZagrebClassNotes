@@ -8,8 +8,8 @@ tags:
 - '#classnotes'
 ---
 
-### [[Digression - Central Limit Thm and Law of Large Numbers]]
-Part of [[@Gov 2001 Index]]
+### [[Central Limit Thm and Law of Large Numbers]]
+Part of [[@Gov 2001 and Stats Index]]
 
 Drawn from Stat 110 lecture here
 

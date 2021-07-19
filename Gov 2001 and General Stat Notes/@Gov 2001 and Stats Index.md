@@ -9,7 +9,7 @@ tags:
 - '#classIndex'
 ---
 
-### [[@Gov 2001 Index]]
+### [[@Gov 2001 and Stats Index]]
 
 Graduate Methods for Political Scientists.
 
@@ -20,4 +20,11 @@ Lectures at: https://www.youtube.com/channel/UCtrwX29xpuWc9y0-0PKrHSQ/playlists
 
 #### Parts
 
-[[0. Likelihood Estimation (from project)]]
+[[🚧0. Likelihood Estimation (from project)]]
+
+
+#### Stat 110
+
+[[🚧Probability and Counting]]
+[[Central Limit Thm and Law of Large Numbers]]
+[[Markov's and Chebyshev's Inequalities]]

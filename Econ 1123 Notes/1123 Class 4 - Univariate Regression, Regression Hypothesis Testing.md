@@ -6,7 +6,6 @@ cssclass: math-class-note
 
 tags: 
 - '#classnotes'
-- '#🚧'
 ---
 
 ## [[1123 Class 4 - Univariate Regression, Regression Hypothesis Testing]]
@@ -124,7 +123,7 @@ Very similar to previous discussion of [[1123 Class 2 - Intro to Sampling, Norma
 
 This distribution tends towards a normal distribution <font color="red"> why????? </font>. The dispersion of that normal distribution is given by a standard error of the regression. 
 
-There are heteroskedasticity-robust and homoskedasticity-only versions of the standard error formula. We should always use the heteros version, since it maps to the homos-only version when homoskedasticity holds (for more, see [[2001  Robust Standard Errors]]). 
+There are heteroskedasticity-robust and homoskedasticity-only versions of the standard error formula. We should always use the heteros version, since it maps to the homos-only version when homoskedasticity holds (for more, see [[🚧2001  Robust Standard Errors]]). 
 
 #### Hypothesis testing on $\betahat$. 
 

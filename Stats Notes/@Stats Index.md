@@ -39,7 +39,7 @@ Lectures at: https://www.youtube.com/channel/UCtrwX29xpuWc9y0-0PKrHSQ/playlists
 
 
 #### Gov 2002
-[[2002.1 Basic Probability Review]]
+[[2002.1 Probability]]
 
 #### Stat 110
 

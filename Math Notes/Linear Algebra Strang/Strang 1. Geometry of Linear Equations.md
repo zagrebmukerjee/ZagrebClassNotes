@@ -6,7 +6,6 @@ cssclass: math-class-note
 
 tags: 
 - '#classnotes'
-- '#🚧'
 ---
 
 # [[Strang 1. Geometry of Linear Equations]]

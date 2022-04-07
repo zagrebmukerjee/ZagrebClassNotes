@@ -9,10 +9,10 @@ As Feynman said, "If you want to master something, teach it."
 #### Classes
 
 1. [Econ 1123](https://github.com/zagrebmukerjee/ZagrebClassNotes/tree/master/Econ%20Notes/Econ%201123%20Notes), Harvard Introductory Econometrics. The fundamentals are complete; missing discussion of specific topics like diff-in-diff, panel data. I probably won't update this
-2. Gov 2001, Harvard Quantitative Methods I. Overview of quantitative methods. Largely complete. 
-3. Linear Algebra 3B1B: Introduction to Linear Algebra by 3Blue1Brown on Youtube. Mostly complete.
-4. Gov 2002, Harvard Quantitative Methods II. Mid-level econometrics class with Gov focus. In progress
-5. 18.06, MIT Linear Algebra. Taught by Gilbert Strang, available on [OpenCourseWare](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/).
+2. [Gov 2001](https://github.com/zagrebmukerjee/ZagrebClassNotes/tree/master/Stats%20Notes/Gov%202001%20Notes), Harvard Quantitative Methods I. Overview of quantitative methods. Largely complete. 
+3. [Linear Algebra 3B1B](https://github.com/zagrebmukerjee/ZagrebClassNotes/tree/master/Math%20Notes/Linear%20Algebra%203B1B%20Notes): Introduction to Linear Algebra by 3Blue1Brown on Youtube. A high-level but thoughtful coverage of the topic. I recommend it as a companion to an LA class. Mostly complete.
+4. [Gov 2002](https://github.com/zagrebmukerjee/ZagrebClassNotes/tree/master/Stats%20Notes/Gov%202002%20Notes), Harvard Quantitative Methods II. Mid-level econometrics class with Gov focus. In progress
+5. 18.06, MIT Linear Algebra. Taught by Gilbert Strang, available on [OpenCourseWare](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/). In progress
 
 To be added: Econ 1011a, Honors Microeconomic Theory, once I find it.
 

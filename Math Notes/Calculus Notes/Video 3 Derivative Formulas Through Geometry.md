@@ -5,11 +5,10 @@ notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags: 
-- '#classnotes'
+- '#classnotes/math/calculus'
 ---
 
 ### [[Video 3 Derivative Formulas Through Geometry]]
-Part of [[@Review of Calculus Index]]
 
 
 #### Geometric Derivatives of Polynomials
@@ -43,7 +42,6 @@ dA &=& (x+dx)^2 - x^2\\
 \frac{dA}{dx} &=& \frac{f(x+dx) - f(x)}{dx}\\
 \end{array}$$
 where $f(x)= x^2$. 
-
 
 This generalizes to any polynomial:
 

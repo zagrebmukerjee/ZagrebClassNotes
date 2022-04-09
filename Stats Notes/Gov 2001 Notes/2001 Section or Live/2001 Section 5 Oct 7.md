@@ -9,7 +9,6 @@ tags:
 ---
 
 # [[2001 Section 5 Oct 7]]
-Part of [[@Stats Index]]
 
 
 - All estimators use either analytical or computational methods - some both. one computational method is MCMC simulation - drawing from the "likelihood grid"

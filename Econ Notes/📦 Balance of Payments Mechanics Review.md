@@ -5,12 +5,11 @@ notetype: "BW Class Note"
 cssclass: BW-class-note
 
 tags: 
-- '#classnotes'
-- [ ] '#🚧'
+- '#classnotes/econ'
+- '#📦'
 ---
 
-### [[🚧 Balance of Payments Mechanics Review]]
-Part of [[@Bridgewater Concepts Index]]
+### [[📦 Balance of Payments Mechanics Review]]
 
 ### What is the Balance of Payments?
 
@@ -57,7 +56,7 @@ Suppose countries A and B trade goods; and suppose demand for A's goods suddenly
 
 Citizens of B take Currency B, exchange it for Currency A, and buy goods from A; and citizens of A stop buying goods from B, hence stop buying currency B, and spend more domestically. 
 
-This results in pressure on Currency A to appreciate since more people are buying it. It also results in [[🚧 Kalecki Profits Model|inflationary pressure]]in A's goods, since more of A and B's citizens are now trying to buy the same amount of goods. 
+This results in pressure on Currency A to appreciate since more people are buying it. It also results in [[📦 Kalecki Profits Model|inflationary pressure]]in A's goods, since more of A and B's citizens are now trying to buy the same amount of goods. 
 
 Simultaneously, demand for B's goods has fallen, resulting in  pressures towards unemployment, a wider output gap, and deflation. 
 

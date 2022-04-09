@@ -9,7 +9,6 @@ tags:
 ---
 
 # [[2001 Section 11 Dec 2]]
-Part of [[@Stats Index]]
 
 
 The three keys to scientific measurement:

@@ -5,11 +5,10 @@ notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags: 
-- '#classnotes'
+- '#classnotes/math/calculus'
 ---
 
 #### [[Video 1 Essence of Calculus]]
-Part of [[@Review of Calculus Index]]
 
 ##### Area of a Circle
 

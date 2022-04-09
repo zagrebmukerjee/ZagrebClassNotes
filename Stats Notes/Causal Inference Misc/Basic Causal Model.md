@@ -5,11 +5,11 @@ notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags: 
-- '#classnotes'
-- '#🚧'
+- '#classnotes/stats/causalinf'
 ---
 
 # [[Basic Causal Model]]
+Part of [[@Stats Index]]
 
 Drawing on [[Angrist and Imbens 1995 Identification and Estimation of Local Average Treatment Effects]]
 

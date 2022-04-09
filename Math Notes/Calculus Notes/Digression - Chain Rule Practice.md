@@ -5,11 +5,10 @@ notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags: 
-- '#classnotes'
+- '#classnotes/math/calculus'
 ---
 
 ### [[Digression - Chain Rule Practice]]
-Part of [[@Review of Calculus Index]]
 
 
 Some product and chain rule problems:

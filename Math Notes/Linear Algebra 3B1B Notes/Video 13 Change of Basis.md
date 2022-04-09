@@ -5,11 +5,10 @@ notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags: 
-- '#classnotes'
+- '#classnotes/math/linalg'
 ---
 
 #### [[Video 13 Change of Basis]]
-Part of [[@Review of Linear Algebra Index]]
 
 ##### Overview
 

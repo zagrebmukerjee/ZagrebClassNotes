@@ -5,11 +5,10 @@ notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags: 
-- '#classnotes'
+- '#classnotes/math/linalg'
 ---
 
 #### [[Video 10 Cross Product]]
-Part of [[@Review of Linear Algebra Index]]
 
 ##### Length of the cross product
 

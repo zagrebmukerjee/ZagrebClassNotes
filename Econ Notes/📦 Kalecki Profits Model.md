@@ -5,11 +5,11 @@ notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags: 
-- '#classnotes'
-- '#🚧'
+- '#classnotes/econ'
+- '#📦'
 ---
 
-## [[🚧 Kalecki Profits Model]]
+## [[📦 Kalecki Profits Model]]
 
 The workers in a closed economy earn total wages $W$. Capitalists earn no wage, but make profits $P$. The firms' revenues are split into profits and wages. The workers and capitalists consume: $C_w$ and $C_c$. The capitalists can also invest $I$. 
 

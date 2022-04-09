@@ -5,12 +5,10 @@ notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags:
-  - '#classNotes'
-  - '#classDigression'
+- '#classnotes/math/linalg'
 ---
 
 #### [[Digression - LinAlg SemiProof 1]]
-Part of [[@Review of Linear Algebra Index]]
 
 
 Theorem: Let  $v , w$ be vectors  in $\mathbb{R^2}$. For all $x$ in $\mathbb{R^2}$, there exist scalars $a$ and $b$ such that $x = av + bw$ if and only if

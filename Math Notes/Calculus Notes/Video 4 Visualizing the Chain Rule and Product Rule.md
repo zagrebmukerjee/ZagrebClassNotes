@@ -5,11 +5,10 @@ notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags: 
-- '#classnotes'
+- '#classnotes/math/calculus'
 ---
 
 ### [[Video 4 Visualizing the Chain Rule and Product Rule]]
-Part of [[@Review of Calculus Index]]
 
 
 There are basically three ways of combining two functions: addition, multiplication, and function composition. (subtraction and divison are combinations of these). How do these transform the derivative?

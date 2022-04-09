@@ -5,12 +5,13 @@ notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags: 
-- '#classnotes'
-- '#🚧'
+- '#classnotes/econ/econ1123'
 ---
 
-## [[🚧1123 Class 5 - Intro to multivariate, causality, ceteris paribus, omitted variables]]
-Part of [[@Econ 1123 Index]]
+# Abandoned
+superseded by [[2002.5 Regression#Controlling For Things]]
+
+## [[z1123 Class 5 - Intro to multivariate, causality, ceteris paribus, omitted variables]]
 
 
 What makes a good control

@@ -1,11 +1,11 @@
-	---
+---
 date updated: 2021-06-23 15:23
 
 notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags: 
-- '#classnotes'
+- '#classnotes/econ/econ1123'
 ---
 
 ## [[1123 Class 1 - Summary Statistics]]

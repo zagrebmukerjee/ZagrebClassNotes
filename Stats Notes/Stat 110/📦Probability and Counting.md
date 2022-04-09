@@ -6,8 +6,8 @@ cssclass: math-class-note
 
 tags: 
 - '#classnotes'
-- '#🚧'
+- '#📦'
 ---
 
-## [[🚧Probability and Counting]]
+## [[📦Probability and Counting]]
 Part of [[@Stats Index]]

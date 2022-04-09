@@ -5,11 +5,10 @@ notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags:
-  - '#classNotes'
+- '#classnotes/math/linalg'
 ---
 
 #### [[Video 1 Essence of Linear Algebra]]
-Part of [[@Review of Linear Algebra Index]]
 
 
 Emphasis on _geometric_ interpretation of linear algebra concepts.

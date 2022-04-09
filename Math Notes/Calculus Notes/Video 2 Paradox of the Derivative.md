@@ -5,11 +5,10 @@ notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags: 
-- '#classnotes'
+- '#classnotes/math/calculus'
 ---
 
 ### [[Video 2 Paradox of the Derivative]]
-Part of [[@Review of Calculus Index]]
 
 #### Overview
 

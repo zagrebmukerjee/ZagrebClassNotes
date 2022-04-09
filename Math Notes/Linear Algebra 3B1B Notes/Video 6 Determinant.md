@@ -5,11 +5,10 @@ notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags:
-  - '#classNotes'
+- '#classnotes/math/linalg'
 ---
 
 #### [[Video 6 Determinant]]
-Part of [[@Review of Linear Algebra Index]]
 
 Some linear transformations "stretch" space - others "squish" it. 
 

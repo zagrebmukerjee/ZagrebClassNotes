@@ -9,7 +9,6 @@ tags:
 ---
 
 # [[2001 Section 6 Oct 21 Binary Outcomes]]
-Part of [[@Stats Index]]
 
 
 Assumptions of logistic model

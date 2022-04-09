@@ -5,11 +5,10 @@ notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags: 
-- '#classnotes'
+- '#classnotes/math/linalg'
 ---
 
 # [[Strang 1. Geometry of Linear Equations]]
-Part of [[@Review of Linear Algebra Index]]
 
 Fundamental goal of linear algebra - solve systems of linear equations. 
 

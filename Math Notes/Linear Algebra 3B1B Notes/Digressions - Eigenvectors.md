@@ -5,12 +5,10 @@ notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags: 
-- '#classnotes'
-- '#classDigression'
+- '#classnotes/math/linalg'
 ---
 
 #### [[Digressions - Eigenvectors]]
-Part of [[@Review of Linear Algebra Index]]
  
  ##### Finding Eigenvectors
  

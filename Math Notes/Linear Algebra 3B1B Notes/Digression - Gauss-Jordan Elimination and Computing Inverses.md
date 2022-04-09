@@ -5,12 +5,10 @@ notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags:
-  - '#classNotes'
-  - '#classDigression'
+- '#classnotes/math/linalg'
 ---
 
 #### [[Digression - Gauss-Jordan Elimination and Computing Inverses]]
-Part of [[@Review of Linear Algebra Index]]
 
 - [[#Solving Linear Systems of Equations|Solving Linear Systems of Equations]]
 - [[#Finding Inverses with the power of Gauss|Finding Inverses with the power of Gauss]]

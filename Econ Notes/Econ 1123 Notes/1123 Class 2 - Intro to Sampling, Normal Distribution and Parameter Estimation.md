@@ -5,7 +5,7 @@ notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags: 
-- '#classnotes'
+- '#classnotes/econ/econ1123'
 ---
 
 ## [[1123 Class 2 - Intro to Sampling, Normal Distribution and Parameter Estimation]]
@@ -14,7 +14,7 @@ Part of [[@Econ 1123 Index]]
 
 ### Population and Density
 
-Imagine the population of all workers in Boston - maybe about 300k people. We want to estimate $X$ - their annual income. Suppose you have a "master file" - a list of everyone in the population with a phone number. You could call everyone and get their income- a ==census==. 
+Imagine the population of all workers in Boston - maybe about 300k people. We want to estimate $X$ - their annual income. Suppose you have a "master file" - a list of everyone in the population with a phone number. You could call everyone and get their income- a <font color=gree>census</font>. 
 
 If you were to create a frequency histogram of these incomes, and draw an upper envelope of that histogram, you could approximate the ==density== of $X$. 
 

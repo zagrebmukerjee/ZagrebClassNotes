@@ -9,7 +9,6 @@ tags:
 ---
 
 #### [[Video 3 Linear Transformations and Matrices]]
-Part of [[@Review of Linear Algebra Index]]
 
 - [[#How to Do Transformations|How to Do Transformations]]
 - [[#Some general transformations:|Some general transformations:]]

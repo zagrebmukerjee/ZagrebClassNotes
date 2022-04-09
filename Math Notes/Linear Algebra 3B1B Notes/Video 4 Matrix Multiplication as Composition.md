@@ -5,11 +5,11 @@ notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags:
-  - '#classNotes'
+- '#classnotes/math/linalg'
 ---
 
 #### [[Video 4 Matrix Multiplication as Composition]]
-Part of [[@Review of Linear Algebra Index]]
+
 - [[#How to apply two successive transformations?|How to apply two successive transformations?]]
 - [[#Computing Transformation Composition: Example|Computing Transformation Composition: Example]]
 - [[#General Transformation Composition: Advanced|General Transformation Composition: Advanced]]

@@ -5,11 +5,10 @@ notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags: 
-- '#classnotes'
+- '#classnotes/math/calculus'
 ---
 
 ### [[Digression - properties of derivative algebraically]]
-Part of [[@Review of Calculus Index]]
 
 In [[Video 2 Paradox of the Derivative|Video 2]] we found the derivative of $s(t) = t^3$, $\frac{ds}{dt} = 3t^2$. We found this by expanding out the fraction $\frac{s(t + dt) - s(t)}{dt}$, then dropping all the $dt$ terms.  What else can we extract from this function for univariate derivatves?
 

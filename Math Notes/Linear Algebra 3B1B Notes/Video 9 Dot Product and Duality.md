@@ -5,11 +5,10 @@ notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags:
-  - '#classNotes'
+- '#classnotes/math/linalg'
 ---
 
 #### [[Video 9 Dot Product and Duality]]
-Part of [[@Review of Linear Algebra Index]]
 
 ##### Geometric interpretation of Dot Product
 

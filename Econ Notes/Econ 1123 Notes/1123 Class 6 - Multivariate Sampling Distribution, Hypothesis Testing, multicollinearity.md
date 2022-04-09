@@ -5,8 +5,7 @@ notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags: 
-- '#classnotes'
-- '#🚧'
+- '#classnotes/econ/econ1123'
 ---
 
 ## [[1123 Class 6 - Multivariate Sampling Distribution, Hypothesis Testing, multicollinearity]]

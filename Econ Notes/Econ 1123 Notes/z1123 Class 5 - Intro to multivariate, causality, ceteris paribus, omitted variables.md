@@ -9,7 +9,7 @@ tags:
 ---
 
 # Abandoned
-superseded by [[2002.5 Regression#Controlling For Things]]
+superseded by [[2002.5 Regression - Covariates#Controlling For Things]]
 
 ## [[z1123 Class 5 - Intro to multivariate, causality, ceteris paribus, omitted variables]]
 

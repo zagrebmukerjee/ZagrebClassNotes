@@ -40,7 +40,7 @@ Says something less than the above.
 
 For any $C >0$, probability $P(|\bar{x}_n - \mu | > C) \to 0$ as $n \to \infty$. This is just a way of saying that as $n$ gets large, $\bar{x}_n$ goes towards $\mu$. 
 
-We use [[Chebyshev's Inequality]] here: 
+We use [[Markov's and Chebyshev's Inequalities#Chebyshev's Inequality|Chebyshev's Inequality]] here: 
 
 $$P(|\bar{x}_n - \mu) > C) \leq \frac{\text{Var}(\bar{x}_n)}{C^2}$$
 

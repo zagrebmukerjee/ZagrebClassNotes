@@ -6,6 +6,7 @@ cssclass: math-class-note
 
 tags: 
 - '#classnotes/stats/causalinf'
+- '#methods/quant/causalinf'
 ---
 
 # [[Confounding]]

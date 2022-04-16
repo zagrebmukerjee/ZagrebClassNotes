@@ -23,3 +23,42 @@ in other words, entry $C_{ij}$ is the dot product of row $i$ of $A$ and column $
 Another way to get $C$:
 
 $$C = \begin{bmatrix}AB_{*,1}, AB_{*,2}, \ldots AB_{*,k}\end{bmatrix}$$
+Looking at that first column, 
+
+$$AB_{*,1} = A\begin{bmatrix} B_{1,1} \\
+B_{2,1} \\
+\vdots \\
+B_{n,1}\end{bmatrix} = 
+B_{1,1} \begin{bmatrix} A_{1,1} \\
+A_{2,1} \\
+\vdots \\
+A_{m,1}\end{bmatrix} + 
+\cdots + 
+B_{n,1} \begin{bmatrix} A_{1,1} \\
+A_{2,1} \\
+\vdots \\
+A_{m,1}\end{bmatrix} 
+$$
+
+In other words, $C$ is a linear combination of the columns of $A$. 
+
+
+A third way to get $C$: 
+
+$$ C = \begin{bmatrix} A_{1,*}B \\
+A_{2,*}B \\
+\vdots \\
+A_{m,*}B \\ 
+\end{bmatrix}
+$$
+
+Then our first row is:
+
+$$A_{1,*}B = \begin{bmatrix} A_{1,1} & A_{1,2} & \cdots & A_{1,n} \end{bmatrix} \;B = A_{1,1} B_{1,*} + \cdots + A_{1,n} B_{1,*}$$
+
+So $C$ is a linear combination of the rows of $B$. 
+
+
+A fourth way: We know the entries are the  products of the rows of $A$ and the columns of $B$. What is the product of the columns of $A$ and the rows $B$? Let's take the first one:
+
+$$ \begin{$$

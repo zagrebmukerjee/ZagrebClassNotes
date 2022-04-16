@@ -10,8 +10,12 @@ tags:
 
 # [[Strang 2. Elimination]]
 
-- How to solve systems of equations? Turn it into an augmented matrix and eliminate.  
-- Want to do elementary row operations until you have an upper-triangular matrix. Then can 'back-substitute'
+How to solve systems of equations? Turn it into an augmented matrix and eliminate.  
+
+Want to do elementary row operations until you have an upper-triangular matrix. Then can 'back-substitute'.
+Elementary row operations:
+- Add $c$ times a row to another row
+- Switch rows
 
 Recall ex. from last lecture: 
 
@@ -38,8 +42,53 @@ $$
 \end{bmatrix}
 $$
 
-- The diagonal elements of the reduced matrix are 'pivots'. Determinants are product of pivots
-- The pivots can't be zero. If they are forced to be, and you can't fix it through exchanging or adding rows, then system is unsolvable $\iff$ matrix is singular
+Think of what we did in terms of the full system of equations again. We added the equations to each other until we get: 
 
-- Suppose $A$ is a matrix and $U$ is the upper-triangular matrix resulting from elimination. Let $E_1$ be the matrix that represents the first step of elimination - i.e., if elimination has $n$ steps, $E_n E_{n-1} \ldots E_2 E_1 A = u$. 
-- $E$ is the product of those elimination matrices. 
+$$\begin{aligned}
+2x - y   &= 0 \\
+3y/2  -z &= -1 \\
+   -6z &= 2 \\
+\end{aligned}$$
+This is the same sort of thing we would try to do if solving in the old-fashioned way: isolate a variable, then substitute into the other equations.
+
+The diagonal elements of the reduced matrix are 'pivots'. Determinants are product of pivots
+
+The pivots can't be zero. If they are forced to be, and you can't fix it through exchanging or adding rows, then system is unsolvable $\iff$ matrix is singular <font color=red>Why is this the same as linearly dependent columns</font>
+
+Suppose $A$ is a matrix and $U$ is the upper-triangular matrix resulting from elimination. Let $E_1$ be the matrix that represents the first step of elimination - i.e., if elimination has $n$ steps, $E_n E_{n-1} \ldots E_2 E_1 A = u$. 
+
+$E$ is the product of those elimination matrices. 
+
+
+In the above example, we first added half the first row to the second.
+
+$$E_1 = \begin{bmatrix}
+1 & 0 & 0\\
+1/2 & 1 & 0 \\
+0 & 0 & 1 \\
+\end{bmatrix}$$
+Then we add twice the new second row to the third:
+
+$$E_2 = \begin{bmatrix}
+1 & 0 & 0\\
+0 & 1 & 0 \\
+0 & 2 & 1 \\
+\end{bmatrix}$$
+
+So to get the full $E$, we can say:
+
+$$E = E_2 E_1 = \begin{bmatrix}
+1 & 0 & 0\\
+0 & 1 & 0 \\
+0 & 2 & 1 \\
+\end{bmatrix}\begin{bmatrix}
+1 & 0 & 0\\
+1/2 & 1 & 0 \\
+0 & 0 & 1 \\
+\end{bmatrix} = \begin{bmatrix}
+1 & 0 & 0\\
+1/2 & 1 & 0 \\
+1 & 2 & 1 \\
+\end{bmatrix}$$
+
+We can see the way in which $E$ combines our operations. We did $R_2' = R_2 + (1/2) R_1$ and then $R_3' = R_3 + R_2'$. So  

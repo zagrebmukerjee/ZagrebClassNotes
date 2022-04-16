@@ -10,4 +10,3 @@ tags:
 ---
 
 # [[Strang 3. Multiplication and Inverses]]
-Part of [[@Review of Linear Algebra Index]]

@@ -14,19 +14,17 @@ The fundamental goal of linear algebra - solve systems of linear equations.
 
 Suppose you have a system of $n$ equations and $n$ unknowns. 
 
-Start with the 'row' picture. 1 equation at a time
-Then the 'column' picture. new, but important.
-
-Combine those into the 'matrix' form using matrix A
-
-### Linear Equations
+There are a few ways to represent the system. 
 
 ##### Row picture
 
-$2x - y = 0$
-$-x + 2y = 3$
+We can start with the 'row' picture. This is what we're used to. Two equations of variables.  
 
-
+$$
+\begin{aligned}2x - y &= 0\\
+-x + 2y &= 3\\
+\end{aligned}
+$$
 The 'row' picture. What are points in xy plane that solve the first row equation? e.g. 0,0; 1,2; and a straight line through them
 
 Second eqn: -3,0; -1,1 then a line. 

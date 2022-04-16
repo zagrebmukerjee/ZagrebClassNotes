@@ -25,13 +25,16 @@ $$
 -x + 2y &= 3\\
 \end{aligned}
 $$
-The 'row' picture. What are points in xy plane that solve the first row equation? e.g. 0,0; 1,2; and a straight line through them
+We can think of each row as a line in $\mathbb{R}^2$. What are all the points that satisfy $2x -y = 0$? What about $-x + 2y =3$? 
 
-Second eqn: -3,0; -1,1 then a line. 
-
-Where do these lines meet? 1,2. Solves both equations. Necessarily a unique solution - unless parallel
+Where do these lines meet? $1,2$. This solves both equations. 
+Two lines can either meet in one place, overlap, or be parallel. It follows that this system of equations - and indeed any such system - has either one solution, no solutions, or infinitely many. 
 
 ##### Column Picture
+
+Suppose the coefficients on $x$ are one vector - $(2,-1)$ - and those on $y$ another - $(-1,2)$. What linear combination of these vectors gets us the result $(0,3)$? 
+
+If the vectors are parallel, and $b$ lies off their line, then we're doomed. Otherwise we are OK.
 
 $$x \left[\begin{matrix}
 2 \\ -1
@@ -45,16 +48,26 @@ y \left[\begin{matrix}
 \end{matrix}\right]
 $$
 
-Combine these two vectors in the right amount to get the result. i.e. we want to find the right linear combination of the columns that creates the RHS
 
-So draw col 1 and col 2 as vectors. 
+Draw col 1 and col 2 as vectors. 
 
 ![[Pasted image 20220308203534.png]]
 
-If I took all the possible $x$ and $y$ values - you can get any RHS. we will return to this
+If I took all the possible $x$ and $y$ values, I could get any RHS - I could reach anywhere in $\mathbb{R}^2$
 
 
-##### 3 dimensional 
+##### 3-D Case
+
+Now we can think of a system with 3 unknowns and 3 equations. 
+
+The row picture: we have 3 equations, that makes 3 planes. A unique soln. Unless two are parallel ? or constituent lines of the planes are parallel?
+
+$$\begin{aligned}
+2x &- y &  &= 0 \\
+-1x &+ 2y & -z &= -1 \\
+& - 3y & -4z &= 4 \\
+\end{aligned}$$
+
 
 Columns: 
 $$x \left[\begin{matrix}
@@ -73,7 +86,6 @@ z \left[\begin{matrix}
 $$
 
 
-The row picture: we have 3 equations, that makes 3 planes. A unique soln. Unless two are parallel ? or constituent lines of the planes are parallel?
 
 The column picture: see above. The LHS is a linear combination of 3 vectors, each a 3d vector. 
 

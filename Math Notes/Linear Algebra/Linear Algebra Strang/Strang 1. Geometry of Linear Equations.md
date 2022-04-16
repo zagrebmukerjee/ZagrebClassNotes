@@ -10,9 +10,9 @@ tags:
 
 # [[Strang 1. Geometry of Linear Equations]]
 
-Fundamental goal of linear algebra - solve systems of linear equations. 
+The fundamental goal of linear algebra - solve systems of linear equations. 
 
-Suppose a system of $n$ equations and $n$ unknowns. 
+Suppose you have a system of $n$ equations and $n$ unknowns. 
 
 Start with the 'row' picture. 1 equation at a time
 Then the 'column' picture. new, but important.
@@ -23,21 +23,9 @@ Combine those into the 'matrix' form using matrix A
 
 ##### Row picture
 
-2x - y = 0
--x + 2y = 3
+$2x - y = 0$
+$-x + 2y = 3$
 
-$$
-\left[
-\begin{matrix}
-2 & -1 \\
--1 & 2 \\
-\end{matrix}
-\right]
-\left[
-\begin{matrix} x \\ y \end{matrix}
-\right]
-= \left[\begin{matrix} 0 \\ 3 \end{matrix}\right]
-$$
 
 The 'row' picture. What are points in xy plane that solve the first row equation? e.g. 0,0; 1,2; and a straight line through them
 
@@ -70,8 +58,6 @@ If I took all the possible $x$ and $y$ values - you can get any RHS. we will ret
 
 ##### 3 dimensional 
 
-
-
 Columns: 
 $$x \left[\begin{matrix}
 2 \\ -1 \\ 0 \\ 
@@ -103,4 +89,20 @@ For the example $A$ above, ans. is yes. It fails if all 3 columns lie in the sam
 
 More generally, problem if any col is linear combo of any of the others. These are _singular_ matrices
 
+
+##### Matrix 
+
+
+$$
+\left[
+\begin{matrix}
+2 & -1 \\
+-1 & 2 \\
+\end{matrix}
+\right]
+\left[
+\begin{matrix} x \\ y \end{matrix}
+\right]
+= \left[\begin{matrix} 0 \\ 3 \end{matrix}\right]
+$$
 

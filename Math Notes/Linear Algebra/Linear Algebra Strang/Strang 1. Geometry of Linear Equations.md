@@ -53,23 +53,42 @@ Draw col 1 and col 2 as vectors.
 
 ![[Pasted image 20220308203534.png]]
 
-If I took all the possible $x$ and $y$ values, I could get any RHS - I could reach anywhere in $\mathbb{R}^2$
+If I took all the possible $x$ and $y$ values, I could get any RHS - I could reach anywhere in $\mathbb{R}^2$.
+
+
+##### Matrix 
+
+The matrix representation is a useful shorthand. Conversely, problems like this in matrix land can be thought of in either the row picture or the column picture. 
+
+$$
+\left[
+\begin{matrix}
+2 & -1 \\
+-1 & 2 \\
+\end{matrix}
+\right]
+\left[
+\begin{matrix} x \\ y \end{matrix}
+\right]
+= \left[\begin{matrix} 0 \\ 3 \end{matrix}\right]
+$$
 
 
 ##### 3-D Case
 
 Now we can think of a system with 3 unknowns and 3 equations. 
 
-The row picture: we have 3 equations, that makes 3 planes. A unique soln. Unless two are parallel ? or constituent lines of the planes are parallel?
-
 $$\begin{aligned}
-2x &- y &  &= 0 \\
--1x &+ 2y & -z &= -1 \\
-& - 3y & -4z &= 4 \\
+2x - y   &= 0 \\
+-x + 2y  -z &= -1 \\
+ - 3y  -4z &= 4 \\
 \end{aligned}$$
+Each row defines a plane. There is a unique solution if : two of the planes intersect at a line and the third plane intersects at a point.
 
+If any of the two planes overlap, there are infinite solutions; if they are parallel, none <font color=red>what about if they form a triangular prism?? What's the general form of that case</font>
 
-Columns: 
+The column picture: see above. The LHS is a linear combination of 3 vectors, each a 3d vector. 
+
 $$x \left[\begin{matrix}
 2 \\ -1 \\ 0 \\ 
 \end{matrix}\right] + 
@@ -86,33 +105,11 @@ z \left[\begin{matrix}
 $$
 
 
-
-The column picture: see above. The LHS is a linear combination of 3 vectors, each a 3d vector. 
-
-
 But take a different RHS - eg $[1 \; 1 \; 3]$, eg take 1 of first, one of second, none of third
-
 
 Now think about all $b$; all possible RHS. Can I solve $Ax = b$ for every $b$? Do the linear combinations of the columns fill 3-D space? 
 
 For the example $A$ above, ans. is yes. It fails if all 3 columns lie in the same plane. eg if col 3 is sum of col 2 and col 1
 
-More generally, problem if any col is linear combo of any of the others. These are _singular_ matrices
-
-
-##### Matrix 
-
-
-$$
-\left[
-\begin{matrix}
-2 & -1 \\
--1 & 2 \\
-\end{matrix}
-\right]
-\left[
-\begin{matrix} x \\ y \end{matrix}
-\right]
-= \left[\begin{matrix} 0 \\ 3 \end{matrix}\right]
-$$
+More generally, problem if any col is linear combo of any of the others. This makes a matrix *singular*.
 

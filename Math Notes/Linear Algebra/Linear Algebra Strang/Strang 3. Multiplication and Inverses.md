@@ -19,6 +19,7 @@ Let $A$ be a matrix: then $A_{i,*}$ is the $i^{th}$ row of $A$, and $A_{*,j}$ th
 
 Suppose matrices $A$ and $B$. $AB$ is defined if $A$ is $m \times n$ and $B$ is $n \times k$; we can say that $A$ and $B$ are 'conformable'. If they are, then let $AB = C$;
 
+$$ C_{i,j} = \sum_{\rho = 1}^n A_{i,\rho}B_{\rho,j}$$
 $$C_{i,j} = A_{i,*} \cdot B_{*,j}$$
 in other words, entry $C_{ij}$ is the dot product of row $i$ of $A$ and column $j$ of $B$. 
 
@@ -100,3 +101,5 @@ A_1B_1 + A_2 B_3 &|& A_1B_2 + A_3 B_4 \\
 A_3B_1 + A_4 B_3  &|& A_3 B_2 + A_4 B_4 
 \end{bmatrix}
 $$
+
+Apparently not even Gauss could easily see that it worked. 

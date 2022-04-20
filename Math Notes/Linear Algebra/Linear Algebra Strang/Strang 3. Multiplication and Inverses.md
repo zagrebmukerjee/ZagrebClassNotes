@@ -6,7 +6,6 @@ cssclass: math-class-note
 
 tags: 
 - '#classnotes/math/linalg'
-- '#🚧'
 ---
 
 # [[Strang 3. Multiplication and Inverses]]
@@ -131,5 +130,39 @@ c + 2d &= 0 \\
 $$
 
 We can solve this system of equations with a $4 \times 4$ matrix. 
+```ad-example
+title: 4x4 Elimination
+collapse:true
 
-```ad-q
+$$\begin{bmatrix}
+1 & 2 & 0 & 0 \\
+0 & 0 & 1 & 2 \\
+3 & 7 & 0 & 0 \\
+0 & 0 & 3 & 7 \\
+\end{bmatrix}\begin{bmatrix} a \\ b \\ c \\ d \end{bmatrix} = \begin{bmatrix} 1 \\ 0 \\ 0 \\ 1 \end{bmatrix}$$
+
+$$\begin{bmatrix}
+1 & 2 & 0 & 0 &|& 1 \\
+0 & 0 & 1 & 2 &|& 0\\
+3 & 7 & 0 & 0 &|& 0\\
+0 & 0 & 3 & 7 &|& 1\\
+\end{bmatrix}$$
+$$\begin{bmatrix}
+1 & 0 & 0 & 0 &|& 7 \\
+0 & 1 & 0 & 0 &|& -3\\
+0 & 0 & 1 & 0 &|& -2\\
+0 & 0 & 0 & 1 &|& 1\\
+\end{bmatrix}$$
+
+```
+
+Given the block structure of the above, we can also stack this up into a different kind of augmented matrix. 
+
+As another perspective: Suppose I have $B$ such that $BA = I$. $B$ then represents an elimination matrix - specifically, the sequence of row operations that turns $A$ into $I$. I can find that matrix through Gauss-Jordan elimination, using an augmented matrix to keep track of the elimination steps I do. 
+
+$$\begin{bmatrix} 1 & 2 &|& 1 & 0 \\ 3 & 7 &|& 0 & 1\end{bmatrix}$$
+$$\begin{bmatrix} 1 & 2 &|& 1 & 0 \\ 0 & 1 &|& -3 & 1\end{bmatrix}$$
+$$\begin{bmatrix} 1 & 0 &|& 7 & -2 \\ 0 & 1 &|& -3 & 1\end{bmatrix}$$
+Let's check: 
+$$\begin{bmatrix} 1 & 2 \\ 3 & 7\end{bmatrix}\begin{bmatrix} 7 & -2 \\ -3 & 1\end{bmatrix} = \begin{bmatrix} 7 - 3(2) & -2 + 2 \\ 3(7) - 7(3) & -2(3) + 7\end{bmatrix} = \begin{bmatrix} 1 & 0 \\ 0 & 1\end{bmatrix}$$
+

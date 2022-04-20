@@ -102,4 +102,34 @@ A_3B_1 + A_4 B_3  &|& A_3 B_2 + A_4 B_4
 \end{bmatrix}
 $$
 
-Apparently not even Gauss could easily see that it worked. 
+Apparently not even Gauss could easily see that it worked. I certainly can't.
+
+## Matrix Inverses (Square case)
+
+Suppose $A$ is nonsingular. Then there exists an $A^{-1}$ such that $A^{-1}A = I$ (the left inverse). Also, $AA^{-1} = I$ too.
+
+##### Singularity
+
+Suppose columns of $2\times 2$ matrix $A$ are linearly dependent. The columns of $BA$ are linear combinations of the columns of $A$ (per [[#Columns of A]]). But there's no way to combine linearly dependent columns to get $(1,0)$ or $(0,1)$. So I can't get the identity matrix. 
+
+$A$ is singular if $\exists$ a vector $x$ such that $x \neq 0$ and $Ax = 0$. Intuitively, if I send $x$ to zero, I can't get it back. Since $Ax$ is a linear combination of the columns of $x$, this is equivalent to the non-full-rank requirement for singularity. 
+
+##### Inverting a Matrix
+Suppose 
+$$A = \begin{bmatrix} 1 & 2 \\ 3 & 7 \end{bmatrix}$$
+
+Then let's find $A^{-1}$: 
+
+$$AA^{-1} = I = \begin{bmatrix} 1 & 2 \\ 3 & 7 \end{bmatrix}\begin{bmatrix} a & c \\ b & d \end{bmatrix}$$
+$$
+\begin{aligned}
+a + 2b &= 1 \\
+c + 2d &= 0 \\
+3a + 7b &= 0 \\
+3c + 7d &= 1 \\
+\end{aligned}
+$$
+
+We can solve this system of equations with a $4 \times 4$ matrix. 
+
+```ad-q

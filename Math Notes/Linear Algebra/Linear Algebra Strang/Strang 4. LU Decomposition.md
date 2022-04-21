@@ -6,7 +6,6 @@ cssclass: math-class-note
 
 tags: 
 - '#classnotes/math/linalg'
-- '#🚧'
 ---
 
 # [[Strang 4. LU Decomposition]]
@@ -33,3 +32,7 @@ That lower left term of $E$ represents the composition of two steps - adding $-5
 The inverse: 
 $$ E_{21}^{-1}E_{32}^{-1} = L = \begin{bmatrix} 1 & 0 & 0 \\ 2 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix}\begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 5 & 1 \end{bmatrix}=\begin{bmatrix} 1 & 0 & 0 \\ 2 & 1 & 0 \\ 0 & 5 & 1 \end{bmatrix}$$
 Doing this in reverse order gets rid of the ugly composite elements and lets us just see the elimination steps. 
+
+We can represent row switches as permutation matrices: Exchanging row $2$ and row 1 of a $3 \times 3$ matrix is
+
+$$ \begin{bmatrix} 0 & 1 & 0 \\ 1 &0 & 0 \\ 0 & 0 & 1 \end{bmatrix}$$

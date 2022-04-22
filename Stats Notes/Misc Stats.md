@@ -9,7 +9,6 @@ tags:
 ---
 
 # [[Misc Stats]]
-Part of [[@Stats Index]]
 
 
 #### Gary's Gamma Distribution

@@ -9,7 +9,6 @@ tags:
 ---
 
 ### [[Central Limit Thm and Law of Large Numbers]]
-Part of [[@Stats Index]]
 
 Drawn from Stat 110 lecture here
 

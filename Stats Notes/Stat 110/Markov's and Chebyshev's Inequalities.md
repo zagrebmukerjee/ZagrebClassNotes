@@ -9,7 +9,6 @@ tags:
 ---
 
 ## [[Markov's and Chebyshev's Inequalities]]
-^title
 
 ### Markov's Inequality 
 

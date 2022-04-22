@@ -10,3 +10,9 @@ tags:
 ---
 
 # [[Strang 5. Transposes, Permutations, Vector Spaces]]
+
+First, a few foundational concepts. 
+
+## Transposes
+
+A

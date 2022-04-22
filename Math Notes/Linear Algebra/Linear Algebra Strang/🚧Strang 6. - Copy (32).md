@@ -1,5 +1,5 @@
 ---
-date updated: 2022-04-20 19:17
+date updated: 2022-04-22 18:27
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -8,7 +8,4 @@ tags:
 - '#types/classes/math/linalg'
 - '#status/🚧'
 ---
-
-# [[18.06 HW2 and Practice 5-7]]
-
 

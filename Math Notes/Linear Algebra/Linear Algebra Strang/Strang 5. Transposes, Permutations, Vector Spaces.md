@@ -9,7 +9,6 @@ tags:
 - '#status/🚧'
 ---
 
-# [[Strang 5. Transposes, Permutations, Vector Spaces]]
 
 First, a few foundational concepts. 
 
@@ -36,4 +35,9 @@ A simpler way: $(R'R)' = R'R$.
 
 A <font color=gree>vector space</font> is a set of vectors that is closed under addition and scalar multiplication: given space $S$: $A,B \in S$ implies $cA + dB \in S$. $\mathbb{R}^n$ are all vector spaces. In other words: all linear combinations of vectors in a space are also in the space. Note that this necessitates that the origin is in every vector space. 
 
-A <font color=gree>subspace</font> is a vector space wholly contained in another. Consider a line through the origin; for simplicity, the $x$-axis in $\mathbb{R}^2$. All these vectors can be written $(a,0)$. Then we can see that $c(a,0) + d(b,0) = (ca + db,0)$. So this is a d 
+A <font color=gree>subspace</font> is a vector space wholly contained in another. Consider a line through the origin; for simplicity, the $x$-axis in $\mathbb{R}^2$. All these vectors can be written $(a,0)$. Then we can see that $c(a,0) + d(b,0) = (ca + db,0)$. So this is a vector space - call it $S$. Since every vector $(a,0)$ is in $\mathbb{R}^2$,  we can say that $S \subset \R^2$. 
+
+The subspaces of $\R^2$ are: 
+- $\R^2$ itself;
+- All lines through the origin;
+- and the origin itself. 

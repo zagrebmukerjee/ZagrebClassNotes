@@ -9,7 +9,6 @@ tags:
 ---
 
 ## [[1123 Class 4 - Univariate Regression, Regression Hypothesis Testing]]
-Part of [[@Econ 1123 Index]]
 
 
 ### Univariate Regression Intro
@@ -98,9 +97,9 @@ $$\betahat_1 = \text{Cov}(X,Y)/\text{Var}(X)$$.
 ```
 
 For more generalized statements of the above, see
-[[Matrix formulation of Linear Regression]]
+[[2002.6 Regression - Matrix Treatment]]
 For proof that this estimator is unbiased and has several desirable properties, see:
-[[Gauss-Markov Theorem]]
+[[2002.4 Regression - Introduction#Gauss-Markov Theorem]]
 
 ### Using and Interpreting Linear Regressions
 
@@ -137,7 +136,7 @@ Given a population where the regression line is $Y = \beta_0 + \beta_1 X$, consi
 
 Homoskedasticity is a condition under which the skedastic function is constant across values of $X$ in the population. Returning again to the relationship between income and GPA, this would mean that the variance of income is the same when GPA is 2.0 and when it is 4.0. 
 
-Data that is not homoskedastic is heteroskedastic. This creates all sorts of problems, since homoskedasticity is one of the [[Gauss-Markov Theorem]] assumptions. Specifically for our purposes, the homos standard error will understate the dispersion of the sampling distribution. So we need to use a heteros standard error formula. 
+Data that is not homoskedastic is heteroskedastic. This creates all sorts of problems, since homoskedasticity is one of the [[2002.4 Regression - Introduction#Gauss-Markov Theorem|Gauss-Markov Theorem]] assumptions. Specifically for our purposes, the homos standard error will understate the dispersion of the sampling distribution. So we need to use a heteros standard error formula. 
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Heteroscedasticity.png/300px-Heteroscedasticity.png) 
 Heteroskedastic data: image from Wikipedia

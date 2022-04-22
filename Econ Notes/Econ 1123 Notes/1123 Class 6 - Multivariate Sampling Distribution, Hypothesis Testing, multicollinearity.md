@@ -9,7 +9,6 @@ tags:
 ---
 
 ## [[1123 Class 6 - Multivariate Sampling Distribution, Hypothesis Testing, multicollinearity]]
-Part of [[@Econ 1123 Index]]
 
 
 ### Sampling Distribution of Multivariate $\betahat$

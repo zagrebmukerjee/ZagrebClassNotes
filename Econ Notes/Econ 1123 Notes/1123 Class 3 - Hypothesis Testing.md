@@ -9,7 +9,6 @@ tags:
 ---
 
 ## [[1123 Class 3 - Hypothesis Testing]]
-Part of [[@Econ 1123 Index]]
 
 
 ### Hypothesis Testing 

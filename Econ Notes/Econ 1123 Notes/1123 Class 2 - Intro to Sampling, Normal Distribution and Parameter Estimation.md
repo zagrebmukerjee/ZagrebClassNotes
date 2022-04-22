@@ -9,7 +9,6 @@ tags:
 ---
 
 ## [[1123 Class 2 - Intro to Sampling, Normal Distribution and Parameter Estimation]]
-Part of [[@Econ 1123 Index]]
 
 
 ### Population and Density
@@ -25,7 +24,7 @@ Practically speaking, the density of random variable $X$ is a function $f_X(x)$ 
 $$\int_a^b f_X(x)dx = P(a < x < b) $$
 $$\int_{-\infty}^{\infty} f(x)_Xdx = 1 $$
 
-There are numerical ways to get densities from a dataset (such as [[kernel estimation]]).
+There are numerical ways to get densities from a dataset (such as [[2002.4 Regression - Introduction#Kernels|Kernels]]).
 
 A related function is the ==cumulative distribution function==, or CDF. The CDF $F_X$ is defined as:
 
@@ -76,7 +75,7 @@ The $z$-scores that map to a $5\%$ and $95\%$ cumulative probability are $\pm 1.
 
 We return to our example of the 300,000 Boston workers, with their income distributed according to $X$. We can easily determine $\mu_X$ and $\sigma_X$ from a census. But censuses(?) are very expensive. So we want to sample a random subset of the workers and guess the parameters based on the sample. 
 
-For large enough sample size $n$, the sample mean $\bar{x}$ approaches the population mean - we know this from the [[Law of Large Numbers]]. We treat $\bar{x}$ as an estimator of $\mu_X$. It's very unlikely that $\bar{x}$ will exactly equal $\mu_X$; we call the diference ==sample error==. We want to minimize sample error. But we don't know the true $\mu_X$. 
+For large enough sample size $n$, the sample mean $\bar{x}$ approaches the population mean - we know this from the [[Central Limit Thm and Law of Large Numbers|Law of Large Numbers]]. We treat $\bar{x}$ as an estimator of $\mu_X$. It's very unlikely that $\bar{x}$ will exactly equal $\mu_X$; we call the diference ==sample error==. We want to minimize sample error. But we don't know the true $\mu_X$. 
 
 Suppose that you can keep drawing (with replacements) samples of size $n$. For each sample, you'll get another $\bar{x}$. As we do this over and over, the histogram of those $\bar{x}$ describes the density of a distribution.^[This process of resampling over and over is called [[Monte Carlo Simulation.]]] This distribution is called the ==sampling distribution==. 
 

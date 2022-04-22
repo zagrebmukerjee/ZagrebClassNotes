@@ -5,7 +5,7 @@ notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags: 
-- '#classes/econ/econ1123'
+- '#types/classes/econ/econ1123'
 ---
 
 ## [[1123 Class 2 - Intro to Sampling, Normal Distribution and Parameter Estimation]]

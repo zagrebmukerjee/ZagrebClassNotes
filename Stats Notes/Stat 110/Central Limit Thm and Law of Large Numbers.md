@@ -5,7 +5,7 @@ notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags: 
-- '#classes'
+- '#types/classes'
 ---
 
 ### [[Central Limit Thm and Law of Large Numbers]]

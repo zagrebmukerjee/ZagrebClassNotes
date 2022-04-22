@@ -5,9 +5,8 @@ notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags: 
-- '#classes'
+- '#types/classes'
 - '#status/📦'
 ---
 
 ## [[📦Probability and Counting]]
-Part of [[@Stats Index]]

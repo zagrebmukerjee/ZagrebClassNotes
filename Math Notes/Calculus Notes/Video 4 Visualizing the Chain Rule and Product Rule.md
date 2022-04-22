@@ -5,7 +5,7 @@ notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags: 
-- '#classes/math/calculus'
+- '#types/classes/math/calculus'
 ---
 
 ### [[Video 4 Visualizing the Chain Rule and Product Rule]]

@@ -5,7 +5,7 @@ notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags: 
-- '#classes/math/linalg'
+- '#types/classes/math/linalg'
 ---
 
 # [[Strang 1. Geometry of Linear Equations]]

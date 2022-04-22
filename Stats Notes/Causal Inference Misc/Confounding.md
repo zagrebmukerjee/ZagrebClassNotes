@@ -5,7 +5,7 @@ notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags: 
-- '#classes/stats/causalinf'
+- '#types/classes/stats/causalinf'
 - '#topics/methods/quant/causalinf'
 ---
 

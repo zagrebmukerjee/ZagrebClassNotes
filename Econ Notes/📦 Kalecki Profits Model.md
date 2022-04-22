@@ -5,7 +5,7 @@ notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags: 
-- '#classes/econ'
+- '#types/classes/econ'
 - '#status/📦'
 ---
 

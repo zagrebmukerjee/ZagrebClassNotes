@@ -5,8 +5,8 @@ notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags: 
-- '#classes/stats/causalinf'
-- '#classes/definitions'
+- '#types/classes/stats/causalinf'
+- '#types/classes/definitions'
 ---
 
 # [[The norm of equipoise in RCTs]]

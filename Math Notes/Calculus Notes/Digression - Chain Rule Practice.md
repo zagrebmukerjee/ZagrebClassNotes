@@ -5,7 +5,7 @@ notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags: 
-- '#classes/math/calculus'
+- '#types/classes/math/calculus'
 ---
 
 ### [[Digression - Chain Rule Practice]]

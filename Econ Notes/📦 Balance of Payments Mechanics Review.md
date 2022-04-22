@@ -5,7 +5,7 @@ notetype: "BW Class Note"
 cssclass: BW-class-note
 
 tags: 
-- '#classes/econ'
+- '#types/classes/econ'
 - '#status/📦'
 ---
 

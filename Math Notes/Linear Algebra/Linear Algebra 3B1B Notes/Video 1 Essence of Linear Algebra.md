@@ -5,7 +5,7 @@ notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags:
-- '#classes/math/linalg'
+- '#types/classes/math/linalg'
 ---
 
 #### [[Video 1 Essence of Linear Algebra]]

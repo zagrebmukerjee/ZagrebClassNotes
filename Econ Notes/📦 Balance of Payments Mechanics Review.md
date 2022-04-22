@@ -5,8 +5,8 @@ notetype: "BW Class Note"
 cssclass: BW-class-note
 
 tags: 
-- '#classnotes/econ'
-- '#📦'
+- '#classes/econ'
+- '#status/📦'
 ---
 
 ### [[📦 Balance of Payments Mechanics Review]]

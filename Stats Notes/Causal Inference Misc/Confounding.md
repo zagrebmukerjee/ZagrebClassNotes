@@ -5,8 +5,8 @@ notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags: 
-- '#classnotes/stats/causalinf'
-- '#methods/quant/causalinf'
+- '#classes/stats/causalinf'
+- '#topics/methods/quant/causalinf'
 ---
 
 # [[Confounding]]

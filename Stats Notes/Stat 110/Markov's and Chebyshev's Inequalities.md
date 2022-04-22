@@ -5,7 +5,7 @@ notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags: 
-- '#classnotes/stats/foundations'
+- '#classes/stats/foundations'
 ---
 
 ## [[Markov's and Chebyshev's Inequalities]]

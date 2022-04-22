@@ -5,7 +5,7 @@ notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags:
-- '#classnotes/math/linalg'
+- '#classes/math/linalg'
 ---
 
 #### [[Digression - Gauss-Jordan Elimination and Computing Inverses]]

@@ -5,7 +5,7 @@ notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags: 
-- '#classnotes/math/calculus'
+- '#classes/math/calculus'
 ---
 
 ### [[Video 3 Derivative Formulas Through Geometry]]

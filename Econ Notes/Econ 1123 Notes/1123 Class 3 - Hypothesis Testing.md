@@ -5,7 +5,7 @@ notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags: 
-- '#classnotes/econ/econ1123'
+- '#classes/econ/econ1123'
 ---
 
 ## [[1123 Class 3 - Hypothesis Testing]]

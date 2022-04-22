@@ -5,8 +5,8 @@ notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags: 
-- '#classnotes'
-- '#📦'
+- '#classes'
+- '#status/📦'
 ---
 
 ## [[📦Networks 101]]

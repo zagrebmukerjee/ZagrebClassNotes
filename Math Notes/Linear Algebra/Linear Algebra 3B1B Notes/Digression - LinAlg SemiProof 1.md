@@ -5,7 +5,7 @@ notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags:
-- '#classnotes/math/linalg'
+- '#classes/math/linalg'
 ---
 
 #### [[Digression - LinAlg SemiProof 1]]

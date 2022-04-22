@@ -5,7 +5,7 @@ notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags:
-  - '#classNotes'
+  - '#classes'
 ---
 
 #### [[Video 3 Linear Transformations and Matrices]]

@@ -5,8 +5,8 @@ notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags: 
-- '#classnotes/stats/causalinf'
-- '#🚧'
+- '#classes/stats/causalinf'
+- '#status/🚧'
 ---
 
 # [[🚧DAGS 101]]

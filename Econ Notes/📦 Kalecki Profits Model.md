@@ -5,8 +5,8 @@ notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags: 
-- '#classnotes/econ'
-- '#📦'
+- '#classes/econ'
+- '#status/📦'
 ---
 
 ## [[📦 Kalecki Profits Model]]

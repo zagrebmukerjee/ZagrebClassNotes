@@ -5,8 +5,8 @@ notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags: 
-- '#classnotes/stats/causalinf'
-- '#🚧'
+- '#classes/stats/causalinf'
+- '#status/🚧'
 ---
 
 HARKing - a threat to inference. Generating hypotheses after you have observed outcomes of an experiment. 

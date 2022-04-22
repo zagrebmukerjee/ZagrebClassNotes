@@ -9,7 +9,6 @@ tags:
 ---
 
 ## [[1123 Class 1 - Summary Statistics]]
-Part of [[@Econ 1123 Index]]
 
 Mostly review of things I already knew and will learn again 
 

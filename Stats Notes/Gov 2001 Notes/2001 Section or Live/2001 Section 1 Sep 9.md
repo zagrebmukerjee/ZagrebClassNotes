@@ -1,3 +1,5 @@
+#classes/stats 
+
 #### Logistics
 
 - Watch videos then do readings

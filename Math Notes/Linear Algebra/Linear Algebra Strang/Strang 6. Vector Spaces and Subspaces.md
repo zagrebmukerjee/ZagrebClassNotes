@@ -37,12 +37,10 @@ A <font color=gree>subspace</font> is a vector space wholly contained in another
 The subspaces of $\R^2$ are: 
 - $\R^2$ itself;
 - All lines through the origin;
-- and the origin itself. 
+- and the origin itself ( which every subspace contains)
 
 Note that if $P$ and $L$ are subspaces, then $P \cup L$ is not necessarily a subspace, but $P \cap L$ is. Proof: If $v,w$ are in $P$, then they are in $L$. Then (since $P$ and $L$ are subspaces) it follows that $av + bw$ are in $P$, and that $av + bw$ are in $L$, meaning $av + bw$ are in $P \cap L$.
 
-#### Properties of Subspaces
-- Every subspace co
 
 ## Column Spaces
 
@@ -51,7 +49,7 @@ Now we are moving on to vector spaces associated with a particular matrix.
 The <font color=gree>Column Space</font> of a matrix is the space that is made up of all linear combinations of its columns. So, imagine:
 
 $$A = \begin{bmatrix} 1 & 1 & 2 \\ 2 & 1 & 3 \\ 3& 1 & 4\\ 4& 1 & 5\end{bmatrix}$$
-Each column is a vector in $\R^4$. So the column space of $A$ is a subspace of $\R^4$. We can call it $C(A)$. Because there are three columns, we can say this space is in fact a subspace of $\R^3$. 
+Each column is a vector in $\R^4$. So the column space of $A$ is a subspace of $\R^4$. We can call it $C(A)$. 
 
 Does $Ax = b$ have unique solutions for all $b$? 
 
@@ -62,6 +60,15 @@ $$Ax = x_1\begin{bmatrix} 1\\2\\3\\4\end{bmatrix} + x_2 \begin{bmatrix} 1 \\1 \\
 We want $b$ that are linear combinations of the columns of $A$ - the column space of $A$. There are many $b$ we can't get - this is like saying that $C(A) \subset \R^4$. 
 
 The columns of $A$ are linearly dependent, causing problems. We will later discover that columns 1 and 2 are the <font color=gree>pivot columns</font> of $A$, meaning that throwing out column $3$ does nothing to the column space (we could say the same for column $1$ - by convention, we go left to right).
+
+```ad-important
+title:
+$Ax = b$ is solvable if and only if $b \in C(A)$. 
+```
+
+We can generalize this a bit. For any set of vectors $S$ in vector space $V$, the space $SS$ - all linear combinations of elements of $S$ - is the subspace of $V$ <font color=gree>spanned</font> by $S$. $SS$ is the <font color=gree>span</font> of $S$. 
+
+For instance, $(1,0,0), (0,1,0)$ and $(0,0,1)$ span $\R^3$. 
 
 
 ## Null Space

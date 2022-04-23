@@ -166,8 +166,12 @@ $$\begin{bmatrix} 1 & 0 &|& 7 & -2 \\ 0 & 1 &|& -3 & 1\end{bmatrix}$$
 Let's check: 
 $$\begin{bmatrix} 1 & 2 \\ 3 & 7\end{bmatrix}\begin{bmatrix} 7 & -2 \\ -3 & 1\end{bmatrix} = \begin{bmatrix} 7 - 3(2) & -2 + 2 \\ 3(7) - 7(3) & -2(3) + 7\end{bmatrix} = \begin{bmatrix} 1 & 0 \\ 0 & 1\end{bmatrix}$$
 
-## Inverse Properties
+## Inverse Properties; Invertible Matrices
 
-Suppose $A, B$ are invertible. Then $(AB)^{-1} = B^{-1}A^{-1}$. In other words, $ABB^{-1}A^{-1} = I$. 
-
-We can say that $(A')^{-1} = (A^{-1})'$. 
+- Suppose $A, B$ are invertible. Then $(AB)^{-1} = B^{-1}A^{-1}$. In other words, $ABB^{-1}A^{-1} = I$. 
+- We can say that $(A')^{-1} = (A^{-1})'$. 
+- A matrix is invertible iff 
+	- it has $n$ pivots (allowing for row exchanges)
+	- It has a nonzero determinant
+	- $\not\exists x$ such that $x \neq 0$ and $Ax = 0$
+		- If $Ax = 0$, then $A[cx] = 0$; so $A$ sends this whole line/plane etc irrecoverably to $0$. 

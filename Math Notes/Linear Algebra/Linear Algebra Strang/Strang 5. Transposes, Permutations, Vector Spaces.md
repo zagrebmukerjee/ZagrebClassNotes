@@ -6,7 +6,6 @@ cssclass: math-class-note
 
 tags: 
 - '#types/classes/math/linalg'
-- '#status/🚧'
 ---
 
 
@@ -25,8 +24,14 @@ $P$ is always an identity matrix, with reordered rows (or not). There are $n!$ p
 ## Transposes
 Transposition is exchanging the rows and columns of a matrix. We write the transpose of $A$ as $A'$ or $A^T$. $A'_{ij} = A_{ji}$. 
 
-$A$ is <font color=gree>symmetric</font> iff $A' = A$. $(AB)' = B'A'$.
+#### Properties of Transpose
+- $(A + B)' = A' + B'$
+- $(AB)' = B'A'$
+- $(A\inv)' = (A')\inv$
+ 
 
+#### Symmetric Matrices
+- $A$ is <font color=gree>symmetric</font> iff $A' = A$. $(AB)' = B'A'$.
 If $R$ is rectangular, then $R'R$ is symmetric. Proof: Let $Q = R'R$. Then what is $Q_{ij}$? It is the dot product of the $i^{th}$ row of $R'$ and the $j\th$ column of $R$. But the columns of $R$ are the rows of $R'$. So this is the same as the dot product of the $j\th$ row of $R'$ and the $i\th$ column of $R$ - or $Q_{ji}$. So $Q_{ij} = Q_{ji}$ and thus $R'R$ is symmetric. 
 
 A simpler way: $(R'R)' = R'R$.

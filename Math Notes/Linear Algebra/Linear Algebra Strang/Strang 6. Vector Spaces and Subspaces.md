@@ -6,7 +6,6 @@ cssclass: math-class-note
 
 tags: 
 - '#types/classes/math/linalg'
-- '#status/🚧'
 ---
 
 ## Vector Spaces

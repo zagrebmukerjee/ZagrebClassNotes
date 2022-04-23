@@ -8,12 +8,41 @@ tags:
 - '#types/classes/math/linalg'
 ---
 
-## Vector Spaces
+## Vector Spaces and Subspaces
 
-Continuation of discussion from [[Strang 5. Transposes, Permutations, Vector Spaces#Vector Spaces and Subspaces]]
+#### Definition; $\R^n$ and other vector spaces
 
+A <font color=gree>vector space</font> is a set of vectors that is closed under addition and scalar multiplication: given space $S$: $A,B \in S$ implies $cA + dB \in S$. $\mathbb{R}^n$ are all vector spaces. In other words: all linear combinations of vectors in a space are also in the space. Note that this necessitates that the origin is in every vector space. 
+
+Other vector spaces: $\mathbf{M}^2$, the set of all $2 \times 2$ matrices. $\mathbf{F}$, the set of all real functions. $Z$, the zero vector.
+
+#### Properties of Vector Spaces
+
+Formally, in vector space, the operations of vector addition and scalar multiplication have these properties:
+- $x + y = y + x$
+- $x + (y + z) = (x + y) + z$
+- There is a unique $0$ vector such that $x + 0 = x$
+- For each $x$ there exists unique $-x$ such that $x + -x = 0$
+- $1 \times x = x$
+- $(c_1c_2)x = c_1(c_2 x)$
+- $c(x + y) = cx + cy$
+- $(c_1 + c_2)x = c_1 x + c_2 x$
+
+When we're talking about spaces like $\R^n$ we get a lot of this stuff for free.
+
+#### Subspaces
+
+A <font color=gree>subspace</font> is a vector space wholly contained in another. Consider a line through the origin; for simplicity, the $x$-axis in $\mathbb{R}^2$. All these vectors can be written $(a,0)$. Then we can see that $c(a,0) + d(b,0) = (ca + db,0)$. So this is a vector space - call it $S$. Since every vector $(a,0)$ is in $\mathbb{R}^2$,  we can say that $S \subset \R^2$. 
+
+The subspaces of $\R^2$ are: 
+- $\R^2$ itself;
+- All lines through the origin;
+- and the origin itself. 
 
 Note that if $P$ and $L$ are subspaces, then $P \cup L$ is not necessarily a subspace, but $P \cap L$ is. Proof: If $v,w$ are in $P$, then they are in $L$. Then (since $P$ and $L$ are subspaces) it follows that $av + bw$ are in $P$, and that $av + bw$ are in $L$, meaning $av + bw$ are in $P \cap L$.
+
+#### Properties of Subspaces
+- Every subspace co
 
 ## Column Spaces
 

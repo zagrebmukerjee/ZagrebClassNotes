@@ -28,13 +28,20 @@ Each column is a vector in $\R^4$. So the column space of $A$ is a subspace of $
 Does $Ax = b$ have unique solutions for all $b$? 
 
 $$Ax = \begin{bmatrix} 1 & 1 & 2 \\ 2 & 1 & 3 \\ 3&1 & 4\\ 4 & 1 & 5 \end{bmatrix}\begin{bmatrix} x_1 \\ x_2 \\x_3 \end{bmatrix} = \begin{bmatrix} b_1 \\ b_2 \\ b_3 \\b_4\end{bmatrix}$$
+We can conceptualize this as linear combinations of columns of $A$: 
+$$Ax = x_1\begin{bmatrix} 1\\2\\3\\4\end{bmatrix} + x_2 \begin{bmatrix} 1 \\1 \\1 \\1\end{bmatrix} + x_3 \begin{bmatrix} 2\\3\\4\\5\end{bmatrix}= \begin{bmatrix} b_1 \\ b_2 \\ b_3 \\b_4\end{bmatrix}$$
 
-This gives us 
-$$\begin{aligned} 
-x_1 + x_2 + 2x_3 &= b_1 \\
-2x_1 + x_2 + 3x_3 &= b_2 \\
-3x_1 + x_2 + 4x_3 &= b_3 \\
-4x_1 + x_2 + 5x_3 &= b_4 \\
-\end{aligned}
-$$
-This has too many equations. Already we can sense trouble. 
+We want $b$ that are linear combinations of the columns of $A$ - the column space of $A$. There are many $b$ we can't get - this is like saying that $C(A) \subset \R^4$. 
+
+The columns of $A$ are linearly dependent, causing problems. We will later discover that columns 1 and 2 are the <font color=gree>pivot columns</font> of $A$, meaning that throwing out column $3$ does nothing to the column space (we could say the same for column $1$ - by convention, we go left to right).
+
+
+## Null Space
+
+Let's have the same $A$ as before. 
+
+ 
+$$Ax = x_1\begin{bmatrix} 1\\2\\3\\4\end{bmatrix} + x_2 \begin{bmatrix} 1 \\1 \\1 \\1\end{bmatrix} + x_3 \begin{bmatrix} 2\\3\\4\\5\end{bmatrix}= \begin{bmatrix} b_1 \\ b_2 \\ b_3 \\b_4\end{bmatrix}$$
+We can solve this for e.g. $b = 0$ easily. Too easily, it turns out. $x_1 = x_2 = 1, x_3 = -1$ works. But so does $x_1 = x_2 =2, x_3 = -2$. Matrix $A$ sends that whole plane $x_1 + x_2 - x_3 = 0$ to $0$ (Incidentally, meaning $A$ is singular). 
+
+This means the <font color=gree>null space</font> of $A$ is the plane above.  

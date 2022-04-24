@@ -9,6 +9,7 @@ tags:
 ---
 
 #### [[Video 9 Dot Product and Duality]]
+[[3B1B Linear Algebra]]
 
 ##### Geometric interpretation of Dot Product
 

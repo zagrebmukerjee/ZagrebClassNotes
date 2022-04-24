@@ -9,6 +9,7 @@ tags:
 ---
 
 #### [[Video 14 Eigenvalues and Eigenvectors]]
+[[3B1B Linear Algebra]]
 
 ##### Introduction
 

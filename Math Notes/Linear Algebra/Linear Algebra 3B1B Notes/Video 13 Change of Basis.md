@@ -9,6 +9,7 @@ tags:
 ---
 
 #### [[Video 13 Change of Basis]]
+[[3B1B Linear Algebra]]
 
 ##### Overview
 

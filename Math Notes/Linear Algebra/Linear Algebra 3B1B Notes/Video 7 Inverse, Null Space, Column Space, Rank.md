@@ -9,6 +9,7 @@ tags:
 ---
 
 #### [[Video 7 Inverse, Null Space, Column Space, Rank]]
+[[3B1B Linear Algebra]]
 
 - [[#Linear Systems of Equations|Linear Systems of Equations]]
 - [[#Singular Matrices|Singular Matrices]]

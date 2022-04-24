@@ -9,6 +9,7 @@ tags:
 ---
 
 #### [[Video 10 Cross Product]]
+[[3B1B Linear Algebra]]
 
 ##### Length of the cross product
 

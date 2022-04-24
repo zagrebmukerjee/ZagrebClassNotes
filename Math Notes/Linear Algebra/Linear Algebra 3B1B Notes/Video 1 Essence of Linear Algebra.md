@@ -9,7 +9,7 @@ tags:
 ---
 
 #### [[Video 1 Essence of Linear Algebra]]
-
+[[3B1B Linear Algebra]]
 
 Emphasis on _geometric_ interpretation of linear algebra concepts.
 

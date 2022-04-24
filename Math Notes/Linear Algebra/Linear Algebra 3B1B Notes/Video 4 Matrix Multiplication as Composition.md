@@ -9,6 +9,7 @@ tags:
 ---
 
 #### [[Video 4 Matrix Multiplication as Composition]]
+[[3B1B Linear Algebra]]
 
 - [[#How to apply two successive transformations?|How to apply two successive transformations?]]
 - [[#Computing Transformation Composition: Example|Computing Transformation Composition: Example]]

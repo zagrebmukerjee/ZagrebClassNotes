@@ -9,6 +9,7 @@ tags:
 ---
 
 #### [[Video 3 Linear Transformations and Matrices]]
+[[3B1B Linear Algebra]]
 
 - [[#How to Do Transformations|How to Do Transformations]]
 - [[#Some general transformations:|Some general transformations:]]

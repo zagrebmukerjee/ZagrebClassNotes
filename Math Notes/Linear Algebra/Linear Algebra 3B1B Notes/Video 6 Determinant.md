@@ -9,6 +9,7 @@ tags:
 ---
 
 #### [[Video 6 Determinant]]
+[[3B1B Linear Algebra]]
 
 Some linear transformations "stretch" space - others "squish" it. 
 

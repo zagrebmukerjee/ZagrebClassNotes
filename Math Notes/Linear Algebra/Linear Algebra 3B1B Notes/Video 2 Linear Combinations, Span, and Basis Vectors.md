@@ -9,7 +9,7 @@ tags:
 ---
 
 #### [[Video 2 Linear Combinations, Span, and Basis Vectors]]
-
+[[3B1B Linear Algebra]]
 
 Suppose $\mathbf{v} = [v_1, v_2]$.  Let $\mathbf{\hat{i}} = [1,0]$ and $\mathbf{\hat{j}} = [0,1]$ (of length 1 - called unit vectors). Then we have:
 $\mathbf{v} = v_1 \mathbf{\hat{i}} + v_2 \mathbf{\hat{j}}$

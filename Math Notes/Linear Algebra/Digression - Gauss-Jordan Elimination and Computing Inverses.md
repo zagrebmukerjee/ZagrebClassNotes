@@ -9,7 +9,7 @@ tags:
 ---
 
 #### [[Digression - Gauss-Jordan Elimination and Computing Inverses]]
-
+[[Misc Linear Algebra]]
 - [[#Solving Linear Systems of Equations|Solving Linear Systems of Equations]]
 - [[#Finding Inverses with the power of Gauss|Finding Inverses with the power of Gauss]]
 

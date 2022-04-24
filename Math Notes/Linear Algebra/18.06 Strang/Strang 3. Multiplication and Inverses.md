@@ -9,7 +9,7 @@ tags:
 ---
 
 # [[Strang 3. Multiplication and Inverses]]
-
+[[18.06 Strang]]
 For my next trick I will try to unlearn the effective but conceptually limiting method of matrix multiplication that I've used for ~ 15 years...
 
 Let $A$ be a matrix: then $A_{i,*}$ is the $i^{th}$ row of $A$, and $A_{*,j}$ the $j^{th}$ column.

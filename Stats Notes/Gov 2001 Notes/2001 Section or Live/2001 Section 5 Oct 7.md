@@ -5,7 +5,7 @@ notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags: 
-- '#types/classes'
+- '#types/classes/stats'
 ---
 
 # [[2001 Section 5 Oct 7]]

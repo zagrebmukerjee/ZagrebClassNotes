@@ -8,7 +8,6 @@ tags:
 - '#types/classes/math/linalg'
 ---
 
-# [[Strang 4. LU Decomposition]]
 [[18.06 Strang]]
 We learned in [[Strang 2. Elimination|lecture 2]] about Gaussian elimination which turns a matrix $A$ into an upper-triangular matrix $U$. 
 

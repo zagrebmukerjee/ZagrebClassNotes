@@ -8,4 +8,4 @@ tags:
 - '#types/classes/math/linalg'
 - '#status/🚧'
 ---
-
+[[18.06 Strang]]

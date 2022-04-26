@@ -9,7 +9,7 @@ tags:
 ---
 
 # [[2001 Section 5 Oct 7]]
-
+[[Gov 2001]]
 
 - All estimators use either analytical or computational methods - some both. one computational method is MCMC simulation - drawing from the "likelihood grid"
 

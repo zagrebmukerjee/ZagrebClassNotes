@@ -9,7 +9,7 @@ tags:
 ---
 
 # [[2001 Section 6 Oct 21 Binary Outcomes]]
-
+[[Gov 2001]]
 
 Assumptions of logistic model
 - binary outcomes

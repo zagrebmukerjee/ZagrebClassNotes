@@ -9,8 +9,8 @@ tags:
 - '#topics/methods/quant/causalinf'
 ---
 
-# [[Confounding]]
 
+[[Permanent/Network/MOC/Causal Inference|Causal Inference]]
 
 Let's borrow the notation from the [[Basic Causal Model]]; $D = 1$ if treated and $0$ if not; $Y_1$ is the outcome if treated, $Y_0$ if not. 
 

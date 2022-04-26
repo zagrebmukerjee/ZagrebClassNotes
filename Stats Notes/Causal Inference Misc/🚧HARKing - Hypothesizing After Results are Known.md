@@ -9,4 +9,6 @@ tags:
 - '#status/🚧'
 ---
 
+[[Permanent/Network/MOC/Causal Inference|Causal Inference]]
+
 HARKing - a threat to inference. Generating hypotheses after you have observed outcomes of an experiment. 

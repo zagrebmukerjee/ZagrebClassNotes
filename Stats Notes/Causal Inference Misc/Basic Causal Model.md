@@ -9,8 +9,7 @@ tags:
 - '#topics/methods/quant/causalinf'
 ---
 
-# [[Basic Causal Model]]
-
+[[Permanent/Network/MOC/Causal Inference|Causal Inference]]
 Drawing on [[Angrist and Imbens 1995 Identification and Estimation of Local Average Treatment Effects]]
 
 

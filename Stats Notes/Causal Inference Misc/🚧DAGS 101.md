@@ -10,5 +10,6 @@ tags:
 ---
 
 # [[🚧DAGS 101]]
+[[Permanent/Network/MOC/Causal Inference|Causal Inference]]
 
 DAGS - **D**irected **A**cyclic **G**raphs - provide a convenient shorthand for thinking about causal relationships, inference, and threats thereto.

@@ -1,4 +1,6 @@
-[[Permanent/]]
+#types/classes/stats 
+#types/scratch
+
 What is the sandwich??
 
 let k = 3, N= 5

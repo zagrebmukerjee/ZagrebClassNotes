@@ -8,7 +8,6 @@ tags:
 - '#types/classes/math/linalg'
 ---
 
-# [[Strang 3. Multiplication and Inverses]]
 [[18.06 Strang]]
 For my next trick I will try to unlearn the effective but conceptually limiting method of matrix multiplication that I've used for ~ 15 years...
 

@@ -9,7 +9,7 @@ tags:
 - '#status/📦'
 ---
 
-## [[📦Networks 101]]
+## [[Networks 101]]
 
 Source: <a href='zotero://select/items/0_5JAI9KIQ'>Scott. 2017-03-21. <i>Social Network Analysis</i></a>
 Source:  <a href='zotero://select/items/0_2BSA49HJ'>Kadushin. 2011-12-05. <i>Understanding Social Networks: Theories, Concepts, and Findings</i></a>_

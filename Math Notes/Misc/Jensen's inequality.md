@@ -6,7 +6,6 @@ cssclass: math-class-note
 
 tags: 
 - '#types/classes'
-- '#status/🚧'
 ---
 
 Suppose $f$ is concave - that is to say $f''<0$. Then:

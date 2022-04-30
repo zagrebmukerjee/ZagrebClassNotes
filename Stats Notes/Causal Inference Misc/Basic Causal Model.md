@@ -6,7 +6,7 @@ cssclass: math-class-note
 
 tags: 
 - '#types/classes/stats/causalinf'
-- '#topics/methods/quant/causalinf'
+- '#topics/methods/causalinf'
 ---
 
 [[Permanent/Network/MOC/Causal Inference|Causal Inference]]

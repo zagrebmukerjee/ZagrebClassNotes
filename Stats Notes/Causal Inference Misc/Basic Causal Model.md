@@ -10,7 +10,7 @@ tags:
 ---
 
 [[Permanent/Network/MOC/Causal Inference|Causal Inference]]
-Drawing on [[Angrist and Imbens 1995 Identification and Estimation of Local Average Treatment Effects]]
+Drawing on [[Imbens and Angrist 1994 Identification and Estimation of Local Average Treatment Effects]]
 
 
 

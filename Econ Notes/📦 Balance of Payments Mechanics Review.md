@@ -1,5 +1,7 @@
 ---
-date updated: 2021-06-19 19:45
+aliases: 
+date updated: Tuesday, May 3rd 2022, 12:24:51 pm
+creation date: Thursday, April 21st 2022, 4:55:17 pm
 
 notetype: "BW Class Note"
 cssclass: BW-class-note
@@ -58,8 +60,9 @@ Citizens of B take Currency B, exchange it for Currency A, and buy goods from A;
 
 This results in pressure on Currency A to appreciate since more people are buying it. It also results in [[📦 Kalecki Profits Model|inflationary pressure]]in A's goods, since more of A and B's citizens are now trying to buy the same amount of goods. 
 
-Simultaneously, demand for B's goods has fallen, resulting in  pressures towards unemployment, a wider output gap, and deflation. 
+Simultaneously, demand for B's goods has fallen, resulting in pressures towards unemployment, a wider output gap, and deflation. 
 
 There are a few paths to equilibrium. 
 - Country A can allow the inflation or appreciation
-🚧
+
+#status/section/🚧 

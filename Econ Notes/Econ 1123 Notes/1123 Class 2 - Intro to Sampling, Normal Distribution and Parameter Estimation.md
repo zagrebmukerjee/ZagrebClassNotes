@@ -17,7 +17,7 @@ Imagine the population of all workers in Boston - maybe about 300k people. We wa
 
 If you were to create a frequency histogram of these incomes, and draw an upper envelope of that histogram, you could approximate the ==density== of $X$. 
 
-The [[Probability - Density and Mass|density]], or probability density function (PDF) is a function that maps from intervals of a random variable $(x_1, x_2)$ to measures in probability space $M$. The measure of $M$ tells us the probability that a draw from $X$ will land between $x_1$ and $x_2$. 
+The [[2002.1 Probability|density]], or probability density function (PDF) is a function that maps from intervals of a random variable $(x_1, x_2)$ to measures in probability space $M$. The measure of $M$ tells us the probability that a draw from $X$ will land between $x_1$ and $x_2$. 
 
 Practically speaking, the density of random variable $X$ is a function $f_X(x)$ such that 
 

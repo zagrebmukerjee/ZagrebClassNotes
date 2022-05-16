@@ -51,4 +51,4 @@ Let's say that $x_2 = 1, x_4 = 0$. Then what do we know? From the second equatio
 
 We can call this a *special solution*. Note - this reiterates the fact that the second column is twice the first.
 
-Now, we can try $x_2 = 0$ and $x_4 = 1$. So $2x_3 + 4 = 0$ and $x_3 = -2$. $x_1 -4 + 4 = 0; x_1 = -4$ 
+Now, we can try $x_2 = 0$ and $x_4 = 1$. So $2x_3 + 4 = 0$ and $x_3 = -2$. $x_1 -4 + 2 = 0; x_1 = 2$. Then another vector: $ \begin{bmatrix} 2 & 0 & -2 & \end{bmatrix}

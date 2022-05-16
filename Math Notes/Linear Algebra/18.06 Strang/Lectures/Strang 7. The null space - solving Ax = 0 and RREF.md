@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: 2022-05-15 19:15
-date updated: Monday, May 16th 2022, 10:20 am
+date updated: Monday, May 16th 2022, 10:45 am
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -93,5 +93,40 @@ $$R = \begin{bmatrix} \cellcolor{#9999}1 & \cellcolor{#9999}0 & 2& -2 \\
 \end{bmatrix}$$
 just don't forget you've done this. Then we have a block matrix
 
-$$ R = \begin{bmatrix} I & F \\ 0 & 0 \end{bmatrix}$$
+$$ R = \begin{bmatrix} I & F \\ 0 & 0 \end{bmatrix} $$
+We find $N$ such that $RN = 0$; then the columns of $N$ are the special solutions, which implies that 
+
 $$ S = \begin{bmatrix} -F \\ I \end{bmatrix}$$
+because 
+
+$$RS = \begin{bmatrix} I & F \\ 0 & 0 \end{bmatrix} \begin{bmatrix} -F \\ I\end{bmatrix} = F - F = 0$$
+
+Alternatively, 
+
+
+$$ \begin{aligned}
+0 &= \begin{bmatrix} I & F \\ 0 & 0 \end{bmatrix}\begin{bmatrix} x_\text{pivot} \\ x_\text{free}\end{bmatrix} \\
+0 & = Ix_\text{pivot} + F x_{free} \\
+-Fx_\text{free} &= Ix_\text{pivot}
+\end{aligned}
+$$
+We can plug in $I$ for $x_\text{free}$ to get the special solutions. 
+
+Example: 
+
+$$ \begin{bmatrix} 
+1 & 2 & 3 \\ 2& 4 & 6 \\ 2 & 6 & 8 \\ 2& 8 & 10
+\end{bmatrix}$$
+
+Elimination
+
+$$ \begin{bmatrix} 
+1 & 2 & 3 \\ 0& 0 & 0 \\ 0 & 2 & 2 \\ 0& 4 & 4
+\end{bmatrix}$$
+$$ \begin{bmatrix} 
+\cellcolor{#9999}1 & \cellcolor{#9999}0 & 1 \\ \cellcolor{#9999}0 & \cellcolor{#9999}1 & 1 \\ 0& 0 & 0 \\ 0& 0 & 0
+\end{bmatrix}$$
+So there is one free variable. Either $x_1 = x_3$ or $x_2 = x_3$. We stack:
+
+$$ S = \begin{bmatrix} -1 \\-1\\1\end{bmatrix}$$
+We shrink $I$ depending on the number of free variables in this matrix.

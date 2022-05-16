@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: 2022-05-15 19:15
-date updated: Sunday, May 15th 2022, 7:15 pm
+date updated: Monday, May 16th 2022, 10:16 am
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -49,6 +49,10 @@ So we have two <font color=gree>pivot variables</font> and two <font color=gree>
 
 Let's say that $x_2 = 1, x_4 = 0$. Then what do we know? From the second equation we know that $2x_3 + 4x_4 = 0$, so $x_3 = 0$; from the first, we know that $x_1 + 2x_2 + 2x_3 + 2x_4 = 0$, so $x_1 +2 = 0$. So we have a vector of $x$ values $\begin{bmatrix} -2 & 1 & 0 & 0 \end{bmatrix}'$ that is in the null space. 
 
-We can call this a *special solution*. Note - this reiterates the fact that the second column is twice the first.
+We can call this a . Note - this reiterates the fact that the second column is twice the first.
 
-Now, we can try $x_2 = 0$ and $x_4 = 1$. So $2x_3 + 4 = 0$ and $x_3 = -2$. $x_1 -4 + 2 = 0; x_1 = 2$. Then another vector: $ \begin{bmatrix} 2 & 0 & -2 & \end{bmatrix}
+Now, we can try $x_2 = 0$ and $x_4 = 1$. So $2x_3 + 4 = 0$ and $x_3 = -2$. $x_1 -4 + 2 = 0; x_1 = 2$. Then another vector: $\begin{bmatrix} 2 & 0 & -2 & 1\end{bmatrix}'$ 
+
+Obviously any linear combination of these vectors is in the null space. This covers all possible values of the free variables then. So we have the null space: 
+
+$$N(A) = c_1 \begin{bmatrix} -2 \\ 1 \\ 0 \end{bmatrix}

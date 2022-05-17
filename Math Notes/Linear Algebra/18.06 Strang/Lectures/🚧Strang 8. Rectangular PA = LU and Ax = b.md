@@ -89,3 +89,27 @@ So, to solve $Ax = b$:
 - find a particular solution: get $U$, set free variables to $0$, back substitute. 
 - Find the null space
 - combine them. 
+
+### Rank and Solvability
+
+Suppose an $m \times n$ matrix $A$ of rank $r$. 
+
+```ad-note
+title:
+Note: $r$ must be less than or equal to $n$ and $m$ both
+```
+
+If $r = n$ we say the matrix has <font color=gree>full column rank</font>. In this case, the column space $C(A)$ is $\mathbb{R}^n$. The null space is the origin/the zero vector. $Ax=b$ has exactly one solution, which is $x_\text{particular}$ if it exists, or else none. 
+
+Example: 
+
+$$A = \begin{bmatrix} 1 & 3 \\2 & 1 \\ 6 & 1 \\ 5 & 1\end{bmatrix}$$
+This matrix clearly has two pivots. Let's eliminate to be sure:
+$$\begin{bmatrix} 1 & 3 \\0 & -5 \\ 0 & -17 \\ 0 & -14\end{bmatrix}$$
+$$R = \begin{bmatrix} \cellcolor{#9999}1 & 0 \\0 & \cellcolor{#9999}1\\ 0 & 0 \\ 0 & 0\end{bmatrix}$$
+
+So it has full column rank. Solutions to $Ax = b$ exist iff $b$ is in the col-space. 
+
+What about row rank? Full row rank means $r = m$. (with $m \leq n$). How many pivots? $m$. Every row has a pivot. 
+
+Solvability: Can solve $Ax = b$ for every $b$ - no zero rows means no requirements. 

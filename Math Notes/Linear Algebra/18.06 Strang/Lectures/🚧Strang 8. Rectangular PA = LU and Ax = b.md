@@ -83,7 +83,7 @@ title:
 Note: there is no constant on the first term! 
 ```
 
-This is not a subspace! can't have the origin in it (see, no coefficient on first column). It's the null space, shifted by the solution $x_\text{particular}$. 
+This is not a subspace! Because of that first column, can't have the origin in it. In fact, it's the null space, shifted by the solution $x_\text{particular}$. 
 
 So, to solve $Ax = b$:
 - find a particular solution: get $U$, set free variables to $0$, back substitute. 

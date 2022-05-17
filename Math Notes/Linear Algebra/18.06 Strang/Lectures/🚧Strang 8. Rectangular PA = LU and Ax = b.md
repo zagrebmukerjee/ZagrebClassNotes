@@ -91,7 +91,7 @@ So, to solve $Ax = b$:
 - combine them. 
 
 ### Rank and Solvability
-
+#### Column Rank
 Suppose an $m \times n$ matrix $A$ of rank $r$. 
 
 ```ad-note
@@ -101,15 +101,34 @@ Note: $r$ must be less than or equal to $n$ and $m$ both
 
 If $r = n$ we say the matrix has <font color=gree>full column rank</font>. In this case, the column space $C(A)$ is $\mathbb{R}^n$. The null space is the origin/the zero vector. $Ax=b$ has exactly one solution, which is $x_\text{particular}$ if it exists, or else none. 
 
-Example: 
+Example with $r = n < m$.
 
 $$A = \begin{bmatrix} 1 & 3 \\2 & 1 \\ 6 & 1 \\ 5 & 1\end{bmatrix}$$
 This matrix clearly has two pivots. Let's eliminate to be sure:
 $$\begin{bmatrix} 1 & 3 \\0 & -5 \\ 0 & -17 \\ 0 & -14\end{bmatrix}$$
 $$R = \begin{bmatrix} \cellcolor{#9999}1 & 0 \\0 & \cellcolor{#9999}1\\ 0 & 0 \\ 0 & 0\end{bmatrix}$$
 
-So it has full column rank. Solutions to $Ax = b$ exist iff $b$ is in the col-space. 
+So it has full column rank. The last two rows are combos of the first two. Solutions to $Ax = b$ exist iff $b$ is in the col-space. 
+
+
+
+#### Row Rank
 
 What about row rank? Full row rank means $r = m$. (with $m \leq n$). How many pivots? $m$. Every row has a pivot. 
 
-Solvability: Can solve $Ax = b$ for every $b$ - no zero rows means no requirements. 
+Solvability: Can solve $Ax = b$ for every $b$ - no zero rows means no requirements (in other words, column space is equal to $\mathbb{R}^m$; and $b$ has $m$ elements.
+
+Example where $r = m < n$
+
+$$A = \begin{bmatrix} 1 & 2 & 6 & 5 \\ 
+3 & 1 & 1 & 1\end{bmatrix} $$
+$$R = \begin{bmatrix} 1\cellcolor{#9999} & 0 & ? & ? \\ 
+0 & \cellcolor{#9999}1 & ? & ?\end{bmatrix} $$
+Right part over there is $F$ from finding the null space.
+
+
+#### Square Matrix
+
+Matrix with $r = m = n$. This is just <font color=gree>full rank</font>. It's square. It's invertible. RREF is $I$. 
+Null space is the zero vector. 
+All $b$ have unique solutions, since they are all in the column space. 

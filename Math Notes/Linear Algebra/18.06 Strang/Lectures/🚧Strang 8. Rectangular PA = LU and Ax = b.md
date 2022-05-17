@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: 2022-05-16 22:28
-date updated: 2022-05-16 22:28
+date updated: Monday, May 16th 2022, 10:43 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -53,7 +53,9 @@ The latter tells us that $0 = b_3 - b_2 - b_1$. This is a condition for solving 
 
 $Ax =b$ is solvable when $b$ is in the column space of $A$. if a combination of columns of $A$ creates zero rows, then some combination of $b$s must be zero. <font color=#F7B801>why?? to be discussed</font>
 
-To find the complete solution to $Ax = b$: First, find a particular solution that works. E.g. set all free variables to zero. In this case, $x_2 = x_4 = 0$. Then we have (from the echelon form): 
+
+### Particular Solution
+To find the complete solution to $Ax = b$, first find a particular solution that works. E.g. set all free variables to zero. In this case, $x_2 = x_4 = 0$. Then we have (from the echelon form): 
 
 $$
 \begin{aligned}
@@ -64,4 +66,26 @@ $$
 
 So it follows that $x_3 = b_2/2 - b_1$ and $x_1 = 3b_1 - b_2$. 
 
-Suppose $b_1 = 1
+Suppose $b_1 = 1$ and $b_2= 5$. Then we can create an $x_\text{particular}$: $\begin{bmatrix} -2 & 0 & 3/2 & 0\end{bmatrix}'$
+
+### Complete Solution
+So what other $x$ works? Well, we can add any $x_n$ from the null space $Ax_n = 0$:
+
+$$A[x_p + x_n] = Ax_p + Ax_n = Ax_p$$
+So then we can create the space $x_\text{complete}:$
+
+$$x_\text{complete} = \begin{bmatrix} -2 \\ 0 \\3/2 \\0 \end{bmatrix} + c_1 \begin{bmatrix} -2 \\ 1 \\ 0 \\ 0 \end{bmatrix} + c_2 \begin{bmatrix} 2 \\0 \\-2\\1\end{bmatrix}
+$$
+where the last two are the special solutions. 
+
+```ad-warning
+title:
+Note: there is no constant on the first term! 
+```
+
+This is not a subspace! can't have the origin in it (see, no coefficient on first column). It's the null space, shifted by the solution $x_\text{particular}$. 
+
+So, to solve $Ax = b$:
+- find a particular solution: get $U$, set free variables to $0$, back substitute. 
+- Find the null space
+- combine them. 

@@ -12,3 +12,5 @@ tags:
 
 # [[Strang 9. Independence, Basis, Dimension]]
 
+## Callback
+Look at $Ax = 0$, where  $A$ is $m \times n$ and $m < n$. 

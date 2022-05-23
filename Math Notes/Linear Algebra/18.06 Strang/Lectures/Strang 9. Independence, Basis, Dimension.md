@@ -28,5 +28,13 @@ Linear independence of the columns <-> full column rank
 ## Spanning a Space
 The columns of $A$ <font color=gree>span</font> $C(A)$ 
 
-More generally, $v_1, \ldots, v_n$ <font color=gree>span</font> space $S$ 
+More generally, $v_1, \ldots, v_n$ <font color=gree>span</font> space $S$ if 
 
+$$S = \{ c_1 v_1 + \ldots + c_n v_n\}\quad \forall c \in \R^n $$
+
+In other words the span is the smallest set that contains all possible linear combinations of these vectors. 
+
+
+## Basis
+
+The <font color=gree>basis</font>

@@ -37,4 +37,16 @@ In other words the span is the smallest set that contains all possible linear co
 
 ## Basis
 
-The <font color=gree>basis</font>
+The <font color=gree>basis</font> for a vector space $S$ is $v_1, \ldots, v_n$ if $v_i \indep v_j \; \forall i,j$ and the span of $v_1, \ldots v_n$ is $S$. 
+
+Example: $3 \times 3$ identity matrix -> columns span $\R^3$. The null space has only zero in it. 
+
+Another basis: 
+
+$$ \begin{bmatrix} 1 \\ 1 \\ 2\end{bmatrix}, \begin{bmatrix} 2 \\2 \\5\end{bmatrix}, \begin{bmatrix}3 \\3 \\ 8\end{bmatrix}$$
+
+Aside - using Gram-Schmidt process from [[🚧Strang 17. Gram-Schmidt and A = QR|later]] to create orthonormal basis from any basis $y_1, \ldots, y_n$
+
+Elements of the basis: $e_1 = \frac{y_1}{||y_1||}$. Very nice. Then 
+
+$$e_2 = \frac{y_2 - <y_2, e_1>e_1}{}

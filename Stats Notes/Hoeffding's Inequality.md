@@ -36,5 +36,5 @@ NOTE: $X$ do not need to be identically distributed
 ## Example 
 Suppose $100$ independent $X_i$ with mean $.5$ have support $[0,1]$, and $S$ is their mean. Then we can bound the probability that $ S < .75$:
 
-$$P(|S - E(S)|>t) < \exp \left[ -\frac{2t^2}{\sum_i (b_i - a_i)^2} \right]$$
-$$ P(|S - E(S)|>.25) < 2\exp \left[ -\frac{1/8}{100} \right] = $$
+$$P(S - E(S)>t) < \exp \left[ -\frac{2t^2}{\sum_i (b_i - a_i)^2} \right]$$
+$$ P(S >.75) < \exp \left[ -\frac{1/8}{100} \right] = 99\%$$

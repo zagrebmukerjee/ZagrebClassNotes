@@ -7,7 +7,7 @@ notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags: 
-- '#types/classes'
+- '#types/classes/math/linalg'
 ---
 
 # [[Strang 9. Independence, Basis, Dimension]]

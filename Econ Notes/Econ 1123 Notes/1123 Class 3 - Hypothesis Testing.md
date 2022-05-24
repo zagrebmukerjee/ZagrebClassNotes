@@ -1,15 +1,17 @@
 ---
-date updated: 2021-06-30 19:34
+aliases: 
+date updated: Tuesday, May 24th 2022, 11:58 am
 
 notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags: 
 - '#types/classes/econ/econ1123'
+creation date: Thursday, April 7th 2022, 3:48 pm
 ---
 
 ## [[1123 Class 3 - Hypothesis Testing]]
-
+[[Econ 1123 Notes]]
 
 ### Hypothesis Testing 
 
@@ -28,7 +30,7 @@ Step 3 is the meat of the difficulty. There are three approaches that are very s
 - Use the resulting distribution to figure out how likely it is that you'd observe $\bar{x}$  given $H_0$. 
 - If that probability is sufficiently low - less than $\alpha$ - reject $H_0$. 
 
-**<u>All  approaches assume that the [[Central Limit Thm and Law of Large Numbers|Central Limit Theorem]] has kicked in at your $n$</u>**. In addition, all approaches give the same results. 
+**<u>All approaches assume that the [[Central Limit Thm and Law of Large Numbers|Central Limit Theorem]] has kicked in at your $n$</u>**. In addition, all approaches give the same results. 
 
 #### Approach 1: Gates method 
 

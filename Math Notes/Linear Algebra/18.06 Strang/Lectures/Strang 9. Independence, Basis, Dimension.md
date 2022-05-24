@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: 2022-05-23 12:10
-date updated: 2022-05-23 12:10
+date updated: Monday, May 23rd 2022, 8:14 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -45,8 +45,18 @@ Another basis:
 
 $$ \begin{bmatrix} 1 \\ 1 \\ 2\end{bmatrix}, \begin{bmatrix} 2 \\2 \\5\end{bmatrix}, \begin{bmatrix}3 \\3 \\ 8\end{bmatrix}$$
 
+
+```ad-info
+title: Gram-Schmidt Aside
+collapse:true
+
 Aside - using Gram-Schmidt process from [[🚧Strang 17. Gram-Schmidt and A = QR|later]] to create orthonormal basis from any basis $y_1, \ldots, y_n$
 
+Create a projection operator: the projection of $v$ onto the line spanned by $u$. 
+$$\text{proj}_u (v) = \frac{\langle u, v \rangle}{\langle u, u \rangle} u$$ 
 Elements of the basis: $e_1 = \frac{y_1}{||y_1||}$. Very nice. Then 
 
-$$e_2 = \frac{y_2 - <y_2, e_1>e_1}{}
+$$e_2 = \frac{y_2 - \text{proj}_{e_1}y_2}{||y_2 - \text{proj}_{e_1}y_2||}$$
+$$e_3 = \frac{y_3 - \text{proj}_{e_1}y_3 - \text{proj}_{e_2}y_3}{||y_3 - \text{proj}_{e_1}y_3 - \text{proj}_{e_2}y_3||}$$
+```
+

@@ -27,7 +27,6 @@ Case 1: the length of $\mathbf{w}$ and $\mathbf{v}$ are the same. Then we can se
 
 Then for any $c\mathbf{v}$ we can split it into symmetric case and a scalar of the whole dot product, and so on. 
 
-
 ##### Dot Product as Projection on Line; Duality
 
 A linear transformation from $\mathbb{R}^2$ to $\mathbb{R}^1$ - i.e. from $xy$ plane to the number line - can be a 2x1 matrix (see [[Video 7 Inverse, Null Space, Column Space, Rank#Video 8 Nonsquare matrices|Video 8]]). This linear transformation has the property that a line of dots evenly spaced  in $\mathbb{R}^2$ will still be evenly spaced on $\mathbb{R}^1$.

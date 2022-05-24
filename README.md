@@ -1,5 +1,5 @@
 ## Zagreb's Class Notes
-
+#types/meta 
 These are notes I've taken in a variety of classes, transcribed into markdown and occasionally rendered to PDF. 
 It's a habit I acquired sometime in college - I find it's a great tool for synthesizing what I have learned, and testing my own understanding. 
 I think of it as writing a very rough and terse draft of a textbook.

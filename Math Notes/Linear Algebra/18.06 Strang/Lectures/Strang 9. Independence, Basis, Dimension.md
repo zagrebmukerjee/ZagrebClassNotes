@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: 2022-05-23 12:10
-date updated: Monday, May 23rd 2022, 8:21 pm
+date updated: Monday, May 23rd 2022, 8:33 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -66,7 +66,8 @@ Note: elementary row operations don't change the span.
 
 Bases are not unique. But all bases have the same number of vectors. That number is the <font color=gree>dimension</font>.
 
-Example: 
+```ad-example
+title:Example 
 
 Space is $C(A)$ where
 $$A = \begin{bmatrix} 1 & 2 & 3 & 1 \\ 1& 1 & 2 & 1 \\ 1 & 2 & 3 & 1 \\\end{bmatrix}$$
@@ -83,4 +84,11 @@ x_1 + 2x_2 &= b_1 \\
 x_1 + x_2 &= b_2 \\
 x_1 + 2x_2 &= b_3 \\
 \end{align}$$
-Rearranging, $b_1 = b_3$
+This is the plane $x = z$. 
+```
+
+From the above it follows that: 
+
+$$\dim C(A) = \text{column rank}(A)$$
+$$\dim N(A) = n - \text{column rank}(A)$$
+the null space being the span of the special solutions. 

@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: 2022-05-23 12:10
-date updated: Monday, May 23rd 2022, 8:14 pm
+date updated: Monday, May 23rd 2022, 8:21 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -60,3 +60,27 @@ $$e_2 = \frac{y_2 - \text{proj}_{e_1}y_2}{||y_2 - \text{proj}_{e_1}y_2||}$$
 $$e_3 = \frac{y_3 - \text{proj}_{e_1}y_3 - \text{proj}_{e_2}y_3}{||y_3 - \text{proj}_{e_1}y_3 - \text{proj}_{e_2}y_3||}$$
 ```
 
+Test: make the $n$ vectors the columns of an ($n \times n$) matrix. If that matrix is invertible and/or has full column rank, they are a basis of $\R^n$
+
+Note: elementary row operations don't change the span.
+
+Bases are not unique. But all bases have the same number of vectors. That number is the <font color=gree>dimension</font>.
+
+Example: 
+
+Space is $C(A)$ where
+$$A = \begin{bmatrix} 1 & 2 & 3 & 1 \\ 1& 1 & 2 & 1 \\ 1 & 2 & 3 & 1 \\\end{bmatrix}$$
+Find the dimension of the space; find a basis. 
+
+Evident that cols 3 and 4 are in the span of cols 1 and 2
+so dimension is 2. and cols 1 and 2 are a basis
+
+What is that space: it's all linear combinations of cols $1$ and $2$
+
+$$x_1\begin{bmatrix} 1 \\1\\ 1 \end{bmatrix} + x_2\begin{bmatrix} 2\\1\\2\end{bmatrix} = \begin{bmatrix} b_1 \\ b_2 \\ b_3\end{bmatrix}$$
+$$\begin{align}
+x_1 + 2x_2 &= b_1 \\ 
+x_1 + x_2 &= b_2 \\
+x_1 + 2x_2 &= b_3 \\
+\end{align}$$
+Rearranging, $b_1 = b_3$

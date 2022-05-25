@@ -26,7 +26,7 @@ If $A$ is $3 \times 3$ then we will have $E_{32} E_{31}E_{21} A = U$; and thus $
 Why do I prefer $L$ to $E_{32} E_{31}E_{21}$? Consider: 
 
 $$ E_{32} E_{21} = E = \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & -5 & 1 \end{bmatrix}\begin{bmatrix} 1 & 0 & 0 \\ -2 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix} = \begin{bmatrix} 1 & 0 & 0 \\ -2 & 1 & 0 \\ 10 & -5 & 1 \end{bmatrix}$$
-That lower left term of $E$ represents the composition of two steps - adding $-5$ times the new row $2$, which is thhe same as  $-5$ times the old row 2 + $(-2)(-5)$ times the old row $1$. 
+That lower left term of $E$ represents the composition of two steps - adding $-5$ times the new row $2$, which is the same as  $-5$ times the old row 2 + $(-2)(-5)$ times the old row $1$. 
 
 The inverse: 
 $$ E_{21}^{-1}E_{32}^{-1} = L = \begin{bmatrix} 1 & 0 & 0 \\ 2 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix}\begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 5 & 1 \end{bmatrix}=\begin{bmatrix} 1 & 0 & 0 \\ 2 & 1 & 0 \\ 0 & 5 & 1 \end{bmatrix}$$

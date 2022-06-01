@@ -8,10 +8,9 @@ cssclass: math-class-note
 
 tags: 
 - '#types/classes/math/linalg'
-- '#status/🚧'
 ---
 
-# [[🚧Strang 8. Rectangular PA = LU and Ax = b]]
+# [[Strang 8. Rectangular PA = LU and Ax = b]]
 [[18.06 Strang]]
 
 Solve $Ax = b$!
@@ -116,7 +115,7 @@ So it has full column rank. The last two rows are combos of the first two. Solut
 
 What about row rank? Full row rank means $r = m$. (with $m \leq n$). How many pivots? $m$. Every row has a pivot. 
 
-Solvability: Can solve $Ax = b$ for every $b$ - no zero rows means no requirements (in other words, column space is equal to $\mathbb{R}^m$; and $b$ has $m$ elements.
+Solvability: Can solve $Ax = b$ for every $b$ - no zero rows means no requirements (in other words, column space is equal to $\mathbb{R}^m$; and $b$ has $m$ elements. 
 
 Example where $r = m < n$
 
@@ -124,7 +123,7 @@ $$A = \begin{bmatrix} 1 & 2 & 6 & 5 \\
 3 & 1 & 1 & 1\end{bmatrix} $$
 $$R = \begin{bmatrix} 1\cellcolor{#9999} & 0 & ? & ? \\ 
 0 & \cellcolor{#9999}1 & ? & ?\end{bmatrix} $$
-Right part over there is $F$ from finding the null space.
+Right part over there is $F$ from finding the null space. Infinitely many solutions: more (independent) unknowns than (independent) equations
 
 
 #### Square Matrix
@@ -132,3 +131,11 @@ Right part over there is $F$ from finding the null space.
 Matrix with $r = m = n$. This is just <font color=gree>full rank</font>. It's square. It's invertible. RREF is $I$. 
 Null space is the zero vector. 
 All $b$ have unique solutions, since they are all in the column space. 
+
+
+| Type                                      | Equation    | Solvability                                           |
+| ----------------------------------------- | ----------- | ----------------------------------------------------- |
+| Less than full row rank                   | $r < m$     | No solutions for some $b$                             |
+| Full row rank, less than full column rank | $r = m < n$ | Infinite solutions                                    |
+| Full column rank, less than full row rank | $r = n < m$ | one solution for some $b$ (colspace), none for others |
+| Square/Full Rank/Invertible               | $r = m = n$ | One solution for each $b$                                                      |

@@ -29,4 +29,30 @@ Suppose that $q \in \mathbb{Q}$ and $q^2 = 12$. Let $q = m/n$ with $m$ even and 
 a) Multiply: $ x\inv x y = y$. Since $xy = xz$ then $x\inv xz = y$, but $x\inv x z = 1z = z$ so we have $y = z$
 b) From above we have $xy = xz \to y = z$. Let $z = 1$; then $xy = x$ implies $y = 1$. 
 c) $xy = 1$ means that $x\inv \cdot 1 = x\inv xy$, and from a) we have that  $x\inv$.
-d) We know that $x\inv x = 1$. Then multiply by $
+d) We know that $x\inv x = 1$. Then multiply by $x^{-1^{-1}} = 1/(1/x)$ to get that $x^{-1^{-1}} x\inv x = x^{-1^{-1}}$. But $x^{-1^{-1}} x\inv = 1$, so $x = x^{-1^{-1}}$. 
+
+4) ![[Pasted image 20220601202526.png]]
+
+4) Let $x \in E$ by nonemptyness. By definitions we have $\alpha \leq x \leq \beta$. 
+5) Let $p = \inf A$. Then $x \in A$ implies that $x > p$.   
+
+Let $q = \sup -A$. Then for any $-x$ we know that $-x < q$. This implies $x + -x < x + q$. 
+
+6) ![[Pasted image 20220601202725.png]]
+
+7) ![[Pasted image 20220601202750.png]]
+
+
+
+8) ![[Pasted image 20220601202802.png]]
+
+
+
+12) ![[Pasted image 20220601202843.png]]
+
+
+15) ![[Pasted image 20220601202852.png]]
+
+
+
+20) ![[Pasted image 20220601202903.png]]

@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: 2022-06-01 19:55
-date updated: 2022-06-01 19:55
+date updated: Wednesday, June 1st 2022, 9:03 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -34,15 +34,18 @@ d) We know that $x\inv x = 1$. Then multiply by $x^{-1^{-1}} = 1/(1/x)$ to get t
 4) ![[Pasted image 20220601202526.png]]
 
 4) Let $x \in E$ by nonemptyness. By definitions we have $\alpha \leq x \leq \beta$. 
-5) Suppose wlog that $x > 0$. Let $p = \inf A$. Then for all $x$ in $A$, $x > p$. Let $-1$ be the real number such that $(-1)x = -x$. We know that $x > 0$ and so $-x <0$ from 1.18 a). So $x(-1) < 0$, which means that $x(-1) < 0x$, which means $-1 \leq 0$ by the contrapositive of 1.18b); since $-1x \neq 0$ it follows that $-1 \neq 0$, so $-1 < 0$. 
+5) Let $p = \inf A$. Then for all $x$ in $A$, $x \geq p$, which means $x - p \geq p - p = 0$. 
 
-Then for all $x$ we can say that $x >  p$ implies $-x < -p$ from 1.18c). 
+Suppose that there exists $x \in A$ such that $-p < -x$. Then $xp < x - x$, a contradiction. It follows that for all $x$ in $A$, $-p \geq -x$ 
 
-Now suppose that 
-
+Now suppose $-p$ is not the supremum of $-A$ - so there is a  $-q$ is such that $-q > -p$ and $-q \geq -x \; \forall x \in A$. 
+Then there exists 
 
 
 6) ![[Pasted image 20220601202725.png]]
+
+
+
 
 7) ![[Pasted image 20220601202750.png]]
 

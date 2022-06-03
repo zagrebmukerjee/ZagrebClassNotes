@@ -39,7 +39,10 @@ d) We know that $x\inv x = 1$. Then multiply by $x^{-1^{-1}} = 1/(1/x)$ to get t
 Suppose that there exists $x \in A$ such that $-p < -x$. Then $xp < x - x$, a contradiction. It follows that for all $x$ in $A$, $-p \geq -x$ 
 
 Now suppose $-p$ is not the supremum of $-A$ - so there is a  $-q$ is such that $-q > -p$ and $-q \geq -x \; \forall x \in A$. 
-Then there exists 
+Now we can say that $x - q \geq x - x = 0$, so then $x \geq q$ for all $x$ in $A$. 
+From $-q > -p$ it follows that  $p - q > 0$, which means $q < p$. But combined with the above that means $p$ is not the infimum of $A$ - a contradiction. 
+
+Since $-p$ is the supremum of $-A$, it follows that $\inf A = - \sup -A$. 
 
 
 6) ![[Pasted image 20220601202725.png]]

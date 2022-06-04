@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: 2022-06-01 19:55
-date updated: Friday, June 3rd 2022, 8:45 pm
+date updated: Friday, June 3rd 2022, 9:10 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -49,10 +49,14 @@ Since $-p$ is the supremum of $-A$, it follows that $\inf A = - \sup -A$.
 
 a) We can write $m/n = k(p/q)$, and thus $m = kp$ and $n = kq$. 
 
-Then write the LHS $(b^{kp})^{1/kq}$, which by the corollary to 1.21 we can write as $(b^{1/kq} )^{kp}$. Raise the LHS to the power of $q$ - from the commutativity of multiplication we can write this as $(b^{1/kq} )^{kpq}$, or $[b^{1/kq} )^{kq}]^p$. But we know that $(b^{kq})^{1/kq} = b$, by the definition and uniqueness of the roots. So we have shown that the LHS raised to the power of $q$ is the RHS, which is the same as writing that $(b^m)^{1/n} = (b^p)^{1/q}$.
+Then write the LHS $(b^{kp})^{1/kq}$, which by the corollary to 1.21 we can write as $(b^{1/kq} )^{kp}$. Raise the LHS to the power of $q$ - from the commutativity of multiplication we can write this as $(b^{1/kq} )^{kpq}$, or $[b^{1/kq} )^{kq}]^p$. But we know that $(b^{kq})^{1/kq} = b$, by the definition and uniqueness of the roots (since $kq$ is an integer). So we have shown that the LHS raised to the power of $q$ is the RHS, which is the same as writing that $(b^m)^{1/n} = (b^p)^{1/q}$.
 
-b) Let $r = a/b$, $s = c/d$. We can write $r + s$ then as $r
+b) Let $r = a/b$, $s = c/d$ with $a,b,c,d$ integers. We can write $r + s$ then as $(ad + bc)/bd$. 
+Then $b^{r + s}$ = $b^{(ad + bc)/bd}$. Then we can write $(b^{r+s})^{bd}$ as $b^{ad + bc}$. Since $ad$ and $bc$ are integers this is $b^{ad}b^{bc}$. So, using part a) and the corollary to 1.21:
 
+$$b^{r+s} = [(b^{r+s})^{bd}]^{1/bd} = [b^{ad}b^{bc}]^{1/bd} = (b^{ad})^{1/bd}(b^{bc})^{1/bd} = b^{a/b}b^{c/d} = b^rb^s$$
+
+c) It follows from $b >1$ that $b^r$ is larger than all elements of $B(r)$. Suppose a $q$ such that $q \geq B(r)$ and $q < b^r$. 
 
 8) ![[Pasted image 20220601202802.png]]
 

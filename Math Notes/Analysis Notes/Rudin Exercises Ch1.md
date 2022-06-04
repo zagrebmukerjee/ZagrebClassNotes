@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: 2022-06-01 19:55
-date updated: Saturday, June 4th 2022, 3:19 pm
+date updated: Saturday, June 4th 2022, 4:11 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -80,10 +80,31 @@ $B(x + y)$ is all $b^t$ where $t \leq x + y$. Let $b^q = \sup B(x + y)$, which m
 
 20) ![[Pasted image 20220601202903.png]]
 
-So we have the neo-cut \alpha, which has these properties:
-1) $p \subset Q$, $p \neq Q$, $p \neq \emptyset$
+So we have the neo-cut $\alpha$, which has these properties:
+1) $\alpha \subset Q$, $\alpha \neq Q$, $\alpha \neq \emptyset$
 2) $p \in \alpha \land q < p$ means $q \in \alpha$. 
 
 But no more!
 
-Define order as folllows: $\alpha < \beta$ if all the elements of $\alpha$ are in $\beta$ but not vice versa. Is this an order?
+Let $R'$ be the set of neo-cuts. 
+
+$R'$ is an ordered set:
+Define its order as folllows: $\alpha < \beta$ if all the elements of $\alpha$ are in $\beta$, and $\beta$ has elements not in $\beta$. Is this an order?
+1) It's clearly transitive. If $\alpha < \beta$, and $\beta < \gamma$, everything in $\alpha$ is in $\beta$, which means it's in $\gamma$ - and from nonemptyness we know there's something in $\alpha$.
+2) It's total. Suppose neither $\alpha > \beta$ nor $\beta < \alpha$. We know each has some element(s). But from the definition of the order, neither has elements not in the other. Therefore, $\alpha = \beta$. 
+
+It has the LUB property:
+Let $A$ be a set of cuts, nonempty, that contains proper subsets of $Q$. Then let $\gamma$ be the union of all the subsets of $A$ - everything which is in a cut which is in $A$. $\gamma$ is a cut:
+- $\gamma$ is nonempty since $A$ has at least one $\alpha$ which has at least one element. Since $A$ has only proper subsets of $Q$, every $p \in \alpha \in there is some $q \in Q$ that is not in any $\alpha$ in $A$, so it is not in $\gamma$, so $\gamma \subset Q$ and $\gamma \neq Q$.
+
+For any $\alpha \in A$, every element of $\alpha$ is in $\gamma$, meaning $\alpha \leq \gamma$: gamma is an upper bound.
+
+Now suppose $\delta < \gamma$. From inequality we know that there is some $p$ in $\gamma$ that isn't in $\delta$. But from the definition of $\gamma$ we know there is a set $\alpha_p$ such that $\alpha_p \in A$ and $p \in \alpha_p$, so $\alpha_p > \delta$, which means that $\delta$ cannot be an upper bound. So $\gamma$ is the least upper bound. 
+
+Addition:
+Define $\alpha + \beta$ as the set of all $r + s$ where $r \in \alpha$ and $s \in \beta$. 
+Axiom (A1)
+Axiom (A2)
+Axiom (A3)
+Axiom (A4)
+Axiom (A5)

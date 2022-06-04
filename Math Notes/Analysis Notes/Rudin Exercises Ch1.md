@@ -95,16 +95,21 @@ Define its order as folllows: $\alpha < \beta$ if all the elements of $\alpha$ a
 
 It has the LUB property:
 Let $A$ be a set of cuts, nonempty, that contains proper subsets of $Q$. Then let $\gamma$ be the union of all the subsets of $A$ - everything which is in a cut which is in $A$. $\gamma$ is a cut:
-- $\gamma$ is nonempty since $A$ has at least one $\alpha$ which has at least one element. Since $A$ has only proper subsets of $Q$, every $p \in \alpha \in there is some $q \in Q$ that is not in any $\alpha$ in $A$, so it is not in $\gamma$, so $\gamma \subset Q$ and $\gamma \neq Q$.
+- $\gamma$ is nonempty since $A$ has at least one $\alpha$ which has at least one element. Since $A$ has only proper subsets of $Q$, every $p \in \alpha \in A$ is in $Q$, and so $\gamma \subset Q$;  there is some $q \in Q$ that is not in any $\alpha$ in $A$, so it is not in $\gamma$, so $\gamma \neq Q$.
+- Suppose $p \in \gamma$ and $q < p$, We know there's an $\alpha_p$ that has $p$ in it, and so from property 2 it has $q$ in it, so $q$ is in $\gamma$.
 
 For any $\alpha \in A$, every element of $\alpha$ is in $\gamma$, meaning $\alpha \leq \gamma$: gamma is an upper bound.
 
 Now suppose $\delta < \gamma$. From inequality we know that there is some $p$ in $\gamma$ that isn't in $\delta$. But from the definition of $\gamma$ we know there is a set $\alpha_p$ such that $\alpha_p \in A$ and $p \in \alpha_p$, so $\alpha_p > \delta$, which means that $\delta$ cannot be an upper bound. So $\gamma$ is the least upper bound. 
 
 Addition:
-Define $\alpha + \beta$ as the set of all $r + s$ where $r \in \alpha$ and $s \in \beta$. 
-Axiom (A1)
-Axiom (A2)
-Axiom (A3)
-Axiom (A4)
-Axiom (A5)
+Define $\alpha + \beta$ over $R$ as the set of all $r + s$ where $r \in \alpha$ and $s \in \beta$. 
+Axiom (A1) Closure: $\alpha + \beta$ is in $R$.
+- It's clear that $\alpha + \beta$ is nonempty; since $r + s \in Q$, it is a subset of $Q$. Since $\alpha$ and $\beta$ are proper subsets of $Q$, there is a $q_1 \in Q$ that is not in $\alpha$, and a $q_2$ that is not in $\beta$. From Property 2 we know that $q_1 > r$ for all $r$ in $\alpha$, and $q_2 > s$ if $s$ is in $\beta$, so $q_1 + q_2> r+ s$, which means $q_1 + q_2 \notin \alpha + \beta$.  
+- Suppose $r + s$ in $\alpha + \beta$. Suppose $q < r + s$. Then $q - s < r$; so $q - s \in a$; and adding $s$ from $\beta$ gets us that $q \in \alpha + \beta$.
+Axiom (A2) Commutativity. Follows from commutativity of rational addition.
+Axiom (A3) Associativity. Ditto
+Axiom (A4) Identity. We want some $I$ such that $\alpha + I = \alpha$. Suppose $I$ is the set of negative rationals and zero
+- Then for $s \in I$, $r + s < r$, so $r + s \in \alpha$, so $\alpha + I \subset \alpha$. 
+-  Suppose $p \in \alpha$; then $p - p = 0 \in I$; and $p + 0 \in \alpha + I$. So $\alpha \supset \alpha + I$. 
+Axiom (A5) Inverse

@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: 2022-06-01 19:55
-date updated: Wednesday, June 1st 2022, 9:03 pm
+date updated: Friday, June 3rd 2022, 8:32 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -26,7 +26,7 @@ Suppose that $q \in \mathbb{Q}$ and $q^2 = 12$. Let $q = m/n$ with $m$ even and 
 
 ![[Pasted image 20220601201116.png]]
 
-a) Multiply: $ x\inv x y = y$. Since $xy = xz$ then $x\inv xz = y$, but $x\inv x z = 1z = z$ so we have $y = z$
+a) Multiply: $x\inv x y = y$. Since $xy = xz$ then $x\inv xz = y$, but $x\inv x z = 1z = z$ so we have $y = z$
 b) From above we have $xy = xz \to y = z$. Let $z = 1$; then $xy = x$ implies $y = 1$. 
 c) $xy = 1$ means that $x\inv \cdot 1 = x\inv xy$, and from a) we have that  $x\inv$.
 d) We know that $x\inv x = 1$. Then multiply by $x^{-1^{-1}} = 1/(1/x)$ to get that $x^{-1^{-1}} x\inv x = x^{-1^{-1}}$. But $x^{-1^{-1}} x\inv = 1$, so $x = x^{-1^{-1}}$. 
@@ -47,6 +47,7 @@ Since $-p$ is the supremum of $-A$, it follows that $\inf A = - \sup -A$.
 
 6) ![[Pasted image 20220601202725.png]]
 
+a) By Theorem 1.21 we can define the LHS as $\alpha$ such that $\alpha^n$ = $b^m$,   and RHS as $\beta$ such that $\beta^q = b^p$. We can write $m$ as $np/q$. Then we have $\alpha^n
 
 
 

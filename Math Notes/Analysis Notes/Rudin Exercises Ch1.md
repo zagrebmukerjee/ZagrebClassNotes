@@ -111,5 +111,9 @@ Axiom (A2) Commutativity. Follows from commutativity of rational addition.
 Axiom (A3) Associativity. Ditto
 Axiom (A4) Identity. We want some $I$ such that $\alpha + I = \alpha$. Suppose $I$ is the set of negative rationals and zero
 - Then for $s \in I$, $r + s < r$, so $r + s \in \alpha$, so $\alpha + I \subset \alpha$. 
--  Suppose $p \in \alpha$; then $p - p = 0 \in I$; and $p + 0 \in \alpha + I$. So $\alpha \supset \alpha + I$. 
+-  Suppose $p \in \alpha$; then $p - p = 0 \in I$; and $p + 0 \in \alpha + I$. So $\alpha \subset \alpha + I$. 
+
 Axiom (A5) Inverse
+Suppose that for every $\alpha \in R$ there is $\beta$ such that $\alpha + \beta = I$, as above. Then for each $r \in \alpha$ there is an $s \in \beta$ such that $r + s \leq 0$. 
+
+Can $\beta$ be a neo-cut? Suppose $s$ in $\beta$, and $f

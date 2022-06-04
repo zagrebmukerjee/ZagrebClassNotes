@@ -49,9 +49,9 @@ Since $-p$ is the supremum of $-A$, it follows that $\inf A = - \sup -A$.
 
 a) We can write $m/n = k(p/q)$, and thus $m = kp$ and $n = kq$. 
 
-We write then $(b
+Then write the LHS $(b^{kp})^{1/kq}$, which by the corollary to 1.21 we can write as $(b^{1/kq} )^{kp}$. Raise the LHS to the power of $q$ - from the commutativity of multiplication we can write this as $(b^{1/kq} )^{kpq}$, or $[b^{1/kq} )^{kq}]^p$. But we know that $(b^{kq})^{1/kq} = b$, by the definition and uniqueness of the roots. So we have shown that the LHS raised to the power of $q$ is the RHS, which is the same as writing that $(b^m)^{1/n} = (b^p)^{1/q}$.
 
-
+b) Let $r = a/b$, $s = c/d$. We can write $r + s$ then as $r
 
 
 8) ![[Pasted image 20220601202802.png]]

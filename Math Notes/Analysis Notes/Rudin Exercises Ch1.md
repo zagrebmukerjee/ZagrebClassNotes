@@ -79,3 +79,11 @@ $B(x + y)$ is all $b^t$ where $t \leq x + y$. Let $b^q = \sup B(x + y)$, which m
 
 
 20) ![[Pasted image 20220601202903.png]]
+
+So we have the neo-cut \alpha, which has these properties:
+1) $p \subset Q$, $p \neq Q$, $p \neq \emptyset$
+2) $p \in \alpha \land q < p$ means $q \in \alpha$. 
+
+But no more!
+
+Define order as folllows: $\alpha < \beta$ if all the elements of $\alpha$ are in $\beta$ but not vice versa. Is this an order?

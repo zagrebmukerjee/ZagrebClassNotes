@@ -61,7 +61,8 @@ c)
 - Suppose $q \geq B(r)$. Since $b^r \in B(r)$, and $b^r \geq x \in B(r)$, then it follows that $q \leq b^r$. 
 - Therefore $b^r$ is a supremum of $B(r)$. 
 d) From (c) we write that $b^{x + y} = \sup B(x + y)$. $b^x b^y$ similarly is $\sup B(x) \sup B(y)$. 
-Now consider rationals $r_x, r_y$ 
+$B(x + y)$ is all $b^t$ where $t \leq x + y$. Let $b^q = \sup B(x + y)$, which means that, we can create $b^{s+t}$ with $s, t$ rational, and $s \leq x$ and $t \leq y$,. Then this is $b^sb^t = \sup B(x) \sup B(y) = b
+
 
 
 

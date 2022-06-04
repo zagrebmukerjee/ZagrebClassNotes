@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: 2022-06-01 19:55
-date updated: Friday, June 3rd 2022, 9:10 pm
+date updated: Saturday, June 4th 2022, 3:19 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -56,7 +56,12 @@ Then $\beta^{r + s}$ = $\beta^{(ad + bc)/bd}$. Then we can write $(\beta^{r+s})^
 
 $$\beta^{r+s} = [(\beta^{r+s})^{bd}]^{1/bd} = [\beta^{ad}\beta^{bc}]^{1/bd} = (\beta^{ad})^{1/bd}(\beta^{bc})^{1/bd} = \beta^{a/b}\beta^{c/d} = \beta^r\beta^s$$
 
-c) $\alpha \geq \beta$, iff $b^\alpha \geq b^\beta$, since $b >1$. So it follows that $b^r \geq B(r)$. Now suppose there exists real $q$ such that $q > B(r)$ and $q < b^r$. 
+c) 
+- Let rational $\alpha > \beta$, with $\alpha = m/n$ and $\beta = p/q$, which means $mq > np$. Then $b^\alpha = b^{m/n} = b^{qm/qn} = (b^{qm})^{1/qn}$, so $(b^\alpha)^{qn} = b^{qm}$. Now $(b^\beta)^{qn} = (b^{p/q})^{qn} = b^{pn}$. So $(b^\beta)^{qn} = b^{pn} < b^{qm}$. Thus, if $\alpha > \beta$, $b^\alpha > b^\beta$ where $b > 1$.  So it follows that $b^r \geq B(r)$.  
+- Suppose $q \geq B(r)$. Since $b^r \in B(r)$, and $b^r \geq x \in B(r)$, then it follows that $q \leq b^r$. 
+- Therefore $b^r$ is a supremum of $B(r)$. 
+d) From (c) we write that $b^{x + y} = \sup B(x + y)$. $b^x b^y$ similarly is $\sup B(x) \sup B(y)$. 
+Now consider rationals $r_x, r_y$ 
 
 
 

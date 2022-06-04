@@ -56,11 +56,12 @@ Then $\beta^{r + s}$ = $\beta^{(ad + bc)/bd}$. Then we can write $(\beta^{r+s})^
 
 $$\beta^{r+s} = [(\beta^{r+s})^{bd}]^{1/bd} = [\beta^{ad}\beta^{bc}]^{1/bd} = (\beta^{ad})^{1/bd}(\beta^{bc})^{1/bd} = \beta^{a/b}\beta^{c/d} = \beta^r\beta^s$$
 
-c) $\alpha \geq \beta$, iff $b^\alpha \geq b^\beta$, since $b >1$. So it follows that $b^r \geq B(r)$. Now suppose there exists $q$ such that $q > B(r)$ and $q < b^r$. 
+c) $\alpha \geq \beta$, iff $b^\alpha \geq b^\beta$, since $b >1$. So it follows that $b^r \geq B(r)$. Now suppose there exists real $q$ such that $q > B(r)$ and $q < b^r$. 
 
 
 
 8) ![[Pasted image 20220601202802.png]]
+
 
 
 

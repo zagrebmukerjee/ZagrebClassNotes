@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: 2022-06-01 19:55
-date updated: Friday, June 3rd 2022, 8:32 pm
+date updated: Friday, June 3rd 2022, 8:45 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -47,11 +47,10 @@ Since $-p$ is the supremum of $-A$, it follows that $\inf A = - \sup -A$.
 
 6) ![[Pasted image 20220601202725.png]]
 
-a) By Theorem 1.21 we can define the LHS as $\alpha$ such that $\alpha^n$ = $b^m$,   and RHS as $\beta$ such that $\beta^q = b^p$. We can write $m$ as $np/q$. Then we have $\alpha^n
+a) We can write $m/n = k(p/q)$, and thus $m = kp$ and $n = kq$. 
 
+We write then $(b
 
-
-7) ![[Pasted image 20220601202750.png]]
 
 
 

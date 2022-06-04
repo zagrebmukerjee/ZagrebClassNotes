@@ -56,9 +56,7 @@ Then $\beta^{r + s}$ = $\beta^{(ad + bc)/bd}$. Then we can write $(\beta^{r+s})^
 
 $$\beta^{r+s} = [(\beta^{r+s})^{bd}]^{1/bd} = [\beta^{ad}\beta^{bc}]^{1/bd} = (\beta^{ad})^{1/bd}(\beta^{bc})^{1/bd} = \beta^{a/b}\beta^{c/d} = \beta^r\beta^s$$
 
-c) 
-
-Let $m,n, \alpha, \beta$ be integers; define $b = \alpha/\beta$ and $c = m/n$. We can write $b = \alpha c$. 
+c) $\alpha \geq \beta$, iff $b^\alpha \geq b^\beta$, since $b >1$. So it follows that $b^r \geq B(r)$. Now suppose there exists $q$ such that $q > B(r)$ and $q < b^r$. 
 
 
 

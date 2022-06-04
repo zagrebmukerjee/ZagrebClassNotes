@@ -56,7 +56,10 @@ Then $\beta^{r + s}$ = $\beta^{(ad + bc)/bd}$. Then we can write $(\beta^{r+s})^
 
 $$\beta^{r+s} = [(\beta^{r+s})^{bd}]^{1/bd} = [\beta^{ad}\beta^{bc}]^{1/bd} = (\beta^{ad})^{1/bd}(\beta^{bc})^{1/bd} = \beta^{a/b}\beta^{c/d} = \beta^r\beta^s$$
 
-c) If $b>1$, it follows that $b\cdot b > b\cdot 1$, or more generally with integers $c,d$ if $c >d$ then $b^c > b^d$. This extends to rational numbers: suppose $x,y \in Q$, and 
+c) 
+
+Let $m,n, \alpha, \beta$ be integers; define $b = \alpha/\beta$ and $c = m/n$. We can write $b = \alpha c$. 
+
 
 
 8) ![[Pasted image 20220601202802.png]]

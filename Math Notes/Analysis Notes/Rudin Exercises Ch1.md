@@ -114,4 +114,4 @@ Axiom (A4) Identity. We want some $I$ such that $\alpha + I = \alpha$. Suppose $
 -  Suppose $p \in \alpha$; then $p - p = 0 \in I$; and $p + 0 \in \alpha + I$. So $\alpha \subset \alpha + I$. 
 
 Axiom (A5) Inverse
-Suppose $\alpha$ is all negative rationals. Then $\beta$ is the set of rationals $s$ such that $\alpha + s \leq 0$. 
+Suppose $\alpha$ is all negative rationals. Then $\beta$ is the set of rationals $s$ such that $r  + s \leq 0 \; \forall\,  r \in \alpha$. But if $x = r + s$ then there exists $t > r$ such that $t + s > x$. So $\alpha + \beta$ has no largest element, but $I$ does. 

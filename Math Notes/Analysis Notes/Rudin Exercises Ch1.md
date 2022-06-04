@@ -114,6 +114,4 @@ Axiom (A4) Identity. We want some $I$ such that $\alpha + I = \alpha$. Suppose $
 -  Suppose $p \in \alpha$; then $p - p = 0 \in I$; and $p + 0 \in \alpha + I$. So $\alpha \subset \alpha + I$. 
 
 Axiom (A5) Inverse
-Suppose that for every $\alpha \in R$ there is $\beta$ such that $\alpha + \beta = I$, as above. Then for each $r \in \alpha$ there is an $s \in \beta$ such that $r + s \leq 0$. 
-
-Can $\beta$ be a neo-cut? Suppose $s$ in $\beta$, and $f
+Suppose $\alpha$ is all negative rationals. Then $\beta$ is the set of rationals $s$ such that $\alpha + s \leq 0$. 

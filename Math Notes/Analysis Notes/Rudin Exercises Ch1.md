@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: 2022-06-01 19:55
-date updated: Sunday, June 5th 2022, 2:04 pm
+date updated: Sunday, June 5th 2022, 2:51 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -98,9 +98,12 @@ It is an order.
 
 Does it have the least upper bound property? 
 
-Suppose $E \subset \mathbb C$, $E \neq \emptyset$, and $E$ is bounded above. 
+Suppose $E \subset \mathbb C$, $E \neq \emptyset$. Then we can have two sets, $E_r$ and $E_i$, which is the set of $\text{Re}(z)$ and $\text{Im}(z)$ for every $z \in E$. We know that there exists $s_r = \sup E_r$ and $s_i = \sup E_i$, with $s_r, s_i \in \R$, which means $s = s_r + s_i i \in \mathbb C$. 
+Let $a + bi$ be some element of $E$. Either $a < s_r$,  or $a = s_r$ and $b < s_i$, so $z<s$, or $a = s_r$ and $b = s_i$ so $z = s$. So $s$ is an upper bound of $E$. 
 
-Then
+Suppose $p = p_r + p_i i$ is an upper bound of $E$, and $p < s$.
+But since $s_r$ is the least upper bound of $E_r$, then $p_r$ cannot be both less than $s$ and an upper bound of $E_r$. So suppose $p_r = p_s$. Then since $s_i$ is the least upper bound, and so on.
+All this means by the lexicographic ordering we can't have $p < s$. So $p$ cannot exist.
 
 
 12) ![[Pasted image 20220601202843.png]]

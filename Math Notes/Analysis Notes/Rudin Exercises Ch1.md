@@ -96,7 +96,11 @@ So we can work through the four cases:
 So this is transitive. 
 It is an order. 
 
-Does it have the least upper bound property? Suppose a set of 
+Does it have the least upper bound property? 
+
+Suppose $E \subset \mathbb C$, $E \neq \emptyset$, and $E$ is bounded above. 
+
+Then
 
 
 12) ![[Pasted image 20220601202843.png]]

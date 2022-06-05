@@ -36,4 +36,11 @@ $$\begin{align}
 
 In this space, a normalized covariance functions intuitively like an angle. Independent (orthogonal) variables have $E(XY) = E(X)E(Y)$, since $f(x,y) = f(x)f(y)$. Their covariance, $E(XY) - E(X)E(Y)$, is $0$. 
 
-Wikipedia tells me you can make an even better analogy using Cauchy-Schwarz: define $\theta$ as the angle between vector $X,Y$ so that $\cos(\theta) = \langle X,Y \rangle/ ||X||||Y||$. This is $\cov(X,Y)/\var(X)\var(Y)$, which CS tells us is bounded by $\pm1$.
+Wikipedia tells me you can make an even better analogy using Cauchy-Schwarz: define $\theta$ as the angle between vector $X,Y$ so that $\cos(\theta) = \langle X,Y \rangle/ ||X||||Y||$. This is $E(XY)/E(X)E(Y)$, which CS tells us is bounded by $\pm1$, and is $0$ for independent RVs..
+
+$$\begin{align}
+\cos(\theta)^2 &= \frac{(\cov(X,Y) - E(X)E(Y))^2}{E(X)^2E(Y)^2}\\
+&= \frac{\cov(X,Y)^2 - E(X)\cov(X,Y) - E(Y)\cov(X,Y) + E(X)^2E(Y)^2}{E(X)^2E(Y)^2}\\
+&= \frac{\cov(X,Y)^2 - E(X)[E(XY) - E(X)E(Y)] - E(Y)[E(XY) - E(X)E(Y)] + E(X)^2E(Y)^2}{E(X)^2E(Y)^2}\\
+	&= \frac{\cov(X,Y)^2 - E(X)E(XY) + E(X)^2E(Y) - E(Y)E(XY) + E(X)E(Y)^2 + E(X)^2E(Y)^2}{E(X)^2E(Y)^2}\\
+\end{align}$$

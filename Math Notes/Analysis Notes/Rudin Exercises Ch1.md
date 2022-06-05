@@ -77,7 +77,9 @@ $B(x + y)$ is all $b^t$ where $t \leq x + y$. Let $b^q = \sup B(x + y)$, which m
 15) ![[Pasted image 20220601202852.png]]
 
 
-Equality obviously holds when both vectors are $0$. Equality also holds, intuitively, when $\langle a,a\rangle \langle b,b \rangle = \langle a,b \rangle^2$
+Equality obviously holds when both vectors are $0$. Equality also holds, intuitively, when $\langle a,a\rangle \langle b,b \rangle = \langle a,b \rangle^2$. This is the condition of linear dependence, or being parallel, in an inner product space. 
+
+
 
 20) ![[Pasted image 20220601202903.png]]
 

@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: 2022-06-01 19:55
-date updated: Sunday, June 5th 2022, 1:19 pm
+date updated: Sunday, June 5th 2022, 1:25 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -69,7 +69,10 @@ $B(x + y)$ is all $b^t$ where $t \leq x + y$. Let $b^q = \sup B(x + y)$, which m
 8) ![[Pasted image 20220601202802.png]]
 
 
-8) Suppose there is an ordering
+8) Suppose there is an ordering of the complex field. We have $0 = (0,0)$. 
+Let $(0,1)$ be positive (negative); then $(0,1)(0,1) = (-1,0)$. So then this must be positive also. 
+Then $(0,1)(-1,0) = (0, -1)$, also positive. But $(0,1) + (0,-1) = 0$. 
+So then $0-(0,-1) = (0,1)$
 
 12) ![[Pasted image 20220601202843.png]]
 

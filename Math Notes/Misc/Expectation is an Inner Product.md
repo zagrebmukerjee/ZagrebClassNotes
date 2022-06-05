@@ -33,3 +33,7 @@ $$\begin{align}
 &= aE(X_1Y) + bE(X_2Y) \\
 &= a\langle X_1,Y\rangle + b\langle X_2, Y\rangle \\
 \end{align}$$
+
+In this space, a normalized covariance functions intuitively like an angle. Independent (orthogonal) variables have $E(XY) = E(X)E(Y)$, since $f(x,y) = f(x)f(y)$. Their covariance, $E(XY) - E(X)E(Y)$, is $0$. 
+
+Wikipedia tells me you can make an even better analogy using Cauchy-Schwarz: define $\theta$ as the angle between vector $X,Y$ so that $\cos(\theta) = \langle X,Y \rangle/ ||X||||Y||$. This is $\cov(X,Y)/\var(X)\var(Y)$, which CS tells us is bounded by $\pm1$.

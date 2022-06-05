@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: 2022-06-01 19:55
-date updated: Saturday, June 4th 2022, 4:11 pm
+date updated: Sunday, June 5th 2022, 12:50 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -69,14 +69,21 @@ $B(x + y)$ is all $b^t$ where $t \leq x + y$. Let $b^q = \sup B(x + y)$, which m
 8) ![[Pasted image 20220601202802.png]]
 
 
-
+8) Suppose there is an ordering
 
 12) ![[Pasted image 20220601202843.png]]
 
 
 15) ![[Pasted image 20220601202852.png]]
 
-
+Reiterating the first part of the proof, we know that 
+$$|z + w|^2 = (z + w)\overline{(z + w)} = (z + w)(\bar z + \bar w) = z \bar z + w \bar w + w\bar z + z \bar w$$
+The last two steps are conjugates - so we replace the:
+$$ |z + w|^2 = z\bar z + w \bar w +  2 \text{Re}(zw)$$
+To get inequality, the crucial step is that $2 \text{Re}(zw) \leq 2|z||w|$. Suppose that this is equal. Then we have 
+$$ |z + w|^2 = z\bar z + w \bar w +  2 \text{Re}(zw) = |z|^2 + |w|^2 + 2|z||w| = (|z| + |w|)^2$$
+$$|z + w| = |z| + |w|$$
+So: when is $ \text{Re}(zw) = |z||w|$? 
 
 20) ![[Pasted image 20220601202903.png]]
 
@@ -111,7 +118,7 @@ Axiom (A2) Commutativity. Follows from commutativity of rational addition.
 Axiom (A3) Associativity. Ditto
 Axiom (A4) Identity. We want some $I$ such that $\alpha + I = \alpha$. Suppose $I$ is the set of negative rationals and zero
 - Then for $s \in I$, $r + s < r$, so $r + s \in \alpha$, so $\alpha + I \subset \alpha$. 
--  Suppose $p \in \alpha$; then $p - p = 0 \in I$; and $p + 0 \in \alpha + I$. So $\alpha \subset \alpha + I$. 
+- Suppose $p \in \alpha$; then $p - p = 0 \in I$; and $p + 0 \in \alpha + I$. So $\alpha \subset \alpha + I$. 
 
 Axiom (A5) Inverse
 Suppose $\alpha$ is all negative rationals. Then $\beta$ is the set of rationals $s$ such that $r  + s \leq 0 \; \forall\,  r \in \alpha$. But if $x = r + s$ then there exists $t > r$ such that $t + s > x$. So $\alpha + \beta$ has no largest element, but $I$ does. 

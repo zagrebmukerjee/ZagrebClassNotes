@@ -111,7 +111,7 @@ All this means by the lexicographic ordering we can't have $p < s$. So $p$ canno
 
 Equality obviously holds when both vectors are $0$. Equality also holds, intuitively, when $\langle a,a\rangle \langle b,b \rangle = \langle a,b \rangle^2$. This is the condition of linear dependence, or being parallel, in an inner product space. 
 
-
+18) 
 
 20) ![[Pasted image 20220601202903.png]]
 

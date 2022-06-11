@@ -28,3 +28,5 @@ open balls - one of which is a neighborhood - can write $N_r(x)$ is $\{ p | d(p,
 - Isolated point: $p \in E$ but $p$ is not a limit point
 - Interior point: $p \in E$ and  there exists a ball $N_r(p)$ that is a subset of $E$. 
 
+- Set is open if every point is an interior point. Intuitively that means you can sort of jiggle anything around and it'll remain in the set.
+- Closed set 

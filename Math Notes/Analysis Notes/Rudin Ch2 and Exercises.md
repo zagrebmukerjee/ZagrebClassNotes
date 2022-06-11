@@ -14,8 +14,15 @@ tags:
 # [[Rudin Ch2 and Exercises]]
 [[Real Analysis Su and Rudin]]
 
-Metric space = a set + a distance
+Metric space = a set + a distance fn
 Distance properties:
+1) non-negativity (positivity if $p /neq q$
+2) symmetry
+3) triangle inequality 
 
 
+open balls - one of which is a neighborhood - can write $N_r(x)$ is $\{ p | d(p,x)<r \}$ (note - strictly less than. if $\leq$ then closed ball)
+
+
+Limit point: $p$ is limit pt of set $E$ if *every* neighborhood of $p$ contains some $q$ such that $q \neq p$ and $q \in E$.
 

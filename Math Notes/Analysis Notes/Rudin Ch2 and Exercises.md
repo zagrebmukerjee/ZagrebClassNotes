@@ -24,5 +24,7 @@ Distance properties:
 open balls - one of which is a neighborhood - can write $N_r(x)$ is $\{ p | d(p,x)<r \}$ (note - strictly less than. if $\leq$ then closed ball)
 
 
-Limit point: $p$ is limit pt of set $E$ if *every* neighborhood of $p$ contains some $q$ such that $q \neq p$ and $q \in E$.
+- Limit point: $p$ is limit pt of set $E$ if *every* neighborhood of $p$ contains some $q$ such that $q \neq p$ and $q \in E$.
+- Isolated point: $p \in E$ but $p$ is not a limit point
+- Interior point: $p \in E$ and  there exists a ball $N_r(p)$ that is a subset of $E$. 
 

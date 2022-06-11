@@ -11,7 +11,11 @@ tags:
 - '#status/🚧'
 ---
 
-# [[Rudin Exercises Ch 2]]
+# [[Rudin Ch2 and Exercises]]
 [[Real Analysis Su and Rudin]]
+
+Metric space = a set + a distance
+Distance properties:
+
 
 

@@ -43,7 +43,7 @@ Example: $3 \times 3$ identity matrix -> columns span $\R^3$. The null space has
 
 Another basis: 
 
-$$ \begin{bmatrix} 1 \\ 1 \\ 2\end{bmatrix}, \begin{bmatrix} 2 \\2 \\5\end{bmatrix}, \begin{bmatrix}3 \\3 \\ 8\end{bmatrix}$$
+$$ \begin{bmatrix} 1 \\ 1 \\ 2\end{bmatrix}, \begin{bmatrix} 2 \\2 \\5\end{bmatrix}, \begin{bmatrix}3 \\4 \\ 8\end{bmatrix}$$
 
 
 ```ad-info

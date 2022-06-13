@@ -37,7 +37,7 @@ open balls - one of which is a neighborhood - can write $N_r(x)$ is $\{ p | d(p,
 
 ## Exercises
 
-2
+2) 
 3
 4
 5

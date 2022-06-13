@@ -37,26 +37,28 @@ open balls - one of which is a neighborhood - can write $N_r(x)$ is $\{ p | d(p,
 
 ## Exercises
 
-2) 
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-14
+2) ![[Pasted image 20220613183158.png]]
+3) ![[Pasted image 20220613183215.png]]
+4) 
+5) 
+6) ![[Pasted image 20220613183227.png]]
+7) ![[Pasted image 20220613183236.png]]
+8) 
+9) ![[Pasted image 20220613183248.png]]
+10) ![[Pasted image 20220613183257.png]]
+11) ![[Pasted image 20220613183305.png]]
+12) ![[Pasted image 20220613183317.png]]
+14) ![[Pasted image 20220613183323.png]]
 
-15
+Consider the progression of intervals $(1/n, 1)$ for $n \in \mathbb{Z}$. 
+- This covers $(0,1$): Suppose $0 \leq x \leq 1$. There is an integer $m$ such that $m > 1/x$. It follows that $1/m < x$; thus, $x \in (1/m, 1)$. 
+- This has no finite subcover: Suppose there is a finite subcover. Then that subcover has a least element, $1/n_{min}$. But we know that  $1/(n_{min} + 1) >0$; and $1/(n_{min} + 1) < 1/n_{min}$, so $1/(n_{min} + 1) \notin (1/n_{min}, 1)$. Thus the finite subcover is not a cover. 
+
+15) ![[Pasted image 20220613184303.png]]
 16
 17
-
-
 18
-19
-22
-24
+19) ![[Pasted image 20220613184319.png]]
+22) ![[Pasted image 20220613184329.png]]
+24) ![[Pasted image 20220613184337.png]]
 25

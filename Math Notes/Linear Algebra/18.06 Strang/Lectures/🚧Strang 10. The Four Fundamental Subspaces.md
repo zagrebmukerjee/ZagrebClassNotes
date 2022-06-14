@@ -35,4 +35,33 @@ Do row operations:
 $$\begin{bmatrix} 1 & 2 & 3 & 1 \\ 0& -1 & -1 & 0 \\ 0 & 0 & 0 & 0 \\\end{bmatrix}$$
 
 $$\begin{bmatrix} 1 & 0 & 1 & 1 \\ 0& 1 & 1 & 0 \\ 0 & 0 & 0 & 0 \\\end{bmatrix}$$
-So the special solutions are $[-1, -1,
+So the special solutions are $[-1, -1, 1, 0]'$ and $[-1,0,0,1$] which form a basis for $N(A)$. 
+
+```ad-warning
+$C(A)$ is not the same as $C(R)$! Row operations do not preserve the column space.
+```
+
+The basis for the row space is the first $r$ rows of $R$. It's not guaranteed that that's the case for $A$.... 
+
+So the basis for $C(A')$ is $[1,0,1,1]'$ and $[0,1,1,0]'$. 
+
+
+Now... How can I get to $N(A')$ from what I have done so far? 
+
+Suppose I write $\begin{bmatrix} A & I\end{bmatrix}$ as with Gauss-Jordan. Then I do row reduction. So I end up with $\begin{bmatrix} R & E\end{bmatrix}$. This $E$ matrix encodes the row operations that get from $A$ to $R$ - $EA = R$. 
+
+So what it is: 
+
+$$ \begin{bmatrix} A & I\end{bmatrix}= \begin{bmatrix} 1 & 2 & 3 & 1 &|& 1 & 0 & 0 \\ 1& 1 & 2 & 1 &|& 0 & 1 & 0\\ 1 & 2 & 3 & 1 &|& 0 & 0 & 1\\ \end{bmatrix}$$
+$$ \begin{bmatrix} 1 & 2 & 3 & 1 &|& 1 & 0 & 0 \\ 0& 1 & 1 & 0 &|& 1 & -1 & 0\\ 0 & 0 & 0 & 0 &|& \cellcolor{#912}-1 &\cellcolor{#912} 0 & \cellcolor{#912}1\\ \end{bmatrix}$$
+But wait! That last column describes row operations done to get a zero row; in other words, the linear combination of rows of $A$ that gives zero!
+That means that it's a basis for the left null space! 
+$$xA = \begin{bmatrix} -1 & 0 & 1\end{bmatrix}\begin{bmatrix} 1 & 2 & 3 & 1 \\ 1& 1 & 2 & 1 \\ 1 & 2 & 3 & 1 \\\end{bmatrix} = \begin{bmatrix} 0 \\ 0 \\ 0 \\\end{bmatrix}$$
+
+Voila!
+
+
+
+$C(A) \cup N(A')$ forms $\R^m$, and $C(A') \cup N(A)$ is $\R^n$. 
+
+Proof: Suppose vector $p = p_1, \ldots p_m$ in $\R^m$ is not in $C(A)$. That means there is no solution to $Ax = p$. 

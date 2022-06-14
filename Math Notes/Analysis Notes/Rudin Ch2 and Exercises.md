@@ -38,6 +38,10 @@ open balls - one of which is a neighborhood - can write $N_r(x)$ is $\{ p | d(p,
 ## Exercises
 
 2) ![[Pasted image 20220613183158.png]]
+Every algebraic number can be written as $n$ integers $(a_0, \ldots, a_n)$. 
+
+
+
 3) ![[Pasted image 20220613183215.png]]
 4) 
 5) 

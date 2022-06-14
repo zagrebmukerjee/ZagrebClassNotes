@@ -38,7 +38,9 @@ open balls - one of which is a neighborhood - can write $N_r(x)$ is $\{ p | d(p,
 ## Exercises
 
 2) ![[Pasted image 20220613183158.png]]
-Every algebraic number can be written as $n$ integers $(a_0, \ldots, a_n)$. 
+Every algebraic number can be written as $n+1$ integers $(a_0, \ldots, a_n)$. We know from the hint that there is a finite number of these for every integer; it follows that there's a finite number for each length $n$, since no finite set has infinite subsets. 
+
+Suppose set $F$ is countable. Then imagine that for each $f \in F$ we have a countable number of sets. Is the s
 
 
 

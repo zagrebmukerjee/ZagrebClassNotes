@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: 2022-06-10 19:16
-date updated: Tuesday, June 14th 2022, 2:13 pm
+date updated: Tuesday, June 14th 2022, 4:10 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -28,7 +28,7 @@ open balls - one of which is a neighborhood - can write $N_r(x)$ is $\{ p | d(p,
 
 - Limit point: $p$ is limit pt of set $E$ if *every* neighborhood of $p$ contains some $q$ such that $q \neq p$ and $q \in E$.
 - Isolated point: $p \in E$ but $p$ is not a limit point
-- Interior point: $p \in E$ and  there exists a ball $N_r(p)$ that is a subset of $E$. 
+- Interior point: $p \in E$ and there exists a ball $N_r(p)$ that is a subset of $E$. 
 
 - Set is open if every point is an interior point. Intuitively that means you can sort of jiggle anything around and it'll remain in the set.
 - Closed set 
@@ -45,8 +45,21 @@ It follows from the countability of the algebraics.
 
 4) Rationals are countable, reals are uncountable, so irrationals must be uncountable
 
-5) 
+5) $$ \{1/2, 1/3, \ldots, 1/n\} \cup \{3/2, 4/3, \ldots, (n+1)/n\} \cup \{5/2, 7/3, \ldots, (2n + 1)/n\} $$
+This set has $0$ as a limit point, as well as $1$ and $2$. 
+
 6) ![[Pasted image 20220613183227.png]]
+
+a) Suppose a point $p$ that is not in $E
+
+
+
+For $p \in E'$, suppose there is a neighborhood $N$ of radius $r$ around $p$ that contains no elements of $E'$. Let $q$ be any point in $N$; $q$ then cannot be a limit point of $E$, and so there is some neighborhood $N_q$ around $q$ that contains no points of $E$. But since we haven't specified $q$, that means we can cover $N$ with neighborhoods that contain no points of $E$, which in turn means that $N$ contains no points in $E$. But then $p$ cannot be a limit point. 
+
+
+
+b) 
+
 7) ![[Pasted image 20220613183236.png]]
 8) 
 9) ![[Pasted image 20220613183248.png]]

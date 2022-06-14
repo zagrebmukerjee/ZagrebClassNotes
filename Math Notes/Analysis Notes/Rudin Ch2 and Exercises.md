@@ -56,18 +56,12 @@ Every point in $N'$ has distance from $q$ of at most $s$, which means its distan
 
 b) First, consider $p \in E'$. Every neighborhood around $p$ contains an element of $E$ by construction, so it contains an element of $\bar{E}$; so every limit point of $E$ is a limit point of $\bar{E}$. 
 
-Define $\bar E'$ as  the limit points of $\bar{E}$, and consider some point $p \in \bar{E}'$. Every neighborhood $N$ around $p$ contains an element of $\bar{E}$, which means $N$ contains an element of $E$ or of $E'$. Suppose $N$ contains an element of $E'$; then by the same logic as in step 1 it contains an element of $E$ as well. Therefore every 
+Define $\bar E'$ as  the limit points of $\bar{E}$, and consider some point $p \in \bar{E}'$. Every neighborhood $N$ around $p$ contains an element of $\bar{E}$, which means $N$ contains either an element of $E$ or of $E'$. Suppose $N$ contains an element of $E'$; then by the same logic as in step 1 it contains an element of $E$ as well. Therefore every $N$ contains an element of $E$, meaning $p$ is a limit point of $E$. 
+
+So since $E' \subset \bar{E}'$, and $\bar{E}' \subset E'$, they are the same. 
 
 
-since $\bar{E} = E \cup E'$, 
-
-
-
-For $p \in E'$, suppose there is a neighborhood $N$ of radius $r$ around $p$ that contains no elements of $E'$. Let $q$ be any point in $N$; $q$ then cannot be a limit point of $E$, and so there is some neighborhood $N_q$ around $q$ that contains no points of $E$. But since we haven't specified $q$, that means we can cover $N$ with neighborhoods that contain no points of $E$, which in turn means that $N$ contains no points in $E$. But then $p$ cannot be a limit point. 
-
-
-
-b) 
+c) No. Consider the set of reciprocals of the integers, $E = \{1/1, 1/2, 1/3, \ldots, 1/n \}$. It follows that $E' = \{0\}$. But since $E'$ has only one element, it has no limit points. 
 
 7) ![[Pasted image 20220613183236.png]]
 8) 

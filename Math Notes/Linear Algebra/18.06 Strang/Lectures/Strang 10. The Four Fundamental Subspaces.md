@@ -1,17 +1,16 @@
 ---
 aliases:
 creation date: 2022-06-13 19:40
-date updated: Monday, June 13th 2022, 7:49 pm
+date updated: Monday, June 13th 2022, 8:15 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags: 
 - '#types/classes/math/linalg'
-- '#status/🚧'
 ---
 
-# [[🚧Strang 10. The Four Fundamental Subspaces]]
+# [[Strang 10. The Four Fundamental Subspaces]]
 [[18.06 Strang]]
 
 The four fundamental subspaces of a matrix? It's not that hard to guess many of them:
@@ -63,5 +62,3 @@ Voila!
 
 
 $C(A) \cup N(A')$ forms $\R^m$, and $C(A') \cup N(A)$ is $\R^n$. 
-
-Proof: Suppose vector $p = p_1, \ldots p_m$ in $\R^m$ is not in $C(A)$. That means there is no solution to $Ax = p$. 

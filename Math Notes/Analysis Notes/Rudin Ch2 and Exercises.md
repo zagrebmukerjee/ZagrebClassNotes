@@ -70,7 +70,9 @@ For $p \in E'$, suppose there is a neighborhood $N$ of radius $r$ around $p$ tha
 b) 
 
 7) ![[Pasted image 20220613183236.png]]
-8) 
+8) a) Yes. Consider any point $p \in E$. Since $E$ is open, $p$ is an interior point; so there exists an $r$ such that $N_r(P) \subset E$. Any neighborhood of $p$ has radius either $>r$ or $\leq r$. If less than or equal, that neighborhood is a subset of $N_r(p)$, and so is a subset of $E$, and contains points in $E$. If greater, that neighborhood contains $N_r(p)$ and thus contains points in $E$. So every neighborhood of $p$ contains points in $E$, meaning $p$ is a limit point. This is not true for closed sets; consider the set ${0}$. 
+
+
 9) ![[Pasted image 20220613183248.png]]
 10) ![[Pasted image 20220613183257.png]]
 11) ![[Pasted image 20220613183305.png]]

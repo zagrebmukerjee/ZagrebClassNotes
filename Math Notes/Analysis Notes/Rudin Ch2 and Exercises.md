@@ -50,7 +50,16 @@ This set has $0$ as a limit point, as well as $1$ and $2$.
 
 6) ![[Pasted image 20220613183227.png]]
 
-a) Suppose a point $p$ that is not in $E
+a) Suppose a point $p$ is a limit point of $E'$. Consider some neightborhood $N$ around $p$ with radius $r$. This must contain an element of $E'$; call it $q$. $d(q,p) < r$, so let $s = [r - d(q,p)]/2$, and draw a neighborhood $N'$ of radius $s$ around $q$. 
+
+Every point in $N'$ has distance from $q$ of at most $s$, which means its distance from $p$ is at most $d(q,p) + s < r$. So $N' \subset N$. But since $q \in E'$ there is some element of $N'$ that is in $E$. So any neighborhood $N$ around $p$ contains an element of $E$, and so $p$ must be a limit point of $E$; so every limit point of $E'$ is in $E'$, and thus $E'$ is closed. 
+
+b) First, consider $p \in E'$. Every neighborhood around $p$ contains an element of $E$ by construction, so it contains an element of $\bar{E}$; so every limit point of $E$ is a limit point of $\bar{E}$. 
+
+Define $\bar E'$ as  the limit points of $\bar{E}$, and consider some point $p \in \bar{E}'$. Every neighborhood $N$ around $p$ contains an element of $\bar{E}$, which means $N$ contains an element of $E$ or of $E'$. Suppose $N$ contains an element of $E'$; then by the same logic as in step 1 it contains an element of $E$ as well. Therefore every 
+
+
+since $\bar{E} = E \cup E'$, 
 
 
 

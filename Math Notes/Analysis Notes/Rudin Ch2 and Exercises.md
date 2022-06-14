@@ -41,10 +41,10 @@ open balls - one of which is a neighborhood - can write $N_r(x)$ is $\{ p | d(p,
 Every algebraic number can be written as $n+1$ integers $(a_0, \ldots, a_n)$. We know from the hint that there is a finite number of these for every integer; it follows that there's a finite number for each length $n$, since no finite set has infinite subsets. So we have a finite number of finite sets. A parallel argument to the $\mathbb Z \to \mathbb Z^n$ thence applies. 
 
 3) ![[Pasted image 20220613183215.png]]
+It follows from the countability of the algebraics.
 
+4) Rationals are countable, reals are uncountable, so irrationals must be uncountable
 
-
-4) 
 5) 
 6) ![[Pasted image 20220613183227.png]]
 7) ![[Pasted image 20220613183236.png]]

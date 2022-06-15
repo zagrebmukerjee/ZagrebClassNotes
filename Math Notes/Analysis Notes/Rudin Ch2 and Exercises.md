@@ -70,6 +70,14 @@ c) No. Consider the set of reciprocals of the integers, $E = \{1/1, 1/2, 1/3, \l
 9) ![[Pasted image 20220613183248.png]]
 10) ![[Pasted image 20220613183257.png]]
 11) ![[Pasted image 20220613183305.png]]
+Note: all have non-negativity. 
+$d_4$ lacks the symmetry property. Consider $a = 0$, $b = 1$. $d_4(a,b) = |0-2| = 2$, but $d_4(b,a) = |1-0| = 1$. 
+
+For the others, let us test the triangle inequality:
+- $d_1(p,q) \leq d_1(p,r) + d_1(r,q)$ evidently fails in the case of $p = 1$, $q = 3$, $r = 2$. $d_1(1,2) = d_1(2,3) = 1$, but $d_1(1,3) = 4$. 
+- 
+
+
 12) ![[Pasted image 20220613183317.png]]
 14) ![[Pasted image 20220613183323.png]]
 

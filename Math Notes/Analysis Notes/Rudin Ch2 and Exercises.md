@@ -70,7 +70,13 @@ c) No. Consider the set of reciprocals of the integers, $E = \{1/1, 1/2, 1/3, \l
 9) ![[Pasted image 20220613183248.png]]
 a) Choose a point $p$ in $E^\circ$. 
 - For some radius $r_0$, since $p$ is in the interior of $E$, $N_r(p) \subset E$ when $r < r_0$. 
-- Suppose $p$ is not in the interior of $E^\circ$. Choose $r' < r_0$; 
+- Suppose $p$ is not in the interior of $E^\circ$. Choose $r' < r_0$, so $N_{r'}(p) \subset E$. By supposition, $N_{r'}(p)$ contains some point $q \notin E^\circ$. But then $q$ cannot be in the interior of $E$, so every neighborhood around $q$ contains something not in $E$, which means that $N_{r'}(p)$ contains a point not in $E$, contradicting the supposition. 
+- Thus every point in $E^\circ$ is an interior point of $E^\circ$, meaning $E^\circ$ is open. 
+
+b) If $E^\circ = E$ then openness follows from a). In the other direction, we want to show that openness implies $E^\circ = E$. Suppose $E$ is open. Then every point in $E$ is an interior point of $E$; it follow that every point is in $E^\circ$ meaning that $E^\circ = E$. 
+
+c) $G$ being open implies that every point in $G$ is an interior point of $G$; which means for any $p \in G$ there is a neighborhood of $p$ $
+
 
 10) ![[Pasted image 20220613183257.png]]
 11) ![[Pasted image 20220613183305.png]]

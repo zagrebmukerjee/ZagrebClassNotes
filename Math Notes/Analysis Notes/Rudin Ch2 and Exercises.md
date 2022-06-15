@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: 2022-06-10 19:16
-date updated: Tuesday, June 14th 2022, 8:29 pm
+date updated: Tuesday, June 14th 2022, 8:40 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -76,17 +76,19 @@ $d_4$ lacks the symmetry property. Consider $a = 0$, $b = 1$. $d_4(a,b) = |0-2| 
 For the others, let us test the triangle inequality:
 - $d_1(p,q) \leq d_1(p,r) + d_1(r,q)$ evidently fails in the case of $p = 1$, $q = 3$, $r = 2$. $d_1(1,2) = d_1(2,3) = 1$, but $d_1(1,3) = 4$. 
 - $d_2(p,q) \leq d_2(p,r) + d_2(r,q)$; We can write $r = p + a$, and $q = p + a + b$. Then $d_2(p,q) = \sqrt{|a+b|}$, $d_2(p,r) =\sqrt{|a|}$, and $d_2(r,q) = \sqrt{|b|}$. $(\sqrt{|a|} + \sqrt{|b|})^2$ = $|a| + |b| + 2\sqrt{|a||b|} \geq |a + b|$. 
-- $d_3$: write $p,q,r$ as above. Then $d(p,q) = |(p + a + b)^2 - p^2| = |a^2 + b^2 +2ap + 2bp + 2ab |$. $d(p,r) = |a^2|$ and $d(q,r) = |b^2|$. So the triangle inequality holds. 
+- $d_3$ has the problem that $d(x,-x) = 0$ but $x \neq -x$
 - $d_5$ is more fun. We can write as before:
 
-$$\begin{align}d(p,q) \quad &? \quad   d(p,r) +  d(r,q) 
+$$\begin{align}d(p,q) \quad &? \quad d(p,r) +  d(r,q) 
 \\
 \frac{|a + b|}{1 + |a + b|} \quad &? \quad  \frac{|a|}{1+ |a|}+  \frac{|b|}{1+|b|} \\
 \frac{|a + b|(1+|b|)(1+ |a|)}{(1 + |a + b|)(1+|b|)(1+ |a|)} \quad &? \quad  \frac{|a|(1+|b|)(1 + |a + b|)}{(1+ |a|)(1+|b|)(1 + |a + b|)}+  \frac{|b|(1+ |a|)(1 + |a + b|)}{(1+ |a|)(1+|b|)(1 + |a + b|)} \\
 (|a + b|+|a + b||b|)(1+ |a|) \quad  &? \quad (|a| + 2|b||a| + |b|)(1 + |a + b|) \\
 |a + b|\quad  &? \quad |a| + 2|b||a| + |b| + |b||a||a + b|    \\
-0 \quad  &? \quad |a| + |b| + 2|b||a|  + |b||a||a + b|   \\
+0 \quad  &? \quad |a| + |b| - |a + b| + 2|b||a|  + |b||a||a + b|   \\
 \end{align} $$
+
+Since $|a| + |b| \geq |a + b|$ the triangle inequality holds.
 
 
 12) ![[Pasted image 20220613183317.png]]

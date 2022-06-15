@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: 2022-06-10 19:16
-date updated: Tuesday, June 14th 2022, 8:40 pm
+date updated: Wednesday, June 15th 2022, 12:45 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -92,7 +92,7 @@ Has non-negativity. $d(p,q) = 0$ iff $p=q$. Obviously transitive.
 The triangle inequality becomes the triangle equality for $r \notin \{p,q\}$. Otherwise:
 
 $$d(p,q) \leq d(p,r) + d(r,q)  \to 1 \leq 2$$
-No subsets are open. For any subset $E$ containing point $p$ it is possible to draw a ball of radius $r < 1$ around $p$ that contains no elements of $E$. Thus no subsets are closed. 
+Any subsets are open. For any subset $E$ containing point $p$ it is possible to draw a ball of radius $r < 1$ around $p$ that contains $p$, and thus only elements of $E$. Thus any subset, since it is the complement of some other subset, is also closed.
 
 Any finite subset is compact. Every open cover must contain some ball around each point, and that finite set of balls can be an open subcover. 
 
@@ -120,7 +120,7 @@ Since $|a| + |b| \geq |a + b|$ the triangle inequality holds.
 
 12) ![[Pasted image 20220613183317.png]]
 
-
+Any open cover $C$ of $K$ must contain all balls of some radius $r$ around the points of $K$, since the points of $K$ are interior points of $C$ by openness. Given any $r$, consider  $C'=[0, 1/m < r]$, where $m$ is an integer such that $1/m < r$. We know that all points within distance $r$ of $0$ are contained in $C$, by construction; so we know this interval is inside $C$. But the union of $C'$ and the (at most) $m-1$ balls around elements of $K$ is finite, so this is a finite subcover.
 
 14) ![[Pasted image 20220613183323.png]]
 

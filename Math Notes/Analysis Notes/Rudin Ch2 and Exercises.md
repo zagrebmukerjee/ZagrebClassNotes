@@ -75,7 +75,8 @@ $d_4$ lacks the symmetry property. Consider $a = 0$, $b = 1$. $d_4(a,b) = |0-2| 
 
 For the others, let us test the triangle inequality:
 - $d_1(p,q) \leq d_1(p,r) + d_1(r,q)$ evidently fails in the case of $p = 1$, $q = 3$, $r = 2$. $d_1(1,2) = d_1(2,3) = 1$, but $d_1(1,3) = 4$. 
-- 
+- $d_2(p,q) \leq d_2(p,r) + d_2(r,q)$; We can write $r = p + a$, and $q = p + a + b$. Then $d_2(p,q) = \sqrt{|a+b|}$, $d_2(p,r) =\sqrt{|a|}$, and $d_2(r,q) = \sqrt{|b|}$. $(\sqrt{|a|} + \sqrt{|b|})^2$ = $|a| + |b| + 2\sqrt{|a||b|} \geq |a + b|$. 
+- $d_3$: write $p,q,r$ as above. Then $d(p,q) = |(p + a + b)^2 - p^2| = |a^2 + b^2 +2ap + 2bp + 2ab |$. $d(p,r) = |2ap + 
 
 
 12) ![[Pasted image 20220613183317.png]]

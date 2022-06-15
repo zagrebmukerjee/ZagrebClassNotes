@@ -77,11 +77,9 @@ b) If $E^\circ = E$ then openness follows from a). In the other direction, we wa
 
 c) $G$ being open implies that every point in $G$ is an interior point of $G$; which means for any $p \in G$ there is some $N(p) \subset G$, which means that that $N(p) \subset E$, and so $p$ is in the interior of $E$; thus $G \subset E^\circ$. 
 
-d)
+d) every point in $E^\circ$ has a neighborhood containing only points in $E$, meaning it contains no points in $E^c$. So no points in $E^\circ$ are limit points of $E^c$. 
 
-e)
-
-f)
+e)f) The rationals have a closure that is $\R$ and no interior. 
 
 
 10) ![[Pasted image 20220613183257.png]]

@@ -70,7 +70,7 @@ c) No. Consider the set of reciprocals of the integers, $E = \{1/1, 1/2, 1/3, \l
 9) ![[Pasted image 20220613183248.png]]
 a) Choose a point $p$ in $E^\circ$. 
 - For some radius $r_0$, since $p$ is in the interior of $E$, $N_r(p) \subset E$ when $r < r_0$. 
-- Suppose $p$ is not in the interior of $E^\circ$. Then Choose $r' < r_0$. 
+- Suppose $p$ is not in the interior of $E^\circ$. Choose $r' < r_0$; 
 
 10) ![[Pasted image 20220613183257.png]]
 11) ![[Pasted image 20220613183305.png]]

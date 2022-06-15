@@ -92,6 +92,9 @@ Since $|a| + |b| \geq |a + b|$ the triangle inequality holds.
 
 
 12) ![[Pasted image 20220613183317.png]]
+
+
+
 14) ![[Pasted image 20220613183323.png]]
 
 Consider the progression of intervals $(1/n, 1)$ for $n \in \mathbb{Z}$. 

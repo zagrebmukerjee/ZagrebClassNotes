@@ -75,10 +75,27 @@ a) Choose a point $p$ in $E^\circ$.
 
 b) If $E^\circ = E$ then openness follows from a). In the other direction, we want to show that openness implies $E^\circ = E$. Suppose $E$ is open. Then every point in $E$ is an interior point of $E$; it follow that every point is in $E^\circ$ meaning that $E^\circ = E$. 
 
-c) $G$ being open implies that every point in $G$ is an interior point of $G$; which means for any $p \in G$ there is a neighborhood of $p$ $
+c) $G$ being open implies that every point in $G$ is an interior point of $G$; which means for any $p \in G$ there is some $N(p) \subset G$, which means that that $N(p) \subset E$, and so $p$ is in the interior of $E$; thus $G \subset E^\circ$. 
+
+d)
+
+e)
+
+f)
 
 
 10) ![[Pasted image 20220613183257.png]]
+The discrete metric!
+
+Has non-negativity. $d(p,q) = 0$ iff $p=q$. Obviously transitive. 
+
+The triangle inequality becomes the triangle equality for $r \notin \{p,q\}$. Otherwise:
+
+$$d(p,q) \leq d(p,r) + d(r,q)  \to 1 \leq 2$$
+No subsets are open. For any subset $E$ containing point $p$ it is possible to draw a ball of radius $r < 1$ around $p$ that contains no elements of $E$. Thus no subsets are closed. 
+
+Any finite subset is compact. Every open cover must contain some ball around each point, and that finite set of balls can be an open subcover. 
+
 11) ![[Pasted image 20220613183305.png]]
 Note: all have non-negativity. 
 $d_4$ lacks the symmetry property. Consider $a = 0$, $b = 1$. $d_4(a,b) = |0-2| = 2$, but $d_4(b,a) = |1-0| = 1$. 
@@ -108,8 +125,8 @@ Since $|a| + |b| \geq |a + b|$ the triangle inequality holds.
 14) ![[Pasted image 20220613183323.png]]
 
 Consider the progression of intervals $(1/n, 1)$ for $n \in \mathbb{Z}$. 
-- This covers $(0,1$): Suppose $0 \leq x \leq 1$. There is an integer $m$ such that $m > 1/x$. It follows that $1/m < x$; thus, $x \in (1/m, 1)$. 
-- This has no finite subcover: Suppose there is a finite subcover. Then that subcover has a least element, $1/n_{min}$. But we know that  $1/(n_{min} + 1) >0$; and $1/(n_{min} + 1) < 1/n_{min}$, so $1/(n_{min} + 1) \notin (1/n_{min}, 1)$. Thus the finite subcover is not a cover. 
+- This covers $(0,1$): Suppose $0 < x < 1$. There is an integer $m$ such that $m > 1/x$. It follows that $1/m < x$; thus, $x \in (1/m, 1)$
+- This has no finite subcover: Suppose there is a finite subcover. Then that subcover has a least element which we can bound below with $1/n_{min}$. But we know that  $1/(n_{min} + 1) >0$; and $1/(n_{min} + 1) < 1/n_{min}$, so $1/(n_{min} + 1) \notin (1/n_{min}, 1)$. Thus the finite subcover is not a cover. 
 
 15) ![[Pasted image 20220613184303.png]]
 16

@@ -104,7 +104,7 @@ Consider the progression of intervals $(1/n, 1)$ for $n \in \mathbb{Z}$.
 15) ![[Pasted image 20220613184303.png]]
 16
 17
-18
+18 optional
 19) ![[Pasted image 20220613184319.png]]
 22) ![[Pasted image 20220613184329.png]]
 24) ![[Pasted image 20220613184337.png]]

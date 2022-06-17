@@ -50,6 +50,6 @@ y_4 + y_5 &= 0 \\
 
 These are currents. The constant $c$ connects currents to potential differences. This is Krichoff's current law - current in = current out.
 
-Basis for the null space is $\begin{bmatrix} 1 & 1 & -1 & 0 & 0 \end{bmatrix}'$, $\begin{bmatrix} 0 & 0 & 1 & -1 & 1 \end{bmatrix}'$; in other words, sending current around the three loops. 
+Basis for the left null space is $\begin{bmatrix} 1 & 1 & -1 & 0 & 0 \end{bmatrix}'$, $\begin{bmatrix} 0 & 0 & 1 & -1 & 1 \end{bmatrix}'$; in other words, sending current around the two loops. 
 
 The graph of the three pivot columns of $A'$ makes a tree, or a graph with no loops. The dimension of $N(A')$ is the number of loops. Given that $m =$ # of edges, $n =$ # of nodes, then we have # of loops = # of edges - (#nodes - 1). This is <font color=gree>Euler's Formula</font>.

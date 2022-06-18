@@ -11,7 +11,7 @@ tags:
 ---
 
 # [[Strang 11. Other Vector Spaces, Rank 1 Matrices]]
-[[18.06 Strang]]
+[[18.06  Linear Algebra Strang]]
 
 ## Matrix Vector Space
 

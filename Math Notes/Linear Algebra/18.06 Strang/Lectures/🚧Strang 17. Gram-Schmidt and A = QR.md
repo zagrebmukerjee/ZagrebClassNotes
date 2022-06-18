@@ -9,4 +9,4 @@ tags:
 - '#status/🚧'
 ---
 
-[[18.06 Strang]]
+[[18.06  Linear Algebra Strang]]

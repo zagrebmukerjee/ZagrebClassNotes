@@ -11,7 +11,7 @@ tags:
 ---
 
 # [[Strang 8. Rectangular PA = LU and Ax = b]]
-[[18.06 Strang]]
+[[18.06  Linear Algebra Strang]]
 
 Solve $Ax = b$!
 

@@ -9,7 +9,7 @@ tags:
 ---
 
 ## Vector Spaces and Subspaces
-[[18.06 Strang]]
+[[18.06  Linear Algebra Strang]]
 #### Definition; $\R^n$ and other vector spaces
 
 A <font color=gree>vector space</font> is a set of vectors that is closed under addition and scalar multiplication: given space $S$: $A,B \in S$ implies $cA + dB \in S$. $\mathbb{R}^n$ are all vector spaces. In other words: all linear combinations of vectors in a space are also in the space. Note that this necessitates that the origin is in every vector space. 

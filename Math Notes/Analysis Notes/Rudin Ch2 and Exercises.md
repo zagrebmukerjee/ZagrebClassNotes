@@ -132,13 +132,14 @@ Consider the progression of intervals $(1/n, 1)$ for $n \in \mathbb{Z}$.
 18 optional
 19) ![[Pasted image 20220613184319.png]]
 
+Recall that sets are separated if $A \cap \overline B = B \cap \overline A = \emptyset$. Suppose $A$ and $B$ are not separated. Then it follows that there is some point of $A$ in the closure of $B$ or vice versa. But every point in the closure of $B$ is in $B$. So there is some point of $A$ in $B$, meaning they are not disjoint - so the theorem follows by contrapositive. 
+
 
 22) ![[Pasted image 20220613184329.png]]
 
-That $\mathbb Q^k$ is countable has been established. 
+That $\mathbb Q^k$ is countable has been established. The density of the rationals in the reals is 1.20 b. So $\R^1$ is separable. 
 
-$\mathbb Q^1$ is dense in $\R^1$: 
-- Suppose there is a ball of radius $r$ around real number $p$ that contains no rational $q$. Every real number is a cut of the rational numbers, from theorem 1.19. The cut has no largest number, but it has a real least upper bound.
+$\R^k$ is the set of tuples $(x_1, \ldots, x_k)$ with each $x$ in $\R^1$. Suppose $p \in \R^k$ has some closest rational $q \in \mathbb Q^k$, a tuple of rationals $(q_1, \ldots, q_k).$ So for some distance $r$, $\sqrt{(x_1 - q_1)^2 + \ldots + (x_k - q_k)^2  } = r$. But by the density of $\mathbb Q^1$ in $\R^1$, we know that there exists a $q_{1}'$ such that $x_1 < q_{1}' < q_1$. So then make $q' \in \mathbb Q^k$ which is $(q_{1}', q_2, \ldots, q_k)$. It follows that $\sqrt{(x_1 - q_1')^2 + \ldots + (x_k - q_k)^2 } < r$. So any element of $\R^k$ has no closest rational, meaning that $\mathbb Q^k$ is dense in $\R^k$. Thus $\R^k$ has a dense countable subset and so is separable. 
 
 24) ![[Pasted image 20220613184337.png]]
 25

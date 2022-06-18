@@ -131,6 +131,14 @@ Consider the progression of intervals $(1/n, 1)$ for $n \in \mathbb{Z}$.
 17
 18 optional
 19) ![[Pasted image 20220613184319.png]]
+
+
 22) ![[Pasted image 20220613184329.png]]
+
+That $\mathbb Q^k$ is countable has been established. 
+
+$\mathbb Q^1$ is dense in $\R^1$: 
+- Suppose there is a ball of radius $r$ around real number $p$ that contains no rational $q$. Every real number is a cut of the rational numbers, from theorem 1.19. The cut has no largest number, but it has a real least upper bound.
+
 24) ![[Pasted image 20220613184337.png]]
 25

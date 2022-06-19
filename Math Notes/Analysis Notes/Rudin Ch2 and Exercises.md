@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: 2022-06-10 19:16
-date updated: Wednesday, June 15th 2022, 12:45 pm
+date updated: Saturday, June 18th 2022, 9:56 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -129,7 +129,9 @@ Consider the progression of intervals $(1/n, 1)$ for $n \in \mathbb{Z}$.
 15) ![[Pasted image 20220613184303.png]]
 ![[Pasted image 20220618213622.png]]
 
-Suppose ${K_\alpha}$ is a collection of *closed* subsets such that every finite subcollection has a nonempty intersection. 
+a) Consider the collection of sets $K_n$, where each $K$ is the set of all integers less than $n$ for $n = 0, -1, \ldots$ It is apparent that this set, having no limit points, is closed. Any subcollection will have a nonempty intersection: let $n_{\min}$ be the least index of that collection, then $n_\min - 1$ will be in every set. But there is no integer less than all other integers, so $\cap\; K_n$ is empty. 
+
+b) Intervals $(0, 1/n)$ for $n = 1, \ldots$ are bounded by $0$ and $1$. Any subcollection has an intersection - specifically, if $n_\max$ is the greatest index of that collection, then $1/(n_\max+1)$ is in every subcollection. But there is no least reciprocal, so this is an empty intersection. 
 
 
 16

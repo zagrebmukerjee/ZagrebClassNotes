@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: 2022-06-10 19:16
-date updated: Saturday, June 18th 2022, 9:56 pm
+date updated: Saturday, June 18th 2022, 10:27 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -134,12 +134,13 @@ a) Consider the collection of sets $K_n$, where each $K$ is the set of all integ
 b) Intervals $(0, 1/n)$ for $n = 1, \ldots$ are bounded by $0$ and $1$. Any subcollection has an intersection - specifically, if $n_\max$ is the greatest index of that collection, then $1/(n_\max+1)$ is in every subcollection. But there is no least reciprocal, so this is an empty intersection. 
 
 
-16) It's evident that $E$ is bounded by, say , 1 below and 2 above.  
+16) It's evident that $E$ is bounded by, say , -2 below and 2 above.  
 
-Let $q$ be a point outside $E$. Since $q > \sqrt{3}$, there is some $r \in Q$ such that $q > r > \sqrt{3}$, by the density of the rationals. Then the ball around $q$ of radius $q-r$ contains no elements of $E$, meaning $q$ cannot be a limit point of $E$. 
+Let $q$ be a point outside $E$. Since $q > \sqrt{3}$, (or $q < - \sqrt{3}$ and so on) there is some $r \in Q$ such that $q > r > \sqrt{3}$, by the density of the rationals. Then the ball around $q$ of radius $q-r$ contains no elements of $E$, meaning $q$ cannot be a limit point of $E$. 
 
-Suppose the open cover that is the collection of intervals $(\sqrt{2}, \sqrt{3}
+It suffices to show that $E$ is not compact in the reals. Suppose the open cover that is the collection of intervals $(0, \sqrt{3} - 1/\sqrt{n})$ for $n = 1, 2, \ldots$. This set covers $E$, but it has no finite subcover (see 14). 
 
+$E$ is open in $Q$. Were $E$ not open, there would be some $q$ in $E$ that, for some $r$, has no rationals in $N_r(q)$. So there must be an interval $(q, q+r)$ that contains no rational numbers; but this contradicts the density of the rationals once more. 
 
 
 17

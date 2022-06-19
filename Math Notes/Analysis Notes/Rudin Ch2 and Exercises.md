@@ -134,7 +134,14 @@ a) Consider the collection of sets $K_n$, where each $K$ is the set of all integ
 b) Intervals $(0, 1/n)$ for $n = 1, \ldots$ are bounded by $0$ and $1$. Any subcollection has an intersection - specifically, if $n_\max$ is the greatest index of that collection, then $1/(n_\max+1)$ is in every subcollection. But there is no least reciprocal, so this is an empty intersection. 
 
 
-16
+16) It's evident that $E$ is bounded by, say , 1 below and 2 above.  
+
+Let $q$ be a point outside $E$. Since $q > \sqrt{3}$, there is some $r \in Q$ such that $q > r > \sqrt{3}$, by the density of the rationals. Then the ball around $q$ of radius $q-r$ contains no elements of $E$, meaning $q$ cannot be a limit point of $E$. 
+
+Suppose the open cover that is the collection of intervals $(\sqrt{2}, \sqrt{3}
+
+
+
 17
 18 optional
 19) ![[Pasted image 20220613184319.png]]

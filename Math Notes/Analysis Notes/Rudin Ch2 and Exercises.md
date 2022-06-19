@@ -127,12 +127,19 @@ Consider the progression of intervals $(1/n, 1)$ for $n \in \mathbb{Z}$.
 - This has no finite subcover: Suppose there is a finite subcover. Then that subcover has a least element which we can bound below with $1/n_{min}$. But we know that  $1/(n_{min} + 1) >0$; and $1/(n_{min} + 1) < 1/n_{min}$, so $1/(n_{min} + 1) \notin (1/n_{min}, 1)$. Thus the finite subcover is not a cover. 
 
 15) ![[Pasted image 20220613184303.png]]
+![[Pasted image 20220618213622.png]]
+
+Suppose ${K_\alpha}$ is a collection of *closed* subsets such that every finite subcollection has a nonempty intersection. 
+
+
 16
 17
 18 optional
 19) ![[Pasted image 20220613184319.png]]
 
-Recall that sets are separated if $A \cap \overline B = B \cap \overline A = \emptyset$. Suppose $A$ and $B$ are not separated. Then it follows that there is some point of $A$ in the closure of $B$ or vice versa. But every point in the closure of $B$ is in $B$. So there is some point of $A$ in $B$, meaning they are not disjoint - so the theorem follows by contrapositive. 
+a) Recall that sets are separated if $A \cap \overline B = B \cap \overline A = \emptyset$. Suppose closed sets $A$ and $B$ are not separated. Then it follows that there is some point of $A$ in the closure of $B$ or vice versa. But every point in the closure of $B$ is in $B$. So there is some point of $A$ in $B$, meaning they are not disjoint - so the theorem follows by contrapositive. 
+
+b) Suppose two open sets $A$ and $B$ are not separated. Then there is some point $p$ of $A$ in the closure of $B$ or vice versa. Since $p$ is in $A$, there is some neighborhood $N(p)'$of $A$ that is a subset of $A$. Since $p$ is in the closure of $B$, every neighborhood of $p$ contains some point of $B$. Specifically, $N(p)'$ contains some point of $B$, meaning that $A$ and $B$ share a point, so they are not disjoint.
 
 
 22) ![[Pasted image 20220613184329.png]]

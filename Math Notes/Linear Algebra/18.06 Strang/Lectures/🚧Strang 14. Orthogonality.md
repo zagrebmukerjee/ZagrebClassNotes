@@ -1,5 +1,7 @@
 ---
-date updated: 2022-04-22 18:27
+aliases:
+creation date: 2022-06-20 19:01
+date updated: 2022-06-20 19:01
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -9,4 +11,7 @@ tags:
 - '#status/🚧'
 ---
 
-[[18.06  Linear Algebra Strang]]
+# [[🚧Strang 14. Orthogonality]]
+
+"The Big Picture of 18.06"
+![[Pasted image 20220620190138.png]]

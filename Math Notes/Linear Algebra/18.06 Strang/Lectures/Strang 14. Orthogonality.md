@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: 2022-06-20 19:01
-date updated: 2022-06-20 19:01
+date updated: Wednesday, June 22nd 2022, 11:48 am
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -40,13 +40,26 @@ $$\begin{align}
 
 In other words, the condition of the Pythagorean theorem is the same as the dot-product-zero condition. 
 
-*Example*: triangle outlined by vectors $(0, 3)$, $(4,0)$, $(3,4)$. This is the classic 3-4-5 triangle, where $3^2 + 4^2 = 9 + 16 = 25$. It's immediately clear that the dot product of the sides is zero (this holds for any $x$ and $y$ axis vectors).
+*Example*: triangle outlined by vectors $a = (0, 3)$, $b = (4,0)$; then the hypotenuse is a line drawn from $y=3$ to $x = 4$, a reflection and translation of $c = (3,4)$. This is the classic 3-4-5 triangle, where $3^2 + 4^2 = 9 + 16 = 25$. It's immediately clear that the dot product of the sides is zero (this holds for any $x$ and $y$ axis vectors).
 
 But now let's rotate this $45^\circ$ degrees, with the matrix 
 $$ R = \begin{bmatrix} 
 \cos 45^\circ & -\sin 45^\circ \\
 \sin 45^\circ & \cos 45^\circ
-\end{bmatrix} = \begin{bmatrix} - 1/4 &  \\ & -1/4 \end{bmatrix}$$
+\end{bmatrix} = \begin{bmatrix} \sqrt{2}/2 &  -\sqrt{2}/2 \\ \sqrt{2}/2 & \sqrt{2}/2 \end{bmatrix}$$
 
+$$Ra = \begin{bmatrix}-3\sqrt{2}/2 \\ 3\sqrt{2}/2 \end{bmatrix} \qquad Rb = \begin{bmatrix}2 \sqrt{2} \\ 2 \sqrt{2} \end{bmatrix}$$
+
+Now the hypotenuse is the vector drawn between these two end points, which has an $x$ length of $2 \sqrt{2} - (-3\sqrt{2}/2) = 7\sqrt{2}/2$ and a $y$ length of $2\sqrt{2} - 3\sqrt{2}/2 = \sqrt{2}/2$. 
+
+$$\begin{align}
+a \cdot b = (-3\sqrt{2}/2*2\sqrt{2}) + (3\sqrt{2}/2*2\sqrt{2})= 6 - 6 &= 0 \\
+||a||^2 = (-3\sqrt{2}/2)^2 + (-3\sqrt{2}/2)^2 &= 9 \\
+||b||^2 = (2\sqrt{2})^2 + (2\sqrt{2})^2 &= 16 \\
+||c||^2 = (7\sqrt{2}/2)^2 + (\sqrt{2}/2)^2 = 50/2 &= 25 \\
+\end{align}$$
+
+How nice.
+ 
 
 ```

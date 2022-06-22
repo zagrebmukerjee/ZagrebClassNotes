@@ -72,3 +72,37 @@ Two subspaces $A$ and $B$ are orthogonal if $(a \in A) \land (b \in B) \to a \pe
 **Claim:** The row space is orthogonal to the null space. 
 
 **Proof:** Consider $m \times n$ matrix $A$, and $x = (x_1, \ldots x_n)$ in the null space of $A$. Let $A_{i,*}$ denote the $i\th$ row of $A$. Then $Ax = \begin{bmatrix}A_{1,*}x  & \ldots & A_{m,*}x \end{bmatrix}' = 0$. But the entries of this vector are precisely the dot products of the rows of $A$ with $x$. This means $x$ is orthogonal to the rows of $A$; and since the row space is those vectors spanned by the rows of $A$, that means $x$ is orthogonal to everything in the row space.
+
+### "Fundamental Theorem of Linear Algebra" Part 1
+
+So the null space and the row space 'carve up' $\R^n$: Since every vector in $C(A')$ is orthogonal to every vector in $N(A)$, and their dimensions together make $n$, their two bases make an $n$ element basis for $\R^n$.
+
+Another way of putting it: The nullspace and rowspace are orthogonal complements in $\R^n$. The null space consists of *every* vector that is orthogonal to every vector in the row space, and vice versa. 
+
+## Preview
+
+We want to reason about $Ax = b$ when there is no solution. For instance, $A$ might be my observations of something - e.g. a blood pressure, so $m$ is whatever number of observations, $n$ is $2$ (s/d pressure), or the position of a satellite. 
+
+There's only one blood pressure. Can't solve $Ax = b$. Could throw away all but $1$ observation but that's pretty wasteful. 
+
+### Quadratic Form
+Let's jump ahead to a crucial matrix, key to Ch4: $A'A$. It's square, and symmetric, and sometimes invertible. 
+
+When we can't solve $Ax = b$, look at $A'A \hat x = A'b$, hoping we can find some $\hat x$ that's the best solution for $Ax = b$. 
+
+When is $A'A$ invertible? Example: 
+
+$$A = \begin{bmatrix} 1 & 1 \\ 1 & 2 \\ 1 & 5\end{bmatrix} \qquad A'A = \begin{bmatrix} 1 & 1 & 1 \\ 1 & 2 & 5  \end{bmatrix}\begin{bmatrix} 1 & 1 \\ 1 & 2 \\ 1 & 5\end{bmatrix} = \begin{bmatrix} 3 & 8 \\5 & 30\end{bmatrix}$$
+
+This is evidently full rank/invertible. But eg. if $A$ is rank $1$, then $A'A$, the product of two rank-$1$ matrices, can't have rank $>1$. 
+
+```ad-important
+title:
+$A'A$ is invertible only if $A$ has full column rank.
+
+```
+
+Key point!
+
+$N(A'A) = N(A)$, and $\text{rank}(A'A) = \text{rank}(A)$. 
+

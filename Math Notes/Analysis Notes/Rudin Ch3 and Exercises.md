@@ -14,6 +14,8 @@ tags:
 # [[Rudin Ch3 and Exercises]]
 ### 3.1 Series Intro
 1. ![[Pasted image 20220629213735.png]]
+
+
 2. ![[Pasted image 20220629213748.png]]
 3. ![[Pasted image 20220629213801.png]]
 

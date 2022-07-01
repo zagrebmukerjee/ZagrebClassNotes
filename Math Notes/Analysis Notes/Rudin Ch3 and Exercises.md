@@ -15,8 +15,12 @@ tags:
 ### 3.1 Series Intro
 1. ![[Pasted image 20220629213735.png]]
 
+for any epsilon since $s_n$ goes to $p$ either $|s_n|$ converges to p or to -p
+converse not true consider series of (-1)^n/n
 
 2. ![[Pasted image 20220629213748.png]]
+
+
 3. ![[Pasted image 20220629213801.png]]
 
 16. ![[Pasted image 20220629213822.png]]

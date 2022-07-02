@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: 2022-06-29 21:35
-date updated: Friday, July 1st 2022, 8:13 pm
+date updated: Friday, July 1st 2022, 8:20 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -34,8 +34,8 @@ So this converges to zero.
 
 3. ![[Pasted image 20220629213801.png]]
 
-$s_2 = \sqrt{2 + \sqrt{\sqrt{2}}}$ . 
-$s_2 = \sqrt{2 + \sqrt{\sqrt{2}}}$ . 
+$s_2 = \sqrt{2 + \sqrt{\sqrt{2}}}$ 
+$s_3 = \sqrt{2+ \sqrt{\sqrt{2 + \sqrt{\sqrt{2}}}}}$  
 
 
 It's apparent that $s_1 < 2$. Suppose $s_k <2$. Then 

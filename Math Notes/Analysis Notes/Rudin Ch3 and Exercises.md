@@ -30,7 +30,7 @@ $$\begin{align}
 \varepsilon &> \sqrt{n}\left[\sqrt{n+1} - \sqrt{n}\right]\\
 \frac{\varepsilon}{\sqrt{n}\left[\sqrt{n+1} - \sqrt{n}\right]} &> 1\\
 \end{align}$$
-So this converges to zero.
+So this converges to 1.
 
 3. ![[Pasted image 20220629213801.png]]
 

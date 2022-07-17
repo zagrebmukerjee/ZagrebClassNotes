@@ -1405,6 +1405,48 @@ a5f81cfeec1de811d7dd197096b0f7e746544b1d: [[ZagrebClassNotes/Images/Pasted Image
 			]
 		},
 		{
+			"id": "dJ4u1_jegPLETY3VPLsZR",
+			"type": "freedraw",
+			"x": -285.0343017578125,
+			"y": -161.03977966308594,
+			"width": 102.24151611328125,
+			"height": 0,
+			"angle": 0,
+			"strokeColor": "#d9480f",
+			"backgroundColor": "transparent",
+			"fillStyle": "hachure",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"strokeSharpness": "round",
+			"seed": 1597000117,
+			"version": 3,
+			"versionNonce": 910641941,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1658019293982,
+			"link": null,
+			"locked": false,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					102.24151611328125,
+					0
+				]
+			],
+			"pressures": [],
+			"simulatePressure": true,
+			"lastCommittedPoint": [
+				102.24151611328125,
+				0
+			]
+		},
+		{
 			"id": "dTntccM5pe-SHnqgtDavO",
 			"type": "freedraw",
 			"x": -230.26217651367188,

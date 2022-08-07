@@ -83,12 +83,14 @@ Another way of putting it: The nullspace and rowspace are orthogonal complements
 
 We want to reason about $Ax = b$ when there is no solution. For instance, $A$ might be my observations of something - e.g. a blood pressure, so $m$ is whatever number of observations, $n$ is $2$ (s/d pressure), or the position of a satellite. 
 
-There's only one blood pressure. Can't solve $Ax = b$. Could throw away all but $1$ observation but that's pretty wasteful. 
+Then there's a system of equations where each row is parameters, $b$ is your findings. Almost always no solution. There's only one blood pressure. Can't solve $Ax = b$. Could throw away all but $1$ observation but that's pretty wasteful. What to do?
+
+A related matrix, that will play a key role in Ch4.
 
 ### Quadratic Form
-Let's jump ahead to a crucial matrix, key to Ch4: $A'A$. It's square, and symmetric, and sometimes invertible. 
+Let's jump ahead to a crucial matrix, key to Ch4: $A'A$. It's square, and symmetric,  sometimes invertible. 
 
-When we can't solve $Ax = b$, look at $A'A \hat x = A'b$, hoping we can find some $\hat x$ that's the best solution for $Ax = b$. 
+When we can't solve $Ax = b$, look at $A'A \hat x = A'b$, hoping we can find that solution $\hat x$ and say that's the best solution for $Ax = b$. 
 
 When is $A'A$ invertible? Example: 
 

@@ -89,3 +89,16 @@ OK so why project?
 
 $Ax = b$ maybe has no solution. We want to find the most solution-like $\hat x$. In other words, we want to look at all the $\hat x \in C(A)$ - all of the $Ax$ - and find the one closest to $b$. This is the projection problem. 
 
+![[Strang 15 Fig 2]]
+
+First we can define the plane: we can do this with two independent vectors $a_1$ and $a_2$ that span $a$. 
+
+The plane is the column space of a matrix then: $A = \begin{bmatrix} a_1 & a_2 \end{bmatrix}$
+Then $p$ is some $\hat x_1 a_1 + \hat x_2 a_2$ which means we can say $p = A \hat x$. So the same problem arises: solve for $\hat x$. 
+
+We can use the same idea: the error $e$ is orthogonal to both of our basis vectors: 
+$$\begin{align}
+a_1'(b - A\hat x) &= 0 \\
+a_2'(b - A\hat x) &= 0 \\
+\end{align}$$
+We can then just write this as a matrix product: $A' (b - A\hat x) = 0$. 

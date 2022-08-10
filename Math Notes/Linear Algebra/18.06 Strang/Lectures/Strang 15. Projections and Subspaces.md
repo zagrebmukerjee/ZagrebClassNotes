@@ -72,8 +72,9 @@ what does this do?? except that it's our first-order condition
 In a general sense this $p$ is a <font color=gree>Projection Matrix</font>. 
 
 It has size $n \times n$. 
+It's also symmetric.
 
-The column space of $P$ is the same as the column space of $a$. 
+The column space/rank of $P$ is the same as the column space/rank of $a$. (in other words, for any $xa$ there exists a $b$ such that the projection of $b$ onto the $a$ space is $xa$). 
 
 What happens if you project twice?  Intuitively we can say that $PPb = Pb$ because $Pb$ is already projected. Algebraically: 
 
@@ -81,9 +82,10 @@ $$PP = \frac{aa'}{a'a} \frac{aa'}{a'a} = \frac{(aa')(aa')}{(a'a)(a'a)} = \frac{a
 This means $P$ is <font color=gree>idempotent</font> - $P^n = P$. 
 
 
+
 ### Projection onto Subspaces
 
 OK so why project? 
 
-$Ax = b$ maybe has no solution. 
+$Ax = b$ maybe has no solution. We want to find the most solution-like $\hat x$. In other words, we want to look at all the $\hat x \in C(A)$ - all of the $Ax$ - and find the one closest to $b$. This is the projection problem. 
 

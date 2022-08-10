@@ -11,7 +11,7 @@ tags:
 ---
 
 # [[Strang 14. Orthogonality]]
-
+[[18.06 Linear Algebra Strang]]
 
 "The Big Picture of 18.06"
 ![[Pasted image 20220620190138.png]]

@@ -13,7 +13,7 @@ tags:
 # [[Strang 7. The null space - solving Ax = 0 and RREF]]
 
 3b1b: [[Video 7 Inverse, Null Space, Column Space, Rank]]
-[[18.06  Linear Algebra Strang]]
+[[18.06 Linear Algebra Strang]]
 
 The null space of $A$ is $x$ such that $Ax = 0$. Several ways to conceptualize it. 
 - Linear transformation $A$ maps vectors in the null space to $0$. That means they are not recoverable

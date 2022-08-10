@@ -9,7 +9,7 @@ tags:
 ---
 
 # [[Strang 1. Geometry of Linear Equations]]
-[[18.06  Linear Algebra Strang]]
+[[18.06 Linear Algebra Strang]]
 The fundamental goal of linear algebra - solve systems of linear equations. 
 
 Suppose you have a system of $n$ equations and $n$ unknowns. 

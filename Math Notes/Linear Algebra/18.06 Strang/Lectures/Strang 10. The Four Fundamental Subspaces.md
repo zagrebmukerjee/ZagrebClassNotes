@@ -11,7 +11,7 @@ tags:
 ---
 
 # [[Strang 10. The Four Fundamental Subspaces]]
-[[18.06  Linear Algebra Strang]]
+[[18.06 Linear Algebra Strang]]
 
 The four fundamental subspaces of a matrix? It's not that hard to guess many of them:
 

@@ -1,18 +1,24 @@
 ---
 aliases: 
-date updated: Wednesday, August 10th 2022, 10:40 am
+creation date: Friday, April 22nd 2022, 6:28 pm
+date updated: Wednesday, August 10th 2022, 10:54 am
 
 notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags: 
 - '#types/classes/math/linalg'
-creation date: Friday, April 22nd 2022, 6:28 pm
 ---
 
-[[18.06  Linear Algebra Strang]]
+# [[Strang 15. Projections and Subspaces]]
+
+[[18.06 Linear Algebra Strang]]
+
+
 
 Previewed this last time. We might be interested in finding $\hat x$ which is the best $x$ for a given $Ax = b$ when this has no exact solution. 
+
+### Intro to Projection
 
 We will start by projecting a vector $b$ onto a line $a$ - the span of a single vector. 
 
@@ -42,14 +48,12 @@ Note that we're using the fact that $x$ and $a'a$ are scalars.
 We can then write out the projecting factor $p$; 
 $$p = a \frac{a'b}{a'a}$$ 
 ```ad-question
-title: Trigonometry Digression
+title: What does he mean when he says this has $\cos \theta$
 collapse: closed
 
 Strang said as an aside there is a $\cos \theta$ here but we don't care. what does he mean?
 
 
-
-```
 Well - let $\theta$ be the angle between $b$ and $a$ - then 
 
 $$\begin{align}
@@ -57,5 +61,12 @@ $$\begin{align}
 &= ||(b-xa)||/||xa|| \\
 &= \sqrt{\frac{(b - xa)'(b-xa)}{(xa')(xa)}}\\
 &= \sqrt{\frac{(b' - xa')(b-xa)}{x^2 a'a}}\\
-&= \sqrt{\frac{b'b - xa'b - b'xa + xa'xa}{x^2 a'a}}\\
+&= \sqrt{\frac{b'b - xa'b - b'xa + x^2a'a}{x^2 a'a}}\\
 \end{align}$$
+
+what does this do?? except that it's our first-order condition
+
+
+```
+
+### Projection onto 

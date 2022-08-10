@@ -10,7 +10,7 @@ tags:
 
 
 First, a few foundational concepts. 
-[[18.06  Linear Algebra Strang]]
+[[18.06 Linear Algebra Strang]]
 
 ## Permutation
 

@@ -9,7 +9,7 @@ tags:
 ---
 
 # [[Strang 2. Elimination]]
-[[18.06  Linear Algebra Strang]]
+[[18.06 Linear Algebra Strang]]
 How to solve systems of equations? Turn it into an augmented matrix and eliminate.  
 
 Want to do elementary row operations until you have an upper-triangular matrix. Then can 'back-substitute'.

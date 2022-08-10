@@ -1,11 +1,13 @@
 ---
-date updated: 2022-04-22 18:27
+aliases: 
+date updated: Wednesday, August 10th 2022, 10:40 am
 
 notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags: 
 - '#types/classes/math/linalg'
+creation date: Friday, April 22nd 2022, 6:28 pm
 ---
 
 [[18.06  Linear Algebra Strang]]
@@ -37,5 +39,23 @@ x &= a'b/a'a \\
 
 Note that we're using the fact that $x$ and $a'a$ are scalars. 
 
-We can then write out he projecting factor $p$; $p = a \frac{a'b}{a'a}$. 
+We can then write out the projecting factor $p$; 
+$$p = a \frac{a'b}{a'a}$$ 
+```ad-question
+title: Trigonometry Digression
+collapse: closed
 
+Strang said as an aside there is a $\cos \theta$ here but we don't care. what does he mean?
+
+
+
+```
+Well - let $\theta$ be the angle between $b$ and $a$ - then 
+
+$$\begin{align}
+\cos \theta &= ||e||/||p|| \\
+&= ||(b-xa)||/||xa|| \\
+&= \sqrt{\frac{(b - xa)'(b-xa)}{(xa')(xa)}}\\
+&= \sqrt{\frac{(b' - xa')(b-xa)}{x^2 a'a}}\\
+&= \sqrt{\frac{b'b - xa'b - b'xa + xa'xa}{x^2 a'a}}\\
+\end{align}$$

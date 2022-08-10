@@ -45,8 +45,8 @@ x &= a'b/a'a \\
 
 Note that we're using the fact that $x$ and $a'a$ are scalars. 
 
-We can then write out the projecting factor $p$; 
-$$p = a \frac{a'b}{a'a}$$ 
+We can then write out the projecting factor $P$ that turns $b$ into $p$; 
+$$P = \frac{a  a'}{a'a}$$ 
 ```ad-question
 title: What does he mean when he says this has $\cos \theta$
 collapse: closed
@@ -69,4 +69,21 @@ what does this do?? except that it's our first-order condition
 
 ```
 
-### Projection onto 
+In a general sense this $p$ is a <font color=gree>Projection Matrix</font>. 
+
+It has size $n \times n$. 
+
+The column space of $P$ is the same as the column space of $a$. 
+
+What happens if you project twice?  Intuitively we can say that $PPb = Pb$ because $Pb$ is already projected. Algebraically: 
+
+$$PP = \frac{aa'}{a'a} \frac{aa'}{a'a} = \frac{(aa')(aa')}{(a'a)(a'a)} = \frac{a(a'a)a')}{(a'a)(a'a)} = \frac{aa'}{a'a} = P$$
+This means $P$ is <font color=gree>idempotent</font> - $P^n = P$. 
+
+
+### Projection onto Subspaces
+
+OK so why project? 
+
+$Ax = b$ maybe has no solution. 
+

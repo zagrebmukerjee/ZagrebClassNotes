@@ -101,4 +101,14 @@ $$\begin{align}
 a_1'(b - A\hat x) &= 0 \\
 a_2'(b - A\hat x) &= 0 \\
 \end{align}$$
-We can then just write this as a matrix product: $A' (b - A\hat x) = 0$. 
+We can then just write this as a matrix product
+$$\begin{align}
+0 &=  A' (b - A\hat x)\\
+&= A'b - A'A\hat x\\
+A'A \hat x &= A'b \\
+\hat x &= (A'A)\inv A'b\\
+\end{align}$$
+
+<font color=#F7B801>hoo hoo hoo</font>
+
+$e$ is in the left null space of $A$. 

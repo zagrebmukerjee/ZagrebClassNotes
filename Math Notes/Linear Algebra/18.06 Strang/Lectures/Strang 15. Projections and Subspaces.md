@@ -111,4 +111,11 @@ A'A \hat x &= A'b \\
 
 <font color=#F7B801>hoo hoo hoo</font>
 
-$e$ is in the left null space of $A$. 
+$e$ is in the left null space of $A$ - the complement of the column space. $e \perp C(A)$. 
+
+The projection matrix in this world is 
+
+$$P =  A(A'A)\inv A' $$
+<font color=#F7B801>This is the multivariate regression weights matrix. </font> It is still symmetric, idempotent, $n \times n$. 
+
+This ofc is least squares. 

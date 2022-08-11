@@ -2,7 +2,7 @@
 aliases: 
 tags: 
 creation date: Thursday, August 11th 2022, 1:10 pm
-date updated: Thursday, August 11th 2022, 1:41 pm
+date updated: Thursday, August 11th 2022, 1:56 pm
 ---
 
 ![[Pasted image 20220811131122.png]]
@@ -38,4 +38,18 @@ f) $3x^2e^{4x^2} + 8x^4e^{4x^2}$
 ![[Pasted image 20220811134301.png]]
 
 a) First derivative is $x^2 -12$, and second is $2x$. 
-Increasing where $(x^2
+Increasing where $x^2 > 12$, or where $|x|>\sqrt{12}$. Flat at those places. Decreasing elsewhere. 
+
+Convex when x > 0 concave when x < 0
+Local minimum when $x = \sqrt{12}$ and maximum when $x = - \sqrt{12}$. 
+
+b)
+First derivative is $1 - \frac{1}{x^2} = \frac{x^2 -1 }{x^2}$
+Decreasing with $x <0$ increasing $x >0$ undefined at $0$. Neither minima nor maxima
+
+Second derivative is $2x^{-3}$ which has the same sign as $x^3$; so concave left of x and convex right of x
+
+c)
+First derivative is $e^{2x}(1 + 2x)$ . This is zero when $x = -1/2$. Function increases when $x > -1/2$. Decreases when $x < -1/2$. 
+
+Second derivative is $2e^{2x} + 2[e^{2x} + 2xe^{2x} ]$ = $4e^{2x}(1+x)$ so the inflection point is $-1$ . Positive above, negative below. 

@@ -50,6 +50,6 @@ Decreasing with $x <0$ increasing $x >0$ undefined at $0$. Neither minima nor ma
 Second derivative is $2x^{-3}$ which has the same sign as $x^3$; so concave left of x and convex right of x
 
 c)
-First derivative is $e^{2x}(1 + 2x)$ . This is zero when $x = -1/2$. Function increases when $x > -1/2$. Decreases when $x < -1/2$. 
+First derivative is $e^{2x}(1 + 2x)$ . This is zero when $x = -1/2$. Function increases when $x > -1/2$. Decreases when $x < -1/2$. $0$ there. 
 
-Second derivative is $2e^{2x} + 2[e^{2x} + 2xe^{2x} ]$ = $4e^{2x}(1+x)$ so the inflection point is $-1$ . Positive above, negative below. 
+Second derivative is $2e^{2x} + 2[e^{2x} + 2xe^{2x} ] = 4e^{2x}(1+ x)$ so the inflection point is $-1$ . Positive above, negative below. Means $-1/2$ is a minimum 

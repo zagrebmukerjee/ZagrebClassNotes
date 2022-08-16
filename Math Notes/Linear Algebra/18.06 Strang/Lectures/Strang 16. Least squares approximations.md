@@ -41,3 +41,6 @@ C + 3D &= 2 \\
 The lack of solution is apparent. 
 In matrix notation: 
 $$ Ax = b  \to \begin{bmatrix} 1 & 1 \\ 1 & 2 \\ 1 & 3\end{bmatrix}\begin{bmatrix} C\\D\end{bmatrix} = \begin{bmatrix} 1\\2\\3\end{bmatrix}$$
+
+
+

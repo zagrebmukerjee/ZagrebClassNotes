@@ -36,5 +36,8 @@ Ex: points are $(1,1)$, $(2,2)$, $(3,2)$. Then the system of equations is
 $$\begin{align}
 C + D &=1 \\
 C + 2D &= 2 \\
-C + 
+C + 3D &= 2 \\
 \end{align}$$
+The lack of solution is apparent. 
+In matrix notation: 
+$$ Ax = b  \to \begin{bmatrix} 1 & 1 \\ 1 & 2 \\ 1 & 3\end{bmatrix}\begin{bmatrix} C\\D\end{bmatrix} = \begin{bmatrix} 1\\2\\3\end{bmatrix}$$

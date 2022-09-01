@@ -1,7 +1,7 @@
 ---
 aliases:
-creation date: 2022-09-01 10:12
-date updated: 2022-09-01 10:12
+creation date: Thursday, September 1st 2022, 10:11 am
+date updated: Thursday, September 1st 2022, 12:11 pm
 
 notetype: "PLSC Class Note"
 cssclass: math-class-note
@@ -11,9 +11,9 @@ tags:
 - '#status/🚧'
 ---
 
-# [[PLSC 705 2 Efficiency]]
+# [[PLSC 705 Fundamental Economic Concepts]]
 
-Different ideas of efficiency  in economcs: 
+Different ideas of efficiency in economcs: 
 - technological efficiency. An allocation of resources to technologies is tE iff there is no other allocation that could produce a vector that elementwise is at least as good in all goods and better in at least one. 
 	- Data: production functions and endowments of inputs
 	- Neither preferences nor prices are invoked

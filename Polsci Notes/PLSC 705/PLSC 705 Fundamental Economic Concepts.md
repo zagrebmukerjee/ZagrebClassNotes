@@ -1,17 +1,23 @@
 ---
 aliases:
 creation date: Thursday, September 1st 2022, 10:11 am
-date updated: Thursday, September 1st 2022, 12:11 pm
+date updated: Thursday, September 1st 2022, 5:15 pm
 
 notetype: "PLSC Class Note"
 cssclass: math-class-note
 
 tags: 
 - '#types/classes'
-- '#status/🚧'
+- '#topics/pe'
+- '#topics/theory'
 ---
 
 # [[PLSC 705 Fundamental Economic Concepts]]
+
+Rationality
+- Not self-interest related
+- Purely instrumental formulation
+- 
 
 Different ideas of efficiency in economcs: 
 - technological efficiency. An allocation of resources to technologies is tE iff there is no other allocation that could produce a vector that elementwise is at least as good in all goods and better in at least one. 

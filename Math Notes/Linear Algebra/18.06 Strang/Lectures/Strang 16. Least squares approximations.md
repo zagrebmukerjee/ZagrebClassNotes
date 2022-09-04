@@ -1,7 +1,7 @@
 ---
 aliases: 
 creation date: Friday, April 22nd 2022, 6:28 pm
-date updated: Saturday, September 3rd 2022, 8:21 pm
+date updated: Sunday, September 4th 2022, 5:07 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -40,7 +40,7 @@ C + 3D &= 2 \\
 \end{align}$$
 The lack of solution is apparent. 
 In matrix notation: 
-$$ Ax = b \to \begin{bmatrix} 1 & 1 \\ 1 & 2 \\ 1 & 3\end{bmatrix}\begin{bmatrix} C\\D\end{bmatrix} = \begin{bmatrix} 1\\2\\3\end{bmatrix}$$
+$$ Ax = b \to \begin{bmatrix} 1 & 1 \\ 1 & 2 \\ 1 & 3\end{bmatrix}\begin{bmatrix} C\\D\end{bmatrix} = \begin{bmatrix} 1\\2\\2\end{bmatrix}$$
 
 
 But we can instead use our approximation tool:
@@ -51,5 +51,22 @@ A'Ax &= A'b \\
 \begin{bmatrix} 1 & 1 & 1\\
 1 & 2 & 3 \end{bmatrix}
 \begin{bmatrix} 1 & 1 \\ 1 & 2 \\ 1 & 3\end{bmatrix}\begin{bmatrix} C \\ D \end{bmatrix} &= 
-\begin{bmatrix} 1 & 1 & 1 \\ 1& 2& 3 \\ \end{bmatrix} 
+\begin{bmatrix} 1 & 1 & 1 \\ 1& 2& 3 \\ \end{bmatrix} \begin{bmatrix} 1\\2\\2\end{bmatrix} \\
+\begin{bmatrix} 3 & 6 \\ 6& 14\end{bmatrix} \begin{bmatrix} C \\ D \end{bmatrix} &= 
+\begin{bmatrix} 6 \\14\end{bmatrix} \\
+\begin{bmatrix} 3C + 6D \\ 6C + 14D\end{bmatrix} &= 
+\begin{bmatrix} 5 \\11\end{bmatrix} \\
 \end{align}$$
+Using Gauss Jordan:
+$$ \begin{bmatrix} 
+3 & 6 &|& 5 \\
+6 & 14 &|& 11 \\
+\end{bmatrix}$$
+$$ \begin{bmatrix} 
+3 & 6 &|& 5 \\
+0 & 1 &|& 1/2 \\
+\end{bmatrix}$$
+$$ \begin{bmatrix} 
+1 & 0 &|& 2/3 \\
+0 & 1 &|& 1/2 \\
+\end{bmatrix}$$

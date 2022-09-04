@@ -1,14 +1,13 @@
 ---
 aliases:
-creation date: 2022-06-10 19:16
-date updated: Saturday, June 18th 2022, 10:27 pm
+creation date: Friday, June 10th 2022, 7:15 pm
+date updated: Sunday, September 4th 2022, 7:31 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags: 
 - '#types/classes/math/analysis'
-- '#status/🚧'
 ---
 
 # [[Rudin Ch2 and Exercises]]
@@ -89,7 +88,7 @@ Has non-negativity. $d(p,q) = 0$ iff $p=q$. Obviously transitive.
 
 The triangle inequality becomes the triangle equality for $r \notin \{p,q\}$. Otherwise:
 
-$$d(p,q) \leq d(p,r) + d(r,q)  \to 1 \leq 2$$
+$$d(p,q) \leq d(p,r) + d(r,q) \to 1 \leq 2$$
 Any subsets are open. For any subset $E$ containing point $p$ it is possible to draw a ball of radius $r < 1$ around $p$ that contains $p$, and thus only elements of $E$. Thus any subset, since it is the complement of some other subset, is also closed.
 
 Any finite subset is compact. Every open cover must contain some ball around each point, and that finite set of balls can be an open subcover. 
@@ -104,13 +103,13 @@ For the others, let us test the triangle inequality:
 - $d_3$ has the problem that $d(x,-x) = 0$ but $x \neq -x$
 - $d_5$ is more fun. We can write as before:
 
-$$\begin{align}d(p,q) \quad &? \quad d(p,r) +  d(r,q) 
+$$\begin{align}d(p,q) \quad &? \quad d(p,r) + d(r,q) 
 \\
-\frac{|a + b|}{1 + |a + b|} \quad &? \quad  \frac{|a|}{1+ |a|}+  \frac{|b|}{1+|b|} \\
-\frac{|a + b|(1+|b|)(1+ |a|)}{(1 + |a + b|)(1+|b|)(1+ |a|)} \quad &? \quad  \frac{|a|(1+|b|)(1 + |a + b|)}{(1+ |a|)(1+|b|)(1 + |a + b|)}+  \frac{|b|(1+ |a|)(1 + |a + b|)}{(1+ |a|)(1+|b|)(1 + |a + b|)} \\
-(|a + b|+|a + b||b|)(1+ |a|) \quad  &? \quad (|a| + 2|b||a| + |b|)(1 + |a + b|) \\
-|a + b|\quad  &? \quad |a| + 2|b||a| + |b| + |b||a||a + b|    \\
-0 \quad  &? \quad |a| + |b| - |a + b| + 2|b||a|  + |b||a||a + b|   \\
+\frac{|a + b|}{1 + |a + b|} \quad &? \quad \frac{|a|}{1+ |a|}+ \frac{|b|}{1+|b|} \\
+\frac{|a + b|(1+|b|)(1+ |a|)}{(1 + |a + b|)(1+|b|)(1+ |a|)} \quad &? \quad \frac{|a|(1+|b|)(1 + |a + b|)}{(1+ |a|)(1+|b|)(1 + |a + b|)}+ \frac{|b|(1+ |a|)(1 + |a + b|)}{(1+ |a|)(1+|b|)(1 + |a + b|)} \\
+(|a + b|+|a + b||b|)(1+ |a|) \quad &? \quad (|a| + 2|b||a| + |b|)(1 + |a + b|) \\
+|a + b|\quad &? \quad |a| + 2|b||a| + |b| + |b||a||a + b| \\
+0 \quad &? \quad |a| + |b| - |a + b| + 2|b||a| + |b||a||a + b| \\
 \end{align} $$
 
 Since $|a| + |b| \geq |a + b|$ the triangle inequality holds.
@@ -118,13 +117,13 @@ Since $|a| + |b| \geq |a + b|$ the triangle inequality holds.
 
 12) ![[Pasted image 20220613183317.png]]
 
-Any open cover $C$ of $K$ must contain all balls of some radius $r$ around the points of $K$, since the points of $K$ are interior points of $C$ by openness. Given any $r$, consider  $C'=[0, 1/m < r]$, where $m$ is an integer such that $1/m < r$. We know that all points within distance $r$ of $0$ are contained in $C$, by construction; so we know this interval is inside $C$. But the union of $C'$ and the (at most) $m-1$ balls around elements of $K$ is finite, so this is a finite subcover.
+Any open cover $C$ of $K$ must contain all balls of some radius $r$ around the points of $K$, since the points of $K$ are interior points of $C$ by openness. Given any $r$, consider $C'=[0, 1/m < r]$, where $m$ is an integer such that $1/m < r$. We know that all points within distance $r$ of $0$ are contained in $C$, by construction; so we know this interval is inside $C$. But the union of $C'$ and the (at most) $m-1$ balls around elements of $K$ is finite, so this is a finite subcover.
 
 14) ![[Pasted image 20220613183323.png]]
 
 Consider the progression of intervals $(1/n, 1)$ for $n \in \mathbb{Z}$. 
 - This covers $(0,1$): Suppose $0 < x < 1$. There is an integer $m$ such that $m > 1/x$. It follows that $1/m < x$; thus, $x \in (1/m, 1)$
-- This has no finite subcover: Suppose there is a finite subcover. Then that subcover has a least element which we can bound below with $1/n_{min}$. But we know that  $1/(n_{min} + 1) >0$; and $1/(n_{min} + 1) < 1/n_{min}$, so $1/(n_{min} + 1) \notin (1/n_{min}, 1)$. Thus the finite subcover is not a cover. 
+- This has no finite subcover: Suppose there is a finite subcover. Then that subcover has a least element which we can bound below with $1/n_{min}$. But we know that $1/(n_{min} + 1) >0$; and $1/(n_{min} + 1) < 1/n_{min}$, so $1/(n_{min} + 1) \notin (1/n_{min}, 1)$. Thus the finite subcover is not a cover. 
 
 15) ![[Pasted image 20220613184303.png]]
 ![[Pasted image 20220618213622.png]]
@@ -156,7 +155,7 @@ b) Suppose two open sets $A$ and $B$ are not separated. Then there is some point
 
 That $\mathbb Q^k$ is countable has been established. The density of the rationals in the reals is 1.20 b. So $\R^1$ is separable. 
 
-$\R^k$ is the set of tuples $(x_1, \ldots, x_k)$ with each $x$ in $\R^1$. Suppose $p \in \R^k$ has some closest rational $q \in \mathbb Q^k$, a tuple of rationals $(q_1, \ldots, q_k).$ So for some distance $r$, $\sqrt{(x_1 - q_1)^2 + \ldots + (x_k - q_k)^2  } = r$. But by the density of $\mathbb Q^1$ in $\R^1$, we know that there exists a $q_{1}'$ such that $x_1 < q_{1}' < q_1$. So then make $q' \in \mathbb Q^k$ which is $(q_{1}', q_2, \ldots, q_k)$. It follows that $\sqrt{(x_1 - q_1')^2 + \ldots + (x_k - q_k)^2 } < r$. So any element of $\R^k$ has no closest rational, meaning that $\mathbb Q^k$ is dense in $\R^k$. Thus $\R^k$ has a dense countable subset and so is separable. 
+$\R^k$ is the set of tuples $(x_1, \ldots, x_k)$ with each $x$ in $\R^1$. Suppose $p \in \R^k$ has some closest rational $q \in \mathbb Q^k$, a tuple of rationals $(q_1, \ldots, q_k).$ So for some distance $r$, $\sqrt{(x_1 - q_1)^2 + \ldots + (x_k - q_k)^2 } = r$. But by the density of $\mathbb Q^1$ in $\R^1$, we know that there exists a $q_{1}'$ such that $x_1 < q_{1}' < q_1$. So then make $q' \in \mathbb Q^k$ which is $(q_{1}', q_2, \ldots, q_k)$. It follows that $\sqrt{(x_1 - q_1')^2 + \ldots + (x_k - q_k)^2 } < r$. So any element of $\R^k$ has no closest rational, meaning that $\mathbb Q^k$ is dense in $\R^k$. Thus $\R^k$ has a dense countable subset and so is separable. 
 
 24) ![[Pasted image 20220613184337.png]]
 25

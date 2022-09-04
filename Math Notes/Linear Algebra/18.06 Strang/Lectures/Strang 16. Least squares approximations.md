@@ -1,7 +1,7 @@
 ---
 aliases: 
 creation date: Friday, April 22nd 2022, 6:28 pm
-date updated: Tuesday, August 16th 2022, 10:21 am
+date updated: Saturday, September 3rd 2022, 8:21 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -40,7 +40,16 @@ C + 3D &= 2 \\
 \end{align}$$
 The lack of solution is apparent. 
 In matrix notation: 
-$$ Ax = b  \to \begin{bmatrix} 1 & 1 \\ 1 & 2 \\ 1 & 3\end{bmatrix}\begin{bmatrix} C\\D\end{bmatrix} = \begin{bmatrix} 1\\2\\3\end{bmatrix}$$
+$$ Ax = b \to \begin{bmatrix} 1 & 1 \\ 1 & 2 \\ 1 & 3\end{bmatrix}\begin{bmatrix} C\\D\end{bmatrix} = \begin{bmatrix} 1\\2\\3\end{bmatrix}$$
 
 
+But we can instead use our approximation tool:
 
+$$\begin{align}
+x &= (A'A)\inv A'b \\
+A'Ax &= A'b \\
+\begin{bmatrix} 1 & 1 & 1\\
+1 & 2 & 3 \end{bmatrix}
+\begin{bmatrix} 1 & 1 \\ 1 & 2 \\ 1 & 3\end{bmatrix}\begin{bmatrix} C \\ D \end{bmatrix} &= 
+\begin{bmatrix} 1 & 1 & 1 \\ 1& 2& 3 \\ \end{bmatrix} 
+\end{align}$$

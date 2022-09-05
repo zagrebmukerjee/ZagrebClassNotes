@@ -42,6 +42,34 @@ There is also a <font color=gree>subjectivist</font> approach: each person has t
 ```ad-info
 title: De Morgan's Laws in Logic
 
-It might be helpful to consider the analogous applications of De Morgan's Laws in formal logic
+It might be helpful to consider the analogous applications of De Morgan's Laws in logic. Suppose I have a statement 'Both $A$ and $B$ are true', which we write $A \land B$. The opposite of that is: Either $A$ or $B$ is not true - $\neg A \lor \neg B$. 
+
+Similarly, I can say $A$ or $B$ -  $A \lor B$ - is true. The opposite of that is neither $A$ nor $B$ is true - i.e. both $A$ and $B$ are false, $\neg A \land \neg B$.
 
 ```
+
+## $\sigma$ -Fields
+
+A somewhat technical concept we will need to use later.
+
+A $\sigma$-field, also called a $\sigma$-algebra, iss a class of subsets of some set with certain properties. In this case, some collection of subsets of $\Omega$. 
+
+Let $\mathscr{F}$ - 'script-F' - be a $\sigma$-field. Then: 
+- $\Omega \in \mathscr{F}$
+- If $A \in \mathscr{F}$ then $A^c \in \mathscr{F}$. Call this 'closure under complements'.
+- If $A_1, A_2, \ldots \in \mathscr F$ then $\bigcup_{i=1}^\infty A_i \in \mathscr F$. Closure under countable unions. We'll return to the rationale for this, 
+
+The collection of sets for which we can compute a probability will have to be a $\sigma$-field. 
+
+When $\Omega$ is countable, $\Omega$ is a $\sigma$-field. Not true when $\Omega$ is uncountable - likely won't matter in practiec. 
+
+Consequences of these definitions:
+1) $\emptyset \in \mathscr F$. Follows from $1$ and $2$. 
+2) If $A_1, A_2, \ldots \in \mathscr F$, then $\cap^\infty A_i \in \mathscr F$. 
+	- We know $\cup^\infty A_i \in \mathscr F$; $\cup^\infty A_i^c \in \mathscr F$; so by De Morgan's Laws, $\cap^\infty A_i \in \mathscr F$. 
+
+Can weaken property 3 to be closure under *finite* unions. This is a field/algebra. 
+
+Suppose $\mathscr C$ - script-C - is a collection of subsets of $\Omega$. We can generate some $\sigma(\mathscr C)$ that is the smallest $\sigma$-field that contains $\mathscr C$. 
+
+By defi

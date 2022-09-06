@@ -96,8 +96,19 @@ Note: it's possible to have a $\sigma$-field on which no $P$ can be defined.
 ### Direct Implications of the Axioms
 
 1) $P(B) = P(B \cap A) + P(B \cap A^c)$
-	- We know this from countable additivity.
-2) $P(A^c) = 1 - P(A)$
+	- The "Law of Total Probability". We know this from countable additivity.
+2) $P(A^c) = 1 - P(A)$.
+	- since $P(\Omega) = 1$, and $\Omega = A \cup A^c$, and $A, A^c$ are disjoint, then $P(A) + P(A^c) = P(\Omega) = 1$. 
+3) $P(\emptyset) = 0$.
+	- Since $\Omega = \Omega \cup \emptyset$, $P(\Omega) = P(\Omega) + P(\emptyset) = 1 + P(\emptyset)$. 
+4) If $A \subseteq B$, $P(A) \leq P(B)$ 
+	- We can write $P(A) = P(A \cap B) + P(A \cap B^c)$, given implication 1). But from the subset we know that $A \cap B = B$. So $P(A) + P(B) +$ some nonnegative quantity. 
+5) $0 \leq P(A) \leq 1$. Follows from 4), since $A \subseteq \Omega$ and $P(\Omega) = 1$. 
+6) $P(A \cup B) = P(A) + P(B) - P(A \cap B)$. 
+	- LTP tells us that $P(B) = P(A \cap B) + P(A^c \cap B)$. So $P(A^c \cap B) = P(B) - P(A \cap B)$
+	- We can write $A \cup B = A \cup (A^c \cap B)$
+	- So $P(A \cup B) = P(A) + P(A^c \cap B) = P(A) + P(B) - P(A \cap B)$. 
+
 
 ## Measure (basic intro)
 

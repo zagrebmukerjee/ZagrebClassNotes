@@ -109,6 +109,12 @@ Note: it's possible to have a $\sigma$-field on which no $P$ can be defined.
 	- We can write $A \cup B = A \cup (A^c \cap B)$
 	- So $P(A \cup B) = P(A) + P(A^c \cap B) = P(A) + P(B) - P(A \cap B)$. 
 
+### Intuition for the Axioms
+
+So why these particular axioms? 
+- Why countable, rather than finite additivity? Suppose our experiment is infinite tosses of a fair coin; thus the outcome space is any infinite sequence of $\{0,1\}$. 
+	- We can easily create finite events: the outcome of the first $n$ tosses is more than $n/2$ heads, etc. 
+
 
 ## Measure (basic intro)
 

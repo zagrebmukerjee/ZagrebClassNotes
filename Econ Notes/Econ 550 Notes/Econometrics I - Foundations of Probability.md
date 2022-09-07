@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Friday, September 2nd 2022, 5:09 pm
-date updated: Sunday, September 4th 2022, 8:14 pm
+date updated: Wednesday, September 7th 2022, 2:33 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -127,8 +127,29 @@ The counting measure is a measure commonly on $\mathbb Z$, but can be on any con
 
 So why these particular axioms? 
 - Why countable, rather than finite additivity? Suppose our experiment is infinite tosses of a fair coin; thus the outcome space is any infinite sequence of $\{0,1\}$. 
-	- We can easily create finite events: the outcome of the first $n$ tosses is more than $n/2$ heads, etc.  So then we could have $\mathcal F$ be all finite-number-of-tosses events. 
+	- We can easily create finite events: the outcome of the first $n$ tosses is more than $n/2$ heads, etc. So then we could have $\mathcal F$ be all finite-number-of-tosses events. 
 	- But we might want to describe non-finite events. For instance, $\lim_{n \to \infty} \frac{\sum \text{heads}}{n} > 1/2$ might be an assessment of fairness. 
 
-Suppose we have axioms 1 and 2 and finite additivity. Is there a Pr distribution that makes sense over power set of $\Omega$, rather than just $\mathcal F$? Yes, but we don't have uniqueness. Adding the countable additivity means that no such distribution exists - there are non-measurable sets that generate different probabilities under the same distribution. 
+Suppose we have axioms 1 and 2 and finite additivity. Is there a Pr distribution that makes sense over power set of $\Omega$, rather than just $\mathcal F$? Yes, but we don't have uniqueness. Adding the countable additivity means that no such distribution exists - there are non-measurable sets that generate different probabilities under the same distribution. So we have to restrict ourselves to the $\sigma$-fields, which maps to common-sense desiderata. 
 
+There are 'extension theorems' that let you take $P: \mathcal G \to \R$ and extend it to $P: \sigma(\mathcal G) \to R$. 
+
+Example: The Lebesgue measure on $[0,1]$ is already a probability measure. Suppose we have $\mathcal F$ as all finite unions of disjoint intervals. Then the probability is just the sum of the interval lengths. 
+
+
+## Random Variables
+
+A random variable $X$ is a mapping from $\Omega$ to some $\Omega_X \subseteq \R$. Example: if we have $\Omega$ be a survey of a number of people on employment status - unemployed, FT employed, PT employed. Then $X: \Omega \to \{ 0,1 \}$ might be $X = 0$ if unemployed, $1$ otherwise. 
+
+Note: the randomness here comes from the underlying state of the world $\Omega$. The RV is just reflecting that. 
+
+So now we want to create a probability measure on random variables. We can do this simply: 
+
+$$P(X \in [a,b]) = P(\{ \omega \in \Omega: X(\omega) \in [a,b] \})$$
+In other words, the preimage of $[a,b]$. We can generalize this to any set $B \subseteq \Omega_X$: 
+$$P(X \in B) = P(\omega \in \Omega: X(\omega) \in B)$$
+We can write $P(X \in B)$. But this is just notation. The above is the real definition. 
+
+This lets us say that at least $\Omega_X$ contains $\{ X(\omega): \omega \in \Omega \}$. This doesn't restrict us: e.g. in the unemployment event above have $\Omega_X = [0,1]$, and only have nonzero probability at the endpoints. We might want that for convenience. 
+
+We know probability only exists for subsets of $\Omega$ that are in $\mathcal F$. So we need to make sure that 

@@ -33,17 +33,12 @@ Let $X$ be some set of alternatives. $C()$ is a choice function such that $C(A)$
 
 Two conditions. 
 
-### Finite Nonemptiness
-"Enough information":. Given non-empty $A$ and finite $A$, $C(A) \neq \emptyset$. 
-
-Why must $A$ be finite? Consider $C(A) = \max A$; let $A = [0,1)$; oh no... 
-
-
-### Coherence
-
-Let $x,y$ be in $S \cap T$. $x \in C(S)$. $y \notin C(S)$. Then $y \notin C(T)$. We'll later discuss how this is the same as transitivity. 
-
-The intuition here is: In $S$, I had the choice of $y$, I chose $x$ over $y$. Therefore, when looking at $T$: both $x$ and $y$ are choices. I may not choose $x$ - there might be something in $T \cap S^c$ that's better than $x$. But if I choose $y$ - why didn't I choose $x$? 
+- Finite Non-Emptiness
+	- "Enough information":. Given non-empty $A$ and finite $A$, $C(A) \neq \emptyset$. 
+	- Why must $A$ be finite? Consider $C(A) = \max A$; let $A = [0,1)$; oh no... 
+- Coherence
+	- Let $x,y$ be in $S \cap T$. $x \in C(S)$. $y \notin C(S)$. Then $y \notin C(T)$. We'll later discuss how this is the same as transitivity. 
+	- The intuition here is: In $S$, I had the choice of $y$, I chose $x$ over $y$. Therefore, when looking at $T$: both $x$ and $y$ are choices. I may not choose $x$ - there might be something in $T \cap S^c$ that's better than $x$. But if I choose $y$ from $S$, why didn't I choose $x$? 
 
 
 ## Preferences
@@ -54,4 +49,10 @@ From this, we can create $x \succ y$ - $x$ is strictly better than $y$, which is
 
 I can also make $x \sim y$, or $x$ is indifferent to $y$, which is the case when both $x \succsim y$ and $y \succsim x$. 
 
-I once more have two cond
+I once more have two conditions: 
+
+- Completeness: For every $x,y$ either $x \succsim y$, $y \succsim x$, or both. 
+- Transitivity: If $x \succsim y$ and $y \succsim z$, then $x \succsim z$. 
+
+We will now produce four results showing these things are equivalent. 
+

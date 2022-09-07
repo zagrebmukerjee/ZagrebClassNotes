@@ -93,6 +93,19 @@ Why countable rather than finite? We will come back to that.
 
 Note: it's possible to have a $\sigma$-field on which no $P$ can be defined. 
 
+### Measure (basic intro)
+
+Probability is a specific case of a measure. A measure $\mu$ only has to fulfil properties: 
+1) $\mu(A) \geq 0$
+2) $\mu(\emptyset) = 0$
+3) $\mu(\bigcup A_i) = \sum \mu(A_i)$ where $A_i$ are countable and disjoint. 
+
+A commonly used measure is the Lebesgue measure, which corresponds to length in $\R^1$, area in $\R^2$, volume in $\R^3$, and so on. This is a uniform measure - it puts no weights on particular points. 
+
+The counting measure is a measure commonly on $\mathbb Z$, but can be on any contable set. It's how many things there are. 
+
+
+
 ### Direct Implications of the Axioms
 
 1) $P(B) = P(B \cap A) + P(B \cap A^c)$
@@ -109,20 +122,13 @@ Note: it's possible to have a $\sigma$-field on which no $P$ can be defined.
 	- We can write $A \cup B = A \cup (A^c \cap B)$
 	- So $P(A \cup B) = P(A) + P(A^c \cap B) = P(A) + P(B) - P(A \cap B)$. 
 
+
 ### Intuition for the Axioms
 
 So why these particular axioms? 
 - Why countable, rather than finite additivity? Suppose our experiment is infinite tosses of a fair coin; thus the outcome space is any infinite sequence of $\{0,1\}$. 
-	- We can easily create finite events: the outcome of the first $n$ tosses is more than $n/2$ heads, etc. 
+	- We can easily create finite events: the outcome of the first $n$ tosses is more than $n/2$ heads, etc.  So then we could have $\mathcal F$ be all finite-number-of-tosses events. 
+	- But we might want to describe non-finite events. For instance, $\lim_{n \to \infty} \frac{\sum \text{heads}}{n} > 1/2$ might be an assessment of fairness. 
 
+Suppose we have axioms 1 and 2 and finite additivity. Is there a Pr distribution that makes sense over power set of $\Omega$, rather than just $\mathcal F$? Yes, but we don't have uniqueness. Adding the countable additivity means that no such distribution exists - there are non-measurable sets that generate different probabilities under the same distribution. 
 
-## Measure (basic intro)
-
-Probability is a specific case of a measure. A measure $\mu$ only has to fulfil properties: 
-1) $\mu(A) \geq 0$
-2) $\mu(\emptyset) = 0$
-3) $\mu(\bigcup A_i) = \sum \mu(A_i)$ where $A_i$ are countable and disjoint. 
-
-A commonly used measure is the Lebesgue measure, which corresponds to length in $\R^1$, area in $\R^2$, volume in $\R^3$, and so on. This is a uniform measure - it puts no weights on particular points. 
-
-The counting measure is a measure commonly on $\mathbb Z$, but can be on any contable set. It's how many things there are. 

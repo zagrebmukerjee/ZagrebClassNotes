@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Thursday, September 1st 2022, 5:23 pm
-date updated: Thursday, September 8th 2022, 3:29 pm
+date updated: Thursday, September 8th 2022, 3:40 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -75,3 +75,13 @@ Given these definitions, we can write:
 5) If $C$ is FNE/coherent then $\exists$ $\succsim_c$ generating $C'$ such that, if $C(A) \neq \emptyset$ (case of infinite $A$), $C(A) = C'(A)$. 
 
 #### Proof of Prop 1
+Part 5)
+
+If $x \in C(\{x,y\})$, then write $x \succsim_C y$. 
+- By FNE, we can say this exists for every pair $x,y$. So it is complete. 
+- For transitivity: Suppose $x \succsim_c y$ and $y \succsim_c z$. Then a) $x \in C(\{x,y\})$ and b) $y \in C(\{y,z\})$. Consider now $R = C(\{x,y,z\})$. From applying coherence on b) we know that $z \notin R$. From coherence and a), we know that $y \notin R$. So by FNE it follows that $x\in R$. Now, we can use coherence once more to say that since $\{ x,z\}$ is a subset of $\{x,y,z\}$, $x$ must be in $C(\{x,z\})$. So it follows that $x \succsim_C z$. 
+
+
+Then create $C'$, with $C'(A) = B$, defined as: $x \in B \iff (y \in A \implies x \succsim y)$. We now can show $C(A) \subseteq C'(A)$ and vice versa. 
+- Suppose $x \in C(A)$. Then $\forall \; y \in A$, for each pair $\{x,y\}$, we know that $x \in C(\{x,y\})$ by coherence. So then $x \succsim_C y$, and thus $C(A) \subseteq C'(A)$. 
+- Now, choose $A$ and $x \in C'(A)$. Then we know that $\forall 

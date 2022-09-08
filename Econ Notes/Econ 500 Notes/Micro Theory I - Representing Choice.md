@@ -84,4 +84,7 @@ If $x \in C(\{x,y\})$, then write $x \succsim_C y$.
 
 Then create $C'$, with $C'(A) = B$, defined as: $x \in B \iff (y \in A \implies x \succsim y)$. We now can show $C(A) \subseteq C'(A)$ and vice versa. 
 - Suppose $x \in C(A)$. Then $\forall \; y \in A$, for each pair $\{x,y\}$, we know that $x \in C(\{x,y\})$ by coherence. So then $x \succsim_C y$, and thus $C(A) \subseteq C'(A)$. 
-- Now, choose $A$ and $x \in C'(A)$. Then we know that $\forall 
+- Now, choose $A$ and $x \in C'(A)$. Then we know that $\forall \; y \in A$, $x \succsim_C y$. Choose some $y \in C(A)$ (by nonempty). By definition of $C'$, $x \succsim_C y$. So $x \in C(\{x,y\})$. Since $x$ is chosen from $\{x,y\}$, a subset of $A$, and since $y$ is chosen from $A$, $x \in C(A)$. So $C'(A) \subseteq C(A)$. 
+
+
+

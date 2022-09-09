@@ -87,4 +87,6 @@ Then create $C'$, with $C'(A) = B$, defined as: $x \in B \iff (y \in A \implies 
 - Now, choose $A$ and $x \in C'(A)$. Then we know that $\forall \; y \in A$, $x \succsim_C y$. Choose some $y \in C(A)$ (by nonempty). By definition of $C'$, $x \succsim_C y$. So $x \in C(\{x,y\})$. Since $x$ is chosen from $\{x,y\}$, a subset of $A$, and since $y$ is chosen from $A$, $x \in C(A)$. So $C'(A) \subseteq C(A)$. 
 
 
+OK. But what about utility functions? 
 
+One direction is straightforward: turning utility functions into our desiderata. 

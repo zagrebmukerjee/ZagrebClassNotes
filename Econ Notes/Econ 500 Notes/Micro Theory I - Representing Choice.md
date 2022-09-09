@@ -89,4 +89,4 @@ Then create $C'$, with $C'(A) = B$, defined as: $x \in B \iff (y \in A \implies 
 
 OK. But what about utility functions? 
 
-One direction is straightforward: turning utility functions into our desiderata. 
+One direction is straightforward: turning utility functions into our desiderata. The other one is sufficiently complex to merit the label of "representation theorems". But it's important to pin this down, because we'll want to use utility functions a lot, and we want them to have very solid foundations. 

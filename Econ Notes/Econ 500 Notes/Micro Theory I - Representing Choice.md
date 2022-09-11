@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Thursday, September 1st 2022, 5:23 pm
-date updated: Thursday, September 8th 2022, 3:40 pm
+date updated: Sunday, September 11th 2022, 12:35 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -75,7 +75,6 @@ Given these definitions, we can write:
 5) If $C$ is FNE/coherent then $\exists$ $\succsim_c$ generating $C'$ such that, if $C(A) \neq \emptyset$ (case of infinite $A$), $C(A) = C'(A)$. 
 
 #### Proof of Prop 1
-Part 5)
 
 If $x \in C(\{x,y\})$, then write $x \succsim_C y$. 
 - By FNE, we can say this exists for every pair $x,y$. So it is complete. 
@@ -89,4 +88,36 @@ Then create $C'$, with $C'(A) = B$, defined as: $x \in B \iff (y \in A \implies 
 
 OK. But what about utility functions? 
 
-One direction is straightforward: turning utility functions into our desiderata. The other one is sufficiently complex to merit the label of "representation theorems". But it's important to pin this down, because we'll want to use utility functions a lot, and we want them to have very solid foundations. 
+One direction is straightforward: turning utility functions into our desiderata. The other one is sufficiently complex to merit the label of "representation theorems". But it's important to pin this down, because we'll want to use utility functions a lot, and we want them to have very solid foundations. In particular, we want to do this in an infinite choice space, which maks things more complex. 
+
+
+## Representation Theorems
+
+### Conditions
+
+Let's say $\R^2$ is our consumption space. We're working with preferences that are complete, transitive, weakly monotonic. 
+
+#### Continuity
+We add the condition that they are continuous: i.e. $\forall x \; \{ y \in X: y \succsim x \}$ is a closed set, as is $\{ y \in X: x \succsim y\}$. 
+
+In other words, there are upper and lower contour sets of $x$: all the bundles at least as good as $x$, and the bundles than which $x$ is at least as good. These are closed sets - intuitively, that means they contain their boundaries (which are indifference curves). 
+
+Continuity is sometimes called a 'technical' assumption, in that we just use it for math simplification. Though people sometimes say 'this is a technical condition' to mean 'this is useful but I don't understand it'. So watch out for that. It can mean: I need it for math and it's either empirically contentless, or meaningless in finite land. 
+
+An example of noncontinuous preferences: lexicographic $\succsim$. If $x \succ y$, then either $x_1 > y_1$, or $x_1 = y_1$ and $x_2 > y_2$, or so on. This is noncontinuous. Consider the 2 dimensional case. Some bundle $x_1$ is preferred to all sets with $x_1 > y_1$. But also all sets with $x_1 = y_1$ and $x_2 > y_2$. In other words, the set $y : x \succsim y$ is all points to the right of $x$ and also all the points directly below $x$, but not the points directly above. So the point $x_1, x_2 + 1$ is preferable to $x$, but it is a limit point of $y: x \succsim y$. 
+
+In fact, there exists no function representing lexicographic preferences. 
+
+
+#status/section/🚧 
+```ad-note
+title: Lexicographic Preference Representation 
+
+
+```
+
+So continuity is not 1000% technical. But we do want it. 
+
+#### Monotonicity 
+
+This one is simple. Strong monotonicity is that $x \geq y \implies x \succ y$. Weak monotonicity is that $x > y \implies x \succ y$. In this case, given vectors $x$ and $y$, $x \geq y$ means that 'every element of $x$ is at least equal to its corresponding element in $y$, and one is greater;

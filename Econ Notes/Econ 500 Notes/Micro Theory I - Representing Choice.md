@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Thursday, September 1st 2022, 5:23 pm
-date updated: Sunday, September 11th 2022, 12:35 pm
+date updated: Sunday, September 11th 2022, 12:38 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -95,7 +95,7 @@ One direction is straightforward: turning utility functions into our desiderata.
 
 ### Conditions
 
-Let's say $\R^2$ is our consumption space. We're working with preferences that are complete, transitive, weakly monotonic. 
+Let's say $\R^2$ is our consumption space. We're working with preferences that are complete, transitive, but also  continuous and weakly monotonic. 
 
 #### Continuity
 We add the condition that they are continuous: i.e. $\forall x \; \{ y \in X: y \succsim x \}$ is a closed set, as is $\{ y \in X: x \succsim y\}$. 
@@ -118,6 +118,30 @@ title: Lexicographic Preference Representation
 
 So continuity is not 1000% technical. But we do want it. 
 
-#### Monotonicity 
+#### Monotonicity
 
-This one is simple. Strong monotonicity is that $x \geq y \implies x \succ y$. Weak monotonicity is that $x > y \implies x \succ y$. In this case, given vectors $x$ and $y$, $x \geq y$ means that 'every element of $x$ is at least equal to its corresponding element in $y$, and one is greater;
+This one is simple. Strong monotonicity is that $x \geq y \implies x \succ y$. Weak monotonicity is that $x > y \implies x \succ y$. In this case, given vectors $x$ and $y$, $x \geq y$ means that 'every element of $x$ is at least equal to its corresponding element in $y$, and at least one is greater'; $x > y$ means that $\forall i \; x_i > y_i$. 
+
+A weaker version of monotonicity is local nonsatiation: every neighborhood of every bundle $x$ contains $y$ such that $y \succ x$. Either of these will tell us that the maximizing bundle is on the budget frontier. Monotonicity is more convenient. 
+
+
+### Proposition 3
+
+Suppose $\succsim$ are complete, transitive, continuous, weakly monotonic. Then there is some continuous utility representation for $\succsim$.
+
+#### Proof
+
+Pick any two allocations in the diagonal. By weak monotonicity, we can say one is preferred. Now we just have to map everything to something on the diagonal to which it's indifferent - i.e. drawing indifference curves. 
+
+For a point on the diagonal, let $U(\alpha, \ldots \alpha) = \alpha$. 
+
+For any $x$ off the diagonal, there is an indifference curve intersecting the diagonal.  For point $x$ pick  $\alpha_x \in D:x \sim \alpha_x$. So let $U(\alpha_x) = x$. 
+- By monotonicity, there are some $\alpha_1, \alpha_2$ on the diagonal such that $\alpha_1 \succsim x$ and $x \succsim \alpha_2$. 
+- The union of these is $\R$; the intersection exists, by continuity. 
+- By WM we know it is unique since other points on the diagonal are prefereable.
+
+<font color=#F7B801>somewhere transitivity is used </font> #status/section/🚧 
+
+
+
+

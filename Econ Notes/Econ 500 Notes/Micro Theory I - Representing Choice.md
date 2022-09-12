@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Thursday, September 1st 2022, 5:23 pm
-date updated: Monday, September 12th 2022, 11:51 am
+date updated: Monday, September 12th 2022, 11:57 am
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -155,8 +155,3 @@ For a point on the diagonal, let $U(\alpha, \ldots \alpha) = \alpha$.
 
 For any $x$ off the diagonal, we know by continuity that $y \succsim x$ and $x \succsim y$ closed. This is an indifference curve. 
 By monotonicity, there are $\alpha_1$ on the diagonal such that $\alpha_1 \succsim x$, and $\alpha_2 \in D: x \succsim \alpha_2$ (easy examples: more or less of everything). The union of these sets is $\R$. The intersection - $\alpha \in D: \alpha \sim x$ - exists. By weak monotonicity, no points on the diagonal are indifferent to each other; so by transitivity it is unique. Let this point be $\alpha_x$. Then we write $U(x) = \alpha_x$. 
-
-
-$$
-
-$$

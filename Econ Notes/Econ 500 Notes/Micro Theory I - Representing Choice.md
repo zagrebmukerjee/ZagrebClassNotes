@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Thursday, September 1st 2022, 5:23 pm
-date updated: Sunday, September 11th 2022, 12:38 pm
+date updated: Monday, September 12th 2022, 11:51 am
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -88,14 +88,32 @@ Then create $C'$, with $C'(A) = B$, defined as: $x \in B \iff (y \in A \implies 
 
 OK. But what about utility functions? 
 
-One direction is straightforward: turning utility functions into our desiderata. The other one is sufficiently complex to merit the label of "representation theorems". But it's important to pin this down, because we'll want to use utility functions a lot, and we want them to have very solid foundations. In particular, we want to do this in an infinite choice space, which maks things more complex. 
+One direction is straightforward: turning utility functions into our desiderata. The other one is sufficiently complex to merit the label of "representation theorems". But it's important to pin this down, because we'll want to use utility functions a lot, and we want them to have very solid foundations. In particular, we want to do this in an infinite choice space, which makes things more complex. 
+
+```ad-note
+title: Finite Representation Theorem
+
+Suppose $X$  finite, and $C()$ finitely non-empty and coherent. Then there is a utility function:
+
+$$
+\begin{aligned}
+x_1 &= C(X)\\
+x_2 &= C(x \in X: x \notin \{ x_1\}) \\
+\vdots & \\
+x_k &= C(x \in X: x \notin \{ x_1, x_2, \ldots x_{k-1}\}) \\
+\end{aligned}
+$$
+
+Then let $U(x) = k$ if $x \in x_1$, $k-1$ if $x \in x_2$, and so on. 
+
+```
 
 
 ## Representation Theorems
 
 ### Conditions
 
-Let's say $\R^2$ is our consumption space. We're working with preferences that are complete, transitive, but also  continuous and weakly monotonic. 
+Let's say $\R^2$ is our consumption space. We're working with preferences that are complete, transitive, but also continuous and weakly monotonic. 
 
 #### Continuity
 We add the condition that they are continuous: i.e. $\forall x \; \{ y \in X: y \succsim x \}$ is a closed set, as is $\{ y \in X: x \succsim y\}$. 
@@ -111,12 +129,12 @@ In fact, there exists no function representing lexicographic preferences.
 
 #status/section/🚧 
 ```ad-note
-title: Lexicographic Preference Representation 
+title: Lexicographic Preference Cannot be Represented 
 
 
 ```
 
-So continuity is not 1000% technical. But we do want it. 
+So continuity is not 100% technical. But we do want it. 
 
 #### Monotonicity
 
@@ -135,13 +153,10 @@ Pick any two allocations in the diagonal. By weak monotonicity, we can say one i
 
 For a point on the diagonal, let $U(\alpha, \ldots \alpha) = \alpha$. 
 
-For any $x$ off the diagonal, there is an indifference curve intersecting the diagonal.  For point $x$ pick  $\alpha_x \in D:x \sim \alpha_x$. So let $U(\alpha_x) = x$. 
-- By monotonicity, there are some $\alpha_1, \alpha_2$ on the diagonal such that $\alpha_1 \succsim x$ and $x \succsim \alpha_2$. 
-- The union of these is $\R$; the intersection exists, by continuity. 
-- By WM we know it is unique since other points on the diagonal are prefereable.
-
-<font color=#F7B801>somewhere transitivity is used </font> #status/section/🚧 
+For any $x$ off the diagonal, we know by continuity that $y \succsim x$ and $x \succsim y$ closed. This is an indifference curve. 
+By monotonicity, there are $\alpha_1$ on the diagonal such that $\alpha_1 \succsim x$, and $\alpha_2 \in D: x \succsim \alpha_2$ (easy examples: more or less of everything). The union of these sets is $\R$. The intersection - $\alpha \in D: \alpha \sim x$ - exists. By weak monotonicity, no points on the diagonal are indifferent to each other; so by transitivity it is unique. Let this point be $\alpha_x$. Then we write $U(x) = \alpha_x$. 
 
 
+$$
 
-
+$$

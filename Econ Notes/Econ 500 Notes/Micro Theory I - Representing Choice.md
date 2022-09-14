@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Thursday, September 1st 2022, 5:23 pm
-date updated: Wednesday, September 14th 2022, 12:46 pm
+date updated: Wednesday, September 14th 2022, 1:05 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -211,7 +211,19 @@ Suppose prices $p$ and income/wealth $w$. Let $x(p,w)$ be the bundle that maximi
 
 Easiest to think of in the case when $x(p,w)$ is a singleton. If bundle $x(p',w')$ is also affordable under $p,w$, but my optimizer is $x(p,w) \neq x'$, then I know that $x(p,w)$ is not affordable under $p', w'$; otherwise, I would have chosen it instead of $x(p',w')$. 
 
-In this case, I can say $x$ is 'revealed preferred' to $x'$: given the choice of both, I picked one. As one might suspect, this is the same criterion as coherence. Let $B_1 = \{x : px \leq w\}$ and $B_2 = \{ y: p'y \leq w'\}$. Let $S = B_1$ and $T = B_1 \cup B_2$. The WARP conditions map to the coherence conditions:
-- Choose $x$ as a maximizer under $B_1$, and then $x \in S$, $x \in S \cap T$, $x \in C(S)$. 
--  The condition $py \leq w$ means that $y \in S \cap T$. We know that, since $y \neq x$, $y \not \in C(S)$. <font color=#F7B801>can expand to 'not contained in x'?</font>
-- Coherence then tells us that $y \notin C(T)$; so $y \notin 
+In this case, I can say $x$ is 'revealed preferred' to $x'$: given the choice of both, I picked one. As one might suspect, this is the same criterion as coherence. Let $B_1 = \{x : px \leq w\}$ and $B_2 = \{ y: p'y \leq w'\}$. Let $S = B_1$ and $T = B_2$. The WARP conditions map to the coherence conditions:
+- Choose $x$ as feasible under $B_1$, and then $x \in S$, $x$. Let $y \neq x$ be the maximizer under $B_2$, and $y \notin C(S)$.
+- Suppose $y \in S \cap T$. This is the same as saying that $px(p', w') \leq w$. Then suppose $x$ is also in $S \cap T$, which means $p'x(p,w) > w'$. Then, by WARP, $x \notin C(S)$, or $x \neq x(p,w)$. 
+
+This is simply a rearrangement of the coherence criteria as "at most $n-1$ of the following criteria can be true". 
+
+### SARP, GARP, Afriat's Theorem
+
+We can make WARP into a stronger form. Let $\succsim_{R^0}$ be 'revealed preferred to'. Then let $\succsim_R$ be the transitive closure of $\succsim_{R^0}$. Then SARP states that $x \succsim_R y$ means $\neg(y \succsim_R x)$. So counts 'indirectly revealed preferred to' as well. 
+
+
+GARP is a broader form of the above. Create the relation 'revealed strictly preferred to', $py < w$, or $x \succ_{R^0} y$, with transirive closure $\succ_R$. Then, in some data $p^i, w^i, x^I$, GARP holds if there is no $x^i \succ_R x^i$. 
+
+#### Afriat's Theorem
+
+If some data $\{p_i, w_i, x_i\}$ satisfy GARP, then there is a continuous increasing concave utility function rationalizing these choices. 

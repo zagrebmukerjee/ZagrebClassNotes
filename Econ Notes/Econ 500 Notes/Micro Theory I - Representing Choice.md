@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Thursday, September 1st 2022, 5:23 pm
-date updated: Monday, September 12th 2022, 11:57 am
+date updated: Wednesday, September 14th 2022, 11:44 am
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -147,11 +147,41 @@ A weaker version of monotonicity is local nonsatiation: every neighborhood of ev
 
 Suppose $\succsim$ are complete, transitive, continuous, weakly monotonic. Then there is some continuous utility representation for $\succsim$.
 
-#### Proof
+#### Construct $U()$
 
 Pick any two allocations in the diagonal. By weak monotonicity, we can say one is preferred. Now we just have to map everything to something on the diagonal to which it's indifferent - i.e. drawing indifference curves. 
 
 For a point on the diagonal, let $U(\alpha, \ldots \alpha) = \alpha$. 
 
 For any $x$ off the diagonal, we know by continuity that $y \succsim x$ and $x \succsim y$ closed. This is an indifference curve. 
-By monotonicity, there are $\alpha_1$ on the diagonal such that $\alpha_1 \succsim x$, and $\alpha_2 \in D: x \succsim \alpha_2$ (easy examples: more or less of everything). The union of these sets is $\R$. The intersection - $\alpha \in D: \alpha \sim x$ - exists. By weak monotonicity, no points on the diagonal are indifferent to each other; so by transitivity it is unique. Let this point be $\alpha_x$. Then we write $U(x) = \alpha_x$. 
+By monotonicity, there are $\alpha_1$ on the diagonal such that $\alpha_1 \succsim x$, and $\alpha_2 \in D: x \succsim \alpha_2$ (easy examples: more or less of everything). The union of these sets is $\R$. The intersection - $\alpha \in D: \alpha \sim x$ - exists fron the continuity above. By weak monotonicity, no points on the diagonal are indifferent to each other; which means that we can't have $\alpha_1$ and $\alpha_2$ both indifferent to $x$, since either $\alpha_1 \succ \alpha_2$ or vice versa. 
+
+Call the single point on the diagonal that's indifferent to $x$ $\alpha_x = (\alpha_x, \alpha_x, \ldots)$. Then we can say $U(x) = U(\alpha_x) = \alpha_x$. 
+
+
+#### $U$ Is Continuous
+Suppose $x_n \to x$; we want to show that $U(x_n) \to U(x)$. By our construction that means $\alpha_{x_n} \to \alpha_{x}$. 
+
+Suppose that's not true: i.e., there are $x_n$ converging to $x$, but for every $n$, $\alpha_{x_n} > \alpha_x + \gamma$. This implies, given the construction above, that the indifference curves for $\alpha_{x_n}$ are always strictly above $I(\alpha_x)$: by monotonicity, we can find  $\alpha_{x_n} \succ \alpha_x + \gamma/2 \succ \alpha_x$, and by transitivity we can extend that result to an indifference curve. 
+
+Draw a neighborhood around $\alpha_x$ of radius $\gamma$; this then contains no $x_n$ in it, a contradiction. 
+
+
+#### $U$ represents $\succsim$
+
+We want to show that $x \succsim y$ if and only if $U(x) \geq U(y)$. 
+
+Since $x \succsim y$, we know that $(\alpha_x, \ldots) \succsim (\alpha_y, \ldots)$, by transitivity. So, on the diagonal, $\alpha_x \succsim \alpha_y$. So $U(x) > U(y)$. 
+In the other direction: if $U(x) > U(y)$, then $\alpha_x > \alpha_y$, so $x \succsim y$ by transitivity. 
+
+```ad-note
+titles: Takeaways from the Proof
+
+- Continuity is _not_ a strictly technical assumption, but this proof relies upon it. 
+- A utility function contains exactly as much information as the preference relation it represents; a complete ordering of $(x_1, \ldots)$. Nothing we did lets us say 'how much better is $x$ than $y$?
+- Transitivity is what lets us draw indifference curves from the diagonal to all $\R^n$. Otherwise we would have a big mess with indifference correspondences. 
+- The structure of $U$ implies both completeness and transitivity. 
+
+```
+
+

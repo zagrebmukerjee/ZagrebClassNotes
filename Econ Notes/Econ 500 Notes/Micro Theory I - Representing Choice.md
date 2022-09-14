@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Thursday, September 1st 2022, 5:23 pm
-date updated: Wednesday, September 14th 2022, 11:44 am
+date updated: Wednesday, September 14th 2022, 12:05 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -35,12 +35,16 @@ Let $X$ be some set of alternatives. $C()$ is a choice function such that $C(A)$
 
 Two conditions. 
 
-- Finite Non-Emptiness
-	- "Enough information":. Given non-empty $A$ and finite $A$, $C(A) \neq \emptyset$. 
-	- Why must $A$ be finite? Consider $C(A) = \max A$; let $A = [0,1)$; oh no... 
-- Coherence
-	- Let $x,y$ be in $S \cap T$. $x \in C(S)$. $y \notin C(S)$. Then $y \notin C(T)$. We'll later discuss how this is the same as transitivity. 
-	- The intuition here is: In $S$, I had the choice of $y$, I chose $x$ over $y$. Therefore, when looking at $T$: both $x$ and $y$ are choices. I may not choose $x$ - there might be something in $T \cap S^c$ that's better than $x$. But if I choose $y$ from $S$, why didn't I choose $x$? 
+#### Finite Non-Emptiness
+- "Enough information":. Given non-empty $A$ and finite $A$, $C(A) \neq \emptyset$. 
+- Why must $A$ be finite? Consider $C(A) = \max A$; let $A = [0,1)$; oh no... 
+
+#### Coherence
+- Let $x,y$ be in $S \cap T$. Suppose: 
+	- $x \in C(S)$.
+	- $y \notin C(S)$. 
+  Then $y \notin C(T)$. We'll later discuss how this is the same as transitivity. 
+- The intuition here is: In $S$, I had the choice of $y$, I chose $x$ over $y$. Therefore, when looking at $T$: both $x$ and $y$ are choices. I may not choose $x$ because there might be something in $T \cap S^c$ that's better than $x$. But in all scenarios where I could be choosing $y$ from $T$, I'd rather choose $x$. 
 
 
 ### Preferences
@@ -74,7 +78,7 @@ Given these definitions, we can write:
 4) $C'(A) = C(A)$ $\forall$ $A \subseteq X$. 
 5) If $C$ is FNE/coherent then $\exists$ $\succsim_c$ generating $C'$ such that, if $C(A) \neq \emptyset$ (case of infinite $A$), $C(A) = C'(A)$. 
 
-#### Proof of Prop 1
+#### Proof of Proposition 1
 
 If $x \in C(\{x,y\})$, then write $x \succsim_C y$. 
 - By FNE, we can say this exists for every pair $x,y$. So it is complete. 
@@ -85,6 +89,7 @@ Then create $C'$, with $C'(A) = B$, defined as: $x \in B \iff (y \in A \implies 
 - Suppose $x \in C(A)$. Then $\forall \; y \in A$, for each pair $\{x,y\}$, we know that $x \in C(\{x,y\})$ by coherence. So then $x \succsim_C y$, and thus $C(A) \subseteq C'(A)$. 
 - Now, choose $A$ and $x \in C'(A)$. Then we know that $\forall \; y \in A$, $x \succsim_C y$. Choose some $y \in C(A)$ (by nonempty). By definition of $C'$, $x \succsim_C y$. So $x \in C(\{x,y\})$. Since $x$ is chosen from $\{x,y\}$, a subset of $A$, and since $y$ is chosen from $A$, $x \in C(A)$. So $C'(A) \subseteq C(A)$. 
 
+## Representation Theorems
 
 OK. But what about utility functions? 
 
@@ -109,7 +114,6 @@ Then let $U(x) = k$ if $x \in x_1$, $k-1$ if $x \in x_2$, and so on.
 ```
 
 
-## Representation Theorems
 
 ### Conditions
 
@@ -143,7 +147,7 @@ This one is simple. Strong monotonicity is that $x \geq y \implies x \succ y$. W
 A weaker version of monotonicity is local nonsatiation: every neighborhood of every bundle $x$ contains $y$ such that $y \succ x$. Either of these will tell us that the maximizing bundle is on the budget frontier. Monotonicity is more convenient. 
 
 
-### Proposition 3
+### Statement and Proofs (Prop 3)
 
 Suppose $\succsim$ are complete, transitive, continuous, weakly monotonic. Then there is some continuous utility representation for $\succsim$.
 
@@ -162,20 +166,23 @@ Call the single point on the diagonal that's indifferent to $x$ $\alpha_x = (\al
 #### $U$ Is Continuous
 Suppose $x_n \to x$; we want to show that $U(x_n) \to U(x)$. By our construction that means $\alpha_{x_n} \to \alpha_{x}$. 
 
-Suppose that's not true: i.e., there are $x_n$ converging to $x$, but for every $n$, $\alpha_{x_n} > \alpha_x + \gamma$. This implies, given the construction above, that the indifference curves for $\alpha_{x_n}$ are always strictly above $I(\alpha_x)$: by monotonicity, we can find  $\alpha_{x_n} \succ \alpha_x + \gamma/2 \succ \alpha_x$, and by transitivity we can extend that result to an indifference curve. 
+Suppose that's not true: i.e., there are $x_n$ converging to $x$, but for every $n$, $\alpha_{x_n} > \alpha_x + \gamma$. This implies, given the construction above, that the indifference curves for $\alpha_{x_n}$ are always strictly above $I(\alpha_x)$: by monotonicity, we can find $\alpha_{x_n} \succ \alpha_x + \gamma/2 \succ \alpha_x$, and by transitivity we can extend that result to an indifference curve. 
 
 Draw a neighborhood around $\alpha_x$ of radius $\gamma$; this then contains no $x_n$ in it, a contradiction. 
 
 
-#### $U$ represents $\succsim$
+#### $U$ Represents $\succsim$
 
 We want to show that $x \succsim y$ if and only if $U(x) \geq U(y)$. 
 
 Since $x \succsim y$, we know that $(\alpha_x, \ldots) \succsim (\alpha_y, \ldots)$, by transitivity. So, on the diagonal, $\alpha_x \succsim \alpha_y$. So $U(x) > U(y)$. 
 In the other direction: if $U(x) > U(y)$, then $\alpha_x > \alpha_y$, so $x \succsim y$ by transitivity. 
 
+Observe: 
+- If $U(x)$ represents $\succsim$, then for strictly increasing $f$, so does $f(U(x))$. In other words a utility function is 'unique only up to strictly increasing transformations.' 
+
 ```ad-note
-titles: Takeaways from the Proof
+title: Takeaways from the Proof
 
 - Continuity is _not_ a strictly technical assumption, but this proof relies upon it. 
 - A utility function contains exactly as much information as the preference relation it represents; a complete ordering of $(x_1, \ldots)$. Nothing we did lets us say 'how much better is $x$ than $y$?
@@ -184,4 +191,22 @@ titles: Takeaways from the Proof
 
 ```
 
+## Choice, Utility, Revealed Preference
 
+We can also represent choice functions with utility functions.
+
+We know that choice functions correspond to preferences, and we've shown that preferences can be represented by utility functions. Why bother showing that choice functions are represented by a utility function? Well, when we [[#The Easy Ones#Proposition 1|argued]] that choice functions could generate preferences, we tacitly assumed that we could define choices over arbitrarily large sets. We don't need to require that to construct $U$ from $C$. 
+
+### Weak Axiom of Revealed Preference (WARP)
+
+Restating the coherence criterion: 
+
+![[#Choice Functions#Coherence]]
+
+
+Suppose prices $p$ and income/wealth $w$. Let $x(p,w)$ be the bundle that maximizes utility under $p,w$. Then if 
+- $x(p,w) \neq x(p',w')$
+- and $px(p', w') \leq w$
+- Then $p' x(p,w) > w'$. 
+
+Easiest to think of in the case when $x(p,w)$ is a singleton. If bundle $x(p',w')$ is also affordable under $p,w$, but my optimizer is $x(p,w) \neq x'$, then I know that $x(p,w)$ is not affordable under $p', w'$; otherwise, I would have chosen it instead of $x(p',w')$. 

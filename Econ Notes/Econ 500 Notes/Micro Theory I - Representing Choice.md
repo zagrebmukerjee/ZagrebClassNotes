@@ -210,3 +210,5 @@ Suppose prices $p$ and income/wealth $w$. Let $x(p,w)$ be the bundle that maximi
 - Then $p' x(p,w) > w'$. 
 
 Easiest to think of in the case when $x(p,w)$ is a singleton. If bundle $x(p',w')$ is also affordable under $p,w$, but my optimizer is $x(p,w) \neq x'$, then I know that $x(p,w)$ is not affordable under $p', w'$; otherwise, I would have chosen it instead of $x(p',w')$. 
+
+In this case, I can say $x$ is 'revealed preferred' to $x'$: given the choice of both, I picked one. As one might suspect, thisius the same criterion as coherence. Let $T = \{x : px \leq w\}$ and $S = \{ x':p'x' \leq w'\} \cap T$. Then $S \cap T = T$, and $x(p,w) \in C(S \cap T)$. To say $x'$ is feasible under $pw$ is to say that $x' \in S \cap T$ . 

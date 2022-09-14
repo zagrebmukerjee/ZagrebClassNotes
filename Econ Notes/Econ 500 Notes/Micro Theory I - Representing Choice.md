@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Thursday, September 1st 2022, 5:23 pm
-date updated: Wednesday, September 14th 2022, 1:05 pm
+date updated: Wednesday, September 14th 2022, 1:59 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -9,10 +9,10 @@ cssclass: math-class-note
 tags: 
 - '#types/classes/econ'
 - '#topics/econ/theory/micro'
-- '#status/🚧'
 ---
 
 # [[Micro Theory I - Representing Choice]]
+<span style = "font-size:120%"><i >Zagreb Mukerjee </i></span>
 
 ## 3 Modes of Choice Representation
 

@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Thursday, September 1st 2022, 5:23 pm
-date updated: Wednesday, September 14th 2022, 12:05 pm
+date updated: Wednesday, September 14th 2022, 12:46 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -211,4 +211,7 @@ Suppose prices $p$ and income/wealth $w$. Let $x(p,w)$ be the bundle that maximi
 
 Easiest to think of in the case when $x(p,w)$ is a singleton. If bundle $x(p',w')$ is also affordable under $p,w$, but my optimizer is $x(p,w) \neq x'$, then I know that $x(p,w)$ is not affordable under $p', w'$; otherwise, I would have chosen it instead of $x(p',w')$. 
 
-In this case, I can say $x$ is 'revealed preferred' to $x'$: given the choice of both, I picked one. As one might suspect, thisius the same criterion as coherence. Let $T = \{x : px \leq w\}$ and $S = \{ x':p'x' \leq w'\} \cap T$. Then $S \cap T = T$, and $x(p,w) \in C(S \cap T)$. To say $x'$ is feasible under $pw$ is to say that $x' \in S \cap T$ . 
+In this case, I can say $x$ is 'revealed preferred' to $x'$: given the choice of both, I picked one. As one might suspect, this is the same criterion as coherence. Let $B_1 = \{x : px \leq w\}$ and $B_2 = \{ y: p'y \leq w'\}$. Let $S = B_1$ and $T = B_1 \cup B_2$. The WARP conditions map to the coherence conditions:
+- Choose $x$ as a maximizer under $B_1$, and then $x \in S$, $x \in S \cap T$, $x \in C(S)$. 
+-  The condition $py \leq w$ means that $y \in S \cap T$. We know that, since $y \neq x$, $y \not \in C(S)$. <font color=#F7B801>can expand to 'not contained in x'?</font>
+- Coherence then tells us that $y \notin C(T)$; so $y \notin 

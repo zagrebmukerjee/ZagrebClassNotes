@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Thursday, September 15th 2022, 1:41 pm
-date updated: Thursday, September 15th 2022, 1:42 pm
+date updated: Thursday, September 15th 2022, 1:45 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -21,5 +21,4 @@ Suppose a correspondence $f: X \to Y$. Suppose $f(x) \subseteq$ some compact sub
 - if there is $y_n \in f(x_n)$ that converges to $y$; then
 - $y \in f(x)$. 
 
-Intuitively, im
-
+Intuitively, imagine the correspondence given by $f(x) = [x, x+1)$. Suppose $x_n = 1 - 1/n$. This converges to $1$. Then $f(x_4)$ will be $[3/4, 7/4)$. Choose $y_n$ as $2-2/n$. Then $y_4 = 2 - 2/4 = 3/2 \in f(x_4)$. It's apparent that $y_n$ converges to $2$ , but $2$ is not in $f(1)$. 

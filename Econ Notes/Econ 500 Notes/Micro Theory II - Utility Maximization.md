@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Monday, September 12th 2022, 11:53 am
-date updated: Thursday, September 15th 2022, 1:27 pm
+date updated: Thursday, September 15th 2022, 2:22 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -164,7 +164,7 @@ So how could I say that $\lambda = \sum_i\frac{\partial u}{\partial x_i} \frac{\
 
 Once again, because we are maximizing. Also because the latter is in fact an $x(p,w)$. so notation is sloppy.
 
-#### More Properties 
+#### Continuity Proof 1
 $v(p,w)$ is continuous. 
 
 Proof: from PS2
@@ -179,9 +179,20 @@ I know that $p^*x(p^*, w^*) \leq w^*$. Write $(p^* - p_n + p_n)x(p^*, w^*) \leq 
 
 I know the latter product goes to zero as $p_n$ converges to $p^*$. Then $x(p^*, w^*)$ is feasible under $p_n, w^*$. Write $w^*$ as $w_n + \epsilon$; then, as $\epsilon \to 0$, $x(p^*, w^*)$ is feasible under $p_n, w_n$; so $v(p^*, w^*) \leq \lim v(p_n, w_n)$. 
 
+#### Continuity Proof 2: Section
+We know that $v(p,w) = \max U(x)$ subject to $px \leq w$
 
+Suppose $p_n, w_n$ converge to $p,w$.
+Then $\mathcal L_{n \to \infty} v(p_n, w_n) v_c(p,w)$
 
+It's sufficient to show that 
 
+1) $\lim \inf_{n \to \infty} = \lim_{k\to\infty} v(p_n, w_n) \geq v(p,w)$
+2) $\lim \sup_{n \to \infty} = \lim_{k\to\infty} v(p_n, w_n) \leq v(p,w)$
 
+For the second. We can say $\lim p_n x(p,w) - w_n \leq 0$. Want to find some bundle that is feasible in $p,w$ that is very close to $p_n, w_n$. 
+If we can find such a bundle, we can then 
 
+#### Maximum Theorem
 
+Can also prove continuity with a shortcut: the maximum theorem, aka Berge's theorem

@@ -6,9 +6,8 @@ aliases:
 - 'convex (econ)'
 - 'quasiconvex'
 - 'strictly quasiconvex'
-- 'hemicontinuous'
 creation date: Thursday, September 15th 2022, 9:31 am
-date updated: Thursday, September 15th 2022, 12:59 pm
+date updated: Thursday, September 15th 2022, 2:47 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note

@@ -53,3 +53,6 @@ This creates a probability space: $(\Omega_X, \mathcal B(\Omega_X), P_X)$.
 Random vectors - basically the same deal. 
 
 A stochastic process is a random variable, but instead of being real-valued, it's function-valued. 
+
+
+## Distributions 

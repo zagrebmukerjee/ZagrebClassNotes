@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Monday, September 12th 2022, 11:53 am
-date updated: Thursday, September 15th 2022, 2:32 pm
+date updated: Thursday, September 15th 2022, 2:51 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -193,7 +193,7 @@ It's sufficient to show that
 For the second. We can say $\lim p_n x(p,w) - w_n \leq 0$. Want to find some bundle that is feasible in $p,w$ that is very close to $p_n, w_n$. 
 If we can find such a bundle, we can then use continuity. 
 
-Assume $x_n$ in a bounded set, then we can get a convergent subsequence  $x_m \to x_0$, Then we have $p_m x_m \leq w_m$. In the limit this is $p x_0 \leq w$. We know that $U(x_0) = \lim U(x_m) = v(p_m, w_m)$.
+Assume $x_n$ in a bounded set, then we can get a convergent subsequence $x_m \to x_0$, Then we have $p_m x_m \leq w_m$. In the limit this is $p x_0 \leq w$. We know that $U(x_0) = \lim U(x_m) = v(p_m, w_m)$.
 
 We want to establish $v(p,w) \geq U(x_0) = \lim U(x_m) = \lim v(p_m, w_m)$. 
 
@@ -210,4 +210,18 @@ $$px_m \leq 2p_mx_m \leq 2w_m \leq 4w$$ So for sufficiently large $m$ we have $x
 Can also prove continuity with a shortcut: the maximum theorem, aka Berge's theorem
 
 Let $u: X \times \Theta \to \R$. We can think of $X$ as endogeneous, $\Theta$ as exogeneous. Can be something like $X$ is commodity space and $\Theta$ is $p,w$. 
-Let $B: \Theta \to X$, a continuous, compact-valued correspondence
+Let $B: \Theta \to X$, a continuous, compact-valued correspondence. This can be a budget constraint. 
+
+Then, $v = \max_{x \in B(\theta)}: \Theta \to R$ is continuous in $\theta$ - $p,w$, and the arg-max correspondence (the demand correspondence) is compact-valued, closed, and [[Micro Theory IIc - Hemicontinuity|upper hemicontinuous]]. 
+
+
+## Expenditure Minimization and Duality
+### Expenditure Minimization Problem
+This turns out to be the same problem as the utility maximization problem... 
+
+The problem is $\min_{u(x) > \bar u} px$.
+Let $u$ be continuous, increasing. Then 
+$$ a \in \arg \max_{px \leq w} u(x) \implies a \in \arg\min_{u(x) \geq u(a)}px $$
+
+$$a \in \arg \min_{u(x) \geq \bar u} px \implies a \in \arg\max_{px \leq pa} u(x) $$
+The expenditure function $e(p,\bar u) = \min_{x: u(x) \geq \bar u} px$ is homogeneous of degree $1$, strictly increasing in $\bar u$, weakly increasing in $p$. 

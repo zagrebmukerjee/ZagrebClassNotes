@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Monday, September 12th 2022, 11:53 am
-date updated: Thursday, September 15th 2022, 2:22 pm
+date updated: Thursday, September 15th 2022, 2:32 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -191,8 +191,23 @@ It's sufficient to show that
 2) $\lim \sup_{n \to \infty} = \lim_{k\to\infty} v(p_n, w_n) \leq v(p,w)$
 
 For the second. We can say $\lim p_n x(p,w) - w_n \leq 0$. Want to find some bundle that is feasible in $p,w$ that is very close to $p_n, w_n$. 
-If we can find such a bundle, we can then 
+If we can find such a bundle, we can then use continuity. 
+
+Assume $x_n$ in a bounded set, then we can get a convergent subsequence  $x_m \to x_0$, Then we have $p_m x_m \leq w_m$. In the limit this is $p x_0 \leq w$. We know that $U(x_0) = \lim U(x_m) = v(p_m, w_m)$.
+
+We want to establish $v(p,w) \geq U(x_0) = \lim U(x_m) = \lim v(p_m, w_m)$. 
+
+Define subsequence $m$ such that $\lim v(p_m, w_m) = \lim \sup v(p_n, w_n)$. 
+
+$p_m x_m \leq w_m$. Exists some $m$ such that $p_m \geq 1/2p$ and $p_m \leq 2p$. So 
+
+$$px_m \leq 2p_mx_m \leq 2w_m \leq 4w$$ So for sufficiently large $m$ we have $x_m$ in the budget set $p, 4w$. 
+
+#status/section/🚧 
 
 #### Maximum Theorem
 
 Can also prove continuity with a shortcut: the maximum theorem, aka Berge's theorem
+
+Let $u: X \times \Theta \to \R$. We can think of $X$ as endogeneous, $\Theta$ as exogeneous. Can be something like $X$ is commodity space and $\Theta$ is $p,w$. 
+Let $B: \Theta \to X$, a continuous, compact-valued correspondence

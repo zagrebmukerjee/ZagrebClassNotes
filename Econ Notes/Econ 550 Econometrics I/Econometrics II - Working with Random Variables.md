@@ -48,11 +48,31 @@ $P_x$ satisfies the probability axioms:
 
 This creates a probability space: $(\Omega_X, \mathcal B(\Omega_X), P_X)$. 
 
-### Asides
+```ad-note
+title: Asides
 
 Random vectors - basically the same deal. 
 
 A stochastic process is a random variable, but instead of being real-valued, it's function-valued. 
 
+Sometimes people talk about $\sigma$-fields as "information sets". Given that $X$ takes on some value, the $\sigma$-field describes what conclusions we could draw. 
 
-## Distributions 
+```
+
+
+## Conditional Probability 
+
+Suppose you throw a dart at a board with a Venn Diagram on it. You're blindfolded and you want to know whether your dart landed in $A$. 
+
+![[Econometrics II - Working with Random Variables 2022-09-15 18.13.21.excalidraw|300]]
+
+I tell you the dart landed in $B$. What can I say about whether it landed on $A$?
+
+This is a <font color=gree>conditional probability</font>. We can see that the probability should scale with the probability of $A \cap B$, so we can say $P(A) = kP(A\cap B)$.  We want $P(B|B) = 1$; so we can then see that $P(B|B) = 1 = kP(B\cap B) = k P(B)$ and so $k = 1/P(B)$. 
+
+This gives us the formula that 
+
+$$ P(A|B) = P(A\cap B)/ P(B)$$
+This gives us a new probability space, $(\Omega, \mathcal F, P( \cdot | B))$. Is $P(\cdot|B)$ a valid distribution?
+- It's nonnegative, since both $P(B)$ and $P(A|B)$ are nonnegative (since $P$ is a distribution). 
+- The probability of $\Omega$ is $1$: $P(\Omega|B) = P(\Omega \cap B)/P(B) 

@@ -75,4 +75,4 @@ This gives us the formula that
 $$ P(A|B) = P(A\cap B)/ P(B)$$
 This gives us a new probability space, $(\Omega, \mathcal F, P( \cdot | B))$. Is $P(\cdot|B)$ a valid distribution?
 - It's nonnegative, since both $P(B)$ and $P(A|B)$ are nonnegative (since $P$ is a distribution). 
-- The probability of $\Omega$ is $1$: $P(\Omega|B) = P(\Omega \cap B)/P(B) 
+- The probability of $\Omega$ is $1$: $P(\Omega|B) = P(\Omega \cap B)/P(B)$ 

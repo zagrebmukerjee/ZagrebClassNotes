@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Monday, September 12th 2022, 11:53 am
-date updated: Thursday, September 15th 2022, 9:04 am
+date updated: Thursday, September 15th 2022, 9:20 am
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -18,7 +18,7 @@ tags:
 Why not just start here? Well, it's good to have the foundations. And in various analytic contexts one might prefer to use choice functions or preferences. 
 
 
-## Introduction
+## Basic Properties
 
 We have a constrained optimization problem: 
 - Maximize $U: X \to \R$
@@ -73,4 +73,44 @@ $$\begin{align}
 &= \sum_\l b_\l \epsilon_{\l k} + b_k
 \end{align}$$
 where $b_i$ is the budget share of good $i$. 
+
+
+#### Implication 3
+
+While we're at it we can differentiate Walras' law by $w$ to get 
+$$\begin{align}
+w &= px(p,w) \\
+1 &= p\frac{\partial x(p,w)}{\partial w}\\
+&= \sum_\l p_\l \frac{\partial x_\l(p,w)}{\partial w}\\
+\end{align}$$
+Predictably we can turn this into an elasticity:
+
+$$\begin{align}
+1 &= \sum_\l p_\l \frac{\partial x_\l(p,w)}{\partial w}\\
+&= \sum_\l p_\l \frac{x_\l(p,w) w}{x\l(p,w) w}\frac{\partial x_\l(p,w)}{\partial w} \\
+&= \sum_\l \frac{p_l x_l(p,w)}{w} \left[ \frac{\partial x_\l(p,w)}{\partial w} \cdot \frac{w}{x_\l(p,w)}\right]\\
+&= \sum_\l b_\l \epsilon_{\l w}
+\end{align}$$
+in other words; the sum of budget shares times elasticities is $1$. 
+
+
+## Quasiconcavity
+### Definitions of Quasiconcavity
+
+- A <font color=gree>convex combination</font> of $x,y$ is $\lambda x + (1- \lambda) y$. 
+- A set $A$ is convex if for any $x,y \in A$, the convex combo of $x,y$ is also in $A$.
+- Preferences $\succsim$ are convex if the upper contour sets are convex, i.e. if $\forall x \in X$ the set $y \in X: y \succsim x$ is convex.
+- Preferences are strictly convex if $y \succsim x$ and $z \succsim x$ with $y \neq z$ means that all convex combinations of $y, z$ are strictly preferred to $x$. 
+- $u$ is quasiconcave (QCV) if the upper contour sets are convex: $\forall x$, $y: u(y) \geq x$ is convex. 
+- $u$ is strictly QCV (SQCV) if $u(y) \geq u(x)$ and $u(z) \geq u(x)$ implies that all convex combinations of $y,z$ have strictly higher utility than $x$. This is the satisfaction of [[Jensen's inequality]].
+
+Simpler conditions: 
+- $u$ is QCV if $\forall x, y$, $u(\lambda x + (1-\lambda) y) \geq \min \{ u(x), u(y) \}$
+- $u$ is SQCV if $\forall x, y$, $u(\lambda x + (1-\lambda) y) > \min \{ u(x), u(y) \}$
+
+
+### Proposition 5
+
+If $u$ is quasiconcave then $x(p,w)$ is convex. If $u$ is SQCV then $x(p,w)$ is a singleton satisfying WARP. 
+
 

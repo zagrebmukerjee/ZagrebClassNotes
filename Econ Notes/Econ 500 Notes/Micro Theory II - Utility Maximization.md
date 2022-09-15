@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Monday, September 12th 2022, 11:53 am
-date updated: Thursday, September 15th 2022, 12:51 pm
+date updated: Thursday, September 15th 2022, 1:13 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -120,10 +120,30 @@ Here we use an [[Envelope Thorem]]-type result. If I am maximizing utility, that
 
 ## Indirect Utility
 
+### Definitions and Properties
+#### Basics
 For any $p,w$, we can write demand functions $x(p,w)$, the solutions to the utility maximization problem. Define the <font color=gree>indirect utility</font> of $p,w$ to be 
 $$ v(p,w) = u(x(p,w))$$
 that is, the utility obtained when utility is maximized. 
 
 It's clear that $v$ is homogeneous degree $0$, since $x$ is $HD0$. $v$ must be strictly increasing in $w$ and weakly decreasing in $p$, by the fact of optimization. 
 
-We also know that the indirect utility function is [[Micro Theory IIb - Concave, Convex, Quasi|quasiconvex]], meaning that $v(\lambda x + (1-\lambda)y) \leq \max \{ v(x), v(y) \}$. 
+#### Quasiconcavity
+We also know that the indirect utility function is [[Micro Theory IIb - Concave, Convex, Quasi|quasiconvex]], meaning that $v(\lambda x + (1-\lambda)y) \leq \max \{ v(x), v(y) \}$. How? 
+- ~~We could make an argument based on diminishing marginal returns. If eg. $p_1$ is very close to $0$ and $p_2$ is not, then maybe $x_2$ is much bigger than $x_1$ and I'd be better off if the prices are similar so that I could do some substitution. ~~
+- This is misleading!! We don't require the QCV of $u$ to get QCX of $v$. 
+
+Suppose that bundle $x$ is feasible under some convex combination of prices. Thus $(\lambda p + (1-\lambda) p') x \leq \lambda w + (1-\lambda)w'$. Distributing: $p\lambda x + (1-\lambda)p'x \leq \lambda w + (1-\lambda)w'$. Then I know that either $p \lambda x \leq \lambda w$ or $(1-\lambda)p'x \leq \lambda w'$; in other words, $x$ is feasible in one of the endpoints. So, by walras' law, one of the endpoints is weakly better than $x$. We didn't use quasiconcavity, though we did use monotonicity/local nonsatiation. 
+
+#### Marginal Utility of Income
+Using $v$ we can recover the marginal utility of income, which will simply be $\partial v(p,w)/\partial w$. 
+
+$$\begin{align}
+\partial v(p,w)/\partial w &= \partial u(x(p,w))/\partial w \\
+&= \sum_i \frac{\partial u}{\partial x_i} \frac{\partial x_i}{\partial w} \\
+&= \lambda \sum_i p_i \frac{\partial x_i}{\partial w} \\
+&= \lambda
+\end{align}$$
+🎉🎉🎉look who it is!!!! 🎉🎉🎉 Our friend the Lagrange multiplier returns at last
+
+The last step there depends on some degree of trickery. When we are at an optimum we can say a lot of differential results go away. In this case, we can say first that $p_i\partial x_i/\partial w = p_j\partial x_j/\partial w$. Why? This is another [[Envelope Thorem]]

@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Monday, September 12th 2022, 11:53 am
-date updated: Thursday, September 15th 2022, 9:31 am
+date updated: Thursday, September 15th 2022, 12:51 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -96,7 +96,7 @@ in other words; the sum of budget shares times elasticities is $1$.
 
 ### Proposition 5
 
-If $u$ is [[Micro Theory IIb - Concave, Convex, Quasi; Hemicontinuity|quasiconcave]] then $x(p,w)$ is convex. If $u$ is SQCV then $x(p,w)$ is a singleton satisfying WARP. 
+If $u$ is [[Micro Theory IIb - Concave, Convex, Quasi|quasiconcave]] then $x(p,w)$ is convex. If $u$ is SQCV then $x(p,w)$ is a singleton satisfying WARP. 
 
 **TODO: fill in prop 5 proof, **
 
@@ -125,3 +125,5 @@ $$ v(p,w) = u(x(p,w))$$
 that is, the utility obtained when utility is maximized. 
 
 It's clear that $v$ is homogeneous degree $0$, since $x$ is $HD0$. $v$ must be strictly increasing in $w$ and weakly decreasing in $p$, by the fact of optimization. 
+
+We also know that the indirect utility function is [[Micro Theory IIb - Concave, Convex, Quasi|quasiconvex]], meaning that $v(\lambda x + (1-\lambda)y) \leq \max \{ v(x), v(y) \}$. 

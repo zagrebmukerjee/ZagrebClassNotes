@@ -162,4 +162,24 @@ Here is another perspective on the marginal utility of income. The first step is
 
 So how could I say that $\lambda = \sum_i\frac{\partial u}{\partial x_i} \frac{\partial x_i}{\partial w}$ but also that $\lambda = \frac{\partial u}{\partial x_i}\frac{\partial x_i}{\partial w}$ for just one good?? 
 
-Once again, because we are maximizing. Also because the latter is in fact an $x(p,w)$. 
+Once again, because we are maximizing. Also because the latter is in fact an $x(p,w)$. so notation is sloppy.
+
+#### More Properties 
+$v(p,w)$ is continuous. 
+
+Proof: from PS2
+
+Suppose $v(p,w)$ is the utility of $x(p,w)$ that maximizes the problem defined by $p,w$. Suppose continuous $U()$. 
+
+In the limit, $x(p_n, w_n)$ is feasible under $p^*, w^*$. I then know that $\lim U(x(p_n, w_n)) = \lim v(p_n, w_n) \leq v(p^*,w^*)$. 
+
+In the other direction, I want to show that $\lim v(p_n, w_n) \geq v(p^*, w^*)$. 
+
+I know that $p^*x(p^*, w^*) \leq w^*$. Write $(p^* - p_n + p_n)x(p^*, w^*) \leq w^*$. Then $(p^* - p_n)x(p^*, w^*) + p_nx(p^*, w^*) \leq w^*$. Then $p_n x(p^*, w^*) \leq w^* - (p^* - p_n)x(p^*, w^*)$.
+
+I know the latter product goes to zero as $p_n$ converges to $p^*$. Then $x(p^*, w^*)$ is feasible under $p_n, w^*$. Write $w^*$ as $w_n + \epsilon$; then, as $\epsilon \to 0$, $x(p^*, w^*)$ is feasible under $p_n, w_n$; so $v(p^*, w^*) \leq \lim v(p_n, w_n)$. 
+
+
+
+
+

@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Monday, September 12th 2022, 11:53 am
-date updated: Wednesday, September 14th 2022, 2:23 pm
+date updated: Thursday, September 15th 2022, 8:47 am
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -33,11 +33,18 @@ Write $x(p,w)$ is the maximizer of utility given $p,w$. We can write two conditi
 
 
 ### Implications
+
 Homogeneity of degree zero says: 
 $$\begin{align}
 0 &= x(\lambda p, \lambda w) - x(p,w) \\
 &= x_\l(\lambda p, \lambda w) - x_\l(p, w)\\
 \frac{\partial}{\partial \lambda} 0 &= \frac{\partial}{\partial \lambda} x_\l(\lambda p, \lambda w) - \frac{\partial}{\partial \lambda} x_\l(p, w) \\ 
-0 &= \lambda \frac{\partial x_\l(p,w)}{\partial p} + \lambda \frac{\partial x_\l(p,w)}{\partial w} \\
-&= \sum_k \frac{\partial x_\l(p,w)}{\partial p_k} + \frac{\partial x_\l(p,w)}{\partial w} 
+0 &= p\frac{\partial x_\l(p,w)}{\partial p} + w \frac{\partial x_\l(p,w)}{\partial w} \\
+&= \sum_k p_k\frac{\partial x_\l(p,w)}{\partial p_k} + w\frac{\partial x_\l(p,w)}{\partial w} 
 \end{align}$$
+<font color=#F7B801>Lec slides say 'evaluate at λ = 1'. why do I have to do that? I don't want to</font>
+
+Suppose I want to express this in terms of the elasticities of good $\l$. I can do that by dividing thru by $x_\l(p,w)$ to get:
+
+$$ \sum_k \epsilon_{\l k} + w \epsilon_{\l w} = 0$$
+

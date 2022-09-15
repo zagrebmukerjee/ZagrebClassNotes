@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Wednesday, September 14th 2022, 2:34 pm
-date updated: Thursday, September 15th 2022, 8:36 am
+date updated: Thursday, September 15th 2022, 8:44 am
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -29,15 +29,20 @@ With the same tool we can construct $\epsilon_{iw}$, the <font color=gree>income
 $$\epsilon_{iw} = \frac{\partial x_i(p,w)}{\partial w}\cdot \frac{w}{x_i(p,w)} = \frac{\partial \log x_i(p,w)}{\partial \log w} $$
 ## Marginal Rate of Substitution
 
-Define the <font color=gree>marginal rate of substitution</font> as the number of units of $i$ required to compensate for a unit loss in good $k$. This is simply:
+Define the <font color=gree>marginal rate of substitution</font> as the number of units of $i$ required to compensate for a unit loss in good $j$. This is simply:
 
-$$MRS_{ik} = \frac{MU_i}{MU_j}$$
+$$MRS_{ij} = \frac{MU_i}{MU_j}$$
 the ratio of the marginal utilities of $i$ and $j$. We can think of this as the (negative) slope of the indifference curve. Thus, a concave indifference curve arises if $MU_i$ falls as $i$ rises, and/or $MU_J$ rises as $j$ falls (diminishing marginal utility); then as $j \to 0$, more and more of $i$ is required to substitute for $j$. 
 
 
 ## Elasticity of Substitution
 
-Construct an <font color=gree>elasticity of substitution</font> by asking: 'how much does the ratio of goods demanded change when the relative prices change'? 
+Construct an <font color=gree>elasticity of substitution</font> by asking: 'how much does the ratio of goods demanded change when the relative prices change'? In other words, 
 
+$$E_{ik} = \frac{\partial (x_i(p,w)/x_j(p,w))}{\partial(p_i/p_j)} \cdot \frac{p_i/p_j}{x_i(p,w)/x_j(p,w)} = \frac{\partial \log [x_j(p,w)/x_i(p,w)]}{\partial \log (p_1/p_2)}$$
 
-The income 
+The first-order conditions for utility maximization tell us that $p_1/p_2 = MU_i/MU_j = MRS_{ij}$. So we can also write: 
+
+$$ E_{ik} = \frac{\partial \log [x_j(p,w)/x_i(p,w)]}{\partial \log MRS_{ij}}$$
+
+The income elasticity can, I think, be expressed as a special case of the elasticity of substitution between good $i$ and the numeraire good/'money' with price $1$. 

@@ -22,3 +22,10 @@ Suppose a correspondence $f: X \to Y$. Suppose $f(x) \subseteq$ some compact sub
 - $y \in f(x)$. 
 
 Intuitively, imagine the correspondence given by $f(x) = [x, x+1)$. Suppose $x_n = 1 - 1/n$. This converges to $1$. Then $f(x_4)$ will be $[3/4, 7/4)$. Choose $y_n$ as $2-2/n$. Then $y_4 = 2 - 2/4 = 3/2 \in f(x_4)$. It's apparent that $y_n$ converges to $2$ , but $2$ is not in $f(1)$. 
+
+
+## Lower hemicontinous
+More chill condition. No compact codomain needed. 
+
+If $\forall x_n \to x$, $y \in f(x)$ there exists some $y_n \in f(x_n)$ such that $n \geq N \implies y_n \to y$. 
+

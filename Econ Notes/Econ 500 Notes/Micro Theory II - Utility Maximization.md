@@ -183,3 +183,5 @@ I know the latter product goes to zero as $p_n$ converges to $p^*$. Then $x(p^*,
 
 
 
+
+

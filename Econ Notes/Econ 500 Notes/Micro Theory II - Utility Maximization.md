@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Monday, September 12th 2022, 11:53 am
-date updated: Thursday, September 15th 2022, 9:20 am
+date updated: Thursday, September 15th 2022, 9:31 am
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -94,23 +94,34 @@ $$\begin{align}
 in other words; the sum of budget shares times elasticities is $1$. 
 
 
-## Quasiconcavity
-### Definitions of Quasiconcavity
-
-- A <font color=gree>convex combination</font> of $x,y$ is $\lambda x + (1- \lambda) y$. 
-- A set $A$ is convex if for any $x,y \in A$, the convex combo of $x,y$ is also in $A$.
-- Preferences $\succsim$ are convex if the upper contour sets are convex, i.e. if $\forall x \in X$ the set $y \in X: y \succsim x$ is convex.
-- Preferences are strictly convex if $y \succsim x$ and $z \succsim x$ with $y \neq z$ means that all convex combinations of $y, z$ are strictly preferred to $x$. 
-- $u$ is quasiconcave (QCV) if the upper contour sets are convex: $\forall x$, $y: u(y) \geq x$ is convex. 
-- $u$ is strictly QCV (SQCV) if $u(y) \geq u(x)$ and $u(z) \geq u(x)$ implies that all convex combinations of $y,z$ have strictly higher utility than $x$. This is the satisfaction of [[Jensen's inequality]].
-
-Simpler conditions: 
-- $u$ is QCV if $\forall x, y$, $u(\lambda x + (1-\lambda) y) \geq \min \{ u(x), u(y) \}$
-- $u$ is SQCV if $\forall x, y$, $u(\lambda x + (1-\lambda) y) > \min \{ u(x), u(y) \}$
-
-
 ### Proposition 5
 
-If $u$ is quasiconcave then $x(p,w)$ is convex. If $u$ is SQCV then $x(p,w)$ is a singleton satisfying WARP. 
+If $u$ is [[Micro Theory IIb - Concave, Convex, Quasi; Hemicontinuity|quasiconcave]] then $x(p,w)$ is convex. If $u$ is SQCV then $x(p,w)$ is a singleton satisfying WARP. 
+
+**TODO: fill in prop 5 proof, **
+
+#status/section/🚧 
+
+### First-Order Conditions
+
+The problem is $\max_x u(x)$ subject to $px \leq w$. 
+For an interior solution - on the budget set - we can have FOC that are 
+$$\begin{align}
+\lambda p_i &= \frac{\partial u}{\partial x_i}\\
+w &= \sum p_i x_i \\
+\end{align}$$
+where $\lambda$ is a Lagrange multiplier. 
+
+In this case we conventionally get rid of $\lambda$ by dividing it away. But we could also not do that, and interpret $\lambda$ as the marginal utility of income: 
+
+$$\lambda = \frac{\partial u}{\partial x_\l} \frac{1}{p_\l} = \frac{\partial u}{\partial x_\l} \frac{\partial x_\l(p,w)}{\partial w}$$
+Here we use an [[Envelope Thorem]]-type result. If I am maximizing utility, that means I must be indifferent between the marginal expenditure on any good. Given a tiny amount of money I can spend it anywhere. So if $e_\l$ is expenditure on good $\l$ that means $\frac{\partial e_\l}{\partial w} = \frac{\partial e_k}{\partial w}$ So then given an additional dollar, spending on $x_\l$ will be $1/p_\l$, so $1/p_\l$ is simply $\partial x_\l(p,w)/\partial w$. 
 
 
+## Indirect Utility
+
+For any $p,w$, we can write demand functions $x(p,w)$, the solutions to the utility maximization problem. Define the <font color=gree>indirect utility</font> of $p,w$ to be 
+$$ v(p,w) = u(x(p,w))$$
+that is, the utility obtained when utility is maximized. 
+
+It's clear that $v$ is homogeneous degree $0$, since $x$ is $HD0$. $v$ must be strictly increasing in $w$ and weakly decreasing in $p$, by the fact of optimization. 

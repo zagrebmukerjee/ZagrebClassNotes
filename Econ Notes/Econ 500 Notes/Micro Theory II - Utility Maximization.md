@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Monday, September 12th 2022, 11:53 am
-date updated: Thursday, September 15th 2022, 1:13 pm
+date updated: Thursday, September 15th 2022, 1:27 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -115,7 +115,7 @@ where $\lambda$ is a Lagrange multiplier.
 In this case we conventionally get rid of $\lambda$ by dividing it away. But we could also not do that, and interpret $\lambda$ as the marginal utility of income: 
 
 $$\lambda = \frac{\partial u}{\partial x_\l} \frac{1}{p_\l} = \frac{\partial u}{\partial x_\l} \frac{\partial x_\l(p,w)}{\partial w}$$
-Here we use an [[Envelope Thorem]]-type result. If I am maximizing utility, that means I must be indifferent between the marginal expenditure on any good. Given a tiny amount of money I can spend it anywhere. So if $e_\l$ is expenditure on good $\l$ that means $\frac{\partial e_\l}{\partial w} = \frac{\partial e_k}{\partial w}$ So then given an additional dollar, spending on $x_\l$ will be $1/p_\l$, so $1/p_\l$ is simply $\partial x_\l(p,w)/\partial w$. 
+Here we use an [[Envelope Theorem]]-type result. If I am maximizing utility, that means I must be indifferent between the marginal expenditure on any good. Given a tiny amount of money I can spend it anywhere. So if $e_\l$ is expenditure on good $\l$ that means $\frac{\partial e_\l}{\partial w} = \frac{\partial e_k}{\partial w}$ So then given an additional dollar, spending on $x_\l$ will be $1/p_\l$, so $1/p_\l$ is simply $\partial x_\l(p,w)/\partial w$. 
 
 
 ## Indirect Utility
@@ -136,7 +136,7 @@ We also know that the indirect utility function is [[Micro Theory IIb - Concave,
 Suppose that bundle $x$ is feasible under some convex combination of prices. Thus $(\lambda p + (1-\lambda) p') x \leq \lambda w + (1-\lambda)w'$. Distributing: $p\lambda x + (1-\lambda)p'x \leq \lambda w + (1-\lambda)w'$. Then I know that either $p \lambda x \leq \lambda w$ or $(1-\lambda)p'x \leq \lambda w'$; in other words, $x$ is feasible in one of the endpoints. So, by walras' law, one of the endpoints is weakly better than $x$. We didn't use quasiconcavity, though we did use monotonicity/local nonsatiation. 
 
 #### Marginal Utility of Income
-Using $v$ we can recover the marginal utility of income, which will simply be $\partial v(p,w)/\partial w$. 
+Using $v$ we can recover the marginal utility of income. 
 
 $$\begin{align}
 \partial v(p,w)/\partial w &= \partial u(x(p,w))/\partial w \\
@@ -146,4 +146,20 @@ $$\begin{align}
 \end{align}$$
 🎉🎉🎉look who it is!!!! 🎉🎉🎉 Our friend the Lagrange multiplier returns at last
 
-The last step there depends on some degree of trickery. When we are at an optimum we can say a lot of differential results go away. In this case, we can say first that $p_i\partial x_i/\partial w = p_j\partial x_j/\partial w$. Why? This is another [[Envelope Thorem]]
+The last step there depends on some degree of trickery. When we are at an optimum we can say a lot of differential results go away. This is another [[Envelope Theorem]] style of result, that depends on our maximizing. Mathematically: we know that $px(p,w) = w$, we can differentiate by $w$, and get $\sum p_i (\partial x_i(p,w)/\partial w) = 1$. 
+
+#status/section/🚧 <font color=#F7B801>what's the intuition for this</font>
+
+
+We can further make transformations: 
+
+$$\begin{align}
+\lambda &= \frac{\partial u}{\partial x_i} \frac{1}{p_i} \\
+&= \frac{\partial u}{\partial x_i}\frac{\partial x_i(p,w)}{\partial w}\\
+\end{align}$$
+Here is another perspective on the marginal utility of income. The first step is our old friend the FOC; the second step is another bit of [[Envelope Theorem]] trickery. Specifically, I know that since I am optimizing, I must be indifferent between spending the marginal dollar on all goods. That means, with an incremental change in income, I will spread it over every good, which buys me a quantity equal to $1/p_i$. 
+
+
+So how could I say that $\lambda = \sum_i\frac{\partial u}{\partial x_i} \frac{\partial x_i}{\partial w}$ but also that $\lambda = \frac{\partial u}{\partial x_i}\frac{\partial x_i}{\partial w}$ for just one good?? 
+
+Once again, because we are maximizing. Also because the latter is in fact an $x(p,w)$. 

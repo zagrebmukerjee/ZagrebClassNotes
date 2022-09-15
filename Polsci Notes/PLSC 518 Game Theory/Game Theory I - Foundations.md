@@ -24,4 +24,6 @@ A game is:
 - a set of players
 - a set of actions for each player
 - A mapping from all possible action sets to results
-	- some equilibrium/solution concept
+
+and, potentially some equilibrium/solution concept.
+

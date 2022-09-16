@@ -112,3 +112,25 @@ Extend this to random variables: $X,Y$ are independent if for all sets $A \in \O
 
 
 
+## Discrete and Continuous Random Variables
+
+#### Discrete
+<font color=gree>Discrete random variables</font> take on at most a countable number of values. It's pretty easy to work with them: let $A$ be $\{x_1, x_2, \ldots \}$, and then $P(A) = P(\bigcup x_j) = \sum P(x_j)$. 
+
+We can write a <font color=gree>probability mass function</font> $f_x(x_j) = P(x_j)$. 
+
+There is some countable set $C$ such that $P(C) = 1$. We can then get probability of set $A$ as $P(A) = P(A \cap C) + P(A \cap C^C) = P(A \cap C)$. 
+
+#### Continuous
+
+<font color=gree>Continuous random variables.</font> are more complex. An RV is absolutely continuous if $\forall A \in \mathcal B(\Omega_X)$, $\lambda(A) = 0 \implies P_X(A) = 0$. where $\lambda$ is the Lebesgue measure. In other words the probability of any given point is $0$. 
+
+We introduce the idea of a <font color=gree>distribution function</font>, or df: $F_X(x) = P(X \leq x)$ for all $x \in \R$. This is sometimes also called the CDF but that's old fashioned. 
+
+The domain of $F_X$ is simply $\R$. In this case $\Omega_X$ doesn't matter. This is true even for a discrete RV: the df is simply a step function with steps at $x \in C$. 
+
+For a continuous RV, $F_X$ is also continuous. It's differentiable almost everywhere - that is to say, the points at which it's not differentiable have measure 0. 
+
+#### Properties of Distribution Functions 
+1) $F_X(x) \in [0,1] \, \forall \, x \in \R$. This follows from the probability axioms of non-negativity and probabilty of the whole space. 
+2) $F_X(x)$ is nondecreasing. Suppose $y > x$. Then $F_X(y) = P(\{\omega \in \Omega: X(\omega) \leq x \}$. And 

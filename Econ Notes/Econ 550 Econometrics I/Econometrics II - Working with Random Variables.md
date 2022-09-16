@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Friday, September 2nd 2022, 5:09 pm
-date updated: Thursday, September 15th 2022, 8:01 pm
+date updated: Thursday, September 15th 2022, 8:47 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -127,10 +127,33 @@ There is some countable set $C$ such that $P(C) = 1$. We can then get probabilit
 
 We introduce the idea of a <font color=gree>distribution function</font>, or df: $F_X(x) = P(X \leq x)$ for all $x \in \R$. This is sometimes also called the CDF but that's old fashioned. 
 
-The domain of $F_X$ is simply $\R$. In this case $\Omega_X$ doesn't matter. This is true even for a discrete RV: the df is simply a step function with steps at $x \in C$. 
+The domain of $F_X$ is simply $\R$. In this case $\Omega_X$ doesn't matter. 
 
-For a continuous RV, $F_X$ is also continuous. It's differentiable almost everywhere - that is to say, the points at which it's not differentiable have measure 0. 
 
-#### Properties of Distribution Functions 
+#### Properties of Distribution Functions
 1) $F_X(x) \in [0,1] \, \forall \, x \in \R$. This follows from the probability axioms of non-negativity and probabilty of the whole space. 
-2) $F_X(x)$ is nondecreasing. Suppose $y > x$. Then $F_X(y) = P(\{\omega \in \Omega: X(\omega) \leq x \}$. And 
+2) $F_X(x)$ is nondecreasing. Suppose $y > x$. Then $F_X(y) = P(\{\omega \in \Omega: X(\omega) \leq y \}$. And $F_X(x) = P(\{\omega \in \Omega: X(\omega) \leq x \}$. It's apparent that the second set is a subset of the first. 
+3) $\lim_{x \to \infty} F_X(x) = 1$; $\lim_{x \to -\infty} F_X(x) = 0$. 
+4) $F_X(x)$ is right continuous. That is, $\lim_{x \downarrow x_0} F_X(x) = F_X(x_0)$ for all $x_0 \in \R$. (the limit when $x$ declines to $x_0$). 
+5) If $X$ is discrete, the df is simply a step function with steps at $x \in C$. For a continuous RV, $F_X$ is also continuous. It's differentiable almost everywhere - that is to say, the points at which it's not differentiable have measure 0. 
+
+Properties 2-4 characterize a df - a function that satisfies those properties is a df for some RV. 1 can be obtained from 2,3. 
+
+Proof of 3a: 
+
+$$\begin{align}
+\lim_{x\to \infty} F_X(x) &= \lim_{x \to \infty} P(X \leq x) \\
+ &= P(X \leq 0) + \lim_{x \to \infty} P(0 < X \leq x) \\
+\end{align}$$
+
+We can decompose the second term: divide $\R^+$ into intervals $(i-1, i]$ for $i \in \mathbb Z$. Then:
+
+$$\begin{align}
+\lim_{x\to \infty} F_X(x) &= P(X \leq 0) +\lim_{x\to \infty} P\left(\bigcup_{i=1}^{\lceil x \rceil} X \in (i-1, i] \right)\\
+&= P(X \leq 0) +  P\left(\bigcup_{i=1}^{\infty} X \in (i-1, i] \right)\\
+&= P(X \leq 0) +  \sum_{i=1}^{\infty}  P\left(X \in (i-1, i] \right)\\
+&= P(X \leq 0) + P(X>0) \\
+&= 1
+\end{align}$$
+the latter step because $P(x \in \R) = P(x \in \Omega_X) = 1$, by axiom 2. 
+

@@ -86,9 +86,6 @@ By the distributive property of intersections this becomes
 $$P\left[ \bigcup (A_i \cap B\right)] / P(B) $$
 Since $A_i$ are disjoint, $A_i \cap B$ are disjoint, and in $\mathcal F$. So by additivity of $P$ we can write this as $\sum_i P(A_i \cap B)/ P(B) = \sum_i P(A_i |B)$. 
 
-
-![[2002.1 Probability#Bayes' Rule]]
-
 #### Conditional Independence
 
 To say $C$ is <font color=gree>independent</font> of $B$ is to say that knowing $B$ gives us nothing about $C$. Disjoint events are not independent! Ex. $B$, $B^c$ are about as dependent as it gets...
@@ -99,4 +96,19 @@ We can then say $P(A\cap B)/P(B) = P(A)$, so $P(A \cap B) = P(A)P(B)$. Both are 
 
 $\emptyset$ and $\Omega$ are both independent of everything. 
 
-Extend
+We can extend this: If $A \indep B$ then 
+- $A \indep B^c$
+- $A^c \indep B$
+- $A^c \indep B^c$
+
+Proof: #status/section/🚧 
+
+Extend this to random variables: $X,Y$ are independent if for all sets $A \in \Omega_X$ and $B \in \Omega_Y$, the events $X \in A$ and $Y \in B$ are independent. We'll come back to this. 
+
+
+
+
+![[2002.1 Probability#Bayes' Rule]]
+
+
+

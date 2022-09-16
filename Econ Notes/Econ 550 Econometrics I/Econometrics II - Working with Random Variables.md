@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Friday, September 2nd 2022, 5:09 pm
-date updated: Thursday, September 15th 2022, 8:47 pm
+date updated: Friday, September 16th 2022, 9:30 am
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -114,14 +114,14 @@ Extend this to random variables: $X,Y$ are independent if for all sets $A \in \O
 
 ## Discrete and Continuous Random Variables
 
-#### Discrete
+### Discrete
 <font color=gree>Discrete random variables</font> take on at most a countable number of values. It's pretty easy to work with them: let $A$ be $\{x_1, x_2, \ldots \}$, and then $P(A) = P(\bigcup x_j) = \sum P(x_j)$. 
 
 We can write a <font color=gree>probability mass function</font> $f_x(x_j) = P(x_j)$. 
 
 There is some countable set $C$ such that $P(C) = 1$. We can then get probability of set $A$ as $P(A) = P(A \cap C) + P(A \cap C^C) = P(A \cap C)$. 
 
-#### Continuous
+### Continuous
 
 <font color=gree>Continuous random variables.</font> are more complex. An RV is absolutely continuous if $\forall A \in \mathcal B(\Omega_X)$, $\lambda(A) = 0 \implies P_X(A) = 0$. where $\lambda$ is the Lebesgue measure. In other words the probability of any given point is $0$. 
 
@@ -130,7 +130,7 @@ We introduce the idea of a <font color=gree>distribution function</font>, or df:
 The domain of $F_X$ is simply $\R$. In this case $\Omega_X$ doesn't matter. 
 
 
-#### Properties of Distribution Functions
+### Properties of Distribution Functions
 1) $F_X(x) \in [0,1] \, \forall \, x \in \R$. This follows from the probability axioms of non-negativity and probabilty of the whole space. 
 2) $F_X(x)$ is nondecreasing. Suppose $y > x$. Then $F_X(y) = P(\{\omega \in \Omega: X(\omega) \leq y \}$. And $F_X(x) = P(\{\omega \in \Omega: X(\omega) \leq x \}$. It's apparent that the second set is a subset of the first. 
 3) $\lim_{x \to \infty} F_X(x) = 1$; $\lim_{x \to -\infty} F_X(x) = 0$. 
@@ -150,10 +150,27 @@ We can decompose the second term: divide $\R^+$ into intervals $(i-1, i]$ for $i
 
 $$\begin{align}
 \lim_{x\to \infty} F_X(x) &= P(X \leq 0) +\lim_{x\to \infty} P\left(\bigcup_{i=1}^{\lceil x \rceil} X \in (i-1, i] \right)\\
-&= P(X \leq 0) +  P\left(\bigcup_{i=1}^{\infty} X \in (i-1, i] \right)\\
-&= P(X \leq 0) +  \sum_{i=1}^{\infty}  P\left(X \in (i-1, i] \right)\\
+&= P(X \leq 0) + P\left(\bigcup_{i=1}^{\infty} X \in (i-1, i] \right)\\
+&= P(X \leq 0) + \sum_{i=1}^{\infty} P\left(X \in (i-1, i] \right)\\
 &= P(X \leq 0) + P(X>0) \\
 &= 1
 \end{align}$$
 the latter step because $P(x \in \R) = P(x \in \Omega_X) = 1$, by axiom 2. 
 
+### Density Funcitons
+
+These only exist for continuous RVs. Suppose continuous $x$ with df $F_X(x)$. Define a pdf as $\frac{\partial}{\partial x} F_X(x)$ for all $x$ where $F_X$ is differentiable. We can write this as $f_X(x)$. Can call this the pdf. 
+
+Example: If $F_X(x) = 1-\exp(-\theta x)$ then the pdf is $\theta \exp(-\theta x)$. 
+
+
+Probabilities: Suppose $a < b$. Then 
+
+$$\begin{align}
+(X \leq b) &= (X \leq a) \cup (a < X \leq b) \\
+P(X \leq b) &= P(X \leq a) \cup P(a < X \leq b)\\
+P(a < X \leq b) &= F_X(b) - F_X(a)\\
+\end{align}$$
+Then we can say
+
+$$ P(X \in [a,b]) = \int_{-\infty}^n f_X(x) dx - \int_{-\infty}^a f_X(x) dx = \int_a^b f_X(x) dx$$

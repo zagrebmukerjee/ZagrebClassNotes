@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Saturday, September 17th 2022, 10:16 am
-date updated: Saturday, September 17th 2022, 10:23 am
+date updated: Saturday, September 17th 2022, 12:42 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -57,3 +57,23 @@ The integral can be written also as:
 $$ \int f(x) d\mu(x)$$
 $$ \int f(x) \mu(dx)$$
 ```
+
+Then, for a non-negative $f$, I can write 
+$$\int f(x) d\mu = \sup_{s} \int s d\mu$$
+where $s$ is a set of simple functions such that $0 \leq s(x) \leq f(x)$. 
+
+For general functions, we can decompose them into $f = f_+ - f_-$, where $f_+ = \max(f(x), 0)$ and $f_- = \max(-f(x),0)$. Then do the above for each. $f$ is integrable if each of $f_+$ and $f_-$ are integrable, and then add them. This doesn't work if both are $\infty$. Or if both are $-\infty$. 
+
+#### Equivalence
+
+Consider $f$ that's Riemann-integrable - nonnegative for simplicity. let $s$ be a set of simple functions as before, and $\lambda$ the L-measure. Note that every 'rectangle' $\pi$ can be made a simple function $s$. Then 
+$$\int f(x) d\lambda = \sup_s \int s(x) d\lambda \geq \sup_{\pi} L(f, \pi)$$
+The other direction can also be shown <font color=#F7B801>left to reader </font>
+
+
+#### Integer Functions
+
+Let $M = \mathbb Z^+$, $\mathcal M$ the power set of $M$. and $\mu$ the counting measure. 
+
+Then $\i
+

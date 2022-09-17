@@ -9,11 +9,11 @@ cssclass: math-class-note
 tags: 
 - '#types/classes/stats/theory'
 - '#topics/methods'
-- '#status/🚧'
 ---
 
 # [[Econometrics II - Working with Random Variables]]
-
+<span style = "font-size:120%"><i >Zagreb Mukerjee </i></span>
+[[Econ 550 Index]]
 
 ## Random Variables
 
@@ -157,7 +157,7 @@ $$\begin{align}
 \end{align}$$
 the latter step because $P(x \in \R) = P(x \in \Omega_X) = 1$, by axiom 2. 
 
-### Density Funcitons
+### Density Functions
 
 These only exist for continuous RVs. Suppose continuous $x$ with df $F_X(x)$. Define a pdf as $\frac{\partial}{\partial x} F_X(x)$ for all $x$ where $F_X$ is differentiable. We can write this as $f_X(x)$. Can call this the pdf. 
 

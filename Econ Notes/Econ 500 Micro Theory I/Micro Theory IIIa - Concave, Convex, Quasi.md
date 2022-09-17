@@ -17,7 +17,7 @@ tags:
 - '#types/classes/math'
 ---
 
-# [[Micro Theory IIb - Concave, Convex, Quasi]]
+# [[Micro Theory IIIa - Concave, Convex, Quasi]]
 <span style = "font-size:120%"><i >Zagreb Mukerjee </i></span>
 
 ### Convexity Definitions

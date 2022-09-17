@@ -13,7 +13,7 @@ tags:
 - '#types/classes/econ'
 ---
 
-# [[Micro Theory IIc - Hemicontinuity]]
+# [[Micro Theory IIIb - Hemicontinuity]]
 <span style = "font-size:120%"><i >Zagreb Mukerjee </i></span>
 
 We are concerned now with correspondences, which can map $x$ to some set of $y$s. Intuitively that corresponds to flat regions on indifference curves. 

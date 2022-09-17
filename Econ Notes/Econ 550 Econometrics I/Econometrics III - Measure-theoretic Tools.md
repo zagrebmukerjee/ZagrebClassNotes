@@ -17,7 +17,7 @@ tags:
 [[Econ 550 Index]]
 
 ## Riemann Integral
-Largely reminders. Riemann integral is the area under the curve. Let $f$ be on a bounded interval $[a,b] \in \R$. Choose $\pi =\{a= x_0, \ldots, x_K = b\}$ such that $\pi$ generates a partition of $[a,b]$ into a countable number of intervals. Then we can define:
+Largely reminders. <font color=gree>Riemann integral</font> (R-integral) is the area under the curve. Let $f$ be on a bounded interval $[a,b] \in \R$. Choose $\pi =\{a= x_0, \ldots, x_K = b\}$ such that $\pi$ generates a partition of $[a,b]$ into a countable number of intervals. Then we can define:
 
 $$\begin{align}
 L(f, \pi) = \sum_{k=1}^K \inf \{ f(x): x\in [x_{k-1}, x_k] \cdot (x_k - x_{k-1} \}\\
@@ -30,6 +30,17 @@ $$\int_a^b f(x) dx = \sup_\pi L(f,\pi) = \inf_{\pi} U(f, \pi)$$
 that is to say, when $L$ and $U$ are equal, the integral is either of them. 
 
 
-#### Limitations
 
-Not all functions are integrable. Consider the function $f(x)$ on $[0,1]$ that is $1$ if $x$ is irrational and $0$ otherwise. Intuitively we want this to be $1$, since $x$ is irrational 'almost everywhere' in $[0,1]$. But any interval $x_{k-1}, x_k$ contains both rationals and irrationals. So t
+## Lebesgue Integral
+### Motivation
+
+Not all functions are integrable. Consider the function $f(x)$ on $[0,1]$ that is $1$ if $x$ is irrational and $0$ otherwise. Intuitively we want this to be $1$, since $x$ is irrational 'almost everywhere' in $[0,1]$. But any interval $x_{k-1}, x_k$ contains both rationals and irrationals. So the $\inf$ is stuck at $0$, the $\sup$ at $1$, and the interal is not defined. 
+
+The Lebesgue integral (L-integral) is a generalization of the R-integral. There are several reasons we want it: 
+- Crucially the L integral allows for weighting by any measure (including the probability measures) - while the R integral is limited to the Lebesgue measure. 
+- All R-integrable functions are L-integrable, but not vice versa - when both exist they are the same
+- Can Lebesgue-integrate over basically arbitrary sets. 
+
+### Definition
+#### Simple Functions
+A simple function is a finite-valued function

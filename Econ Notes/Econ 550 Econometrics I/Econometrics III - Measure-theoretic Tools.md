@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Saturday, September 17th 2022, 10:16 am
-date updated: Saturday, September 17th 2022, 1:25 pm
+date updated: Saturday, September 17th 2022, 1:43 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -119,12 +119,26 @@ n &\text{if } f(x) \geq n
 \end{cases}$$
 where $k =1, 2, \ldots, n2^n$. 
 
-So consider $f(x) = x^2$ at $x =3$. 
+So consider $f(x) = x^2$ on $0 \leq x \leq 10$. Integral is 1000/3.
 
-$$ s_1(3) =(k-1)/2 \text{ s.t.} (k-1)/2 < 18/2 < k/2 \text{ with } k \in 1,2 = 1/2$$
-$$ s_5(3) =(k-1)/32 \text{ s.t.} (k-1)/32 < 288/32 < k/32 \text{ with } k \in 1,\ldots, 160 = 128/32 = 4$$
-$$s_{8}(3) = (k-1)/256 \text{ s.t.} (k-1)/256 < 2304/256 < k/256 \text{ with } k \in 1,\ldots, 2048 = 2048/256 = 8$$
+$$ s_1(x) = \begin{cases} 
+0 &\text{if } x =0\\
+0 &\text{if } 0 < x < 1/\sqrt{2} \\
+1/2 &\text{if } 1/\sqrt{2} < x < 1 \\
+1 &\text{if } x \geq 1
+\end{cases}$$
+This is two horizontal slices. Their integral is $9 + (1 - 1/\sqrt{2})/2$.
+$$ s_4(x) = \begin{cases} 
+0 &\text{if } x =0\\
+(k-1)/16 &\text{if } (k-1)/16 < x^2 < (k)/16 \\
+(k-1)/16 &\text{if } \sqrt{k-1}/4 < x < \sqrt{k}/4 \\
+0 &\text{if } 0 < x < 1/4 \\
+1/16 &\text{if } 1/4 < x < \sqrt{2}/4 \\
+2/16 &\text{if } \sqrt{2}/4 < x < \sqrt{3}/4 \\
+3/16 &\text{if } \sqrt{3}/4 < x < 1/2 \\
+\vdots & \\
+63/16 &\text{if } \sqrt{63}/4 = 7.9/4 < x < 2\\
+4 &\text{if } x \geq 2
+\end{cases}$$
 
-These are increasingly precise collections of horizontal slices that become thinner and thinner. 
-
-$s_n$ is increasing in $x$ since all the elements of $s_n$ are in $s_{n+1}$. So we can use the MCT. 
+So $s_n$ is $n$ horizontal slices, forming a stairway with steps of width $1/2^n$, everywhere below $x$, which caps off at $s_n(x)= n$. As $n$ grows, the cap gets closer and closer to $f$. 

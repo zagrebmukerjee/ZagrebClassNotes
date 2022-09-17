@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Saturday, September 17th 2022, 10:16 am
-date updated: Saturday, September 17th 2022, 1:14 pm
+date updated: Saturday, September 17th 2022, 1:25 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -117,3 +117,14 @@ $$ s_n(x) = \begin{cases}
 (k-1)/2^n &\text{if } (k-1)/2^n < f(x) < (k)/2^n \\
 n &\text{if } f(x) \geq n
 \end{cases}$$
+where $k =1, 2, \ldots, n2^n$. 
+
+So consider $f(x) = x^2$ at $x =3$. 
+
+$$ s_1(3) =(k-1)/2 \text{ s.t.} (k-1)/2 < 18/2 < k/2 \text{ with } k \in 1,2 = 1/2$$
+$$ s_5(3) =(k-1)/32 \text{ s.t.} (k-1)/32 < 288/32 < k/32 \text{ with } k \in 1,\ldots, 160 = 128/32 = 4$$
+$$s_{8}(3) = (k-1)/256 \text{ s.t.} (k-1)/256 < 2304/256 < k/256 \text{ with } k \in 1,\ldots, 2048 = 2048/256 = 8$$
+
+These are increasingly precise collections of horizontal slices that become thinner and thinner. 
+
+$s_n$ is increasing in $x$ since all the elements of $s_n$ are in $s_{n+1}$. So we can use the MCT. 

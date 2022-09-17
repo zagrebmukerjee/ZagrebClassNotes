@@ -42,5 +42,18 @@ The Lebesgue integral (L-integral) is a generalization of the R-integral. There 
 - Can Lebesgue-integrate over basically arbitrary sets. 
 
 ### Definition
-#### Simple Functions
-A simple function is a finite-valued function
+A <font color=gree>simple function</font> is a function that takes on at most a finite number of values. We will first define the integral for simple functions, then for nonnegative functions - approximated with simple functions from below - then for all functions, which can be transformed into nonnegative. 
+
+Suppose simple $f(x)$ on measure space $M, \mathcal M, \mu$. Then $f(x) = \sum_{j=1}^J c_j 1_{Aj}(x)$ with $1$ being an indicator for $A_j \in \mathcal M$ and disjoint. This is expressing that any finite valued functions can be expressed as a set of disjoint 'bars'. 
+
+Then the Lebesgue integral with respect to measure $\mu$ is simply 
+$$ \int f \,d\mu = \sum_{j=1}^J c_j \mu( A_j)$$
+In the case where $\mu = \lambda$, the Lebesgue measure, this becomes the finite sum of the area of the bars under this graph - the R-integral of $f$
+
+```ad-info
+title: Alternative Notation
+
+The integral can be written also as:
+$$ \int f(x) d\mu(x)$$
+$$ \int f(x) \mu(dx)$$
+```

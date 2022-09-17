@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Saturday, September 17th 2022, 10:16 am
-date updated: Saturday, September 17th 2022, 12:42 pm
+date updated: Saturday, September 17th 2022, 1:14 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -85,8 +85,35 @@ which latter tends to $\sum f(x)$, our desired value. This wouldn't be possible 
 
 We could use $\mu$ as the probability mass function of some discrete $RV$ that takes on values $f(x)$. Then this would be the <font color=gree>expectation</font>, or <font color=gree>expected value</font>. 
 
-## Integrability 
+## Integrability
+
+If for almost all $x$, $f_n(x) \to f(x)$, then is it true that $\int f_n d\mu \to \int f d\mu$? It would be nice to know this so we can take a shortcut to integrating nonnegative functions. Doing some sort of $\sup_s \int s d\mu$ for all $s$ would be tedious; much better to find some $s_n \to f$ and then have $\int s_n d\mu \to \int f d\mu$. 
+
+But this is not always true. Suppose $f_n(x) = 1_{[n, n+1)}$. Then $f_n(x)$ converges to $f(x) = 0$ for all $x$. But the integral of each $f_n$ is $1$, and the integral of $f(x)$ is $0$. 
+
+Intuitively we want to limit $f_n$. and stop some mass 'running away' like this. For that we have two results. 
 
 
+### Monotone Convergence Theorem
+Let $f_n(x)$ non-negative, measurable, weakly increasing to $f(x)$ almost everywhere. This means that for any $x$, $f_{n+1}(x) \geq f_n(x)$ and these approach $f(x)$ from below. Then
+$$f_n(x) \to f(x) \implies \int f_n d\mu \to \int f d\mu$$
+Basically I'm requiring that the $f_n$ have some mass wherever $f$ has mass. 
 
-Monotone
+### Dominant Convergence Theorem
+Suppose measurable $f_n$ such that $f_n \to f$ almost everywhere. Also suppose $|f_n(x)| \leq g(x)$ almost everywhere, with $g(x) \geq 0$ and $\int g(x) d\mu$ is finite. Then $\int f_n d\mu \to \int f d\mu$. 
+
+This stops the mass running away to $\infty$ because it's basically trapped under $g$. 
+
+Generally the DCT is used more often. 
+
+### Payoff
+
+OK, so with the MCT, I can get integrals of some non-negative function with 'horizontal slices'. 
+
+Create $s_n$: 
+
+$$ s_n(x) = \begin{cases} 
+0 &\text{if } f(x) = 0\\
+(k-1)/2^n &\text{if } (k-1)/2^n < f(x) < (k)/2^n \\
+n &\text{if } f(x) \geq n
+\end{cases}$$

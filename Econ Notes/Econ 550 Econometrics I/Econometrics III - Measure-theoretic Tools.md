@@ -73,7 +73,20 @@ The other direction can also be shown <font color=#F7B801>left to reader </font>
 
 #### Integer Functions
 
-Let $M = \mathbb Z^+$, $\mathcal M$ the power set of $M$. and $\mu$ the counting measure. 
+Let $M = \mathbb Z^+$, $\mathcal M$ the power set of $M$. and $\mu$ the counting measure. Let $f(x)$ be nonnegative on $\mathcal M$ st $\sum f(x) < \infty$. Then, we can create ismple functions: 
 
-Then $\i
+$$s(x) = s_A(x) = \begin{cases} c_x &\text{ for some } 0 \leq c_x \leq f(x) \text{ where } x \in A \\ 
+0 &\text{ otherwise}
+\end{cases}$$
+Then I can simply say that 
 
+$$ \int f(x) d\mu = \sup_s \int s d\mu = \sup_s \sum c_x \mu(x) = \sup_s \sum c_x$$
+which latter tends to $\sum f(x)$, our desired value. This wouldn't be possible with the riemann integral. Note that this makes the linearity of the L-integral of discrete functions pretty obvious. 
+
+We could use $\mu$ as the probability mass function of some discrete $RV$ that takes on values $f(x)$. Then this would be the <font color=gree>expectation</font>, or <font color=gree>expected value</font>. 
+
+## Integrability 
+
+
+
+Monotone

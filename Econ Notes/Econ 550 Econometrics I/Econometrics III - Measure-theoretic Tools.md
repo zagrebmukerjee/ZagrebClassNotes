@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Saturday, September 17th 2022, 10:16 am
-date updated: Saturday, September 17th 2022, 1:43 pm
+date updated: Saturday, September 17th 2022, 2:12 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -62,7 +62,7 @@ Then, for a non-negative $f$, I can write
 $$\int f(x) d\mu = \sup_{s} \int s d\mu$$
 where $s$ is a set of simple functions such that $0 \leq s(x) \leq f(x)$. 
 
-For general functions, we can decompose them into $f = f_+ - f_-$, where $f_+ = \max(f(x), 0)$ and $f_- = \max(-f(x),0)$. Then do the above for each. $f$ is integrable if each of $f_+$ and $f_-$ are integrable, and then add them. This doesn't work if both are $\infty$. Or if both are $-\infty$. 
+For general functions, we can decompose them into $f = f_+ - f_-$, where $f_+ = \max(f(x), 0)$ and $f_- = \max(-f(x),0)$. Then do the above for each. $f$ is integrable if each of $f_+$ and $f_-$ are integrable, and then take $\int f_+ - \int f_-$. This doesn't work if both are $\infty$. Or if both are $-\infty$. 
 
 #### Equivalence
 

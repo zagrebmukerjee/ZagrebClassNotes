@@ -143,6 +143,8 @@ $$ s_4(x) = \begin{cases}
 
 So $s_n$ is $n$ horizontal slices, forming a stairway with steps of width $1/2^n$, everywhere below $x$, which caps off at $s_n(x)= n$. As $n$ grows, the cap gets closer and closer to $f$. 
 
+
+
 ## Radon-Nikodym
 
 We have measure space $M$ with measure $\mathcal M$. Let $f$ be a nonnegative function that is integrable with respect to $\mu$. 

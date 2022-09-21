@@ -32,7 +32,7 @@ $$ Eg(X) = \int g(X) dP = \int g X(\omega)d P(\omega)$$
 - $E(g(x)) = \int g d P_X$ where $P_X$ is the distribution of $X$;
 - $Eg(X) = \int g f_X d\mu$ IF $P_X << \mu$ and $\mu$ is $\sigma$-finite. 
 
-Proof: Start with nonnegative simple functions. Let $\{A_k\}$ be some disjoint sets in $\mathcal B(\Omega_X)$. Define simple $g(x) = \sum_{k=1}^K c_k 1_{A_k}(x)$. 
+Proof: Start with nonnegative simple functions. Let $\{A_k\}$ be some disjoint sets in $\mathcal B(\Omega_X)$. Define a simple function $g(x) = \sum_{k=1}^K c_k 1_{A_k}(x)$. 
 
 We can write this in terms of the pre-image of $A$ in $\Omega$. 
 $$\begin{align}
@@ -51,4 +51,4 @@ $$\begin{align}
 &= \int g(X) dP
 \end{align}$$
 
-We can extend this to all fu
+We can extend this to all functions in the same way as with [[Econometrics IIIa - Linearity of Lebesgue Integral]]

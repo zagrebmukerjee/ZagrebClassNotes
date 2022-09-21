@@ -205,3 +205,4 @@ Y &\text{with probability } B \\
 where $A+B = 1$ and $Y$ is a continuous random variable. Then we can write $f$ such that 
 $$P_X(A) = \int_A f_X d(\mu_C + \lambda) = \int_A fd\lambda + \int_Afd\mu_C$$
 
+It follows from the RN theorem that $\int gd\nu = \int gfd\mu$. 

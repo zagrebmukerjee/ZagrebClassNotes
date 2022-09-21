@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Saturday, September 17th 2022, 10:16 am
-date updated: Wednesday, September 21st 2022, 2:52 pm
+date updated: Wednesday, September 21st 2022, 2:59 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -151,4 +151,35 @@ Define $\nu$ - 'nu' - as a function:
 $$ \nu(A) = \int 1_{A} f d\mu \textbf{\hspace{5pt} or } \int_A f d\mu$$
 for any $A$ in $\mathcal M$. 
 
+Claim: $\nu$ is a measure. 
+- That it is non-negative follows from the non-negativity of $\mu$ and $f$. 
+- $\nu(\emptyset)$ = $\int 1_{\emptyset} fd\mu$; since $1_\emptyset$ is everywhere zero, this is $0$.
+- Countable additivity: can show this with the linearity of the Lebesgue integral w/ the indicator-function form. Suppose $A$ is a union of countable disjoint $A_i$. Then
 
+$$\begin{align}
+\nu\left(A = \bigcup A_i\right) &= \int_{A}fd\mu\\
+&= \int 1_{A}fd\mu\\
+&= \int \left(\sum 1_{A_i} \right)f d\mu\\
+&= \int \left(1_{A_1}f+ 1_{A_2}f + \ldots \right)d\mu 
+&= \int 1_{A_1}fd\mu + \int 1_{A_2}fd\mu + \ldots\\
+&= \sum \nu(A_i)
+\end{align}$$
+
+So $\nu$ is a new measure (ha). 
+
+
+Then we can say that, given $\nu$ and $\mu$, we can find a function $f$ to satisfy the above. 
+
+- We wil need $\nu$ to be 'absolutely continuous' with respect to $\mu$, which we can write $\nu << \mu$. This means that $\mu(A) = 0 \implies \nu(A)=0$. 
+	- As an analogy, if $X$ is continuous with probability measure $P_X$ then $P_X << \lambda$, the Lebesgue measure. 
+- We will also want a condition $\sigma$-finite. This is a technical condition. It means that **TODO TODO**
+
+
+### Radon-Nikodym Theorem
+
+Measure space $M$, $\sigma$-field $\mathcal M$, measures $\nu$ and $\mu$. $\nu$ is absolutely continuous wrt $\mu$. 
+
+Then there is some measure $f$ such that 
+
+$$\nu(A) = \int_A fd\mu \; \forall \, A \in \mathcal M$$
+and $f$ is unique on $\mu$. 

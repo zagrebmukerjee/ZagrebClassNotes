@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Saturday, September 17th 2022, 10:16 am
-date updated: Wednesday, September 21st 2022, 2:59 pm
+date updated: Wednesday, September 21st 2022, 3:22 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -177,16 +177,31 @@ Then we can say that, given $\nu$ and $\mu$, we can find a function $f$ to satis
 
 
 ### Radon-Nikodym Theorem
+The RN theorem is a 'conversion' result, letting us say (among other things) that we can exchange between $P_X$ and $\R$ with some function $f_X$, the probability density. We can also think of this probability density as a re-weighting of the measure space. 
 
 Measure space $M$, $\sigma$-field $\mathcal M$, measures $\nu$ and $\mu$ are $\sigma$-finite. $\nu$ is absolutely continuous wrt $\mu$. 
 
 Then there is some measure $f$ such that 
 
 $$\nu(A) = \int_A fd\mu \; \forall \, A \in \mathcal M$$
-and $f$ is unique almost everywhere on  $\mu$ - that is to say, if $\exists g$ s.t. $\int_A fd\mu = \nu(A)$, then $\mu(\{f \neq g\}) = 0$. 
+and $f$ is unique almost everywhere on $\mu$ - that is to say, if $\exists g$ s.t. $\int_A fd\mu = \nu(A)$, then $\mu(\{f \neq g\}) = 0$. 
 
 $f$ is sometimes called the Radon-Nikodym Derivative - $f = d\nu/d\mu$. 
 
+#### Implications
 RN theorem guarantees that there is a probability density $f$ of some continuous RV.
  - The conditions are satisfied. $\nu = P_x << \mu = \lambda$, $P_x$ is $\sigma$-finite (let $M_j = M$). Therefore, we can say 
- $$P_X(A) = \int_A f_Xd\lambda \; \forall A \in \mathcal B(\sui $$
+ $$P_X(A) = \int_A f_Xd\lambda \; \forall A \in \mathcal B(\Omega_X) $$
+This $f_X$ is the density function. 
+
+A similar argument can get us discrete PMFs, and pdfs of random vectors, using $\mu_C$ as $\mu$. In the latter case we can call $f_x(x = (x_1, x_2, \ldots ))$ the <font color=gree>joint pdf</font> of $x$. 
+
+The RN theorem also helps us for mixed RVs. Let $\mu_C(A)$ on $\R$ be the number of integers in $A$. $\lambda + \mu_C$ is still a measure, and still $\sigma$-finite.  Suppose 
+
+$$ X = \begin{cases}
+0 &\text{with probability } A \\
+Y &\text{with probability } B \\
+\end{cases}$$
+where $A+B = 1$ and $Y$ is a continuous random variable. Then we can write $f$ such that 
+$$P_X(A) = \int_A f_X d(\mu_C + \lambda) = \int_A fd\lambda + \int_Afd\mu_C$$
+

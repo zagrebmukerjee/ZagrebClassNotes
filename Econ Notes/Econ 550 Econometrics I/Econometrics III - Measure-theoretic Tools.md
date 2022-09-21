@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Saturday, September 17th 2022, 10:16 am
-date updated: Saturday, September 17th 2022, 2:12 pm
+date updated: Wednesday, September 21st 2022, 2:52 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -142,3 +142,13 @@ $$ s_4(x) = \begin{cases}
 \end{cases}$$
 
 So $s_n$ is $n$ horizontal slices, forming a stairway with steps of width $1/2^n$, everywhere below $x$, which caps off at $s_n(x)= n$. As $n$ grows, the cap gets closer and closer to $f$. 
+
+## Radon-Nikodym
+
+We have measure space $M$ with measure $\mathcal M$. Let $f$ be a nonnegative function that is integrable with respect to $\mu$. 
+
+Define $\nu$ - 'nu' - as a function: 
+$$ \nu(A) = \int 1_{A} f d\mu \textbf{\hspace{5pt} or } \int_A f d\mu$$
+for any $A$ in $\mathcal M$. 
+
+

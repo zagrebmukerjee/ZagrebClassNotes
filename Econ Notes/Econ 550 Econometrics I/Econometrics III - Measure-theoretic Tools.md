@@ -172,14 +172,21 @@ Then we can say that, given $\nu$ and $\mu$, we can find a function $f$ to satis
 
 - We wil need $\nu$ to be 'absolutely continuous' with respect to $\mu$, which we can write $\nu << \mu$. This means that $\mu(A) = 0 \implies \nu(A)=0$. 
 	- As an analogy, if $X$ is continuous with probability measure $P_X$ then $P_X << \lambda$, the Lebesgue measure. 
-- We will also want a condition $\sigma$-finite. This is a technical condition. It means that **TODO TODO**
+- We will also want a technical condition $\sigma$-finite. Some measure $\mu$ is $\sigma$-finite when there are sets $M_j \in \mathcal M$ such that $\forall \, j\; \mu(M_J) < \infty$ and the union of $M_j$ is $M$. For instance, consider the Lebesgue measure $\lambda$ on $r$; then the set of intervals $(-i, i)$ for $i = 1, 2, \ldots$ are each finite and $\bigcup (-i,i) = \R$. 
+	- The counting measure $\mu_C$ is $\sigma$-finite on $\mathbb Z$, but not on $\R$, since no countable union of countable things can cover $\R$. 
 
 
 ### Radon-Nikodym Theorem
 
-Measure space $M$, $\sigma$-field $\mathcal M$, measures $\nu$ and $\mu$. $\nu$ is absolutely continuous wrt $\mu$. 
+Measure space $M$, $\sigma$-field $\mathcal M$, measures $\nu$ and $\mu$ are $\sigma$-finite. $\nu$ is absolutely continuous wrt $\mu$. 
 
 Then there is some measure $f$ such that 
 
 $$\nu(A) = \int_A fd\mu \; \forall \, A \in \mathcal M$$
-and $f$ is unique on $\mu$. 
+and $f$ is unique almost everywhere on  $\mu$ - that is to say, if $\exists g$ s.t. $\int_A fd\mu = \nu(A)$, then $\mu(\{f \neq g\}) = 0$. 
+
+$f$ is sometimes called the Radon-Nikodym Derivative - $f = d\nu/d\mu$. 
+
+RN theorem guarantees that there is a probability density $f$ of some continuous RV.
+ - The conditions are satisfied. $\nu = P_x << \mu = \lambda$, $P_x$ is $\sigma$-finite (let $M_j = M$). Therefore, we can say 
+ $$P_X(A) = \int_A f_Xd\lambda \; \forall A \in \mathcal B(\sui $$

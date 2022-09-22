@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Wednesday, September 21st 2022, 3:13 pm
-date updated: Wednesday, September 21st 2022, 3:52 pm
+date updated: Thursday, September 22nd 2022, 6:45 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -52,3 +52,29 @@ $$\begin{align}
 \end{align}$$
 
 We can extend this to all functions in the same way as with [[Econometrics IIIa - Linearity of Lebesgue Integral]]
+
+```ad-example
+title: Example: Expectations of Common Distributions
+
+
+```
+
+#### Uniform Distribution
+$$\begin{align}
+X &\sim U(a,b)\\
+EX &= \int x f_X(x)dx \\
+&= 1/(b-a)\int_a^b x dx \\
+&= (x^2/2)/(b-a) \big|^b_a \\
+&= \frac{b^2-a^2}{2(b-a)}\\
+&= a+b/2
+\end{align}$$
+
+#### Exponential Distribution
+$$\begin{align}
+f_X &= \begin{cases} 
+\theta\exp(-\theta x) &\text{ if } x > 0 \\
+0 &\text{ otherwise}\\
+\end{cases}\\
+EX &= \int_0^{\infty} x\theta\exp(-\theta x)\\
+&= (x^2/2)\theta \exp(-\theta x)\big|_0^\infty - \int_0^\infty\left( -\theta^2 \exp(-\theta x)\right)
+\end{align}$$

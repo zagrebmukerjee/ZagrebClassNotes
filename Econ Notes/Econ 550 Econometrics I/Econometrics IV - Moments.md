@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Wednesday, September 21st 2022, 3:13 pm
-date updated: Thursday, September 22nd 2022, 6:45 pm
+date updated: Thursday, September 22nd 2022, 6:59 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -57,8 +57,6 @@ We can extend this to all functions in the same way as with [[Econometrics IIIa 
 title: Example: Expectations of Common Distributions
 
 
-```
-
 #### Uniform Distribution
 $$\begin{align}
 X &\sim U(a,b)\\
@@ -75,6 +73,24 @@ f_X &= \begin{cases}
 \theta\exp(-\theta x) &\text{ if } x > 0 \\
 0 &\text{ otherwise}\\
 \end{cases}\\
-EX &= \int_0^{\infty} x\theta\exp(-\theta x)\\
-&= (x^2/2)\theta \exp(-\theta x)\big|_0^\infty - \int_0^\infty\left( -\theta^2 \exp(-\theta x)\right)
+EX &= \int_0^{\infty} x\theta\exp(-\theta x) dx\\
+\int u dv &= uv|_0^\infty - \int v du \\
+\int_0^{\infty} [x][\theta\exp(-\theta x) dx] &= -x\exp(-\theta x)|_0^\infty + \int_0^\infty \exp(-\theta x) dx \\
+&= -\frac{1}{\theta e^{\theta x}}\bigg|_{0}^\infty\\
+&= 1/\theta\\
 \end{align}$$
+
+
+
+
+```
+
+The expectation can also be interpreted as the 'fair price' of a gamble: if $X$ is $1$ if a fair coin comes up heads, $0$ otherwise, then the fair price of this game is $1/2$. 
+
+
+
+## Moments
+
+The expectation, or mean, is the first moment of a random variable. Generally the $r\th$ moment is $E(X^r)$.  For $r>1$ we might prefer to talk about 
+
+

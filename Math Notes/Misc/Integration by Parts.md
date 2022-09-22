@@ -13,3 +13,11 @@ tags:
 
 # [[Integration by Parts]]
 <span style = "font-size:120%"><i >Zagreb Mukerjee </i></span>
+
+
+Suppose I have the product rule: 
+
+$$ \frac{d}{dx} f(x) \cdot g(x) = f'(x)g(x) + g'(x)f(x)$$
+Integrating both sides can get us
+
+$$ \frac{d}{dx} f(x) \cdot g(x) = f'(x)g(x) + g'(x)f(x)$$

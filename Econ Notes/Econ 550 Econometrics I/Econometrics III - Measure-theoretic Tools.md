@@ -145,7 +145,7 @@ So $s_n$ is $n$ horizontal slices, forming a stairway with steps of width $1/2^n
 
 
 
-## Radon-Nikodym
+## Radon-Nikodym Theorem
 
 We have measure space $M$ with measure $\mathcal M$. Let $f$ be a nonnegative function that is integrable with respect to $\mu$. 
 

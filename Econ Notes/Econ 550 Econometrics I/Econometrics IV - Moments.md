@@ -91,6 +91,6 @@ The expectation can also be interpreted as the 'fair price' of a gamble: if $X$ 
 
 ## Moments
 
-The expectation, or mean, is the first moment of a random variable. Generally the $r\th$ moment is $E(X^r)$.  For $r>1$ we might prefer to talk about 
+The expectation, or mean, is the first moment of a random variable - a measure of centrality. Generally the $r\th$ moment is $E(X^r)$.  For $r>1$ we might prefer to talk about 
 
 

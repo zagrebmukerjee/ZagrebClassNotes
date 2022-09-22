@@ -162,7 +162,7 @@ $$\begin{align}
 \nu\left(A = \bigcup A_i\right) &= \int_{A}fd\mu\\
 &= \int 1_{A}fd\mu\\
 &= \int \left(\sum 1_{A_i} \right)f d\mu\\
-&= \int \left(1_{A_1}f+ 1_{A_2}f + \ldots \right)d\mu 
+&= \int \left(1_{A_1}f+ 1_{A_2}f + \ldots \right)d\mu \\
 &= \int 1_{A_1}fd\mu + \int 1_{A_2}fd\mu + \ldots\\
 &= \sum \nu(A_i)
 \end{align}$$

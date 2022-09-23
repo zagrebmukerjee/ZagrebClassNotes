@@ -122,7 +122,7 @@ $$ a \in \arg \max_{px \leq w} u(x) \implies a \in \arg\min_{u(x) \geq u(a)}px $
 $$a \in \arg \min_{u(x) \geq \bar u} px \implies a \in \arg\max_{px \leq pa} u(x) $$
 The expenditure function $e(p,\bar u) = \min_{x: u(x) \geq \bar u} px$ is homogeneous of degree $1$, strictly increasing in $\bar u$, weakly increasing in $p$.
 
-This turns out to be the same problem as the utility maximization problem when either $\bar u = v(p,w)$ or $w = e(p,\bar u)$. 
+This turns out to be the same problem as the utility maximization problem when either $\bar u = v(p,w)$ or $w = e(p,\bar u)$. In other words, given some prices, the minimum income you need to attain a certain level of utility is the income for which that utility is the maximum level. 
 
 
 #### Concavity
@@ -132,3 +132,12 @@ The expenditure function is concave in prices. Intuitively, if prices change and
 Let $p'' = \lambda p + (1-\lambda)p'$. We then want to show concavity: that for any value of $\lambda$,  $e(p'', u) < \max \{e(p,u), e(p',u)\}$.
 
 Let $x'' \in x(p'', u)$ - exp minimizer under $p''$. Then $e(p'', u)$ is $p''x'' = \lambda p x'' + (1-\lambda)p'x''$. This cannot be greater than both $px''$ and $p'x''$ - so $x''$ must be affordable under one of $p, p'$. But we know that $u(x'') = u$ - so we cannot have both $e(p,u)$ and $e(p',u)$ be greater than $e(p'', u)$, since I could then lower expenditure under one of them by switching to $x''$.
+
+### Demands
+
+Our definition of $x(p,w)$ is the vector of consumption maximizing utility given $p,w$. This is the <font color=gree>Marshallian demand</font>, also known as Walrasian or uncompensated demand. 
+
+Define a new demand function, $h(p,u)$:
+
+$$ h(p,u) = \underset{u(x) \geq \bar u}{\arg \min} \; px$$
+the expenditure minimizing demand for a utility level $\bar u$. In other words: suppose the prices $p$ were to change (increase) to $p'$. $h$ represents the consumption bundle meeting $\bar u$ while minimizing expenditure under the new

@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Wednesday, September 21st 2022, 3:13 pm
-date updated: Friday, September 23rd 2022, 7:40 am
+date updated: Friday, September 23rd 2022, 7:54 am
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -113,5 +113,12 @@ This function is unique: two functions have the same MGF iff they have the same 
 Suppose $Z$ is a standard normal. Then $f_Z(x) = (1/\sqrt{2\pi})\exp[-x^2/2]$. The MGF is $E\exp\left[(t/\sqrt{2\pi})\exp[-x^2/2]\right]$. The first deriviative:
 $$\begin{align}
 M(t) &= Ee^{tX} \\
-&= \int e^{tX}
+&= \int_{-\infty}^\infty \exp({tx})f_X(x)dx\\
+&= \int_{-\infty}^\infty \exp({tx})\left( (1/\sqrt{2\pi})\exp[-x^2/2]\right)dx\\
+&= (1/\sqrt{2\pi}) \int_{-\infty}^\infty \exp\left[-(x^2 - 2tx)/2\right]dx\\
+&= (1/\sqrt{2\pi}) \int_{-\infty}^\infty \exp\left[-(x^2 - 2tx + t^2 - t^2)/2\right]dx\\
+&= (1/\sqrt{2\pi}) \int_{-\infty}^\infty \exp\left(-t^2/2 \right) \exp\left[-(x-t)^2/2\right]dx\\
+&= \exp\left(-t^2/2 \right) (1/\sqrt{2\pi}) \int_{-\infty}^\infty \exp\left[-(x-t)^2/2\right]dx\\
 \end{align}$$
+
+This last integral is simply the PDF of the normal distribution once more, with mean shifted to $x-t$; so we know it integrates to $1$, and the MGF is then $e^{-t^2/2}$

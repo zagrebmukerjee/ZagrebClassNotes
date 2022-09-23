@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Friday, September 23rd 2022, 11:46 am
-date updated: Friday, September 23rd 2022, 12:29 pm
+date updated: Friday, September 23rd 2022, 3:16 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -11,7 +11,7 @@ tags:
 - '#status/🚧'
 ---
 
-# [[🚧Micro Theory III - Demand, Duality and Decomposition]]
+# [[Micro Theory III - Demand, Duality and Decomposition]]
 <span style = "font-size:120%"><i >Zagreb Mukerjee </i></span>
 
 
@@ -148,7 +148,13 @@ This new demand is called the <font color=gree>Hicksian demand</font>, or compen
 - Strictly convex preferences mean that $h$ is SCX, and unique.
 
 
-For the latter: we want to show that $h$ is convex, i.e.: 
+For the latter: we want to show that $h$ is convex, given convex $u$. Intuitively, when prices go up by some quantity, substitution means that the 
+
+
+i.e.: 
 $$ h(\lambda p + (1-\lambda)p', \bar u) \geq \lambda h(p, u) + (1-\lambda)h(p', u)$$
 From the definition of $h$ we know that $ph(p,u) = e(p,u)$. Let $p''$ be the convex combination. Then 
 $$ e(p'', u) = p''h(p'', u) = \lambda p h(p'',u) + (1-\lambda)p'h(p'',u)$$
+By concavity of utility, we know that $u(h'') \geq u(h)$ and $u(h'') \geq u(h')$. So by Walras' law we know that $e(p'',u)\geq (p,u)$ and $e(p',u)$; that is, $h''$ is weakly unaffordable under $p$ and $p'$. Let $\lambda \to 0$ or $\lambda \to 1$, and then this implies the above inequality. 
+
+#status/section/🚧  prove that Hicksian is 

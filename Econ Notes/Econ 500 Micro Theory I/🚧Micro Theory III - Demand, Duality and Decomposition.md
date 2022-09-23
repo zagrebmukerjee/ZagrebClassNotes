@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Friday, September 23rd 2022, 11:46 am
-date updated: Friday, September 23rd 2022, 12:17 pm
+date updated: Friday, September 23rd 2022, 12:29 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -127,7 +127,7 @@ This turns out to be the same problem as the utility maximization problem when e
 
 #### Concavity
 
-The expenditure function is concave in prices. Intuitively, if prices change and the consumption bundle doesn't change, expenditure linearly increases.
+The expenditure function is concave in prices. Intuitively, if prices change and the consumption bundle doesn't change, expenditure linearly increases. So substitution must be able to improve on linear increases - hence less-than-linear. 
 
 Let $p'' = \lambda p + (1-\lambda)p'$. We then want to show concavity: that for any value of $\lambda$, $e(p'', u) < \max \{e(p,u), e(p',u)\}$.
 
@@ -145,11 +145,11 @@ the expenditure minimizing demand for a utility level $\bar u$. In other words: 
 This new demand is called the <font color=gree>Hicksian demand</font>, or compensated demand. It has a few immediate properties:
 - $h$ is homogeneous of degree 0 in $p$ (i.e. all prices rise by the same factor -> no substitution)
 - Convex preferences mean that $h$ is convex (i.e. the indifference curve still can have flat regions). 
-- Strictly convex preferences mean that $h$ is SCX. 
+- Strictly convex preferences mean that $h$ is SCX, and unique.
 
 $$\begin{align}
 x \in h(p,\bar u) &\implies u(x) \geq \bar u\\
 x' \in h(p', \bar u) &\implies u(x') \geq \bar u\\
-u(\lambda x + (1-\lambda)x') &\geq \bar u \text{ from convexity of }u\\
-
+u(\lambda x + (1-\lambda)x') &\geq \bar u \text{ from concavity of }u\\
 \end{align}$$
+Let $x'' = \lambda x + (1-\lambda)x'$. We know that $x''$ generates weakly more utility than $\bar u$; so we know that expenditure on $x''$ is weakly greater thanone of  $px$ and $p'x'$, otherwise $x$ and $x''$ would not be solutions to the EM problem. Now suppose $h(\lambda p + (1-\lambda)p') \geq 

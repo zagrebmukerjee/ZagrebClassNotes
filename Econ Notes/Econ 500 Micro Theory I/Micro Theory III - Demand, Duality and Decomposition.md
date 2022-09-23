@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Friday, September 23rd 2022, 11:46 am
-date updated: Friday, September 23rd 2022, 3:33 pm
+date updated: Friday, September 23rd 2022, 3:48 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -148,30 +148,25 @@ This new demand is called the <font color=gree>Hicksian demand</font>, or compen
 - Strictly convex preferences mean that $h$ is SCX, and unique.
 
 
-For the latter: we want to show that $h$ is convex, given concave $u$. Intuitively it makes sense that $h$ goes up less-than-linearly with price, given the idea of substitution. 
+For the latter: we want to show that $h$ is a convex set, given concave preferences. This is relatively straightforward. Consider $h'' = \lambda h + (1-\lambda) h'$ with $h, h' \in h(p, \bar u)$. By the concavity of preference it follows that $u$ is quasiconcave; then $u(h'') \geq u(h), u(h')$. So $h''$ is feasible under constraint $\bar u$. Given that $h, h' \in h(p, \bar u)$, then $ph = ph' = e(p,u)$, so $p h'' = \lambda ph + (1-\lambda) ph' = e(p, \bar u)$. 
 
-Suppose utility $\bar u$, and two prices $p_1, p_2$ with Hicksian demands $h(p_1, \bar u)$ and $h(p_2, \bar u)$. These lie on some indifference curve $u(x) = \bar u$. We will show that: 
-$$ h(\lambda p_1 + (1-\lambda)p_2, \bar u) \geq \lambda h(p_1, u) + (1-\lambda)h(p_2, u)$$
+Under strictly convex preferences, $h'' \neq h', h \implies u(h'') > u(h), u(h')$; but $ph'' = e(p, \bar u)$, i.e. $h''$ an expenditure-minimizing bundle. If $ph'' = ph$, and $u(h'') > u(h)$, then we can reduce $h''$ to $j$ so that $pj < ph$ and $u(j) = \bar u$. Thus $h$ cannot be an expenditure minimizing bundle unless $h = h''$. So under strictly convex preferences, the Hicksian is a function. 
 
-This means that, under a linear combination of $p_1, p_2$, weakly more of each good is demanded. The concavity of utility tells us that $u(h_3) = u(\lambda h_1 + (1-\lambda) h_2) \geq u(h_1) + u(h_2)$ - ie. the line between any two bundles lies above the indifference curve. But all bundles $\lambda h_1 + (1-\lambda)h_2$ are affordable under the price $p_3 = \lambda p_1 + (1-\lambda) p_2$. Thus, for $h_1$ and $h_2$ to be maximizers, $p_3 h_3 > p_1 h_1, p_2 h_2$. 
-
-
-
-
-
-
-
-
-
+#### Hicksian Duality
+We can see the following: 
+$$\begin{align}
+h(p, \bar u) &= x(p, e(p, \bar u))\\
+h(p, v(p, w)) &= x(p,w)\\
+ph(e, \bar u) &= e(p,u)\\
+u(x(p,w)) &= v(p,w)\\
+\end{align}$$
+with the last being repeated from before. 
 
 
+## Demand-Related Results
 
+Assume strictly convex preferences, i.e. SQCV utility, and $h$ and $x$ are functions. Then we can obtain a number of envelope-theorem results. 
 
+### Shepard's Lemma
 
-
-
-From the definition of $h$ we know that $ph(p,u) = e(p,u)$. Let $p''$ be the convex combination. Then 
-$$ e(p'', u) = p''h(p'', u) = \lambda p h(p'',u) + (1-\lambda)p'h(p'',u)$$
-By concavity of utility, we know that $u(h'') \geq u(h)$ and $u(h'') \geq u(h')$. So by Walras' law we know that $e(p'',u)\geq (p,u)$ and $e(p',u)$; that is, $h''$ is weakly unaffordable under $p$ and $p'$. Let $\lambda \to 0$ or $\lambda \to 1$, and then this implies the above inequality. 
-
-#status/section/🚧 prove that Hicksian is 
+Start with the identity $ph(p,u) = e(p,u)$. Since it's an identity, we can implicitly differentiate with respect to some price $p_i$. Then

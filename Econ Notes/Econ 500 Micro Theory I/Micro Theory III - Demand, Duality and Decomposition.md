@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Friday, September 23rd 2022, 11:46 am
-date updated: Friday, September 23rd 2022, 3:16 pm
+date updated: Friday, September 23rd 2022, 3:33 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -148,13 +148,30 @@ This new demand is called the <font color=gree>Hicksian demand</font>, or compen
 - Strictly convex preferences mean that $h$ is SCX, and unique.
 
 
-For the latter: we want to show that $h$ is convex, given convex $u$. Intuitively, when prices go up by some quantity, substitution means that the 
+For the latter: we want to show that $h$ is convex, given concave $u$. Intuitively it makes sense that $h$ goes up less-than-linearly with price, given the idea of substitution. 
+
+Suppose utility $\bar u$, and two prices $p_1, p_2$ with Hicksian demands $h(p_1, \bar u)$ and $h(p_2, \bar u)$. These lie on some indifference curve $u(x) = \bar u$. We will show that: 
+$$ h(\lambda p_1 + (1-\lambda)p_2, \bar u) \geq \lambda h(p_1, u) + (1-\lambda)h(p_2, u)$$
+
+This means that, under a linear combination of $p_1, p_2$, weakly more of each good is demanded. The concavity of utility tells us that $u(h_3) = u(\lambda h_1 + (1-\lambda) h_2) \geq u(h_1) + u(h_2)$ - ie. the line between any two bundles lies above the indifference curve. But all bundles $\lambda h_1 + (1-\lambda)h_2$ are affordable under the price $p_3 = \lambda p_1 + (1-\lambda) p_2$. Thus, for $h_1$ and $h_2$ to be maximizers, $p_3 h_3 > p_1 h_1, p_2 h_2$. 
 
 
-i.e.: 
-$$ h(\lambda p + (1-\lambda)p', \bar u) \geq \lambda h(p, u) + (1-\lambda)h(p', u)$$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 From the definition of $h$ we know that $ph(p,u) = e(p,u)$. Let $p''$ be the convex combination. Then 
 $$ e(p'', u) = p''h(p'', u) = \lambda p h(p'',u) + (1-\lambda)p'h(p'',u)$$
 By concavity of utility, we know that $u(h'') \geq u(h)$ and $u(h'') \geq u(h')$. So by Walras' law we know that $e(p'',u)\geq (p,u)$ and $e(p',u)$; that is, $h''$ is weakly unaffordable under $p$ and $p'$. Let $\lambda \to 0$ or $\lambda \to 1$, and then this implies the above inequality. 
 
-#status/section/🚧  prove that Hicksian is 
+#status/section/🚧 prove that Hicksian is 

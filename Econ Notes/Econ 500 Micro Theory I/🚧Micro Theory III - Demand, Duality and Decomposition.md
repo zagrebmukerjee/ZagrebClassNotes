@@ -1,7 +1,7 @@
 ---
 aliases:
-creation date: 2022-09-17 15:56
-date updated: 2022-09-17 15:56
+creation date: Friday, September 23rd 2022, 11:46 am
+date updated: Friday, September 23rd 2022, 12:17 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -129,15 +129,27 @@ This turns out to be the same problem as the utility maximization problem when e
 
 The expenditure function is concave in prices. Intuitively, if prices change and the consumption bundle doesn't change, expenditure linearly increases.
 
-Let $p'' = \lambda p + (1-\lambda)p'$. We then want to show concavity: that for any value of $\lambda$,  $e(p'', u) < \max \{e(p,u), e(p',u)\}$.
+Let $p'' = \lambda p + (1-\lambda)p'$. We then want to show concavity: that for any value of $\lambda$, $e(p'', u) < \max \{e(p,u), e(p',u)\}$.
 
 Let $x'' \in x(p'', u)$ - exp minimizer under $p''$. Then $e(p'', u)$ is $p''x'' = \lambda p x'' + (1-\lambda)p'x''$. This cannot be greater than both $px''$ and $p'x''$ - so $x''$ must be affordable under one of $p, p'$. But we know that $u(x'') = u$ - so we cannot have both $e(p,u)$ and $e(p',u)$ be greater than $e(p'', u)$, since I could then lower expenditure under one of them by switching to $x''$.
 
-### Demands
+### Hicksian Demand
 
 Our definition of $x(p,w)$ is the vector of consumption maximizing utility given $p,w$. This is the <font color=gree>Marshallian demand</font>, also known as Walrasian or uncompensated demand. 
 
 Define a new demand function, $h(p,u)$:
 
 $$ h(p,u) = \underset{u(x) \geq \bar u}{\arg \min} \; px$$
-the expenditure minimizing demand for a utility level $\bar u$. In other words: suppose the prices $p$ were to change (increase) to $p'$. $h$ represents the consumption bundle meeting $\bar u$ while minimizing expenditure under the new
+the expenditure minimizing demand for a utility level $\bar u$. In other words: suppose the prices $p$ were to change (increase) to $p'$. $h$ represents the consumption bundle meeting $\bar u$ while minimizing expenditure under the new price regime. This includes substituting away from more expensive goods/towards cheaper ones. 
+
+This new demand is called the <font color=gree>Hicksian demand</font>, or compensated demand. It has a few immediate properties:
+- $h$ is homogeneous of degree 0 in $p$ (i.e. all prices rise by the same factor -> no substitution)
+- Convex preferences mean that $h$ is convex (i.e. the indifference curve still can have flat regions). 
+- Strictly convex preferences mean that $h$ is SCX. 
+
+$$\begin{align}
+x \in h(p,\bar u) &\implies u(x) \geq \bar u\\
+x' \in h(p', \bar u) &\implies u(x') \geq \bar u\\
+u(\lambda x + (1-\lambda)x') &\geq \bar u \text{ from convexity of }u\\
+
+\end{align}$$

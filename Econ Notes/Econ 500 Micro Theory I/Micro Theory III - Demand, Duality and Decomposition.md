@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Friday, September 23rd 2022, 11:46 am
-date updated: Friday, September 23rd 2022, 3:48 pm
+date updated: Friday, September 23rd 2022, 3:57 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -169,4 +169,18 @@ Assume strictly convex preferences, i.e. SQCV utility, and $h$ and $x$ are funct
 
 ### Shepard's Lemma
 
-Start with the identity $ph(p,u) = e(p,u)$. Since it's an identity, we can implicitly differentiate with respect to some price $p_i$. Then
+Start with the identity $ph(p,u) = e(p,u)$. Since it's an identity, we can implicitly differentiate with respect to some price $p_i$. 
+
+$$\begin{align}
+\frac{d}{dp_i}e(p,u) &= \frac{d}{dp_i}ph(p,u)\\
+&= \left(\frac{d}{dp_i}\right)ph(p,u) + p\frac{d}{dp_i}h(p,u)\\
+&= h_i(p,u)+ \begin{bmatrix} p_1 & p_2 & \ldots \end{bmatrix}\begin{bmatrix} dh_1/dp_i \\ dh_2/dp_i\\ \vdots \end{bmatrix} \\
+&= h_i(p,u) + \sum_k^L p_k dh_k/dp_i\\
+\end{align}$$
+The sum $\sum p_k d h_k/dp_i$ is how much expenditure changes on good $k$ with a marginal change in the price of $i$. But since Hicksian demand is compensated, the total expenditure change must be $0$ - thus this becomes 
+
+$$ \frac{d}{dp_i}e(p,u) = h_i(p,u)$$
+This is Shepard's lemma. 
+
+<font color=#F7B801>check this</font> #status/section/❓ 
+

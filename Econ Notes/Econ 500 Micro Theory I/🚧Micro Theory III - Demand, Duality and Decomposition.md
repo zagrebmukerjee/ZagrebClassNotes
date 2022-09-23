@@ -147,9 +147,8 @@ This new demand is called the <font color=gree>Hicksian demand</font>, or compen
 - Convex preferences mean that $h$ is convex (i.e. the indifference curve still can have flat regions). 
 - Strictly convex preferences mean that $h$ is SCX, and unique.
 
-$$\begin{align}
-x \in h(p,\bar u) &\implies u(x) \geq \bar u\\
-x' \in h(p', \bar u) &\implies u(x') \geq \bar u\\
-u(\lambda x + (1-\lambda)x') &\geq \bar u \text{ from concavity of }u\\
-\end{align}$$
-Let $x'' = \lambda x + (1-\lambda)x'$. We know that $x''$ generates weakly more utility than $\bar u$; so we know that expenditure on $x''$ is weakly greater thanone of  $px$ and $p'x'$, otherwise $x$ and $x''$ would not be solutions to the EM problem. Now suppose $h(\lambda p + (1-\lambda)p') \geq 
+
+For the latter: we want to show that $h$ is convex, i.e.: 
+$$ h(\lambda p + (1-\lambda)p', \bar u) \geq \lambda h(p, u) + (1-\lambda)h(p', u)$$
+From the definition of $h$ we know that $ph(p,u) = e(p,u)$. Let $p''$ be the convex combination. Then 
+$$ e(p'', u) = p''h(p'', u) = \lambda p h(p'',u) + (1-\lambda)p'h(p'',u)$$

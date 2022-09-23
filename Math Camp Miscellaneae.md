@@ -1,7 +1,13 @@
+---
+aliases: 
+tags: 
+creation date: Saturday, September 3rd 2022, 4:15 pm
+date updated: Thursday, September 22nd 2022, 2:08 pm
+---
 
 - convex function is smiley face
 
-## Multivariable optimization
+## Multivariable Optimization
 - Young's theorem: partial derivatives are the same regardless of order; $\frac{\partial f(x,y)}{\partial x \partial y} = \frac{\partial f(x,y)}{\partial x \partial y}$. When you write it that way, it seems a little stupid. 
 
 
@@ -35,16 +41,16 @@ Fun trick: given cobb douglasy type utility, $x_1^\alpha x_2^\beta$, you can tak
 
 
 Lagrangian: can create a new expression as follows:
-$$\mathcal L = x_1 ^\alpha + x_2 ^ \beta  + \lambda(y - p_1x_1 - p_2 x_2)$$
+$$\mathcal L = x_1 ^\alpha + x_2 ^ \beta + \lambda(y - p_1x_1 - p_2 x_2)$$
 
 A very useful theorem says that under reasonable conditions, maximizing $\mathcal L$ solves the problem of the constrained optimization 
 
 So we can get FOC: 
 
 $$\begin{align}
-0 = \frac{\partial \mathcal L}{\partial x_1}  &= U_1(x_1,x_2) - \lambda p_1 \\
-0 = \frac{\partial \mathcal L}{\partial x_2}  &= U_2(x_1,x_2) - \lambda p_2 \\
-0 = \frac{\partial \mathcal L}{\partial \lambda}  &= y - p_1 - p_2 \\
+0 = \frac{\partial \mathcal L}{\partial x_1} &= U_1(x_1,x_2) - \lambda p_1 \\
+0 = \frac{\partial \mathcal L}{\partial x_2} &= U_2(x_1,x_2) - \lambda p_2 \\
+0 = \frac{\partial \mathcal L}{\partial \lambda} &= y - p_1 - p_2 \\
 \end{align}$$
 
 Then find $x_1^*$ and $x_2^*$ that satisfy this
@@ -82,8 +88,8 @@ $n$-dimensional statement of IFT: Suppose $f: \R^{m+n} \to \R^m$. Interested in 
 
 Choose $a \in \R^m$ and $b \in \R^n$. Then I can write smth:
 
-$$Df(a,b) = \begin{bmatrix} \frac{\partial f_1}{\partial y_1} & \cdots & \frac{\partial f_1}{\partial y_n } &|& \frac{\partial f_1}{\partial x_1} & \cdots & \frac{\partial f_1}{\partial x_m }  \\
-\vdots & & &|& \vdots  \\
+$$Df(a,b) = \begin{bmatrix} \frac{\partial f_1}{\partial y_1} & \cdots & \frac{\partial f_1}{\partial y_n } &|& \frac{\partial f_1}{\partial x_1} & \cdots & \frac{\partial f_1}{\partial x_m } \\
+\vdots & & &|& \vdots \\
 \frac{\partial f_m}{\partial y_1} & \cdots & \frac{\partial f_m}{\partial y_n} &|& \frac{\partial f_m}{\partial x_1} & \cdots & \frac{\partial f_m}{\partial x_m}\end{bmatrix}$$
 
 We can think of this as some sort of block matrix $[Y |X]$ 
@@ -96,7 +102,7 @@ $$ \frac{\partial g_i}{\partial y_j} = -X\inv Y$$
 
 
 
-## Integration 
+## Integration
 
 ### First Fundamental Theorem of Calculus
 
@@ -111,7 +117,7 @@ Take $f: [a,b] \to \R$ with antiderivative $F$ (i.e., $f(x) = F'(x) \quad \foral
 
 ### Integration Rules
 
-$$ \int a \; dx  = ax + c$$
+$$ \int a \; dx = ax + c$$
 $$ \int x \; dx = \frac{1}{2} x^2 + c$$
 $$ \int x^n \; dx = \frac{1}{n+1}x^{n+1} + c$$
 $$ \int k f(x) = k \int f(x) $$
@@ -121,7 +127,7 @@ $$ \int af(x) + bg(x) \; dx = a \int f(x) \; dx + b \int g(x) \; dx$$
 exponent is its own integral
 
 $$ \int a^x \; dx = x \frac{a^x}{\ln a} + c$$
-$$ \int \ln x= x \ln x  -  x+ c $$
+$$ \int \ln x= x \ln x -  x+ c $$
 ### Two Integration Tricks
 
 #### $U$-Substitution

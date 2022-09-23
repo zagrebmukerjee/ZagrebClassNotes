@@ -14,7 +14,8 @@ tags:
 
 # [[Game Theory I - Foundations]]
 <span style = "font-size:120%"><i >Zagreb Mukerjee </i></span>
-[[Game Theory Index]]
+[[PLSC 518 Game Theory Index]]
 
 
 
+## Definition

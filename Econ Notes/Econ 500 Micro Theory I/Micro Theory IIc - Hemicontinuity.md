@@ -4,7 +4,7 @@ aliases:
 - 'upper hemicontinuous'
 - 'lower hemicontinuous'
 creation date: Thursday, September 15th 2022, 1:41 pm
-date updated: Thursday, September 15th 2022, 2:47 pm
+date updated: Thursday, September 15th 2022, 3:01 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -15,6 +15,7 @@ tags:
 
 # [[Micro Theory IIc - Hemicontinuity]]
 <span style = "font-size:120%"><i >Zagreb Mukerjee </i></span>
+[[Econ 550 Micro Theory Index]]
 
 We are concerned now with correspondences, which can map $x$ to some set of $y$s. Intuitively that corresponds to flat regions on indifference curves. 
 

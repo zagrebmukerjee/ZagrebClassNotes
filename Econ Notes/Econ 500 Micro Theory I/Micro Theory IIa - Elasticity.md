@@ -13,6 +13,7 @@ tags:
 
 # [[Micro Theory IIa - Elasticity]]
 <span style = "font-size:120%"><i >Zagreb Mukerjee </i></span>
+[[Econ 550 Micro Theory Index]]
 
 ## Elasticity Basics
 

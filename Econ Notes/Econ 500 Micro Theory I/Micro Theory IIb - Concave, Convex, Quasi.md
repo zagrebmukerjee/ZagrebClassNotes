@@ -19,6 +19,7 @@ tags:
 
 # [[Micro Theory IIb - Concave, Convex, Quasi]]
 <span style = "font-size:120%"><i >Zagreb Mukerjee </i></span>
+[[Econ 550 Micro Theory Index]]
 
 ### Convexity Definitions
 - A <font color=gree>convex combination</font> of $x,y$ is $\lambda x + (1- \lambda) y$. 

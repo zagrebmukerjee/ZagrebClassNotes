@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Wednesday, September 21st 2022, 3:13 pm
-date updated: Thursday, September 22nd 2022, 8:32 pm
+date updated: Friday, September 23rd 2022, 7:40 am
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -112,6 +112,6 @@ This function is unique: two functions have the same MGF iff they have the same 
 
 Suppose $Z$ is a standard normal. Then $f_Z(x) = (1/\sqrt{2\pi})\exp[-x^2/2]$. The MGF is $E\exp\left[(t/\sqrt{2\pi})\exp[-x^2/2]\right]$. The first deriviative:
 $$\begin{align}
-M(t) &= E\exp\left[t(1/\sqrt{2\pi})\exp[-x^2/2]\right]\\
-&=  E\exp\left[t(1/\sqrt{2\pi})\exp[-x^2/2]\right]\\
+M(t) &= Ee^{tX} \\
+&= \int e^{tX}
 \end{align}$$

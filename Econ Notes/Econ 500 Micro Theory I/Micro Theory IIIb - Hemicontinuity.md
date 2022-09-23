@@ -13,7 +13,7 @@ tags:
 - '#types/classes/econ'
 ---
 
-# [[Micro Theory IIc - Hemicontinuity]]
+# [[Micro Theory IIIb - Hemicontinuity]]
 <span style = "font-size:120%"><i >Zagreb Mukerjee </i></span>
 [[Econ 550 Micro Theory Index]]
 

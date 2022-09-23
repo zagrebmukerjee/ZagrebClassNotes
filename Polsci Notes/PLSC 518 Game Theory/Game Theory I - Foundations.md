@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Thursday, September 15th 2022, 2:58 pm
-date updated: Thursday, September 15th 2022, 3:00 pm
+date updated: Friday, September 23rd 2022, 11:25 am
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -18,4 +18,11 @@ tags:
 
 
 
-## Definition
+## Definitions
+
+A game is:
+- a set of players
+- a set of actions for each player
+- A mapping from all possible action sets to results
+
+and, potentially some equilibrium/solution concept.

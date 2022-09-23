@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Friday, September 2nd 2022, 5:09 pm
-date updated: Monday, September 12th 2022, 11:41 am
+date updated: Friday, September 16th 2022, 9:30 am
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -9,11 +9,11 @@ cssclass: math-class-note
 tags: 
 - '#types/classes/stats/theory'
 - '#topics/methods'
-- '#status/🚧'
 ---
 
 # [[Econometrics II - Working with Random Variables]]
-
+<span style = "font-size:120%"><i >Zagreb Mukerjee </i></span>
+[[Econ 550 Index]]
 
 ## Random Variables
 
@@ -48,11 +48,129 @@ $P_x$ satisfies the probability axioms:
 
 This creates a probability space: $(\Omega_X, \mathcal B(\Omega_X), P_X)$. 
 
-### Asides
+```ad-note
+title: Asides
 
 Random vectors - basically the same deal. 
 
 A stochastic process is a random variable, but instead of being real-valued, it's function-valued. 
 
+Sometimes people talk about $\sigma$-fields as "information sets". Given that $X$ takes on some value, the $\sigma$-field describes what conclusions we could draw. 
 
-## Distributions 
+```
+
+
+## Conditional Probability
+
+Suppose you throw a dart at a board with a Venn Diagram on it. You're blindfolded and you want to know whether your dart landed in $A$. 
+
+![[Econometrics II - Working with Random Variables 2022-09-15 18.13.21.excalidraw|300]]
+
+I tell you the dart landed in $B$. What can I say about whether it landed on $A$?
+
+This is a <font color=gree>conditional probability</font>. We can see that the probability should scale with the probability of $A \cap B$, so we can say $P(A) = kP(A\cap B)$. We want $P(B|B) = 1$; so we can then see that $P(B|B) = 1 = kP(B\cap B) = k P(B)$ and so $k = 1/P(B)$. 
+
+This gives us the formula that 
+
+$$ P(A|B) = P(A\cap B)/ P(B)$$
+
+#### The Conditional Probabilty Measure
+This gives us a new probability space, $(\Omega, \mathcal F, P( \cdot | B))$. Is $P(\cdot|B)$ a valid distribution?
+- It's nonnegative, since both $P(B)$ and $P(A|B)$ are nonnegative (since $P$ is a distribution). 
+- The probability of $\Omega$ is $1$: $P(\Omega|B) = P(\Omega \cap B)/P(B)$
+
+Countable additivity is always fun... 
+$$P(\bigcup A_i |B ) = P\left[ \left(\bigcup A_i\right) \cap B \right]/ P(B) $$
+By the distributive property of intersections this becomes 
+
+$$P\left[ \bigcup (A_i \cap B\right)] / P(B) $$
+Since $A_i$ are disjoint, $A_i \cap B$ are disjoint, and in $\mathcal F$. So by additivity of $P$ we can write this as $\sum_i P(A_i \cap B)/ P(B) = \sum_i P(A_i |B)$. 
+
+#### Conditional Independence
+
+To say $C$ is <font color=gree>independent</font> of $B$ is to say that knowing $B$ gives us nothing about $C$. Disjoint events are not independent! Ex. $B$, $B^c$ are about as dependent as it gets...
+
+Event $A$ is independent of $B$ - written also $A \indep B$ - if $P(A|B) = P(A)$. 
+
+We can then say $P(A\cap B)/P(B) = P(A)$, so $P(A \cap B) = P(A)P(B)$. Both are used as independence definitions. 
+
+$\emptyset$ and $\Omega$ are both independent of everything. 
+
+We can extend this: If $A \indep B$ then 
+- $A \indep B^c$
+- $A^c \indep B$
+- $A^c \indep B^c$
+
+Proof: #status/section/🚧 
+
+Extend this to random variables: $X,Y$ are independent if for all sets $A \in \Omega_X$ and $B \in \Omega_Y$, the events $X \in A$ and $Y \in B$ are independent. We'll come back to this. 
+
+
+
+
+![[2002.1 Probability#Bayes' Rule]]
+
+
+
+## Discrete and Continuous Random Variables
+
+### Discrete
+<font color=gree>Discrete random variables</font> take on at most a countable number of values. It's pretty easy to work with them: let $A$ be $\{x_1, x_2, \ldots \}$, and then $P(A) = P(\bigcup x_j) = \sum P(x_j)$. 
+
+We can write a <font color=gree>probability mass function</font> $f_x(x_j) = P(x_j)$. 
+
+There is some countable set $C$ such that $P(C) = 1$. We can then get probability of set $A$ as $P(A) = P(A \cap C) + P(A \cap C^C) = P(A \cap C)$. 
+
+### Continuous
+
+<font color=gree>Continuous random variables.</font> are more complex. An RV is absolutely continuous if $\forall A \in \mathcal B(\Omega_X)$, $\lambda(A) = 0 \implies P_X(A) = 0$. where $\lambda$ is the Lebesgue measure. In other words the probability of any given point is $0$. 
+
+We introduce the idea of a <font color=gree>distribution function</font>, or df: $F_X(x) = P(X \leq x)$ for all $x \in \R$. This is sometimes also called the CDF but that's old fashioned. 
+
+The domain of $F_X$ is simply $\R$. In this case $\Omega_X$ doesn't matter. 
+
+
+### Properties of Distribution Functions
+1) $F_X(x) \in [0,1] \, \forall \, x \in \R$. This follows from the probability axioms of non-negativity and probabilty of the whole space. 
+2) $F_X(x)$ is nondecreasing. Suppose $y > x$. Then $F_X(y) = P(\{\omega \in \Omega: X(\omega) \leq y \}$. And $F_X(x) = P(\{\omega \in \Omega: X(\omega) \leq x \}$. It's apparent that the second set is a subset of the first. 
+3) $\lim_{x \to \infty} F_X(x) = 1$; $\lim_{x \to -\infty} F_X(x) = 0$. 
+4) $F_X(x)$ is right continuous. That is, $\lim_{x \downarrow x_0} F_X(x) = F_X(x_0)$ for all $x_0 \in \R$. (the limit when $x$ declines to $x_0$). 
+5) If $X$ is discrete, the df is simply a step function with steps at $x \in C$. For a continuous RV, $F_X$ is also continuous. It's differentiable almost everywhere - that is to say, the points at which it's not differentiable have measure 0. 
+
+Properties 2-4 characterize a df - a function that satisfies those properties is a df for some RV. 1 can be obtained from 2,3. 
+
+Proof of 3a: 
+
+$$\begin{align}
+\lim_{x\to \infty} F_X(x) &= \lim_{x \to \infty} P(X \leq x) \\
+ &= P(X \leq 0) + \lim_{x \to \infty} P(0 < X \leq x) \\
+\end{align}$$
+
+We can decompose the second term: divide $\R^+$ into intervals $(i-1, i]$ for $i \in \mathbb Z$. Then:
+
+$$\begin{align}
+\lim_{x\to \infty} F_X(x) &= P(X \leq 0) +\lim_{x\to \infty} P\left(\bigcup_{i=1}^{\lceil x \rceil} X \in (i-1, i] \right)\\
+&= P(X \leq 0) + P\left(\bigcup_{i=1}^{\infty} X \in (i-1, i] \right)\\
+&= P(X \leq 0) + \sum_{i=1}^{\infty} P\left(X \in (i-1, i] \right)\\
+&= P(X \leq 0) + P(X>0) \\
+&= 1
+\end{align}$$
+the latter step because $P(x \in \R) = P(x \in \Omega_X) = 1$, by axiom 2. 
+
+### Density Functions
+
+These only exist for continuous RVs. Suppose continuous $x$ with df $F_X(x)$. Define a pdf as $\frac{\partial}{\partial x} F_X(x)$ for all $x$ where $F_X$ is differentiable. We can write this as $f_X(x)$. Can call this the pdf. 
+
+Example: If $F_X(x) = 1-\exp(-\theta x)$ then the pdf is $\theta \exp(-\theta x)$. 
+
+
+Probabilities: Suppose $a < b$. Then 
+
+$$\begin{align}
+(X \leq b) &= (X \leq a) \cup (a < X \leq b) \\
+P(X \leq b) &= P(X \leq a) \cup P(a < X \leq b)\\
+P(a < X \leq b) &= F_X(b) - F_X(a)\\
+\end{align}$$
+Then we can say
+
+$$ P(X \in [a,b]) = \int_{-\infty}^n f_X(x) dx - \int_{-\infty}^a f_X(x) dx = \int_a^b f_X(x) dx$$

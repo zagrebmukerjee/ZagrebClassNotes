@@ -115,6 +115,22 @@ There are a number of conditions required for the IFT, but it's still very handy
 
 MCS is a more generalized method with a different set of conditions. Notably, it requires no differentiability. 
 
+Let $f(X \times T) \to \R$. Once more, we can think of $X$ as endogeneous variables and $T$ as exogeneous; we are ultimately interested in how the $X$ change when $T$ changes. 
+
 
 ### Increasing Differences
-Let $f(X \times T) \to \R$. Once more, we can think of $X$ as endogeneous variables and $T$ as exogeneous; we are ultimately interested in $dx/dt$ fort
+
+Choose $x' > x$ and $t' > t$. Then $f$ exhibits <font color=gree>increasing differences</font> if: 
+
+$$\begin{align}
+f(x', t') - f(x, t') \geq f(x', t) - f(x, t)\\
+f(x', t') - f(x', t) \geq f(x, t') - f(x,t)\\
+\end{align}$$
+This is simply a discrete version of a criterion that $d^2f/dxdt \geq 0$: when $t$ is higher, an increase in $x$ has a greater effect on $f$. <font color=gree>Strictly increasing differences</font> means that the above inequalities are strict. 
+
+
+Then we have a useful result:
+
+#### Theorem
+
+Let $f$ exhibit strictly increasing differences; let $t' > t$, $x' \in \arg \max f(_, t')$

@@ -153,10 +153,18 @@ Intuitively, this means 'signs are preserved': the difference of $x$ moves iwth 
 
 ### Supermodularity
 
-A further generalization of our results: suppose $X$ is a lattice (ie. each pair has a $\sup$ and $\inf$), $T$ a partially ordered set. 
-Define $x \land y$ as the least upper bound of $(x,y)$; define $x \lor y$ as the greatest lower bound. 
+A further generalization of our results: suppose $X$ is a lattice (ie. each pair has a $\sup$ and $\inf$), $T$ a partially ordered set. Let $P$ be the ordering (eg $xPy$ meaning $x$ comes before $y$).  
+Define $x \land y$ as the least upper bound of $(x,y)$; define $x \lor y$ as the greatest lower bound, meaning:
+- $(x \land y)Px$, $(x\land y)Py$, and $zPx$, $zPy$ means $zP(x\land y)$. 
 
 
 Then, $f$ is supermodular in $x$ if: 
 
-$$ 
+$$ f(x \lor y ) + f(x \land y) \geq f(x) + f(y) $$
+Quasi supermodularity is an ordinal condition: 
+$$ f(x) \geq f(x \land y) \implies f(x \lor y) \geq f(y)$$
+
+
+If $X$ and $T$ are $\R^j, \R^k$, and $f$ is twice-differentiable, then we can say $x \land y$ is the elementwise maximum, and this maps to $f_{xy} \geq 0$ for all $x,y$. So we can see we have an even stronger condition. 
+
+

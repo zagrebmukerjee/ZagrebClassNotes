@@ -95,7 +95,7 @@ p_1 & p_2 & 0 \\\end{matrix}\right|
 $$
 Then we have this symmetric term $\lambda p_1p_2$ which is negative. 
 
-#### Implicit Function Theorem
+### Implicit Function Theorem
 
 For this purpose we can think of the [[Implicit Function Theorem]] as: 
 - a bunch of equations $f_1, \ldots f_n = 0$, with arguments $(x,t)$ 
@@ -112,3 +112,9 @@ There are a number of conditions required for the IFT, but it's still very handy
 
 
 ## Monotone Comparative Statics
+
+MCS is a more generalized method with a different set of conditions. Notably, it requires no differentiability. 
+
+
+### Increasing Differences
+Let $f(X \times T) \to \R$. Once more, we can think of $X$ as endogeneous variables and $T$ as exogeneous; we are ultimately interested in $dx/dt$ fort

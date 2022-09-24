@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Friday, September 23rd 2022, 10:21 am
-date updated: Saturday, September 24th 2022, 1:30 pm
+date updated: Saturday, September 24th 2022, 1:37 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -79,5 +79,36 @@ p_1 & -x_1 & 0 \\\end{matrix}\right|
 	\left| \begin{matrix} u_{11} & u_{12} & p_1 \\ 
 u_{21} & u_{22} & p_2 \\ 
 p_1 & p_2 & 0 \\\end{matrix}\right|
-} = (1/|H|)\left[ \lambda p_1p_2 - x_1 (p_2u_{11} \right]
+} = (1/|H|)\left[ \lambda p_1p_2 - x_1 (p_1u_{12} -p_2u_{11})\right]
 $$
+
+$$
+\frac{dx_1}{dp_2} = \frac{
+	\left| \begin{matrix}0 & u_{12} & p_1 \\ 
+-\lambda & u_{22} & p_2 \\ 
+-x_2 & p_2 & 0\\\end{matrix}\right|
+}{
+	\left| \begin{matrix} u_{11} & u_{12} & p_1 \\ 
+u_{21} & u_{22} & p_2 \\ 
+p_1 & p_2 & 0 \\\end{matrix}\right|
+} = (1/|H|)\left[ \lambda p_1p_2 - x_2 (p_1u_{22} -p_2u_{12})\right]
+$$
+Then we have this symmetric term $\lambda p_1p_2$ which is negative. 
+
+#### Implicit Function Theorem
+
+For this purpose we can think of the [[Implicit Function Theorem]] as: 
+- a bunch of equations $f_1, \ldots f_n = 0$, with arguments $(x,t)$ 
+	- here $x$ is endogeenous variables and $t$ is exogeneous. 
+	- One equation for each $x$ (endogeneous variable). 
+	- Suppose you can define $x(t)$ st. $f_1(x(t),t) = 0$; then I can start differentiating. 
+
+But how do I know that's allowed?
+
+The IFT tells me when I can do that: specifically, if $|H|$ is nonzero, then there is some $x(t)$ that makes this work in the neighborhood of $t$. 
+
+There are a number of conditions required for the IFT, but it's still very handy, and frequently used. Works well when all exogeneous variables are in the constraint. 
+
+
+
+## Monotone Comparative Statics

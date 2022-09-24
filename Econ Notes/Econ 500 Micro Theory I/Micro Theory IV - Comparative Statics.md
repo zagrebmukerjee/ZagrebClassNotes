@@ -133,4 +133,30 @@ Then we have a useful result:
 
 #### Theorem
 
-Let $f$ exhibit strictly increasing differences; let $t' > t$, $x' \in \arg \max f(_, t')$
+Let $f$ exhibit strictly increasing differences; let $t' > t$, $x' \in \arg \max f(\cdot, t')$ and $x \in \arg \max f(\cdot, t)$. Then $x' \geq x$. 
+
+In other words: if $x'$ maximizes under $t'$ and $x$ maximizes under $t$, then $t' > t \implies x' \geq x$. 
+We can't quite get to $x'>x$; for instance, suppose $x \in \{0,1\}$ (e.g. loan approval decision). 
+
+This is a very easy method! It involves no calculations and no structure. Why is it so powerful? The increasing differences criterion has more information in it than the $IFT$, which only used $|H| \geq 0$. 
+
+It's simple to have a multidimensional $t$; just do this for every $t$. For multi dimensional $X$ it's more complex. Let $X$ be the Cartesian product of $X_i$, and $T$ of $T_j$, with $X_i$ and $T_j$ in $\R$. Then, if $f$ has SID in each pair $x_i, t_j$, and ID in each $x_i, x_j$ $t' > t \implies x(t') \geq x(t)$. 
+
+
+### Single Crossing
+
+We may prefer an ordinal property, i.e. one that doesn't care about specific values of $f$. For instance, when we work with utility functions, all that matters is the order. Then we have the <font color=gree>single crossing</font> criterion: For $x' > x$, $t' > t$, 
+$$[f(x', t) \geq f(x, t)] \implies [f(x', t') \geq f(x, t')]$$
+
+Intuitively, this means 'signs are preserved': the difference of $x$ moves iwth the difference of $t$. Same generalization as above. 
+
+
+### Supermodularity
+
+A further generalization of our results: suppose $X$ is a lattice (ie. each pair has a $\sup$ and $\inf$), $T$ a partially ordered set. 
+Define $x \land y$ as the least upper bound of $(x,y)$; define $x \lor y$ as the greatest lower bound. 
+
+
+Then, $f$ is supermodular in $x$ if: 
+
+$$ 

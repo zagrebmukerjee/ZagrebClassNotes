@@ -1,7 +1,7 @@
 ---
 aliases:
-creation date: 2022-09-17 15:56
-date updated: 2022-09-17 15:56
+creation date: Friday, September 23rd 2022, 11:46 am
+date updated: Friday, September 23rd 2022, 3:57 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -11,7 +11,7 @@ tags:
 - '#status/🚧'
 ---
 
-# [[🚧Micro Theory III - Demand, Duality and Decomposition]]
+# [[Micro Theory III - Demand, Duality and Decomposition]]
 <span style = "font-size:120%"><i >Zagreb Mukerjee </i></span>
 
 
@@ -122,13 +122,65 @@ $$ a \in \arg \max_{px \leq w} u(x) \implies a \in \arg\min_{u(x) \geq u(a)}px $
 $$a \in \arg \min_{u(x) \geq \bar u} px \implies a \in \arg\max_{px \leq pa} u(x) $$
 The expenditure function $e(p,\bar u) = \min_{x: u(x) \geq \bar u} px$ is homogeneous of degree $1$, strictly increasing in $\bar u$, weakly increasing in $p$.
 
-This turns out to be the same problem as the utility maximization problem when either $\bar u = v(p,w)$ or $w = e(p,\bar u)$. 
+This turns out to be the same problem as the utility maximization problem when either $\bar u = v(p,w)$ or $w = e(p,\bar u)$. In other words, given some prices, the minimum income you need to attain a certain level of utility is the income for which that utility is the maximum level. 
 
 
 #### Concavity
 
-The expenditure function is concave in prices. Intuitively, if prices change and the consumption bundle doesn't change, expenditure linearly increases.
+The expenditure function is concave in prices. Intuitively, if prices change and the consumption bundle doesn't change, expenditure linearly increases. So substitution must be able to improve on linear increases - hence less-than-linear. 
 
-Let $p'' = \lambda p + (1-\lambda)p'$. We then want to show concavity: that for any value of $\lambda$,  $e(p'', u) < \max \{e(p,u), e(p',u)\}$.
+Let $p'' = \lambda p + (1-\lambda)p'$. We then want to show concavity: that for any value of $\lambda$, $e(p'', u) < \max \{e(p,u), e(p',u)\}$.
 
 Let $x'' \in x(p'', u)$ - exp minimizer under $p''$. Then $e(p'', u)$ is $p''x'' = \lambda p x'' + (1-\lambda)p'x''$. This cannot be greater than both $px''$ and $p'x''$ - so $x''$ must be affordable under one of $p, p'$. But we know that $u(x'') = u$ - so we cannot have both $e(p,u)$ and $e(p',u)$ be greater than $e(p'', u)$, since I could then lower expenditure under one of them by switching to $x''$.
+
+### Hicksian Demand
+
+Our definition of $x(p,w)$ is the vector of consumption maximizing utility given $p,w$. This is the <font color=gree>Marshallian demand</font>, also known as Walrasian or uncompensated demand. 
+
+Define a new demand function, $h(p,u)$:
+
+$$ h(p,u) = \underset{u(x) \geq \bar u}{\arg \min} \; px$$
+the expenditure minimizing demand for a utility level $\bar u$. In other words: suppose the prices $p$ were to change (increase) to $p'$. $h$ represents the consumption bundle meeting $\bar u$ while minimizing expenditure under the new price regime. This includes substituting away from more expensive goods/towards cheaper ones. 
+
+This new demand is called the <font color=gree>Hicksian demand</font>, or compensated demand. It has a few immediate properties:
+- $h$ is homogeneous of degree 0 in $p$ (i.e. all prices rise by the same factor -> no substitution)
+- Convex preferences mean that $h$ is convex (i.e. the indifference curve still can have flat regions). 
+- Strictly convex preferences mean that $h$ is SCX, and unique.
+
+
+For the latter: we want to show that $h$ is a convex set, given concave preferences. This is relatively straightforward. Consider $h'' = \lambda h + (1-\lambda) h'$ with $h, h' \in h(p, \bar u)$. By the concavity of preference it follows that $u$ is quasiconcave; then $u(h'') \geq u(h), u(h')$. So $h''$ is feasible under constraint $\bar u$. Given that $h, h' \in h(p, \bar u)$, then $ph = ph' = e(p,u)$, so $p h'' = \lambda ph + (1-\lambda) ph' = e(p, \bar u)$. 
+
+Under strictly convex preferences, $h'' \neq h', h \implies u(h'') > u(h), u(h')$; but $ph'' = e(p, \bar u)$, i.e. $h''$ an expenditure-minimizing bundle. If $ph'' = ph$, and $u(h'') > u(h)$, then we can reduce $h''$ to $j$ so that $pj < ph$ and $u(j) = \bar u$. Thus $h$ cannot be an expenditure minimizing bundle unless $h = h''$. So under strictly convex preferences, the Hicksian is a function. 
+
+#### Hicksian Duality
+We can see the following: 
+$$\begin{align}
+h(p, \bar u) &= x(p, e(p, \bar u))\\
+h(p, v(p, w)) &= x(p,w)\\
+ph(e, \bar u) &= e(p,u)\\
+u(x(p,w)) &= v(p,w)\\
+\end{align}$$
+with the last being repeated from before. 
+
+
+## Demand-Related Results
+
+Assume strictly convex preferences, i.e. SQCV utility, and $h$ and $x$ are functions. Then we can obtain a number of envelope-theorem results. 
+
+### Shepard's Lemma
+
+Start with the identity $ph(p,u) = e(p,u)$. Since it's an identity, we can implicitly differentiate with respect to some price $p_i$. 
+
+$$\begin{align}
+\frac{d}{dp_i}e(p,u) &= \frac{d}{dp_i}ph(p,u)\\
+&= \left(\frac{d}{dp_i}\right)ph(p,u) + p\frac{d}{dp_i}h(p,u)\\
+&= h_i(p,u)+ \begin{bmatrix} p_1 & p_2 & \ldots \end{bmatrix}\begin{bmatrix} dh_1/dp_i \\ dh_2/dp_i\\ \vdots \end{bmatrix} \\
+&= h_i(p,u) + \sum_k^L p_k dh_k/dp_i\\
+\end{align}$$
+The sum $\sum p_k d h_k/dp_i$ is how much expenditure changes on good $k$ with a marginal change in the price of $i$. But since Hicksian demand is compensated, the total expenditure change must be $0$ - thus this becomes 
+
+$$ \frac{d}{dp_i}e(p,u) = h_i(p,u)$$
+This is Shepard's lemma. 
+
+<font color=#F7B801>check this</font> #status/section/❓ 
+

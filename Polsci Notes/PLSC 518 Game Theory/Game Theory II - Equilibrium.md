@@ -102,3 +102,7 @@ A mixed strategy for $i \in N$ is a lottery over $S_i$.  Suppose $S_i = (s_1, s_
 Write $\sigma^* = (\sigma_1^*, \sigma^*_2, \ldots)$. Then I need $\sigma_i^* \in b(\sigma^*_{-1})$: my strategy has to be a best-response to everyone else's mixed strategy 
 
 Define $b(\sigma) = [b_1(\sigma_{-1}), \ldots, b_N(\sigma_{-N})]$. This is the best response for each player conditional on others playing $\sigma$ (some vector). Then $\sigma^*$ is an MSNE if $\sigma^* \in b(\sigma^*)$. This is a <font color=gree>fixed point</font> (a point that some function maps to itself)
+
+Simplex is closed, bounded, convex. 
+
+Key question. Is $b_i(\sigma_{-i})$ a function? We have frequently had best-response correspondences. 

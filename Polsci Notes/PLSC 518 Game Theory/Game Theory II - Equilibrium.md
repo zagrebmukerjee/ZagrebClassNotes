@@ -42,7 +42,7 @@ There can be more than 1 NE
 | Down | 0,0  | 1,1  |
 Here both up, left and down, right are NE. 
 
-## Strategy Mixing
+## Mixed Strategy Equilibrium
 
 Consider this game:
 
@@ -51,4 +51,13 @@ Consider this game:
 | odd  | 1,0  | 0,1    |
 | even | -c,1 | 1-c, 0 | 
 
+No pure strategy equilibrium exists. 
+
 One of Nash's major contributions was to point out that players aren't restricted to pure strategies; they can instead construct a randomization rule. 
+
+Does such a randomization rule exist? 
+
+
+
+
+## Nash Theorem

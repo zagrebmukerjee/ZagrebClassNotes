@@ -2,7 +2,7 @@
 aliases:
 - 'public good'
 creation date: Thursday, September 15th 2022, 2:58 pm
-date updated: Tuesday, September 27th 2022, 3:38 pm
+date updated: Tuesday, September 27th 2022, 3:53 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -78,9 +78,11 @@ But none of the <font color=gree>symmetric</font> profiles are NE for $n>1$ (ie.
 
 So if I want a symmetric equilibrium, I am SOL? Let's look at symmetric mixed strategies. 
 
-Suppose a player chooses some $\sigma_i$. I require that all $\sigma_i = \sigma$ for symmetry.  I require that each player be indifferent between calling and not based on others' $\sigma$. 
+Suppose a player chooses some $\sigma_i$. I require that all $\sigma_i = \sigma$ for symmetry. I require that each player be indifferent between calling and not based on others' $\sigma$. 
 
-For some $i$, I have $E(u_i|s_i = \text{call}) = 1-c$. I have $E(u_i|s_i = \text{no call}) = (1 - \sigma)^n$. So I need $(1- \sigma)^n = 1-c$; and so $\sigma = (1-c)^{n
+For some $i$, I have $E(u_i|s_i = \text{call}) = 1-c$. I have $E(u_i|s_i = \text{no call}) = 1-(1 - \sigma)^n$. So I need $1 - (1- \sigma)^{n-1} = 1-c$; and so $\sigma = 1 - c^{1/(n-1)}$. 
+
+Don't need to solve it to say that some $\sigma$ exists (given $0 < c < 1$) 0 can establish that $\sigma = 0$ has RHS $0$, and $\sigma = 1$ has RHS $1$. So I can say something exists by the intermediate value theorem. This is a sort of comparative static - I'm interested in how the result varies with $c$ and $n$, or I am interested in making inference about $c$ and $n$ having made observations of $\sigma$ 
 
 
 

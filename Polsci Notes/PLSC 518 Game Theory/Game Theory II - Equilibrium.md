@@ -64,6 +64,8 @@ For that to be true, we need an indifference condition. I need everyone else's r
 
 ## Public Goods Problem
 
+### Basic Problem
+
 Canonical problem in political science. Someone being murdered outside your apartment building. Some cost $c$ to calling the police. If anyone calls the police there is a collective benefit - everyone gets $1$. The good is nonexcludable. 
 
 $n$ players decide to call or not call. Payoff is $1-c$ if you make call. $1$ if someone else does. $0$ otherwise.
@@ -84,7 +86,13 @@ For some $i$, I have $E(u_i|s_i = \text{call}) = 1-c$. I have $E(u_i|s_i = \text
 
 Don't need to solve it to say that some $\sigma$ exists (given $0 < c < 1$) 0 can establish that $\sigma = 0$ has RHS $0$, and $\sigma = 1$ has RHS $1$. So I can say something exists by the intermediate value theorem. This is a sort of comparative static - I'm interested in how the result varies with $c$ and $n$, or I am interested in making inference about $c$ and $n$ having made observations of $\sigma$ 
 
+Note! Equilibrium condition is $1-c = (1- (1-\sigma)^{n-1})$. LHS is probability of public good being provided. It stays constant in $n$ - by this condition. So public good provision is the same in kansas and NYC. I can make this claim without solving for $\sigma$. 
 
+### Complexity
+
+In the last problem we said it takes any $1$ person to call to obtain the good. now we say that we need $k$ people to make the call (where $k < n$). There are still PSNE - $k$ players call - but they are still asymmetric. This time though, there is a symmetric NE: nobody calls. 
 
 
 ## Nash Theorem
+
+As long as $N$ finite, and $S_i$ finite for each $i \in N$:

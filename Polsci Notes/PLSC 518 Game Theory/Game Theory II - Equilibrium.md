@@ -62,9 +62,8 @@ For that to be true, we need an indifference condition. I need everyone else's r
 
 #status/section/🚧 
 
-## Public Goods Problem
 
-### Basic Problem
+## Public Goods Problem
 
 Canonical problem in political science. Someone being murdered outside your apartment building. Some cost $c$ to calling the police. If anyone calls the police there is a collective benefit - everyone gets $1$. The good is nonexcludable. 
 
@@ -95,6 +94,8 @@ In the last problem we said it takes any $1$ person to call to obtain the good. 
 
 ## Nash Existence Theorem
 
+### Setup
+
 Suppose $N$ finite, and $S_i$ finite for each $i \in N$. 
 
 A mixed strategy for $i \in N$ is a lottery over $S_i$. Suppose $S_i = (s_1, s_2, \ldots s_K)$. Then $\sum^K \sigma_k$ is $1$. This constraint looks like some sort of $n$-dimensional equivalents of the tetrahedron $z = 1 - x - y$. Call this a simplex: then we can say $\sigma_i$, some mixed strategy, is a vector that lies on the $d-1$ dimensional simplex $\Delta(S_i)$. 
@@ -103,12 +104,12 @@ Write $\sigma^* = (\sigma_1^*, \sigma^*_2, \ldots)$. Then I need $\sigma_i^* \in
 
 Define $b(\sigma) = [b_1(\sigma_{-1}), \ldots, b_N(\sigma_{-N})]$. This is the best response for each player conditional on others playing $\sigma$ (some vector). Then $\sigma^*$ is an MSNE if $\sigma^* \in b(\sigma^*)$. This is a <font color=gree>fixed point</font> (a point that some function maps to itself)
 
-Simplex is closed, bounded, convex. 
+Simplex is closed, bounded, convex. We can let $K \to \infty$ without too much difficulty. 
 
 Key question. Is $b_i(\sigma_{-i})$ a function? We have frequently had best-response correspondences. 
 
 
-## Kakutani's Fixed Point Theorem
+### Kakutani's Fixed Point Theorem
 - if $A$ is compact, convex nonempty set (for our purposes, compact being closed and bounded on RN by heine-borel thm)
 - and $C$ is an [[Micro Theory IIIb - Hemicontinuity|upper hemicontinuous]] convex valued correspondence
 - then $C: A \to A$ has a fixed point. 
@@ -119,4 +120,12 @@ In our case, $A$ is the set of simplexes $\Delta S_i$ and so on - the sets of po
 Convex-valued function makes sense. If I am indifferent between mixed strategies $\sigma$ and $\sigma'$ I should be indifferent between any linear combination of the two. And if $\sigma \in b(\cdot)$ and $\sigma' \sim \sigma$, $\sigma' \in b(\cdot)$. 
 
 
+
+### Berge/Maximum Theorem
+
+![[Micro Theory III - Demand, Duality and Decomposition#Maximum Theorem]]
+
+
+
+### Proof (sketch) of Nash Existence Theorem
 

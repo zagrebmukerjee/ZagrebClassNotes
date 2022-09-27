@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Friday, September 23rd 2022, 11:46 am
-date updated: Friday, September 23rd 2022, 3:57 pm
+date updated: Tuesday, September 27th 2022, 5:15 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -17,22 +17,21 @@ tags:
 
 ## Indirect Utility
 
-### Definitions and Properties
-#### Basics
+### Definition
 For any $p,w$, we can write demand functions $x(p,w)$, the solutions to the utility maximization problem. Define the <font color=gree>indirect utility</font> of $p,w$ to be 
 $$ v(p,w) = u(x(p,w))$$
 that is, the utility obtained when utility is maximized. 
 
 It's clear that $v$ is homogeneous degree $0$, since $x$ is $HD0$. $v$ must be strictly increasing in $w$ and weakly decreasing in $p$, by the fact of optimization. 
 
-#### Quasiconcavity
+### Quasiconcavity
 We also know that the indirect utility function is [[Micro Theory IIIa - Concave, Convex, Quasi|quasiconvex]], meaning that $v(\lambda x + (1-\lambda)y) \leq \max \{ v(x), v(y) \}$. How? 
 - ~~We could make an argument based on diminishing marginal returns. If eg. $p_1$ is very close to $0$ and $p_2$ is not, then maybe $x_2$ is much bigger than $x_1$ and I'd be better off if the prices are similar so that I could do some substitution. ~~
 - This is misleading!! We don't require the QCV of $u$ to get QCX of $v$. 
 
 Suppose that bundle $x$ is feasible under some convex combination of prices. Thus $(\lambda p + (1-\lambda) p') x \leq \lambda w + (1-\lambda)w'$. Distributing: $p\lambda x + (1-\lambda)p'x \leq \lambda w + (1-\lambda)w'$. Then I know that either $p \lambda x \leq \lambda w$ or $(1-\lambda)p'x \leq \lambda w'$; in other words, $x$ is feasible in one of the endpoints. So, by walras' law, one of the endpoints is weakly better than $x$. We didn't use quasiconcavity, though we did use monotonicity/local nonsatiation. 
 
-#### Marginal Utility of Income
+### Marginal Utility of Income
 Using $v$ we can recover the marginal utility of income. 
 
 $$\begin{align}
@@ -61,6 +60,7 @@ So how could I say that $\lambda = \sum_i\frac{\partial u}{\partial x_i} \frac{\
 
 Once again, because we are maximizing. Also because the latter is in fact an $x(p,w)$. so notation is sloppy.
 
+### Continuity
 #### Continuity Proof 1
 $v(p,w)$ is continuous. 
 
@@ -109,7 +109,9 @@ Can also prove continuity with a shortcut: the maximum theorem, aka Berge's theo
 Let $u: X \times \Theta \to \R$. We can think of $X$ as endogeneous, $\Theta$ as exogeneous. Can be something like $X$ is commodity space and $\Theta$ is $p,w$. 
 Let $B: \Theta \to X$, a continuous, compact-valued correspondence. This can be a budget constraint. 
 
-Then, $v = \max_{x \in B(\theta)}: \Theta \to R$ is continuous in $\theta$ - $p,w$, and the arg-max correspondence (the demand correspondence) is compact-valued, closed, and [[Micro Theory IIIb - Hemicontinuity|upper hemicontinuous]]. 
+Then, $v = \max_{x \in B(\theta)}: \Theta \to R$ is continuous in $\theta \in \Theta$.
+
+$x(\theta)$, which is ${x: x \in \arg \max u}$, the arg-max correspondence (the demand correspondence) is compact-valued, closed, and [[Micro Theory IIIb - Hemicontinuity|upper hemicontinuous]]. 
 
 
 ## Expenditure Minimization and Duality
@@ -183,4 +185,3 @@ $$ \frac{d}{dp_i}e(p,u) = h_i(p,u)$$
 This is Shepard's lemma. 
 
 <font color=#F7B801>check this</font> #status/section/❓ 
-

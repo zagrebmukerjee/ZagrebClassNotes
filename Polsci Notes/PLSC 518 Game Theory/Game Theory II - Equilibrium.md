@@ -95,4 +95,10 @@ In the last problem we said it takes any $1$ person to call to obtain the good. 
 
 ## Nash Theorem
 
-As long as $N$ finite, and $S_i$ finite for each $i \in N$:
+Suppose  $N$ finite, and $S_i$ finite for each $i \in N$. 
+
+A mixed strategy for $i \in N$ is a lottery over $S_i$.  Suppose $S_i = (s_1, s_2, \ldots s_K)$. Then $\sum^K \sigma_k$ is $1$. This constraint looks like some sort of $n$-dimensional equivalents of the tetrahedron $z = 1 - x - y$. Call this a simplex: then we can say $\sigma_i$, some mixed strategy, is a vector that lies on the $d-1$ dimensional simplex $\Delta(S_i)$. 
+
+Write $\sigma^* = (\sigma_1^*, \sigma^*_2, \ldots)$. Then I need $\sigma_i^* \in b(\sigma^*_{-1})$: my strategy has to be a best-response to everyone else's mixed strategy 
+
+Define $b(\sigma) = [b_1(\sigma_{-1}), \ldots, b_N(\sigma_{-N})]$. This is the best response for each player conditional on others playing $\sigma$ (some vector). Then $\sigma^*$ is an MSNE if $\sigma^* \in b(\sigma^*)$. This is a <font color=gree>fixed point</font> (a point that some function maps to itself)

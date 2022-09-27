@@ -2,7 +2,7 @@
 aliases:
 - 'public good'
 creation date: Thursday, September 15th 2022, 2:58 pm
-date updated: Tuesday, September 27th 2022, 3:53 pm
+date updated: Tuesday, September 27th 2022, 5:02 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -93,11 +93,11 @@ Note! Equilibrium condition is $1-c = (1- (1-\sigma)^{n-1})$. LHS is probability
 In the last problem we said it takes any $1$ person to call to obtain the good. now we say that we need $k$ people to make the call (where $k < n$). There are still PSNE - $k$ players call - but they are still asymmetric. This time though, there is a symmetric NE: nobody calls. 
 
 
-## Nash Theorem
+## Nash Existence Theorem
 
-Suppose  $N$ finite, and $S_i$ finite for each $i \in N$. 
+Suppose $N$ finite, and $S_i$ finite for each $i \in N$. 
 
-A mixed strategy for $i \in N$ is a lottery over $S_i$.  Suppose $S_i = (s_1, s_2, \ldots s_K)$. Then $\sum^K \sigma_k$ is $1$. This constraint looks like some sort of $n$-dimensional equivalents of the tetrahedron $z = 1 - x - y$. Call this a simplex: then we can say $\sigma_i$, some mixed strategy, is a vector that lies on the $d-1$ dimensional simplex $\Delta(S_i)$. 
+A mixed strategy for $i \in N$ is a lottery over $S_i$. Suppose $S_i = (s_1, s_2, \ldots s_K)$. Then $\sum^K \sigma_k$ is $1$. This constraint looks like some sort of $n$-dimensional equivalents of the tetrahedron $z = 1 - x - y$. Call this a simplex: then we can say $\sigma_i$, some mixed strategy, is a vector that lies on the $d-1$ dimensional simplex $\Delta(S_i)$. 
 
 Write $\sigma^* = (\sigma_1^*, \sigma^*_2, \ldots)$. Then I need $\sigma_i^* \in b(\sigma^*_{-1})$: my strategy has to be a best-response to everyone else's mixed strategy 
 
@@ -106,3 +106,17 @@ Define $b(\sigma) = [b_1(\sigma_{-1}), \ldots, b_N(\sigma_{-N})]$. This is the b
 Simplex is closed, bounded, convex. 
 
 Key question. Is $b_i(\sigma_{-i})$ a function? We have frequently had best-response correspondences. 
+
+
+## Kakutani's Fixed Point Theorem
+- if $A$ is compact, convex nonempty set (for our purposes, compact being closed and bounded on RN by heine-borel thm)
+- and $C$ is an [[Micro Theory IIIb - Hemicontinuity|upper hemicontinuous]] convex valued correspondence
+- then $C: A \to A$ has a fixed point. 
+
+
+In our case, $A$ is the set of simplexes $\Delta S_i$ and so on - the sets of possible randomization strategies. $A$ is nonempty, compact, convex. 
+
+Convex-valued function makes sense. If I am indifferent between mixed strategies $\sigma$ and $\sigma'$ I should be indifferent between any linear combination of the two. And if $\sigma \in b(\cdot)$ and $\sigma' \sim \sigma$, $\sigma' \in b(\cdot)$. 
+
+
+

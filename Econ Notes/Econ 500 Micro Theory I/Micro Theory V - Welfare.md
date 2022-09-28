@@ -22,11 +22,11 @@ Fortunately I have something else that's both measurable and an expression of ut
 
 Annoyingly, that requires that I pick some $\bar p$ so I can compare $e(\bar p', v(p,w)) - e(\bar p, v(p,w))$. Even more annoyingly, picking different values results in different assessments. Two natural values are $p$ and $p'$. These produce two different measures:
 
-## Compensating and Equivalent Variation
+## Compensating and Equivalent Variation, Consumer Surplus
 ### Equivalent Variation
 
 The first measure is <font color=gree>Equivalent Variation</font>, which uses the old prices $p$. Define this as: 
-$$ e(p, v(p',w)) - e(p, v(p,w)) = e(p, u') - w$$
+$$ e(p, v(p',w)) - e(p, v(p,w)) = e(p, u') - e(p,u) = e(p, u')- w$$
 In other words: how much less money would I spend to get the new utility under the old prices? Suppose the price of my favorite good has increased 10%. Then I will lose utility by having been made poorer, and mitigate that by substituting away from my favorite good.  
 
 Use the new indifference curve, and find the point with the same slope as the old budget set. Draw the new budget set and then look at the impllied change in $w$.
@@ -34,7 +34,7 @@ Use the new indifference curve, and find the point with the same slope as the ol
 ### Compensating Variation
 
 More intuitively there is <font color=gree>Compensating Variation</font>: 
-$$ e(p', v(p',w)) - e(p', v(p,w)) = w - e(p', u_0)$$
+$$ e(p', v(p',w)) - e(p', v(p,w)) = e(p', u') - e(p', u) = w - e(p', u_0)$$
 Under the new prices how much more money do I need to get the old utility? If the price of my favorite good goes up by 10%, this will be less than that, because I can reach the old utility by a mix of increasing the income and substituting away. Alternatively, how much would I have to pay you to accept this change?  
 
 Use the old IC, and find the point with the same slope as the new budget set. Draw that budget set and then look at implied change in $w$. 
@@ -43,8 +43,29 @@ Use the old IC, and find the point with the same slope as the new budget set. Dr
 Suppose prices rise $p' > p$ for some good. Then my EV is:
 
 $$\begin{align}
-EV(p, p', w) &= e(p, u') - e(p, 
+EV(p, p', w) &= e(p, u') - e(p, u) \\
+&= e(p, u') - w \\
+&= e(p, u') - e(p', u')\\
+&= \int_p^{p'} h(t, u') dt
 \end{align}$$
+that is, the area under the Hicksian demand for that good given the new utility. 
+
+My CV is 
+$$\begin{align}
+EV(p, p', w) &= e(p', u') - e(p', u) \\
+&= w - e(p',u) \\
+&= e(p, u) - e(p', u)\\
+&= \int_p^{p'} h(t, u) dt
+\end{align}$$
+Note - since $p < p'$ and $e(p,u) \leq e(p',u)$ I've done a double sign flip on this one. 
+
+Since $v(p,w)$ is weakly decreasing in price,  we know $u' < u$. Suppose this good is normal; then $h(t, u')$ is less than $h(t, u)$ for all $t$. So the CV is less than the EV. 
+
+### Consumer Surplus
+
+In practice, nobody is compensating consumers for price changes, and so $
+
+
 
 
 ## Scratch

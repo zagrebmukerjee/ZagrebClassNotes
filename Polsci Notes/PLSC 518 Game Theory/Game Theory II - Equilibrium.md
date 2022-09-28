@@ -104,7 +104,7 @@ Write $\sigma^* = (\sigma_1^*, \sigma^*_2, \ldots)$. Then I need $\sigma_i^* \in
 
 Define $b(\sigma) = [b_1(\sigma_{-1}), \ldots, b_N(\sigma_{-N})]$. This is the best response for each player conditional on others playing $\sigma$ (some vector). Then $\sigma^*$ is an MSNE if $\sigma^* \in b(\sigma^*)$. This is a <font color=gree>fixed point</font> (a point that some function maps to itself)
 
-Simplex is closed, bounded, convex. We can let $K \to \infty$ without too much difficulty. 
+Simplex is closed, bounded, convex. 
 
 Key question. Is $b_i(\sigma_{-i})$ a function? We have frequently had best-response correspondences. 
 
@@ -129,3 +129,8 @@ Convex-valued function makes sense. If I am indifferent between mixed strategies
 
 ### Proof (sketch) of Nash Existence Theorem
 
+Nash result: $\Gamma = <N, S, U>$, with $N$ and $S$ finite. Then mixed strategy NE exist. 
+
+what might be useful: $N$ finite, $S \in \R^N$ convex and compact, $u$ continuous and [[Micro Theory IIIa - Concave, Convex, Quasi|strictly quasiconcave]] (to get existence of unique best-responses)
+
+Then $b_i(s_{-i})$ is continuous and single valued. Then I can just use a regular ol fixed point theorem. 

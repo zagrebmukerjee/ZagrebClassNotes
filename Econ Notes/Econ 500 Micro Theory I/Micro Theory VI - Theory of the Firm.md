@@ -82,7 +82,8 @@ Then what's up with $\pi(p)$ and $y(p)$?
 
 ## Cost Minimization and Duality
 
-Suppose you have some $\pi(p)$. Then you can create: $\hat Y = \{y \in \R^L : py \leq \pi(p) \forall p >> 0 \}$. What can we say about $\hat Y$? ie. can I recover the technology from the profit function?
+Suppose you have some $\pi(p)$. Then you can create: $\hat Y = \{y \in \R^L : py \leq \pi(p) \forall p >> 0 \}$ - ie every price is positive. What can we say about $\hat Y$? ie. can I recover the technology from the profit function this way? But I haven't incorporated the technology...
 
-Like integrability: we asked if we can get preferences out of expenditure function. Expenditure function is challenging b/c e(p,u) has a u.... we don't have that here. 
+Like integrability: we asked if we can get preferences out of expenditure function. Expenditure function is challenging b/c e(p,u) has a u.... we don't have that here. <font color=#F7B801>but isn't that just cheatiing</font>
 
+At the least we can see that $Y \subseteq \hat Y$: if $y' \in Y$ and $py' \geq \pi(y)$ then $\pi(y') \geq py' \geq \pi(y)$ and this contradicts the profit fn definition. 

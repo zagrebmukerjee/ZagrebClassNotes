@@ -6,6 +6,7 @@ aliases:
 - 'convex (econ)'
 - 'quasiconvex'
 - 'strictly quasiconvex'
+- 'strictly convex'
 creation date: Thursday, September 15th 2022, 9:31 am
 date updated: Thursday, September 15th 2022, 2:47 pm
 
@@ -24,8 +25,10 @@ tags:
 ### Convexity Definitions
 - A <font color=gree>convex combination</font> of $x,y$ is $\lambda x + (1- \lambda) y$. 
 - A set $A$ is convex if for any $x,y \in A$, the convex combo of $x,y$ is also in $A$.
+- A set is strictly convex if for any $x,y \in A$, the convex combo is in the interior of $A$
 - Preferences $\succsim$ are convex if the upper contour sets are convex, i.e. if $\forall x \in X$ the set $y \in X: y \succsim x$ is convex.
 - Preferences are strictly convex if $y \succsim x$ and $z \succsim x$ with $y \neq z$ means that all convex combinations of $y, z$ are strictly preferred to $x$. 
+
 
 ### Quasiconcavity Definitions
 Smiley face

@@ -73,6 +73,16 @@ Assume that $Y$ is as above: nonempty, closed, no free lunch, free disposal; ass
 
 Then what's up with $\pi(p)$ and $y(p)$?
 - $\pi$ is homogeneous of degree $1$. Think of it as expenditure function: changing prices doesn't change relative prices and so isoprofit lines have the same slope. So tangency doesn't change (only the height and steepness of the surface)
-- $\pi$ is convex
+- $\pi$ is convex $p y(p)$. If all prices change then HD1; but if a single price changes then you will substitute away from that good
 - $y(p)$ is homogeneous of degree $0$ in $p$.
-	- Convex production set means convex supply function. Strictly convex production set is $y(p)$ singleton. 
+	- Convex production set means convex supply correspondence. But not unique $y$ - imagine again our flat spots in production set frontier.  
+	- Strictly convex production set is $y(p)$ singleton. 
+
+<font color=#F7B801>we start here with rpoduction set. why didn't we start with consumption set and expenditure minimization. Or start here with cost minimization</font>
+
+## Cost Minimization and Duality
+
+Suppose you have some $\pi(p)$. Then you can create: $\hat Y = \{y \in \R^L : py \leq \pi(p) \forall p >> 0 \}$. What can we say about $\hat Y$? ie. can I recover the technology from the profit function?
+
+Like integrability: we asked if we can get preferences out of expenditure function. Expenditure function is challenging b/c e(p,u) has a u.... we don't have that here. 
+

@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Monday, September 26th 2022, 10:58 am
-date updated: Monday, September 26th 2022, 12:27 pm
+date updated: Wednesday, September 28th 2022, 6:44 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -59,12 +59,34 @@ EV(p, p', w) &= e(p', u') - e(p', u) \\
 \end{align}$$
 Note - since $p < p'$ and $e(p,u) \leq e(p',u)$ I've done a double sign flip on this one. 
 
-Since $v(p,w)$ is weakly decreasing in price,  we know $u' < u$. Suppose this good is normal; then $h(t, u')$ is less than $h(t, u)$ for all $t$. So the CV is less than the EV. 
+Since $v(p,w)$ is weakly decreasing in price, we know $u' < u$. Suppose this good is normal; then $h(t, u')$ is less than $h(t, u)$ for all $t$. So the CV is less than the EV. 
 
 ### Consumer Surplus
 
-In practice, nobody is compensating consumers for price changes, and so $
+In practice, nobody is compensating consumers for price changes, and so $h$ tends to be hard to observe ("economists are measuring the unmeasurable with units that don't exist"). We are stuck instead with observing the Marshallian demand $x$. So we can create a measure of convenience, the <font color=gree>consumer surplus</font>. Define this as:
 
+$$ \int_p^{p'} x(t, w) dt$$ 
+### Relationship of the Three
+
+The Slutsky equation lets us bring these into relation with each other. Intuitively, the Marshallian falls more steeply with price rises for normal goods than the Hicksian, since the Marshallian drop is the Hicksian drop plus a negative income effect. 
+
+
+For a normal good I know that $x\frac{dx}{dw} > 0$. So $\frac{dx(p,w)}{dp} = \frac{dh(p, v(p,w))}{dp} - x\frac{dx}{dw}$; so $\frac{dx(p,w)}{dp_i} < \frac{dh(p, v(p,w))}{dp}$. So as price rises by $dp$, $x(p,w)$ falls more than $h(p,v(p,w))$, and thus lies below it. 
+
+We could reason backwards about $x(p', w)$ and $h(p', v(p',w))$. Before the price change $x(p, w)$ was higher than $h(p, v(p', w))$ since it captured both that good $\l$ was more attractive than other goods, and that the lower price made the consumer in effect wealthier. 
+
+Since this is true for all price rises $dp$ we can establish that $$ \int_{\Delta p} h(p, u') dp \geq \int_{\Delta p} x(p, e(p,u')) dp \geq \int_{\Delta p} h(p, u) dp $$ with $\Delta p > 0$. So $CV < CS < EV$ (for price rise of a normal good). 
+
+As the income effect becomes $0$ these quantities converge.
+
+
+## Aggregation
+
+When can we talk about aggregate $x(p,w)$ and aggregate CV, EV etc? The aggregate social demand is $x_1(p, w_1) + x_2(p, w_2) \ldots$. 
+
+We want to say that there exists some "representative consumer" - a mega-consumer with demand function $x(p,w^*)$. We want this demand function to be identical to the aggregation of the individual demand functions. 
+
+One 
 
 
 

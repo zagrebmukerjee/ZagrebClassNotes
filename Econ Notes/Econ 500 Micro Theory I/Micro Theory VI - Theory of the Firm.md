@@ -23,36 +23,21 @@ We will assume some properties:
 - $Y$ closed. 
 - $Y \cap \R_+ = \emptyset$. In other words, you can't make a production decision that has positive quantities of all outputs. No free lunch/possibility of inaction.
 - $y \in Y$ means that $y' \leq y$ is also in $Y$. This is 'free disposal'. If I can produce $x_2$ with $x_1$ at $(-1,3)$ then I could also buy and throw out $2$ units of $x_1$ with $-3,3$. 
-- 
+- Convexity
 
-
-
-## Live Notes
-
-Production set common type: 
-$y \in \R^L: F(y) \leq 0$
-
-Inputs? outputs? Well - that's all in F. but no need to impose unnecessary structure on the production set?
-
-Production set properties: 
-- nonempty
-- closed
-- $y \cap R_+ = {0}$ = no free lunch, possiblity of ination
-- $y \in Y, y' \leq y \implies y' \in Y$ (free disposal)
-
-we also have convexity of the production set. 
-
-
-popular, optional properties
+There are some popular properties, but these are optional: 
 - Returns to scale decreasing: $y \in y \implies \alpha y \in Y\; \forall \alpha\; \in [0,1]$
-	- increasing $y \in y \implies \alpha y \in Y\; \forall \alpha\; \geq 1$
-	- constant $y \in y \implies \alpha y \in Y\; \forall \alpha \geq 0$
+- increasing $y \in y \implies \alpha y \in Y\; \forall \alpha\; \geq 1$
+- constant $y \in y \implies \alpha y \in Y\; \forall \alpha \geq 0$
 
-These are also convex combinations? 
+note that in this setup, constant returns are a special case of decreasing returns. 
+
 
 Convexity implies non-increasing returns to scale. Almost by definition. But converse does not hold. To see why, consider production set that's lower contour set of 
 $$ F(x) = \begin{cases} \log(-x) & x \leq 0\end{cases}$$
-but create a little bump in it. a small enough bump preserves decreasing returns but doesn't keep convexity. 
+but create a little bump in it. A small enough bump preserves decreasing returns but doesn't keep convexity. 
+
+
 
 
 ## Profit Maximization

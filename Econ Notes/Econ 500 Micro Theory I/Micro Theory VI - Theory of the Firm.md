@@ -14,6 +14,17 @@ tags:
 # [[Micro Theory VI - Theory of the Firm]]
 <span style = "font-size:120%"><i >Zagreb Mukerjee </i></span>
 
+## Production
+
+We can represent possible production decisions as a production set, some set in the commodity space. Common example: $y\in \R^L$ with $F(y) \leq 0$ for some $F$. The $F$ contains the information about what is an input and what's an output - we don't yet need to impose that structure. 
+
+We will assume some properties:
+- $Y$ nonempty. 
+- $Y$ closed. 
+- $Y \cap \R_+ = \emptyset$. In other words, you can't make a production decision that has positive quantities of all outputs. No free lunch/possibility of inaction.
+- $y \in Y$ means that $y' \leq y$ is also in $Y$. This is 'free disposal'. If I can produce $x_2$ with $x_1$ at $(-1,3)$ then I could also buy and throw out $2$ units of $x_1$ with $-3,3$. 
+- 
+
 
 
 ## Live Notes

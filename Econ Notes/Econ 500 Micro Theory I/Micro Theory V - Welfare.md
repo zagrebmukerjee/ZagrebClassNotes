@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Monday, September 26th 2022, 10:58 am
-date updated: Wednesday, September 28th 2022, 6:44 pm
+date updated: Thursday, September 29th 2022, 4:00 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -86,7 +86,11 @@ When can we talk about aggregate $x(p,w)$ and aggregate CV, EV etc? The aggregat
 
 We want to say that there exists some "representative consumer" - a mega-consumer with demand function $x(p,w^*)$. We want this demand function to be identical to the aggregation of the individual demand functions. 
 
+When can I do this?
 
+Suppose I use $\sum w_i = w$. A natural candidate. For this to work requires that changes in the wealth distribution don't change aggregate demand. 
+
+#status/section/🚧 
 
 
 ## Scratch

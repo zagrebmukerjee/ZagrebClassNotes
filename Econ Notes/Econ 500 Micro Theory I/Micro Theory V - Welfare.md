@@ -86,7 +86,6 @@ When can we talk about aggregate $x(p,w)$ and aggregate CV, EV etc? The aggregat
 
 We want to say that there exists some "representative consumer" - a mega-consumer with demand function $x(p,w^*)$. We want this demand function to be identical to the aggregation of the individual demand functions. 
 
-One 
 
 
 

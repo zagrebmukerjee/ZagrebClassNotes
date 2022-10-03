@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Wednesday, September 28th 2022, 10:10 am
-date updated: Monday, October 3rd 2022, 3:41 pm
+date updated: Monday, October 3rd 2022, 4:10 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -42,6 +42,8 @@ but create a little bump in it. A small enough bump preserves decreasing returns
 
 ## The Firm Problem
 
+### Profit and Supply Functions
+
 The firm wants to maximize profits. This maximization gives us two functions: profit $\pi$ and input/output $y$. Define:
 
 $$ \pi(p) = \max_{y \in Y} py $$
@@ -56,54 +58,35 @@ $$ \pi = \max_{F(y) \leq 0} py$$
 This harkens back to the definition of the production set as the lower contour set of some production function (normalized as $f(z)-q$). 
 Writing it this way gets us FOC $p_i = \lambda (dF/dy)$; if we go further and say the PMP is $\max_{z \in Y} pf(z) - wz$ that gives us the familiar FOC $p (df/dz_i) = w_i$, each factor is paid its marginal product. 
 
-
-
-
-
-
-## Profit Maximization
-
-### Intro
-
-Profit maximization: $\max_{y \in Y} py$. Let $\pi(p) = \max_{y \in Y} py$ - the maximized profit. Called the profit function. $y(p)$ is a supply curve, $\arg \max_{y \in Y} py$. 
-
-Frequently you will know about outputs and inputs, so can write $p_q q - D_z z$ with $q \subseteq \delta(z)$. Rev - costs
-
-
-- Function is continuous. But not on a compact set. So question is open. We can't just have the Weierstrass theorem
-- Increasing returns: no maximum.
-- Decreasing returns? Not necess maximum. 
-	- Constant returns is a special case of decreasing returns. So .... no. 
-	- What about strictly decreasing returns? Once more go back to $\log -x$. 
-
-
-We will look at the problems where the maximum exists. But this is a more demanding requirement than it was for utility maximization, which really only required continuity <font color=#F7B801>is that true</font>
+#### Properties
+Suppose $Y$ is no free lunch, free disposal, nonempty and closed: suppose PMP solvable. Then
+- $\pi$ is homogeneous of degree $1$ in $p$
+	- $\pi(p) = \max_{y \in Y} py$. But this is the same as $\max_{y \in Y} \lambda p y$ for $\lambda > 0$. 
+- $\pi$ is convex in $p$
+	- Suppose $\pi(p)$, $\pi(p')$; let $p' = \lambda p + (1-\lambda)p'$. Let $y'' = \arg \max_{y \in Y} \pi(p'')$. 
+	Then:
+	$$
+	\begin{align*}
+	    \pi(p'') &= p''y'' \\
+	    &= \lambda p y'' + (1-\lambda) p' y''\\
+	    &\leq \lambda \pi(p) + (1-\lambda)\pi(p')
+	\end{align*}
+	$$
+	The last line follows from homogeneity (part 1) and from the fact that $\pi(p)$ is the max of $py$ for $y \in Y$; so if $y'' \in Y$ then $py'' \leq \pi(p)$
+- $y(p)$ is homogeneous of degree $0$ in $p$
+	- $y(p)$ is $\arg \max_{y \in Y} py$. Then $y(\lambda p)$ is $\arg \max_{y \in Y} \lambda py$, but for $\lambda > 0$ this is the same as $y$. 
+- If $Y$ is [[Micro Theory IIIa - Concave, Convex, Quasi|convex]], $y(p)$ is convex. If $Y$ is strictly convex, $y(p)$ is a singleton.
+	- $y(p)$ is $\arg \max_{y \in Y} py$. First suppose $Y$ convex. Then let $y, y'$ be in $y(p)$. Define $y'' = \lambda y + (1-\lambda)y'$. Then $py'' = \lambda p y + (1-\lambda) py'$. But $py = py' = \pi(p)$, and so $py'' = py$, and $y'' \in y(p)$. 
+	- Now suppose $Y$ strictly convex. Then as above have $y'' = \lambda y + (1-\lambda)y'$. But by strict convexity there is a ball $B_r$ of radius $r$ around $y''$ such that $B_r \subseteq Y$. In that ball there is some point $\hat y \in Y, \hat y >> y''$; and so $p\hat y >p y''$. But then $p \hat y > \lambda p y + (1-\lambda)py'$ and so $p \hat y > \pi(p)$; a contradiction. 
 
 
 
 
 
 
-### Solving the Problem
-$$\max_{y \in \R: F(y \leq 0} py$$
-OK so just do your FOC thing to get $p_\l = \lambda \frac{dF}{d\l}$. or if you write it $pf(z) - wz$ then $pf'_\l(z) = w_\l$. Each factor gets paid their marginal product. 
+## Cost Minimization 
 
 
-Assume that $Y$ is as above: nonempty, closed, no free lunch, free disposal; assume PMP solvable. 
+## Duality or Integrability 
 
-Then what's up with $\pi(p)$ and $y(p)$?
-- $\pi$ is homogeneous of degree $1$. Think of it as expenditure function: changing prices doesn't change relative prices and so isoprofit lines have the same slope. So tangency doesn't change (only the height and steepness of the surface)
-- $\pi$ is convex $p y(p)$. If all prices change then HD1; but if a single price changes then you will substitute away from that good
-- $y(p)$ is homogeneous of degree $0$ in $p$.
-	- Convex production set means convex supply correspondence. But not unique $y$ - imagine again our flat spots in production set frontier.  
-	- Strictly convex production set is $y(p)$ singleton. 
-
-<font color=#F7B801>we start here with rpoduction set. why didn't we start with consumption set and expenditure minimization. Or start here with cost minimization</font>
-
-## Cost Minimization and Duality
-
-Suppose you have some $\pi(p)$. Then you can create: $\hat Y = \{y \in \R^L : py \leq \pi(p) \forall p >> 0 \}$ - ie every price is positive. What can we say about $\hat Y$? ie. can I recover the technology from the profit function this way? But I haven't incorporated the technology...
-
-Like integrability: we asked if we can get preferences out of expenditure function. Expenditure function is challenging b/c e(p,u) has a u.... we don't have that here. <font color=#F7B801>but isn't that just cheatiing</font>
-
-At the least we can see that $Y \subseteq \hat Y$: if $y' \in Y$ and $py' \geq \pi(y)$ then $\pi(y') \geq py' \geq \pi(y)$ and this contradicts the profit fn definition. 
+Suppose I can observe a profit function $\pi$. Then can I say something about the technology - i.e. the relation embodied in $Y$? This might be nice because profit functions and cost functions are much more observable. 

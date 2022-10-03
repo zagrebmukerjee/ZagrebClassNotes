@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Wednesday, September 28th 2022, 10:10 am
-date updated: Wednesday, September 28th 2022, 10:29 am
+date updated: Monday, October 3rd 2022, 3:41 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -48,6 +48,13 @@ $$ \pi(p) = \max_{y \in Y} py $$
 $$ y(p) = \arg \max_{y \in Y} py $$
 We don't get a maximum for free, like we did with utility maximization and the Weierstrass Extreme Value theorem. The utility 'production set' is the budget set, which is closed and bounded hence compact. In contrast, the production set exhibits free disposal which means it's not bounded below \[if $y_1, y_2, \ldots$ is a possible production relation, so is $y_1 - a_1, \ldots$; recall that $Y$ is $(q,-z)$, which means that 'free disposal' is buying too much of some input and tossing it, or producing less than you could (up to buying instead of selling, I guess\].
 
+Increasing returns are sufficient for no solution. Decreasing returns are insufficient for a solution. 
+
+We can add a bit more structure: 
+
+$$ \pi = \max_{F(y) \leq 0} py$$
+This harkens back to the definition of the production set as the lower contour set of some production function (normalized as $f(z)-q$). 
+Writing it this way gets us FOC $p_i = \lambda (dF/dy)$; if we go further and say the PMP is $\max_{z \in Y} pf(z) - wz$ that gives us the familiar FOC $p (df/dz_i) = w_i$, each factor is paid its marginal product. 
 
 
 
@@ -77,7 +84,7 @@ We will look at the problems where the maximum exists. But this is a more demand
 
 
 
-### Solving the problem
+### Solving the Problem
 $$\max_{y \in \R: F(y \leq 0} py$$
 OK so just do your FOC thing to get $p_\l = \lambda \frac{dF}{d\l}$. or if you write it $pf(z) - wz$ then $pf'_\l(z) = w_\l$. Each factor gets paid their marginal product. 
 

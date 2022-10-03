@@ -18,6 +18,8 @@ tags:
 
 We can represent possible production decisions as a production set, some set in the commodity space. Common example: $y\in \R^L$ with $F(y) \leq 0$ for some $F$. The $F$ contains the information about what is an input and what's an output - we don't yet need to impose that structure. 
 
+When we do we will write $Y = \{ (q, -z): q \leq f(z)\}$ as a neat way of ordering our signs reasonably. 
+
 We will assume some properties:
 - $Y$ nonempty. 
 - $Y$ closed. 
@@ -36,6 +38,18 @@ note that in this setup, constant returns are a special case of decreasing retur
 Convexity implies non-increasing returns to scale. Almost by definition. But converse does not hold. To see why, consider production set that's lower contour set of 
 $$ F(x) = \begin{cases} \log(-x) & x \leq 0\end{cases}$$
 but create a little bump in it. A small enough bump preserves decreasing returns but doesn't keep convexity. 
+
+
+## The Firm Problem
+
+The firm wants to maximize profits. This maximization gives us two functions: profit $\pi$ and input/output $y$. Define:
+
+$$ \pi(p) = \max_{y \in Y} py $$
+$$ y(p) = \arg \max_{y \in Y} py $$
+We don't get a maximum for free, like we did with utility maximization and the Weierstrass Extreme Value theorem. The utility 'production set' is the budget set, which is closed and bounded hence compact. In contrast, the production set exhibits free disposal which means it's not bounded below \[if $y_1, y_2, \ldots$ is a possible production relation, so is $y_1 - a_1, \ldots$; recall that $Y$ is $(q,-z)$, which means that 'free disposal' is buying too much of some input and tossing it, or producing less than you could (up to buying instead of selling, I guess\].
+
+
+
 
 
 
@@ -57,6 +71,9 @@ Frequently you will know about outputs and inputs, so can write $p_q q - D_z z$ 
 
 
 We will look at the problems where the maximum exists. But this is a more demanding requirement than it was for utility maximization, which really only required continuity <font color=#F7B801>is that true</font>
+
+
+
 
 
 

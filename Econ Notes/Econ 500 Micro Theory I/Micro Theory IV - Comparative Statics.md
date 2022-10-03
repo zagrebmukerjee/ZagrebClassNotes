@@ -1,14 +1,13 @@
 ---
 aliases:
 creation date: Friday, September 23rd 2022, 10:21 am
-date updated: Saturday, September 24th 2022, 1:37 pm
+date updated: Monday, October 3rd 2022, 3:23 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags: 
 - '#types/classes'
-- '#status/🚧'
 ---
 
 # [[Micro Theory IV - Comparative Statics]]
@@ -166,5 +165,3 @@ $$ f(x) \geq f(x \land y) \implies f(x \lor y) \geq f(y)$$
 
 
 If $X$ and $T$ are $\R^j, \R^k$, and $f$ is twice-differentiable, then we can say $x \land y$ is the elementwise maximum, and this maps to $f_{xy} \geq 0$ for all $x,y$. So we can see we have an even stronger condition. 
-
-

@@ -1,7 +1,7 @@
 ---
 aliases:
-creation date: 2022-10-04 12:47
-date updated: 2022-10-04 12:47
+creation date: Tuesday, October 4th 2022, 12:47 pm
+date updated: Tuesday, October 4th 2022, 1:00 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -30,8 +30,11 @@ $$\begin{align}
 P(X \in A) &= P(X_1 \in (a, b] \cap X_2 \in (c,d])\\
 &= P(X_1 \leq b \cap X_1 > a \cap X_2 \leq d \cap X_2 > c)\\
 &= P(X_1 \leq b \cap (X_1 \leq a)^c \cap X_2 \leq c \cap (X_2 \leq d)^c)\\
-&= F_{12}(a,c) + F_{12}(b,d)
+&= F_{12}(a,c) - F_{12}(b,c) - F_{12}(a, d) + F_{12}(b,d) \\
 \end{align}$$
+
+Imagine defining a square as areas below points, ie 'down and to the left'. So: area below top right  corner, minus area below bottom right corner, minus area below top left corner. But then you've double counted so add back the area below the bottom left corner.
+
 ```
 
 The density function $f_X(x)$ is $\frac{\partial^n F_X}{\partial x_1 \ldots \partial x_n}$ where $F_X$ is differentiable (which we've said is almost everywhere). This is compatible with the RN-theorem derivative construction based on the measure $P_X$. We can then say that 
@@ -39,3 +42,7 @@ The density function $f_X(x)$ is $\frac{\partial^n F_X}{\partial x_1 \ldots \par
 $$P_X(X\in A) = \int_A f_X(x_1, \ldots ) dx_1 \ldots dx_n$$
 which is an $n-$integral. 
 
+So for the example above, we had $$F_{12}(a,c) - F_{12}(b,c) - F_{12}(a, d) + F_{12}(b,d)$$
+which we could then rewrite as 
+$$ \int_a^b\int_c^d f_{12}(x_1, x_2) dx_2 dx_1$$
+Since this is on a square, [[Fubini's Theorem]] tells us the integrals are interchangeable. 

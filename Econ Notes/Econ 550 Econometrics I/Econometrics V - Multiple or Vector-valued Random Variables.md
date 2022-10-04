@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Tuesday, October 4th 2022, 12:47 pm
-date updated: Tuesday, October 4th 2022, 3:23 pm
+date updated: Tuesday, October 4th 2022, 5:50 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -126,10 +126,15 @@ f_{XY}(x,y) &= \frac{d^2}{dxdy}F_{XY}(x,y) \\
 \end{align}$$
 Either of these conditions offer convenient ways to check if two RVs are independent: they are true iff independence
 
-Proof: let $D = \{ x_i\}, G = \{ y_i\}$ arbitrary sets.
+Proof: in discrete case, let $D = \{ x_i\}, G = \{ y_i\}$ arbitrary sets.
 $$\begin{align}
 P(X\in D, Y \in G) &= P\left(X \in \bigcup_i \{x_i\}, Y \in \bigcup_j \{ y_j\}\right)\\
-&= \sum_i P\left( X \in \{x_i\}, Y \in  \right)\\	
+&= \sum_i P\left( X \in \{x_i\}, Y \in \bigcup_j \{ y_j\} \right)\\	
+&= \sum_i \sum_j P\left( X \in \{x_i\}, Y \in \{ y_j\} \right)\\	
+&= \sum_i \sum_j f_{XY}(x_i, y_j) \\
+&= \sum_i \sum_j f_{X}(x_i)f_Y(y_i) \\
+&= \sum_i f_{X}(x_i) \sum_j f_Y(y_i) \\
+&= P(X = x, Y= y)
 \end{align}$$
 
 #### Functions of Independent RVs
@@ -187,3 +192,4 @@ EY &= Eg(X)\epsilon\\
 But $X,Y$ are obviously (super) dependent.
 
 ```
+

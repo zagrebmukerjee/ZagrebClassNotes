@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Tuesday, October 4th 2022, 12:47 pm
-date updated: Tuesday, October 4th 2022, 2:52 pm
+date updated: Tuesday, October 4th 2022, 3:03 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -116,3 +116,31 @@ Extend our previous independence concept. We had defined independent events: $A 
 
 Now we can say random variables $X$ and $Y$ are independent if $F_{XY} = F_XF_Y$. This is straightforward: $F_{XY}(x,y) = P(X \in (-\infty, x] \cap Y \in (-\infty, y]) = P(X \in (-\infty, x])P(Y \in (-\infty, y]) = F_X(x)F_Y(y)$. 
 
+We can differentiate: 
+
+$$\begin{align}
+f_{XY}(x,y) &= \frac{d^2}{dxdy}F_{XY}(x,y) \\
+&= \frac{d^2}{dxdy}F_X(x)F_Y(y) \\
+&= \frac{d}{dy}F_Y(y)f_X(x)\\
+&= f_Y(y)f_X(x)\\
+\end{align}$$
+Either of these conditions offer convenient ways to check if two RVs are independent. 
+
+#### Functions of Independent RVs
+If $X,Y$ are independent then $g(X), h(Y)$ are independent. Intuitively, knowing $g(X) = x$ is weakly less information than knowing $X =x$ (cannot be more). 
+
+Proof: 
+Let $A \in \Omega_g, B \in \Omega_h$. Then: 
+$$\begin{align}
+P(g(X) \in A \cap h(Y) \in B) &= P(X \in \{x: g(x) \in A\} \cap Y \in \{y:h(y) \in B\})\\
+&= P(X \in \{x: g(x) \in A\})P( Y \in \{y:h(y) \in B\})\\
+\end{align}$$
+
+The information idea is reflected in the fact that $\{y:h(y) \in B\}$ has weakly more elements/greater measure than $B$. 
+
+
+## Expectation
+
+The expectation of a random vector $(X_1, \ldots, X_n)$ is $(EX_1, \ldots, EX_n)$. From this definition:
+- $E(g(X)) = (Eg(X_1), \ldots, Eg(X_n))$
+- $E(X + Y) = EX + EY$

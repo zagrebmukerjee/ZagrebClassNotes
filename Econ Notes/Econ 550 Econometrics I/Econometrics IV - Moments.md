@@ -98,7 +98,7 @@ The first few moments have special names/properties:
 3) $E[X - E(X)]^3$ is skewness. 
 4) $E[X - E(X)]^4$ is kurtosis. 
 
-Moments 3 and 4 take advantage of the sign properties of the cubic and quartic. It's more intuitive to normalize them to the variance, so we have $E\left( \dfrac{x - E(X)}{\sigma_X}\right)^r$, the moments of the $z$-scores. So then we can compare to eg. the kurtosis of the standard normal (3). #status/section/❓ <font color=#F7B801>check this</font>
+Moments 3 and 4 take advantage of the sign properties of the cubic and quartic. It's more intuitive to normalize them to the variance, so we have $E\left( \dfrac{x - E(X)}{\sigma_X}\right)^r$, the moments of the $z$-scores. So then we can compare to eg. the kurtosis of the standard normal (3). 
 
 
 ### Moment Generating Function

@@ -137,3 +137,56 @@ There are 'extension theorems' that let you take $P: \mathcal G \to \R$ and exte
 
 Example: The Lebesgue measure on $[0,1]$ is already a probability measure. Suppose we have $\mathcal F$ as all finite unions of disjoint intervals. Then the probability is just the sum of the interval lengths. 
 
+
+
+## Conditional Probability
+
+Suppose you throw a dart at a board with a Venn Diagram on it. You're blindfolded and you want to know whether your dart landed in $A$. 
+
+![[Econometrics II - Working with Random Variables 2022-09-15 18.13.21.excalidraw|300]]
+
+I tell you the dart landed in $B$. What can I say about whether it landed on $A$?
+
+This is a <font color=gree>conditional probability</font>. We can see that the probability should scale with the probability of $A \cap B$, so we can say $P(A) = kP(A\cap B)$. We want $P(B|B) = 1$; so we can then see that $P(B|B) = 1 = kP(B\cap B) = k P(B)$ and so $k = 1/P(B)$. 
+
+This gives us the formula that 
+
+$$ P(A|B) = P(A\cap B)/ P(B)$$
+
+#### The Conditional Probabilty Measure
+This gives us a new probability space, $(\Omega, \mathcal F, P( \cdot | B))$. Is $P(\cdot|B)$ a valid distribution?
+- It's nonnegative, since both $P(B)$ and $P(A|B)$ are nonnegative (since $P$ is a distribution). 
+- The probability of $\Omega$ is $1$: $P(\Omega|B) = P(\Omega \cap B)/P(B)$
+
+Countable additivity is always fun... 
+$$P(\bigcup A_i |B ) = P\left[ \left(\bigcup A_i\right) \cap B \right]/ P(B) $$
+By the distributive property of intersections this becomes 
+
+$$P\left[ \bigcup (A_i \cap B\right)] / P(B) $$
+Since $A_i$ are disjoint, $A_i \cap B$ are disjoint, and in $\mathcal F$. So by additivity of $P$ we can write this as $\sum_i P(A_i \cap B)/ P(B) = \sum_i P(A_i |B)$. 
+
+#### Conditional Independence
+
+To say $C$ is <font color=gree>independent</font> of $B$ is to say that knowing $B$ gives us nothing about $C$. Disjoint events are not independent! Ex. $B$, $B^c$ are about as dependent as it gets...
+
+Event $A$ is independent of $B$ - written also $A \indep B$ - if $P(A|B) = P(A)$. 
+
+We can then say $P(A\cap B)/P(B) = P(A)$, so $P(A \cap B) = P(A)P(B)$. Both are used as independence definitions. 
+
+$\emptyset$ and $\Omega$ are both independent of everything. 
+
+We can extend this: If $A \indep B$ then 
+- $A \indep B^c$
+- $A^c \indep B$
+- $A^c \indep B^c$
+
+Proof: #status/section/🚧 
+
+Extend this to random variables: $X,Y$ are independent if for all sets $A \in \Omega_X$ and $B \in \Omega_Y$, the events $X \in A$ and $Y \in B$ are independent. We'll come back to this. 
+
+
+
+
+![[2002.1 Probability#Bayes' Rule]]
+
+

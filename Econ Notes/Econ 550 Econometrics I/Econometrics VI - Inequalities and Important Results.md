@@ -11,7 +11,7 @@ tags:
 - '#status/🚧'
 ---
 
-# [[Econometrics V - Inequalities]]
+# [[Econometrics VI - Inequalities and Important Results]]
 <span style = "font-size:120%"><i >Zagreb Mukerjee </i></span>
 
 ![[Markov's and Chebyshev's Inequalities#Markov's Inequality]]

@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Tuesday, October 4th 2022, 12:47 pm
-date updated: Tuesday, October 4th 2022, 3:03 pm
+date updated: Tuesday, October 4th 2022, 3:23 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -142,5 +142,42 @@ The information idea is reflected in the fact that $\{y:h(y) \in B\}$ has weakly
 ## Expectation
 
 The expectation of a random vector $(X_1, \ldots, X_n)$ is $(EX_1, \ldots, EX_n)$. From this definition:
-- $E(g(X)) = (Eg(X_1), \ldots, Eg(X_n))$
+- If $g:\R^n \to \R^m$, then $E(g(X)) = (Eg_1(X), \ldots, Eg_m(X))$
 - $E(X + Y) = EX + EY$
+- $E(cX) = cEX$
+- $E(\underset{m \times n}{A}x + \underset{m\times 1}b) = AEX + b$. 
+
+We can use a form of the above. Let $g(X,Y) = (X - \mu_X)(Y - \mu_Y)$.
+
+#### Covariance
+
+The <font color=gree>covariance</font> is $\sigma_{XY} = Eg(X,Y) = E[(X - \mu_X)(Y - \mu_Y)] = EXY - EXEY$. If $X,Y$ are independent: 
+$$\begin{align}
+EXY &= \int \int xy f_{XY}(x,y)dxdy\\
+&= \int \int xf_X(x)yf_Y(y)dxdy \\
+&= \int xf_X(x)dx \int yf_Y(y)dy \\
+&= EXEY
+\end{align}$$
+so the covariance is zero. 
+
+```ad-warning
+title: 
+
+NOTE: Independent means zero covariance. Zero covariance does NOT mean independence!! 
+
+Example: $x,y$ where $y = g(x) \epsilon$, $E\epsilon = 0$, and $\epsilon \indep x$. Then 
+
+$$\begin{align}
+EY &= Eg(X)\epsilon\\
+&= 0\\
+\cov(X,Y) &= E(X - \mu_X)(Y - \mu_Y)\\
+&= EY(X-\mu_X)\\
+&= E[\epsilon g(X)(X - \mu_X)]\\
+&= E\epsilon g(X)X - E\epsilon g(X) EX \\
+&= E\epsilon (Eg(X)X - E g(X) EX)\\
+&= 0
+\end{align}$$
+
+But $X,Y$ are obviously (super) dependent.
+
+```

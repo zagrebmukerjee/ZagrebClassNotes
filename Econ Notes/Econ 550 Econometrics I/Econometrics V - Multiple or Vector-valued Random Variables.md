@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Tuesday, October 4th 2022, 12:47 pm
-date updated: Tuesday, October 4th 2022, 1:46 pm
+date updated: Tuesday, October 4th 2022, 2:06 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -77,5 +77,19 @@ $$P(x \in A) = \sum_{x_i \in A} f_X(x_i)$$
 I may be interested in a <font color=gree>marginal</font> or unconditional probability that $X_i = x$. Easiest to think about in the discrete two-variable case. Given some joint distribution $f_{X,Y}$, what is $P(X = x)$? If $Y$ takes on values $y_1, \ldots, y_n$, then I can say that 
 
 $$\begin{align}
-P(X = x) &= P(X = x \; \cap \; Y = y_1) + P
+P(X = x) &= P(X = X \cap Y \in \Omega_Y)\\
+&= P\left(X = x \cap \bigcup (Y = y_i)\right) \\
+&= P\left(\bigcup (X =x \cap Y = y_i)\right)\\
+&= P(X = x \; \cap \; Y = y_1) + P(X=x \; \cap \; Y = y_2) + \ldots
 \end{align}$$
+This is looking at the probability that $X =x$ under all possible conditions on $Y$. 
+
+We can then generalize this to a continuous case. 
+$$\begin{align}
+f_X(x) &= \frac{d}{dx} F_X(x)\\
+&= \frac{d}{dx}P(X \leq X)\\
+&= \frac{d}{dx} P(X \leq x \cap Y \in \Omega_Y)\\
+&= \frac{d}{dx} \int_{-\infty}^x\int_{-\infty}^\infty f_{XY}(a,b) da db\\
+&= \frac{d}{dx} \int_{-\infty}^\infty f_{XY}(x,b) db\end{align}$$
+Think of this as 'integrating out' the $Y$ from the joint distribution. 
+

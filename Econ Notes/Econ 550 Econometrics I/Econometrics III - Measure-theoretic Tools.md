@@ -141,8 +141,13 @@ $$ s_4(x) = \begin{cases}
 4 &\text{if } x \geq 2
 \end{cases}$$
 
-So $s_n$ is $n$ horizontal slices, forming a stairway with steps of width $1/2^n$, everywhere below $x$, which caps off at $s_n(x)= n$. As $n$ grows, the cap gets closer and closer to $f$. 
+So $s_n$ is $n$ horizontal slices, forming a stairway with steps of width $1/2^n$, everywhere below $x$, which caps off at $s_n(x)= n$. As $n$ grows, the cap gets closer and closer to $f$ - so $\lim_{n \to \infty} s_n(x) = f(x)$.
 
+
+Then I can describe an integral: 
+
+$$ \lim_{n \to \infty} \int s_n(x) d\mu(x) = \int \lim_{n \to \infty} s_n(x) d\mu(x) \int f(x) d\mu(x)$$
+If I didn't have the MCT, I would not be able to do this. But the MCT tells me that the convergence of the functions means the convergence of the integral. In other words, whatever is $\lim \int sn$ will also be $\int \lim s_n$. 
 
 
 ## Radon-Nikodym Theorem

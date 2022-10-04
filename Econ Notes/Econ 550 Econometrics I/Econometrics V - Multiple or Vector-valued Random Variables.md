@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Tuesday, October 4th 2022, 12:47 pm
-date updated: Tuesday, October 4th 2022, 2:06 pm
+date updated: Tuesday, October 4th 2022, 2:52 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -97,9 +97,22 @@ Think of this as 'integrating out' the $Y$ from the joint distribution.
 
 #### Notes
 - The joint gives you the marginals. But the marginals don't give you the joint, except in the case of independence. 
-- Can get the marginal (c)df $F_X(x) = \lim_{y\to\infty} F_{XY}(x,y)$
+- Can get the marginal (c)df $F_X(x) = \lim_{y\to\infty} F_{XY}(x,y)$:
 
+$$\begin{align}
+\lim_{y\to\infty} F_{XY}(x,y) 
+&= \lim_{y\to\infty}\int_{-\infty}^y \int_{-\infty}^x f_{XY}(u,v) du dv \\
+&=\int_{-\infty}^\infty \int_{-\infty}^x f_{XY}(u,v) du dv\\
+&=\int_{-\infty}^x \int_{-\infty}^\infty f_{XY}(u,v) du dv\\
+&= \int_{-\infty}^x f_X(u)du \\
+&= F_X(x)
+\end{align}$$
+
+Here I use Fubini's Theorem to switch the integrals around. 
 
 ### Independence
 
-Extend our previous independence concept. We had defined independent events: $A \indep B \iff P(A \cap B) = P(A)P(B)$. 
+Extend our previous independence concept. We had defined independent events: $A \indep B \iff P(A \cap B) = P(A)P(B)$. We then defined random variables as independent if $P(X \in A, Y \in B) = P(X \in A)P(Y \in B)$. 
+
+Now we can say random variables $X$ and $Y$ are independent if $F_{XY} = F_XF_Y$. This is straightforward: $F_{XY}(x,y) = P(X \in (-\infty, x] \cap Y \in (-\infty, y]) = P(X \in (-\infty, x])P(Y \in (-\infty, y]) = F_X(x)F_Y(y)$. 
+

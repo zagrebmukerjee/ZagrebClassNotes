@@ -124,7 +124,13 @@ f_{XY}(x,y) &= \frac{d^2}{dxdy}F_{XY}(x,y) \\
 &= \frac{d}{dy}F_Y(y)f_X(x)\\
 &= f_Y(y)f_X(x)\\
 \end{align}$$
-Either of these conditions offer convenient ways to check if two RVs are independent. 
+Either of these conditions offer convenient ways to check if two RVs are independent: they are true iff independence
+
+Proof: let $D = \{ x_i\}, G = \{ y_i\}$ arbitrary sets.
+$$\begin{align}
+P(X\in D, Y \in G) &= P\left(X \in \bigcup_i \{x_i\}, Y \in \bigcup_j \{ y_j\}\right)\\
+&= \sum_i P\left( X \in \{x_i\}, Y \in  \right)\\	
+\end{align}$$
 
 #### Functions of Independent RVs
 If $X,Y$ are independent then $g(X), h(Y)$ are independent. Intuitively, knowing $g(X) = x$ is weakly less information than knowing $X =x$ (cannot be more). 

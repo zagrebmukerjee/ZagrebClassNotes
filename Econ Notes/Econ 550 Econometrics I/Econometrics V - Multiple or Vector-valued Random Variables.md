@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Tuesday, October 4th 2022, 12:47 pm
-date updated: Tuesday, October 4th 2022, 1:00 pm
+date updated: Tuesday, October 4th 2022, 1:46 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -11,9 +11,10 @@ tags:
 - '#status/🚧'
 ---
 
-# [[Econometrics V - Vector-Valued Random Variables]]
+# [[Econometrics V - Multiple or Vector-valued Random Variables]]
 <span style = "font-size:120%"><i >Zagreb Mukerjee </i></span>
 
+## Joint Distribution Functions
 
 A random vector is a vector of random variables. The fundamentals are the same: for any $B \in \mathcal B$,
 $$P(X \in B) = P_X(B) = P\{\omega \in \Omega: X(\omega) \in B \}$$
@@ -21,6 +22,12 @@ Now though we make this claim for $\mathcal B$ in $\R^n$.
 
 The (cumulative) distribution function is defined element-wise: $F_X(x) = P(X \leq x) = P(X_1 \leq x_1 \cap X_2 \leq x_2 \cap \ldots)$
 Again, knowing $F$ gives us $P_X$.
+
+We can also call this the <font color=gree>joint distribution</font> of $x_1, x_2, \ldots$
+
+
+
+
 
 ```ad-example
 title: Example in $\R^2$
@@ -47,3 +54,28 @@ which we could then rewrite as
 $$ \int_a^b\int_c^d f_{12}(x_1, x_2) dx_2 dx_1$$
 Since this is on a square, [[Fubini's Theorem]] tells us the integrals are interchangeable. 
 
+#### Properties
+- $F_X(x) \in [0,1]$
+- $F_X(x)$ is non-decreasing in $x$: if $x \leq y$, $F_X(x) \leq F_Y(y)$. 
+- $\lim_{\text{ all } x_i \to \infty} F_X(x) = 1$
+- $\lim_{\text{ any } x_i \to -\infty} F_X(x) = 0$
+- $f_X(x) \geq 0 \; \forall \; x \in \R^n$ 
+- $\int_{\Omega_X} f_X(x) dx = 1$
+- $f_X$ is measurable
+
+
+```ad-info
+title: Discrete Case
+Discrete random vector has set $C$ such that $P(X \in C) =1$ and $C$ countable. Probability of any countable set is 
+
+$$P(x \in A) = \sum_{x_i \in A} f_X(x_i)$$
+
+```
+
+## Marginal Distributions
+
+I may be interested in a <font color=gree>marginal</font> or unconditional probability that $X_i = x$. Easiest to think about in the discrete two-variable case. Given some joint distribution $f_{X,Y}$, what is $P(X = x)$? If $Y$ takes on values $y_1, \ldots, y_n$, then I can say that 
+
+$$\begin{align}
+P(X = x) &= P(X = x \; \cap \; Y = y_1) + P
+\end{align}$$

@@ -46,3 +46,4 @@ So for the example above, we had $$F_{12}(a,c) - F_{12}(b,c) - F_{12}(a, d) + F_
 which we could then rewrite as 
 $$ \int_a^b\int_c^d f_{12}(x_1, x_2) dx_2 dx_1$$
 Since this is on a square, [[Fubini's Theorem]] tells us the integrals are interchangeable. 
+

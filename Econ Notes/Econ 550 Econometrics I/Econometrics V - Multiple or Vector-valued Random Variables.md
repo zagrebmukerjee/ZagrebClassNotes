@@ -62,6 +62,7 @@ Since this is on a square, [[Fubini's Theorem]] tells us the integrals are inter
 - $f_X(x) \geq 0 \; \forall \; x \in \R^n$ 
 - $\int_{\Omega_X} f_X(x) dx = 1$
 - $f_X$ is measurable
+- If an RV is continuous, then $F_X$ is differentiable almost everywhere. 
 
 
 ```ad-info
@@ -93,3 +94,12 @@ f_X(x) &= \frac{d}{dx} F_X(x)\\
 &= \frac{d}{dx} \int_{-\infty}^\infty f_{XY}(x,b) db\end{align}$$
 Think of this as 'integrating out' the $Y$ from the joint distribution. 
 
+
+#### Notes
+- The joint gives you the marginals. But the marginals don't give you the joint, except in the case of independence. 
+- Can get the marginal (c)df $F_X(x) = \lim_{y\to\infty} F_{XY}(x,y)$
+
+
+### Independence
+
+Extend our previous independence concept. We had defined independent events: $A \indep B \iff P(A \cap B) = P(A)P(B)$. 

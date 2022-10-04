@@ -1,14 +1,13 @@
 ---
 aliases:
 creation date: Wednesday, September 21st 2022, 3:13 pm
-date updated: Friday, September 23rd 2022, 7:54 am
+date updated: Tuesday, October 4th 2022, 11:57 am
 
 notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags: 
 - '#types/classes'
-- '#status/🚧'
 ---
 
 # [[Econometrics IV - Moments]]
@@ -141,7 +140,11 @@ When the moments are not finite we have instead the characteristic function. Thi
 $$ \text{cf}(X) = E|\exp[itX]|$$
 Define a complex random variable as $(X_1, X_2)$ or $X_1 + iX_2$. The expectation is simply $(EX_1, EX_2)$. We can transform the cf: 
 $$\begin{align}
- \text{cf}(X) = E|\exp[itX]|\\
- &= E| \cos(tX) + i \sin (tX)| \\
- &= E|\sqrt{\cos^2(tX) - \sin^2 (tX) + 2i\cos(tX)\sin(tX)}|
+\exp[itX]| &= | \cos(tX) + i \sin (tX)| \\
+&= |\sqrt{\cos^2(tX) - \sin^2 (tX) + 2i\cos(tX)\sin(tX)}|\\
+&= |\sqrt{(\cos(tX) + i\sin(tX))(\cos(tX) - i\sin(tX) )}|\\
+&= |\sqrt{\cos^2(tX) + \sin^2(tX)}|\\
+&= 1
 \end{align}$$
+
+So the characteristic function is well defined for any $X$. You can differentiate it $r$ times to get the $r\th$ moment. 

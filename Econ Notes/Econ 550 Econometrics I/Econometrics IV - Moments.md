@@ -108,8 +108,10 @@ The MGF makes it easy to find moments. It's a function such that $M'(t)|_{t=0} =
 
 Define the MGF $M(t) = E[e^{tX}]$. 
 
-This function is unique: two functions have the same MGF iff they have the same distribution. Not all variables have an MGF; all moments must exist for the MGF to exist. 
+This function is unique: two functions have the same MGF iff they have the same distribution. Not all variables have an MGF; all moments must exist for the MGF to exist, i.e. $E|X^r| < \infty$.
 
+
+#### Example: $\mathcal N(0,1)$
 Suppose $Z$ is a standard normal. Then $f_Z(x) = (1/\sqrt{2\pi})\exp[-x^2/2]$. The MGF is $E\exp\left[(t/\sqrt{2\pi})\exp[-x^2/2]\right]$. The first deriviative:
 $$\begin{align}
 M(t) &= Ee^{tX} \\
@@ -121,4 +123,25 @@ M(t) &= Ee^{tX} \\
 &= \exp\left(-t^2/2 \right) (1/\sqrt{2\pi}) \int_{-\infty}^\infty \exp\left[-(x-t)^2/2\right]dx\\
 \end{align}$$
 
-This last integral is simply the PDF of the normal distribution once more, with mean shifted to $x-t$; so we know it integrates to $1$, and the MGF is then $e^{-t^2/2}$
+This last integral is simply the PDF of the normal distribution once more, with mean shifted to $x-t$; so we know it integrates to $1$, and the MGF is then $e^{-t^2/2}$. 
+
+
+### Non-Finite Moments
+
+In general we don't always have finite moments. We can say a few things about infinite moments:
+- If $E|X^r| < \infty$ then $s < r \to E|X^s| < \infty$
+- If $E|X^r| = \infty$ then $s > r \to E|X^s| = \infty$
+- straightforward to show by decomposing $E|X^r| \iff E|X^r| * 1_{|X| \geq 1} = 0 \iff E|X^{r+1}| = 0$
+
+
+### Characteristic Function
+
+When the moments are not finite we have instead the characteristic function. This is 
+
+$$ \text{cf}(X) = E|\exp[itX]|$$
+Define a complex random variable as $(X_1, X_2)$ or $X_1 + iX_2$. The expectation is simply $(EX_1, EX_2)$. We can transform the cf: 
+$$\begin{align}
+ \text{cf}(X) = E|\exp[itX]|\\
+ &= E| \cos(tX) + i \sin (tX)| \\
+ &= E|\sqrt{\cos^2(tX) - \sin^2 (tX) + 2i\cos(tX)\sin(tX)}|
+\end{align}$$

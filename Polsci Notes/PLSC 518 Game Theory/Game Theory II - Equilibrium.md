@@ -62,8 +62,12 @@ For that to be true, we need an indifference condition. I need everyone else's r
 
 #status/section/🚧 
 
+<font color=#F7B801>elimination of dominated options also</font>
+
 
 ## Public Goods Problem
+
+### Problem Formulation
 
 Canonical problem in political science. Someone being murdered outside your apartment building. Some cost $c$ to calling the police. If anyone calls the police there is a collective benefit - everyone gets $1$. The good is nonexcludable. 
 
@@ -76,6 +80,8 @@ $n$ players decide to call or not call. Payoff is $1-c$ if you make call. $1$ if
 Game theory lingo: These equilibria are very <font color=gree>asymmetric</font>. There's nothing in the model that tells you why some particular person is calling. Why did you pick this one?
 
 But none of the <font color=gree>symmetric</font> profiles are NE for $n>1$ (ie. nobody calls or everyone calls). 
+
+### Mixing
 
 So if I want a symmetric equilibrium, I am SOL? Let's look at symmetric mixed strategies. 
 

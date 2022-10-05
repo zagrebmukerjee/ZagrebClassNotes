@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Tuesday, October 4th 2022, 12:47 pm
-date updated: Wednesday, October 5th 2022, 2:20 pm
+date updated: Wednesday, October 5th 2022, 2:47 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -174,7 +174,8 @@ so the covariance is zero.
 The covariance can be normalized to get a <font color=gree>correlation coefficient</font>: 
 
 $$\rho_{XY} = \frac{\sigma_{XY}}{\sigma_X\sigma_Y}$$
-This is invariant to scale and location, and is always in $[-1,1]$. To show the latter, use the 
+This is invariant to scale and location, and is always in $[-1,1]$. To show the latter, use the [[Econometrics VI - Inequalities and Important Results#Cauchy-Bunyakovsky-Schwarz Inequality]]. 
+
 
 
 ```ad-warning
@@ -224,4 +225,29 @@ $$\begin{align}
 \end{align}$$
 
 
+## Variance/Covariance For Random Vectors
+
+A generalization of the above results. Suppose $X = (X_1, \ldots X_n)$. 
+
+Then define
+$$\begin{align}
+\var(X) &= E[(X - EX)(X - EX)']\\
+\end{align}$$
+It follows that 
+$$\begin{align}
+\var(X)_{i,j} &= E(X_iEX_i)(X_j-EX_j)' \\
+&= \cov(X_i, X_j)\\
+\var(X)_{i,i} &= E(X_iEX_i)(X_i-EX_i)' \\
+&= \var(X_i)\\
+\end{align}$$
+This matrix is symmetric by the symmetry of the covariance. It is positive semidefinite: 
+
+$$\begin{align}
+c'\var(X) c&= E[c'(X - EX)(X - EX)'c]\\
+&= E[(c'(X-EX))(c'(X-EX))']\\
+&= E[c'(X-EX)^2]
+\end{align}$$
+The last item is definitely a positive quantity. In that step I use the fact that $c'(X - EX)$ is $1 \times n \cdot n \times 1$ and so a scalar. 
+
+A covariance matrix is nether PSD nor symmetric. It's defined as 
 

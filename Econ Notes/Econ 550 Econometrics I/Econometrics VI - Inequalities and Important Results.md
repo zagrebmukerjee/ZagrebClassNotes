@@ -1,7 +1,11 @@
 ---
 aliases:
+- 'Cauchy-Schwarz Inequality'
+- 'Cauchy-Bunyakowsky-Schwarz Inequality'
+- 'CBS Inequality'
+
 creation date: Tuesday, October 4th 2022, 11:57 am
-date updated: Wednesday, October 5th 2022, 2:32 pm
+date updated: Wednesday, October 5th 2022, 2:37 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -48,4 +52,8 @@ E|Y|E|X| &\geq E|XY|\\
 
 #### Vector Form
 $$ |a'b| \leq (a'a)^{1/2}(b'b)^{1/2}$$
+or
+$$ |a'b| \leq \sqrt{||a||||b||}$$
+#### Function Form
 
+$$\left| \int g(x)h(x) f_X(x) dx \right| \leq\left(\int g^2(x)f_X(x)dx\right)^{1/2}\left(\int h^2(x)f_X(x)dx \right)^{1/2}$$

@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Tuesday, October 4th 2022, 12:47 pm
-date updated: Wednesday, October 5th 2022, 2:18 pm
+date updated: Wednesday, October 5th 2022, 2:20 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -171,6 +171,12 @@ EXY &= \int \int xy f_{XY}(x,y)dxdy\\
 \end{align}$$
 so the covariance is zero. 
 
+The covariance can be normalized to get a <font color=gree>correlation coefficient</font>: 
+
+$$\rho_{XY} = \frac{\sigma_{XY}}{\sigma_X\sigma_Y}$$
+This is invariant to scale and location, and is always in $[-1,1]$. To show the latter, use the 
+
+
 ```ad-warning
 title: 
 
@@ -213,5 +219,9 @@ More generally, if $X_1, \ldots, X_n$ are not independent, then
 $$\begin{align}
 \var\left(\sum_{i=1}^n X_i \right) &= E\left[ \left( \sum_{i=1}^n X_i - E\sum_{i=1}^n X_i\right )^2 \right]\\
 &= E\left[ \left( \sum_{i=1}^n X_i\right)^2 \right] - \left(E\sum_{i=1}^n X_i\right)^2\\
-&= E\left[ \sum_{i=1}^n X_i^2 + 2\sum_{i=1, i \neq j}^nX_iX_j \right]
+&= E\left[ \sum_{i=1}^n X_i^2 + \sum_{i=1, i \neq j}^n \sum_{j=1}^n X_iX_j \right] - \sum_{i=1}^n EX_i^2 - \sum_{i=1, i \neq j}^n \sum_{j=1}^n EX_iEX_j \\
+&= \sum_{i=1}^n \var(X_i)\sum_{j=1}^n \cov(X_i,X_j)\\
 \end{align}$$
+
+
+

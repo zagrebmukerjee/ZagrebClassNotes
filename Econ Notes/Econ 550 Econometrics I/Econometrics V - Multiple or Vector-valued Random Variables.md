@@ -193,3 +193,8 @@ But $X,Y$ are obviously (super) dependent.
 
 ```
 
+#### Sums of RVs
+
+These results are some of the most practically important ones in statistics, underpinning most of what we will later have to say about characteristics of samples and inference from samples. 
+
+First: $E(X + Y)$ = $EX

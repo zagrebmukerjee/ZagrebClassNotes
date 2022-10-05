@@ -282,5 +282,5 @@ $$ P(X \in A|Y \in B) = \frac{P(X \in A \cap Y \in B)}{P(Y \in B)}$$
 
 We can thence create a conditional PMF: 
 
-$$ f_{X|Y}(x|y) =  P(X = x|Y =y) = \frac{P(X=X \cap Y = y)}{P(Y = y)} = \frac{f_{XY}(x,y)}{f_y(y)}$$
-for nonzero 
+$$ f_{X|Y}(x|y) =  P(X = x|Y =y) = \frac{P(X=X \cap Y = y)}{P(Y = y)} = \frac{f_{XY}(x,y)}{f_Y(y)}$$
+for nonzero $f_Y$. 

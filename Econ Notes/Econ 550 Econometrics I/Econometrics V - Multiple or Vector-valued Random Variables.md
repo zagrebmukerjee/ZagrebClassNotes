@@ -266,3 +266,21 @@ Some consequences of these definitions:
 2) $\var(AX + c) = A\var(X)A'$
 3) $\var(X+ Y) = \var(X) + \var(Y) + \cov(X,Y) + \cov(Y,X)$
 4) $X,Y$ independent vectors: then $\var(X + Y) = \var(X) + \var(Y)$
+5) $\cov(AX + b, CY + d) = A\cov(X,Y)C'$
+6) $\cov(X + Y, Z) = \cov(X,Z) + \cov(Y, Z)$
+
+These results can be proved elementwise according to Don. 
+
+
+## Conditional PDF and PMF
+
+### PMF
+
+Let $X, Y$ be discrete random variables, with sample space $\Omega_X$ and $\Omega_Y$. Let $A$ and $B$ be events in $\Omega_X$ and $\Omega_Y$. 
+
+$$ P(X \in A|Y \in B) = \frac{P(X \in A \cap Y \in B)}{P(Y \in B)}$$
+
+We can thence create a conditional PMF: 
+
+$$ f_{X|Y}(x|y) =  P(X = x|Y =y) = \frac{P(X=X \cap Y = y)}{P(Y = y)} = \frac{f_{XY}(x,y)}{f_y(y)}$$
+for nonzero 

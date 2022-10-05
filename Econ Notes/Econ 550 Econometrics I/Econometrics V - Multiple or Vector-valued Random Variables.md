@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Tuesday, October 4th 2022, 12:47 pm
-date updated: Tuesday, October 4th 2022, 5:50 pm
+date updated: Wednesday, October 5th 2022, 2:18 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -193,8 +193,25 @@ But $X,Y$ are obviously (super) dependent.
 
 ```
 
-#### Sums of RVs
+#### Variance of $X + Y$
 
-These results are some of the most practically important ones in statistics, underpinning most of what we will later have to say about characteristics of samples and inference from samples. 
+The variance of $X + Y$ can be found as follows: 
 
-First: $E(X + Y)$ = $EX
+$$\begin{align}
+\var (X+Y) &= E[(X + Y)^2 - [E(X+Y)]^2]\\
+&= E[X^2 + 2XY + Y^2 - EX^2 - EY^2 - 2EXEY]\\
+&= E[X^2] - EX^2+ E[Y^2] - EY^2+ 2E[XY] - 2EXEY\\
+&= E[(X - EX)^2] + E[(Y-EY)^2] + 2E[(X-EX)(Y - EY)]\\
+&= \var(X) + \var(Y) + 2 \cov(X,Y)\\
+\end{align}$$
+So when $X$ and $Y$ are independent, $\var(X +Y ) = \var (X) + \var (Y)$; if all $n$ of the $X_i$ are mutually independent, then 
+$$ \var\left(\sum_{i=1}^n X_i\right) = \sum_{i=1}^n \var(X_i)$$
+If $X_1, \ldots, X_n$ are iid and have variance $\sigma^2_X$ then $\var (\sum_{i=1}^n X_i/n) = \sigma_X^2/n$.
+
+More generally, if $X_1, \ldots, X_n$ are not independent, then 
+
+$$\begin{align}
+\var\left(\sum_{i=1}^n X_i \right) &= E\left[ \left( \sum_{i=1}^n X_i - E\sum_{i=1}^n X_i\right )^2 \right]\\
+&= E\left[ \left( \sum_{i=1}^n X_i\right)^2 \right] - \left(E\sum_{i=1}^n X_i\right)^2\\
+&= E\left[ \sum_{i=1}^n X_i^2 + 2\sum_{i=1, i \neq j}^nX_iX_j \right]
+\end{align}$$

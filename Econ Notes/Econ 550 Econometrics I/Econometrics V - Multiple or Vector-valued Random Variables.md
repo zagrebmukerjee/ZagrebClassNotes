@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Tuesday, October 4th 2022, 12:47 pm
-date updated: Wednesday, October 5th 2022, 2:47 pm
+date updated: Wednesday, October 5th 2022, 2:49 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -249,5 +249,20 @@ c'\var(X) c&= E[c'(X - EX)(X - EX)'c]\\
 \end{align}$$
 The last item is definitely a positive quantity. In that step I use the fact that $c'(X - EX)$ is $1 \times n \cdot n \times 1$ and so a scalar. 
 
-A covariance matrix is nether PSD nor symmetric. It's defined as 
+A covariance matrix is nether PSD nor symmetric. In fact it doesn't even have to be square. It's defined as 
+$$\begin{align}
+\cov(X,Y) &= E[(X - EX)(Y - EY)]\\
+\end{align}$$
+So 
+$$\begin{align}
+\cov(X,Y)_{ij} &= E[(X_i - EX_i)(Y_j - EY_j)]\\
+&= \cov(X_i, Y_j)\\
+\end{align}$$
 
+
+
+Some consequences of these definitions: 
+1) $\var(X + b) = \var(X)$
+2) $\var(AX + c) = A\var(X)A'$
+3) $\var(X+ Y) = \var(X) + \var(Y) + \cov(X,Y) + \cov(Y,X)$
+4) $X,Y$ independent vectors: then $\var(X + Y) = \var(X) + \var(Y)$

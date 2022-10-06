@@ -283,4 +283,24 @@ $$ P(X \in A|Y \in B) = \frac{P(X \in A \cap Y \in B)}{P(Y \in B)}$$
 We can thence create a conditional PMF: 
 
 $$ f_{X|Y}(x|y) =  P(X = x|Y =y) = \frac{P(X=X \cap Y = y)}{P(Y = y)} = \frac{f_{XY}(x,y)}{f_Y(y)}$$
-for nonzero $f_Y$. 
+for nonzero $f_Y$. You can then combine with others as you please, to get eg. $P(X \in A|Y = y)$. 
+
+### PDF 
+This one we'll work backwards from a desirable property. We want independent random variables to be such that 
+
+$$ X \indep Y \to f_{X|Y}(x|y) = f_X(x)$$
+We know already that $f_{XY}(x,y) = f_X(x)f_Y(y)$. So define 
+
+$$f_X(x) = \frac{f_{XY}(x,y)}{f_Y(y)} = f_{X|Y}(x,y)$$
+This intuitively makes sense, in that it maps to the event level definition. It'll make even more sense when we start integrating, or conceptualizing this with areas. 
+
+Properties:
+1) $f_{X|Y}$ is nonnegative. 
+2) $f_{X|Y}$ integrates to 1:
+	$$\begin{align}
+	\int_{-\infty}^\infty f_{X|Y y}(x) dx &= \int_{-\infty}^\infty f_{X|Y=y}(x)dx  \\
+	&= 	 \int_{-\infty}^\infty \frac{f_{XY}(x,y)}{f_Y(y)}dx \\
+	&= 
+	\end{align}$$
+	
+

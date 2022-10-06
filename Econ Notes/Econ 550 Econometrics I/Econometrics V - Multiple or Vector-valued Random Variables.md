@@ -300,7 +300,7 @@ Properties:
 	$$\begin{align}
 	\int_{-\infty}^\infty f_{X|Y y}(x) dx &= \int_{-\infty}^\infty f_{X|Y=y}(x)dx  \\
 	&= 	 \int_{-\infty}^\infty \frac{f_{XY}(x,y)}{f_Y(y)}dx \\
-	&= 
+	&= \frac{1}{f_Y(y)}\int_{-\infty}^\infty f_{XY} 
 	\end{align}$$
 	
 

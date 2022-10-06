@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Tuesday, October 4th 2022, 12:47 pm
-date updated: Thursday, October 6th 2022, 4:14 pm
+date updated: Thursday, October 6th 2022, 4:30 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -359,3 +359,20 @@ $$\begin{align}
 &= B \Lambda\inv B'\\
 \Sigma^{-1/2}\Sigma^{-1/2} &= \Sigma^{-1}\\
 \end{align}$$
+#### Decomposition of MVN to Find Moments
+
+With this tool, we can write $Z = \Sigma^{-1/2}(X - \mu)$. A result gives us that $dz = (\det \Sigma)^{-1/2}dx$ 
+Then we find that 
+$$\begin{align}
+f_Z(z) &= \frac{1}{(2\pi)^{n/2}}\exp\left[-(1/2)z'z\right]\\
+&= \prod_{i=1}^n\frac{1}{(2\pi)^{1/2}}\exp\left[-(1/2) z_i^2\right]
+\end{align}$$
+which is the product of $n$ standard normals: $Z \sim \mathcal N(0,I_n)$. Then 
+$X = \Sigma^{1/2} Z + \mu$ and $EX = E(\Sigma^{1/2}Z + \mu = \mu$.
+$$\begin{align}
+\var(X) &= \var(\Sigma^{1/2}Z + \mu) \\
+&= \Sigma^{1/2} \var(Z) (\Sigma^{1/2})' \\
+&= \Sigma^{1/2} I_n \Sigma^{1/2}\\
+&= \Sigma
+\end{align}$$
+using the fact that $\Sigma^{1/2}$ is symmetric. 

@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Tuesday, October 4th 2022, 12:47 pm
-date updated: Thursday, October 6th 2022, 9:32 am
+date updated: Thursday, October 6th 2022, 3:31 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -317,3 +317,7 @@ Properties:
 	&= 1
 	\end{align}$$
 	
+We can now use this to compute 
+$$P(X \in A | Y = y) = \int_G f_{X|Y=y}(x)dx = \frac{1}{f_{Y}(y)}\int_G f_{XY}(x,y)dx $$
+This gets us also a cond
+

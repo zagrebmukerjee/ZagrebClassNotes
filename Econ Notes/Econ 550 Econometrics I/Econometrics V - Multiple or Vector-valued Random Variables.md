@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Tuesday, October 4th 2022, 12:47 pm
-date updated: Thursday, October 6th 2022, 3:37 pm
+date updated: Thursday, October 6th 2022, 3:50 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -323,10 +323,22 @@ This gets us also a conditional expectation
 $$ E(X|Y = y) = \frac{1}{f_Y(y)}\int_{\Omega_X} xf_{XY}(x,y)dx$$
 Note: there's no direct event-based constrution of the above. <font color=#F7B801>though perhaps there's one based in intervals and with limits</font>
 
-### LIE/Law of Iterated Expectation
+### LIE/Law Of Iterated Expectation
 ![[2002.1 Probability#Law of Iterated Expectation]]
 
 
 ## Multivariate Normal (MVN/MN)
 
-Define $\mu \in \R^n$ and $\Sigma$ a 
+### Definition
+
+Define $\mu \in \R^n$ and $\underset{n\times n}{\Sigma}$ be positive semidefinite and symmetric. Then $X = (X_1, \ldots, X_n) \sim \mathcal{MVN}(\mu, \Sigma)$ if, for real $x$,
+$$f(x) = \frac{1}{(2\pi)^{n/2}} (\det \Sigma)^{-1/2} \exp\left[ -(1/2)(x - \mu)'\Sigma\inv (x-\mu)\right] $$
+Just as a check: $x - \mu$' is $1 \times n$, $x - \mu$ is $n\times 1$, so this all shakes out to a scalar. 
+
+Every MVN has a unique $\mu, \Sigma$. 
+
+#### Spectral Decomposition
+Linear algebra tells us that since $\Sigma$ is PSD and symmetric, then we can write 
+$$ \Sigma = B' \Lambda B$$
+where $\Lambda$ is $n \times n$ diagonal (with diagonal = eigenvalues of $\Sigma$), and $B$ is orthogonal meaning $B'B = I$, with the columns of $B$ being eigenvectors of $\Sigma$.  
+

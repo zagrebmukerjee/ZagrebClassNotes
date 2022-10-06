@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Tuesday, October 4th 2022, 12:47 pm
-date updated: Thursday, October 6th 2022, 3:50 pm
+date updated: Thursday, October 6th 2022, 4:14 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -337,8 +337,25 @@ Just as a check: $x - \mu$' is $1 \times n$, $x - \mu$ is $n\times 1$, so this a
 
 Every MVN has a unique $\mu, \Sigma$. 
 
+
+### Standard Normal-ification
 #### Spectral Decomposition
 Linear algebra tells us that since $\Sigma$ is PSD and symmetric, then we can write 
-$$ \Sigma = B' \Lambda B$$
-where $\Lambda$ is $n \times n$ diagonal (with diagonal = eigenvalues of $\Sigma$), and $B$ is orthogonal meaning $B'B = I$, with the columns of $B$ being eigenvectors of $\Sigma$.  
+$$ \Sigma = B \Lambda B'$$
+where $\Lambda$ is $n \times n$ diagonal (with diagonal = eigenvalues of $\Sigma$), and $B$ is orthogonal meaning $B'B = I$, with the columns of $B$ being eigenvectors of $\Sigma$. Write $\Lambda^p$ for each diagonal element raised to the $p$.. 
 
+With this we can create square roots of $\Sigma$: 
+
+$$ \Sigma^{1/2} = B\Lambda^{1/2}B'\text{ and } \Sigma^{-1/2} = B\Lambda^{-1/2}B'$$
+In other words: diagonalize, take sqrt, de-diagonalize
+So 
+$$\begin{align}
+\Sigma^{1/2}\Sigma^{1/2} &= B\Lambda^{1/2}B' B\Lambda^{1/2}B' \\
+&= B\Lambda^{1/2}\Lambda^{1/2}B' \\
+&= B\Lambda B'\\
+&= \Sigma\\
+\Sigma^{-1} &= (B\Lambda B')\inv \\
+&= B'\inv \Lambda\inv B\inv \\
+&= B \Lambda\inv B'\\
+\Sigma^{-1/2}\Sigma^{-1/2} &= \Sigma^{-1}\\
+\end{align}$$

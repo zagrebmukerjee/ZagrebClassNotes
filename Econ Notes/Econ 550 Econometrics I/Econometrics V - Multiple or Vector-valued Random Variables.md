@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Tuesday, October 4th 2022, 12:47 pm
-date updated: Wednesday, October 5th 2022, 2:49 pm
+date updated: Thursday, October 6th 2022, 9:32 am
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -174,7 +174,7 @@ so the covariance is zero.
 The covariance can be normalized to get a <font color=gree>correlation coefficient</font>: 
 
 $$\rho_{XY} = \frac{\sigma_{XY}}{\sigma_X\sigma_Y}$$
-This is invariant to scale and location, and is always in $[-1,1]$. To show the latter, use the [[Econometrics VI - Inequalities and Important Results#Cauchy-Bunyakovsky-Schwarz Inequality]]. 
+This is invariant to scale and location, and is always in $[-1,1]$. To show the latter, use the [[Econometrics VI - Inequalities and Important Results#Cauchy-Bunyakovsky-Schwarz Inequality|CBS Inequality]]. 
 
 
 
@@ -221,8 +221,20 @@ $$\begin{align}
 \var\left(\sum_{i=1}^n X_i \right) &= E\left[ \left( \sum_{i=1}^n X_i - E\sum_{i=1}^n X_i\right )^2 \right]\\
 &= E\left[ \left( \sum_{i=1}^n X_i\right)^2 \right] - \left(E\sum_{i=1}^n X_i\right)^2\\
 &= E\left[ \sum_{i=1}^n X_i^2 + \sum_{i=1, i \neq j}^n \sum_{j=1}^n X_iX_j \right] - \sum_{i=1}^n EX_i^2 - \sum_{i=1, i \neq j}^n \sum_{j=1}^n EX_iEX_j \\
-&= \sum_{i=1}^n \var(X_i)\sum_{j=1}^n \cov(X_i,X_j)\\
+&= \sum_{i=1}^n \var(X_i)+ \sum_{i=1, i \neq j}^n\sum_{j=1}^n \cov(X_i,X_j)\\
 \end{align}$$
+```ad-example
+title:Sample Mean
+
+Define the sample mean as 
+$$\overline X_n = \sum_{i=1}^n X_i $$
+Then following the above logic: 
+$$\var(\overline X_n) = \frac{1}{n}\sum_{i=1}^n \var(X_i)+ \frac{1}{n^2}\sum_{i=1, i \neq j}^n\sum_{j=1}^n \cov(X_i,X_j)$$
+
+One desirable property of an estimator is convergence. Will the sample mean converge as $n\to \infty$? That'll require some conditions on $\cov(X_i, X_j)$ so that it doesn't grow faster than $n^2$. For instance, when working with time series one might say that $\cov(X_i, X_i)$ falls off rapidly when going further back in time. This could let me bound the growth in covariance. 
+
+
+```
 
 
 ## Variance/Covariance For Random Vectors
@@ -282,10 +294,10 @@ $$ P(X \in A|Y \in B) = \frac{P(X \in A \cap Y \in B)}{P(Y \in B)}$$
 
 We can thence create a conditional PMF: 
 
-$$ f_{X|Y}(x|y) =  P(X = x|Y =y) = \frac{P(X=X \cap Y = y)}{P(Y = y)} = \frac{f_{XY}(x,y)}{f_Y(y)}$$
+$$ f_{X|Y}(x|y) = P(X = x|Y =y) = \frac{P(X=X \cap Y = y)}{P(Y = y)} = \frac{f_{XY}(x,y)}{f_Y(y)}$$
 for nonzero $f_Y$. You can then combine with others as you please, to get eg. $P(X \in A|Y = y)$. 
 
-### PDF 
+### PDF
 This one we'll work backwards from a desirable property. We want independent random variables to be such that 
 
 $$ X \indep Y \to f_{X|Y}(x|y) = f_X(x)$$
@@ -298,9 +310,10 @@ Properties:
 1) $f_{X|Y}$ is nonnegative. 
 2) $f_{X|Y}$ integrates to 1:
 	$$\begin{align}
-	\int_{-\infty}^\infty f_{X|Y y}(x) dx &= \int_{-\infty}^\infty f_{X|Y=y}(x)dx  \\
+	\int_{-\infty}^\infty f_{X|Y y}(x) dx &= \int_{-\infty}^\infty f_{X|Y=y}(x)dx \\
 	&= 	 \int_{-\infty}^\infty \frac{f_{XY}(x,y)}{f_Y(y)}dx \\
-	&= \frac{1}{f_Y(y)}\int_{-\infty}^\infty f_{XY} 
+	&= \frac{1}{f_Y(y)}\int_{-\infty}^\infty f_{XY}(x,y)dx \\
+	&= \frac{f_Y(y)}{f_Y(y)}\\
+	&= 1
 	\end{align}$$
 	
-

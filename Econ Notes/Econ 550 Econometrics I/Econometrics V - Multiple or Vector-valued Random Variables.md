@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Tuesday, October 4th 2022, 12:47 pm
-date updated: Thursday, October 6th 2022, 3:31 pm
+date updated: Thursday, October 6th 2022, 3:37 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -319,5 +319,14 @@ Properties:
 	
 We can now use this to compute 
 $$P(X \in A | Y = y) = \int_G f_{X|Y=y}(x)dx = \frac{1}{f_{Y}(y)}\int_G f_{XY}(x,y)dx $$
-This gets us also a cond
+This gets us also a conditional expectation
+$$ E(X|Y = y) = \frac{1}{f_Y(y)}\int_{\Omega_X} xf_{XY}(x,y)dx$$
+Note: there's no direct event-based constrution of the above. <font color=#F7B801>though perhaps there's one based in intervals and with limits</font>
 
+### LIE/Law of Iterated Expectation
+![[2002.1 Probability#Law of Iterated Expectation]]
+
+
+## Multivariate Normal (MVN/MN)
+
+Define $\mu \in \R^n$ and $\Sigma$ a 

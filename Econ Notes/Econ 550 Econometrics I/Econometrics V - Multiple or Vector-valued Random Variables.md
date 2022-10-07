@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Tuesday, October 4th 2022, 12:47 pm
-date updated: Friday, October 7th 2022, 11:09 am
+date updated: Friday, October 7th 2022, 11:21 am
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -380,7 +380,9 @@ using the fact that $\Sigma^{1/2}$ is symmetric.
 
 I can also go backwards to show that $\Sigma Z + \mu$ is an MVN, provided that $\Sigma$ is positive semidefinite <font color=#F7B801>and symmetric?</font>
 
-### MVN Marginals
+### MVN Marginals and Conditionals
+
+#### Marginals
 
 From the above, we can observe that any linear transformation of MVNs is an MVN also. 
 
@@ -412,12 +414,50 @@ $$\begin{align}
 &= \begin{bmatrix}\underset{n_1\times n_1}{\Sigma_{11}} & \underset{n_1\times n_2}{0} \\
 \underset{n_2\times n_1}{0} & \underset{n_2\times n_2}{0}\end{bmatrix}
 \end{align}$$
-So we can write $X_1 \sim \mathcal N(\mu_1, \Sigma_{11})$ and similarly $X_2 \sim \mathcal N(\mu_2, \Sigma_{22}$.
+So we can write $X_1 \sim \mathcal N(\mu_1, \Sigma_{11})$ and similarly $X_2 \sim \mathcal N(\mu_2, \Sigma_{22})$.
 
-It's clear that $X_1 \indep X_2$  implies $\Sigma_{12} = 0$. 
+It's clear that $X_1 \indep X_2$ implies $\Sigma_{12} = 0$. 
 
-We can show that $\Sigma_{12}$ necessitates $X_1 \indep X_2$. Recall that independence means $f_{XY}(x,y) = f_X(x)f_Y(y)$. So:
+We can show that $\Sigma_{12} = 0$ necessitates $X_1 \indep X_2$. Recall that independence means $f_{XY}(x,y) = f_X(x)f_Y(y)$. So, first the determinant of $f_{XY}$:
 
 $$\begin{align}
-f_1{X_1}f_2(X_2) &= \\
+(x - \mu)'\Sigma\inv(x-\mu) &= \begin{bmatrix}x_1 - \mu_1 \\ x_2- \mu_2  
+\end{bmatrix}'\begin{bmatrix} 
+\Sigma_{11} & \Sigma_{12}\\
+\Sigma_{21} & \Sigma_{22}\\
+\end{bmatrix}
+\begin{bmatrix} 
+x_1 - \mu_1 \\ x_2- \mu_2  
+\end{bmatrix}
+\\
+&= \begin{bmatrix}x_1 - \mu_1 \\ x_2- \mu_2  
+\end{bmatrix}'\begin{bmatrix} 
+\Sigma_{11} & 0\\
+0 & \Sigma_{22}\\
+\end{bmatrix}
+\begin{bmatrix} 
+x_1 - \mu_1 \\ x_2- \mu_2  
+\end{bmatrix}\\
+&= (x_1 - \mu_1)'\Sigma\inv(x_1-\mu_1) (x_2 - \mu_2)'\Sigma\inv(x_2-\mu_2)\\ 
 \end{align}$$
+Then the density: 
+$$\begin{align}
+f(X) &= \frac{1}{(2\pi)^{n/2}} (\det \Sigma)^{-1/2} \exp\left[ -(1/2)(x - \mu)'\Sigma\inv (x-\mu)\right] \\
+f(\begin{bmatrix} X_1' & X_2'\end{bmatrix}') &= \frac{1}{(2\pi)^{n/2}} (\det \Sigma_{11}\det \Sigma_{22})^{-1/2} \exp\left[ -(1/2)(x - \mu)'\begin{bmatrix} 
+\Sigma_{11} & 0\\
+0 & \Sigma_{22}\\
+\end{bmatrix}\inv (x-\mu)\right] \\
+&= f_X(X)f_Y(Y)
+\end{align}$$
+#### Conditionals
+$$\begin{align}
+X &\equiv \begin{bmatrix} X_1' & X_2'\end{bmatrix}'\\
+
+
+\end{align}$$
+
+
+
+<font color=#F7B801>todo</font>
+
+#status/section/🚧 

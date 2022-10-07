@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Friday, October 7th 2022, 1:19 pm
-date updated: Friday, October 7th 2022, 2:03 pm
+date updated: Friday, October 7th 2022, 2:18 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -41,6 +41,8 @@ As with our previous continuity axiom, we can describe this as saying that upper
 
 Some preferences $\succsim$ fulfil the three axioms: ie. complete & transitive, independent, continuity IFF there is some utility function over consequences, $u: X \to \R$, such that 
 $$ p \succsim q \iff \sum_{x \in X} u(x)p(x) \geq \sum_{x \in X} u(x)q(x)$$
+We can also write the RHS as $U(p) \geq U(q)$. 
+
 This $u$ is unique up to positive affine transformations (ie. linear transformations without the requirement $f(0) = 0$). 
 
 #### Proof
@@ -53,7 +55,7 @@ Let's define $u(\overline x)$ as $1$ and $u(\underline x)$ as $0$.
 
 ```ad-note
 title: Lemma 1
-```
+
 Suppose $\alpha, \beta \in [0,1]$. Then
 $$ \alpha \overline x + (1-\alpha) \underline x \succ \beta \overline x + (1-\beta) \underline x$$
 if and only if
@@ -69,9 +71,36 @@ $$\begin{align}
 Note that in the third line we use independence. 
 
 
-Now suppose that $\alpha \overline x + (1-\alpha) \underline x \succsim \beta \overline x + (1-\beta) \underline x$. Then
+Now suppose that $\alpha \overline x + (1-\alpha) \underline x \succsim \beta \overline x + (1-\beta) \underline x$. Suppose $\alpha < \beta$. 
 $$\begin{align}
 \alpha \overline x + (1-\alpha) \underline x &\succ \beta \overline x + (1-\beta) \underline x\\
-&= \alpha \overline x + (\beta - \alpha)\overline x+ (1-\beta) \underline x\\
-&\succ \alpha \overline x + (\beta - \alpha)\underline x+ (1-\beta) \underline x\\(1-\alpha) \underline x &\succ (\alpha - \beta)\underline x+ (1-\beta) \underline x
+\alpha \overline x + (\beta-\alpha) \underline x + (1-\beta) \underline x &\succ \beta \overline x + (1-\beta) \underline x\\
+\alpha \overline x + (\beta-\alpha) \underline x &\succ \beta \overline x\\
+\alpha \overline x -\alpha \underline x &\succ \beta \overline x - \beta \underline x\\
 \end{align}$$
+which last contradicts $\alpha < \beta$. 
+
+
+
+```
+
+```ad-note
+title: Lemma 2
+
+For $p$ such that $\overline x \succ p \succ \underline x$ there is some $\alpha_p$ such that 
+$$ p \sim \alpha_p\overline x + (1-\alpha_p)\underline x$$
+The existence is a direct consequence of continuity. The uniqueness follows from Lemma 1: if $\alpha_p' > \alpha_p$ then 
+$\alpha_p'\overline x + (1-\alpha_p')\underline x \succ p$ by transitivity. 
+
+```
+
+One might guess at this point where we're headed: 
+
+Let $U(p) = \alpha_p$,. existence and uniqueness from Lemma 2. Then $U$ represents our $\succsim$: 
+$$\begin{align}
+p \succsim q \iff \alpha_p \overline x + (1-\alpha_p) \underline x \succ \alpha_q \overline x + (1-\alpha_q) \underline x \\
+\iff \alpha_p > \alpha_q\\
+&\iff U(p) > U(q)
+\end{align}$$
+
+First line uses our Lemma 1.

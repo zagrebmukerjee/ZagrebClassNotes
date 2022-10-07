@@ -1,6 +1,8 @@
 ---
 aliases: 
-date updated: Tuesday, October 4th 2022, 12:31 pm
+- "Markov's Inequality"
+- "Chebyshev's Inequality"
+date updated: Friday, October 7th 2022, 12:29 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note

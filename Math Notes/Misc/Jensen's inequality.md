@@ -1,6 +1,6 @@
 ---
 aliases: 
-date updated: Friday, October 7th 2022, 12:20 pm
+date updated: Friday, October 7th 2022, 12:30 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -21,18 +21,19 @@ The secant of a convex (concave) function lies above (below) the functions
 
 #### Expectations
 
-If X is a random variable, and $f$ is a convex function, then 
-$$E[f(X)] > f(E[X]) $$
+If X is a random variable with finite first moment, and $g$ is a convex function, then 
+$$E[g(X)] > g(E[X]) $$
 ```ad-example
 title:
 Consider the squared mean of a dice-roll - $(4 + 3)^2/2^2$,  $49/4$, or $12.25$, versus the mean of the squares, $\frac{1}{6}[36 + 25 + 16 + 9 + 4+ 1]$ = $91/6 = 15.166$
 ```
 #### Proof
+Suppose $g()$ convex. Then there is a hyperplane below $g(x)$ and tangent to $g(x)$ at $EX$ - call it $h(x)$.
 
-Expectation case: 
-
-Suppose $g()$ convex. Then use LIE:
+Then:
 $$\begin{align}
-E(g(X)) &= E_XE(g(X)|X =a )\\
-&= \int_{a \in \Omega_X} \int_{b \in \Omega_{g(X)}} g(X)
+g(EX) &= h(EX)\\
+&= Eh(X)\\
+&\leq Eg(X)
 \end{align}$$
+recalling that expectation is linear and monotonic. 

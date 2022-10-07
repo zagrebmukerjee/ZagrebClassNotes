@@ -3,9 +3,12 @@ aliases:
 - 'Cauchy-Schwarz Inequality'
 - 'Cauchy-Bunyakowsky-Schwarz Inequality'
 - 'CBS Inequality'
+- "Holder's Inequality"
+- "Lyapunov's Inequality" 
+- "Minkowski's Inequality"
 
 creation date: Tuesday, October 4th 2022, 11:57 am
-date updated: Wednesday, October 5th 2022, 2:37 pm
+date updated: Friday, October 7th 2022, 12:29 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -60,3 +63,19 @@ $$ |a'b| \leq \sqrt{||a||||b||}$$
 
 $$\left| \int g(x)h(x) f_X(x) dx \right| \leq\left(\int g^2(x)f_X(x)dx\right)^{1/2}\left(\int h^2(x)f_X(x)dx \right)^{1/2}$$
 ![[Jensen's inequality#Jensen's Inequality]]
+
+### Holder's Inequality
+
+Holder's inequality generalizes the [[#Cauchy-Bunyakovsky-Schwarz Inequality]]. Let $p, q \geq 1$ and $\frac{1}{p} + \frac{1}{q} = 1$. 
+
+For any two random variables:
+
+$$E(|XY|) = (E|X^p|)^{1/p}(E|X^q|)^{1/q}$$
+So the CBS is the particular case when $p = q = 2$. 
+Note that this doesn't require finite moments? but it's pretty dang useless without it. 
+
+Proof: not instructive
+
+We can also define an <font color=gree>L<sup>p</sup>-Norm</font> as $||x
+
+### 

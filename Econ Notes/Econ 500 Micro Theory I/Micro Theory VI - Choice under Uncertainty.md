@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Friday, October 7th 2022, 1:19 pm
-date updated: Friday, October 7th 2022, 2:33 pm
+date updated: Friday, October 7th 2022, 2:36 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -119,8 +119,11 @@ $$\begin{align}
 &\sim \alpha\alpha_p\overline x + \alpha \underline x - \alpha \alpha_p\underline x + \big[\alpha_q \overline x + (1-\alpha_q) \underline x - \alpha \alpha_q \overline x - \alpha(1-\alpha_q) \underline x\big]\\
 &\sim \alpha\alpha_p\overline x + \alpha \alpha_p\underline x - \alpha \alpha_p\underline x + \alpha_q \overline x + \underline x -\alpha_q\underline x - \alpha \alpha_q \overline x - \alpha \underline x + \alpha\alpha_q \underline x\\
 &\sim \alpha\alpha_p\overline x - \alpha \alpha_p\underline x + \alpha_q \overline x + \underline x -\alpha_q\underline x - \alpha \alpha_q \overline x + \alpha\alpha_q \underline x\\
-&\sim (\alpha\alpha_p + (1-\alpha)\alpha_q \alpha_q )\overline x - (\alpha \alpha_p+1 -\alpha_q + \alpha\alpha_q )\underline x\\
+&\sim (\alpha\alpha_p + (1-\alpha)\alpha_q )\overline x + (1 -\alpha \alpha_p -(1-\alpha)\alpha_q )\underline x\\
 \end{align}$$
-
+So $U(\alpha p + (1-\alpha)q ) = U(p)+ (1-\alpha)U(q)$
 
 This can be extended to a more complex density by induction. 
+
+## Problems with VNM EU
+Oh no

@@ -18,6 +18,8 @@ tags:
 # [[Econometrics VI - Inequalities and Important Results]]
 <span style = "font-size:120%"><i >Zagreb Mukerjee </i></span>
 
+Not to be confused with [[Inequality]]
+
 ![[Markov's and Chebyshev's Inequalities#Markov's Inequality]]
 
 ![[Markov's and Chebyshev's Inequalities#Chebyshev's Inequality]]
@@ -57,3 +59,4 @@ $$ |a'b| \leq \sqrt{||a||||b||}$$
 #### Function Form
 
 $$\left| \int g(x)h(x) f_X(x) dx \right| \leq\left(\int g^2(x)f_X(x)dx\right)^{1/2}\left(\int h^2(x)f_X(x)dx \right)^{1/2}$$
+![[Jensen's inequality#Jensen's Inequality]]

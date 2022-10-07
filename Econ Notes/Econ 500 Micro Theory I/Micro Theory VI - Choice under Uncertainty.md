@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Friday, October 7th 2022, 1:19 pm
-date updated: Friday, October 7th 2022, 2:18 pm
+date updated: Friday, October 7th 2022, 2:33 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -98,9 +98,29 @@ One might guess at this point where we're headed:
 
 Let $U(p) = \alpha_p$,. existence and uniqueness from Lemma 2. Then $U$ represents our $\succsim$: 
 $$\begin{align}
-p \succsim q \iff \alpha_p \overline x + (1-\alpha_p) \underline x \succ \alpha_q \overline x + (1-\alpha_q) \underline x \\
-\iff \alpha_p > \alpha_q\\
+p \succsim q &\iff \alpha_p \overline x + (1-\alpha_p) \underline x \succ \alpha_q \overline x + (1-\alpha_q) \underline x \\
+&\iff \alpha_p > \alpha_q\\
 &\iff U(p) > U(q)
 \end{align}$$
 
-First line uses our Lemma 1.
+First line uses independence and monotonicity. Second line uses our Lemma 1.
+
+Next, to show that $U(p) = \sum_{x \in X} u(x) p(x)$. 
+
+Let $x,y \in X$. Let $p,q$ be degenerate lotteries such that $p$ always gives $x$, $q$ gives $y$. Let $\alpha \in (0,1)$. 
+
+Then $U$ is an expected utility iff: 
+$$ U(\alpha p + (1-\alpha) q) = \alpha U(p) + (1-\alpha) U(q)$$
+The latter is equivalent to $\alpha \alpha_p + (1-\alpha) \alpha_q$. 
+
+Then we can say: 
+$$\begin{align}
+\alpha p + (1-\alpha)q &\sim \alpha (\alpha_p \overline x + (1-\alpha_p) \underline x) + (1-\alpha)(\alpha_q \overline x + (1-\alpha_q) \underline x)\\
+&\sim \alpha\alpha_p\overline x + \alpha \underline x - \alpha \alpha_p\underline x + \big[\alpha_q \overline x + (1-\alpha_q) \underline x - \alpha \alpha_q \overline x - \alpha(1-\alpha_q) \underline x\big]\\
+&\sim \alpha\alpha_p\overline x + \alpha \alpha_p\underline x - \alpha \alpha_p\underline x + \alpha_q \overline x + \underline x -\alpha_q\underline x - \alpha \alpha_q \overline x - \alpha \underline x + \alpha\alpha_q \underline x\\
+&\sim \alpha\alpha_p\overline x - \alpha \alpha_p\underline x + \alpha_q \overline x + \underline x -\alpha_q\underline x - \alpha \alpha_q \overline x + \alpha\alpha_q \underline x\\
+&\sim (\alpha\alpha_p + (1-\alpha)\alpha_q \alpha_q )\overline x - (\alpha \alpha_p+1 -\alpha_q + \alpha\alpha_q )\underline x\\
+\end{align}$$
+
+
+This can be extended to a more complex density by induction. 

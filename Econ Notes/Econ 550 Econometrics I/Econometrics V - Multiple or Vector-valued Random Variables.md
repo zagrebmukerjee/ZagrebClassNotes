@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Tuesday, October 4th 2022, 12:47 pm
-date updated: Friday, October 7th 2022, 10:59 am
+date updated: Friday, October 7th 2022, 11:09 am
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -388,6 +388,36 @@ Suppose $\underset{n \times 1}{X} \sim \mathcal N(\underset{n \times 1}{\mu}, \u
 
 We can write $X_1$ as a linear transformation of $X$: 
 $$X_1 = \begin{bmatrix} I_{n_1} & \underset{n_1 \times n_2}{0}\end{bmatrix}X$$
-This matrix is positive definite. So since we've found $X_1$ is a linear transformation of $X$ it follows that $X_1 \sim \mathcal N (\mu_1, \Sigma_1)$. We just have to find $\mu_1$ and $\Sigma_1$ to characterize $X_1$. 
+This matrix - call it $G$ - is positive definite. So since we've found $X_1$ is a linear transformation of $X$ it follows that $X_1 \sim \mathcal N (\mu', \Sigma')$. We just have to find $\mu'$ and $\Sigma'$ to characterize $X_1$. 
 
-The mean is straightforward. $\mu_1 = E[\begin{bmatrix} I_{n_1} & \underset{n_1 \times n_2}{0}\end{bmatrix}X] = \begin{bmatrix} I_{n_1} & \underset{n_1 \times n_2}{0}\end{bmatrix} E[X] = (\mu_1, \ldots, \mu_{n_1}, \underset{1 \times n_2}{0, \ldots, 0})'$. 
+The mean is straightforward. 
+
+$$\begin{align}
+\mu' &= E\left [GX\right]
+\\&= \begin{bmatrix} I_{n_1} & \underset{n_1 \times n_2}{0}\end{bmatrix} E[X] \\
+&= (\mu_1, \ldots, \mu_{n_1}, \underset{1 \times n_2}{0, \ldots, 0})
+\end{align}$$
+Call this $\mu_1$; note that $\mu = \begin{bmatrix} \mu_1' & \mu_2' \end{bmatrix}'$. Variance is more complex. First break $\Sigma$ into a block matrix for convenience.
+$$\begin{align}
+\Sigma &= \begin{bmatrix} \underset{n_1\times n_1}{\Sigma_{11}} & \underset{n_1\times n_2}{\Sigma_{12}} \\
+ \underset{n_2\times n_1}{\Sigma_{21}} & \underset{n_2\times n_2}{\Sigma_{22}}\end{bmatrix}\\
+\Sigma' &= \var(GX) \\
+&= G\var(X)G'\\
+&= \begin{bmatrix} I_{n_1} & \underset{n_1 \times n_2}{0}\end{bmatrix}\Sigma \begin{bmatrix} I_{n_1} \\ \underset{n_2 \times n_1}{0}\end{bmatrix}\\
+&= \begin{bmatrix} I_{n_1} & \underset{n_1 \times n_2}{0}\end{bmatrix}\begin{bmatrix} \underset{n_1\times n_1}{\Sigma_{11}} & \underset{n_1\times n_2}{\Sigma_{12}} \\
+\underset{n_2\times n_1}{\Sigma_{21}} & \underset{n_2\times n_2}{\Sigma_{22}}\end{bmatrix} \begin{bmatrix} I_{n_1} \\ \underset{n_2 \times n_1}{0}\end{bmatrix}\\
+&= \begin{bmatrix} I_{n_1} & \underset{n_1 \times n_2}{0}\end{bmatrix}
+\begin{bmatrix} \underset{n_1\times n_1}{\Sigma_{11}} & \underset{n_1\times n_2}{0} \\
+\underset{n_2\times n_1}{\Sigma_{21}} & \underset{n_2\times n_2}{0} \end{bmatrix}\\
+&= \begin{bmatrix}\underset{n_1\times n_1}{\Sigma_{11}} & \underset{n_1\times n_2}{0} \\
+\underset{n_2\times n_1}{0} & \underset{n_2\times n_2}{0}\end{bmatrix}
+\end{align}$$
+So we can write $X_1 \sim \mathcal N(\mu_1, \Sigma_{11})$ and similarly $X_2 \sim \mathcal N(\mu_2, \Sigma_{22}$.
+
+It's clear that $X_1 \indep X_2$  implies $\Sigma_{12} = 0$. 
+
+We can show that $\Sigma_{12}$ necessitates $X_1 \indep X_2$. Recall that independence means $f_{XY}(x,y) = f_X(x)f_Y(y)$. So:
+
+$$\begin{align}
+f_1{X_1}f_2(X_2) &= \\
+\end{align}$$

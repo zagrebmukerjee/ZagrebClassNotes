@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Tuesday, October 4th 2022, 12:47 pm
-date updated: Thursday, October 6th 2022, 4:30 pm
+date updated: Friday, October 7th 2022, 10:59 am
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -339,6 +339,7 @@ Every MVN has a unique $\mu, \Sigma$.
 
 
 ### Standard Normal-ification
+We can demonstrate that that the multivariate normal is the product of standard normals. 
 #### Spectral Decomposition
 Linear algebra tells us that since $\Sigma$ is PSD and symmetric, then we can write 
 $$ \Sigma = B \Lambda B'$$
@@ -359,16 +360,16 @@ $$\begin{align}
 &= B \Lambda\inv B'\\
 \Sigma^{-1/2}\Sigma^{-1/2} &= \Sigma^{-1}\\
 \end{align}$$
-#### Decomposition of MVN to Find Moments
+#### Decomposition of MVN
 
-With this tool, we can write $Z = \Sigma^{-1/2}(X - \mu)$. A result gives us that $dz = (\det \Sigma)^{-1/2}dx$ 
+With this tool, we can write $Z = \Sigma^{-1/2}(X - \mu)$. A change of variables result gives us that $dz = (\det \Sigma)^{-1/2}dx$ 
 Then we find that 
 $$\begin{align}
 f_Z(z) &= \frac{1}{(2\pi)^{n/2}}\exp\left[-(1/2)z'z\right]\\
 &= \prod_{i=1}^n\frac{1}{(2\pi)^{1/2}}\exp\left[-(1/2) z_i^2\right]
 \end{align}$$
 which is the product of $n$ standard normals: $Z \sim \mathcal N(0,I_n)$. Then 
-$X = \Sigma^{1/2} Z + \mu$ and $EX = E(\Sigma^{1/2}Z + \mu = \mu$.
+$X = \Sigma^{1/2} Z + \mu$ and $EX = E(\Sigma^{1/2}Z + \mu) = \mu$.
 $$\begin{align}
 \var(X) &= \var(\Sigma^{1/2}Z + \mu) \\
 &= \Sigma^{1/2} \var(Z) (\Sigma^{1/2})' \\
@@ -376,3 +377,17 @@ $$\begin{align}
 &= \Sigma
 \end{align}$$
 using the fact that $\Sigma^{1/2}$ is symmetric. 
+
+I can also go backwards to show that $\Sigma Z + \mu$ is an MVN, provided that $\Sigma$ is positive semidefinite <font color=#F7B801>and symmetric?</font>
+
+### MVN Marginals
+
+From the above, we can observe that any linear transformation of MVNs is an MVN also. 
+
+Suppose $\underset{n \times 1}{X} \sim \mathcal N(\underset{n \times 1}{\mu}, \underset{n \times n}{\Sigma})$. We're interested in some subset of the $X$, $X_1$; so we can break $X$ up: $X = \begin{bmatrix} X_1\\X_2\end{bmatrix}$. Then $X_1 \in \R^{n_1}, X_2 \in \R^{n_2}$, and $n_1 + n_2 = n$. 
+
+We can write $X_1$ as a linear transformation of $X$: 
+$$X_1 = \begin{bmatrix} I_{n_1} & \underset{n_1 \times n_2}{0}\end{bmatrix}X$$
+This matrix is positive definite. So since we've found $X_1$ is a linear transformation of $X$ it follows that $X_1 \sim \mathcal N (\mu_1, \Sigma_1)$. We just have to find $\mu_1$ and $\Sigma_1$ to characterize $X_1$. 
+
+The mean is straightforward. $\mu_1 = E[\begin{bmatrix} I_{n_1} & \underset{n_1 \times n_2}{0}\end{bmatrix}X] = \begin{bmatrix} I_{n_1} & \underset{n_1 \times n_2}{0}\end{bmatrix} E[X] = (\mu_1, \ldots, \mu_{n_1}, \underset{1 \times n_2}{0, \ldots, 0})'$. 

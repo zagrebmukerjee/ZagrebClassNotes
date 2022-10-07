@@ -13,7 +13,7 @@ tags:
 
 # [[Micro Theory V - Welfare]]
 <span style = "font-size:120%"><i >Zagreb Mukerjee </i></span>
-
+[[Econ 500 Micro Theory Index]]
 
 
 We've defined indirect utility in terms of parameters $p,w$. I might then want to ask: does a change in price make someone better or worse off? How much? comparative statics on $v$ will only get me ordinal or directional results: after all, utility functions are only unique up to strictly increasing transformations. 

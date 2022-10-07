@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Wednesday, September 28th 2022, 10:10 am
-date updated: Monday, October 3rd 2022, 4:10 pm
+date updated: Friday, October 7th 2022, 11:42 am
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -13,6 +13,7 @@ tags:
 
 # [[Micro Theory VI - Theory of the Firm]]
 <span style = "font-size:120%"><i >Zagreb Mukerjee </i></span>
+[[Econ 500 Micro Theory Index]]
 
 ## Production
 
@@ -84,9 +85,9 @@ Suppose $Y$ is no free lunch, free disposal, nonempty and closed: suppose PMP so
 
 
 
-## Cost Minimization 
+## Cost Minimization
 
 
-## Duality or Integrability 
+## Duality or Integrability
 
 Suppose I can observe a profit function $\pi$. Then can I say something about the technology - i.e. the relation embodied in $Y$? This might be nice because profit functions and cost functions are much more observable. 

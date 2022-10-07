@@ -1,19 +1,18 @@
 ---
 aliases:
 creation date: Wednesday, September 14th 2022, 2:34 pm
-date updated: Thursday, September 15th 2022, 8:44 am
+date updated: Friday, October 7th 2022, 11:40 am
 
 notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags: 
 - '#types/classes'
-- '#status/🚧'
 ---
 
 # [[Micro Theory IIa - Elasticity]]
 <span style = "font-size:120%"><i >Zagreb Mukerjee </i></span>
-[[Econ 550 Micro Theory Index]]
+[[Econ 500 Micro Theory Index]]
 
 ## Elasticity Basics
 

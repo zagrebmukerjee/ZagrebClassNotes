@@ -1,13 +1,13 @@
 ---
 aliases:
 creation date: Friday, September 23rd 2022, 10:21 am
-date updated: Monday, October 3rd 2022, 3:23 pm
+date updated: Friday, October 7th 2022, 11:41 am
 
 notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags: 
-- '#types/classes'
+- '#types/classes/econ'
 ---
 
 # [[Micro Theory IV - Comparative Statics]]

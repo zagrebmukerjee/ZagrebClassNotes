@@ -13,7 +13,7 @@ tags:
 
 # [[Micro Theory II - Utility Maximization]]
 <span style = "font-size:120%"><i >Zagreb Mukerjee </i></span>
-[[Econ 550 Micro Theory Index]]
+[[Econ 500 Micro Theory Index]]
 
 
 Why not just start here? Well, it's good to have the foundations. And in various analytic contexts one might prefer to use choice functions or preferences. 

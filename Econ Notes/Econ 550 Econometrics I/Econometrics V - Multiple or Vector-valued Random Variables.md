@@ -452,10 +452,10 @@ f(\begin{bmatrix} X_1' & X_2'\end{bmatrix}') &= \frac{1}{(2\pi)^{n/2}} (\det \Si
 #### Conditionals
 $$\begin{align}
 X &\equiv \begin{bmatrix} X_1' & X_2'\end{bmatrix}'\\
-
-
+E(X_1|X_2 = x_2) &= \mu_1 + \Sigma_{12}\Sigma_{22}\inv(x_2 - \mu_2)\\
+\var(X_1|X_2=x_2) &= \Sigma_{11} - \Sigma_{12}\Sigma_{22}\inv\Sigma_{21}
 \end{align}$$
-
+Note that the conditional variance doesn't depend on $x_2$; the expectation is linear in $x_2$. Handy.
 
 
 <font color=#F7B801>todo</font>

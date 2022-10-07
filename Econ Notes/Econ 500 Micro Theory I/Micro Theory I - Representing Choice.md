@@ -13,7 +13,7 @@ tags:
 
 # [[Micro Theory I - Representing Choice]]
 <span style = "font-size:120%"><i >Zagreb Mukerjee </i></span>
-[[Econ 550 Micro Theory Index]]
+[[Econ 500 Micro Theory Index]]
 
 ## 3 Modes of Choice Representation
 

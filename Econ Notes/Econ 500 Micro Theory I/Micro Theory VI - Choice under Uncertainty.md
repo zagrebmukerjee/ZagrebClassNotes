@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Friday, October 7th 2022, 1:19 pm
-date updated: Friday, October 7th 2022, 1:44 pm
+date updated: Friday, October 7th 2022, 2:03 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -55,7 +55,7 @@ Let's define $u(\overline x)$ as $1$ and $u(\underline x)$ as $0$.
 title: Lemma 1
 ```
 Suppose $\alpha, \beta \in [0,1]$. Then
-$$ \alpha \overline x + (1-\alpha) \underline x \succsim \beta \overline x + (1-\beta) \underline x$$
+$$ \alpha \overline x + (1-\alpha) \underline x \succ \beta \overline x + (1-\beta) \underline x$$
 if and only if
 $$ \alpha > \beta$$
 **Proof of Lemma 1**: Suppose first $\alpha > \beta$. Then: 
@@ -63,5 +63,15 @@ $$\begin{align}
 \alpha \overline x + (1-\alpha)\underline x&= 
 \beta \overline x + (\alpha - \beta)\overline x + (1-\alpha) \underline x \\
 &= [(\alpha - \beta)\overline x] + \beta \overline x + (1-\alpha) \underline x \\
-&\succ [(\alpha - \beta)\overline x] + \descbox{r}{\beta \underline x} + (1-\alpha) \underline x 
+&\succ [(\alpha - \beta)\overline x] + \beta \underline x + (1-\alpha) \underline x \\
+&= \beta \overline x + (1-\beta)\underline x
+\end{align}$$
+Note that in the third line we use independence. 
+
+
+Now suppose that $\alpha \overline x + (1-\alpha) \underline x \succsim \beta \overline x + (1-\beta) \underline x$. Then
+$$\begin{align}
+\alpha \overline x + (1-\alpha) \underline x &\succ \beta \overline x + (1-\beta) \underline x\\
+&= \alpha \overline x + (\beta - \alpha)\overline x+ (1-\beta) \underline x\\
+&\succ \alpha \overline x + (\beta - \alpha)\underline x+ (1-\beta) \underline x\\(1-\alpha) \underline x &\succ (\alpha - \beta)\underline x+ (1-\beta) \underline x
 \end{align}$$

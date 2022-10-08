@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Saturday, October 8th 2022, 3:56 pm
-date updated: Saturday, October 8th 2022, 4:07 pm
+date updated: Saturday, October 8th 2022, 7:13 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -35,7 +35,7 @@ As an aside, the sample mean $\overline X_n$ is $\arg \min_{b} \sum_{i=0}^n (X_i
 
 ## Sample Mean and Variance
 
-The expectation of the sample mean in the case of a random sample: Let $X_i$ be iid with mean $\mu_{X_i} = \mu.$
+The expectation of the sample mean in the case of a random sample: Let $X_i$ be iid with mean $\mu_{X_i} = \mu$ and variance $\sigma^2$
 
 $$ E\overline X_n = E\left[\frac{1}{n}\sum_{i=1}^n X_i\right] = \frac{1}{n} \sum_{i=1}^n EX_i = \mu$$
 Note that if $X, Y$ are independent, then $E[XY] = EXEY$. 
@@ -47,5 +47,8 @@ $$\begin{align}
 &= E\left[ \frac{1}{n}\sum_{i=1}^n X_i \right]^2 - \mu^2\\
 &= \frac{1}{n^2} E\left[\sum_{i=1}^n\sum_{j=1}^nX_iX_j \right] - \mu^2\\
 &= \frac{1}{n^2} E\left[\sum_{i=1}^n\sum_{j=1}^n X_iX_j \right] - \mu^2\\
-&= \frac{1}{n^2} E\left[\sum_{i=1}^n \var(X_i) + n^2\mu^2\right] - \mu^2\\
+&= \frac{1}{n^2} \left(E\left[\sum_{i=1}^n X_i^2\right] + E\left[n(n-1)\mu^2 \right]\right) - \mu^2\\
+&= \frac{E\left[\sum_{i=1}^n X_i^2\right]}{n^2} - \frac{ n\mu^2}{n^2}\\
+&= \frac{E\left[\sum_{i=1}^n X_i^2- \mu^2\right]}{n^2} \\
+&= \sigma^2/n
 \end{align}$$

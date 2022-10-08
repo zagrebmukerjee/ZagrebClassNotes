@@ -1,14 +1,13 @@
 ---
 aliases:
 creation date: Tuesday, October 4th 2022, 12:47 pm
-date updated: Friday, October 7th 2022, 11:21 am
+date updated: Saturday, October 8th 2022, 3:54 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags: 
 - '#types/classes'
-- '#status/🚧'
 ---
 
 # [[Econometrics V - Multiple or Vector-valued Random Variables]]
@@ -456,8 +455,3 @@ E(X_1|X_2 = x_2) &= \mu_1 + \Sigma_{12}\Sigma_{22}\inv(x_2 - \mu_2)\\
 \var(X_1|X_2=x_2) &= \Sigma_{11} - \Sigma_{12}\Sigma_{22}\inv\Sigma_{21}
 \end{align}$$
 Note that the conditional variance doesn't depend on $x_2$; the expectation is linear in $x_2$. Handy.
-
-
-<font color=#F7B801>todo</font>
-
-#status/section/🚧 

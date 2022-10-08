@@ -15,11 +15,11 @@ cssclass: math-class-note
 
 tags: 
 - '#types/classes'
-- '#status/🚧'
 ---
 
 # [[Econometrics VI - Inequalities and Important Results]]
 <span style = "font-size:120%"><i >Zagreb Mukerjee </i></span>
+[[Econ 550 Index]]
 
 Not to be confused with [[Inequality]]
 

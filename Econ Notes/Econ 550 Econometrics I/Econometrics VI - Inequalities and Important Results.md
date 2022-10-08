@@ -70,12 +70,36 @@ Holder's inequality generalizes the [[#Cauchy-Bunyakovsky-Schwarz Inequality]]. 
 
 For any two random variables:
 
-$$E(|XY|) = (E|X^p|)^{1/p}(E|X^q|)^{1/q}$$
+$$E(|XY|) \leq (E|X^p|)^{1/p}(E|Y^q|)^{1/q}$$
 So the CBS is the particular case when $p = q = 2$. 
 Note that this doesn't require finite moments? but it's pretty dang useless without it. 
 
-Proof: not instructive
+Proof: not given (uninstructive)
 
-We can also define an <font color=gree>L<sup>p</sup>-Norm</font> as $||x
+We can also define an <font color=gree>L<sup>p</sup>-Norm</font> as $||X||_p = (E|X^p|)^{1/p}$; thus the Euclidean norm is an L$^2$  norm. Then this is:
+$$||XY||_1 \leq ||X||_p ||Y||_q$$
 
-### 
+
+### Lyapunov's Inequality
+For $Y = 1$ in Holder's Inequality we have as a consequence 
+
+$$ E(|X|) \leq (E|X^p|)^{1/p}$$
+for $p \geq 1$. Now let $X = |X^r|$ and $p = s/r$, with $s \geq r \geq 1$ 
+$$\begin{align}
+E|X^r| &\leq (E|(X^r)^{s/r}|)^{r/s}\\
+E|X^r|^{1/r} &\leq (E|X^s|)^{1/s}\\
+||X||_r &\leq ||X||_s
+\end{align}$$
+Once again, a valid but useless result obtains when $EX = \infty$. 
+
+### Minkowsky's Inequality
+
+For any RVs $X,Y$ and finite constant $p \geq 1$ we have 
+$$ ||X+Y||_p \leq ||X||_p + ||Y||_p$$
+or
+$$(E[X+Y]^p)^{1/p}\leq (E[X]^p)^{1/p} + (E[Y]^p)^{1/p} $$
+In the particular case of $p=1$ this becomes:
+
+$$E|X+Y| \leq E|X| + E|Y|$$
+
+No proof is given.

@@ -38,11 +38,14 @@ As an aside, the sample mean $\overline X_n$ is $\arg \min_{b} \sum_{i=0}^n (X_i
 The expectation of the sample mean in the case of a random sample: Let $X_i$ be iid with mean $\mu_{X_i} = \mu.$
 
 $$ E\overline X_n = E\left[\frac{1}{n}\sum_{i=1}^n X_i\right] = \frac{1}{n} \sum_{i=1}^n EX_i = \mu$$
+Note that if $X, Y$ are independent, then $E[XY] = EXEY$. 
+
 The variance is 
 $$\begin{align}
 \var(\overline X_n) &= E[(\overline X - E\overline X)^2]\\
 &= E[\overline X^2] - \mu^2\\
 &= E\left[ \frac{1}{n}\sum_{i=1}^n X_i \right]^2 - \mu^2\\
-&= \frac{1}{n^2} E\left[\sum_{i=1}^n\sum_{j=1}^nX_iX_j \right]^2 - \mu^2\\
-&= \frac{1}{n^2} E\left[\sum_{i=1}^n\sum_{j=1}^n X_iX_j \right]^2 - \mu^2\\
+&= \frac{1}{n^2} E\left[\sum_{i=1}^n\sum_{j=1}^nX_iX_j \right] - \mu^2\\
+&= \frac{1}{n^2} E\left[\sum_{i=1}^n\sum_{j=1}^n X_iX_j \right] - \mu^2\\
+&= \frac{1}{n^2} E\left[\sum_{i=1}^n \var(X_i) + n^2\mu^2\right] - \mu^2\\
 \end{align}$$

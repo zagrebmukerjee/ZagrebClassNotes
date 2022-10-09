@@ -64,4 +64,7 @@ then
 $$ \plim{n\to\infty} X_n Y_n = cd $$
 $$ \plim{n\to\infty} X_n/Y_n = c/d $$ the latter only if $d \neq 0$
 
-Proof: this follow
+Proof: this follows from the Slutsky theorem. 
+
+
+## Slutsky Theorem

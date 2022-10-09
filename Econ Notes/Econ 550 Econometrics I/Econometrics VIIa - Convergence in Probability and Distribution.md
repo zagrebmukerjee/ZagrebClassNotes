@@ -3,7 +3,7 @@ aliases:
 - "Convergence in Probability"
 - "Convergence in Distribution"
 creation date: Sunday, October 9th 2022, 11:00 am
-date updated: Sunday, October 9th 2022, 12:53 pm
+date updated: Sunday, October 9th 2022, 12:56 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -49,11 +49,13 @@ Suppose $\plim{n \to \infty} X_n = a$ and $\plim{n \to \infty} Y_n = b$. Then
 $$ \plim{n \to \infty} X_n + Yn = a + b$$
 #### Proof:
 
-Recall triangle inequality: $|a + b| \leq |a| + |b|$
+Recall triangle inequality: $|a + b| \leq |a| + |b|$. 
+If $a + b > c$, then either $a > c/2$ or $b> c/2$ (or both). 
 $$\begin{align}
-P(|X_n + Y_n - a - b| < \epsilon) &= P(|X_n - a + Y_n - b| < \epsilon)\\
-&\leq P(|X_n - a| + | Y_n - b| < \epsilon) \\ 
-&\leq P(|X_n - a| < \epsilon/2 \lor | Y_n - b| < \epsilon/2) 
-&\leq P(|X_n - a| < \epsilon/2 \lor | Y_n - b| < \epsilon/2) 
+P(|X_n + Y_n - a - b| > \epsilon) &= P(|X_n - a + Y_n - b| > \epsilon)\\
+&\leq P(|X_n - a| + | Y_n - b| > \epsilon) \\ 
+&\leq P(|X_n - a| > \epsilon/2 \lor | Y_n - b| > \epsilon/2) \\
+&\leq P(|X_n - a| > \epsilon/2) + P( | Y_n - b| > \epsilon/2) \\
+&\to 0 \text{ as } n \to \infty
 \end{align}$$
 ### Property 3

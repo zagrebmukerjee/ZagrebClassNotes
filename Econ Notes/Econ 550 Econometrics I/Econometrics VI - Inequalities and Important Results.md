@@ -8,13 +8,14 @@ aliases:
 - "Minkowski's Inequality"
 
 creation date: Tuesday, October 4th 2022, 11:57 am
-date updated: Friday, October 7th 2022, 12:29 pm
+date updated: Sunday, October 9th 2022, 11:56 am
 
 notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags: 
-- '#types/classes'
+- '#types/classes/stats/theory'
+- '#topics/methods'
 ---
 
 # [[Econometrics VI - Inequalities and Important Results]]
@@ -76,7 +77,7 @@ Note that this doesn't require finite moments? but it's pretty dang useless with
 
 Proof: not given (uninstructive)
 
-We can also define an <font color=gree>L<sup>p</sup>-Norm</font> as $||X||_p = (E|X^p|)^{1/p}$; thus the Euclidean norm is an L$^2$  norm. Then this is:
+We can also define an <font color=gree>L<sup>p</sup>-Norm</font> as $||X||_p = (E|X^p|)^{1/p}$; thus the Euclidean norm is an L$^2$ norm. Then this is:
 $$||XY||_1 \leq ||X||_p ||Y||_q$$
 
 

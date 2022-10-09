@@ -1,7 +1,13 @@
 ---
 aliases:
+- "Law of Large Numbers"
+- "Weak Law of Large Numbers"
+- "LLN"
+- "WLLN"
+- "Sample Mean"
+- "Sample Variance"
 creation date: Saturday, October 8th 2022, 3:56 pm
-date updated: Sunday, October 9th 2022, 10:58 am
+date updated: Sunday, October 9th 2022, 12:09 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -77,4 +83,24 @@ $$ S_X^2 = \frac{1}{n-1}\sum_{i=1}^n (X_i^2 - \overline X)^2 $$
 Then $ES_X^2 = \sigma^2_X$. 
 
 
-## 
+## Law of Large Numbers
+
+### Weak Law of Large Numbers
+
+Assume again that $X_i$ are iid. Recall that $\var(\overline X_n) = \sigma^2_X/n$; that is, as $n$ increases, $\overline X_n$ becomes less and less dispersed around its mean. That mean is the 'true' parameter value $\mu_X$. 
+
+A formalization of this intuition: 
+
+Suppose $\{ X_i: i \geq 1\}$ a sequence of random variables, i.i.d., with $E|X| < \infty$. Define $\overline X_n = n\inv \sum_{i=1}^n X_i$. Let $\mu_X = E[X_1]$. For all $\epsilon > 0$, 
+
+$$ \lim_{n\to\infty} P(|\overline X_n - \mu_X| > \epsilon) = 0 $$
+This is the same as saying that $\overline X_n \to_p \mu_X$, i.e. $\overline X_n$ [[Econometrics VIIa - Convergence in Probability and Distribution|converges in probability]] to $\mu_X$. 
+
+#### Proof
+For convenience, fix $\sigma_X^2$ finite. The proof will generalize. 
+Use [[Markov's and Chebyshev's Inequalities|Chebyshev's Inequality]], with $Y = \overline X$ and $k = \epsilon\sqrt{n}/\sigma$. 
+
+$$\begin{align}
+P(|Y - Ey| > k\sigma_Y) & \leq \frac{1}{k^2}\\
+P(|\overline X - \mu_X| > \frac{\epsilon \sqrt{n}}{ \sigma}\frac{\sigma/\sqrt{n}) & \leq \frac{1}{k^2}\\
+\end{align}$$

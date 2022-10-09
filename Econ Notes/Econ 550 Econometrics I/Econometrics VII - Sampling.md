@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Saturday, October 8th 2022, 3:56 pm
-date updated: Saturday, October 8th 2022, 7:13 pm
+date updated: Sunday, October 9th 2022, 10:48 am
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -37,7 +37,7 @@ As an aside, the sample mean $\overline X_n$ is $\arg \min_{b} \sum_{i=0}^n (X_i
 
 ### Mean
 
-The expectation of the sample mean in the case of a random sample: Let $X_i$ be iid with mean $\mu_{X_i} = \mu$ and variance $\sigma^2$
+The expectation of the sample mean in the case of a random sample: Let $X_i$ be iid with mean $\mu_{X_i} = \mu$ and well defined variance $\sigma^2$
 
 $$ E\overline X_n = E\left[\frac{1}{n}\sum_{i=1}^n X_i\right] = \frac{1}{n} \sum_{i=1}^n EX_i = \mu$$
 Note that if $X, Y$ are independent, then $E[XY] = EXEY$. 
@@ -56,5 +56,12 @@ $$\begin{align}
 \end{align}$$
 ### Variance
 
-Define a statistic $\hat S^2_X = \sum
+Define a statistic $\hat S^2_X = n\inv \sum_{i=1}^n ( X_i - \overline X)^2$. 
 
+Then
+$$\begin{align}
+E[\hat S_X^2 ] &= \frac{1}{n}E\left[\sum_{i=1}^n ( X_i - \overline X)^2\right] \\
+&= \frac{1}{n}E\left[\sum_{i=1}^n [( X_i - \mu_X)+(\mu_X- \overline X)]^2\right] \\
+&= \frac{1}{n}\sum_{i=1}^n E\left[ ( X_i - \mu_X)^2 +(\overline X - \mu_X )^2 -2(\overline X - \mu_X )(X_i-\mu_X) \right] \\\\
+&= \frac{1}{n}\sum_{i=1}^n E( X_i - \mu_X)^2 +(\overline X - \mu_X )^2 -2E \left[\left(\sum_{i=1}^n X_i/n - \mu_X \right)(X_i-\mu_X) \right] \\\\
+\end{align}$$

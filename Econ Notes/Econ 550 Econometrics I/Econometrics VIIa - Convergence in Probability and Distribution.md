@@ -63,3 +63,5 @@ If $\plim{n \to \infty} Y_n =c$ and $\plim{n \to \infty} X_n = d$
 then 
 $$ \plim{n\to\infty} X_n Y_n = cd $$
 $$ \plim{n\to\infty} X_n/Y_n = c/d $$ the latter only if $d \neq 0$
+
+Proof: this follow

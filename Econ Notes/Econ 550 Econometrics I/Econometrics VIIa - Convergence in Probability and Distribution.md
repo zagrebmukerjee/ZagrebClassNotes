@@ -40,7 +40,7 @@ X_n \to_p c\\
 Suppose $\plim{n \to \infty} Y_n = c$. Then for some constant $b$, 
 $$ \plim{n\to\infty} bY_n = bc$$
 #### Proof:
-We know that for any $\epsilon$, $\lim_{n\to \infty} P(|X_n - c| > \epsilon) = 0$. It follows that $\lim_{n\to \infty} P(|X_n - c| > \epsilon/b) = 0$; which means that $\lim_{n\to \infty} P(|bX_n - bc| > \epsilon) = 0$
+We know that for any $\epsilon$, $\lim_{n\to \infty} P(|X_n - c| > \epsilon) = 0$. It follows that $\lim_{n\to \infty} P(|X_n - c| > \epsilon/|b|) = 0$; which means that $\lim_{n\to \infty} P(|bX_n - bc| > \epsilon) = 0$. This doesn't work for $b=0$ but then the result is trivial. 
 
 ### Property 2
 
@@ -59,3 +59,7 @@ P(|X_n + Y_n - a - b| > \epsilon) &= P(|X_n - a + Y_n - b| > \epsilon)\\
 &\to 0 \text{ as } n \to \infty
 \end{align}$$
 ### Property 3
+If $\plim{n \to \infty} Y_n =c$ and $\plim{n \to \infty} X_n = d$ 
+then 
+$$ \plim{n\to\infty} X_n Y_n = cd $$
+$$ \plim{n\to\infty} X_n/Y_n = c/d $$ the latter only if $d \neq 0$

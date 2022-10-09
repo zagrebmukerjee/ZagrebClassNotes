@@ -2,21 +2,22 @@
 aliases: 
 - "Markov's Inequality"
 - "Chebyshev's Inequality"
-date updated: Friday, October 7th 2022, 12:29 pm
+creation date: Thursday, April 7th 2022, 3:48 pm
+date updated: Sunday, October 9th 2022, 12:23 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags: 
 - '#types/classes/stats/foundations'
-creation date: Thursday, April 7th 2022, 3:48 pm
 ---
 
 ## [[Markov's and Chebyshev's Inequalities]]
 
 ### Markov's Inequality
 
-Markov's inequality acts to bound tail probability of random variables. Suppose $X$ is a random variable: then for all $k > 0$, $P(|X|>k) \leq E|X|/k$. In other words, the tail declines at least as fast as $1/k$. This is useful, for instance, when considering the Law of Large Numbers. There we are talking about averaging lots of random variables - we need to assure ourselves that the tails are not too huge. 
+Markov's inequality acts to bound tail probability of random variables. Suppose $X$ is a random variable: then for all $k > 0$, 
+$$P(|X|>k) \leq E|X|/k$$ In other words, the tail declines at least as fast as $1/k$. This is useful, for instance, when considering the Law of Large Numbers. There we are talking about averaging lots of random variables - we need to assure ourselves that the tails are not too huge. 
 
 This doesn't require that $E|X|$ is finite, but it's not very meaningful if it isn't.
 

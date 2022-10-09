@@ -7,7 +7,7 @@ aliases:
 - "Sample Mean"
 - "Sample Variance"
 creation date: Saturday, October 8th 2022, 3:56 pm
-date updated: Sunday, October 9th 2022, 12:09 pm
+date updated: Sunday, October 9th 2022, 12:20 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -98,9 +98,31 @@ This is the same as saying that $\overline X_n \to_p \mu_X$, i.e. $\overline X_n
 
 #### Proof
 For convenience, fix $\sigma_X^2$ finite. The proof will generalize. 
-Use [[Markov's and Chebyshev's Inequalities|Chebyshev's Inequality]], with $Y = \overline X$ and $k = \epsilon\sqrt{n}/\sigma$. 
+Use [[Markov's and Chebyshev's Inequalities|Chebyshev's Inequality]], with $Y = \overline X$ and $k = \epsilon\sqrt{n}/\sigma_X$. 
 
 $$\begin{align}
 P(|Y - Ey| > k\sigma_Y) & \leq \frac{1}{k^2}\\
-P(|\overline X - \mu_X| > \frac{\epsilon \sqrt{n}}{ \sigma}\frac{\sigma/\sqrt{n}) & \leq \frac{1}{k^2}\\
+P\left(\left|\overline X - \mu_X\right| > \frac{\epsilon \sqrt{n}}{ \sigma_X}\frac{\sigma_X}{\sqrt{n} }\right) & \leq \frac{1}{\frac{\epsilon^2n}{\sigma_X^2}}\\
+P\left(\left|\overline X - \mu_X\right| >\epsilon\right) &\leq \frac{\sigma^2_X}{\epsilon^2 n}\\
+0 < \lim_{n \to \infty} P\left(\left|\overline X - \mu_X\right| >\epsilon\right) &\leq \sigma^2_X \epsilon^2 \lim_{n \to \infty} \frac{1}{n}\\
+\lim_{n \to \infty} P\left(\left|\overline X - \mu_X\right| >\epsilon\right) &= 0
+\end{align}$$
+
+In the last two lines I use the non-negativity property of probability, and the fact that $\sigma_X^2$ is finite. 
+
+### Extension 1 of the WLLN
+
+Suppose $\{X_i: i\geq 1\}$ are random variables that are NOT necessarily independent, but ARE uncorrelated. 
+If $EX_i^2 < \infty$ for each $i$, and $\sup_{i\geq 1}\var(X_i)< \infty$, then:
+
+$$ \overline X_n - n\inv \sum_{i=1}^nEX_i \to_p 0$$
+That is to say, the sample mean converges to the average mean of the sampled RVs. 
+#### Proof
+Define $\mu_i = EX_i$; $\overline \mu_n = n\inv \sum_{i=1}^n \mu_i$, $\sigma^2_i = \var(X_i)$. 
+Recall [[Markov's and Chebyshev's Inequalities|Markov's Inequality]] - $P(|X| > k) \leq \frac{EX}{k}$. Let $X = \overline X - \mu_n)^2
+
+$$\begin{align}
+P(|\overline X - \overline\mu_n| > \epsilon) &= P((\overline X - \overline\mu_n)^2 > \epsilon^2) \\
+& \leq \frac{E(|\overline X - \overline\mu_n|)}{\epsilon^2}\\
+
 \end{align}$$

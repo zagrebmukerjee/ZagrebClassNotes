@@ -7,7 +7,7 @@ aliases:
 - "Sample Mean"
 - "Sample Variance"
 creation date: Saturday, October 8th 2022, 3:56 pm
-date updated: Sunday, October 9th 2022, 12:39 pm
+date updated: Sunday, October 9th 2022, 12:49 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -128,4 +128,8 @@ P(|\overline X_n - \overline\mu_n| > \epsilon) &= P((\overline X - \overline\mu_
 &\leq \frac{\left[ \sum_{i=1}\sum_{j=1}E(X_i - \mu_i)(X_j- \mu_j)\right]}{n^2 \epsilon^2}\\
 &\leq \frac{\left[ \sum_{i=1}\sum_{j=1}\cov(X_i, X_j)\right]}{n^2 \epsilon^2}\\
 &\leq \frac{\left[ \sum_{i=1}\var(X_i)\right]}{n^2 \epsilon^2}\\
+&\leq \frac{\sup_{i\geq 1}\var(X_i)}{n \epsilon^2}\\
 \end{align}$$
+which falls off with $n$. 
+
+This is extensible to a case when $\rho_{X,Y}$ is bounded. 

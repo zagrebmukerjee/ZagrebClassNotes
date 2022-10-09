@@ -377,7 +377,7 @@ $$\begin{align}
 \end{align}$$
 using the fact that $\Sigma^{1/2}$ is symmetric. 
 
-I can also go backwards to show that $\Sigma Z + \mu$ is an MVN, provided that $\Sigma$ is positive semidefinite <font color=#F7B801>and symmetric?</font>
+I can also go backwards to show that $\Sigma^{1/2} Z + \mu$ is an MVN, provided that $\Sigma$ is positive semidefinite <font color=#F7B801>and symmetric?</font>
 
 ### MVN Marginals and Conditionals
 

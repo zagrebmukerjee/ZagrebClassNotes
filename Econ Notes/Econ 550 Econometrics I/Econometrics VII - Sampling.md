@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Saturday, October 8th 2022, 3:56 pm
-date updated: Sunday, October 9th 2022, 10:48 am
+date updated: Sunday, October 9th 2022, 10:58 am
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -63,5 +63,18 @@ $$\begin{align}
 E[\hat S_X^2 ] &= \frac{1}{n}E\left[\sum_{i=1}^n ( X_i - \overline X)^2\right] \\
 &= \frac{1}{n}E\left[\sum_{i=1}^n [( X_i - \mu_X)+(\mu_X- \overline X)]^2\right] \\
 &= \frac{1}{n}\sum_{i=1}^n E\left[ ( X_i - \mu_X)^2 +(\overline X - \mu_X )^2 -2(\overline X - \mu_X )(X_i-\mu_X) \right] \\\\
-&= \frac{1}{n}\sum_{i=1}^n E( X_i - \mu_X)^2 +(\overline X - \mu_X )^2 -2E \left[\left(\sum_{i=1}^n X_i/n - \mu_X \right)(X_i-\mu_X) \right] \\\\
+&= \frac{1}{n}\sum_{i=1}^n E( X_i - \mu_X)^2 +\frac{1}{n}\sum_{i=1}^n E (\overline X - \mu_X )^2 -\frac{2}{n}\sum_{i=1}^n E \left[\left(n\inv \sum_{j=1}^n (X_j) - \mu_X \right)(X_i-\mu_X) \right] \\
+&= \sigma^2 +\sigma^2/n -\frac{2}{n} \sum_{i=1}^nE \left[\left(n\inv \sum_{j=1}^n (X_j - \mu_X) \right)(X_i-\mu_X) \right] \\
+&= \sigma^2 +\sigma^2/n -\frac{2}{n}E \left[n\inv \sum_{i=1}^n\sum_{j=1}^n (X_j - \mu_X)(X_i-\mu_X) \right] \\
+&= \sigma^2 +\sigma^2/n -\frac{2}{n}E \left[n\inv \sum_{i=1}^n\sum_{j=1}^n \cov(X_i,X_j) \right] \\
+&= \sigma^2 +\sigma^2/n -\frac{2}{n}E \left[n\inv \sum_{i=1}^n\var(X_i,X_j) \right] \\
+&= \sigma^2 +\sigma^2/n -2\sigma^2/n\\
+&= \frac{(n-1)}{n}\sigma^2
 \end{align}$$
+
+We need a bias-correction, especially for smaller sizes. So define a <font color=gree>sample variance</font> as 
+$$ S_X^2 = \frac{1}{n-1}\sum_{i=1}^n (X_i^2 - \overline X)^2 $$
+Then $ES_X^2 = \sigma^2_X$. 
+
+
+## 

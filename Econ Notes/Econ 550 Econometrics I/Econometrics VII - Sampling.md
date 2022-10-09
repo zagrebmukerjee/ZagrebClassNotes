@@ -35,6 +35,8 @@ As an aside, the sample mean $\overline X_n$ is $\arg \min_{b} \sum_{i=0}^n (X_i
 
 ## Sample Mean and Variance
 
+### Mean
+
 The expectation of the sample mean in the case of a random sample: Let $X_i$ be iid with mean $\mu_{X_i} = \mu$ and variance $\sigma^2$
 
 $$ E\overline X_n = E\left[\frac{1}{n}\sum_{i=1}^n X_i\right] = \frac{1}{n} \sum_{i=1}^n EX_i = \mu$$
@@ -52,3 +54,7 @@ $$\begin{align}
 &= \frac{E\left[\sum_{i=1}^n X_i^2- \mu^2\right]}{n^2} \\
 &= \sigma^2/n
 \end{align}$$
+### Variance
+
+Define a statistic $\hat S^2_X = \sum
+

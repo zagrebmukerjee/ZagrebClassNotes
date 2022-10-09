@@ -7,7 +7,7 @@ aliases:
 - "Sample Mean"
 - "Sample Variance"
 creation date: Saturday, October 8th 2022, 3:56 pm
-date updated: Sunday, October 9th 2022, 12:20 pm
+date updated: Sunday, October 9th 2022, 12:39 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -112,17 +112,20 @@ In the last two lines I use the non-negativity property of probability, and the 
 
 ### Extension 1 of the WLLN
 
-Suppose $\{X_i: i\geq 1\}$ are random variables that are NOT necessarily independent, but ARE uncorrelated. 
+Suppose $\{X_i: i\geq 1\}$ are random variables that are NOT necessarily independent, but ARE uncorrelated/ have covariance $0$. Define $\overline X_n = n\inv \sum_{i=1}^n X_i$. 
 If $EX_i^2 < \infty$ for each $i$, and $\sup_{i\geq 1}\var(X_i)< \infty$, then:
 
 $$ \overline X_n - n\inv \sum_{i=1}^nEX_i \to_p 0$$
 That is to say, the sample mean converges to the average mean of the sampled RVs. 
 #### Proof
 Define $\mu_i = EX_i$; $\overline \mu_n = n\inv \sum_{i=1}^n \mu_i$, $\sigma^2_i = \var(X_i)$. 
-Recall [[Markov's and Chebyshev's Inequalities|Markov's Inequality]] - $P(|X| > k) \leq \frac{EX}{k}$. Let $X = \overline X - \mu_n)^2
+Recall [[Markov's and Chebyshev's Inequalities|Markov's Inequality]] - $P(|X| > k) \leq \frac{EX}{k}$. Let $X = (\overline X _n- \mu_n)^2$ and $k = \epsilon^2$. 
 
 $$\begin{align}
-P(|\overline X - \overline\mu_n| > \epsilon) &= P((\overline X - \overline\mu_n)^2 > \epsilon^2) \\
-& \leq \frac{E(|\overline X - \overline\mu_n|)}{\epsilon^2}\\
-
+P(|\overline X_n - \overline\mu_n| > \epsilon) &= P((\overline X - \overline\mu_n)^2 > \epsilon^2) \\
+& \leq \frac{E(\overline X - \overline\mu_n)^2}{\epsilon^2}\\
+&\leq \frac{E\left[ \sum_{i=1}\sum_{j=1}(X_i - \mu_i)(X_j- \mu_j)\right]}{n^2 \epsilon^2}\\
+&\leq \frac{\left[ \sum_{i=1}\sum_{j=1}E(X_i - \mu_i)(X_j- \mu_j)\right]}{n^2 \epsilon^2}\\
+&\leq \frac{\left[ \sum_{i=1}\sum_{j=1}\cov(X_i, X_j)\right]}{n^2 \epsilon^2}\\
+&\leq \frac{\left[ \sum_{i=1}\var(X_i)\right]}{n^2 \epsilon^2}\\
 \end{align}$$

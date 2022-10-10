@@ -3,7 +3,7 @@ aliases:
 - "Convergence in Probability"
 - "Convergence in Distribution"
 creation date: Sunday, October 9th 2022, 11:00 am
-date updated: Sunday, October 9th 2022, 12:56 pm
+date updated: Monday, October 10th 2022, 1:42 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -68,3 +68,16 @@ Proof: this follows from the Slutsky theorem.
 
 
 ## Slutsky Theorem
+
+Suppose $Y_n \to_p c$, a constant, as $n \to \infty$. Suppose some function $h()$ is continuous at $c$. Then
+$$ h(Y_n) \to_p h(c)$$
+This is a very useful result. For instance, I have shown that the [[Econometrics VII - Sampling|Sample Variance]] converges in probability to the population variance. Does the sample standard deviation converge to the population sd? I could prove that too; or I could use Slutsky's theorem, observe that $\sqrt{x}$ is continuous for $x \geq 0$, and then get this result for much less work.
+
+This result can be generalized to vector-valued functions, with length $|| \cdot ||$ replacing the absolute value. 
+
+#### Proof
+Proof relies on using continuity to squeeze $h(Y_n)$ and $h(c)$ together. 
+
+We want to show that, for any epsilon,
+$$ \lim_{n \to \infty} P(|h(Y_n) - h(c)|< \epsilon) = 1$$
+$h$ is continuous at $c$: so, for any $\epsilon > 0$, there is some $\delta > 0$ such that $|a - c| <\delta \implies |h(a) - h(c)| < \epsilon$. But the fact that $Y_n \to_p c$ means that $\lim_{n\to\infty} P(|Y_n - c| <\delta) = 1$. So $P(|h(Y_n) - h(c)| < \delta) = 1$. 

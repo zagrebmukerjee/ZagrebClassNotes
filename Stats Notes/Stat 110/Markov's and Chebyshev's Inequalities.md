@@ -3,7 +3,7 @@ aliases:
 - "Markov's Inequality"
 - "Chebyshev's Inequality"
 creation date: Thursday, April 7th 2022, 3:48 pm
-date updated: Sunday, October 9th 2022, 12:23 pm
+date updated: Monday, October 10th 2022, 3:21 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -23,10 +23,10 @@ This doesn't require that $E|X|$ is finite, but it's not very meaningful if it i
 
 #### Proof:
 $$\begin{align}
-E|X| &= E|X|1_{X\geq k} + E|X|1_{X < k} \\
-&\geq E|X|1_{X\geq k} \text { because }E|X|1_{x < k} \geq0\\
-&\geq k1_|X|{X\geq k} \text{ because this implies } E|X| > k\\
-& \geq k E1_{X\geq k}\\
+E|X| &= E|X|1_{|X|\geq k} + E|X|1_{|X| < k} \\
+&\geq E|X|1_{|X|\geq k} \text { because }E|X|1_{|X| < k} \geq0\\
+&\geq k|X|1_{|X|\geq k} \text{ because this is nonzero only when } E|X| > k\\
+& \geq k E(1_{|X|\geq k})\\
 &\geq kP(X \geq k) \text{ because the indicator function is simple} \\
 \end{align}$$
 Then you can rearrange to get MI.

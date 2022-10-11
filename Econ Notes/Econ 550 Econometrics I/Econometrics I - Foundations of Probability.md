@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Friday, September 2nd 2022, 5:09 pm
-date updated: Wednesday, September 7th 2022, 3:03 pm
+date updated: Tuesday, October 11th 2022, 10:40 am
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -131,7 +131,7 @@ So why these particular axioms?
 	- We can easily create finite events: the outcome of the first $n$ tosses is more than $n/2$ heads, etc. So then we could have $\mathcal F$ be all finite-number-of-tosses events. 
 	- But we might want to describe non-finite events. For instance, $\lim_{n \to \infty} \frac{\sum \text{heads}}{n} > 1/2$ might be an assessment of fairness. 
 
-Suppose we have axioms 1 and 2 and finite additivity. Is there a Pr distribution that makes sense over power set of $\Omega$, rather than just $\mathcal F$? Yes, but we don't have uniqueness. Adding the countable additivity means that no such distribution exists - there are non-measurable sets that generate different probabilities under the same distribution. So we have to restrict ourselves to the $\sigma$-fields, which maps to common-sense desiderata. 
+Suppose we have axioms 1 and 2 and finite additivity. Is there a Pr distribution that makes sense over power set of $\Omega$, rather than just $\mathcal F$? Yes, but we don't have uniqueness. Adding the countable additivity means that no such distribution exists - there are non-measurable sets (sets with no measure) that generate different probabilities under the same distribution. So we have to restrict ourselves to the $\sigma$-fields, which maps to common-sense desiderata. 
 
 There are 'extension theorems' that let you take $P: \mathcal G \to \R$ and extend it to $P: \sigma(\mathcal G) \to R$. 
 
@@ -188,5 +188,3 @@ Extend this to random variables: $X,Y$ are independent if for all sets $A \in \O
 
 
 ![[2002.1 Probability#Bayes' Rule]]
-
-

@@ -42,9 +42,7 @@ $$\begin{align}
 \end{align}$$
 🎉🎉🎉look who it is!!!! 🎉🎉🎉 Our friend the Lagrange multiplier returns at last
 
-The last step there depends on some degree of trickery. When we are at an optimum we can say a lot of differential results go away. This is another [[Envelope Theorem]] style of result, that depends on our maximizing. Mathematically: we know that $px(p,w) = w$, we can differentiate by $w$, and get $\sum p_i (\partial x_i(p,w)/\partial w) = 1$. 
-
-#status/section/🚧 <font color=#F7B801>what's the intuition for this</font>
+The last step there depends on some degree of trickery. When we are at an optimum we can say a lot of differential results go away. This is another [[Envelope Theorem]] style of result, that depends on our maximizing. Mathematically: we know that $px(p,w) = w$, we can differentiate by $w$, and get $\sum p_i (\partial x_i(p,w)/\partial w) = 1$. A (slightly illegal) way of writing this is $\sum pi \partial x_i(p,w) = \partial w$; if income goes up a bit, sum of expenditures can't go up by more. 
 
 
 We can further make transformations: 
@@ -66,9 +64,9 @@ $v(p,w)$ is continuous.
 
 Proof: from PS2
 
-Suppose $v(p,w)$ is the utility of $x(p,w)$ that maximizes the problem defined by $p,w$. Suppose continuous $U()$. 
+Suppose $v(p,w)$ is the utility of $x(p,w)$ that maximizes the problem defined by $p,w$. Suppose continuous $u()$. Let $p_n \to p^*, w_n \to w^*$; then we want to show that $v(p_n, w_n) \to v(p^*, w^*)$. 
 
-In the limit, $x(p_n, w_n)$ is feasible under $p^*, w^*$. I then know that $\lim U(x(p_n, w_n)) = \lim v(p_n, w_n) \leq v(p^*,w^*)$. 
+In the limit, $x(p_n, w_n)$ is feasible under $p^*, w^*$. I then know by the continuity of $u$ that $\lim u(x(p_n, w_n)) = \lim v(p_n, w_n) \leq v(p^*,w^*)$. Otherwise $v()$ would not be maximizing. 
 
 In the other direction, I want to show that $\lim v(p_n, w_n) \geq v(p^*, w^*)$. 
 
@@ -133,7 +131,7 @@ The expenditure function is concave in prices. Intuitively, if prices change and
 
 Let $p'' = \lambda p + (1-\lambda)p'$. We then want to show concavity: that for any value of $\lambda$, $e(p'', u) < \max \{e(p,u), e(p',u)\}$.
 
-Let $x'' \in x(p'', u)$ - exp minimizer under $p''$. Then $e(p'', u)$ is $p''x'' = \lambda p x'' + (1-\lambda)p'x''$. This cannot be greater than both $px''$ and $p'x''$ - so $x''$ must be affordable under one of $p, p'$. But we know that $u(x'') = u$ - so we cannot have both $e(p,u)$ and $e(p',u)$ be greater than $e(p'', u)$, since I could then lower expenditure under one of them by switching to $x''$.
+Let $x'' \in x(p'', u)$ - exp minimizer under $p''$. Then $e(p'', u)$ is $p''x'' = \lambda p x'' + (1-\lambda)p'x''$. This cannot be greater nor less than both $px''$ and $p'x''$ - so $x''$ must be affordable under one of $p, p'$ and unaffordable under another. But we know that $u(x'') = u$ - so we cannot have both $e(p,u)$ and $e(p',u)$ be less  than $e(p'', u)$, since I could then lower expenditure under $p''$ by switching to $x''$ while losing no utility. 
 
 ### Hicksian Demand
 
@@ -184,4 +182,6 @@ The sum $\sum p_k d h_k/dp_i$ is how much expenditure changes on good $k$ with a
 $$ \frac{d}{dp_i}e(p,u) = h_i(p,u)$$
 This is Shepard's lemma. 
 
-<font color=#F7B801>check this</font> #status/section/❓ 
+#### Corollary
+Differentiate with respect to $p_j$:
+$$\frac{\partial ^2 e(p,u}{\partial p_i \partial p_j}

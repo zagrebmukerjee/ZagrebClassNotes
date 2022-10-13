@@ -81,6 +81,13 @@ Given these definitions, we can write:
 
 #### Proof of Proposition 1
 
+1. Given some set $\{A \subseteq X\}$, let $C(A) = \arg \max_{x \in A} u(x)$. This is finitely nonempty, since utility is defined on $X$. Is it coherent? Suppose $S, T \subseteq X$, and $x, y \in S \cap T$. $x \in C(S \cap T)$; $y \notin C(S \cap T)$. 
+	1. By construction, we have that $x \in \arg\max u(S \cap T)$ and $y \notin \arg\max u(S \cap T)$. So it follows that $u(x) > u(y)$. So there is some $a$ in $S$ such that $u(a) > u(y)$; so $y \notin C(S)$. 
+2. $u$ creates preferences: $x \succsim y \iff u(x) \geq u(y)$. These preferences are complete, since $u$ is defined everywhere. They are transitive. If $u(x) \geq u(y)$ and $u(y) \geq u(z)$ then $u(x) \geq u(z)$ since $\geq$ is transitive on $\R$; therefore if $x \succsim y$ and $y\succsim z$ then $x \succsim z$. 
+3. Let $C(A) = \{ x \in A:  y \in A \implies x \succsim y \}$. Then $C$ is FNE, by completeness of 
+
+
+
 If $x \in C(\{x,y\})$, then write $x \succsim_C y$. 
 - By FNE, we can say this exists for every pair $x,y$. So it is complete. 
 - For transitivity: Suppose $x \succsim_c y$ and $y \succsim_c z$. Then a) $x \in C(\{x,y\})$ and b) $y \in C(\{y,z\})$. Consider now $R = C(\{x,y,z\})$. From applying coherence on b) we know that $z \notin R$. From coherence and a), we know that $y \notin R$. So by FNE it follows that $x\in R$. Now, we can use coherence once more to say that since $\{ x,z\}$ is a subset of $\{x,y,z\}$, $x$ must be in $C(\{x,z\})$. So it follows that $x \succsim_C z$. 

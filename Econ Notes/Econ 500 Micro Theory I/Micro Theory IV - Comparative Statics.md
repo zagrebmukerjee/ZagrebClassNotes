@@ -12,6 +12,7 @@ tags:
 
 # [[Micro Theory IV - Comparative Statics]]
 <span style = "font-size:120%"><i >Zagreb Mukerjee </i></span>
+[[Econ 500 Micro Theory Index]]
 
 Comparative statics are representations of how endogeneous variables respond to exogeneous ones. For instance, I might be interested in $\frac{dh_i}{dp_i}$, the substitution effect. I happen to know the sign of this, since the expenditure function is concave. But other comparative statics are harder to sign: for instance, I don't know $dh_i/dp_j$ or $dx_i/dp_j$. I need some techniques for signing comparative statics. 
 

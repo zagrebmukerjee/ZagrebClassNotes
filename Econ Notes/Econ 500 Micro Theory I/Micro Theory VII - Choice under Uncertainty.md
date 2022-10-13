@@ -11,8 +11,9 @@ tags:
 - '#status/🚧'
 ---
 
-# [[Micro Theory VI - Choice under Uncertainty]]
+# [[Micro Theory VII - Choice under Uncertainty]]
 <span style = "font-size:120%"><i >Zagreb Mukerjee </i></span>
+[[Econ 500 Micro Theory Index]]
 
 ## Von Neumann-Morgenstern Expected Utility
 
@@ -127,3 +128,4 @@ This can be extended to a more complex density by induction.
 
 ## Problems with VNM EU
 Oh no
+#status/section/🚧 

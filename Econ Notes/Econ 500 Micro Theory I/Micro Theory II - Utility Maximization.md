@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Monday, September 12th 2022, 11:53 am
-date updated: Thursday, September 15th 2022, 2:51 pm
+date updated: Thursday, October 13th 2022, 11:26 am
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -41,15 +41,15 @@ $$\begin{align}
 0 &= x(\lambda p, \lambda w) - x(p,w) \\
 &= x_\l(\lambda p, \lambda w) - x_\l(p, w)\\
 \frac{\partial}{\partial \lambda} 0 &= \frac{\partial}{\partial \lambda} x_\l(\lambda p, \lambda w) - \frac{\partial}{\partial \lambda} x_\l(p, w) \\ 
-0 &= p\frac{\partial x_\l(p,w)}{\partial p} + w \frac{\partial x_\l(p,w)}{\partial w} \\
+0 &= p\frac{\partial x_\l(\lambda p,\lambda w)}{\partial p} + w \frac{\partial x_\l(\lambda p,w)}{\partial w} \\
+0 &= p\frac{\partial x_( p,w)}{\partial p} + w \frac{\partial x_\l(p,w)}{\partial w} \text{ evaluating at } \lambda = 1\\
 &= \sum_k p_k\frac{\partial x_\l(p,w)}{\partial p_k} + w\frac{\partial x_\l(p,w)}{\partial w} 
 \end{align}$$
-<font color=#F7B801>Lec slides say 'evaluate at λ = 1'. why do I have to do that? I don't want to</font>
 
 Suppose I want to express this in terms of the elasticities of good $\l$. I can do that by dividing thru by $x_\l(p,w)$ to get:
 
 $$ \sum_k \epsilon_{\l k} + \epsilon_{\l w} = 0$$
-Intuitively, this means that if I were to change all the prices a tiny percentage amount and also change the income the same tiny percentage amount, the demand for good $\l$ wouldn't change. 
+Intuitively, this means that if I were to increase all the prices a small percentage amount and also increase the income the same tiny percentage amount, the demand for good $\l$ wouldn't change (if all prices go up $1\%$, and income goes up $1\%$, then $x_\l$ does not change). 
 
 
 #### Implication 2
@@ -74,6 +74,8 @@ $$\begin{align}
 &= \sum_\l b_\l \epsilon_{\l k} + b_k
 \end{align}$$
 where $b_i$ is the budget share of good $i$. 
+In other words
+
 
 
 #### Implication 3
@@ -117,4 +119,3 @@ In this case we conventionally get rid of $\lambda$ by dividing it away. But we 
 
 $$\lambda = \frac{\partial u}{\partial x_\l} \frac{1}{p_\l} = \frac{\partial u}{\partial x_\l} \frac{\partial x_\l(p,w)}{\partial w}$$
 Here we use an [[Envelope Theorem]]-type result. If I am maximizing utility, that means I must be indifferent between the marginal expenditure on any good. Given a tiny amount of money I can spend it anywhere. So if $e_\l$ is expenditure on good $\l$ that means $\frac{\partial e_\l}{\partial w} = \frac{\partial e_k}{\partial w}$ So then given an additional dollar, spending on $x_\l$ will be $1/p_\l$, so $1/p_\l$ is simply $\partial x_\l(p,w)/\partial w$. 
-

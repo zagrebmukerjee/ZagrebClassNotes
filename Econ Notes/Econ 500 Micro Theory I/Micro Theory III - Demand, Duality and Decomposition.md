@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Friday, September 23rd 2022, 11:46 am
-date updated: Thursday, October 13th 2022, 12:25 pm
+date updated: Thursday, October 13th 2022, 12:28 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -210,6 +210,9 @@ v(p,w) &= u(x(p,w))\\
 \frac{\partial v(p,w)}{\partial p_i} &= \sum_{j=1}^L p_i\frac{\partial u(x(p,w))}{\partial x_j}\frac{\partial x_j(p,w)}{\partial p_i}\\
 & \text{ but since the FOC tell us that }\frac{\partial u}{\partial x_j} = \lambda p_j, \\ 
 \frac{\partial v(p,w)}{\partial p_i} &= \lambda \sum_{j=1}^L p_j\frac{\partial x_j(p,w)}{\partial p_i}\\
-& \text{ and from the implication of Walras' law, } \sum_{j=1}^L p_j\frac{\partial x_j(p,w)}{\partial p_i} = x_i(p, w)\\
-\frac{\partial v(p,w)}{\partial p_i} &= \lambda 
+& \text{ and from the implication of Walras' law, } \sum_{j=1}^L p_j\frac{\partial x_j(p,w)}{\partial p_i} = -x_i(p, w)\\
+\frac{\partial v(p,w)}{\partial p_i} &= -\lambda x_i(p,w)\\
+\frac{\partial v(p,w)}{\partial p_i} &= -\frac{\partial v(p,w)}{\partial w} x_i(p,w)
 \end{align}$$
+or 
+$$ x_i(p,w) = -\frac{\partial v/\partial p_i}{\partial v/\partial w}$$

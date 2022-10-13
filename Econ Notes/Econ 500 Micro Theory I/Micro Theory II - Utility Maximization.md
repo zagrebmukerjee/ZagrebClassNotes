@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Monday, September 12th 2022, 11:53 am
-date updated: Thursday, October 13th 2022, 11:26 am
+date updated: Thursday, October 13th 2022, 12:27 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -50,7 +50,7 @@ $$\begin{align}
 Suppose I want to express this in terms of the elasticities of good $\l$. I can do that by dividing thru by $x_\l(p,w)$ to get:
 
 $$ \sum_k \epsilon_{\l k} + \epsilon_{\l w} = 0$$
-Intuitively, this means that if all prices go up $t\%$, and income goes up $t\%$, then $x_\l$ does not change for marginal-sized $t$.  The fact that I have to evaluate at $\lambda = 1$ makes this a local condition. 
+Intuitively, this means that if all prices go up $t\%$, and income goes up $t\%$, then $x_\l$ does not change for marginal-sized $t$. The fact that I have to evaluate at $\lambda = 1$ makes this a local condition. 
 
 
 #### Implication 2
@@ -66,6 +66,7 @@ w &= px(p,w) \\
 recalling that $p,x$ are vectors. 
 Rearranging slightly sneakily gets us that 
 $$ \partial p_k x_k(p,w) = - \sum_\l p_\l \partial x_\l(p,w)$$
+A tiny change in $p$ doesn't change relative allocations, so at the margin we reduce all other demands accordingly. 
 
 This can be turned into an elasticity with annoying stuff
 
@@ -110,7 +111,7 @@ If $u$ is [[Micro Theory IIIa - Concave, Convex, Quasi|quasiconcave]] then $x(p,
 We can say $p x'' = \lambda p x'+ (1-\lambda) p x' = w$. So $x''$ is feasible under $w$. 
 Quasiconcavity of $u$ tells us that $u(x'') \geq \lambda u(x) + \lambda u(x')$. But $u(x'')$ cannot be greater than $u(x')$ or $u(x)$, since it is feasible under $w$. So $u(x'') = u(x)=u(x')$, and $x'' \in x(p,w)$. 
 
-2) Suppose $u$ strictly QCV.  Choose $x, x''$ in $x(p,w)$. We want to show that $x'' = \lambda x + (1-\lambda)x'$ is in $x(p,w)$. 
+2) Suppose $u$ strictly QCV. Choose $x, x''$ in $x(p,w)$. We want to show that $x'' = \lambda x + (1-\lambda)x'$ is in $x(p,w)$. 
 We can say $p x'' = \lambda p x'+ (1-\lambda) p x' = w$. So $x''$ is feasible under $w$. 
 Strict quasiconcavity of $u$ tells us that $u(x'') \gt \lambda u(x) + \lambda u(x')$. But $u(x'')$ cannot be greater than $u(x')$ or $u(x)$, since it is feasible under $w$. So this is a contradiction - if $x', x'' \in x(p,w)$, then $x' = x''$. 
 

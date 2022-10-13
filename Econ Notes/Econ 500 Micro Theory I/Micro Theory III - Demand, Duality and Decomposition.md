@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Friday, September 23rd 2022, 11:46 am
-date updated: Tuesday, September 27th 2022, 5:15 pm
+date updated: Thursday, October 13th 2022, 12:25 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -131,7 +131,7 @@ The expenditure function is concave in prices. Intuitively, if prices change and
 
 Let $p'' = \lambda p + (1-\lambda)p'$. We then want to show concavity: that for any value of $\lambda$, $e(p'', u) < \max \{e(p,u), e(p',u)\}$.
 
-Let $x'' \in x(p'', u)$ - exp minimizer under $p''$. Then $e(p'', u)$ is $p''x'' = \lambda p x'' + (1-\lambda)p'x''$. This cannot be greater nor less than both $px''$ and $p'x''$ - so $x''$ must be affordable under one of $p, p'$ and unaffordable under another. But we know that $u(x'') = u$ - so we cannot have both $e(p,u)$ and $e(p',u)$ be less  than $e(p'', u)$, since I could then lower expenditure under $p''$ by switching to $x''$ while losing no utility. 
+Let $x'' \in x(p'', u)$ - exp minimizer under $p''$. Then $e(p'', u)$ is $p''x'' = \lambda p x'' + (1-\lambda)p'x''$. This cannot be greater nor less than both $px''$ and $p'x''$ - so $x''$ must be affordable under one of $p, p'$ and unaffordable under another. But we know that $u(x'') = u$ - so we cannot have both $e(p,u)$ and $e(p',u)$ be less than $e(p'', u)$, since I could then lower expenditure under $p''$ by switching to $x''$ while losing no utility. 
 
 ### Hicksian Demand
 
@@ -183,5 +183,33 @@ $$ \frac{d}{dp_i}e(p,u) = h_i(p,u)$$
 This is Shepard's lemma. 
 
 #### Corollary
-Differentiate with respect to $p_j$:
-$$\frac{\partial ^2 e(p,u}{\partial p_i \partial p_j}
+Assume $h$ is continuously differentiable. Differentiate Shepard's Lemma with respect to $p_j$:
+$$\frac{\partial ^2 e(p,u)}{\partial p_i \partial p_j} = \frac{\partial h_i(p, u)}{\partial p_j}$$
+We can make these into a matrix: 
+
+$$ \begin{bmatrix} e_{11}(p,u) & \ldots & e_{1L}(p,u)\\
+& \vdots & \\
+e_{L1}(p,u) & \ldots & e_{LL}(p,u)
+
+\end{bmatrix} = \begin{bmatrix} \partial h_1/\partial p_1 & \ldots & \partial h_1/\partial p_L \\
+& \ldots & \\
+\partial h_L/\partial p_1 & \ldots & \partial h_L/\partial p_L
+\end{bmatrix}$$
+This tells us a few things: 
+1) The LHS is negative semidefinite by concavity of $e$. So RHS is negative semidefinite. 
+2) Young's Theorem tells us that $e_{1L}(p,u) = e_{L1}(p,u)$. So $\partial h_i/\partial p_j$ = $\partial h_j/\partial p_i$. 
+3) RHS $\times p$ is $0$ since $h$ is homogeneous degree $0$ in $p$. 
+
+### Roy's Identity
+
+Start with 
+
+$$ v(p,w) = u(x(p,w))$$Differentiate with respect to $p_i$. 
+$$\begin{align}
+v(p,w) &= u(x(p,w))\\
+\frac{\partial v(p,w)}{\partial p_i} &= \sum_{j=1}^L p_i\frac{\partial u(x(p,w))}{\partial x_j}\frac{\partial x_j(p,w)}{\partial p_i}\\
+& \text{ but since the FOC tell us that }\frac{\partial u}{\partial x_j} = \lambda p_j, \\ 
+\frac{\partial v(p,w)}{\partial p_i} &= \lambda \sum_{j=1}^L p_j\frac{\partial x_j(p,w)}{\partial p_i}\\
+& \text{ and from the implication of Walras' law, } \sum_{j=1}^L p_j\frac{\partial x_j(p,w)}{\partial p_i} = x_i(p, w)\\
+\frac{\partial v(p,w)}{\partial p_i} &= \lambda 
+\end{align}$$

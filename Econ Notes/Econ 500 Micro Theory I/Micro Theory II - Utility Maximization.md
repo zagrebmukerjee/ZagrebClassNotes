@@ -64,6 +64,8 @@ w &= px(p,w) \\
 0 &= \sum_\l p_\l \frac{\partial x_\l(p,w)}{\partial p_k} + x_k(p,w) 
 \end{align}$$
 recalling that $p,x$ are vectors. 
+Rearranging slightly sneakily gets us that 
+$$ \partial p_k x_k(p,w) = - \sum_\l p_\l \partial x_\l(p,w)$$
 
 This can be turned into an elasticity with annoying stuff
 

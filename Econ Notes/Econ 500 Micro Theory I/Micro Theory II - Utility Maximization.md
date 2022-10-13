@@ -41,7 +41,8 @@ $$\begin{align}
 0 &= x(\lambda p, \lambda w) - x(p,w) \\
 &= x_\l(\lambda p, \lambda w) - x_\l(p, w)\\
 \frac{\partial}{\partial \lambda} 0 &= \frac{\partial}{\partial \lambda} x_\l(\lambda p, \lambda w) - \frac{\partial}{\partial \lambda} x_\l(p, w) \\ 
-0 &= p\frac{\partial x_\l(\lambda p,\lambda w)}{\partial p} + w \frac{\partial x_\l(\lambda p,w)}{\partial w} \\
+0 &= p\frac{\partial x_\l(\lambda p,\lambda w)}{\partial p} + w \frac{\partial x_\l(\lambda p,\
+\lambda w)}{\partial w} \\
 0 &= p\frac{\partial x_( p,w)}{\partial p} + w \frac{\partial x_\l(p,w)}{\partial w} \text{ evaluating at } \lambda = 1\\
 &= \sum_k p_k\frac{\partial x_\l(p,w)}{\partial p_k} + w\frac{\partial x_\l(p,w)}{\partial w} 
 \end{align}$$
@@ -49,7 +50,7 @@ $$\begin{align}
 Suppose I want to express this in terms of the elasticities of good $\l$. I can do that by dividing thru by $x_\l(p,w)$ to get:
 
 $$ \sum_k \epsilon_{\l k} + \epsilon_{\l w} = 0$$
-Intuitively, this means that if I were to increase all the prices a small percentage amount and also increase the income the same tiny percentage amount, the demand for good $\l$ wouldn't change (if all prices go up $1\%$, and income goes up $1\%$, then $x_\l$ does not change). 
+Intuitively, this means that if all prices go up $t\%$, and income goes up $t\%$, then $x_\l$ does not change for marginal-sized $t$.  The fact that I have to evaluate at $\lambda = 1$ makes this a local condition. 
 
 
 #### Implication 2
@@ -74,7 +75,7 @@ $$\begin{align}
 &= \sum_\l b_\l \epsilon_{\l k} + b_k
 \end{align}$$
 where $b_i$ is the budget share of good $i$. 
-In other words
+So my budget share for good $k$ is equal to all the other budget shares plus their elasticity wrt price $k$; so a tiny $\%$ change in prices would reallocate to every other good proportional to their elasticity.
 
 
 
@@ -94,16 +95,23 @@ $$\begin{align}
 &= \sum_\l \frac{p_l x_l(p,w)}{w} \left[ \frac{\partial x_\l(p,w)}{\partial w} \cdot \frac{w}{x_\l(p,w)}\right]\\
 &= \sum_\l b_\l \epsilon_{\l w}
 \end{align}$$
-in other words; the sum of budget shares times elasticities is $1$. 
+in other words; the sum of budget shares times elasticities is $1$. If income increases a marginal amount, the budget shares change according to elasticities. 
 
 
 ### Proposition 5
 
 If $u$ is [[Micro Theory IIIa - Concave, Convex, Quasi|quasiconcave]] then $x(p,w)$ is convex. If $u$ is SQCV then $x(p,w)$ is a singleton satisfying WARP. 
 
-**TODO: fill in prop 5 proof, **
+#### Proof
 
-#status/section/🚧 
+1) Suppose $u$ quasiconcave. Choose $x, x''$ in $x(p,w)$. We want to show that $x'' = \lambda x + (1-\lambda)x'$ is in $x(p,w)$. 
+We can say $p x'' = \lambda p x'+ (1-\lambda) p x' = w$. So $x''$ is feasible under $w$. 
+Quasiconcavity of $u$ tells us that $u(x'') \geq \lambda u(x) + \lambda u(x')$. But $u(x'')$ cannot be greater than $u(x')$ or $u(x)$, since it is feasible under $w$. So $u(x'') = u(x)=u(x')$, and $x'' \in x(p,w)$. 
+
+2) Suppose $u$ strictly QCV.  Choose $x, x''$ in $x(p,w)$. We want to show that $x'' = \lambda x + (1-\lambda)x'$ is in $x(p,w)$. 
+We can say $p x'' = \lambda p x'+ (1-\lambda) p x' = w$. So $x''$ is feasible under $w$. 
+Strict quasiconcavity of $u$ tells us that $u(x'') \gt \lambda u(x) + \lambda u(x')$. But $u(x'')$ cannot be greater than $u(x')$ or $u(x)$, since it is feasible under $w$. So this is a contradiction - if $x', x'' \in x(p,w)$, then $x' = x''$. 
+
 
 ### First-Order Conditions
 

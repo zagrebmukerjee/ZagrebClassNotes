@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Tuesday, October 4th 2022, 3:35 pm
-date updated: Tuesday, October 18th 2022, 4:47 pm
+date updated: Tuesday, October 18th 2022, 5:12 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -61,5 +61,33 @@ reference slides for the rest
 there is some integral that comes out to define $b(v)$ as the expected value of the second highest valuation given my valuation, conditioning on my being the highest. 
 
 
+--- end of midterm content ---
 
- 
+
+
+We hav enormal form game: $<N,S,U>$. 
+
+Now we allow for sequenced play. Create the extensive form game.
+
+Example
+
+![[Game Theory III - Bayesian Games 2022-10-18 17.10.03.excalidraw|300]]
+
+two players make choices in sequence, and the choice set depends on prior choices of self/others. The end states are called 'terminal history'
+
+
+New game: 
+
+![[Game Theory III - Bayesian Games 2022-10-18 17.13.17.excalidraw|300]]
+
+children fighting in sandbox - a nice toy. do i take it? Will the toy's owner fight me? fighting is strictly dominated, conditional on my taking the toy? so I should take it. this is a normal formization type of result
+but another NE result is: don't take (player 1 believes player 2 will fight, so doesn't take)
+
+
+Need another criterion to rule that out: don't include anticipation of non credible actions. this gets rid of (take, fight) as a strategy. 
+
+Two related concepts:
+- backwards induction
+- subgame perfect equilibria
+
+

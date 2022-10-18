@@ -2,7 +2,7 @@
 aliases:
 - 'public good'
 creation date: Thursday, September 15th 2022, 2:58 pm
-date updated: Tuesday, October 18th 2022, 3:53 pm
+date updated: Tuesday, October 18th 2022, 3:55 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -117,12 +117,20 @@ What are the equilibria?
 Now can we write indifference conditions?
 
 $$\begin{align}
-EU_2(s_2) &= EU_2(s_2') \text{ for } s_1, s_1' \in [0, 1/\beta+2]\\
+EU_2(s_2) &= EU_2(s_2') \text{ for } s_2, s_2' \in [0, 1/\beta+2]\\
 &= - \beta_2 s_2 + P(s_1 < s_2) = - \beta_2 s_2' + P(s_1 < s_2')\\
 \beta_2(s_2' - s_2) &= F_1(s_2) - F_1(s_2') \text{ so the CDF has linear form }\\
 f_1(s) &= \beta_2\\
-EU_1(s_1) &= EU(
+EU_1(s_1) &= EU_1(s_1') \\
+\beta_1(s_1' - s_1) &= F_2(s_1') - F_2(s_1)\\
 \end{align}$$
+but now we have a problem - the integral of my candidate density, $f_2(s) = \beta_1$, is only $1 - \beta_1/\beta_2 < 1$. Where is the rest of the dang probability? We know that it's not $1/\beta_2$. 
+Suppose I've shown there's no gaps, and no random points in the interior of the interval with positive probability. Then I get $P(s_2 = 0) = 1 - \beta_1/\beta_2$. 
+So can I say that? 
+With any single point having positive probability for player 2, player 1 can play a little bit higher, so we'd need a hole around that single point in $F_1$. but then the point doesn't make sense for player 1.  
+
+
+$EU_1(0) = \frac{1}{2}(1 - \beta_1/\beta_2)$; $EU_1(s) = P(s_2 = 0) + \beta_1 s - \beta_1 s = 1 - \beta_1/\beta_2$. So this is somewhat of a problem. I need to then have a tiebreaker rule that says, if both players play 0, 1 has to win the tie. But this tie has zero probability . 
 
  
 

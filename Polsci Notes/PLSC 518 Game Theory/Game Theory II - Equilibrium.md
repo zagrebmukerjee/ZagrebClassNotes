@@ -2,7 +2,7 @@
 aliases:
 - 'public good'
 creation date: Thursday, September 15th 2022, 2:58 pm
-date updated: Tuesday, September 27th 2022, 5:02 pm
+date updated: Tuesday, October 18th 2022, 3:53 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -105,12 +105,26 @@ title: Two Candidate Effort Contest
 
 #### Setup
 
-Two candidates can exert positive effort. The effort costs $\beta_1, \beta_2$ for each candidate, where $0 < \beta_1 < \beta_2$. The candidate who exerts more effort wins. 
+Two candidates can exert positive effort. The effort costs $\beta_1, \beta_2$ for each candidate, where $0 < \beta_1 < \beta_2$. The candidate who exerts more effort wins a utility of $1$. Pay your effort regardless.  
 
 What are the equilibria?
 
 #### Argument
+1) Most I will spend is $s_i$ such that $1 = \beta_i s_i$. Call it $\bar s_i = 1/\beta_i$. So support of a distribution over candidate $i$'s strategy is at most $[0, 1/\beta_i]$. 
+2) Since $\beta_2 > \beta_1$, $1/\beta_1 > 1/\beta_2$. So $s_1 > 1/\beta_2$ wins with certainty. But for all $s_1 > 1/\beta_2$ there is some $1/\beta_2 < s_1' < s_1$ that is better. So $s_1 \notin (1/\beta_2, \infty]$. 
+3) If $s_1 = 1/\beta_2$, and $s_2 = 1/\beta_2$ with positive probability (NOT positive density) then there is a positive deviation for player 1 - so $P(s_2 = 1/\beta_2) = 0$. 
 
+Now can we write indifference conditions?
+
+$$\begin{align}
+EU_2(s_2) &= EU_2(s_2') \text{ for } s_1, s_1' \in [0, 1/\beta+2]\\
+&= - \beta_2 s_2 + P(s_1 < s_2) = - \beta_2 s_2' + P(s_1 < s_2')\\
+\beta_2(s_2' - s_2) &= F_1(s_2) - F_1(s_2') \text{ so the CDF has linear form }\\
+f_1(s) &= \beta_2\\
+EU_1(s_1) &= EU(
+\end{align}$$
+
+ 
 
 
 

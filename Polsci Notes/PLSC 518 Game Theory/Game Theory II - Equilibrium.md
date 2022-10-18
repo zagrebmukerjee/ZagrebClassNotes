@@ -98,6 +98,24 @@ Note! Equilibrium condition is $1-c = (1- (1-\sigma)^{n-1})$. LHS is probability
 In the last problem we said it takes any $1$ person to call to obtain the good. now we say that we need $k$ people to make the call (where $k < n$). There are still PSNE - $k$ players call - but they are still asymmetric. This time though, there is a symmetric NE: nobody calls. 
 
 
+```ad-example
+title: Two Candidate Effort Contest
+
+```
+
+#### Setup
+
+Two candidates can exert positive effort. The effort costs $\beta_1, \beta_2$ for each candidate, where $0 < \beta_1 < \beta_2$. The candidate who exerts more effort wins. 
+
+What are the equilibria?
+
+#### Argument
+
+
+
+
+
+
 ## Nash Existence Theorem
 
 ### Setup

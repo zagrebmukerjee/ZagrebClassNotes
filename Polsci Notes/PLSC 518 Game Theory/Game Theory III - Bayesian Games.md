@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Tuesday, October 4th 2022, 3:35 pm
-date updated: Tuesday, October 18th 2022, 4:44 pm
+date updated: Tuesday, October 18th 2022, 4:47 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -49,12 +49,17 @@ If everyone else is playing a linear strategy, I want to play one too. I don't c
 
 First price auction: $v_i \sim F()$ on $\R+$. $F$ differentiable and $n$ arbitrary. Assume $b(v)$ is increasing (strictly). 
 
-$$EU = \max_x (v-x)F[b\inv(x)]^{n-1}$$ I also need to find that $b(v) = x$, since this could be symmetric. 
+$$EU = \max_x (v-x)F[b\inv(x)]^{n-1}$$ I also need to find that $b(v) = x$, since this should be optimal for everyone. 
 $$\begin{align}
 0 &= (v-x)(n-1)f[b\inv(x)]^{n-2}[1/b'(b \inv(x))] - F[b\inv(x)]^{n-1}\\
-F[b\inv(x)]^{n-1} &= (v-x)(n-1)F[b\inv(x)]^{n-2}f[b\inv(x)][1/b'(b \inv(x))]
-F[b\inv(b(v))]^{n-1} &= (v-b(v))(n-1)F[b\inv(b(v))]^{n-2}f[b\inv(b(v))][1/b'(b \inv(b(v)))]
+F[b\inv(x)]^{n-1} &= (v-x)(n-1)F[b\inv(x)]^{n-2}f[b\inv(x)][1/b'(b \inv(x))]\\
+F[v]^{n-1} &= (v-b(v))(n-1)F[v]^{n-2}f[v][1/b'(v)]\\
 \end{align}$$
+
+reference slides for the rest
+
+there is some integral that comes out to define $b(v)$ as the expected value of the second highest valuation given my valuation, conditioning on my being the highest. 
+
 
 
  

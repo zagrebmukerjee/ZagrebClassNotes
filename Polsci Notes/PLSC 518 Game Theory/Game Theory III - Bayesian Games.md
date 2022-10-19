@@ -91,3 +91,5 @@ Two related concepts:
 - subgame perfect equilibria
 
 
+A strategy in this game is how you would play in each node you would possibly get to. 
+so an equilibrium is the entire result of the backward induction. 

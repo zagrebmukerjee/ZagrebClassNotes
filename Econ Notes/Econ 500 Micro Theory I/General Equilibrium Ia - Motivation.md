@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Saturday, October 29th 2022, 10:40 am
-date updated: Saturday, October 29th 2022, 11:12 am
+date updated: Saturday, October 29th 2022, 3:45 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -44,7 +44,7 @@ Now we will look at the whole set of first-order conditions.
 $$\begin{align}
 f'(z_1(t)) = w(t) + t\\
 f'(z(t)) = w(t)\\
-(N-1)zt) + z_1(t) = M\\
+(N-1)z(t) + z_1(t) = M\\
 \end{align}$$
 When $t = 0$ then $z_1(t) = z(t)$, and $w(0) = M/N$. Back to our base scenario. To understand what changes, we can use the implicit function theorem to totally differentiate . First a bit of rearranging though. 
 
@@ -65,7 +65,3 @@ w'(0) &= -1/N\\
 \end{align}$$
 
 Total profits are $(N-1)\pi(w(t) + \pi (w(t) + t)$. Total differentiation gives us $(N-1)\pi'(w(t))w'(t) + w'(t)\pi'(w(t) + t)$. Evaluate at $0$ to get $\pi(w(0))[(N-1)w'(0) + w'(0) + 1] = \pi(w(0))[(N-1)(-1/N) + (-1/N + 1)]$ $\pi(w(0))[(-N + 1)/N + (N-1)/N] = 0$. So profit is unchanged - the entire cost is borne by the workers. 
-
-
-
-

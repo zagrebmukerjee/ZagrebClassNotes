@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Saturday, October 29th 2022, 10:40 am
-date updated: Saturday, October 29th 2022, 11:00 am
+date updated: Saturday, October 29th 2022, 11:12 am
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -60,4 +60,12 @@ M - (N-1)z(0) &= M - (N-1)M/N\\
 & = M/N\\
 -(N-1)z'(0) f''(M - (N-1)z(t)) &= w'(t) + 1\\
 -(N-1)z'(0) f''(M/N) &= z'(0)f''(M/N)+ 1\\
+z'(0) f''(M/N) &= -1/N\\
+w'(0) &= -1/N\\
 \end{align}$$
+
+Total profits are $(N-1)\pi(w(t) + \pi (w(t) + t)$. Total differentiation gives us $(N-1)\pi'(w(t))w'(t) + w'(t)\pi'(w(t) + t)$. Evaluate at $0$ to get $\pi(w(0))[(N-1)w'(0) + w'(0) + 1] = \pi(w(0))[(N-1)(-1/N) + (-1/N + 1)]$ $\pi(w(0))[(-N + 1)/N + (N-1)/N] = 0$. So profit is unchanged - the entire cost is borne by the workers. 
+
+
+
+

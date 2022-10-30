@@ -1,7 +1,7 @@
 ---
 aliases:
-creation date: 2022-10-30 12:31
-date updated: 2022-10-30 12:31
+creation date: Sunday, October 30th 2022, 12:30 pm
+date updated: Sunday, October 30th 2022, 12:49 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -29,5 +29,21 @@ Now we're interested in the random regressors case.
 3) $EU_i^2 < \infty$; and the homoskedasticity assumption, $\var(U_i) = \sigma^2$ almost surely. 
 4) $EX^2 < \infty$; $\var(X_i) = \sigma^2_X > 0$. 
 
-Then:  $\sqrt{n}(\hat \beta_n - \beta_0) \to_d N(0, \sigma^2/\sigma^2_X)$. 
+Then: $\sqrt{n}(\hat \beta_n - \beta_0) \to_d N(0, \sigma^2/\sigma^2_X)$. 
 
+Proof: 
+$$\begin{align}
+\limn (\betahat_n - \beta_0) &= \limn \frac{\sumn{i} (X_i - \Xbar_n)(Y_i - \Ybar_n) }{\sumn{i}[X_i - \Xbar]^2} - \beta_0\\
+&= - \beta_0 + \limn \frac{\sumn{i} (X_i - \Xbar_n)(Y_i) }{\sumn{i}[X_i - \Xbar]^2} + \limn \frac{- \Ybar_n\sumn{i} (X_i - \Xbar_n) }{\sumn{i}[X_i - \Xbar]^2}\\
+&= \limn \frac{n\inv\sumn{i} (X_i - \Xbar_n)(Y_i) }{n\inv\sumn{i}[X_i - \Xbar]^2} - \frac{\beta_0 n\inv\sumn{i}[X_i - \Xbar]^2}{n\inv\sumn{i}[X_i - \Xbar]^2} \text{ since }\sumn{i}(X_i-\Xbar_n) \to 0\\
+\end{align}$$
+
+Now take the numerator: 
+
+$$\begin{align}
+\sumn{i} (X_i - \Xbar_n)(Y_i) &= n]inv\sumn{i} (X_i - \Xbar_n)(X_i\beta_0 + U_i) - \beta_0 n\inv\sumn{i}[X_i - \Xbar]^2\\
+&= \sumn{i} (X_i - \Xbar_n)(X_i\beta_0 + U_i) - n\inv\sumn{i}[X_i - \Xbar][X_i\beta_0 - \Xbar\beta_0]\\
+&= \sumn{i} (X_i - \Xbar_n)(X_i\beta_0) + \sumn{i} (X_i - \Xbar_n)U_i - n\inv\sumn{i}[X_i - \Xbar][X_i\beta_0] +n\inv \sumn{i}[X_i - \Xbar][\Xbar\beta_0]] \\
+&= \sumn{i} (X_i - \Xbar_n)(X_i\beta_0) + \sumn{i} (X_i - \Xbar_n)U_i - n\inv\sumn{i}[X_i - \Xbar][X_i\beta_0] \text{ since }\sumn{i}(X_i-\Xbar_n) \to 0\\ 
+&= n]inv \sumn{i} (X_i - \Xbar_n)U_i \\ 
+\end{align}$$

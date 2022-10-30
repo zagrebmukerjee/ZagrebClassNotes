@@ -3,7 +3,7 @@ aliases:
 - "CLT"
 - "Central Limit Theorem"
 creation date: Sunday, October 30th 2022, 9:44 am
-date updated: Sunday, October 30th 2022, 10:18 am
+date updated: Sunday, October 30th 2022, 11:50 am
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -33,7 +33,7 @@ wherever $F_X()$ is continuous. We can also write $X_n \to_d X$.
 - If $X$ has some distribution, we can describe that as the <font color=gree>asymptotic distribution</font> or <font color=gree>limiting distribution</font> of $X_n$. 
 - If $X \sim \mathcal N(0,1)$, for instance, we can write also $X_n \to_d \mathcal N(0, 1)$. 
 
-### Properties
+### Properties/Lemma 1
 Suppose $Y_n \to_d Y$ and $Z_n \to_p z$. Then:
 1) $Y_n + Z_n \to_d Y + z$
 2) $Y_nZ_n \to_d zY$
@@ -59,3 +59,31 @@ $$\frac{\overline X_n - \mu
 ### Proof
 
 #status/section/🚧 
+
+
+``` ad-note
+title: Application of Convergence in Distribution
+As one extension of the CLT: Suppose $\sigma_X$ is unknown. Then can we look at $\sqrt{n}\frac{\overline X_n - \mu}{S_{Xn}}$?
+Yes: 
+
+$$\begin{align}
+\frac{\sqrt{n}(\overline X_n - \mu)}{S_{X_n}} &= 
+\frac{\sqrt{n}(\overline X_n - \mu)/\sigma}{S_{X_n}/\sigma}\\
+S_{Xn}/\sigma &\to_p 1 \\
+\sqrt{n}(\overline X_n - \mu)/\sigma &\to_d Z \sim N(0,1)\\
+\frac{\sqrt{n}(\overline X_n - \mu)/\sigma}{S_{X_n}/\sigma} &\to_d Z\\
+\frac{\sqrt{n}(\overline X_n - \mu)}{S_{X_n}} &\to_d Z\\
+\end{align}$$
+
+Here I use Slutsky's theorem and Lemma 1 part c. 
+```
+
+## Multivariate CLT
+
+#### Cramer-Wold Device (Lemma)
+
+Let $Y_n$ be $k \times 1$ vectors. If $c'Y_n \to_d c' Y$ for all $c \in \R$ then $Y_n \to Y$. In other words, if every linear combination of elements of the $Y_n$ converges to the same linear combination of elements of $Y$, then the original vectors also converge to $Y$. Proof involves characteristic function convergence of $c'Y_n$. 
+
+#### Multivariate CLT Construction
+
+We will use this to generate a multivariate CLT. We know that $c' \sqrt{n}(\overline Y_n - mu) \to_d N(0, c' \sigma^2 c)$. Then it follows that $\sqrt{n}(c' \overline Y_n - c' mu) \to_d N(0, c' \sigma^2 c)$

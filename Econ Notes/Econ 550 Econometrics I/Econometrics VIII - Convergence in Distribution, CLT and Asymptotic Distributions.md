@@ -3,7 +3,7 @@ aliases:
 - "CLT"
 - "Central Limit Theorem"
 creation date: Sunday, October 30th 2022, 9:44 am
-date updated: Sunday, October 30th 2022, 11:50 am
+date updated: Sunday, October 30th 2022, 11:52 am
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -86,4 +86,4 @@ Let $Y_n$ be $k \times 1$ vectors. If $c'Y_n \to_d c' Y$ for all $c \in \R$ then
 
 #### Multivariate CLT Construction
 
-We will use this to generate a multivariate CLT. We know that $c' \sqrt{n}(\overline Y_n - mu) \to_d N(0, c' \sigma^2 c)$. Then it follows that $\sqrt{n}(c' \overline Y_n - c' mu) \to_d N(0, c' \sigma^2 c)$
+We will use this to generate a multivariate CLT. We know that $\sqrt{n}(c' \overline Y_n - c' \mu) \to_d N(0, c' \sigma^2 c)$. Then it follows that $c' \sqrt{n}(\overline Y_n - mu) \to_d c' N(0, \sigma^2)$ and so $c' Y_n \to_d c'Y$, then $Y_n \to Y$. 

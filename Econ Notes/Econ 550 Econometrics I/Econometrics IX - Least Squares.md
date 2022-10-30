@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Sunday, October 30th 2022, 12:30 pm
-date updated: Sunday, October 30th 2022, 12:49 pm
+date updated: Sunday, October 30th 2022, 12:52 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -41,9 +41,11 @@ $$\begin{align}
 Now take the numerator: 
 
 $$\begin{align}
-\sumn{i} (X_i - \Xbar_n)(Y_i) &= n]inv\sumn{i} (X_i - \Xbar_n)(X_i\beta_0 + U_i) - \beta_0 n\inv\sumn{i}[X_i - \Xbar]^2\\
-&= \sumn{i} (X_i - \Xbar_n)(X_i\beta_0 + U_i) - n\inv\sumn{i}[X_i - \Xbar][X_i\beta_0 - \Xbar\beta_0]\\
-&= \sumn{i} (X_i - \Xbar_n)(X_i\beta_0) + \sumn{i} (X_i - \Xbar_n)U_i - n\inv\sumn{i}[X_i - \Xbar][X_i\beta_0] +n\inv \sumn{i}[X_i - \Xbar][\Xbar\beta_0]] \\
-&= \sumn{i} (X_i - \Xbar_n)(X_i\beta_0) + \sumn{i} (X_i - \Xbar_n)U_i - n\inv\sumn{i}[X_i - \Xbar][X_i\beta_0] \text{ since }\sumn{i}(X_i-\Xbar_n) \to 0\\ 
-&= n]inv \sumn{i} (X_i - \Xbar_n)U_i \\ 
+\limn n\inv\sumn{i} (X_i - \Xbar_n)(Y_i) - \ldots &= \limn n\inv\sumn{i} (X_i - \Xbar_n)(X_i\beta_0 + U_i) - \beta_0 n\inv\sumn{i}[X_i - \Xbar]^2\\
+&= \limn n\inv\sumn{i} (X_i - \Xbar_n)(X_i\beta_0 + U_i) - n\inv\sumn{i}[X_i - \Xbar][X_i\beta_0 - \Xbar\beta_0]\\
+&= \limn n\inv\sumn{i} (X_i - \Xbar_n)(X_i\beta_0) + \sumn{i} (X_i - \Xbar_n)U_i - n\inv\sumn{i}[X_i - \Xbar][X_i\beta_0] +n\inv \sumn{i}[X_i - \Xbar][\Xbar\beta_0]] \\
+&=\limn n\inv\sumn{i} (X_i - \Xbar_n)(X_i\beta_0) + \sumn{i} (X_i - \Xbar_n)U_i - n\inv\sumn{i}[X_i - \Xbar][X_i\beta_0] \text{ since }\sumn{i}(X_i-\Xbar_n) \to 0\\ 
+&=\limn n\inv \sumn{i} (X_i - \Xbar_n)U_i \\ 
+&=\limn n\inv \sumn{i} (X_i - \mu)U_i + n\inv \sumn{i} (\Xbar_n - \mu)U_i \\ 
+&= \limn n\inv \sumn{i} (X_i - \mu)U_i \text{ because } \Xbar_n -\mu \to_d 0\\ 
 \end{align}$$

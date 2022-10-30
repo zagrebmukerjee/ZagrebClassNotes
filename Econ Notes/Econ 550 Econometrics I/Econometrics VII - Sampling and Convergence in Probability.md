@@ -86,7 +86,7 @@ Then $ES_X^2 = \sigma^2_X$.
 
 ### Estimators
 
-More generally, I can have so
+More generally, I can have some sample statistic $\hat \theta_n$, that I use as an <font color=gree>estimator</font> for some unknown property of the underlying distribution $\theta_0$. For instance, $\overline X_n$ is an estimator of $\mu_X$. We'll be building a lot of tools to describe and demonstrate desirable properties of estimators. 
 
 
 ## Convergence in Probability
@@ -211,7 +211,3 @@ An estimator $\hat \theta_n$ of $\theta_0$ is <font color=gree>consistent</font>
 ```
 
 
-## Convergence in Distribution
-
-
-Convergence in Distribution is a second type of convergence. Convergence in probability describes, loosely, a density collapsing to a spike over a point. Convergence in distribution describes a density coverging to another density. This will be useful for us to talk about the asymptotic distribution of sample statistics. After all, we know that the sample mean is converging to a spike. But how long will it take to get there? And what will it look like on the way?

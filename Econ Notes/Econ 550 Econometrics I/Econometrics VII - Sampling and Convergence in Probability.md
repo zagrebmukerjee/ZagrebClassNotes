@@ -7,8 +7,10 @@ aliases:
 - "LLN"
 - "WLLN"
 - "Slutsky Theorem"
+- "Sample Mean"
+- "Sample Variance"
 creation date: Sunday, October 9th 2022, 11:00 am
-date updated: Sunday, October 30th 2022, 8:42 am
+date updated: Sunday, October 30th 2022, 9:39 am
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -18,14 +20,79 @@ tags:
 - '#topics/methods'
 ---
 
-# [[Econometrics VIII - Asymptotic Estimator Properties]]
+# [[Econometrics VII - Sampling and Convergence in Probability]]
 <span style = "font-size:120%"><i >Zagreb Mukerjee </i></span>
 
+## Sampling
+
+A <font color=gree>sample</font> of size $n$ is some random variables/vectors, $X_1, \ldots, X_n$. The sample is a <font color=gree>random sample</font> if the $X_i$ are i.i.d. - independent and identically distributed. 
+
+The joint density of the sample is $f(x_1, \ldots, x_n)$, or $f_{X_1, \ldots, X_n}(x_1,\ldots, x_n)$. If iid, then 
+$$ f_{X}(x) = \prod_{i=0}^n f_{X_i}(x_i)$$by independence.
+
+
+A <font color=gree>statistic</font> is any *known* function of the sample - ie. a function that can be evaluated as soon as a sample is realized. The sample mean, sample standard deviation etc. are statistics. 
+
+```ad-note
+title: 
+
+As an aside, the sample mean $\overline X_n$ is $\arg \min_{b} \sum_{i=0}^n (X_i - b)^2$. So it's a least-squares estimator. 
+
+
+```
+
+## Sample Mean and Variance
+
+### Mean
+
+The expectation of the sample mean in the case of a random sample: Let $X_i$ be iid with mean $\mu_{X_i} = \mu$ and well defined variance $\sigma^2$
+
+$$ E\overline X_n = E\left[\frac{1}{n}\sum_{i=1}^n X_i\right] = \frac{1}{n} \sum_{i=1}^n EX_i = \mu$$
+Note that if $X, Y$ are independent, then $E[XY] = EXEY$. 
+
+The variance is 
+$$\begin{align}
+\var(\overline X_n) &= E[(\overline X - E\overline X)^2]\\
+&= E[\overline X^2] - \mu^2\\
+&= E\left[ \frac{1}{n}\sum_{i=1}^n X_i \right]^2 - \mu^2\\
+&= \frac{1}{n^2} E\left[\sum_{i=1}^n\sum_{j=1}^nX_iX_j \right] - \mu^2\\
+&= \frac{1}{n^2} E\left[\sum_{i=1}^n\sum_{j=1}^n X_iX_j \right] - \mu^2\\
+&= \frac{1}{n^2} \left(E\left[\sum_{i=1}^n X_i^2\right] + E\left[n(n-1)\mu^2 \right]\right) - \mu^2\\
+&= \frac{E\left[\sum_{i=1}^n X_i^2\right]}{n^2} - \frac{ n\mu^2}{n^2}\\
+&= \frac{E\left[\sum_{i=1}^n X_i^2- \mu^2\right]}{n^2} \\
+&= \sigma^2/n
+\end{align}$$
+### Variance
+
+Define a statistic $\hat S^2_X = n\inv \sum_{i=1}^n ( X_i - \overline X)^2$. 
+
+Then
+$$\begin{align}
+E[\hat S_X^2 ] &= \frac{1}{n}E\left[\sum_{i=1}^n ( X_i - \overline X)^2\right] \\
+&= \frac{1}{n}E\left[\sum_{i=1}^n [( X_i - \mu_X)+(\mu_X- \overline X)]^2\right] \\
+&= \frac{1}{n}\sum_{i=1}^n E\left[ ( X_i - \mu_X)^2 +(\overline X - \mu_X )^2 -2(\overline X - \mu_X )(X_i-\mu_X) \right] \\\\
+&= \frac{1}{n}\sum_{i=1}^n E( X_i - \mu_X)^2 +\frac{1}{n}\sum_{i=1}^n E (\overline X - \mu_X )^2 -\frac{2}{n}\sum_{i=1}^n E \left[\left(n\inv \sum_{j=1}^n (X_j) - \mu_X \right)(X_i-\mu_X) \right] \\
+&= \sigma^2 +\sigma^2/n -\frac{2}{n} \sum_{i=1}^nE \left[\left(n\inv \sum_{j=1}^n (X_j - \mu_X) \right)(X_i-\mu_X) \right] \\
+&= \sigma^2 +\sigma^2/n -\frac{2}{n}E \left[n\inv \sum_{i=1}^n\sum_{j=1}^n (X_j - \mu_X)(X_i-\mu_X) \right] \\
+&= \sigma^2 +\sigma^2/n -\frac{2}{n}E \left[n\inv \sum_{i=1}^n\sum_{j=1}^n \cov(X_i,X_j) \right] \\
+&= \sigma^2 +\sigma^2/n -\frac{2}{n}E \left[n\inv \sum_{i=1}^n\var(X_i,X_j) \right] \\
+&= \sigma^2 +\sigma^2/n -2\sigma^2/n\\
+&= \frac{(n-1)}{n}\sigma^2
+\end{align}$$
+
+We need a bias-correction, especially for smaller sizes. So define a <font color=gree>sample variance</font> as 
+$$ S_X^2 = \frac{1}{n-1}\sum_{i=1}^n (X_i^2 - \overline X)^2 $$
+Then $ES_X^2 = \sigma^2_X$. 
+
+### Estimators
+
+More generally, I can have so
 
 
 ## Convergence in Probability
 
 First of two forms of convergence that are useful for characterizing sample statistic behavior. 
+
 
 ### Definitions
 
@@ -81,7 +148,7 @@ A formalization of this intuition:
 Suppose $\{ X_i: i \geq 1\}$ a sequence of random variables, i.i.d., with $E|X| < \infty$. Define $\overline X_n = n\inv \sum_{i=1}^n X_i$. Let $\mu_X = E[X_1]$. For all $\epsilon > 0$, 
 
 $$ \lim_{n\to\infty} P(|\overline X_n - \mu_X| > \epsilon) = 0 $$
-This is the same as saying that $\overline X_n \to_p \mu_X$, i.e. $\overline X_n$ [[Econometrics VIII - Asymptotic Estimator Properties|converges in probability]] to $\mu_X$. 
+This is the same as saying that $\overline X_n \to_p \mu_X$, i.e. $\overline X_n$ [[Econometrics VII - Sampling and Convergence in Probability|converges in probability]] to $\mu_X$. 
 
 #### Proof
 For convenience, fix $\sigma_X^2$ finite. The proof will generalize. 
@@ -126,7 +193,7 @@ This is extensible to a case when $\rho_{X,Y}$ is bounded.
 
 Suppose $Y_n \to_p c$, a constant, as $n \to \infty$. Suppose some function $h()$ is continuous at $c$. Then
 $$ h(Y_n) \to_p h(c)$$
-This is a very useful result. For instance, I have shown that the [[Econometrics VII - Sampling|Sample Variance]] converges in probability to the population variance. Does the sample standard deviation converge to the population sd? I could prove that too; or I could use Slutsky's theorem, observe that $\sqrt{x}$ is continuous for $x \geq 0$, and then get this result for much less work.
+This is a very useful result. For instance, I have shown that the sample variance converges in probability to the population variance. Does the sample standard deviation converge to the population sd? I could prove that too; or I could use Slutsky's theorem, observe that $\sqrt{x}$ is continuous for $x \geq 0$, and then get this result for much less work.
 
 This result can be generalized to vector-valued functions, with length $|| \cdot ||$ replacing the absolute value. 
 
@@ -138,4 +205,13 @@ $$ \lim_{n \to \infty} P(|h(Y_n) - h(c)|< \epsilon) = 1$$
 $h$ is continuous at $c$: so, for any $\epsilon > 0$, there is some $\delta > 0$ such that $|a - c| <\delta \implies |h(a) - h(c)| < \epsilon$. But the fact that $Y_n \to_p c$ means that $\lim_{n\to\infty} P(|Y_n - c| <\delta) = 1$. So $P(|h(Y_n) - h(c)| < \delta) = 1$. 
 
 
+```ad-note
+An estimator $\hat \theta_n$ of $\theta_0$ is <font color=gree>consistent</font> when $\hat \theta_n \to_p \theta_0$. 
+
+```
+
+
 ## Convergence in Distribution
+
+
+Convergence in Distribution is a second type of convergence. Convergence in probability describes, loosely, a density collapsing to a spike over a point. Convergence in distribution describes a density coverging to another density. This will be useful for us to talk about the asymptotic distribution of sample statistics. After all, we know that the sample mean is converging to a spike. But how long will it take to get there? And what will it look like on the way?

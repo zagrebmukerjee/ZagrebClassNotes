@@ -39,4 +39,6 @@ Suppose $Y_n \to_d Y$ and $Z_n \to_p z$. Then:
 2) $Y_nZ_n \to_d zY$
 3) $Y_n/Z_n \to_d Y/z$ where $z \neq 0$. 
 
-First, $P(Y_n + Z_n \leq a) \leq P(Y_n \leq a/2) + P(Z_n \leq a/2)$ . But as 
+For 1):  We want to show that $\lim_{n\to\infty} P(Y_n + Z_n \leq a) = P(Y + z \leq a)$. $P(Y_n + Z_n \leq a) = P(Y_n + (Z_n -z) \leq a -z )$. But as $n \to \infty$, $Z_n - z \to 0$;  so  $P(Y_n + (Z_n - z) \leq a-z) \to P(Y_n \leq a -z) \to P(Y \leq a -z)$. 
+
+For 2) consider the asymptotic distribution of $Y_n Z_n - Y_n z = Y_n (Z

@@ -19,8 +19,7 @@ tags:
 
 ## Convergence in Distribution
 
-
-Convergence in Distribution is a second type of convergence. Convergence in probability describes, loosely, a density collapsing to a spike over a point. Convergence in distribution describes a density coverging to another density. This will be useful for us to talk about the asymptotic distribution of sample statistics. After all, we know that the sample mean is converging to a spike. But how long will it take to get there? And what will it look like on the way?
+Convergence in probability describes, loosely, a density collapsing to a spike over a point. Convergence in distribution describes a density coverging to another density. This will be useful for us to talk about the asymptotic distribution of sample statistics. After all, we know that the sample mean is converging to a spike. But how long will it take to get there? And what will it look like on the way?
 
 ### Definition
 
@@ -48,7 +47,7 @@ For 2) consider the asymptotic distribution of $Y_n Z_n - Y_n z = Y_n (Z_n - z)$
 
 Let $X_1, \ldots, X_n$ be i.i.d. random variables with mean $\mu$ and positive variance $\sigma^2$. Then 
 $$P(\sqrt{n}[\overline X_n - \mu]/\sigma\leq a) \to P(Z \leq a)$$
-where $Z \sim \mathcal N(0,1)$. 
+where $Z \sim \mathcal N(0,1)$. The $\sqrt{n}$ term is there because $\bar X_n - \mu$ collapses, so we can't talk about its nontrivial asymptotic distribution. But we can normalize it and talk about the normalized quantity. 
 
 We can also write this as 
 $$ P(\sqrt{n}[\overline X_n - \mu) \leq a) \to P(\tilde Z \leq a)$$
@@ -86,4 +85,19 @@ Let $Y_n$ be $k \times 1$ vectors. If $c'Y_n \to_d c' Y$ for all $c \in \R$ then
 
 #### Multivariate CLT Construction
 
-We will use this to generate a multivariate CLT. We know that $\sqrt{n}(c' \overline Y_n - c' \mu) \to_d N(0, c' \sigma^2 c)$. Then it follows that $c' \sqrt{n}(\overline Y_n - mu) \to_d c' N(0, \sigma^2)$ and so $c' Y_n \to_d c'Y$, then $Y_n \to Y$. 
+We will use this to generate a multivariate CLT. Suppose we have some random vectors $Y_n$ that are i.i.d with $\mu$ and $\Sigma$. Then $c'Y_n$ are random scalars that are i.i.d. By the linearity of expectation, $Ec'Y_n = c'EY_n = c' \mu$. The variance is $\var (c'Y) = c'\Sigma c$. 
+
+Then from the regular CLT we know that $\sqrt{n}(c' \overline Y_n - c' \mu) \to_d N(0, c' \sigma^2 c)$. 
+It follows that $c' \sqrt{n}(\overline Y_n - \mu) \to_d c' N(0, \sigma^2)$ and so, by the Cramer-Wold Device, $c' Y_n \to_d c'Y$, then $Y_n \to Y$. 
+
+
+## Continuous Mapping Theorem
+
+We have two tools that will help us like Slutsky does. First the CMT.
+
+If $Y_n \to_d Y$ are all $m \times 1$ and $h:\R^m \to \R^p$ continuous at all $y$ in the support of $Y$, then
+$$ h(Y_n) \to_d h(Y) \text{ as } n \to \infty$$
+
+#### Proof
+
+Limited to the case where 

@@ -3,7 +3,7 @@ aliases:
 - "CLT"
 - "Central Limit Theorem"
 creation date: Sunday, October 30th 2022, 9:44 am
-date updated: Sunday, October 30th 2022, 11:52 am
+date updated: Monday, October 31st 2022, 5:56 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -100,4 +100,27 @@ $$ h(Y_n) \to_d h(Y) \text{ as } n \to \infty$$
 
 #### Proof
 
-Limited to the case where 
+Limited to the scalar case, and $h$ strictly increasing and continuous on $\R$. Suppose $F_{h(Y)}$ continuous at $b$. Then, 
+
+$$\begin{align}
+\limn P(h(Y_n) \leq b) &= \limn P(h\inv[h(Y_n)] \leq h\inv(b))\\
+&= \limn P(Y_n \leq h\inv(b)) \\
+&= \limn P(Y \leq h\inv(b)) \\
+&= \limn P(h(Y) \leq b) \\
+\end{align}$$
+Great success.
+
+This is useful, for instance, to see that: 
+
+$$\begin{align}
+\frac{\sqrt{n}(\Xbar_n - \mu)}{S_{Xn}} &\to_d N(0,1) \implies \\
+\frac{n(\Xbar_n - \mu)^2}{S^2_{Xn}} &\to_d \chi^2_1 \\
+\end{align}$$
+Can also use this for Lemma 1 above, with Lemma 3:
+
+If $Y_n \to_d Y$ and $Z_n \to_p r$ then 
+
+$$\begin{pmatrix} Y_n \\ Z_n \end{pmatrix} \to_d \begin{pmatrix} Y \\ r\end{pmatrix}$$
+
+
+## Application: Asymptotic Distribution of Sample Variance

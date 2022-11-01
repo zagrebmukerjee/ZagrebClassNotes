@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Tuesday, October 25th 2022, 3:42 pm
-date updated: Tuesday, November 1st 2022, 4:26 pm
+date updated: Tuesday, November 1st 2022, 4:57 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -162,7 +162,7 @@ If $x^*$ solves $g(x, b) = 0$ then
 $$ \frac{dx(b)}{db} = -\frac{dg/db}{dg/dx}$$
 I can say I have $dg/db = 0$ since I am on my level curve: then lock $dg/db$ a total change at $0$ and then say as I move $b$, $x$ needs to move some amount to cancel that out. 
 
-Can apply the IFT here to figure out how equilibrium conditions change with  parameters
+Can apply the IFT here to figure out how equilibrium conditions change with parameters
 
 
 
@@ -171,3 +171,11 @@ Can apply the IFT here to figure out how equilibrium conditions change with  par
 OK so now logical extension: infinite rounds of offers, take turns offering/accepting. Each player has their own discount rate $\delta_i$. 
 
 where do we start? 
+
+Pick a value. $V_i$ is the value to player $i$ from being at a history in which they are the proposer. Now suppose I am Player 1. The best offer that you could have accepted is $\delta_2V_2$. So I want to demand $1-\delta_2 V_2$. 
+But $V_2 = 1- \delta_1 V_1$. Then we have some good stuff:
+
+Conjecture that I have an equilibrium. Then both best responses hold here. So $V_1 = 1 - \delta_2(1- \delta_1 V_1)$, meaning $V_1 = \frac{1-\delta_2}{1-\delta_1\delta_2}$. So what does this imply? It means that $1$ demands the least player $2$ will accept, and $2$ accepts? But is it better for me to make an offer that's accepted, or to pass the buck? If player 1 punts, they get player 2's offer: $\delta_1V_1$ which is the same as the value of passing on that offer. So that's $\delta_1^2 V_1$ both ways. Best offer $2$ accepts is $1-\delta_2 V_2$. For me to wait:
+$$\begin{align}
+\delta^2V_1 &< 1 - \delta_2\left(\frac{1 - \delta_1}{1 - \delta_1 \delta_2}\right) \\
+\end{align}$$

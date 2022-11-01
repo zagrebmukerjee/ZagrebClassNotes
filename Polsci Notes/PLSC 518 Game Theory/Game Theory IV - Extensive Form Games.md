@@ -205,3 +205,10 @@ dividing it is the $n-1$ dimensional simplex $(x_1, \ldots, x_n)$ such that $x_i
 $$U_i = \delta^{t-1} x_i$$
 
 Randomly chosen person makes an offer every period. So then $\rho_i$ is probabilty $i$ proposes with $\sum \rho_i = 1$. Majority rule on acceptance
+
+
+this model can speak to a handful of different hings. 
+
+coalitions
+efficiency
+equity

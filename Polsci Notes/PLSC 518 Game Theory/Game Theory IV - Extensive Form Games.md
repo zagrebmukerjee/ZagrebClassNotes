@@ -161,3 +161,13 @@ If $x^*$ solves $g(x, b) = 0$ then
 
 $$ \frac{dx(b)}{db} = -\frac{dg/db}{dg/dx}$$
 I can say I have $dg/db = 0$ since I am on my level curve: then lock $dg/db$ a total change at $0$ and then say as I move $b$, $x$ needs to move some amount to cancel that out. 
+
+Can apply the IFT here to figure out how equilibrium conditions change with  parameters
+
+
+
+## Infinite Horizon Extensive Form
+
+OK so now logical extension: infinite rounds of offers, take turns offering/accepting. Each player has their own discount rate $\delta_i$. 
+
+where do we start? 

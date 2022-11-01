@@ -1,7 +1,7 @@
 ---
 aliases:
-creation date: 2022-10-25 15:43
-date updated: 2022-10-25 15:43
+creation date: Tuesday, October 25th 2022, 3:42 pm
+date updated: Tuesday, November 1st 2022, 4:15 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -67,7 +67,7 @@ Subgame perfection is conceptually deeper, but coincides with BI when latter is 
 
 subgame perfect NE require that strategies call for NE behavior in every subgame. So, in fight/nofight game, can't count on player 2 fighting given take, b/c that doesn't meet NE criterion for the (1 player) subgame. 
 
-### Theorem. 
+### Theorem.
 - Every finite game (finite number of nodes, of players, of choices) has at least 1 SGPNE. 
 - If information sets are singletons, $\exists$ a pure SGPNE
 
@@ -93,14 +93,14 @@ Is $S_2(s_1) =$ yes if $1 - s_1 > k$, creating an NE? Then $S_1 = 1-k$. But play
 Theorem. - a status quo game. No agreement: p1 get q and p2 get 1-q. $S_2(s_1) =$ accept if $1-s_1 \geq 1-q$, reject otherwise. Then $S_1 = q$. 
 $S_2(s_1) =$ accept if $1-s_1 \geq 1-q$, reject otherwise. Then $S_1 = k > q$. - this is also an equilbrium. I ask for more but then get nothing 
 
-now I have another parameter $\delta \in (0,1)$. A deflator: if no agreement, p1 gets $\delta q$ and p2 gets $\delta(1-q)$. SO now player 2 can have a strategy that is $1 - s_1 \geq \delta(1 - q)$. Then p1 is best off offering $1 - s_1 = \delta(1-q)$.  player 1 can still do some looting by holding hostage the future income. 
+now I have another parameter $\delta \in (0,1)$. A deflator: if no agreement, p1 gets $\delta q$ and p2 gets $\delta(1-q)$. SO now player 2 can have a strategy that is $1 - s_1 \geq \delta(1 - q)$. Then p1 is best off offering $1 - s_1 = \delta(1-q)$. player 1 can still do some looting by holding hostage the future income. 
 
 New game: 
 
 ![[Game Theory IV - Extensive Form Games 2022-10-25 16.56.50.excalidraw]]
 now we have two rounds of bidding - ie. offer and counteroffer. Inefficiency cost of counteroffering
 
-1 accepts iff $d x_2 \geq d^2q$. so 2 offers $x_2 = d q$. So when does 2 want to not counteroffer: when $1 - x_1 \geq d(1 - d q)$; so 1 keeps $x_1 =   1 - d + d^2 q$
+1 accepts iff $d x_2 \geq d^2q$. so 2 offers $x_2 = d q$. So when does 2 want to not counteroffer: when $1 - x_1 \geq d(1 - d q)$; so 1 keeps $x_1 = 1 - d + d^2 q$
 
 
 
@@ -125,7 +125,7 @@ player 1 has a non-smooth utility: no reason to play anything in $(\underline c,
 
 War $\implies$ $U_1 = p-k$ and $U_2 = 1-p-c$ where $c \in [0, 1-p]$ with some distribution. The realization (not the distribution) is unknown to Player 2
 
-Suppose Player 2 accepts when $1-x  \geq 1 -p -c$ or $x \leq p+ c$ or $x-p \leq c$. So reject if $c \leq x-p$. If it costs less for me to fight than proposed division  of peace winnings. 
+Suppose Player 2 accepts when $1-x \geq 1 -p -c$ or $x \leq p+ c$ or $x-p \leq c$. So reject if $c \leq x-p$. If it costs less for me to fight than proposed division of peace winnings. 
 
 Then Player 1 has the problem: 
 $$\max_x F(x-p)(p-k) + [1-F(x-p)]x$$
@@ -134,7 +134,18 @@ So I make an offer that's weighing probability of war, my gains from war, and th
 Note: Monopoly pricing problem has the same intensive-extensive margin question
 
 
-Now with this sort of generic question: write specific models, develop intuition, and only then try to develop general form of result with implicit function theorem etc. So let's say $F$ is the uniform CDF over $0, 1-p$. and then given demand $x$ the probability of war is $(x-p)/(1-p)$. check with intuition... if I demand $1$, I get certainty of war. If I offer 
+Now with this sort of generic question: write specific models, develop intuition, and only then try to develop general form of result with implicit function theorem etc. So let's say $F$ is the uniform CDF over $0, 1-p$. and then given demand $x$ the probability of war is $(x-p)/(1-p)$. check with intuition... if I demand $1$, I get certainty of war. if I demand the least, $p-k$ then I get probability of war $k/1-p$. 
 
 
+So I want to solve
+
+$$ \max_x \left(\frac{x-p}{1-p}\right)(p-k) + \left(1 - \frac{x-p}{1-p}\right)x$$
+Solution: $x^* = (1 + p-k)/2$ 
+
+If $p = 1/2$ and $k=0$ then $x^* = 3/4$. So because fighting still gets you $1/2$ you leave it on the table. 
+
+probability of war is 
+
+$\frac{x^*-p}{1-p}$
+In this case, $1/2 - k/[2(1-p)]$
 

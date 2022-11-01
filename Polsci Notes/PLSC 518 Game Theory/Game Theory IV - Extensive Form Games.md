@@ -104,6 +104,8 @@ now we have two rounds of bidding - ie. offer and counteroffer. Inefficiency cos
 
 
 
+### Bargaining with Outside Options
+
 This was dividing a pie. Now: divide a pie, and if we disagree we fight a war
 ![[Game Theory IV - Extensive Form Games 2022-10-25 17.10.48.excalidraw]]
 
@@ -118,4 +120,21 @@ What's optimal for low-c player 2: threshold lower thna for high-c
 player 1 has a non-smooth utility: no reason to play anything in $(\underline c, \overline c)$. Bidding $p + \underline c$ is certain peace. So I want to know if $p + \underline c > (p + \overline c)(1-q) + (p-k)q$. 
 
 
-###
+#### Smooth Model
+
+
+War $\implies$ $U_1 = p-k$ and $U_2 = 1-p-c$ where $c \in [0, 1-p]$ with some distribution. The realization (not the distribution) is unknown to Player 2
+
+Suppose Player 2 accepts when $1-x  \geq 1 -p -c$ or $x \leq p+ c$ or $x-p \leq c$. So reject if $c \leq x-p$. If it costs less for me to fight than proposed division  of peace winnings. 
+
+Then Player 1 has the problem: 
+$$\max_x F(x-p)(p-k) + [1-F(x-p)]x$$
+So I make an offer that's weighing probability of war, my gains from war, and the benefit of the offer. But this is now a smooth function rather than the discontinuous one from last formulation. The more aggressive your offer, the greater the share you'd get of the gains from peace, but the lower the probability of peace. 
+
+Note: Monopoly pricing problem has the same intensive-extensive margin question
+
+
+Now with this sort of generic question: write specific models, develop intuition, and only then try to develop general form of result with implicit function theorem etc. So let's say $F$ is the uniform CDF over $0, 1-p$. and then given demand $x$ the probability of war is $(x-p)/(1-p)$. check with intuition... if I demand $1$, I get certainty of war. If I offer 
+
+
+

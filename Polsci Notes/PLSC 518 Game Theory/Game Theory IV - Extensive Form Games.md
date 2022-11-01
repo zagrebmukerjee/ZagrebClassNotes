@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Tuesday, October 25th 2022, 3:42 pm
-date updated: Tuesday, November 1st 2022, 4:57 pm
+date updated: Tuesday, November 1st 2022, 5:06 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -177,5 +177,31 @@ But $V_2 = 1- \delta_1 V_1$. Then we have some good stuff:
 
 Conjecture that I have an equilibrium. Then both best responses hold here. So $V_1 = 1 - \delta_2(1- \delta_1 V_1)$, meaning $V_1 = \frac{1-\delta_2}{1-\delta_1\delta_2}$. So what does this imply? It means that $1$ demands the least player $2$ will accept, and $2$ accepts? But is it better for me to make an offer that's accepted, or to pass the buck? If player 1 punts, they get player 2's offer: $\delta_1V_1$ which is the same as the value of passing on that offer. So that's $\delta_1^2 V_1$ both ways. Best offer $2$ accepts is $1-\delta_2 V_2$. For me to wait:
 $$\begin{align}
-\delta^2V_1 &< 1 - \delta_2\left(\frac{1 - \delta_1}{1 - \delta_1 \delta_2}\right) \\
+\delta^2V_1 &< 1 - \delta_2V_2\\
+&< 1 - \delta_2\left(\frac{1 - \delta_1}{1 - \delta_1 \delta_2}\right) \\
+&< \frac{1 - \delta_1 \delta_2}{1 - \delta_1 \delta_2} - \left(\frac{\delta_2 - \delta_2\delta_1}{1 - \delta_1 \delta_2}\right) \\
+&< \frac{1 - \delta_2}{1 - \delta_1 \delta_2}\\ 
+&< V_1
 \end{align}$$
+
+An issue, here. 
+
+
+
+This is called the <font color=gree>Rubinstein Model</font> - a workhorse of bilateral negotiation papers. 
+
+
+### Uniqueness
+
+Interestingly we can show that this is the only equilibrium for this game.
+Conjecture that there are different equilibria with different payoffs. There is a nice argument based on there being a biggest and smallest payoff
+
+
+## Multi-Player Game
+
+$n$ players dividing some resource (Ferejohn). 
+dividing it is the $n-1$ dimensional simplex $(x_1, \ldots, x_n)$ such that $x_i \in [0,1]$ and $\sumn{i} x_i = 1$ (for 3 people this would be a triangle)
+
+$$U_i = \delta^{t-1} x_i$$
+
+Randomly chosen person makes an offer every period. So then $\rho_i$ is probabilty $i$ proposes with $\sum \rho_i = 1$. Majority rule on acceptance

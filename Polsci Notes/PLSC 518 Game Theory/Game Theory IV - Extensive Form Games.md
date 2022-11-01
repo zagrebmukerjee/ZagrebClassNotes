@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Tuesday, October 25th 2022, 3:42 pm
-date updated: Tuesday, November 1st 2022, 4:15 pm
+date updated: Tuesday, November 1st 2022, 4:26 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -147,5 +147,17 @@ If $p = 1/2$ and $k=0$ then $x^* = 3/4$. So because fighting still gets you $1/2
 probability of war is 
 
 $\frac{x^*-p}{1-p}$
-In this case, $1/2 - k/[2(1-p)]$
+In this case, $1/2 - k/[2(1-p)]$. What if $k = 1/4$? Then $x^* = \frac{5}{8}$. There's still some first mover advantage. 
 
+
+#### Implicit Function Theorem Approach
+
+
+Now we have : 
+
+$$(p-k)f(x-p) + [1-F(x-p)] - x f(x-p) = 0$$
+Write some function $g(x) = x^* - p + k - \frac{1 - F(x^*-p)}{f(x^*-p)}$. Then I have equilibrium condition is that this be $0$; player $1$ is maximizing. 
+If $x^*$ solves $g(x, b) = 0$ then 
+
+$$ \frac{dx(b)}{db} = -\frac{dg/db}{dg/dx}$$
+I can say I have $dg/db = 0$ since I am on my level curve: then lock $dg/db$ a total change at $0$ and then say as I move $b$, $x$ needs to move some amount to cancel that out. 

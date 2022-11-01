@@ -124,3 +124,5 @@ $$\begin{pmatrix} Y_n \\ Z_n \end{pmatrix} \to_d \begin{pmatrix} Y \\ r\end{pmat
 
 
 ## Application: Asymptotic Distribution of Sample Variance
+
+

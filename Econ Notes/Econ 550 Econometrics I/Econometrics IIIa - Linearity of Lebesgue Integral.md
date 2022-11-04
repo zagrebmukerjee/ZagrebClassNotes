@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Wednesday, September 21st 2022, 3:54 pm
-date updated: Wednesday, September 21st 2022, 3:57 pm
+date updated: Friday, November 4th 2022, 11:15 am
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -13,6 +13,7 @@ tags:
 
 # [[Econometrics IIIa - Linearity of Lebesgue Integral]]
 <span style = "font-size:120%"><i >Zagreb Mukerjee </i></span>
+[[Econ 550 Index]]
 
 We want to show that the Lebesgue integral is linear - that is, $\int (a f(x) + bg(x))d\mu = a \int f(x) d\mu + b \int g(x)d\mu$. 
 
@@ -125,7 +126,7 @@ $$
     \int h(x) d\mu &= \lim_{n\to\infty} \int u_n(x) d\mu \nonumber \\
     &= \lim_{n\to\infty} \int s_n(x) + t_n(x) d\mu \nonumber \\
     &= \lim_{n\to\infty} \int s_n(x)d\mu + \int t_n(x) d\mu \\
-    &= \int\lim_{n\to\infty} s_n(x)d\mu +  \int \lim_{n\to\infty}t_n(x) d\mu \\
+    &= \int\lim_{n\to\infty} s_n(x)d\mu + \int \lim_{n\to\infty}t_n(x) d\mu \\
     &= \int f(x) d\mu + \int g(x)d\mu
 \end{align}
 $$

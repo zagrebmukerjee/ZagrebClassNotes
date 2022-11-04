@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Tuesday, October 4th 2022, 12:47 pm
-date updated: Saturday, October 8th 2022, 3:54 pm
+date updated: Friday, November 4th 2022, 11:14 am
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -12,6 +12,7 @@ tags:
 
 # [[Econometrics V - Multiple or Vector-valued Random Variables]]
 <span style = "font-size:120%"><i >Zagreb Mukerjee </i></span>
+[[Econ 550 Index]]
 
 ## Joint Distribution Functions
 

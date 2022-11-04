@@ -10,7 +10,7 @@ aliases:
 - "Sample Mean"
 - "Sample Variance"
 creation date: Sunday, October 9th 2022, 11:00 am
-date updated: Sunday, October 30th 2022, 9:39 am
+date updated: Friday, November 4th 2022, 11:14 am
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -22,6 +22,7 @@ tags:
 
 # [[Econometrics VII - Sampling and Convergence in Probability]]
 <span style = "font-size:120%"><i >Zagreb Mukerjee </i></span>
+[[Econ 550 Index]]
 
 ## Sampling
 
@@ -209,5 +210,3 @@ $h$ is continuous at $c$: so, for any $\epsilon > 0$, there is some $\delta > 0$
 An estimator $\hat \theta_n$ of $\theta_0$ is <font color=gree>consistent</font> when $\hat \theta_n \to_p \theta_0$. 
 
 ```
-
-

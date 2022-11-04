@@ -3,19 +3,18 @@ aliases:
 - "CLT"
 - "Central Limit Theorem"
 creation date: Sunday, October 30th 2022, 9:44 am
-date updated: Friday, November 4th 2022, 10:55 am
+date updated: Friday, November 4th 2022, 11:14 am
 
 notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags: 
 - '#types/classes'
-- '#status/🚧'
 ---
 
 # [[Econometrics VIII - Convergence in Distribution, CLT and Asymptotic Distributions]]
 <span style = "font-size:120%"><i >Zagreb Mukerjee </i></span>
-
+[[Econ 550 Index]]
 
 ## Convergence in Distribution
 
@@ -160,7 +159,16 @@ Then the asymptotic distribution of $\hat S_{Xn}^2$ is $N(0, \var(X_i - \mu)^2)$
 
 ## Delta Method
 
-This is another tool for finding out what something converges to in distribution. It's a sort of Slutsky analogue in the same way the CMT was. Let $g()$ be continuous from $\R \to \R$ continuously differentiable at $\theta_0$. Let $\hat \theta_n$ be an estimator of $\theta_0$. Then:
+This is another tool for finding out what something converges to in distribution. It's a sort of Slutsky analogue in the same way the CMT was. Let $g()$ be continuous from $\R \to \R$ continuously differentiable at $\theta_0$. Let $\hat \theta_n$ be an estimator of $\theta_0$ with $\sqrt{n}(\hat \theta_n - \theta_0)\to_d N(0, \sigma^2)$Then:
 
 $$ \sqrt{n}(g(\hat\theta_n) - g(\theta_0)) \to_d N(0, g'(\theta_0)^2\sigma^2) $$
-In a multivariable analogue, let $g: \R^n \to \R^m$, and $\theta_0, \hat \theta_n$ be $n\times 1$ vectors. 
+In a multivariable analogue, let $g: \R^n \to \R^m$, and $\theta_0, \hat \theta_n$ be $n\times 1$ vectors; suppose $\sqrt{n}(\hat \theta_n - \theta_0)\to_d N(0, \Sigma)$. Let $g$ be differentiable at $\theta_0$ with continuous partials. Then we can define a Jacobian matrix $G(x)$:
+$$ G(x) = \begin{bmatrix} \frac{dg_1}{d\theta_1}(x) &\ldots& \frac{dg_1}{d\theta_n}(x)\\
+&\vdots & \\
+\frac{dg_m}{d\theta_1}(x) &\ldots& \frac{dg_m}{d\theta_n}(x)\\
+\end{bmatrix}$$
+
+Then:
+$$ \sqrt{n}(g(\hat\theta_n) - g(\theta_0)) \to_d N(0, G(\theta_0)\Sigma G(\theta_0)') $$
+
+#status/section/🚧 

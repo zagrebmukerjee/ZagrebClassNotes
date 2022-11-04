@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Sunday, October 30th 2022, 12:30 pm
-date updated: Sunday, October 30th 2022, 12:52 pm
+date updated: Friday, November 4th 2022, 11:14 am
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -11,8 +11,9 @@ tags:
 - '#status/🚧'
 ---
 
-# [[Econometrics IX - Least Squares]]
+# [[Estimation I - Least Squares]]
 <span style = "font-size:120%"><i >Zagreb Mukerjee </i></span>
+[[Econ 550 Index]]
 
 
 ## Least Squares Estimator
@@ -49,3 +50,4 @@ $$\begin{align}
 &=\limn n\inv \sumn{i} (X_i - \mu)U_i + n\inv \sumn{i} (\Xbar_n - \mu)U_i \\ 
 &= \limn n\inv \sumn{i} (X_i - \mu)U_i \text{ because } \Xbar_n -\mu \to_d 0\\ 
 \end{align}$$
+#status/section/🚧 

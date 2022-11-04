@@ -3,7 +3,7 @@ aliases:
 - "CLT"
 - "Central Limit Theorem"
 creation date: Sunday, October 30th 2022, 9:44 am
-date updated: Friday, November 4th 2022, 10:46 am
+date updated: Friday, November 4th 2022, 10:55 am
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -126,7 +126,7 @@ $$\begin{pmatrix} Y_n \\ Z_n \end{pmatrix} \to_d \begin{pmatrix} Y \\ r\end{pmat
 ## Application: Asymptotic Distribution of Sample Variance
 
 
-We want to know the asymptotic distribution of the sample variance. A good candidate for appropriate renormalization is $\sqrt{n}(\hat S_{Xn} - \sigma^2)$, since we know that $\hat S_{Xn} \to_p \sigma^2$. 
+We want to know the asymptotic distribution of the sample variance. A good candidate for appropriate renormalization is $\sqrt{n}(\hat S_{Xn} - \sigma^2)$, since we know that $\hat S_{Xn} \to_p \sigma^2$. Assume $EX^4$ finite.
 
 Then rewrite:
 $$\begin{align}
@@ -140,10 +140,27 @@ $$\begin{align}
 Then: 
 $$\begin{align}
 \sqrt{n}(\hat S_{Xn} - \sigma^2) &= \sqrt{n}\inv \left[\sumn{i}(X _i - \mu)^2 - (\Xbar_n - \mu)^2 - \sigma^2\right]\\
-&= \left[\sqrt{n}\inv \sumn{i}[(X _i - \mu)^2 - \sigma^2] - \sqrt{n}\inv \sumn{i}(\Xbar_n^2 - \mu) \right]\\
+&= \left[\sqrt{n}\inv \sumn{i}[(X _i - \mu)^2 - \sigma^2] - \sqrt{n}\inv \sumn{i}(\Xbar_n - \mu)^2 \right]\\
 \end{align}$$
 
 Let $W_i = (X_i - \mu)^2$. Then $W_i \to_p \sigma^2$. 
 $$\begin{align}
-\sqrt{n}(W_i - \sigma^2) &= N(0, \var(W_i)\\
+\sqrt{n}(W_i - \sigma^2) &= N(0, \var(W_i))\\
+\sqrt{n}(W_i - \sigma^2) &= N(0, \var(X_i - \mu)^2)\\
 \end{align}$$
+$\var(X_i - \mu)^2$ being finite relies on our assumption on $EX^4$ above. 
+
+The term we have left is $\sqrt{n}\inv \sumn{i}(\Xbar_n - \mu)^2 = \sqrt{n} (\Xbar_n - \mu)^2$. But $(\Xbar_n - \mu) \to_p 0$, and $\sqrt{n}(\Xbar_n - \mu) \to_d N(0,1)$. So by Lemma 1: 
+$$ (\Xbar_n - \mu) \sqrt{n} (\Xbar_n - \mu) = X_iY_i$$
+where $X_i \to_p 0$ and $Y_i \to_d$ something. SO this all goes to $0$. 
+
+Then the asymptotic distribution of $\hat S_{Xn}^2$ is $N(0, \var(X_i - \mu)^2)$. Asymptotically, the distribution of $S_{Xn}^2$ is the same. 
+
+
+
+## Delta Method
+
+This is another tool for finding out what something converges to in distribution. It's a sort of Slutsky analogue in the same way the CMT was. Let $g()$ be continuous from $\R \to \R$ continuously differentiable at $\theta_0$. Let $\hat \theta_n$ be an estimator of $\theta_0$. Then:
+
+$$ \sqrt{n}(g(\hat\theta_n) - g(\theta_0)) \to_d N(0, g'(\theta_0)^2\sigma^2) $$
+In a multivariable analogue, let $g: \R^n \to \R^m$, and $\theta_0, \hat \theta_n$ be $n\times 1$ vectors. 

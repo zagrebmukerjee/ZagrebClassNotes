@@ -3,7 +3,7 @@ aliases:
 - "CLT"
 - "Central Limit Theorem"
 creation date: Sunday, October 30th 2022, 9:44 am
-date updated: Monday, October 31st 2022, 5:56 pm
+date updated: Friday, November 4th 2022, 10:46 am
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -126,3 +126,24 @@ $$\begin{pmatrix} Y_n \\ Z_n \end{pmatrix} \to_d \begin{pmatrix} Y \\ r\end{pmat
 ## Application: Asymptotic Distribution of Sample Variance
 
 
+We want to know the asymptotic distribution of the sample variance. A good candidate for appropriate renormalization is $\sqrt{n}(\hat S_{Xn} - \sigma^2)$, since we know that $\hat S_{Xn} \to_p \sigma^2$. 
+
+Then rewrite:
+$$\begin{align}
+\hat S_{Xn} &= n\inv \sumn{i} (X_i - \Xbar_n)^2 \\
+&= n\inv \sumn{i} X_i^2 - 2\Xbar_n X_i + \Xbar_n^2 \\
+&= n\inv \sumn{i} X_i^2 + + 2X_i \mu + \mu^2 - 2X_i \mu - \mu^2 - 2\Xbar_n X_i + \Xbar_n^2 \\
+&= n\inv \sumn{i} [X_i^2 + + 2X_i \mu + \mu^2] - n\inv \sumn{i} [2X_i \mu] - \mu^2 - n\inv\sumn{i}[ 2\Xbar_n X_i] + \Xbar_n^2 \\
+&= n\inv \sumn{i} [X_i^2 + + 2X_i \mu + \mu^2] - n\inv \sumn{i} [2\Xbar_n \mu - \mu^2 - \Xbar_n^2]\\
+&= n\inv \sumn{i}(X _i - \mu)^2 - (\Xbar_n - \mu)^2\\
+\end{align}$$
+Then: 
+$$\begin{align}
+\sqrt{n}(\hat S_{Xn} - \sigma^2) &= \sqrt{n}\inv \left[\sumn{i}(X _i - \mu)^2 - (\Xbar_n - \mu)^2 - \sigma^2\right]\\
+&= \left[\sqrt{n}\inv \sumn{i}[(X _i - \mu)^2 - \sigma^2] - \sqrt{n}\inv \sumn{i}(\Xbar_n^2 - \mu) \right]\\
+\end{align}$$
+
+Let $W_i = (X_i - \mu)^2$. Then $W_i \to_p \sigma^2$. 
+$$\begin{align}
+\sqrt{n}(W_i - \sigma^2) &= N(0, \var(W_i)\\
+\end{align}$$

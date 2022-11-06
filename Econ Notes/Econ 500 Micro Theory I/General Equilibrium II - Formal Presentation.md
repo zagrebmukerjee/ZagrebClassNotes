@@ -4,7 +4,7 @@ aliases:
 - "Pareto Criterion"
 - "First Welfare Theorem"
 creation date: Sunday, November 6th 2022, 10:46 am
-date updated: Sunday, November 6th 2022, 1:29 pm
+date updated: Sunday, November 6th 2022, 1:45 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -115,4 +115,6 @@ The sets $Y + \bar \omega$ and $V$ are disjoint: Let $x \in V$. Then $x \succ x^
 
 So we can use the separating hyperplane theorem. There is some $p \neq 0$ defining the plane $pz = r$ such that $v \in V \implies pv \geq r$, and $y \in Y + \bar\omega \implies py \leq r$. 
 
-If $x_i \succsim_i x_i^*$ for all $i$ then $p(\sum_i x_i) \geq r$: For every $i$ and all $r>0$ there is a ball $B_{ri}$ around $x_i$ such that $\exists x_{ri} \in B_{ri}$ and $x_{ri} \succ x_i$. Since $x_i \succsim x_i^*$, $x_{ri} \succ x_i^*$. So $x_{ri}$ is in $V_i$; so $\s
+If $x_i \succsim_i x_i^*$ for all $i$ then $p(\sum_i x_i) \geq r$: For every $i$ and all $r>0$ there is a ball $B_{ri}$ around $x_i$ such that $\exists x_{ri} \in B_{ri}$ and $x_{ri} \succ x_i$. Since $x_i \succsim x_i^*$, $x_{ri} \succ x_i^*$. So $x_{ri}$ is in $V_i$; so $\sum_i x_{ri} \in V$. Then $p\sum_i x_{ri} \geq r$. But $x_{ri} = x_i + \epsilon$: so as $\epsilon \to 0$, $x_{ri} \to x_i$, and, since $\{z|z\geq r\}$ is closed, this means that $p\sum_i x_i \geq r$. 
+
+Since this is true in aggregate, for every $i$ $x_i \succ_i x_i^* \implies px_i \geq px_i^*$. 

@@ -4,7 +4,7 @@ aliases:
 - "Pareto Criterion"
 - "First Welfare Theorem"
 creation date: Sunday, November 6th 2022, 10:46 am
-date updated: Sunday, November 6th 2022, 1:26 pm
+date updated: Sunday, November 6th 2022, 1:29 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -109,4 +109,10 @@ Suppose that $X_i, Y_j$ convex, and $\succsim_i$ convex. Then, for every feasibl
 
 ### Proof
 
-We're going to do the separating hyperplane theorem. First we 
+We're going to do the separating hyperplane theorem. First we have to construct the things to separate. $Y + \bar\omega$ is convex since it is the 'sum' of convex sets. For all consumers, let $V_i = \{ x_i \in X_i| x_i \succ_i x_i^*\}$. Now, suppose $x, x' \in V_i$, and let $x \succsim x'$. Then let $x'' = \alpha x + (1-\alpha)x'$. The convexity of $X$ tells us $x'' \in X_i$; the convexity of $\succsim_i$ means that $x \succsim x'' \succsim x$. So $x'' \succsim x$, $x \in V_i$, so $x \succ x_i^*$ and thus $x'' \succsim x_i^*$. So $V_i$ is convex, and the aggregate $V = \sum_iV_i$ is convex. 
+
+The sets $Y + \bar \omega$ and $V$ are disjoint: Let $x \in V$. Then $x \succ x^*$. Suppose they are not disjoint, so $x \in Y+\bar\omega$. Then since $x \succ x^*$, we contradict pareto optimality. 
+
+So we can use the separating hyperplane theorem. There is some $p \neq 0$ defining the plane $pz = r$ such that $v \in V \implies pv \geq r$, and $y \in Y + \bar\omega \implies py \leq r$. 
+
+If $x_i \succsim_i x_i^*$ for all $i$ then $p(\sum_i x_i) \geq r$: For every $i$ and all $r>0$ there is a ball $B_{ri}$ around $x_i$ such that $\exists x_{ri} \in B_{ri}$ and $x_{ri} \succ x_i$. Since $x_i \succsim x_i^*$, $x_{ri} \succ x_i^*$. So $x_{ri}$ is in $V_i$; so $\s

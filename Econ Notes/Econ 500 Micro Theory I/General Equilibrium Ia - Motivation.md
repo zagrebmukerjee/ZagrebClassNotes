@@ -1,18 +1,18 @@
 ---
 aliases:
 creation date: Saturday, October 29th 2022, 10:40 am
-date updated: Saturday, October 29th 2022, 3:45 pm
+date updated: Sunday, November 6th 2022, 10:47 am
 
 notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags: 
-- '#types/classes'
-- '#status/🚧'
+- '#types/classes/econ'
 ---
 
 # [[General Equilibrium Ia - Motivation]]
 <span style = "font-size:120%"><i >Zagreb Mukerjee </i></span>
+[[Econ 500 Micro Theory Index]]
 
 ## General Vs Partial Equilibrium
 

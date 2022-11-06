@@ -4,7 +4,7 @@ aliases:
 - "Pareto Criterion"
 - "First Welfare Theorem"
 creation date: Sunday, November 6th 2022, 10:46 am
-date updated: Sunday, November 6th 2022, 11:22 am
+date updated: Sunday, November 6th 2022, 11:27 am
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -71,7 +71,9 @@ Assume preferences are locally nonsatiated. Then if $x^*, y^*$ is a price equili
 
 ### Proof
 
-Assume for a contradiction that there's a Pareto-improving bundle. Then there is some $x, y \in A$ such that $x_i \succsim x_i^*$ for everyone and $x_j \succ x^*_j$ for some $j$. Then by the utility maximization condition, $\forall i$ we have $px_i \geq px_i^*$ and for $j$ $px_j > px_j^*$. 
+Assume for a contradiction that there's a Pareto-improving bundle. Then there is some $x, y \in A$ such that $x_i \succsim x_i^*$ for everyone and $x_j \succ x^*_j$ for some $j$. Then by the utility maximization condition, $px_j > px_j^*$. 
+
+Now consider the LNS condition. We know $x \succ x^* \implies px> px^*$. Suppose $x' \succsim x$ but $px' < px$. The latter implies that for some $r>0$ there is some ball $B_r$ around $x'$ such that $x_r \in B_r \implies px_r < px$. But LNS tells us that there is some $x'_r \in B_r$ such that $x'_r \succ x'$; and by transitivity, $x'_r \succ x$; but $px'_r < px$, contradicting utility maximization. So by LNS we have that $x_i \succsim x_i^* \implies px_i \geq px_i^*$. 
 
 Then at this new bundle we can write the total social wealth as: 
 

@@ -4,7 +4,7 @@ aliases:
 - "Pareto Criterion"
 - "First Welfare Theorem"
 creation date: Sunday, November 6th 2022, 10:46 am
-date updated: Sunday, November 6th 2022, 11:05 am
+date updated: Sunday, November 6th 2022, 11:22 am
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -48,3 +48,38 @@ It's worth noting that this is a really weak condition. $x_1 = \bar \omega$ is P
 Now we can introduce a notion of income and ownership. 
 - Individuals have endowments $\omega_i$ such that $\sum \omega_i = \bar\omega$. 
 - Firms have ownerships $\theta_{ij}$ : $\sum_j \theta_{ij} = 1$. 
+Suppose some prices $p \in \R^L$. Then an individual's income is $w_i = p \omega_i + \sum_j \theta_{ij}py_j$. 
+
+Then we will say that an allocation $x^*, y^* \in A$, and some prices $p$, are a Walrasian Equilibrium if: 
+1) $\forall j\;, \; \forall y_j \in Y_j, py_j^* \geq py_j$. Firms are profit maximizing. 
+2) $\forall _i$ $x_i \in X_i$: $x_i^* \succ_i x_i \implies px_i > w_i$. Consumers are utility maximizing given their budget. 
+
+### Price Equilibrium with Transfers
+
+For this case we don't actually care who owns what. We just care about some $w_i$ such that $\sum w_i = p \bar\omega + \sum_j py_j$. That is, there's some division of aggregate wealth. 
+
+Some allocation $x^*, y^* \in A$ and prices $p \in \R^L$ is a <font color=gree>price equilibrium with transfers</font> if 
+1) $\forall j\;, \; \forall y_j \in Y_j, py_j^* \geq py_j$; the profit maximization condition. It might be convenient to write this as $p(y_j^* - y_j) \geq 0 \; \forall y_j \in Y_j$. 
+2) $\forall _i$ $x_i \in X_i$: $x_i^* \succ_i x_i \implies px_i > w_i$. Consumers are utility maximizing given their budget. 
+
+The Walrasian Equilibrium is a special case of the PEWT where transfers are $0$. 
+
+## First Welfare Theorem
+
+Assume preferences are locally nonsatiated. Then if $x^*, y^*$ is a price equilibrium with transfers, it is Pareto Optimal. 
+
+
+### Proof
+
+Assume for a contradiction that there's a Pareto-improving bundle. Then there is some $x, y \in A$ such that $x_i \succsim x_i^*$ for everyone and $x_j \succ x^*_j$ for some $j$. Then by the utility maximization condition, $\forall i$ we have $px_i \geq px_i^*$ and for $j$ $px_j > px_j^*$. 
+
+Then at this new bundle we can write the total social wealth as: 
+
+$$\begin{align}
+\sum w_i &= \sum_i p_i x_i^*\\
+&= px_j^* + \sum_{i \neq j} px_i^* \\
+&< px_j + \sum_{i \neq j} px_i\\
+p \bar\omega + \sum_j py_j &< px_j + \sum_{i \neq j} px_i
+\end{align}$$
+
+Thus this is not a feasible allocation. 

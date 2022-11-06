@@ -4,7 +4,7 @@ aliases:
 - "Pareto Criterion"
 - "First Welfare Theorem"
 creation date: Sunday, November 6th 2022, 10:46 am
-date updated: Sunday, November 6th 2022, 11:27 am
+date updated: Sunday, November 6th 2022, 1:26 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -24,7 +24,7 @@ tags:
 We're interested in formally presenting and demonstrating many of the conclusions drawn from the Edgeworth Box framework. In particular, we're going to introduce more than two consumers, and we will also introduce firms and profit-maximization. 
 
 1) There are $I$ consumers, $J$ firms, and $L$ commodities, all positive. 
-2) Each consumer has a consumption set $X_i$ and a preference relation $\succsim_i$ defined on $X_i \times X_i$. Assume $X_i$ is closed, and bounded below ($\forall i \;; \exists \; r_i \in \R^L$ s.t. $X_i \subseteq r_i + \R^L_+$. While we will generally assume LNS, we'll bring it up usually.  
+2) Each consumer has a consumption set $X_i$ and a preference relation $\succsim_i$ defined on $X_i \times X_i$. Assume $X_i$ is closed, and bounded below ($\forall i \;; \exists \; r_i \in \R^L$ s.t. $X_i \subseteq r_i + \R^L_+$. While we will generally assume LNS, we'll bring it up usually. Specifically, we do not assume convex preferences. 
 3) Each firm has some prouction set $Y_j$ such that $Y_j \subseteq \R^L_-$; there's no free lunch, $Y \cap \R^L_+ = \{0\}$, and free disposal. Can also write: $y \in Y \land -y \in Y \iff y = 0$. $Y$ is convex. 
 	1) There's a total production set $Y$ which we write $Y = \sum_j Y_j$: this just means every firm is producing something from their set. Formally $y\in Y \iff \exists\,c \in \R^J \text{ s.t. } c'(y_1, \ldots, y_j) = y$. 
 4) There is an aggregate endowment $\bar\omega$ There is some $x \in X_1 \times X_2 \times \ldots$ such that $x < \bar\omega$. 
@@ -85,3 +85,28 @@ p \bar\omega + \sum_j py_j &< px_j + \sum_{i \neq j} px_i
 \end{align}$$
 
 Thus this is not a feasible allocation. 
+
+
+## Second Welfare Theorem
+
+The FWT tells us that WE/PEWTs are Pareto-optimal. We want to show that all pareto optimal points are WE. This unfortunately is not true. So we'll want a weaker idea of equilibrium, quasiequilibrium. Then we can say a) all pareto optimal points are QE and that under certain conditions, a PQWT is a PEWT. 
+
+We will also need to introduce the convex preference assumption. 
+
+### Quasiequilibrium
+
+#### Motivation
+
+#status/section/🚧 
+
+#### Definition
+
+So we will want to relax the notion of equilibrium - specifically, the part where consumers are utility-maximizing. Instead we will have the condition that, for some $x^*$, there is nothing better that is cheaper: $x \succ x^* \implies px < px^*$. 
+
+### Theorem
+
+Suppose that $X_i, Y_j$ convex, and $\succsim_i$ convex. Then, for every feasible Pareto-optimal allocation, there exist some post-transfer wealths $w$ such that $x^*, y^*$ is a PQWT. 
+
+### Proof
+
+We're going to do the separating hyperplane theorem. First we 

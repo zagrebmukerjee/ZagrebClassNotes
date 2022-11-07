@@ -15,4 +15,5 @@ tags:
 <span style = "font-size:120%"><i >Zagreb Mukerjee </i></span>
 [[Econ 550 Index]]
 
-Related to [[2001.7
+Related to [[2001.6 Likelihood Inference]] - a more mathematical treatment. 
+

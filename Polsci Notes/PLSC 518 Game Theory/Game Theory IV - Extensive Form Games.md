@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Tuesday, October 25th 2022, 3:42 pm
-date updated: Tuesday, November 1st 2022, 5:06 pm
+date updated: Tuesday, November 8th 2022, 3:56 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -175,7 +175,7 @@ where do we start?
 Pick a value. $V_i$ is the value to player $i$ from being at a history in which they are the proposer. Now suppose I am Player 1. The best offer that you could have accepted is $\delta_2V_2$. So I want to demand $1-\delta_2 V_2$. 
 But $V_2 = 1- \delta_1 V_1$. Then we have some good stuff:
 
-Conjecture that I have an equilibrium. Then both best responses hold here. So $V_1 = 1 - \delta_2(1- \delta_1 V_1)$, meaning $V_1 = \frac{1-\delta_2}{1-\delta_1\delta_2}$. So what does this imply? It means that $1$ demands the least player $2$ will accept, and $2$ accepts? But is it better for me to make an offer that's accepted, or to pass the buck? If player 1 punts, they get player 2's offer: $\delta_1V_1$ which is the same as the value of passing on that offer. So that's $\delta_1^2 V_1$ both ways. Best offer $2$ accepts is $1-\delta_2 V_2$. For me to wait:
+Conjecture that I have an equilibrium. Then both best responses hold here. So $V_1 = 1 - \delta_2(1- \delta_1 V_1)$, meaning $V_1 = \frac{1-\delta_2}{1-\delta_1\delta_2}$. So what does this imply? It means that $1$ demands the least player $2$ will accept, and $2$ accepts? But is it better for me to make an offer that's accepted, or to pass the buck? If player 1 punts, they get player 2's offer: $\delta_1V_1$ which is the same as the value of passing on that offer. So that's $\delta_1^2 V_1$ both ways. Best offer $2$ accepts is $1-\delta_2 V_2$. For me to wait - a <font color=gree>continuation payoff</font>:
 $$\begin{align}
 \delta^2V_1 &< 1 - \delta_2V_2\\
 &< 1 - \delta_2\left(\frac{1 - \delta_1}{1 - \delta_1 \delta_2}\right) \\
@@ -218,8 +218,13 @@ Example: pork acquisition.
 Want an SGPNE. Need another equilibrium concept: stationarity. Stationary $\subseteq$ SGPNE $\subseteq$ nash equilibria. 
 
 ### Stationarity
-I require my voting behavior to be purely a function of the offer, and the offer I make is the same.  Not the history of proposing or voting behavior. Thus - no punishments etc. 
+I require my voting behavior to be purely a function of the offer, and the offer I make is the same. Not the history of proposing or voting behavior. Thus - no punishments etc. 
 
 If we don't add this assumption to this model, then really anything is describable as an equilibrium. There is some degree of substantive justification, eg stationary strategies are simplest. 
 
-How to solve? Guess: we want all players to be best responding. have a $V_i$ as before which is value of being proposer. Then your choice is between either: accept the offer on the table, or get EV of waiting. E
+How to solve? Guess: we want all players to be best responding. have a $V_i$ as before which is value of being in a period where I propose. Then your choice is between either: accept the offer on the table, or get EV of waiting. EV is $1/n V_i + (1/n)(1/n) V_i$ etc. Offerer will offer each their EV of waiting. But we don't get a lot of milage from using the payoff conditional on being a proposer, because that is random
+
+Then $V_i$ is the continuation payoff of a point before the next offer is generated. ie. the payoff of the whole game. 
+- so what is my voting rule. suppose I am pivotal. I will say, I vote policies that I like. 
+- so I like offers that are $\geq \delta V_i$ (let $\delta_i = \delta$ for now)
+- offerer $j$ has to offer $1- \delta \sum_{i\neq j} V_i$

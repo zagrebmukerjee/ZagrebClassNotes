@@ -212,3 +212,7 @@ this model can speak to a handful of different hings.
 coalitions
 efficiency
 equity
+
+### Example: Distributive Politics
+
+Pork acquisition

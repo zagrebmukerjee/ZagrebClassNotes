@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Tuesday, October 25th 2022, 3:42 pm
-date updated: Tuesday, November 8th 2022, 4:24 pm
+date updated: Tuesday, November 8th 2022, 4:38 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -245,3 +245,30 @@ V &= \frac{1}{n}\left(1 - \frac{n-1}{2}\delta V \right) + \left[ \frac{n-1}{n} \
 &= \frac{1}{n}\\
 \end{align}
 $$
+
+
+does proposer want the rents:
+
+$$
+\begin{align}
+1- (n-1)/2(\delta/n) \;&> \; \delta/n\\
+n- (\delta n-\delta)/2 \;&> \; \delta\\
+n\;&> \; \delta/2(1-\delta)\\
+\end{align}
+$$
+
+This game is efficient: suppose the game ends at some point with $\delta \times p_i$ for everyone: then we can get $p_i$ by agreeing on that to start with, and divvy up the surplus to pay people.
+
+This efficiency notion might be a starting point to uncover theoretical puzzles. why don't people just come to the agreement that they predictably will come to? There are three sorts of model features you can add to explain why there is 'inefficiency'
+- incomplete information. eg. do I know if I will win the war. 
+- lack of commitment
+- contract space coarse
+
+``` ad-note
+title: Extension
+
+Keep $\delta$ the same. but have different $\rho$. Then what are the equilibria. We now need to have different $V_i$. 
+
+Suppose $\rho_1 < \rho_2 < \rho_3$. Then player $1$ will be in every MWC because they're the cheapest? But there is a general equilibrium effect. Player 1, knowing this, will now demand more from anyone, because they have a better reservation value. 
+
+```

@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Tuesday, October 25th 2022, 3:42 pm
-date updated: Tuesday, November 8th 2022, 4:38 pm
+date updated: Tuesday, November 8th 2022, 5:05 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -284,5 +284,16 @@ Romer and Rosenthal model. Bargaining with a proposer and a status quo.
 primitives of the game: players have ideal points along a spectrum of policy. 
 school board or someone is a proposer. they also have an ideal point. 
 
-there is a status quo. Propose something, 
+there is a status quo. Propose something, if rejected get $q$. Intuitively: the higher the $q$, the higher the realized value. If proposer I will propose the median voter if closer to my ideal pt than status quo. 
+
+The counterintuitive thing: low status quos actually make the median voters willing to accept relatively higher ones - I care only about distance, not direction. 
+
+![[Game Theory IV - Extensive Form Games 2022-11-08 17.00.33.excalidraw|300]]
+
+so your empirical observation depends on which subset of this population are looking at. If you have a lot to the left of the median voter, and you haven't thought about that, you will incorrectly conclude that there's a negative relationship. Theory can tell me to think about a nonlinear specification.
+
+
+Upwards sloping part of the line is gridlock region. Preferences + rules preclude change. 
+
+
 

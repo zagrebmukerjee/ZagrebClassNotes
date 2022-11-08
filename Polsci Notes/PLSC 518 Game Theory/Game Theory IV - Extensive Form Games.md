@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Tuesday, October 25th 2022, 3:42 pm
-date updated: Tuesday, November 8th 2022, 3:56 pm
+date updated: Tuesday, November 8th 2022, 4:24 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -224,7 +224,24 @@ If we don't add this assumption to this model, then really anything is describab
 
 How to solve? Guess: we want all players to be best responding. have a $V_i$ as before which is value of being in a period where I propose. Then your choice is between either: accept the offer on the table, or get EV of waiting. EV is $1/n V_i + (1/n)(1/n) V_i$ etc. Offerer will offer each their EV of waiting. But we don't get a lot of milage from using the payoff conditional on being a proposer, because that is random
 
+Suppose $\rho_i = 1/n$
+
 Then $V_i$ is the continuation payoff of a point before the next offer is generated. ie. the payoff of the whole game. 
 - so what is my voting rule. suppose I am pivotal. I will say, I vote policies that I like. 
 - so I like offers that are $\geq \delta V_i$ (let $\delta_i = \delta$ for now)
-- offerer $j$ has to offer $1- \delta \sum_{i\neq j} V_i$
+- offerer $j$ has to offer to the cheapest bunch of people to appease, ie the ones with lowest continuation payoffs. The <font color=gree>minimum winning coalition</font>.
+- but I want in equilibrium all $V_i$ to be the same. 
+
+In equilibrium, offerer keeps $1 - (n-1)\delta V/2$ for herself , gives randomly $(n-1)/2$ people their reservation value, and everyone else gets nothing. This isn't quite enough yet. I need to think a bit about $V$. 
+
+What is my expected value: with probability $1/n$ I am recognized and get $1 - (n-1)\delta V/2$. With probability $(n-1)/n$ I am not the proposer. then I have probability $1/2$ of being one of the winning coalition so I get $\delta V$, and probability $1/2$ I get $0$. 
+
+So I need to have that equal to my offer for me to offer smth that will be accepted. 
+
+$$ 
+\begin{align}
+V &= \frac{1}{n}\left(1 - \frac{n-1}{2}\delta V \right) + \left[ \frac{n-1}{n} \right] \left(\frac{1}{2}\delta V\right)\\
+&= \frac{1}{n} - \frac{1}{n}\frac{n-1}{2}\delta V + \frac{n-1}{n} \frac{1}{2}\delta V\\
+&= \frac{1}{n}\\
+\end{align}
+$$

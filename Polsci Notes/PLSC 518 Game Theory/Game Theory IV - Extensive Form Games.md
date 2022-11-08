@@ -184,7 +184,7 @@ $$\begin{align}
 &< V_1
 \end{align}$$
 
-An issue, here. 
+An issue, here. So I won't want to wait. 
 
 
 
@@ -213,6 +213,13 @@ coalitions
 efficiency
 equity
 
-### Example: Distributive Politics
+Example: pork acquisition. 
 
-Pork acquisition
+Want an SGPNE. Need another equilibrium concept: stationarity. Stationary $\subseteq$ SGPNE $\subseteq$ nash equilibria. 
+
+### Stationarity
+I require my voting behavior to be purely a function of the offer, and the offer I make is the same.  Not the history of proposing or voting behavior. Thus - no punishments etc. 
+
+If we don't add this assumption to this model, then really anything is describable as an equilibrium. There is some degree of substantive justification, eg stationary strategies are simplest. 
+
+How to solve? Guess: we want all players to be best responding. have a $V_i$ as before which is value of being proposer. Then your choice is between either: accept the offer on the table, or get EV of waiting. E

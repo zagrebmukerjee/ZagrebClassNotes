@@ -257,6 +257,8 @@ n\;&> \; \delta/2(1-\delta)\\
 \end{align}
 $$
 
+#### Efficiency
+
 This game is efficient: suppose the game ends at some point with $\delta \times p_i$ for everyone: then we can get $p_i$ by agreeing on that to start with, and divvy up the surplus to pay people.
 
 This efficiency notion might be a starting point to uncover theoretical puzzles. why don't people just come to the agreement that they predictably will come to? There are three sorts of model features you can add to explain why there is 'inefficiency'
@@ -264,11 +266,23 @@ This efficiency notion might be a starting point to uncover theoretical puzzles.
 - lack of commitment
 - contract space coarse
 
-``` ad-note
-title: Extension
+
+#### Extension with Different Recognition Probability
 
 Keep $\delta$ the same. but have different $\rho$. Then what are the equilibria. We now need to have different $V_i$. 
 
 Suppose $\rho_1 < \rho_2 < \rho_3$. Then player $1$ will be in every MWC because they're the cheapest? But there is a general equilibrium effect. Player 1, knowing this, will now demand more from anyone, because they have a better reservation value. 
 
-```
+For a finite horizon game you can construct $V_1 > V_2$. For infinite horizons, you cannot. 
+
+
+
+## Spatial Policy Model
+
+Romer and Rosenthal model. Bargaining with a proposer and a status quo. 
+
+primitives of the game: players have ideal points along a spectrum of policy. 
+school board or someone is a proposer. they also have an ideal point. 
+
+there is a status quo. Propose something, 
+

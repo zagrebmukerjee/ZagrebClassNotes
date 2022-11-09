@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Monday, November 7th 2022, 12:48 pm
-date updated: Wednesday, November 9th 2022, 11:40 am
+date updated: Wednesday, November 9th 2022, 11:56 am
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -48,4 +48,31 @@ MSE(\thetahat_n ,\theta) &= E_\theta\left[(\thetahat_n -E_\theta\thetahat_n)^2 +
 &= [\text{Bias}(\thetahat_n, \theta)]^2 + \var_\theta(\thetahat_n)\\
 \end{align}$$
 
-Recall here that $\thetahat_n$ is some function of $\theta$ and other things: so e.g. $E_theta \thetahat_n$ is 
+Recall here that $\thetahat_n$ is some function of $\theta$ and other things: so e.g. $E_\theta \thetahat_n$ is the expected value of $\thetahat_n$ over the true distribution of $\theta$. 
+
+This can also be a difficult criterion to apply universally. For instance, consider an estimator $\hat\theta_n = 3$. This is obviously a bad estimator. But when $\theta= 3$, then it will have an incredibly low MSE. 
+
+We want to then think about minimizing MSE after ruling out 'bad' estimators; the UMVU is one perspective on that (if bias = 0 then the MSE = the variance)
+
+
+We can use MSE to get the 'relative efficiency' the MSE ratio of two estimators of the same $\theta$. 
+
+### Consistency
+
+$\thetahat_n$ is a consistent estimator of $\theta$ if $MSE(\thetahat_n, \theta) \to 0$ as $n \to \infty$. 
+
+Proof:
+
+Choose $\epsilon > 0$, and let $MSE \to 0$. Then we want to show that $P(|\hat\theta_n - \theta| > \epsilon) \to 0$ as $n\to\infty$. 
+$$\begin{align}
+\limn P(|\hat\theta_n - \theta| > \epsilon) &= \limn P\left(\sqrt{(\hat\theta_n - \theta)^2} > \epsilon\right)\\
+&= \limn P\left((\hat\theta_n - \theta)^2 > \epsilon^2\right)\\
+&\leq \limn \frac{E_\theta(\hat\theta_n - \theta)^2}{\epsilon^2} \text{by Markov's Ineq}\\
+&\leq \limn \frac{MSE(\thetahat_n, \theta)}{\epsilon^2}\\
+&\leq 0.
+\end{align}$$
+This can also be shown with WLLN and Slutsky:
+
+$$\begin{align}
+\limn (\hat\theta_n - \theta)^2 &= \limn\hat\theta_n^2 + \theta^2 -2\thetahat_n\theta\\ 
+\end{align}$$

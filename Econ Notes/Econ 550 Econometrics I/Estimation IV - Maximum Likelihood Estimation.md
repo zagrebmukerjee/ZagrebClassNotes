@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Monday, November 7th 2022, 12:41 pm
-date updated: Wednesday, November 9th 2022, 1:44 pm
+date updated: Wednesday, November 9th 2022, 1:45 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -43,5 +43,5 @@ $$\begin{align}
 \mathcal L(y_i|x_i;\theta) &= \prod_{i=1}^n \frac{1}{\sqrt{2\pi\sigma^2}}\exp\left[-\frac{1}{2}\frac{y_i - (\alpha + \beta x_i)}{\sigma^2}\right]\\
 \log \mathcal L(y_i|x_i;\theta) &= \sumn{i} \log \frac{1}{\sqrt{2\pi\sigma^2}}\exp\left[-\frac{1}{2}\frac{y_i - (\alpha + \beta x_i)}{\sigma^2}\right]\\
 &= \sumn{i} \left[-\frac{1}{2}\frac{y_i - (\alpha + \beta x_i)}{\sigma^2}\right] + 1/2\log 2\pi + \log \sigma\\
-&= \sumn{i}1/2\log 2\pi + \log \sigma -\frac{1}{2}\frac{y_i - (\alpha + \beta x_i)}{\sigma^2} + \\
+&= n/2\log 2\pi + n \log \sigma -\frac{1}{2\sigma^2}\sumn{i}y_i - (\alpha + \beta x_i) \\
 \end{align}$$

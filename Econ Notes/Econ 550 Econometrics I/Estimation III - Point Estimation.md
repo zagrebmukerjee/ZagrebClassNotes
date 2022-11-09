@@ -72,7 +72,3 @@ $$\begin{align}
 &\leq 0.
 \end{align}$$
 This can also be shown with WLLN and Slutsky:
-
-$$\begin{align}
-\limn (\hat\theta_n - \theta)^2 &= \limn\hat\theta_n^2 + \theta^2 -2\thetahat_n\theta\\ 
-\end{align}$$

@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Monday, November 7th 2022, 12:48 pm
-date updated: Wednesday, November 9th 2022, 11:56 am
+date updated: Wednesday, November 9th 2022, 11:58 am
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -72,7 +72,3 @@ $$\begin{align}
 &\leq 0.
 \end{align}$$
 This can also be shown with WLLN and Slutsky:
-
-$$\begin{align}
-\limn (\hat\theta_n - \theta)^2 &= \limn\hat\theta_n^2 + \theta^2 -2\thetahat_n\theta\\ 
-\end{align}$$

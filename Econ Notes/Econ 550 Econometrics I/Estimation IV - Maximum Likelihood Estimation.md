@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Monday, November 7th 2022, 12:41 pm
-date updated: Friday, November 11th 2022, 12:23 pm
+date updated: Friday, November 11th 2022, 12:38 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -32,6 +32,9 @@ $$\log \mathcal L(\theta; \underline y)= \sum_{i=1}^N \log f_Y(y_i;\theta)$$
 
 We'll have some FOCs: 
 $$0 = \frac{d}{d\theta} \sumn{i} \log f_Y(y_i;\theta)$$
+
+Sometimes we'll be able to solve these FOCs analytically to find a general expression for a maximum likelihood estimator. 
+
 ### Example
 
 Suppose I have the linear regression parametric family; that is, $Y_i$ are iid, with 
@@ -49,10 +52,27 @@ $$\begin{align}
 The first order conditions are: 
 $$\begin{align}
 0 &= \frac{d}{d\alpha} \left[n/2\log 2\pi + n \log \sigma - \frac{1}{2\sigma^2}\sumn{i}(\alpha + \beta x_i)^2 - 2 y_i (\alpha + \beta x_i) + y_i^2 \right]\\
-&= \frac{1}{2\sigma^2}\frac{d}{d\alpha} \left[\sumn{i} \alpha^2 + 2\alpha \beta x_i + \beta^2 x_i^2 - \sumn{i} 2 y_i \alpha - 2 y_i \beta x_i\right]\\
-&= \frac{1}{2\sigma^2}\frac{d}{d\alpha} \left[n\alpha^2 + 2\alpha \sumn{i}\beta x_i- \alpha \sumn{i} 2 y_i\right]\\
-\alpha &= \beta\Xbar_n -\Ybar_n\\
+&= -\frac{1}{2\sigma^2}\frac{d}{d\alpha} \left[\sumn{i} \alpha^2 + 2\alpha \beta x_i + \beta^2 x_i^2 - \sumn{i} 2 y_i \alpha - 2 y_i \beta x_i\right]\\
+&= -\frac{1}{2\sigma^2}\frac{d}{d\alpha} \left[n\alpha^2 + 2\alpha \sumn{i}\beta x_i- \alpha \sumn{i} 2 y_i\right]\\
+\alpha &= \Ybar_n - \beta\Xbar_n\\
 0 &= \frac{d}{d\beta} \left[n/2\log 2\pi + n \log \sigma - \frac{1}{2\sigma^2}\sumn{i}(\alpha + \beta x_i)^2 - 2 y_i (\alpha + \beta x_i) + y_i^2 \right]\\
-&= \frac{1}{2\sigma^2}\frac{d}{d\beta} \left[\sumn{i} \alpha^2 + 2\alpha \beta x_i + \beta^2 x_i^2 - \sumn{i} 2 y_i \alpha - 2 y_i \beta x_i\right]\\
-&=\frac{d}{d\beta} \left[\sumn{i} \alpha^2 + 2\alpha \beta x_i + \beta^2 x_i^2 - \sumn{i} 2 y_i \alpha - 2 y_i \beta x_i\right]\\
+&=- \frac{1}{2\sigma^2}\frac{d}{d\beta} \left[\sumn{i} \alpha^2 + 2\alpha \beta x_i + \beta^2 x_i^2 - \sumn{i} 2 y_i \alpha - 2 y_i \beta x_i\right]\\
+&=-\frac{d}{d\beta} \left[2\alpha \beta\sumn{i} x_i + \beta^2\sumn{i} x_i^2 - 2 \beta \sumn{i} y_i x_i\right]\\
+&=- 2\alpha \sumn{i} x_i - 2 \beta\sumn{i} x_i^2 + 2\sumn{i} y_i x_i\\
+&= \beta\Xbar_n\sumn{i} x_i - \Ybar_n\sumn{i} x_i - \beta\sumn{i} x_i^2 + \sumn{i} y_i x_i\\
+&=\beta\Xbar_n^2/n+\Ybar_n\Xbar_n/n - \beta\sumn{i} x_i^2 - \sumn{i} y_i x_i\\
+\betahat_{MLE } &= \frac{\sumn{i}[x_i -\Xbar_n][y_i - \Ybar_n]}{\sumn{i} [x_i - \Xbar_n]^2}\\
 \end{align}$$
+This is also the OLS estimator <font color=#F7B801>why tho?</font>
+
+
+Also 
+$$\begin{align}
+0 &= \frac{d}{d\sigma} \left[n/2\log 2\pi + n \log \sigma - \frac{1}{2\sigma^2}\sumn{i}(\alpha + \beta x_i)^2 - 2 y_i (\alpha + \beta x_i) + y_i^2 \right]\\
+&= \frac{d}{d\sigma} \left[n \log \sigma - \frac{1}{2}\sigma^{-2}\sumn{i}\hat u_i^2 \right]\\
+&= n \sigma\inv + \sigma^{-3} \sumn{i}\hat u_i^2 \\
+\hat\sigma^2_{MLE} &= n\inv \sumn{i}\hat u_i^2 
+\end{align}$$
+
+This can be shown to be biased towards $0$ by a factor of $(n-2)/n$. 
+

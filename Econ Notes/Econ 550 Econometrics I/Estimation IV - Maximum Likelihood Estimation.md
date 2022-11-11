@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Monday, November 7th 2022, 12:41 pm
-date updated: Wednesday, November 9th 2022, 1:45 pm
+date updated: Friday, November 11th 2022, 12:23 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -40,8 +40,19 @@ $$ Y_i \sim N(\alpha + \beta x_i, \sigma^2)$$
 where $x_i$ are distributed according to some joint density $g(x_1, \ldots, x_n)$ that's independent of $Y$. Now we want a conditional joint density of $Y_i|X$; then
 
 $$\begin{align}
-\mathcal L(y_i|x_i;\theta) &= \prod_{i=1}^n \frac{1}{\sqrt{2\pi\sigma^2}}\exp\left[-\frac{1}{2}\frac{y_i - (\alpha + \beta x_i)}{\sigma^2}\right]\\
-\log \mathcal L(y_i|x_i;\theta) &= \sumn{i} \log \frac{1}{\sqrt{2\pi\sigma^2}}\exp\left[-\frac{1}{2}\frac{y_i - (\alpha + \beta x_i)}{\sigma^2}\right]\\
-&= \sumn{i} \left[-\frac{1}{2}\frac{y_i - (\alpha + \beta x_i)}{\sigma^2}\right] + 1/2\log 2\pi + \log \sigma\\
-&= n/2\log 2\pi + n \log \sigma -\frac{1}{2\sigma^2}\sumn{i}y_i - (\alpha + \beta x_i) \\
+\mathcal L(y_i|x_i;\theta) &= \prod_{i=1}^n \frac{1}{\sqrt{2\pi\sigma^2}}\exp\left[-\frac{1}{2}\frac{(y_i - (\alpha + \beta x_i))^2}{\sigma^2}\right]\\
+\log \mathcal L(y_i|x_i;\theta) &= \sumn{i} \log \frac{1}{\sqrt{2\pi\sigma^2}}\exp\left[-\frac{1}{2}\frac{(y_i - (\alpha + \beta x_i))^2}{\sigma^2}\right]\\
+&= \sumn{i} \left[-\frac{1}{2}\frac{(y_i - (\alpha + \beta x_i))^2}{\sigma^2}\right] + 1/2\log 2\pi + \log \sigma\\
+&= n/2\log 2\pi + n \log \sigma -\frac{1}{2\sigma^2}\sumn{i}(y_i - (\alpha + \beta x_i))^2\\
+&= n/2\log 2\pi + n \log \sigma -\frac{1}{2\sigma^2}\sumn{i}(\alpha + \beta x_i)^2 - 2 y_i (\alpha + \beta x_i) + y_i^2 \\
+\end{align}$$
+The first order conditions are: 
+$$\begin{align}
+0 &= \frac{d}{d\alpha} \left[n/2\log 2\pi + n \log \sigma - \frac{1}{2\sigma^2}\sumn{i}(\alpha + \beta x_i)^2 - 2 y_i (\alpha + \beta x_i) + y_i^2 \right]\\
+&= \frac{1}{2\sigma^2}\frac{d}{d\alpha} \left[\sumn{i} \alpha^2 + 2\alpha \beta x_i + \beta^2 x_i^2 - \sumn{i} 2 y_i \alpha - 2 y_i \beta x_i\right]\\
+&= \frac{1}{2\sigma^2}\frac{d}{d\alpha} \left[n\alpha^2 + 2\alpha \sumn{i}\beta x_i- \alpha \sumn{i} 2 y_i\right]\\
+\alpha &= \beta\Xbar_n -\Ybar_n\\
+0 &= \frac{d}{d\beta} \left[n/2\log 2\pi + n \log \sigma - \frac{1}{2\sigma^2}\sumn{i}(\alpha + \beta x_i)^2 - 2 y_i (\alpha + \beta x_i) + y_i^2 \right]\\
+&= \frac{1}{2\sigma^2}\frac{d}{d\beta} \left[\sumn{i} \alpha^2 + 2\alpha \beta x_i + \beta^2 x_i^2 - \sumn{i} 2 y_i \alpha - 2 y_i \beta x_i\right]\\
+&=\frac{d}{d\beta} \left[\sumn{i} \alpha^2 + 2\alpha \beta x_i + \beta^2 x_i^2 - \sumn{i} 2 y_i \alpha - 2 y_i \beta x_i\right]\\
 \end{align}$$

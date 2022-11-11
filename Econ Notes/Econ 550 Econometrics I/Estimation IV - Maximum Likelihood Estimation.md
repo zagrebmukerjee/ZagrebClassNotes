@@ -35,7 +35,8 @@ $$0 = \frac{d}{d\theta} \sumn{i} \log f_Y(y_i;\theta)$$
 
 Sometimes we'll be able to solve these FOCs analytically to find a general expression for a maximum likelihood estimator. 
 
-### Example
+```ad-example
+title: Maximum Likelihood Estimation of Linear Regression Model
 
 Suppose I have the linear regression parametric family; that is, $Y_i$ are iid, with 
 
@@ -75,4 +76,6 @@ $$\begin{align}
 \end{align}$$
 
 This can be shown to be biased towards $0$ by a factor of $(n-2)/n$. 
+
+```
 

@@ -122,7 +122,8 @@ If $Y_n \to_d Y$ and $Z_n \to_p r$ then
 $$\begin{pmatrix} Y_n \\ Z_n \end{pmatrix} \to_d \begin{pmatrix} Y \\ r\end{pmatrix}$$
 
 
-## Application: Asymptotic Distribution of Sample Variance
+```ad-example
+title: Application: Asymptotic Distribution of Sample Variance
 
 
 We want to know the asymptotic distribution of the sample variance. A good candidate for appropriate renormalization is $\sqrt{n}(\hat S_{Xn} - \sigma^2)$, since we know that $\hat S_{Xn} \to_p \sigma^2$. Assume $EX^4$ finite.
@@ -155,7 +156,7 @@ where $X_i \to_p 0$ and $Y_i \to_d$ something. SO this all goes to $0$.
 
 Then the asymptotic distribution of $\hat S_{Xn}^2$ is $N(0, \var(X_i - \mu)^2)$. Asymptotically, the distribution of $S_{Xn}^2$ is the same. 
 
-
+```
 
 ## Delta Method
 
@@ -172,3 +173,5 @@ Then:
 $$ \sqrt{n}(g(\hat\theta_n) - g(\theta_0)) \to_d N(0, G(\theta_0)\Sigma G(\theta_0)') $$
 
 #status/section/🚧 
+
+

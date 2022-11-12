@@ -2,8 +2,11 @@
 aliases:
 - "CLT"
 - "Central Limit Theorem"
+- "Continuous Mapping Theorem"
+- "CMT"
+- "Delta Method"
 creation date: Sunday, October 30th 2022, 9:44 am
-date updated: Friday, November 4th 2022, 11:14 am
+date updated: Saturday, November 12th 2022, 1:09 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -173,5 +176,3 @@ Then:
 $$ \sqrt{n}(g(\hat\theta_n) - g(\theta_0)) \to_d N(0, G(\theta_0)\Sigma G(\theta_0)') $$
 
 #status/section/🚧 
-
-

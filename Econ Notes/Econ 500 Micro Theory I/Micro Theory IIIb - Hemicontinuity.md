@@ -20,7 +20,7 @@ tags:
 We are concerned now with correspondences, which can map $x$ to some set of $y$s. Intuitively that corresponds to flat regions on indifference curves. 
 
 ## Upper Hemicontinuous
-Suppose a correspondence $f: X \to Y$. Suppose $f(x) \subseteq$ some compact subset of $Y$. As a heuristic, I say that $f$ is hemicontinuous if the graph of $f$ is a closed set. That means:
+Suppose a correspondence $f: X \to Y$. Suppose $f(x) \subseteq$ some compact subset of $Y$. As a heuristic, I say that $f$ is upper hemicontinuous if the graph of $f$ is a closed set. That means nonheuristically that
 - For any convergent sequence $x_n \in X: x_n \to x$, and 
 - if there is $y_n \in f(x_n)$ that converges to $y$; then
 - $y \in f(x)$. 

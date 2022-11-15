@@ -25,6 +25,8 @@ Players using [[2002.1 Probability|Bayes' Rule]]. I have uncertainty about somet
 I need to conjecture a about what the players do, and then check if that makes sense strategically
 - often I will find a profitable deviation.
 
+Shoot the Messenger Game 
+
 
 ![[Game Theory V - Signaling Games 2022-11-15 15.44.30.excalidraw]]
 
@@ -55,4 +57,17 @@ how to find this sort of thing: conjecture a rule for player 1, then check to se
 First supposition: report truthfully. 
 
 then what is belief: 
-$$P(\omega = \text{good}| s_1 = \text{"good"})  = \frac{(1-\pi)P(s_1 = \text{"good"}|\omega = \text{good})}{(1-\pi)P(s_1 = \text{"good"}|\omega = \text{good}) + \pi P(s_1 = \text{"good"}|\omega = \text{bad})} =  \frac{(1-\pi)P(s_1 = \text{"good"}|\omega = \text{good})}{(1-\pi)P(s_1 = \text{"good"}|\omega = \text{good}) + \pi P(s_1 = \text{"good"}|\omega = \text{bad})} $$
+$$P(\omega = \text{good}| s_1 = \text{"good"})  = \frac{(1-\pi)P(s_1 = \text{"good"}|\omega = \text{good})}{(1-\pi)P(s_1 = \text{"good"}|\omega = \text{good}) + \pi P(s_1 = \text{"good"}|\omega = \text{bad})} =  \frac{(1-\pi)}{1-\pi} =1$$
+similarly $P(\omega = b|s_1 = g) = 0$. 
+
+So then act if $s_1 = g'$ else don't. 
+But does p1 want to play this strategy, given that response? 
+Well, if $c > 1$, then when true state is good, I prefer still to lie and have the bad outcome. but if $c \leq 1$ then I am all set. this is eqm. Are there others?
+
+
+WHat about $s_1 = g'$ always?
+
+Then player 2 has no information from this loser. so beliefs = prior if player 1 says good $\pi$. If not good, denominator is $0$ and so there's no information on beliefs. I have to pick a number. 
+- why does it matter? because some choice of strategy might make player 1 decide strategy not rational. 
+- so what are the choices of this value for which P1 will not change their strategy
+- this is conceptually troubling but we can shelve for now

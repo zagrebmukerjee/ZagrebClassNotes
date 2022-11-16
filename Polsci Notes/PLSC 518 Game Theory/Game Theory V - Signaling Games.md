@@ -71,3 +71,6 @@ Then player 2 has no information from this loser. so beliefs = prior if player 1
 - why does it matter? because some choice of strategy might make player 1 decide strategy not rational. 
 - so what are the choices of this value for which P1 will not change their strategy
 - this is conceptually troubling but we can shelve for now
+
+so player 2 picks some number such that p1 is satisfied. call it a <font color=gree>pooling equilibrium</font>
+

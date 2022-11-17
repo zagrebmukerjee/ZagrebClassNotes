@@ -99,7 +99,7 @@ Unfortunately, we don't have any understanding of whether ML estimators have goo
 We can write down a <font color=gree>criterion function</font> to describe the MLE process (and now this is something to minimize)
 
 $$ Q_n(\theta) = -n\inv \sumn{i} \log f(Y_i, \theta)$$
-Let $W_i = \log f(Yi, \theta)$; then by the WLLN we have $Q_n(\theta) = -\overline W_n \to_p -EW_n = -E_{\theta_0} \log f(Y, \theta) = Q(\theta)$, if $E_{\theta_0} \log f(Y, \theta)$ is finite.  Here $E_{\theta_0}$ means the expectation under the 'true distribution'; ie $f(y, \theta= \
+Let $W_i = \log f(Yi, \theta)$; then by the WLLN we have $Q_n(\theta) = -\overline W_n \to_p -EW_n = -E_{\theta_0} \log f(Y, \theta) = Q(\theta)$, if $E_{\theta_0} \log f(Y, \theta)$ is finite.  Here $E_{\theta_0}$ means the expectation under the 'true distribution'; ie $f(y, \theta|\theta = \theta_0)$, or $f(y, \theta_0)$. 
 
 Consider $Q(\theta_0) - Q(\theta)$ for any $\theta \in \Theta$:
 
@@ -112,4 +112,8 @@ Q(\theta_0) - Q(\theta) &= -n\inv \sumn{i} \log f(Y_i, \theta_0) + n\inv \sumn{i
 &\leq \log \int f(Y_i, \theta) d \mu y\\
 &\leq \log 1\\
 &\leq 0
-\end{
+\end{align}$$
+[[Jensen's inequality]] applies here because $\log$ is concave. Since it's strictly concave, the inequality is strict wherever $\theta \neq \theta_0$. 
+
+So we can see that maximizing the criterion function, in the limit, is maximizing the true criterion function; and since the true value uniquely maximizes the true criterion function, we are approximating the true value with our MLE (some more technical conditions are needed for this?)
+

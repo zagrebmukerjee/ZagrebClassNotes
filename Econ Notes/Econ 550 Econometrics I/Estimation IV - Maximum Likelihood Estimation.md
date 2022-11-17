@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Monday, November 7th 2022, 12:41 pm
-date updated: Thursday, November 17th 2022, 1:25 pm
+date updated: Thursday, November 17th 2022, 1:30 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -126,6 +126,8 @@ Reiterate the log-likelihood, a random function of $\theta$:
 $$ \log \mathcal L(\theta, y) = \sumn{i} \log f(y_i, \theta)$$
 Let $\hat \theta_n$ be the maximizing $\theta$. As $n \to \infty$, $\hat\theta_n$ is in the interior of $\Theta$ with probability 1 (since it's getting very close to $\theta_0$ per consistency above). So I can reliably say the FOCs for likelihood maximization hold:
 $$ 0 =n\inv \sumn{i}\frac{\partial }{\partial \theta}\log f(y_i, \thetahat_n)$$
+
+Sometimes the RHS is called a <font color=gree>score function</font>.
 Now we can use the [[Mean Value Theorem]] on $f'$ to expand:
 
 $$\begin{align}
@@ -134,4 +136,14 @@ $$\begin{align}
 &= n\inv \sumn{i} \frac{\partial }{\partial \theta}\log f(y_i, \theta_0) + \left[n\inv \sumn{i} \frac{\partial^2 }{\partial \theta \partial \theta'}\log f(y_i, \tilde \theta)\right](\thetahat - \theta_0) 
 \end{align}$$
 
-where $\tilde \theta$ is a convex combination of $\thetahat, \theta_0$. Since it is, we can say that $||\tilde \theta - \theta_0|| \leq ||\hat \theta - \theta_0||$. But by WLLN we know that $||\thetahat - \theta_0||\to_p 0$> 
+where $\tilde \theta$ is a convex combination of $\thetahat, \theta_0$. Since it is, we can say that $||\tilde \theta - \theta_0|| \leq ||\hat \theta - \theta_0||$. But by WLLN we know that $||\thetahat - \theta_0||\to_p 0$. 
+
+We can rearrange to get a familiar form
+
+$$\begin{align}
+ \left[n\inv \sumn{i} \frac{\partial^2 }{\partial \theta \partial \theta'}\log f(y_i, \tilde \theta)\right](\thetahat - \theta_0) &= -n\inv \sumn{i} \frac{\partial }{\partial \theta}\log f(y_i, \theta_0)\\
+ (\thetahat - \theta_0) &= -\left[n\inv \sumn{i} \frac{\partial^2 }{\partial \theta \partial \theta'}\log f(y_i, \tilde \theta)\right]\inv n\inv \sumn{i} \frac{\partial }{\partial \theta}\log f(y_i, \theta_0)\\
+ \sqrt{n}(\thetahat - \theta_0) &= -\left[n\inv \sumn{i} \frac{\partial^2 }{\partial \theta \partial \theta'}\log f(y_i, \tilde \theta)\right]\inv \sqrt{n}\inv \sumn{i} \frac{\partial }{\partial \theta}\log f(y_i, \theta_0)\\
+\end{align}$$
+From this point it can be shown using the regularity conditions and the WLLN that  <font color=#F7B801>how?</font>
+$$ n\inv \sumn{i} \frac{\partial^2 }{\partial \theta \partial \theta'}\log f(y_i, \tilde \theta) \to_p E_{\theta_0}\log f(y_i, \tilde \theta)$$

@@ -79,3 +79,8 @@ This can be shown to be biased towards $0$ by a factor of $(n-2)/n$.
 
 ```
 
+
+
+## Applications
+
+The ML method is pretty broadly applicable to families of parametric mode

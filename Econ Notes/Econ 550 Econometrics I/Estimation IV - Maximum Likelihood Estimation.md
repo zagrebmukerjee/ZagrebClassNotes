@@ -117,3 +117,12 @@ Q(\theta_0) - Q(\theta) &= -n\inv \sumn{i} \log f(Y_i, \theta_0) + n\inv \sumn{i
 
 So we can see that maximizing the criterion function, in the limit, is maximizing the true criterion function; and since the true value uniquely maximizes the true criterion function, we are approximating the true value with our MLE (some more technical conditions are needed for this?)
 
+### Normality
+
+Suppose $\theta \in \text{int}(\Theta)$ and $f$ twice continuously differentiable wrt $\theta$. Assume $Y_i$ iid with $f(y, \theta)$. 
+
+Reiterate the log-likelihood, a random function of $\theta$:
+
+$$ \log \mathcal L(\theta, y) = \sumn{i} \log f(y_i, \theta)$$
+Let $\hat \theta_n$ be the maximizing $\theta$. As $n \to \infty$, $\hat\theta_n$ is in the interior of $\Theta$ with probability 1 (since it's getting very close to $\theta_0$ per consistency above). So I can reliably say the FOCs for likelihood maximization hold:
+$$ 0 =n\inv \sumn{i}\frac{\partial f}{\partial \theta}(y_i, \thetahat_n)$$

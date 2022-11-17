@@ -126,3 +126,6 @@ Reiterate the log-likelihood, a random function of $\theta$:
 $$ \log \mathcal L(\theta, y) = \sumn{i} \log f(y_i, \theta)$$
 Let $\hat \theta_n$ be the maximizing $\theta$. As $n \to \infty$, $\hat\theta_n$ is in the interior of $\Theta$ with probability 1 (since it's getting very close to $\theta_0$ per consistency above). So I can reliably say the FOCs for likelihood maximization hold:
 $$ 0 =n\inv \sumn{i}\frac{\partial f}{\partial \theta}(y_i, \thetahat_n)$$
+#### Mean Value Expansion
+
+Suppose I know that $f

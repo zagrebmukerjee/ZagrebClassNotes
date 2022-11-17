@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Monday, November 7th 2022, 12:41 pm
-date updated: Thursday, November 17th 2022, 12:08 pm
+date updated: Thursday, November 17th 2022, 1:25 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -99,7 +99,7 @@ Unfortunately, we don't have any understanding of whether ML estimators have goo
 We can write down a <font color=gree>criterion function</font> to describe the MLE process (and now this is something to minimize)
 
 $$ Q_n(\theta) = -n\inv \sumn{i} \log f(Y_i, \theta)$$
-Let $W_i = \log f(Yi, \theta)$; then by the WLLN we have $Q_n(\theta) = -\overline W_n \to_p -EW_n = -E_{\theta_0} \log f(Y, \theta) = Q(\theta)$, if $E_{\theta_0} \log f(Y, \theta)$ is finite.  Here $E_{\theta_0}$ means the expectation under the 'true distribution'; ie $f(y, \theta|\theta = \theta_0)$, or $f(y, \theta_0)$. 
+Let $W_i = \log f(Yi, \theta)$; then by the WLLN we have $Q_n(\theta) = -\overline W_n \to_p -EW_n = -E_{\theta_0} \log f(Y, \theta) = Q(\theta)$, if $E_{\theta_0} \log f(Y, \theta)$ is finite. Here $E_{\theta_0}$ means the expectation under the 'true distribution'; ie $f(y, \theta|\theta = \theta_0)$, or $f(y, \theta_0)$. 
 
 Consider $Q(\theta_0) - Q(\theta)$ for any $\theta \in \Theta$:
 
@@ -125,7 +125,13 @@ Reiterate the log-likelihood, a random function of $\theta$:
 
 $$ \log \mathcal L(\theta, y) = \sumn{i} \log f(y_i, \theta)$$
 Let $\hat \theta_n$ be the maximizing $\theta$. As $n \to \infty$, $\hat\theta_n$ is in the interior of $\Theta$ with probability 1 (since it's getting very close to $\theta_0$ per consistency above). So I can reliably say the FOCs for likelihood maximization hold:
-$$ 0 =n\inv \sumn{i}\frac{\partial f}{\partial \theta}(y_i, \thetahat_n)$$
-#### Mean Value Expansion
+$$ 0 =n\inv \sumn{i}\frac{\partial }{\partial \theta}\log f(y_i, \thetahat_n)$$
+Now we can use the [[Mean Value Theorem]] on $f'$ to expand:
 
-Suppose I know that $f
+$$\begin{align}
+\forall i; \;0 &=\frac{\partial }{\partial \theta}\log f(y_i, \thetahat_n)\\
+&=\frac{\partial }{\partial \theta}\log f(y_i, \theta_0) + \frac{\partial^2 }{\partial \theta \partial \theta'}\log f(y_i, \tilde \theta)(\thetahat - \theta_0) \\
+&= n\inv \sumn{i} \frac{\partial }{\partial \theta}\log f(y_i, \theta_0) + \left[n\inv \sumn{i} \frac{\partial^2 }{\partial \theta \partial \theta'}\log f(y_i, \tilde \theta)\right](\thetahat - \theta_0) 
+\end{align}$$
+
+where $\tilde \theta$ is a convex combination of $\thetahat, \theta_0$. Since it is, we can say that $||\tilde \theta - \theta_0|| \leq ||\hat \theta - \theta_0||$. But by WLLN we know that $||\thetahat - \theta_0||\to_p 0$> 

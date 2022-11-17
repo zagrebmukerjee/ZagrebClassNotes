@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Monday, November 7th 2022, 12:41 pm
-date updated: Friday, November 11th 2022, 12:38 pm
+date updated: Thursday, November 17th 2022, 12:08 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -81,6 +81,35 @@ This can be shown to be biased towards $0$ by a factor of $(n-2)/n$.
 
 
 
-## Applications
+## Estimator Properties
 
-The ML method is pretty broadly applicable to families of parametric mode
+The ML method is pretty broadly applicable to families of parametric models, and allows for analytic or numerical solutions in a number of cases. 
+
+Under certain broad conditions, the MLE has desirable asymptotics: 
+1) Consistency
+2) Asymp. Normality
+3) Asymptotic efficiency - discussed later. 
+
+$$ MLE(g(\theta)) = g(MLE(\theta))$$
+Unfortunately, we don't have any understanding of whether ML estimators have good finite sample properties. Also there are several parametric families for which the ML is not so good, and some for which the ML is not defined. 
+
+
+### Consistency
+
+We can write down a <font color=gree>criterion function</font> to describe the MLE process (and now this is something to minimize)
+
+$$ Q_n(\theta) = -n\inv \sumn{i} \log f(Y_i, \theta)$$
+Let $W_i = \log f(Yi, \theta)$; then by the WLLN we have $Q_n(\theta) = -\overline W_n \to_p -EW_n = -E_{\theta_0} \log f(Y, \theta) = Q(\theta)$, if $E_{\theta_0} \log f(Y, \theta)$ is finite.  Here $E_{\theta_0}$ means the expectation under the 'true distribution'; ie $f(y, \theta= \
+
+Consider $Q(\theta_0) - Q(\theta)$ for any $\theta \in \Theta$:
+
+$$\begin{align}
+Q(\theta_0) - Q(\theta) &= -n\inv \sumn{i} \log f(Y_i, \theta_0) + n\inv \sumn{i} \log f(Y_i, \theta)\\
+&= -E_{\theta_0}\log f(Y_i, \theta_0) - E_{\theta_0}\log f(Y_i, \theta)\\
+&= E_{\theta_0}\log f(Y_i, \theta)/ f(Y_i, \theta_0)\\
+&\leq \log E_{\theta_0} f(Y_i, \theta)/ f(Y_i, \theta_0) \text{ by Jensen}\\
+&\leq \log \int \left[f(Y_i, \theta)/ f(Y_i, \theta_0)\right] f(y, \theta_0) d \mu y\\
+&\leq \log \int f(Y_i, \theta) d \mu y\\
+&\leq \log 1\\
+&\leq 0
+\end{

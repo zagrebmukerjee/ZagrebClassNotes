@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Monday, November 7th 2022, 12:41 pm
-date updated: Friday, November 18th 2022, 11:30 am
+date updated: Friday, November 18th 2022, 2:03 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -153,4 +153,34 @@ $$ n\inv \sumn{i} \frac{\partial^2 }{\partial \theta \partial \theta'}\log f(y_i
 
 $$ 0 =n\inv \sumn{i}\frac{\partial }{\partial \theta}\log f(y_i, \thetahat_n)$$
 
-Sometimes the RHS is called a <font color=gree>score function</font>.
+Sometimes the RHS is called a <font color=gree>score function</font> $U(\theta)$ or $U_n$. The MLE is the solution to $U(\theta) = 0$. 
+
+First, start with the identity 
+
+$$\begin{align}
+\int f(y, \theta) dy &= 1\\
+\int \frac{\partial}{\partial \theta} f(y, \theta) dy &= 0\\
+\int \frac{\partial^2}{\partial \theta \partial \theta'} f(y, \theta) dy &= 0\\
+\end{align}$$
+
+now, differentiate the score: 
+$$\begin{align}
+U(\theta) &= n\inv \sumn{i}\frac{\partial }{\partial \theta}\log f(y_i, \thetahat_n)\\
+&= n\inv \sumn{i}\frac{f(y_i, \thetahat_n)'}{f(y_i, \thetahat_n)}\\
+U'(\theta) &= n\inv \sumn{i}\frac{\partial^2 }{\partial \theta\partial\theta'}\log f(y_i, \thetahat_n)\\
+&= n\inv \sumn{i}\frac{\partial }{\partial \theta}f(y_i, \thetahat_n)'(f(y_i, \thetahat_n)\inv)\\
+&= n\inv \sumn{i}\frac{f''(y_i, \thetahat_n)}{f(y_i, \thetahat_n)}- \frac{f'(y_i, \thetahat_n)}{f(y_i, \thetahat_n)^2} \\
+\end{align}$$
+
+Then: 
+$$\begin{align}
+E(U(\theta)) &= \int f(y, \theta) U(\theta)dy\\
+&= \int f(y, \theta) \frac{f(y_i, \thetahat_n)'}{f(y_i, \thetahat_n)} dy\\
+E(U(\theta)) &= \int f'(y, \theta)dy\\
+&= 0
+\end{align}$$
+and 
+$$\begin{align}
+E\left(\frac{\partial^2}{\partial \theta \partial \theta'} f(y, \theta) dy)\right) &= 
+
+\end{align}$$

@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Monday, November 7th 2022, 12:41 pm
-date updated: Thursday, November 17th 2022, 1:30 pm
+date updated: Friday, November 18th 2022, 11:30 am
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -117,7 +117,7 @@ Q(\theta_0) - Q(\theta) &= -n\inv \sumn{i} \log f(Y_i, \theta_0) + n\inv \sumn{i
 
 So we can see that maximizing the criterion function, in the limit, is maximizing the true criterion function; and since the true value uniquely maximizes the true criterion function, we are approximating the true value with our MLE (some more technical conditions are needed for this?)
 
-### Normality
+### Asymptotic Normality
 
 Suppose $\theta \in \text{int}(\Theta)$ and $f$ twice continuously differentiable wrt $\theta$. Assume $Y_i$ iid with $f(y, \theta)$. 
 
@@ -127,7 +127,6 @@ $$ \log \mathcal L(\theta, y) = \sumn{i} \log f(y_i, \theta)$$
 Let $\hat \theta_n$ be the maximizing $\theta$. As $n \to \infty$, $\hat\theta_n$ is in the interior of $\Theta$ with probability 1 (since it's getting very close to $\theta_0$ per consistency above). So I can reliably say the FOCs for likelihood maximization hold:
 $$ 0 =n\inv \sumn{i}\frac{\partial }{\partial \theta}\log f(y_i, \thetahat_n)$$
 
-Sometimes the RHS is called a <font color=gree>score function</font>.
 Now we can use the [[Mean Value Theorem]] on $f'$ to expand:
 
 $$\begin{align}
@@ -145,5 +144,13 @@ $$\begin{align}
  (\thetahat - \theta_0) &= -\left[n\inv \sumn{i} \frac{\partial^2 }{\partial \theta \partial \theta'}\log f(y_i, \tilde \theta)\right]\inv n\inv \sumn{i} \frac{\partial }{\partial \theta}\log f(y_i, \theta_0)\\
  \sqrt{n}(\thetahat - \theta_0) &= -\left[n\inv \sumn{i} \frac{\partial^2 }{\partial \theta \partial \theta'}\log f(y_i, \tilde \theta)\right]\inv \sqrt{n}\inv \sumn{i} \frac{\partial }{\partial \theta}\log f(y_i, \theta_0)\\
 \end{align}$$
-From this point it can be shown using the regularity conditions and the WLLN that  <font color=#F7B801>how?</font>
+From this point it can be shown using the regularity conditions and the WLLN that <font color=#F7B801>how?</font>
 $$ n\inv \sumn{i} \frac{\partial^2 }{\partial \theta \partial \theta'}\log f(y_i, \tilde \theta) \to_p E_{\theta_0}\log f(y_i, \tilde \theta)$$
+
+
+### Score Function-Based Proof of Asymptotic Normality
+
+
+$$ 0 =n\inv \sumn{i}\frac{\partial }{\partial \theta}\log f(y_i, \thetahat_n)$$
+
+Sometimes the RHS is called a <font color=gree>score function</font>.

@@ -33,4 +33,13 @@ But if I say that eg. $E[x^4] = 3\sigma^4$, then this becomes troublesome, with 
 
 ### Motivation
 
-It's less param
+- It's less parametric. Don't have to choose a family of distributions; sufficient to establish moment conditions. 
+- Robust to distribution assumptions eg. heteroskedasticity
+- deals with nonlinearity 
+- asymptotic consistency
+
+
+## Method
+
+
+Suppose that $X \sim N(\mu, \sigma^2)$. Then we have two moment conditions on the true $X$: $E[X] = \mu$ and $\var(X)

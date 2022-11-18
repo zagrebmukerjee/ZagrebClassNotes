@@ -42,4 +42,4 @@ But if I say that eg. $E[x^4] = 3\sigma^4$, then this becomes troublesome, with 
 ## Method
 
 
-Suppose that $X \sim N(\mu, \sigma^2)$. Then we have two moment conditions on the true $X$: $E[X] = \mu$ and $\var(X)
+Suppose that $X \sim N(\mu, \sigma^2)$. Then we have two moment conditions on the true $X$: $E[X] = \mu$ and $\var(X) = \sigma^2$. Then we can make sample analogs, $\Xbar_n$ and $S_{Xn}$

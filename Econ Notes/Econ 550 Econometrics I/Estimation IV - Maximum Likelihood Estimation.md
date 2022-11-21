@@ -127,7 +127,11 @@ $$ \log \mathcal L(\theta, y) = \sumn{i} \log f(y_i, \theta)$$
 Let $\hat \theta_n$ be the maximizing $\theta$. As $n \to \infty$, $\hat\theta_n$ is in the interior of $\Theta$ with probability 1 (since it's getting very close to $\theta_0$ per consistency above). So I can reliably say the FOCs for likelihood maximization hold:
 $$ 0 =n\inv \sumn{i}\frac{\partial }{\partial \theta}\log f(y_i, \thetahat_n)$$
 
-Sometimes the RHS is called a <font color=gree>score function</font>.
+Sometimes the RHS is called a <font color=gree>score function</font>. 
+
+### Andrews Derivation
+
+
 Now we can use the [[Mean Value Theorem]] on $f'$ to expand:
 
 $$\begin{align}
@@ -147,3 +151,11 @@ $$\begin{align}
 \end{align}$$
 From this point it can be shown using the regularity conditions and the WLLN that  <font color=#F7B801>how?</font>
 $$ n\inv \sumn{i} \frac{\partial^2 }{\partial \theta \partial \theta'}\log f(y_i, \tilde \theta) \to_p E_{\theta_0}\log f(y_i, \tilde \theta)$$
+
+### Alternative Derivation
+
+$$ 0 =n\inv \sumn{i}\frac{\partial }{\partial \theta}\log f(y_i, \thetahat_n)$$
+
+Sometimes the RHS is called a <font color=gree>score function</font> $U(\theta)$ or $U_n(\theta)$. The variance $\var(\mathcal L_n'(\theta))$ is called an <font color=gree>information matrix</font> or <font color=gree>Fisher information matrix.</font>
+
+We know that $\int f_\theta(x) dx = 1$; so, differentiating both sides, we can say that $\int f'(\theta)

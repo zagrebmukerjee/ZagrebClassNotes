@@ -69,4 +69,5 @@ Now, suppose preferences are strongly monotone.  Then:
 2) $z(p)$ is homogeneous of deg 0. 
 3) $pz(p) = 0$ for any $p$ (Walras' Law)
 4) For any $p$, there is an $s > 0$ such that $z_\l(p) > -s$ for all $\l$ 
+	1) Since demand
 5) 

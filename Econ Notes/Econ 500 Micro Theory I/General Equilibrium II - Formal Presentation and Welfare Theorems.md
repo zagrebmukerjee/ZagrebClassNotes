@@ -3,18 +3,20 @@ aliases:
 - "Pareto Optimality"
 - "Pareto Criterion"
 - "First Welfare Theorem"
+- "Second Welfare Theorem"
 creation date: Sunday, November 6th 2022, 10:46 am
-date updated: Sunday, November 6th 2022, 1:45 pm
+date updated: Saturday, November 26th 2022, 3:37 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags: 
-- '#types/classes'
+- '#types/classes/econ'
+- '#topics/econ'
 - '#status/🚧'
 ---
 
-# [[General Equilibrium II - Formal Presentation]]
+# [[General Equilibrium II - Formal Presentation and Welfare Theorems]]
 <span style = "font-size:120%"><i >Zagreb Mukerjee </i></span>
 
 [[Econ 500 Micro Theory Index]]
@@ -43,9 +45,12 @@ An allocation $x,y$ is Pareto-optimal if
 
 It's worth noting that this is a really weak condition. $x_1 = \bar \omega$ is PO; someone has all the stuff. 
 
+Now we can introduce a notion of income and ownership. 
+
 ### Walrasian Equilibrium
 
-Now we can introduce a notion of income and ownership. 
+Also called 'market', 'competitive', 'price-taking'.
+
 - Individuals have endowments $\omega_i$ such that $\sum \omega_i = \bar\omega$. 
 - Firms have ownerships $\theta_{ij}$ : $\sum_j \theta_{ij} = 1$. 
 Suppose some prices $p \in \R^L$. Then an individual's income is $w_i = p \omega_i + \sum_j \theta_{ij}py_j$. 
@@ -53,6 +58,7 @@ Suppose some prices $p \in \R^L$. Then an individual's income is $w_i = p \omega
 Then we will say that an allocation $x^*, y^* \in A$, and some prices $p$, are a Walrasian Equilibrium if: 
 1) $\forall j\;, \; \forall y_j \in Y_j, py_j^* \geq py_j$. Firms are profit maximizing. 
 2) $\forall _i$ $x_i \in X_i$: $x_i^* \succ_i x_i \implies px_i > w_i$. Consumers are utility maximizing given their budget. 
+3) $\sum_i x_i^* = \sum_i \omega_i + \sum_j y_j^*$: markets clear
 
 ### Price Equilibrium with Transfers
 

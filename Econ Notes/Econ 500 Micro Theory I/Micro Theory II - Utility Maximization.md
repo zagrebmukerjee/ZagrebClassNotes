@@ -1,7 +1,8 @@
 ---
 aliases:
+- "Marshallian demand"
 creation date: Monday, September 12th 2022, 11:53 am
-date updated: Thursday, October 13th 2022, 12:27 pm
+date updated: Saturday, November 26th 2022, 3:49 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -27,7 +28,11 @@ We have a constrained optimization problem:
 
 Can I solve this? Yes - thanks to the Weierstrass Extreme Value Theorem, which tells us that a continuous function from a compact set to a subset of $\R$ has a minimum/maximum. It's nice for us that the budget set is compact. Generally we assume continuity of $U$, also strict increasingness. We don't need to have strict increasingness of utility/strict monotonicity of preferences. We like to have $px = w$ so we can do optimization. 
 
-Write $x(p,w)$ is the maximizer of utility given $p,w$. We can write two conditions on $x$: 
+### Demand Function
+
+Write $x(p,w)$ is the maximizer of utility given $p,w$. This is the <font color=gree>Marshallian Demand</font> or <font color=gree>Walrasian Demand.</font>
+
+We can establish two conditions on $x$: 
 - Homogeneous of degree zero. $x(\lambda p, \lambda w) = \lambda^0 x(p,w)$. (later we will have homogeneity of degree >0). 
 - Walras' law: Every $px_i >0$ means that $px = w$ for all $x \in x(p,w)$. In other words, you spend all your money. We get this easily from monotonicity. 
 

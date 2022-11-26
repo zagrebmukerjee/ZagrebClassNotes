@@ -37,4 +37,7 @@ Restrict the consumption sets $X_i$ to $\R^L_+$ and assume preferences are conti
 
 Then we can rewrite the WE conditions as: 
 1) $y_1^* \leq 0$, $p y_i^* = 0$, and $p \geq 0$. 
-2) $x_i^* = x_i(p, p\omega_i)$ for all $i$ (restating equilibrium consumption as Marshallian demands)
+	1) The first follows from the free disposal firm; the third, from market clearance (which rules out infinite disposal of something); and the second from maximization conditional on $p \geq 0$. 
+2) $x_i^* = x_i(p, p\omega_i)$ for all $i$ (restating equilibrium consumption as [[Micro Theory II - Utility Maximization|Marshallian demand]])
+3) $\sum_i x_i^* - \sum_i \omega_i = y_1^*$
+

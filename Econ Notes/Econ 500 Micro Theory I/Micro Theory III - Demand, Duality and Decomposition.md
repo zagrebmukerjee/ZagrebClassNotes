@@ -1,14 +1,15 @@
 ---
 aliases:
+- "Hicksian demand"
 creation date: Friday, September 23rd 2022, 11:46 am
-date updated: Thursday, October 13th 2022, 12:28 pm
+date updated: Saturday, November 26th 2022, 3:48 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags: 
-- '#types/classes'
-- '#status/🚧'
+- '#types/classes/econ'
+- '#topics/econ/theory/micro'
 ---
 
 # [[Micro Theory III - Demand, Duality and Decomposition]]

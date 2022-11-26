@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Saturday, November 26th 2022, 3:32 pm
-date updated: Saturday, November 26th 2022, 4:29 pm
+date updated: Saturday, November 26th 2022, 5:03 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -64,10 +64,20 @@ Now we can state the above condition more simply: $p \geq 0$ is a WE price vecto
 
 ### Properties of Excess Demand
 
-Now, suppose preferences are strongly monotone.  Then: 
+Now, suppose preferences are strongly monotone. Then: 
 1) $z(p)$ is continuous. 
 2) $z(p)$ is homogeneous of deg 0. 
 3) $pz(p) = 0$ for any $p$ (Walras' Law)
 4) For any $p$, there is an $s > 0$ such that $z_\l(p) > -s$ for all $\l$ 
-	1) Since demand
-5) 
+	1) Since demand is nonnegative, net supply can be no greater than endowment
+5) Suppose $p_n \to p$, $p \neq 0$, but for some $\l$ $p_\l = 0$. Then $\max _{\l \in L} z_\_l(p_n) \to \infty$
+	1) there's some consumer with positive weatlh. Strong monotonicity means that as $p_\l$ to $0$, $z_l(p)$ for that guy goes to infinity.
+
+
+```ad-note
+title:
+Walras' law gives us another equation in this system: that means, if all but one price satisfies our excess demand criterion, the last must also (i.e. we only have to check that all markets but one clear). 
+
+```
+
+This can be extended to a general production case with 'production inclusive excess demand' functions. #status/section/🚧 

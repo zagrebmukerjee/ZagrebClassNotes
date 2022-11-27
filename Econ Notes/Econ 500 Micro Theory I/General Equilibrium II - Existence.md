@@ -106,4 +106,23 @@ $$ \Delta = \bigg\{ p \in \R^L_+: \sum_\l p = 1 \bigg\}$$
 
 So in $\R^2$ this is a line segment with ends $(0,1)$ and $(1,0)$. 
 
-We'll want to separately consider the interior of the simplex 
+We'll want to separately consider the interior of the simplex and its boundary: $z()$ is not well defined when some $p = 0$. <font color=#F7B801>why</font>
+
+### Step 1: Correspondence
+
+First we make a correspondence $f:\Delta \to \Delta$. Proceed in two cases: 
+
+#### Case 1: $p >> 0$
+$$ f(p) = \{ q \in \Delta: z(p) \cdot q \geq z(p) \cdot q' \hspace{10pt} \forall \; q' \in \Delta \}$$
+Given a price $p$, there's some excess demand for all commodities $z(p)$. An element of $q$ is a price which maximizes the cost of $z(p)$ - intuitively, we are looking for equilibrium by making the excess demand more expensive. 
+
+If $z_i(p) < \max_{\l \in L} z_\l(p)$ then $q \in f(p) \implies q_\l = 0$. So set all prices to $0$ except for those commodities most excess-demanded. Recalling that we are in relative prices space, this makes sense (if it were not true we could maximize more by putting more 'weight' on the more-demanded good). 
+
+Walras' law tells us that $pz(p) = 0$ for all $p$. So if $p >>0$ and $z(p) \neq 0$, then we have some commodities $a$ and $b$ such that $z_a(p) > 0$ and $z_b(p) < 0$. Therefore, commodity $b$ has $q \in f(p) \implies q_b = 0$. This means that $q$ is on the boundary of the simplex. 
+
+If $z(p) = 0$, then any price $q$ 'maximizes',, so $f(p) = \Delta$. 
+
+#### Case 2: $\exists \l: p_\l = 0$
+In this case, the correspondence sets to $0$ all nonzero prices. 
+$$f(p) = \{ q \in \Delta: pq = 0\}$$
+In particular, $q \in f(p), p_\l > 0 \implies q_\l = 0$. Because we have some element of $p$ that is $0$, we can still have $q$ in the simplex (in the case where just one $p$ is $0$, $q$ will be a vertex). Also

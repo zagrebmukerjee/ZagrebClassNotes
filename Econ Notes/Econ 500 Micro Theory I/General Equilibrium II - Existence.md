@@ -11,14 +11,13 @@ tags:
 - '#status/🚧'
 ---
 
-# [[General Equilibrium III - Existence and Uniqueness]]
+# [[General Equilibrium II - Existence]]
 <span style = "font-size:120%"><i >Zagreb Mukerjee </i></span>
 
-We want to be able to understand the conditions under which a Walrasian Equilibrium exists and is unique. 
 
-## Existence
+## Motivation and Setup
 
-### Setup
+We want to be able to understand the conditions under which a Walrasian Equilibrium exists. Why? Well, if these conditions are totally crazy, it may tell us that we  don't have that good of an equilibrium concept. 
 
 First, recall the definition: 
 
@@ -81,3 +80,30 @@ Walras' law gives us another equation in this system: that means, if all but one
 ```
 
 This can be extended to a general production case with 'production inclusive excess demand' functions. #status/section/🚧 
+
+## Existence 
+
+The overall approach is to set up for using [[Fixed Point Theorems - Brouwer and Kakutani|Kakutani's Fixed Point Theorem]]. This means
+1) Create a correspondence from prices into itself that - loosely - moves towards W. equilibrium
+2) Demonstrate that a fixed point of this correspondence is an equilibrium
+3) Show that this correspondence meets the Kakutani conditions: convex-valued and [[Micro Theory IIIb - Hemicontinuity|upper hemicontinuous]]. 
+4) Use KFPT to demonstrate equilibrium. 
+
+### Conditions
+
+Need:
+- $z(p)$ defined on all $p \in \R_+^L$
+- meeting conditions above (cont, homogeneous, Walras' Law, bounded below, unbounded with $p \to 0$)
+ie. $\sum_i \omega_i >> 0$, and preferences are continuous, SCX, strongly monotone.
+
+Then for some $p$, $z(p) = 0$, meaning a WE exists.
+
+### Setup
+
+First create a price simplex $\Delta$ denoting all relative levels of prices. For convenience we can make this the unit simplex: 
+
+$$ \Delta = \bigg\{ p \in \R^L_+: \sum_\l p = 1 \bigg\}$$
+
+So in $\R^2$ this is a line segment with ends $(0,1)$ and $(1,0)$. 
+
+We'll want to separately consider the interior of the simplex 

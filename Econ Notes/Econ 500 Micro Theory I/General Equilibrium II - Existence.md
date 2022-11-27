@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Saturday, November 26th 2022, 3:32 pm
-date updated: Sunday, November 27th 2022, 11:19 am
+date updated: Sunday, November 27th 2022, 2:08 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -145,7 +145,7 @@ We know that $q z(p) = q' z(p)$. Let $q'' = \lambda q + (1-\lambda)q'$.
 
 In the boundary $z_\l(p) \notin \max_{i \in L} z_i(p)$ if and only if $q_\l = q'_\l = q''_\l = 0$. The first direction is demonstrated in the book. To see the inverse: we know $z(p) \neq 0$. Let $z_\l(p) \in \max \ldots$; then (as argued in the book also) $z_\l(p) > 0$, Let $r = q$ except with $r_\l>0$, then $rz(p) > qz(p)$, a contradiction. 
 
-But this means that if $q_\l \neq 0$ then $z_\l(p) \in \max \ldots$, and so $q'_\l, q''_\l \neq 0$. And since $q, q', q'' \in \Delta$, that means that the $q$s are in some $\Delta_{L -k}$, a face of the simplex: $\sum_{\l:z_\l(p) \in \max \ldots} q_\l, q'_\l, q''_\; = 1$ . So they are convex combinations of one another. 
+But this means that if $q_\l \neq 0$ then $z_\l(p) \in \max \ldots$, and so $q'_\l, q''_\l \neq 0$. And since $q, q', q'' \in \Delta$, that means that the $q$s are in some $\Delta_{L -k}$, a face of the simplex: $\sum_{\l:z_\l(p) \in \max \ldots} q_\l, q'_\l, q''_\l = 1$ . So they are convex combinations of one another. 
 
 #### UHC
 

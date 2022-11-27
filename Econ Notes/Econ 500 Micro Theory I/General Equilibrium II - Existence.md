@@ -108,7 +108,7 @@ So in $\R^2$ this is a line segment with ends $(0,1)$ and $(1,0)$.
 
 We'll want to separately consider the interior of the simplex and its boundary: $z()$ is not well defined when some $p = 0$. <font color=#F7B801>why</font>
 
-### Step 1: Correspondence
+### Step 1: Correspondence 
 
 First we make a correspondence $f:\Delta \to \Delta$. Proceed in two cases: 
 
@@ -125,4 +125,23 @@ If $z(p) = 0$, then any price $q$ 'maximizes',, so $f(p) = \Delta$.
 #### Case 2: $\exists \l: p_\l = 0$
 In this case, the correspondence sets to $0$ all nonzero prices. 
 $$f(p) = \{ q \in \Delta: pq = 0\}$$
-In particular, $q \in f(p), p_\l > 0 \implies q_\l = 0$. Because we have some element of $p$ that is $0$, we can still have $q$ in the simplex (in the case where just one $p$ is $0$, $q$ will be a vertex). Also
+In particular, $q \in f(p), p_\l > 0 \implies q_\l = 0$. Because we have some element of $p$ that is $0$, we can still have $q$ in the simplex (in the case where just one $p$ is $0$, $q$ will be a vertex). Also there are no boundary fixed points of $f()$. 
+
+
+### Step 2: Fixed Point = Equilibrium
+
+Suppose some interior point $p^* \in \Delta: p^* \in f(p^*)$. Then $z(p^*)\cdot p^* \geq z(p^* )\cdot q$ for any $q \in \Delta$. Recall that if $z(p) > 0$, then $f(p)$ is on the boundary of the simplex, and so it can't be a fixed point. So we must have $z(p) = 0$, and thus an equilibrium. 
+
+
+### Step 3: Kakutani Conditions
+
+#### Convex-Valued
+Let $q, q' \in f(p)$ with $q \neq q'$. If no such pair exists then $f(p)$ is trivially convex.
+
+If we are in the interior and $z(p) = 0$ then $f(p) = \Delta$ and is convex valued because it's a simplex. 
+If $z(p) \neq 0$, or we are on the boundary, then $q, q'$ in the boundary of $\Delta$. 
+We know that $q z(p) = q' z(p)$. Let $q'' = \lambda q + (1-\lambda)q'$. 
+
+In the boundary $z_\l(p) \notin \max_{i \in L} z_i(p)$ if and only if $q_\l = q'_\l = q''_\l = 0$. The first direction is demonstrated in the book. To see the inverse: we know $z(p) \neq 0$. Let $z_\l(p) \in \max \ldots$; then (as argued in the book also) $z_\l(p) > 0$, and so 
+
+#### UHC

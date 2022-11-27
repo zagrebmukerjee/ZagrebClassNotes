@@ -153,4 +153,8 @@ Let $p_n \to p$, $q_n \in f(p_n)$, $q_n \to q$. Need only to demonstrate closed 
 
 If $p$ is in the interior, then pass to a subsequence such that $p_n >>0$. So $q_n >> 0$. Then we can take $q_nz(p_n) > q'z(p_n)$ and say it holds in the limit. So $q \in f(p)$; the graph is closed. 
 
-If $p$ is in the boundary, $p_\l >0$, then for some subsequence $p_{n, \l} > 0$. So $q_{n, \l} = 0$ if $p_n$ is on the boundary. 
+If $p$ is in the boundary, choose $\l$ with $p_\l >0$, then for some subsequence $p_{n, \l} > 0$. So $q_{n, \l} = 0$ if $p_n$ is on the boundary. If not, then we know from the last boundary condition that given sufficiently large $n$, $z_\l(p_n) \notin \max_{i \in L} z_i(p)$. So $q_{n, l} = 0$ by construction. Therefore, $q_\l = 0$, and so $pq = 0$ and $q \in f(p)$. 
+
+### Step 4
+
+Apply Kakutani. Boom. 

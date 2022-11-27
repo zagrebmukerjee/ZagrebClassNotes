@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Saturday, November 26th 2022, 3:32 pm
-date updated: Saturday, November 26th 2022, 5:03 pm
+date updated: Sunday, November 27th 2022, 11:19 am
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -17,7 +17,7 @@ tags:
 
 ## Motivation and Setup
 
-We want to be able to understand the conditions under which a Walrasian Equilibrium exists. Why? Well, if these conditions are totally crazy, it may tell us that we  don't have that good of an equilibrium concept. 
+We want to be able to understand the conditions under which a Walrasian Equilibrium exists. Why? Well, if these conditions are totally crazy, it may tell us that we don't have that good of an equilibrium concept. 
 
 First, recall the definition: 
 
@@ -81,7 +81,7 @@ Walras' law gives us another equation in this system: that means, if all but one
 
 This can be extended to a general production case with 'production inclusive excess demand' functions. #status/section/🚧 
 
-## Existence 
+## Existence
 
 The overall approach is to set up for using [[Fixed Point Theorems - Brouwer and Kakutani|Kakutani's Fixed Point Theorem]]. This means
 1) Create a correspondence from prices into itself that - loosely - moves towards W. equilibrium
@@ -108,7 +108,7 @@ So in $\R^2$ this is a line segment with ends $(0,1)$ and $(1,0)$.
 
 We'll want to separately consider the interior of the simplex and its boundary: $z()$ is not well defined when some $p = 0$. <font color=#F7B801>why</font>
 
-### Step 1: Correspondence 
+### Step 1: Correspondence
 
 First we make a correspondence $f:\Delta \to \Delta$. Proceed in two cases: 
 
@@ -136,12 +136,21 @@ Suppose some interior point $p^* \in \Delta: p^* \in f(p^*)$. Then $z(p^*)\cdot 
 ### Step 3: Kakutani Conditions
 
 #### Convex-Valued
-Let $q, q' \in f(p)$ with $q \neq q'$. If no such pair exists then $f(p)$ is trivially convex.
+Let $\Delta_L$ be the simplex of prices with $L$ vertices. 
 
 If we are in the interior and $z(p) = 0$ then $f(p) = \Delta$ and is convex valued because it's a simplex. 
-If $z(p) \neq 0$, or we are on the boundary, then $q, q'$ in the boundary of $\Delta$. 
+If $z(p) \neq 0$, or we are on the boundary, then let $q, q' \in f(p)$ with $q \neq q'$, and $q, q'$ in the boundary of $\Delta$. 
+If no such pair exists then $f(p)$ is trivially convex. 
 We know that $q z(p) = q' z(p)$. Let $q'' = \lambda q + (1-\lambda)q'$. 
 
-In the boundary $z_\l(p) \notin \max_{i \in L} z_i(p)$ if and only if $q_\l = q'_\l = q''_\l = 0$. The first direction is demonstrated in the book. To see the inverse: we know $z(p) \neq 0$. Let $z_\l(p) \in \max \ldots$; then (as argued in the book also) $z_\l(p) > 0$, and so 
+In the boundary $z_\l(p) \notin \max_{i \in L} z_i(p)$ if and only if $q_\l = q'_\l = q''_\l = 0$. The first direction is demonstrated in the book. To see the inverse: we know $z(p) \neq 0$. Let $z_\l(p) \in \max \ldots$; then (as argued in the book also) $z_\l(p) > 0$, Let $r = q$ except with $r_\l>0$, then $rz(p) > qz(p)$, a contradiction. 
+
+But this means that if $q_\l \neq 0$ then $z_\l(p) \in \max \ldots$, and so $q'_\l, q''_\l \neq 0$. And since $q, q', q'' \in \Delta$, that means that the $q$s are in some $\Delta_{L -k}$, a face of the simplex: $\sum_{\l:z_\l(p) \in \max \ldots} q_\l, q'_\l, q''_\; = 1$ . So they are convex combinations of one another. 
 
 #### UHC
+
+Let $p_n \to p$, $q_n \in f(p_n)$, $q_n \to q$. Need only to demonstrate closed graph since we know compact-valuedness
+
+If $p$ is in the interior, then pass to a subsequence such that $p_n >>0$. So $q_n >> 0$. Then we can take $q_nz(p_n) > q'z(p_n)$ and say it holds in the limit. So $q \in f(p)$; the graph is closed. 
+
+If $p$ is in the boundary, $p_\l >0$, then for some subsequence $p_{n, \l} > 0$. So $q_{n, \l} = 0$ if $p_n$ is on the boundary. 

@@ -27,7 +27,7 @@ $$F_Y = \begin{bmatrix}
 
 
 If $F_Y$ is nonsingular, then there exists some open ball around $x^*$, $B \subseteq X$ and a $C^1$ implicit function $f:B \to Y$ such that
-1) $f(x^*) = x^*$
+1) $f(x^*) = y^*$
 2) $F(x, f(x)) =c$ for all $x \in B$; and 
 3) $\frac{\partial f(x)}{\partial x} = F_Y\inv F_X$ where the RHS is a function evaluated at some $x, f(x)$ in our ball.
 

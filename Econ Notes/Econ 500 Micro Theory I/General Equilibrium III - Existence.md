@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Saturday, November 26th 2022, 3:32 pm
-date updated: Sunday, November 27th 2022, 2:08 pm
+date updated: Monday, November 28th 2022, 2:59 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -11,7 +11,7 @@ tags:
 - '#status/🚧'
 ---
 
-# [[General Equilibrium II - Existence]]
+# [[General Equilibrium III - Existence]]
 <span style = "font-size:120%"><i >Zagreb Mukerjee </i></span>
 
 

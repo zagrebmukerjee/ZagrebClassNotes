@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Sunday, November 27th 2022, 4:45 pm
-date updated: Sunday, November 27th 2022, 5:58 pm
+date updated: Monday, November 28th 2022, 2:59 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -11,8 +11,9 @@ tags:
 - '#status/🚧'
 ---
 
-# [[General Equilibrium III - Uniqueness]]
+# [[General Equilibrium IV - Uniqueness]]
 <span style = "font-size:120%"><i >Zagreb Mukerjee </i></span>
+[[Econ 500 Micro Theory Index]]
 
 It's nice to have just the one WE. But it's not always straightforward to get uniqueness - in fact there are particular conditions required. But we can get local uniqueness. When? Intuitively, we want to have something like $z(p)$ not touching $0$ in more than one place at a time. 
 
@@ -20,7 +21,7 @@ It's nice to have just the one WE. But it's not always straightforward to get un
 
 Let $\hat z(p)$ be the $L-1$ length excess demand vector that suffices to determine equilibrium. Let $D\hat z(p)$ be the $L-1 \times L-1$ vector of derivatives of $\hat z$. An equilibrium price vector $p_1, \ldots, p_{L-1}$ is <font color=gree>regular</font> when $D\hat z(p)$ is invertible. If every equilibrium price vector is regular, we have a regular economy. 
 
-#### Proof 
+#### Proof
 If a price vector is regular, it is locally unique: that is, there is some ball of radius $r > 0$ such that $p \in Br$ and $p \neq p^*$ means $z(p) \neq 0$. 
 Proof: this is a consequence of the Inverse Function Theorem, aka the [[Implicit Function Theorem]]. The nonsingularity of $D \hat z$ means that, for some ball $U$ around $p^*$ and ball $V$ around $z(p^*) = 0$, there is a bijective function $h: V \to U$ such that $u \in U \implies u = h(\hat z(u))$. 
 

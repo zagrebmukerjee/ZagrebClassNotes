@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Tuesday, October 25th 2022, 3:42 pm
-date updated: Tuesday, November 8th 2022, 5:05 pm
+date updated: Thursday, December 1st 2022, 9:57 am
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -253,10 +253,23 @@ $$
 \begin{align}
 1- (n-1)/2(\delta/n) \;&> \; \delta/n\\
 n- (\delta n-\delta)/2 \;&> \; \delta\\
-n\;&> \; \delta/2(1-\delta)\\
+2n- \delta n+\delta \;&> \; 2\delta\\
+2n- \delta n \;&> \; \delta\\
+n\;&> \; \delta/(2-\delta)\\
 \end{align}
 $$
+$$
 
+\begin{align}
+1 - q(\delta/n) \;&> \; \delta/n\\
+n - q\delta \;&> \; \delta\\
+n \;&> \; \delta(q + 1)\\
+n \;&> \; \delta((n-1)/2+ 1)\\
+2n \;&> \; \delta n-\delta+ 2\delta\\
+2n \;&> \; \delta n + \delta\\
+n \;&> \; \delta/(2-\delta)\\
+\end{align}
+$$
 #### Efficiency
 
 This game is efficient: suppose the game ends at some point with $\delta \times p_i$ for everyone: then we can get $p_i$ by agreeing on that to start with, and divvy up the surplus to pay people.
@@ -294,6 +307,3 @@ so your empirical observation depends on which subset of this population are loo
 
 
 Upwards sloping part of the line is gridlock region. Preferences + rules preclude change. 
-
-
-

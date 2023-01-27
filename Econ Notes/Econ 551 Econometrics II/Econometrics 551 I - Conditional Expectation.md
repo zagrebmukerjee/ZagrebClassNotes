@@ -85,4 +85,4 @@ $$P(Y \in B |X) = E[W|X]$$
 The definition of the CEF as a projection makes a variety of properties of CEFs much easier to deal with.
 
 1) Claim: $E(f(X)|X) = f(X)$. Proof: check and verify. Let $Y = f(X)$. Then $E[(Y - f(X))g(X)] = E[(f(X) - f(X))g(X)] = 0$. 
-2) Claim: If $Z \in R$ then $E(Y + Z |X) = E(Y|X) + E(Z|X)$. Proof: $E(Y + Z - E(Y|X) - E(Z|X))g(X) = E(Y - E[Y|X])g(X) + E(Z - E[Z|X])g(X) = 0$; the last step following from the definitions of $E[Y|X]$ and $E[Z|
+2) Claim: If $Z \in R$ then $E(Y + Z |X) = E(Y|X) + E(Z|X)$. Proof: $E(Y + Z - E(Y|X) - E(Z|X))g(X) = E(Y - E[Y|X])g(X) + E(Z - E[Z|X])g(X) = 0$; the last step following from the definitions of $E[Y|X]$ and $E[Z|X]$. 

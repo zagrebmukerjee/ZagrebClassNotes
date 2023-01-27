@@ -15,10 +15,9 @@ tags:
 <span style = "font-size:120%"><i >Zagreb Mukerjee </i></span>
 
 
-## Definitions
 
-Defining conditional expectations in terms of conditional probabilities becomes a bit messy when thinking about continuous RVs, and we risk dividing various things by zero. Instead, we can define it as a projection. 
+Defining conditional expectations in terms of conditional probabilities becomes a bit messy when thinking about continuous RVs, and we risk dividing various things by zero. Instead, we can define it implicitly as a projection. Because when has defining something implicitly not been clarifying?
 
-### Conditions
+### Definition
 
-First introduce 
+First introduce the notion of a <font color=gree>square-integrable</font> function; this means that the square of the absolute value is integrable. This lets us say that if $E[X^2] < \infty$ then $E[f(X)^2] < \infty$. Let $M$ be the space of square-integrable functions. 

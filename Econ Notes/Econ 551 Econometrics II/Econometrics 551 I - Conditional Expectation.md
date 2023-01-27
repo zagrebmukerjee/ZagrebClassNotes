@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Friday, January 27th 2023, 1:06 pm
-date updated: Friday, January 27th 2023, 1:47 pm
+date updated: Friday, January 27th 2023, 2:03 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -41,17 +41,29 @@ $$ E[(Y - m^*(X))g(X)] = 0$$
 
 #### Proof
 
-Uniqueness: Suppose $m$ and $m^*$ satisfy the infimum criterion. Then: 
+Suppose $m$ and $m^*$ are in $M$. Then by Cauchy-Schwarz, $m - m^* \in M$ as well. 
+
+First, expand the MSE expression: 
+
 $$\begin{align}
-0 &= E[(Y - m(X))^2] \\
-&= E[(Y - m^*(X) + m^*(X) - m(X))^2]\\
-&= E[((Y - m^*(X)) - (m(X) - m^*(X)))^2]\\
-&= E[(Y - m^*(X)^2] - E[(m(X) - m^*(X))^2]\\
-&= E[(m(X) - m^*(X))^2]
+E[(Y - m(X))^2] &= E[((Y - m^*(X))-(m(X) - m ^*(X)))^2]\\
+E[(Y - m(X))^2] &= E[(Y - m^*(X))^2]+E[(m(X) - m ^*(X))^2] - 2 E[(Y - m^*(X))(m(X) - m ^*(X))]\\
 \end{align}$$
+**Orthogonality implies Minimum Condition**
 
-Therefore, the two functions are equal with probability $1$. 
+First, suppose that $m^*$ satisfies the orthogonality condition. Then, since $m(X) - m^*(X) \in M$, the condition implies that $E[(Y - m^*(X))(m(X) - m ^*(X))]= 0$. Note also that $E[(m(X) - m ^*(X))^2]$ is always nonnegative, and therefore 
 
-Equivalence: 
+$$E[(Y - m(X))^2] \geq E[(Y - m^*(X))^2]$$
+It follows that if $m, m^*$ both satisfy the minimum condition, then we must have $E[(Y - m^*(X))^2]$ $= E[(Y - m(X))^2]$; so $E[(m(X) - m ^*(X))^2]$ must be zero and therefore $m(X) = m^*(X)$ with probability $1$. 
 
-First direction: 
+**Minimum Condition implies Orthogonality**
+
+Now suppose $m^*$ minimizes. Then fix some $g \in M$ and $\alpha \in R$. Let $h(X) = m^*(X) + \alpha h(X)$. 
+
+$$\begin{align}
+E[(Y - m^*(X))^2] - E[(Y - h(X)^2] &\leq 0\\
+E[Y^2 - 2 m^*(X)Y + m^*(X)^2] - E[Y^2 - 2 h(X)Y + h(X)^2] &\leq 0\\
+E[Y^2 - 2 m^*(X)Y + m^*(X)^2 - Y^2 + 2 (m^*(X) + \alpha g(X))Y - (m^*(X) + \alpha g(X))^2] &\leq 0\\
+E[m2 Y g(X) - (m^*(X)^2 + g(X)^2 + 2m^*(X)g(X) )] &\leq 0\\
+E[2 Y g(X) - (m^*(X)^2 + g(X)^2 + 2m^*(X)g(X) )] &\leq 0\\
+\end{align}$$

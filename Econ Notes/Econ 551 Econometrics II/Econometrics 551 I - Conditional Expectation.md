@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Friday, January 27th 2023, 1:06 pm
-date updated: Friday, January 27th 2023, 2:13 pm
+date updated: Friday, January 27th 2023, 2:44 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -73,4 +73,16 @@ E[g(X)(Y - m^*(X)] &\leq \alpha E[g(X)^2]/2 \\
 But since this holds true for all $\alpha$, it follows that $E[g(X)(Y - m^*(X)]$ must be $0$. 
 
 
+### Extension
 
+This implicit definition of the CEF can be used to define a conditional probability. Let $B$ be some measurable set, and define a random variable $W$ as a function of $Y$, $I_{Y \in B}$. Then 
+
+$$P(Y \in B |X) = E[W|X]$$
+
+
+## Properties of Expectation and CEF
+
+The definition of the CEF as a projection makes a variety of properties of CEFs much easier to deal with.
+
+1) Claim: $E(f(X)|X) = f(X)$. Proof: check and verify. Let $Y = f(X)$. Then $E[(Y - f(X))g(X)] = E[(f(X) - f(X))g(X)] = 0$. 
+2) Claim: If $Z \in R$ then $E(Y + Z |X) = E(Y|X) + E(Z|X)$. Proof: $E(Y + Z - E(Y|X) - E(Z|X))g(X) = E(Y - E[Y|X])g(X) + E(Z - E[Z|X])g(X) = 0$; the last step following from the definitions of $E[Y|X]$ and $E[Z|

@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Friday, January 27th 2023, 1:06 pm
-date updated: Friday, January 27th 2023, 2:03 pm
+date updated: Friday, January 27th 2023, 2:13 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -58,12 +58,19 @@ It follows that if $m, m^*$ both satisfy the minimum condition, then we must hav
 
 **Minimum Condition implies Orthogonality**
 
-Now suppose $m^*$ minimizes. Then fix some $g \in M$ and $\alpha \in R$. Let $h(X) = m^*(X) + \alpha h(X)$. 
+Now suppose $m^*$ minimizes. Then fix some $g \in M$ and $\alpha \in R$ with $\alpha \neq 0$. Let $h(X) = m^*(X) + \alpha h(X)$. 
 
 $$\begin{align}
-E[(Y - m^*(X))^2] - E[(Y - h(X)^2] &\leq 0\\
+E[(Y - m^*(X))^2] - E[(Y - h(X))^2] &\leq 0\\
 E[Y^2 - 2 m^*(X)Y + m^*(X)^2] - E[Y^2 - 2 h(X)Y + h(X)^2] &\leq 0\\
 E[Y^2 - 2 m^*(X)Y + m^*(X)^2 - Y^2 + 2 (m^*(X) + \alpha g(X))Y - (m^*(X) + \alpha g(X))^2] &\leq 0\\
-E[m2 Y g(X) - (m^*(X)^2 + g(X)^2 + 2m^*(X)g(X) )] &\leq 0\\
-E[2 Y g(X) - (m^*(X)^2 + g(X)^2 + 2m^*(X)g(X) )] &\leq 0\\
+E[m^*(X)^2 + 2 Y \alpha g(X) - (m^*(X)^2 + \alpha g(X)^2 + 2\alpha m^*(X)g(X) )] &\leq 0\\
+E[2 Y\alpha g(X) + \alpha^2 g(X)^2 + 2m^*(X)\alpha g(X) )] &\leq 0\\
+2 \alpha E[g(X)(Y - m^*(X)] - \alpha^2 E[g(X)^2] &\leq 0\\
+E[g(X)(Y - m^*(X)] &\leq \alpha E[g(X)^2]/2 \\
 \end{align}$$
+
+But since this holds true for all $\alpha$, it follows that $E[g(X)(Y - m^*(X)]$ must be $0$. 
+
+
+

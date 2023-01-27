@@ -86,3 +86,5 @@ The definition of the CEF as a projection makes a variety of properties of CEFs 
 
 1) Claim: $E(f(X)|X) = f(X)$. Proof: check and verify. Let $Y = f(X)$. Then $E[(Y - f(X))g(X)] = E[(f(X) - f(X))g(X)] = 0$. 
 2) Claim: If $Z \in R$ then $E(Y + Z |X) = E(Y|X) + E(Z|X)$. Proof: $E(Y + Z - E(Y|X) - E(Z|X))g(X) = E(Y - E[Y|X])g(X) + E(Z - E[Z|X])g(X) = 0$; the last step following from the definitions of $E[Y|X]$ and $E[Z|X]$. 
+3) Claim: Law of Iterated Expectations, $E[Y] = E[E[Y|X]]$. Proof: Follows from the orthogonality condition with $g(X) = 1$: $E[(Y - E[Y|X])] = 0 \implies $E[Y] = E[Y|X]$. 
+	- Generalized Law of Iterated Expectations: if $X = (X_1, X_2)$, $E[Y|X_1] = E[E[Y|X_1, X_2]|X_1]$. Proof: $E[Y - E[Y|X_2, X_1]g(X_1)]$

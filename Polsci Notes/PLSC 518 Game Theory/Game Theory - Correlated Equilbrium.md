@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Saturday, February 11th 2023, 1:18 pm
-date updated: Saturday, February 11th 2023, 2:03 pm
+date updated: Saturday, February 11th 2023, 2:14 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -82,12 +82,12 @@ A correlated equilibrium requires a 'correlating structure':
 
 So in the above case, the probabilities are 
 
-| Strategy Profile | Probability | Event           |
-| ---------------- | ----------- | --------------- |
-| $S_1, S_2$       | $1/3$       | $d \in \{3,4\}$ |
-| $S_1, C_2$       | $1/3$       | $d \in \{1,2\}$  |
-| $C_1, S_2$       | $1/3$       |          $d \in \{ 5,6\}$ |
-| $C_1, C_2$       | 0           |               $\emptyset$  |
+| Probability | Event           |
+ | ----------- | --------------- |
+| $1/3$       | $d \in \{3,4\}$ |
+| $1/3$       | $d \in \{1,2\}$  |
+|$1/3$       |          $d \in \{ 5,6\}$ |
+| 0           |               $\emptyset$  |
 
 It's easy to see how we ended up 'better off' than the mixed Nash; this strategy precluded the worst outcome of a crash. 
 
@@ -107,4 +107,44 @@ A correlated equilibrium, then, is a correlating structure and a set of strategi
 $$  \forall i, \forall \sigma_i' \in S_i,  \sum q(\omega)u(\sigma_i(\omega), \sigma_{-i}(\omega)) \geq \sum q(\omega)u(\sigma_i'(\omega), \sigma_{-i}(\omega))$$
 ### Better Definition
 
-Instead of thinking about the correlation st
+Instead of thinking about the correlating structure and whatever device (cards, coins, RNGs, whatever) we can just realize that any such device creates a distribution over possible actions of players/ terminal nodes. Then ditch the die and make the simpler table:
+
+| Messages Sent | Probability | 
+| ---------------- | ----------- | 
+| $S_1, S_2$       | $1/3$       | 
+| $S_1, C_2$       | $1/3$       | 
+| $C_1, S_2$       | $1/3$       | 
+| $C_1, C_2$       | 0           |
+
+We still have a partition: in this case, Player 1 can't distinguish $S_1, S_2$ from $S_1, C_2$, and $C_1, S_2$ from $C_1, C_2$ 
+
+Then there's a correspondingly simpler equilbrium definition: given that you're told $\sigma_i$, and presuming everyone else is doing what they are told, you don't want to deviate: 
+
+$$ \sum p(s_{-i}|s_i) u(s_i, s_{-i}) \geq  \sum p(s_{-i}|s_i) u(s_i', s_{-i}) $$
+
+
+
+## Finding Correlated Equilibria
+
+
+Example: this game 
+
+|   | L   | M   | R   |
+| -------- | --- | --- | --- |
+| U        | 0,0 | 5,4 | 4,5 |
+| M        | 4,5 | 0,0 | 5,4 |
+| D        | 5,4 | 4,5 | 0,0    |
+
+There is no PSNE, but there's an MSNE of mixing equally across every strategy. So then my expected utility is $4/3 + 5/3 + 0 = 3$. 
+
+To find a correlated equilibrium, we need to find probabilities across the $9$ boxes: call them $p_1, \ldots, p_9$. We want these such that every player doesn't want to deviate from what they are told to do, which will give us a linear system of requirements. 
+
+We want player 1 to play $U$ if told $'U'$. So it needs to be better than both $M$ and $D$. Take the first requirement:  
+
+$$\begin{align}
+E[u(U|'U') &\geq E[u(M_1|'U')\\
+P('U') &= p_1 + p_2 + p_3\\ 
+&= P('U'|'L') + P('U'|'M_2') + P('U'|'R')\\
+E[u(U|'U') &= \sum_{S_{-i}} P('s_{-i}'|'U')u_1(U, s_{-i})\\
+&= (0)(PL 
+\end{align}$$

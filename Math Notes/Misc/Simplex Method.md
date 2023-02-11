@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Saturday, February 11th 2023, 2:26 pm
-date updated: Saturday, February 11th 2023, 5:37 pm
+date updated: Saturday, February 11th 2023, 5:39 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -181,13 +181,26 @@ x_1 & x_2 & y_1 & y_2 & w & C\\\hline
 0 & \cellcolor{#8b0000}-10 &0 &20 &1 & 320\\
 \end{array}
 $$
-Subtract 1/2 row 
+Subtract 1/2 row 1 from row 2 and add 10x row 1 to row 3
 
 $$
 \begin{array} {ccccc|c}
 x_1 & x_2 & y_1 & y_2 & w & C\\\hline
 0 & 1 & 2 & -1 & 0 & 8\\
-1 & 0 & -1 & 0 & 0 & 4\\\hline
-0 & -10 &0 &20 &1 & 320\\
+1 & 0 & -1 & 1 & 0 & 4\\\hline
+0 & 0 &20 &20 &1 & 400\\
 \end{array}
 $$
+Then set $y_1 = y_2 = 0$, and we have:
+
+$$
+\begin{array}{ccc|c}
+x_1 & x_2 & w & C\\
+\hline
+0 & 1 & 0 & 8\\
+1 & 0 & 0 & 4\\
+0 & 0 & 1 & 400\\
+\end{array}
+$$
+
+Work $8$ hours at Job 2, $4$ hours at Job $1$, make $400$. 

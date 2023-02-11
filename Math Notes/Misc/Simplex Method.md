@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Saturday, February 11th 2023, 2:26 pm
-date updated: Saturday, February 11th 2023, 5:17 pm
+date updated: Saturday, February 11th 2023, 5:37 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -161,4 +161,33 @@ So: work 8 hours at Job 1 (thus taking all your prep time), leave 4 hours of wor
 
 ### Step 4: Iterate
 
-While 
+Start at the terminal point of the last elimination and then repeat Steps 2 and 3 until no more negative numbers remain in the last row. 
+
+$$
+\begin{array} {ccccc|c}
+x_1 & x_2 & y_1 & y_2 & w & C\\\hline
+0 & \cellcolor{#8b0000}1 & 2 & -1 & 0 & 8\\
+1 & \cellcolor{#8b0000}1/2 & 0 & 1/2 & 0 & 8\\\hline
+0 & \cellcolor{#8b0000}-10 &0 &20 &1 & 320\\
+\end{array}
+$$
+
+
+$$
+\begin{array} {ccccc|c}
+x_1 & x_2 & y_1 & y_2 & w & C\\\hline
+\cellcolor{#020202}0 & \cellcolor{#020202}1 & \cellcolor{#020202}2 & \cellcolor{#020202}-1 &\cellcolor{#020202} 0 &\cellcolor{#020202} 8/1 = 8\\
+1 & \cellcolor{#8b0000}1/2 & 0 & 1/2 & 0 & 8/(1/2) = 16 \\\hline
+0 & \cellcolor{#8b0000}-10 &0 &20 &1 & 320\\
+\end{array}
+$$
+Subtract 1/2 row 
+
+$$
+\begin{array} {ccccc|c}
+x_1 & x_2 & y_1 & y_2 & w & C\\\hline
+0 & 1 & 2 & -1 & 0 & 8\\
+1 & 0 & -1 & 0 & 0 & 4\\\hline
+0 & -10 &0 &20 &1 & 320\\
+\end{array}
+$$

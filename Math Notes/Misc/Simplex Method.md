@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Saturday, February 11th 2023, 2:26 pm
-date updated: Saturday, February 11th 2023, 4:52 pm
+date updated: Saturday, February 11th 2023, 5:07 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -67,13 +67,23 @@ $$
 
 
 By construction, the last four columns are the solutions to some system of equations, a reduced row-echelon form: $y_1 = 12, y_2 = 16, w = 0$, implying $x_1 = x_2 = 0$. 
+$$
+\begin{array}{ccc|c}
+y_1 & y_2 & w & C\\
+\hline
+1 & 0 & 0 & 12\\
+0 & 1 & 0 & 16\\
+0 & 0 & 1 & 0\\
+\end{array}
+$$
 
 This is the <font color=gree>basic solution</font> from this simplex tableau; it corresponds to a corner of the polytope (the worst corner),
 
 
 ### Step 2: Pivot
 
-As a sort of 'fastest route around the corners', choose the highest-coefficient variable in the objective function: in this case, $x_1$. Normalize the $x_1$ entry to $1$ in each row; pick the row with the smallest divisor, and then use row operations to get the other columns to be $0$. 
+As a sort of 'fastest route around the corners', choose the highest-coefficient variable in the objective function: in this case, $x_1$.
+
 
 $$
 \begin{array} {ccccc|c}
@@ -83,11 +93,35 @@ x_1 & x_2 & y_1 & y_2 & w & C\\\hline
 \cellcolor{#8b0000}-40 & -30 &0 &0 &1 & 0
 \end{array}
 $$
+
+Divide the rightmost column constants by the coefficients on the candidate variable, and choose the lowest-valued row. 
+$$
+\begin{array} {ccccc|c}
+x_1 & x_2 & y_1 & y_2 & w & C\\\hline
+1 & 1 & 1 & 0 & 0 & 12/1 = 12\\
+\cellcolor{#020202}2 &\cellcolor{#020202} 1 &\cellcolor{#020202} 0 &\cellcolor{#020202} 1 &\cellcolor{#020202} 0 & \cellcolor{#020202}16/2 = 8\\\hline
+\cellcolor{#8b0000}-40 & -30 &0 &0 &1 & 0
+\end{array}
+
+$$
+
+Then use row operations to 'solve' for the chosen variable (ie. zero out its column). Subtract 1 from 2
+
 $$
 \begin{array} {ccccc|c}
 x_1 & x_2 & y_1 & y_2 & w & C\\\hline
 1 & 1 & 1 & 0 & 0 & 12\\
-1 & 1/2 & 0 & 1/2 & 0 & 8\\\hline
-\cellcolor{#8b0000}-40 & -30 &0 &0 &1 & 0
+1 & 0 & -1 & 1 & 0 & 4\\\hline
+-40 & -30 &0 &0 &1 & 0
+\end{array}
+$$
+Subtract 2 from 1: 
+
+$$
+\begin{array} {ccccc|c}
+x_1 & x_2 & y_1 & y_2 & w & C\\\hline
+0 & 1 & 2 & -1 & 0 & 8\\
+1 & 0 & -1 & 1 & 0 & 4\\\hline
+-40 & -30 &0 &0 &1 & 0
 \end{array}
 $$

@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Saturday, February 11th 2023, 1:18 pm
-date updated: Saturday, February 11th 2023, 2:25 pm
+date updated: Saturday, February 11th 2023, 2:41 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -162,4 +162,7 @@ $$\begin{align}
 5p_7 + 4 p_8 &\geq 5p_8 + r p_9\\
 & \geq 4 p_7 + 5p_9 \\
 p_1 + \ldots + p_9 &= 1\\
+p_1, \ldots p_9 &\geq 0
 \end{align}$$
+
+These equations define a polytope in $\R^8$ of feasible probabilities. Using the payoffs we can project this polytope down into $\R^2$, 'payoff space'. 

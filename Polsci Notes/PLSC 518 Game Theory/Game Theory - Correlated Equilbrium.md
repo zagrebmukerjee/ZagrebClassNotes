@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Saturday, February 11th 2023, 1:18 pm
-date updated: Saturday, February 11th 2023, 1:33 pm
+date updated: Saturday, February 11th 2023, 1:39 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -31,7 +31,7 @@ Consider the game of Chicken.
 | Swerve   | 2,2      | 3,0      |
 | Continue | 0,3      | -1,-1    |
 
-The game has no pure-strategy Nash Equilibrium. A mixed-strategy NE can be found with the indifference conditions: 
+The game has two PSNEs: $S_1C_2$ and $C_1 S_2$. A mixed-strategy NE can be found with the indifference conditions: 
 
 $$\begin{align}
 E[u_1(Swerve_1)] &= p \times u_1(Swerve_1, Swerve_2) + (1-p) \times u_1(Swerve_1, Continue_2)\\
@@ -50,15 +50,46 @@ Now, suppose the players acquire a computer program that rolls a die ($d= 1-6$ w
 
 So if Player 1 hears "Swerve", they know the die says $1,2,3$ or $4$; which means P2 hears $S$ or $C$ with equal probability. Suppose P2 complies: then, 
 $$\begin{align}
-E[u_1(S_1)| \text{"Swerve"}] &= 1/2 \times E[u_1(S_1, S_2)] + 1/2 \times E[u_1(S_1, C_2)]\\
+E[u_1(S_1)| \text{"Swerve"}_1] &= 1/2 \times E[u_1(S_1, S_2)] + 1/2 \times E[u_1(S_1, C_2)]\\
 &= (1/2)(1) + (1/2) (0) = 1/2\\
-E[u_1(C_1)| \text{"Swerve"}] &= 1/2 \times E[u_1(C_1, S_2)] + 1/2 \times E[u_1(C_1, C_2)]\\
+E[u_1(C_1)| \text{"Swerve"}_1] &= 1/2 \times E[u_1(C_1, S_2)] + 1/2 \times E[u_1(C_1, C_2)]\\
 &=  (1/2)(3) -(1/2)(1) = 1/2
 \end{align}$$
-Then Player 1 might as well comply. Similar logic gets us what happens if Player 1 hears "Continue": 
+Then Player 1 might as well comply. Similar logic gets us what happens if Player 1 hears "Continue" : then I know Player 2 has heard "Swerve". 
+$$\begin{align}
+E[u_1(C_1)| \text{"Continue"}_1] &= 3\\ 
+E[u_1(S_1)| \text{"Continue"}_1] &= 2\\
+\end{align}$$
+So I prefer compliance.
+
 
 In this case, the expected utility of Player 1 from this whole scheme is: 
 $$\begin{align}
 E[u_1] &= E[u_1| \text{"Swerve"}_1]P(\text{"Swerve"}_1) + E[u_1| \text{"Continue"}_1] P(\text{"Continue"}_1)\\
-&= E[u_1| \text{"Swerve"}_1]P(\text{"Swerve"}_1) + E[u_1| \text{"Continue"}_1] P(\text{"Continue"}_1)\\
+&= (2/3)(1/2) + (1/3)(3) = 4/3\\
 \end{align}$$
+So we're better off than before. 
+
+
+
+## General Form
+
+A correlated equilibrium is: 
+S
+
+So in the above case, the probabilities are 
+
+| Strategy Profile | Probability |
+| ---------------- | ----------- |
+| $S_1, S_2$       | $1/3$       |
+| $S_1, C_2$       | $1/3$       |
+| $C_1, S_2$       | $1/3$       |
+| $C_1, C_2$       | 0           |
+
+It's easy to see how we ended up 'better off' than the mixed Nash; this strategy precluded the worst outcome of a crash. 
+
+The partitions are: 
+
+| Player | Partition |
+| ------ | --------- |
+| Player 1       |  |

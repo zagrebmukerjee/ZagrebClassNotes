@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Saturday, February 11th 2023, 1:18 pm
-date updated: Saturday, February 11th 2023, 2:14 pm
+date updated: Saturday, February 11th 2023, 2:25 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -144,7 +144,22 @@ We want player 1 to play $U$ if told $'U'$. So it needs to be better than both $
 $$\begin{align}
 E[u(U|'U') &\geq E[u(M_1|'U')\\
 P('U') &= p_1 + p_2 + p_3\\ 
-&= P('U'|'L') + P('U'|'M_2') + P('U'|'R')\\
 E[u(U|'U') &= \sum_{S_{-i}} P('s_{-i}'|'U')u_1(U, s_{-i})\\
-&= (0)(PL 
+&= (0)P(L|'U') + (5)P(M|'U') + (4)P(R|'U')\\
+(0)P(L|'U') + (5)P(M|'U') + (4)P(R|'U') &> (4)P(L|'U') + (0)P(M|'U') + (5)P(R|'U')\\
+\end{align}$$
+
+Observe that the conditioning event's the same on both sides, and recall the definition. 
+
+$$P('L'|'U') = P('U' \cap 'L')/P('U')$$
+
+Now suppose $P('U') > 0$; then we can just replace the conditional probabilities above with unconditional joint probabilities.  Doing the same across all the possible messages for Player 1 gets us the following system: 
+$$\begin{align}
+5p_2 + 4p_3 &\geq 4p_1+ 5 p_3 \\
+&\geq 5p_1 + 4p_2  \\
+4p_4 + 5p_6 &\geq 5p_5 + 4p_6 \\
+&\geq 5p_4 + 4 p_5\\
+5p_7 + 4 p_8 &\geq 5p_8 + r p_9\\
+& \geq 4 p_7 + 5p_9 \\
+p_1 + \ldots + p_9 &= 1\\
 \end{align}$$

@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Saturday, February 11th 2023, 1:18 pm
-date updated: Saturday, February 11th 2023, 1:39 pm
+date updated: Saturday, February 11th 2023, 2:03 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -74,22 +74,37 @@ So we're better off than before.
 
 ## General Form
 
-A correlated equilibrium is: 
-S
+### Complex Definition
+
+A correlated equilibrium requires a 'correlating structure': 
+- Some outcome space $\Omega$;  and a probability measure $p$:
+- A set of partitions of $\Omega$, $P = \{P_i\}$  representing what each player can't distinguish.
 
 So in the above case, the probabilities are 
 
-| Strategy Profile | Probability |
-| ---------------- | ----------- |
-| $S_1, S_2$       | $1/3$       |
-| $S_1, C_2$       | $1/3$       |
-| $C_1, S_2$       | $1/3$       |
-| $C_1, C_2$       | 0           |
+| Strategy Profile | Probability | Event           |
+| ---------------- | ----------- | --------------- |
+| $S_1, S_2$       | $1/3$       | $d \in \{3,4\}$ |
+| $S_1, C_2$       | $1/3$       | $d \in \{1,2\}$  |
+| $C_1, S_2$       | $1/3$       |          $d \in \{ 5,6\}$ |
+| $C_1, C_2$       | 0           |               $\emptyset$  |
 
 It's easy to see how we ended up 'better off' than the mixed Nash; this strategy precluded the worst outcome of a crash. 
 
 The partitions are: 
 
-| Player | Partition |
+| Player | Can Distinguish Between |
 | ------ | --------- |
-| Player 1       |  |
+| Player 1       | $d \in \{1,2, 3,4\}$ or $d \in \{5,6\}$ |
+| Player 2       | $d \in \{1,2\}$ or $d \in \{3, 4,5, 6\}$
+
+This defines some posterior probabilities, $q(\omega)$; for the game of Chicken they're described by the conditioning above. 
+
+Then, a strategy is a function $\sigma_i: \Omega \to A_i$, with the restriction that $\forall \, p \in P_i, \;\omega_1, \omega_2 \in p \implies \sigma_i(\omega_1) = \sigma_i(\omega_2)$; this represents that a player will act based on the message they receive and can't know more than that. 
+
+A correlated equilibrium, then, is a correlating structure and a set of strategies $\sigma_i$ such that, 
+
+$$  \forall i, \forall \sigma_i' \in S_i,  \sum q(\omega)u(\sigma_i(\omega), \sigma_{-i}(\omega)) \geq \sum q(\omega)u(\sigma_i'(\omega), \sigma_{-i}(\omega))$$
+### Better Definition
+
+Instead of thinking about the correlation st

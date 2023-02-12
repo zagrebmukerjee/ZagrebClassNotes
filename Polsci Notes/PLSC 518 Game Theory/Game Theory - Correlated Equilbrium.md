@@ -166,3 +166,193 @@ p_1, \ldots p_9 &\geq 0
 \end{align}$$
 
 These equations define a polytope in $\R^8$ of feasible probabilities. Using the payoffs we can project this polytope down into $\R^2$, 'payoff space', to determine what payoffs the players can obtain through coordination.
+
+
+
+
+To maximize payoffs for Player 1, use the simplex method. First rearrange the inequalities to equalities: 
+\begin{align*}
+- 4p_1 + 5p_2 - p_3 + y_1 &= 0 \\
+ - 5p_1 + p_2 + 4p_3 + y_2 &= 0\\
+4p_4 + p_6 - 5p_5 + y_3 &= 0 \\
+-p_4 + - 4p_5 + 5p_6 + y_4  &=0\\
+5p_7 -  p_8 - 4p_9 + y_5&=0 \\
+p_7 + 4 p_8 - 5p_9 + y_6 &=0\\
+p_1 + \ldots + p_9 &= 1\\
+p_1, \ldots p_9 &\geq 0
+\end{align*}
+
+Then construct a simplex tableau, partially described here: 
+$$
+\begin{array}{ccccc|cccc|c|c}
+     p_1 & p_2 & p_3 & \ldots &p_9 & y_1 & y_2 & \ldots & y_6 & Z & C \\ \hline 
+     -4 & 5 & -1 & \ldots & 0 & 1 & 0 & \ldots & 0 & 0 & 0 \\
+     -5 & 1 & 4 & \ldots & 0 & 0& 1 & \ldots & 0 & 0 & 0 \\
+     && \vdots && \\
+     1 & 1 & 1 & \ldots & 1 & 0 & 0 & \ldots &0 & 0 & 1\\\hline 
+      0 & -5 & -4 & \ldots & 0 & 0 &0 & \ldots & 0 & 1 & 0\\
+\end{array}
+$$
+Starting with the first row and second column as pivots: 
+$$
+\begin{array}{ccccc|cccc|c|c}
+     p_1 & p_2 & p_3 & \ldots &p_9 & y_1 & y_2 & \ldots & y_6 & Z & C \\ \hline 
+     -4/5 & 1 & -1/5 & \ldots & 0 & 1/5 & 0 & \ldots & 0 & 0 & 0 \\
+     -5 & 1 & 4 & \ldots & 0 & 0 & 1 & \ldots & 0 & 0 & 0 \\
+     && \vdots && \\
+     1 & 1 & 1 & \ldots & 1 & 0 & 0 & \ldots &0 & 0 & 1\\\hline 
+      0 & -5 & -4 & \ldots & 0 & 0 &0 & \ldots & 0 & 1 & 0\\
+\end{array}
+$$
+$$
+\begin{array}{ccccc|cccc|c|c}
+     p_1 & p_2 & p_3 & \ldots &p_9 & y_1 & y_2 & \ldots & y_6 & Z & C \\ \hline 
+     -4/5 & 1 & -1/5 & \ldots & 0 & 1/5 & 0 & \ldots & 0 & 0 & 0 \\
+     -21/5 & 0 & 21/5 & \ldots & 0 & -1/5 & 1 & \ldots & 0 & 0 & 0 \\
+     && \vdots && \\
+     9/5 & 0 & 6/5 & \ldots & 1 & 1/5 & -1 & \ldots &0 & 0 & 1\\\hline 
+      -4 & 0 & -5 & \ldots & 0 & 1 &0 & \ldots & 0 & 1 & 0\\
+\end{array}
+$$
+Repeat with third column, second row: 
+
+$$
+\begin{array}{ccccc|cccc|c|c}
+     p_1 & p_2 & p_3 & \ldots &p_9 & y_1 & y_2 & \ldots & y_6 & Z & C \\ \hline 
+     -4/5 & 1 & -1/5 & \ldots & 0 & 1/5 & 0 & \ldots & 0 & 0 & 0 \\
+     -1/5 & 0 & 1/5 & \ldots & 0 & -1/(21*5) & 1/21 & \ldots & 0 & 0 & 0 \\
+     && \vdots && \\
+     9/5 & 0 & 6/5 & \ldots & 1 & 1/5 & -1 & \ldots &0 & 0 & 1\\\hline 
+      -4 & 0 & -5 & \ldots & 0 & 1 &0 & \ldots & 0 & 1 & 0\\
+\end{array}
+$$
+
+$$
+\begin{array}{ccccc|cccc|c|c}
+     p_1 & p_2 & p_3 & \ldots &p_9 & y_1 & y_2 & \ldots & y_6 & Z & C \\ \hline 
+     -1 & 1 & 0 & \ldots & 0 & 4/21 & 1/21 & \ldots & 0 & 0 & 0 \\
+     -1 & 0 & 1 & \ldots & 0 & -1/21 & 5/21 & \ldots & 0 & 0 & 0 \\
+     && \vdots && \\
+     3 & 0 & 0 & \ldots & 1 & 9/35 & -9/7 & \ldots &0 & 0 & 1\\\hline 
+      -9 & 0 & 0 & \ldots & 0 & 16/21 &25/21 & \ldots & 0 & 1 & 0\\
+\end{array}
+$$
+
+First column, seventh row: 
+
+
+$$
+\begin{array}{ccccc|cccc|c|c}
+     p_1 & p_2 & p_3 & \ldots &p_9 & y_1 & y_2 & \ldots & y_6 & Z & C \\ \hline 
+     -1 & 1 & 0 & \ldots & 0 & 4/21 & 1/21 & \ldots & 0 & 0 & 0 \\
+     -1 & 0 & 1 & \ldots & 0 & -1/21 & 5/21 & \ldots & 0 & 0 & 0 \\
+     && \vdots && \\
+     1 & 0 & 0 & \ldots & 1/3 & 3/35 & -3/7 & \ldots &0 & 0 & 1/3\\\hline 
+      -9 & 0 & 0 & \ldots & 0 & 16/21 &25/21 & \ldots & 0 & 1 & 0\\
+\end{array}
+$$
+
+
+$$
+\begin{array}{ccccc|cccc|c|c}
+     p_1 & p_2 & p_3 & \ldots &p_9 & y_1 & y_2 & \ldots & y_6 & Z & C \\ \hline 
+     0 & 1 & 0 & \ldots & 1/3 & 29/(21*5) & -8/21& \ldots & 0 & 0 & 1/3 \\
+     0 & 0 & 1 & \ldots & 1/3 & 4/(21*5)& -4/21 & \ldots & 0 & 0 & 1/3 \\
+     && \vdots && \\
+     1 & 0 & 0 & \ldots & 1/3 & 3/35 & -3/7 & \ldots &0 & 0 & 1/3\\\hline 
+      0 & 0 & 0 & \ldots & 0 & 16/21 &25/21 & \ldots & 0 & 1 & 3\\
+\end{array}
+$$
+To maximize payoffs for Player 1, use the simplex method. First rearrange the inequalities to equalities: 
+\begin{align*}
+- 4p_1 + 5p_2 - p_3 + y_1 &= 0 \\
+ - 5p_1 + p_2 + 4p_3 + y_2 &= 0\\
+4p_4 + p_6 - 5p_5 + y_3 &= 0 \\
+-p_4 + - 4p_5 + 5p_6 + y_4  &=0\\
+5p_7 -  p_8 - 4p_9 + y_5&=0 \\
+p_7 + 4 p_8 - 5p_9 + y_6 &=0\\
+p_1 + \ldots + p_9 &= 1\\
+p_1, \ldots p_9 &\geq 0
+\end{align*}
+
+Then construct a simplex tableau, partially described here: 
+$$
+\begin{array}{ccccc|cccc|c|c}
+     p_1 & p_2 & p_3 & \ldots &p_9 & y_1 & y_2 & \ldots & y_6 & Z & C \\ \hline 
+     -4 & 5 & -1 & \ldots & 0 & 1 & 0 & \ldots & 0 & 0 & 0 \\
+     -5 & 1 & 4 & \ldots & 0 & 0& 1 & \ldots & 0 & 0 & 0 \\
+     && \vdots && \\
+     1 & 1 & 1 & \ldots & 1 & 0 & 0 & \ldots &0 & 0 & 1\\\hline 
+      0 & -5 & -4 & \ldots & 0 & 0 &0 & \ldots & 0 & 1 & 0\\
+\end{array}
+$$
+Starting with the first row and second column as pivots: 
+$$
+\begin{array}{ccccc|cccc|c|c}
+     p_1 & p_2 & p_3 & \ldots &p_9 & y_1 & y_2 & \ldots & y_6 & Z & C \\ \hline 
+     -4/5 & 1 & -1/5 & \ldots & 0 & 1/5 & 0 & \ldots & 0 & 0 & 0 \\
+     -5 & 1 & 4 & \ldots & 0 & 0 & 1 & \ldots & 0 & 0 & 0 \\
+     && \vdots && \\
+     1 & 1 & 1 & \ldots & 1 & 0 & 0 & \ldots &0 & 0 & 1\\\hline 
+      0 & -5 & -4 & \ldots & 0 & 0 &0 & \ldots & 0 & 1 & 0\\
+\end{array}
+$$
+$$
+\begin{array}{ccccc|cccc|c|c}
+     p_1 & p_2 & p_3 & \ldots &p_9 & y_1 & y_2 & \ldots & y_6 & Z & C \\ \hline 
+     -4/5 & 1 & -1/5 & \ldots & 0 & 1/5 & 0 & \ldots & 0 & 0 & 0 \\
+     -21/5 & 0 & 21/5 & \ldots & 0 & -1/5 & 1 & \ldots & 0 & 0 & 0 \\
+     && \vdots && \\
+     9/5 & 0 & 6/5 & \ldots & 1 & 1/5 & -1 & \ldots &0 & 0 & 1\\\hline 
+      -4 & 0 & -5 & \ldots & 0 & 1 &0 & \ldots & 0 & 1 & 0\\
+\end{array}
+$$
+Repeat with third column, second row: 
+
+$$
+\begin{array}{ccccc|cccc|c|c}
+     p_1 & p_2 & p_3 & \ldots &p_9 & y_1 & y_2 & \ldots & y_6 & Z & C \\ \hline 
+     -4/5 & 1 & -1/5 & \ldots & 0 & 1/5 & 0 & \ldots & 0 & 0 & 0 \\
+     -1/5 & 0 & 1/5 & \ldots & 0 & -1/(21*5) & 1/21 & \ldots & 0 & 0 & 0 \\
+     && \vdots && \\
+     9/5 & 0 & 6/5 & \ldots & 1 & 1/5 & -1 & \ldots &0 & 0 & 1\\\hline 
+      -4 & 0 & -5 & \ldots & 0 & 1 &0 & \ldots & 0 & 1 & 0\\
+\end{array}
+$$
+
+$$
+\begin{array}{ccccc|cccc|c|c}
+     p_1 & p_2 & p_3 & \ldots &p_9 & y_1 & y_2 & \ldots & y_6 & Z & C \\ \hline 
+     -1 & 1 & 0 & \ldots & 0 & 4/21 & 1/21 & \ldots & 0 & 0 & 0 \\
+     -1 & 0 & 1 & \ldots & 0 & -1/21 & 5/21 & \ldots & 0 & 0 & 0 \\
+     && \vdots && \\
+     3 & 0 & 0 & \ldots & 1 & 9/35 & -9/7 & \ldots &0 & 0 & 1\\\hline 
+      -9 & 0 & 0 & \ldots & 0 & 16/21 &25/21 & \ldots & 0 & 1 & 0\\
+\end{array}
+$$
+
+First column, seventh row: 
+
+
+$$
+\begin{array}{ccccc|cccc|c|c}
+     p_1 & p_2 & p_3 & \ldots &p_9 & y_1 & y_2 & \ldots & y_6 & Z & C \\ \hline 
+     -1 & 1 & 0 & \ldots & 0 & 4/21 & 1/21 & \ldots & 0 & 0 & 0 \\
+     -1 & 0 & 1 & \ldots & 0 & -1/21 & 5/21 & \ldots & 0 & 0 & 0 \\
+     && \vdots && \\
+     1 & 0 & 0 & \ldots & 1/3 & 3/35 & -3/7 & \ldots &0 & 0 & 1/3\\\hline 
+      -9 & 0 & 0 & \ldots & 0 & 16/21 &25/21 & \ldots & 0 & 1 & 0\\
+\end{array}
+$$
+
+
+$$
+\begin{array}{ccccc|cccc|c|c}
+     p_1 & p_2 & p_3 & \ldots &p_9 & y_1 & y_2 & \ldots & y_6 & Z & C \\ \hline 
+     0 & 1 & 0 & \ldots & 1/3 & 29/(21*5) & -8/21& \ldots & 0 & 0 & 1/3 \\
+     0 & 0 & 1 & \ldots & 1/3 & 4/(21*5)& -4/21 & \ldots & 0 & 0 & 1/3 \\
+     && \vdots && \\
+     1 & 0 & 0 & \ldots & 1/3 & 3/35 & -3/7 & \ldots &0 & 0 & 1/3\\\hline 
+      0 & 0 & 0 & \ldots & 0 & 16/21 &25/21 & \ldots & 0 & 1 & 3\\
+\end{array}
+$$

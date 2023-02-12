@@ -165,4 +165,4 @@ p_1 + \ldots + p_9 &= 1\\
 p_1, \ldots p_9 &\geq 0
 \end{align}$$
 
-These equations define a polytope in $\R^8$ of feasible probabilities. Using the payoffs we can project this polytope down into $\R^2$, 'payoff space', to determine what payoffs the players can obtain through coordination. 
+These equations define a polytope in $\R^8$ of feasible probabilities. Using the payoffs we can project this polytope down into $\R^2$, 'payoff space', to determine what payoffs the players can obtain through coordination.

@@ -1,7 +1,7 @@
 ---
 aliases:
-creation date: 2023-02-15 13:32
-date updated: 2023-02-15 13:32
+creation date: Wednesday, February 15th 2023, 1:31 pm
+date updated: Wednesday, February 15th 2023, 1:48 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -48,6 +48,4 @@ $$e_1^* \in \arg \max_{e \geq 0} R-e_1 + \delta \gamma(e) R$$
 So $(e_1^*, \gamma(e_1^*), e^*_2 = 0)$ is an SPNE. What is the best $\gamma$? 
 There is no loss in some $\underline e$ such that $e > \underline e \to v = 1$. 
 
-Incumbent then can choose $\underline e$ or $0$. Anything else is strictly dominated by one of those two. Depends if $R - \bar e + \delta\gamma(\underline e)R > R$. 
-
-
+Incumbent then can choose $\underline e$ or $0$. Anything else is strictly dominated by one of those two. Depends if $R - \underline e + \delta R > R$. So then $\underline e \leq \delta R$ so $\delta R$ is the most I can get. Effort only depends on $\delta$ and $R$ - pol has outside option of looting and leaving

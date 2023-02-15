@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Wednesday, February 15th 2023, 1:31 pm
-date updated: Wednesday, February 15th 2023, 2:32 pm
+date updated: Wednesday, February 15th 2023, 2:54 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -113,4 +113,9 @@ Voters' priors for incumbent $P(\tau_I = h) = \kappa$, challenger $\gamma$
 Voter wants a match - utility $1$. Politician wants the right policy! same utility as citizens. How nice. But only gets payoff if getting reelected. 
 
 
-Period 2 choice. Everyone wants to follow their signal, no conflict of interest. Payoff for electing challenger vs incumbent 
+Period 2 choice. Everyone wants to follow their signal, no conflict of interest. Payoff for electing challenger : $\gamma + (1-\gamma) q_L$ where $q_L$ is probability idiot type is correct
+$\mu(x_1, m) = P(\tau_I = h|x_1, m)$. 
+
+Because my priors are asymmetric, I update upwards if you do the thing I expect you to do. which incentivizes you to pick $1$ regardless of signal if you are bad type
+
+key that result is realized after voting

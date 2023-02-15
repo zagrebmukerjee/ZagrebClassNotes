@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Wednesday, February 15th 2023, 1:31 pm
-date updated: Wednesday, February 15th 2023, 2:13 pm
+date updated: Wednesday, February 15th 2023, 2:29 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -77,4 +77,12 @@ with
 $$ \bar m = \frac{\sigma^2_\theta}{\sigma^2_\theta + \sigma^2_\epsilon}(\pi_1 - e_1^a) + \frac{\sigma^2_e}{\sigma^2_\theta + \sigma^2_\epsilon}m$$
 with $\lambda = \frac{\sigma^2_\theta}{\sigma^2_\theta + \sigma^2_\epsilon}$
 
+Now we are not indifferent - vote if $\bar m > m$, and so $\pi_1 \geq m + e_1^a$ which is $\underline \pi$. so the more competent politician can put in less effort. Election becomes 'selection' mechanism on competence of candidate. 
 
+Incumbent puts in effort to maximize $R P(\pi_1 \geq \underline \pi | e_1) - c(e_1)$. Can expand condition $P(\theta_I + \epsilon_1 \geq \underline \pi - e_1|e_1)$, recalling I don't know my type. Two indep normals: $\theta_I + \epsilon_1 \sim N(m, \sigma^2_\theta + \sigma^2_\epsilon)$. SO I have something to maximize for poltiician 
+
+maximize for the politician 
+voter is not fooled - $e_1^a = e_1^*$. so some poor incompetent needs to work really hard or gets fired. 
+
+get FOC and solve to get:
+$$ \frac{R}{\sigma^2_\theta + \sigma^2_\epsilon} \Phi(0) = c'(e_1^*)$$

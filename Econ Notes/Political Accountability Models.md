@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Wednesday, February 15th 2023, 1:31 pm
-date updated: Wednesday, February 15th 2023, 1:48 pm
+date updated: Wednesday, February 15th 2023, 2:13 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -49,3 +49,32 @@ So $(e_1^*, \gamma(e_1^*), e^*_2 = 0)$ is an SPNE. What is the best $\gamma$?
 There is no loss in some $\underline e$ such that $e > \underline e \to v = 1$. 
 
 Incumbent then can choose $\underline e$ or $0$. Anything else is strictly dominated by one of those two. Depends if $R - \underline e + \delta R > R$. So then $\underline e \leq \delta R$ so $\delta R$ is the most I can get. Effort only depends on $\delta$ and $R$ - pol has outside option of looting and leaving
+
+
+Critique is that the voter needs to be indifferent between incumbent and challenger to be able to make a credible threat
+
+### Career Concerns
+
+Now there are types of politicians which is private information
+
+Performance is a function of $\theta$ competence, $e$ effort and $\epsilon$ luck: 
+
+$$ \pi_t = \theta_J + e_t + \epsilon_t$$
+Competence $\sim \mathcal N(m, \sigma^2_\theta)$; no player knows $\theta_I, \theta_C$. Luck $\sim \mathcal N(0,\sigma^2)$. 
+Voter utility is $\pi$, politician utility is $R - c(e)$.
+
+Two periods, voter observes $\pi$ and chooses reelection (has observed info about pol type)
+Eqm concept is Perfect Bayesian Equilibrium. Voter has to try and use $\pi_1$ to learn about $\theta_I$. Bayes time: 
+$$ P(\theta_C = \theta_1|\pi_1 = p) = \frac{P(\pi = p | \theta_C = \theta_1)P(\theta_C = \theta_1)}{P(\pi_1 = p)} $$
+So now there is an equilibrium $\underline \pi$ that emerges from the Bayes' rule: and an equilibrium is $e^*, \underline \pi$ such that 
+- $e_1^* \in \arg \max_{e \geq 0} R P(\pi_1 > \underline \pi | e = e_1^*) - c(e_1^*)$
+- $\pi_1 > \underline \pi$ iff incumbent has higher ability than random challenger (ie above-mean type).
+
+
+To solve can have some nice priar $e_1^a$ with posterior then distributed $\theta_I|(\pi_1, e_1 = e_1^a) \sim N(\bar m, \sigma^2_\theta (1-\lambda))$
+with 
+
+$$ \bar m = \frac{\sigma^2_\theta}{\sigma^2_\theta + \sigma^2_\epsilon}(\pi_1 - e_1^a) + \frac{\sigma^2_e}{\sigma^2_\theta + \sigma^2_\epsilon}m$$
+with $\lambda = \frac{\sigma^2_\theta}{\sigma^2_\theta + \sigma^2_\epsilon}$
+
+

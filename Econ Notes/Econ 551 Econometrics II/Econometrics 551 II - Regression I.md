@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Friday, February 17th 2023, 11:12 am
-date updated: Friday, February 17th 2023, 2:21 pm
+date updated: Friday, February 17th 2023, 5:54 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -172,7 +172,9 @@ title: $E[eX] = 0$ vs $E[e|X]=0$
 
 ```
 
-## Measurement Error
+## Problems with Linear Regression
+
+### Measurement Error
 
 One way the BLP and CEF can differ is in measurement error. 
 
@@ -200,7 +202,7 @@ So this requires either $\beta = 0$, or $Evv' = 0$ meaning that $v$ has $0$ vari
 Can show that the linear projection coefficient on $X_j$, a covariate that has measurement error, will be biased towards $0$. 
 
 
-## Interval-Censored Outcomes
+### Interval-Censored Outcomes
 
 [[Manski and Tamer 2002 Inference on Regressions with Interval Data on a Regressor or Outcome|Manski and Tamer 2002]]. If we want to learn about variables of interest in the presence of missing data, we can establish a weaker form of identification (with 'identification' to be defined later) - "Set Identification".
 
@@ -224,4 +226,6 @@ Potential outcomes in the case of a vaccine are very clear: what happens if the 
 
 ```
 
-### Causality and Models
+## Causality and Models
+
+

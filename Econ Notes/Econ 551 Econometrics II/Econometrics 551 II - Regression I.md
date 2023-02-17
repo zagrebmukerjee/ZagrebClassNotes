@@ -158,4 +158,20 @@ The FOC is the same as saying $E[eX] = 0$; in other words, $E[eX] = 0$ implies t
 
 We can differentiate $Y$ with respect to covariates $X$ to get partial or marginal effects. 
 
-We say $X$ is <font color=gree>exogenous</font> if $E[eX]=0$, and $X$ is <font color=gree>endogenous</font> if $E[eX]\neq 0$. 
+We say $X$ is <font color=gree>exogenous</font> if $E[eX]=0$, and $X$ is <font color=gree>endogenous</font> if $E[eX]\neq 0$. Worry a lot about exogeneity, which will make the BLP differ from the CEF. 
+
+
+``` ad-note
+title: $E[eX] = 0$ vs $E[e|X]=0$
+
+- $E[e|X] = 0$, implies that $E[eX] = 0$. The latter is not true. Many counterexamples can be given: a =si
+
+
+
+```
+
+## Measurement Error
+
+One way the BLP and CEF can differ is in measurement error. 
+
+Suppose $Y = (X^*)' + e^*$, and $Ee^*X = 0$. 

@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Friday, February 17th 2023, 11:12 am
-date updated: Friday, February 17th 2023, 12:47 pm
+date updated: Friday, February 17th 2023, 2:06 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -124,7 +124,7 @@ The last term can be killed with the $E[(Y - E(Y|X))g(X)] = 0$ trick again.
 
 Then what we have left is a constant wrt $\theta$, $E(Y - E[Y|X])^2$, and the part that can actually be minimized. So the minimizers (not the minima!) will be the same. 
 
-## Linear Regression 
+## Linear Regression
 
 Model: Let $Y \in \R$, $X \in \R^k$, $\beta \in \R^k$. $X_0 = 1$; $E[X'X]$ has full rank. Assume $EY^2 < \infty$. 
 
@@ -164,7 +164,9 @@ We say $X$ is <font color=gree>exogenous</font> if $E[eX]=0$, and $X$ is <font c
 ``` ad-note
 title: $E[eX] = 0$ vs $E[e|X]=0$
 
-- $E[e|X] = 0$, implies that $E[eX] = 0$. The latter is not true. Many counterexamples can be given: a =si
+- $E[e|X] = 0$, implies that $E[eX] = 0$. The latter is not true. Many counterexamples can be given: a simple one is $\text{supp} (X) = \{0,1\}$, and $e = 1-X$. Then $eX = (1-X)X$ which is $0$ always; but $E[e|X=x] = 1-x \neq 0$. 
+- The latter is a sufficient condition to ensure that $X'\beta$ is the BLP of the CEF.
+- $E[e|X] = 0$ can tell us the much more powerful fact that $m(X)$ is the CEF of $X$, as shown above. 
 
 
 
@@ -174,4 +176,32 @@ title: $E[eX] = 0$ vs $E[e|X]=0$
 
 One way the BLP and CEF can differ is in measurement error. 
 
-Suppose $Y = (X^*)' + e^*$, and $Ee^*X = 0$. 
+Suppose $Y = (X^*)' + e^*$, and $Ee^*X = 0$. But the researcher can't see $X^*$ and $e^*$. They only see $X = X^* + v$ ; we might say that $X^*$ is latent and measured with error. 
+
+Assume $Ev = 0$ and $Evv' < \infty$, with $v \indep Y, X^*$ -called 'classical measurement error'. It follows that $v \indep e^*$. What do I need to say that measurement error doesn't screw up my $\beta$? Suffices to ask when I can get $E[Xe] =0$. 
+
+$$\begin{align}
+Y &= (X^*)' \beta + e^*\\
+&= X'\beta + v'\beta + e^*\\
+&= X'\beta + (e^* - v'\beta)\\
+X\beta + e &= X'\beta + (e^* - v'\beta)\\
+e &= (e^* - v'\beta)\\
+\end{align}$$
+
+$$\begin{align}
+E[Xe] &= E[(X^* + v)(e^* - v'\beta)]\\
+&= E[X^*e^* + ve^* - = X^*v\beta + vv'\beta]\\
+&= E[X^*e^*] + E[ve^*] - E[X^*v\beta] + E[vv'\beta]]\\
+&= - E[X^*v]\beta + E[vv'\beta]]\\
+\end{align}$$
+So this requires either $\beta = 0$, or $Evv' = 0$ meaning that $v$ has $0$ variance; ie $v$ is $0$. 
+
+
+Can show that the linear projection coefficient on $X_j$, a covariate that has measurement error, will be biased towards $0$. 
+
+
+## Interval-Censored Outcomes
+
+Manski and Tamer, 2002. If we want to learn about variables of interest in the presence of missing data, we can establish a weaker form of identification (with 'identification' to be defined later) - '
+
+Suppose $y = X'\beta + 

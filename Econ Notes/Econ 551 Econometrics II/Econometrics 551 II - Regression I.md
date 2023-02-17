@@ -131,7 +131,31 @@ Model: Let $Y \in \R$, $X \in \R^k$, $\beta \in \R^k$. $X_0 = 1$; $E[X'X]$ has f
 $$ Y = X'\beta + e$$
 This is once again a pure statistical idea: best linear approx to a CEF. 
 
-The following are equivalent: 
+Three interpretations of this model. 
 
+### Regression as CEF
 
+Suppose $E[Y|X] = X'\beta$. Then let $e = Y - X'\beta$, so $Y = X'\beta + e$, and $E[e|X]=0$. $E[Y|X] \implies E[e|X]=0$ and vice versa. This is a model of the CEF with $e$ as a deviation from the CEF. 
 
+As a consequence of $E[e|X] = 0$ we have also that $E[eX] = 0$ and $E[e]=0$, both of which can be found with LIE. 
+
+The implication is that $\beta  = \arg min_{b \in \R^k}E[(Y-X'b)^2]$, using the parametric family concept. This is a convex optimization problem, we can solve with the FOC as in [[2002.6 Regression - Matrix Treatment]] to get the unique soln 
+
+$$ \beta = (E[XX'])\inv E[XY]$$ 
+Note here that $X$ and $\beta$ are both $1 \times K$ random vectors! So $X'\beta$ is $1\times 1$, and so is $Y$. We're still operating at the population level. 
+
+### Regression as BLP
+
+Let $Y \in \R$, $X \in \R^k$, $\beta \in \R^k$. $X_0 = 1$; $E[X'X]$ has full rank. Assume $EY^2 < \infty$. 
+
+Define $\beta$ as $\arg min_{b \in \R^k}E[(Y-X'b)^2] = \arg min_{b \in \R^k}E[(E[Y|X]-X'b)^2]$, and define $e = Y - X'\beta$.  So what $\beta$ is telling us is the <font color=gree>best linear predictor</font> (BLP) of the CEF $E[Y|X]$. This is without the model assumption that $Y = X'\beta$. 
+We can also call this the <font color=gree>linear projection</font> of $Y$ onto $X$. 
+
+Same FOC have same solution: 
+$$ \beta = (E[XX'])\inv E[XY]$$
+
+The FOC is the same as saying $E[eX] = 0$; in other words, $E[eX] = 0$ implies that $\beta$ solves the minimization problem. 
+
+We can differentiate $Y$ with respect to covariates $X$ to get partial or marginal effects. 
+
+We say $X$ is <font color=gree>exogenous</font> if $E[eX]=0$, and $X$ is <font color=gree>endogenous</font> if $E[eX]\neq 0$. 

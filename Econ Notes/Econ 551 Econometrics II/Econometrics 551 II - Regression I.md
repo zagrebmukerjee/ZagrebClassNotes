@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Friday, February 17th 2023, 11:12 am
-date updated: Friday, February 17th 2023, 2:06 pm
+date updated: Friday, February 17th 2023, 2:21 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -202,6 +202,26 @@ Can show that the linear projection coefficient on $X_j$, a covariate that has m
 
 ## Interval-Censored Outcomes
 
-Manski and Tamer, 2002. If we want to learn about variables of interest in the presence of missing data, we can establish a weaker form of identification (with 'identification' to be defined later) - '
+[[Manski and Tamer 2002 Inference on Regressions with Interval Data on a Regressor or Outcome|Manski and Tamer 2002]]. If we want to learn about variables of interest in the presence of missing data, we can establish a weaker form of identification (with 'identification' to be defined later) - "Set Identification".
 
-Suppose $y = X'\beta + 
+Suppose $Y = X'\beta + e$ and $E[eX] = 0$. Some observations are missing either in part or in full. If $S$ is an index for completeness of observations, $E[eX|S=1]\neq 0$ if $S$ is not totally random with respect to $X$ and $Y$. 
+
+This can take the form of <font color=gree>censoring</font> or <font color=gree>truncation</font>: 
+- Censoring is when some $X_i$ or $Y_i$ is missing in whole or part
+- Truncation is when whole observations are selected into or out of the data set. 
+
+``` ad-note 
+title: Disciplinary Aside 
+
+The relationship between missing data and inference is complicated and an object of disciplinary conflict. Example: In the early 20th century, women's labor market participation (a common topic of study) was inversely related to education. More educated or higher-status women did not work. Traditional labor economists would say they had higher 'reservation wages', ie. the hurdle a market wage would have to clear to lure them into the market. 
+
+There's a tendency of statisticians to be totally confused by this. What is a reservation wage? Can it ever be clearly observed? This is the foundation of Don Rubin's distinction between potential outcomes and missing data. 
+
+Potential outcomes in the case of a vaccine are very clear: what happens if the vaccine is administered to me? Easy to imagine someone coming up to me and sticking needle in my arm. But what about the potential outcome of my wage if I was black, or female? There's no clean (unbundled) treatment that could change these properties of me; so in some sense it's crazy to talk about the causal effects of race or gender. 
+
+[[✒Holland, Paul W.|Paul Holland]] coined a phrase, "No causation without manipulation". In extremis you could say that even an RCT is applicable only to the environment in which it was applied. 
+
+
+```
+
+### Causality and Models

@@ -2,7 +2,7 @@
 aliases: 
 tags: 
 creation date: Friday, January 27th 2023, 1:06 pm
-date updated: Friday, February 17th 2023, 11:06 am
+date updated: Friday, February 17th 2023, 11:11 am
 ---
  ---
 aliases:
@@ -93,6 +93,6 @@ The definition of the CEF as a projection makes a variety of properties of CEFs 
 1) Claim: $E(Y +Z|X) = E(Y|X) + E(Z|X)$. Proof: guess and check. $E[(E(Y+Z - E(Y|X) - E(Z|X))g(X)]  =$ $E[(Y - E[Y|X])g(X)] + E[(Z - E[Z|X])g(X)] = 0$, using linearity of expectation (the last step is the two conditional expectations of $Y$ and $Z$)
 2) Claim: if $f$ square-integrable: $E[f(X)Y|X] = f(X)E[Y|X]$. Proof: $E[(f(X)Y - f(X)E[Y|X])g(X)]$ $= E[(f(X)(Y - E[Y|X])g(X)]$ $= E((Y - E[Y|X])h(X)) = 0$since $f$ and $g$ being square integrable means that $h = f(x)g(x)$ must be also. 
 3) Claim: $E(f(X)|X) = f(X)$. Proof: guess and verify. Let $Y = f(X)$. Then $E[(Y - f(X))g(X)] = E[(f(X) - f(X))g(X)] = 0$.
-4) Claim: If $P(Y \geq 0) = 1$ then $P(E[Y|X]\geq 0) = 1$. r
+4) Claim: If $P(Y \geq 0) = 1$ then $P(E[Y|X]\geq 0) = 1$. Proof: Suppose $m$ such that $P(m(X) > 0) < 1$; let $B = \{x:m(X) < 0\}$. Then $E[(Y - mX)I\{X \in B\}] = E(YI\{X \in B\}) - mXI\{X \in B\} > 0$  (since $mX$ is negative whenever $I =1$). So $m$ cannot be the CEF. 
 5) Claim: Law of Iterated Expectations, $E[Y] = E[E[Y|X]]$. Proof: Follows from the orthogonality condition with $g(X) = 1$: $E[(Y - E[Y|X])] = 0 \implies$ $E[Y] = E[Y|X]$. 
 	- Generalized Law of Iterated Expectations: if $X = (X_1, X_2)$, $E[Y|X_1] = E[E[Y|X_1, X_2]|X_1]$. Proof: $E[Y - E[Y|X_2, X_1]g(X_1)]$

@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Friday, February 17th 2023, 11:12 am
-date updated: Friday, February 17th 2023, 12:07 pm
+date updated: Friday, February 17th 2023, 12:15 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -74,8 +74,35 @@ This holds for any covariate - the categories don't need special meaning.
 #### Proof
 
 $$\begin{align}
-E[E[Y|X]] &= EY\\
-\var(E(Y|X))&= E\left[(E[Y|X] - E[E[Y|X]])^2\right]\\
-&= E\left[(E[Y|X] - EY)^2\right]\\
+\var(Y) &= E[(Y - EY)^2]\\ 
 &= E\left[((Y - E[Y|X]) + (E[Y|X] - EY))^2\right]\\
+&= E\left[(Y - E[Y|X])^2] + E[(E[Y|X] - EY)^2\right] + 2E[(Y - E[Y|X])(E[Y|X]-EY)] \\
 \end{align}$$
+For the last term, $E[(Y - E[Y|X])(E[Y|X]-Y)]$, that first part is $Y - mX$, and we can interpret $E[Y|X] - Y$ as $g(X)$; so by the orthogonal projection property, this is $0$. 
+
+For the first term,
+$$\begin{align}
+E[(Y - E[Y|X])^2] &= E[(E[Y|X] + e - E[Y|X])^2]\\
+&= E[e^2]\\
+&= \sigma^2
+\end{align}$$
+For the second term: 
+$$\begin{align}
+EY &= E[E[Y|X]] \\
+E[(E[Y|X] - EY)^2] &= E[(E[Y|X] - E[E[Y|X]])^2] \\
+&= \var(E[Y|X])
+\end{align}$$
+
+
+## Parametrics
+
+We'll often say that $m$ is known up to a finite dimensional vector, $m^*(x) \in \{ m(x, \theta): \theta  \in \Theta\}$, with $m()$ known tot he analyst. This is a <font color=gree>parametric</font> approach - $\theta$ are the parameters, and $m$ is a <font color=gree>parametric family</font> of models. 
+
+Linear regression is a particular case of this, where $m$ is linear. 
+
+First assume $\theta_0$ is the true value of $\theta$. Then $m(X, \theta_0) = E(Y|X)$. 
+Since for all $m$, $E(Y - m(X, \theta_0)^2 \leq E(Y - mX)^2$ - by orthogonality - we can say that $E(Y - m(X, \theta_0)^2 \leq E(Y - m(X, \theta))^2$ for all $\theta \in \Theta$. 
+
+Interpret $m(X, \theta_0)$ as the best approximation to the CEF in that family - so, for instance, the linear $m$ is the best linear predictor of the CEF. 
+
+Theorem: 

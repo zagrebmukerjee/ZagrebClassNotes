@@ -34,6 +34,7 @@ There are 3 equivalences:
 2) $E[Y|X] = m(X)$ means that $E[e|X] = 0$: $E(Y|X) = E(m(X) + e|X) = m(X) + E[e|X] = E[Y|X] + E[e|X]$. 
 3) $E[eg(X)] = 0$ for all $g \in M$ means that $m(X)$ is the CEF: $E[(Y - m(X))g(X)]$ $=E[(m(X) - m(X))g(X)] +E[eg(X)]$ $=0$. 
 
+LIE tells us that if $E[e|X] = 0$, then $E[e] = E[E[e|X]] = 0$. 
 
 If we have $Y = m(X) + e$ and $E[e|X] = 0$, with $X$ a random vector, then we can differentiate $m$ to get '<font color=gree>partial effects</font>', $[dm/dX_1\, dm/dX_2]$ etc. 
 We can also find an '<font color=gree>average regression derivative</font>,' $E[\nabla m(X)]$ (ie averaging over prob-weighted values of $X$). 
@@ -44,5 +45,5 @@ We can also find an '<font color=gree>average regression derivative</font>,' $E[
 ### Variance
 
 Define $\sigma^2 = \var (e)$. Finite variance of $Y$ means finite variance of $e$. Alternatively, let $\sigma^2 = \var(Y|X)$; then 
-$$ \var(Y|X) = E[(Y - E[Y|X))^2|X] = E[(m(X) + e - m(X))^2|X] = E[e^2|X] = E[e^2|X] - E[e|X]^2$$
-and since $E[e|X] = 0$, this is $\var(e)$; and $\var Y = \var(E[Y|X] +e)
+$$ \var(Y|X) = E[(Y - E[Y|X))^2|X] = E[(m(X) + e - m(X))^2|X] = E[e^2|X] = E[e^2|X] - E[e|X]^2= \var(e|X)$$
+

@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Friday, February 17th 2023, 11:12 am
-date updated: Friday, February 17th 2023, 12:15 pm
+date updated: Friday, February 17th 2023, 12:47 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -105,4 +105,33 @@ Since for all $m$, $E(Y - m(X, \theta_0)^2 \leq E(Y - mX)^2$ - by orthogonality 
 
 Interpret $m(X, \theta_0)$ as the best approximation to the CEF in that family - so, for instance, the linear $m$ is the best linear predictor of the CEF. 
 
-Theorem: 
+### Theorem:
+
+Let $Y\in \R$, $X \in \R^k$ such that $EY < \infty$ and $E[m(X,\theta)] < \infty$. Then::
+
+$$ \arg \min_{\theta \in \Theta} E[(Y - m(X, \theta))^2] = \arg \min E[(E[Y|X] - m(X, \theta))^2]$$
+
+The best predictor of the CEF in that family of models is the best predictor of $Y$ in that family. 
+
+#### Proof:
+
+$$\begin{align}
+E[(Y - m(X, \theta))^2] &= E(Y - E(Y|X) + E(Y|X) - m(X, \theta))^2\\
+&= E[(Y - E(Y|X))^2 + (E[Y|X] - m(X,\theta))^2 + 2 \ldots ]
+\end{align}$$
+
+The last term can be killed with the $E[(Y - E(Y|X))g(X)] = 0$ trick again. 
+
+Then what we have left is a constant wrt $\theta$, $E(Y - E[Y|X])^2$, and the part that can actually be minimized. So the minimizers (not the minima!) will be the same. 
+
+## Linear Regression 
+
+Model: Let $Y \in \R$, $X \in \R^k$, $\beta \in \R^k$. $X_0 = 1$; $E[X'X]$ has full rank. Assume $EY^2 < \infty$. 
+
+$$ Y = X'\beta + e$$
+This is once again a pure statistical idea: best linear approx to a CEF. 
+
+The following are equivalent: 
+
+
+

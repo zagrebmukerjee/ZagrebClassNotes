@@ -229,3 +229,9 @@ Potential outcomes in the case of a vaccine are very clear: what happens if the 
 ## Causality and Models
 
 
+### Motivating Example: Wages and Human Capital
+
+Model from Grilliches 1977. 
+
+$$Y = p_H He^u$$
+Earnings are price of human capital $p_H$ times human capital times random things $e^

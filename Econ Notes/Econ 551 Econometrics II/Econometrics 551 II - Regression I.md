@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Friday, February 17th 2023, 11:12 am
-date updated: Friday, February 17th 2023, 5:54 pm
+date updated: Friday, February 17th 2023, 7:18 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -149,7 +149,8 @@ Note here that $X$ and $\beta$ are both $1 \times K$ random vectors! So $X'\beta
 Let $Y \in \R$, $X \in \R^k$, $\beta \in \R^k$. $X_0 = 1$; $E[X'X]$ has full rank. Assume $EY^2 < \infty$. 
 
 Define $\beta$ as $\arg min_{b \in \R^k}E[(Y-X'b)^2] = \arg min_{b \in \R^k}E[(E[Y|X]-X'b)^2]$, and define $e = Y - X'\beta$.  So what $\beta$ is telling us is the <font color=gree>best linear predictor</font> (BLP) of the CEF $E[Y|X]$. This is without the model assumption that $Y = X'\beta$. 
-We can also call this the <font color=gree>linear projection</font> of $Y$ onto $X$. 
+We can also call this the <font color=gree>linear projection</font> of $Y$ onto $X$. A BLP is sometimes written $L(Y|X)$ or $\mathbf{L}(Y|X)$
+
 
 Same FOC have same solution: 
 $$ \beta = (E[XX'])\inv E[XY]$$
@@ -233,5 +234,46 @@ Potential outcomes in the case of a vaccine are very clear: what happens if the 
 
 Model from Grilliches 1977. 
 
-$$Y = p_H He^u$$
-Earnings are price of human capital $p_H$ times human capital times random things $e^
+$$Y = p_H H\exp[u]$$
+Earnings are price of human capital $p_H$ times human capital times random things $e^u$. 
+
+$$H = \exp[\beta_1 S]\exp [\gamma A]$$
+$S$ is schooling. $\beta_1$ is the 'structural' parameter we're interested in. $A$ is unobserved ability (or anything else unobserved that affects $H$). $Y$ and $S$ are observable: $p_H$, $H$, $A$, $u$, are not. 
+
+Now we can take logs: 
+
+$$\begin{align}
+\log Y &= \log p_H +\log H + u\\
+&=  \log p_H + \beta_1S + \gamma A + u\\
+&= E\log p_H + Eu + \beta_1 S + \gamma A + (u - Eu)+ (\log p_H - E\log p_H)\\
+&= \beta_0^* + \beta_1S + \gamma A + e^*\\
+\end{align}$$
+
+In this, all we've done is isolate $S$ and $A$ which are of interest, changing the others into either effects on $EY$ (the two expectations) or $\var (Y)$ (the two last terms). $E(e^*) = 0$. We can also use the above to evaluate $E[e^*S]$ and $E[e^*A]$ for our BLPing. If $u$ and $\ln p_H$ are independent of $A,S$ then we're off to the races: 
+
+$$L(\log Y | (1, S , A)) = \beta_0 + \beta_1 S + \gamma A$$
+What if we did a regression that bundled $A$ in with the other stuff? 
+$$
+\begin{align}
+\log Y &= \log p_H +\log H + u\\
+&= \log p_H + \beta_1S + \gamma A + u\\
+&= E\log p_H + Eu + \gamma EA + \beta_1 S + (u - Eu)+ (\log p_H - E\log p_H) + \gamma(A - EA)\\
+&= \beta_0 + \beta_1S + e\\
+\end{align}
+$$
+
+Here, $\beta_0 = \beta_0^* + \gamma EA$, and $e = e^* + \gamma (A - EA)$. So $E[e] = 0$. But 
+$$\begin{align}
+E[eS] &= E[(e^* + \gamma (A - EA))S] \\
+&= E[e^*S] + \gamma E[(A - EA)S]\\
+&= \gamma E[AS - EAS]\\
+&= \gamma (E[AS] - E[A]E[S])\\
+&= \gamma \cov(A,S)
+\end{align}$$
+So this is only $0$ if $\gamma = 0$ (a silly case) or $\cov(A,S) = 0$. Otherwise, what will happen? 
+
+$$\begin{align}
+\hat \beta &= E[SS']\inv E[SY]\\
+&= E[SS']\inv E[(\beta_0 + \beta_1 S + e) Y]\\
+&= E[SS']\inv (\beta_0 + \beta_1 E[S] + e) Y]\\
+\end{align}$$

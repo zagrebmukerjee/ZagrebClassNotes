@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Friday, February 17th 2023, 11:12 am
-date updated: Friday, February 17th 2023, 7:18 pm
+date updated: Friday, February 17th 2023, 7:23 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -274,6 +274,8 @@ So this is only $0$ if $\gamma = 0$ (a silly case) or $\cov(A,S) = 0$. Otherwise
 
 $$\begin{align}
 \hat \beta &= E[SS']\inv E[SY]\\
-&= E[SS']\inv E[(\beta_0 + \beta_1 S + e) Y]\\
-&= E[SS']\inv (\beta_0 + \beta_1 E[S] + e) Y]\\
+&= E[SS']\inv E[S(S'\beta_1  + e)]\\
+&= E[SS']\inv (E[SS'] \beta_1  + E[eS]\\
+&= \beta_1 + \gamma \cov(A,S)\\ 
 \end{align}$$
+so it's biased upward. 

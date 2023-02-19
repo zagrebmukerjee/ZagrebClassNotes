@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Friday, February 17th 2023, 11:12 am
-date updated: Sunday, February 19th 2023, 1:11 pm
+date updated: Sunday, February 19th 2023, 1:22 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -290,4 +290,44 @@ Let $X \in \R^k$ with $E[XX']$ invertible, $Y = X'\beta + e$, $E[eX] = 0$, $\bet
 We can partition $X$ into $X_1, X_2$ and $\beta$ into $\beta_1, \beta_2$. Then 
 
 $$ Y = X_1'\beta_1 + X_2'\beta_2 + e$$ with 
-$$E[Xe] = E[\$$
+$$E[Xe] = E\left[ \begin{pmatrix} X_1 \\X_2\end{pmatrix}e\right] = 0$$
+Then dividing up the formula for $\beta$ gets us 
+
+$$ \begin{bmatrix} 
+\beta_1 \\ \beta_2 
+\end{bmatrix} =
+\begin{bmatrix} 
+E[X_1 X_1'] & E[X_1X_2']\\
+E[X_2X_1'] & E[X_2 X_2']\\
+\end{bmatrix} \inv 
+\begin{bmatrix} 
+E[X_1 Y] \\
+E[X_2 Y]
+\end{bmatrix}$$
+
+
+There are two approaches to finding this: 
+1) Partitioned Matrix Inverse, and 
+2) iterated projection
+
+### Partitioned Matrix Inverse
+#status/section/🚧 
+
+### Iterated Projection
+
+With $Y = X_1'\beta_1 + X_2'\beta_2 + e$, 
+Let 
+
+$$\tilde Y = Y - L(Y|X_2)$$
+$$ \tilde X_1 = X_1 - L(X_1|X_2)$$
+$$ \tilde Y = \tilde X_1'\tilde \beta_1 + \tilde e$$ where $E[\tilde e\tilde X_1 ] =0$. Then $\tilde \beta_1 = \beta_1$. 
+
+```ad-note
+title: Geometric Intuition
+
+Recall that $X\beta$ is the projection of $Y$ onto the column space of $X$, see [[Strang 16. Least squares approximations]]. The projection matrix is $X'(XX')\inv X$, so $PY = \hat Y$. 
+
+In this step, we determine two projection matrices: $Q$ projects $Y$ onto $X_2$ and $R$ projects $X_1$ onto $X_2$. Then what we are doing is projecting $Y$ onto the left nullspace of $X$ with $
+
+
+```

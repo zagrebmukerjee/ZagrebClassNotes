@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Friday, February 17th 2023, 11:12 am
-date updated: Friday, February 17th 2023, 7:23 pm
+date updated: Sunday, February 19th 2023, 1:11 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -227,7 +227,7 @@ Potential outcomes in the case of a vaccine are very clear: what happens if the 
 
 ```
 
-## Causality and Models
+## Omitted Variable Bias
 
 
 ### Motivating Example: Wages and Human Capital
@@ -276,6 +276,18 @@ $$\begin{align}
 \hat \beta &= E[SS']\inv E[SY]\\
 &= E[SS']\inv E[S(S'\beta_1  + e)]\\
 &= E[SS']\inv (E[SS'] \beta_1  + E[eS]\\
-&= \beta_1 + \gamma \cov(A,S)\\ 
+&= \beta_1 + \gamma \cov(A,S)/\var(S)\\ 
 \end{align}$$
 so it's biased upward. 
+
+
+
+## Subvectors of $\beta$
+
+
+Let $X \in \R^k$ with $E[XX']$ invertible, $Y = X'\beta + e$, $E[eX] = 0$, $\beta = (E[XX'])\inv E[YX]$
+
+We can partition $X$ into $X_1, X_2$ and $\beta$ into $\beta_1, \beta_2$. Then 
+
+$$ Y = X_1'\beta_1 + X_2'\beta_2 + e$$ with 
+$$E[Xe] = E[\$$

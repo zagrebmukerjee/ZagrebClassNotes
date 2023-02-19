@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Friday, February 17th 2023, 11:12 am
-date updated: Sunday, February 19th 2023, 1:22 pm
+date updated: Sunday, February 19th 2023, 1:38 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -315,19 +315,51 @@ There are two approaches to finding this:
 
 ### Iterated Projection
 
+#### Theorem
+
 With $Y = X_1'\beta_1 + X_2'\beta_2 + e$, 
 Let 
 
 $$\tilde Y = Y - L(Y|X_2)$$
 $$ \tilde X_1 = X_1 - L(X_1|X_2)$$
-$$ \tilde Y = \tilde X_1'\tilde \beta_1 + \tilde e$$ where $E[\tilde e\tilde X_1 ] =0$. Then $\tilde \beta_1 = \beta_1$. 
+$$ \tilde Y = \tilde X_1'\tilde \beta_1 + \tilde e$$ where $E[e\tilde X_1 ] =0$. Then $\tilde \beta_1 = \beta_1$. 
 
 ```ad-note
 title: Geometric Intuition
 
 Recall that $X\beta$ is the projection of $Y$ onto the column space of $X$, see [[Strang 16. Least squares approximations]]. The projection matrix is $X'(XX')\inv X$, so $PY = \hat Y$. 
 
-In this step, we determine two projection matrices: $Q$ projects $Y$ onto $X_2$ and $R$ projects $X_1$ onto $X_2$. Then what we are doing is projecting $Y$ onto the left nullspace of $X$ with $
+In this step, we determine two projection matrices: $Q$ projects $Y$ onto $X_2$ and $R$ projects $X_1$ onto $X_2$. Then what we are doing is projecting $X_1, Y$ onto the left nullspace of $X2$ with $\bar Y = (I - Q)Y$ and $\bar X_1 = (I - R)X_1$ and then seeing the relationship between those. 
+
+The theorem suggests that the projection matrix of $\bar Y$ onto $\bar X$ - the components of $Y$ orthogonal to $X_2$ onto the components of $X$ orthogonal to $X_2$ - is the same as the $X_1$ part of the projection matrix above. 
+
+Given that $X_1$ and $X_2$ are a partition of the entire $X$, this makes sense - we've made them subspaces of $R^k$ with $\dim X_1 + \dim X_2 = k$. 
 
 
 ```
+
+
+#### Proof
+
+Since $E[XX']$ is invertible, so is its submatrix $E[\tilde X \tilde X']$. 
+
+$$\begin{align}
+\tilde \beta_1 &= (E[\tilde X \tilde X']\inv) E[\tilde X \tilde Y]\\
+&= (E[\tilde X \tilde X']\inv)( E[\tilde X Y] - E[\tilde X L(Y|X_2)])\\
+\end{align}$$
+Because $\tilde X_1 \perp L(Y|X_2)$ by construction (and $\tilde X \perp X_2$), our last term goes away:
+
+$$\begin{align}
+&= (E[\tilde X \tilde X']\inv)E[\tilde X Y]\\
+&= (E[\tilde X \tilde X']\inv)(E[\tilde X X'\beta] + E[\tilde X e])\\
+&= (E[\tilde X \tilde X']\inv)(E[\tilde X X_1 \beta_1] + E[\tilde X X_2 \beta_2] + E[\tilde X e])\\
+&= (E[\tilde X \tilde X']\inv)(E[\tilde X X_1 \beta_1])\\
+&= (E[\tilde X \tilde X']\inv)(E[\tilde X \tilde X']\beta_1 + E[\tilde X L(X_1 |X_2]]\beta_1)\\
+&= (E[\tilde X \tilde X']\inv)(E[\tilde X \tilde X']\beta_1\\
+&=\beta_1
+\end{align}
+$$
+The result that $X - \bar X$ gives the same regression coefficients as $X$ follows from this, for instance, with $X_2 = 1$. 
+
+
+## Omitted Variable Bias

@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Friday, February 17th 2023, 11:12 am
-date updated: Sunday, February 19th 2023, 1:38 pm
+date updated: Friday, February 24th 2023, 3:59 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -365,3 +365,15 @@ The result that $X - \bar X$ gives the same regression coefficients as $X$ follo
 ## Omitted Variable Bias
 
 A generalized framework for OVB analysis. 
+
+Let $X = (1, X_1, X_2)$, with $\beta = (\beta_0, \beta_1, \beta_2)$. Compare: 
+
+$$ Y = \beta_0  + X_1'\beta_1 + X_2'\beta_2 + e$$ with $E[eX] = 0$, versus
+$$ Y = \beta_0^* + X_1'\beta_1^* + e^*$$ with $E[e(1, X_1)] = 0$.
+
+
+$$\begin{align}
+
+\end{align}$$
+
+Recall the definitions from the iterated projection framework: $\tilde X_1 = X_1 - L(X_1|X_2)$ and $\tilde Y = Y - L(Y|X_2)$. 

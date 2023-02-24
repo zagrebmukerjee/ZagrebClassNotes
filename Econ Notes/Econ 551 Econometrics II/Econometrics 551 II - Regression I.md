@@ -363,3 +363,5 @@ The result that $X - \bar X$ gives the same regression coefficients as $X$ follo
 
 
 ## Omitted Variable Bias
+
+A generalized framework for OVB analysis. 

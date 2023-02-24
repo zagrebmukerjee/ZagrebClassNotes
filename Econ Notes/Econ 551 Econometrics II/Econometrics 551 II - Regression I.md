@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Friday, February 17th 2023, 11:12 am
-date updated: Friday, February 24th 2023, 3:59 pm
+date updated: Friday, February 24th 2023, 4:04 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -373,7 +373,12 @@ $$ Y = \beta_0^* + X_1'\beta_1^* + e^*$$ with $E[e(1, X_1)] = 0$.
 
 
 $$\begin{align}
-
+\beta_1^* &= \var(X_1)\inv \cov(X_1, Y) \\
+&= \var(X_1)\inv \cov(X_1,  \beta_0  + X_1'\beta_1 + X_2'\beta_2 + e) \\
+&= \var(X_1)\inv \cov(X_1,X_1')\beta_1 + \var(X_1)\inv \cov(X_1,X_2')\beta_2 + \var(X_1)\inv \cov(X_1,e) \\
+&= \beta_1 + \var(X_1)\inv \cov(X_1,X_2')\beta_2  \\
 \end{align}$$
+So there's a bias term. The bias grows worse with the relative variance of $X_2$ vs $X_1$ and the relative importance of $X_2$ vs $X_1$.  Note that if $X_1 \perp X_2$ the bias goes away. 
+
 
 Recall the definitions from the iterated projection framework: $\tilde X_1 = X_1 - L(X_1|X_2)$ and $\tilde Y = Y - L(Y|X_2)$. 

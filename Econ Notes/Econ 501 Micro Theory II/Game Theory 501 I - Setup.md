@@ -1,17 +1,16 @@
 ---
 aliases:
 creation date: Sunday, February 19th 2023, 1:05 pm
-date updated: Saturday, February 25th 2023, 2:46 pm
+date updated: Saturday, February 25th 2023, 5:53 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags: 
-- '#types/classes'
-- '#status/🚧'
+- '#types/classes/econ'
 ---
 
-# [[🚧Game Theory 501 I - Setup]]
+# [[Game Theory 501 I - Setup]]
 <span style = "font-size:120%"><i >Zagreb Mukerjee </i></span>
 
 ## Definitions
@@ -68,7 +67,9 @@ Core idea: A behavioral strategy can replicate any distribution over outcomes ge
 
 Definition: A behavioral strategy $\sigma_i$ is <font color=gree>realization equivalent</font> to mixed strategy $\l_i$ if $\forall \l_{-i} \in L_{-i}$, $\sigma_i, \l_{-i}$ and $\l_i, \l_{-i}$ induce the same distribution over $Z$.
 
-In a game of perfect recall, every mixed strategy has a realization-equivalent behavioral strategy. Proof omitted. 
+In a game of perfect recall, every mixed strategy has a realization-equivalent behavioral strategy. Proof omitted
 
 
 ## Extensive Vs Normal Form
+
+A normal form is the familiar game theory representation of a game as a grid with payoffs in it (the <font color=gree>reduced normal form</font> is a normal form with duplicate rows deleted). A key question is whether the loss of information in turning extensive form games into normal form games is significant, or rather when is it significant? 

@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Saturday, February 25th 2023, 5:54 pm
-date updated: Saturday, February 25th 2023, 6:01 pm
+date updated: Saturday, February 25th 2023, 6:26 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -40,8 +40,23 @@ The win state of $0$ is a safe position. So I want to be handed a position and t
 Not a tremendously interesting game - though the object of a reasonable amount of analysis - but serves as a good introduction to the intuition around backward induction. 
 
 
-## Backward Induction 
+## Backward Induction
 
 ![[Game Theory 501 Ia - Backward Induction 2023-02-25 18.11.14.excalidraw|300]]
 
-This game has a subgame for each non-terminal node 
+This game has a subgame for each non-terminal node, which makes it well suited for backwards induction. 
+
+
+### Backwards Induction Process
+
+For each subgame with depth $1$, replace the root with a terminal node, corresponding to the choice preferred by the player whose turn it is. Rinse and repeat. At most, this has $d$ steps where $d$ is the depth of the overall tree. 
+
+It's empirically non-obvious that people actually use backwards induction. Example: game of Centipede. 
+
+![[Game Theory 501 Ia - Backward Induction 2023-02-25 18.28.26.excalidraw|300]]
+
+Two players alternate: continue or stop? At the last subgame, player $2$ will want to stop, for a payoff of $3$. But then Player $1$ has a choice of $2,0$ or (if she were to continue) letting Player $2$ stop. So she will stop also, and so on, and so forth: so the players will end up at the $0,0$ node instead of $2,2$ or $1,3$, both of which would be preferable. 
+
+In practice though people frequently continue throughout the game. Puzzling, I suppose. 
+
+

@@ -1,7 +1,7 @@
 ---
 aliases:
-creation date: 2023-02-19 13:05
-date updated: 2023-02-19 13:05
+creation date: Sunday, February 19th 2023, 1:05 pm
+date updated: Saturday, February 25th 2023, 2:46 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -14,3 +14,50 @@ tags:
 # [[🚧Game Theory 501 I - Setup]]
 <span style = "font-size:120%"><i >Zagreb Mukerjee </i></span>
 
+## Definitions
+
+### Baby's First Graphs
+
+Relevant definitions: 
+- A <font color=gree>directed graph</font>: $G = \{ V, E\}$ with an edge being an ordered pair 
+- A <font color=gree>path</font> is a sequence of nodes $x_1, x_2, \ldots$ in $V$ such that $x_1,x_2 \in E$, $x_2, x_3 \in E$ and so on. 
+
+A <font color=gree>tree</font> is a digraph $T$ such that 
+- There is a node $r$, a root, such that $\nexists x \in X(T)$ such that $(x, r) \in E$, and  
+- $x \in X(T)$ implies a unique path from $r$ to $x$. 
+
+The <font color=gree>length</font> of a path is the number of edges in it. The <font color=gree>depth</font> of a tree is the length of the longest path in it.
+
+<font color=gree>Children</font> of node $x$ are all nodes $y \in X(T)$ such that $(x,y) \in E$. <font color=gree>Descendants</font> are all the children's children and so on. Same idea for <font color=gree>parents</font> and <font color=gree>ancestors</font>
+
+A <font color=gree>subtree:</font> given $x \in X(T)$, $T_x$ is a subtree starting with $x$ when $x$ can be a root for all its descendants in $T$. 
+
+### Extensive Form
+
+An <font color=gree>extensive form</font> is a graph representation of a game. It consists of: 
+1) A tree $T = (X,E)$
+2) A partition of $X \setminus Z$ where $z \in Z$ means $z$ has no children: $P_0, P_1, \ldots, P_n$ which is a 'player partition'. This represents who's playing at that node 
+	1) By convention player $0$ is 'Nature'
+3) For each player $i$ a partion $H_i \subset P_i$. These are information sets; $h, h'$ in $H_i$ means that if a player is acting at $h$ or $h'$, she can't tell which. 
+	1) Necessarily we need $x \in h, x' \in h$ to mean that $x, x'$ are not on the same path - in other words I can't break the information set ambiguity by remembering what I have done in the path; and if $x, x'$ in $h$, then their number of children must be the same. 
+	2) In fact, there must be a partition of edges, $C$, such that if $(x, x') \in c$, and $x \in h$, then $\forall \tilde x \in h$, there is some $x''$ such that $\tilde x, x'' \in C$. This represents the actions/choices available to players. The restriction is that I must have the same choices at every node in the information set. Call these choices $C(h)$ 
+4) Let $A_i = \bigcup A_i(h)$, all actions available at all points <font color=#F7B801>not sure about A vs C</font>
+5) For all nodes $x$ in $P_0$, Nature's turn, there's some probability distribution $p_x$ over children of $x$
+6) If all information sets are singletons the game has perfect information 
+
+For all players $i$, there is a function $u_i: Z \to \R$ that's defined over all $z \in \R$ and determines the expected utility of players, or establishes a preference relation. 
+
+#### Recall
+We run into trouble if an information set contains $x$ and $x'$, a child of $x$. In that case, I can determine which of those I'm in by simply remembering whether I was at $x$ before. So disallow that. 
+
+### Strategies
+
+A pure strategy for player $i$ is a map $s_i: H_i \to A_i$, such that $s_i(h) \in A_i(h)$. What do I do given that I am in some particular information set? The set of all strategies for player $i$ is $S_i$. 
+- Note that this is a full specification of conditional actions, including responses to actions that'll never be taken in equilibrium.
+- Strategy profile $s$ is $\{s_1, \ldots, s_n\}$ for each player, with $S$ being the set of strategy profile 
+- A strategy profile and Nature's probability distribution determines some distribution over terminal nodes; so we can also talk about $u_i:S \to \R$. 
+
+#### Mixing
+ A mixed strategy $\l \in L_i$ is some probability weights over $S_i$. A behavior strategy is a map $\sigma_i \in \Sigma_i$ for player $i$, $\sigma_i: H_i \to \Delta A_i$ with $\sigma_i(h) \in \Delta(A_i(h))$. randomization at each node, rather than across strategies. note that $\Sigma_i \subset L_i$. But these strategies have special properties which is that the draws are independent across nodes.
+
+## Extensive Vs Normal Form

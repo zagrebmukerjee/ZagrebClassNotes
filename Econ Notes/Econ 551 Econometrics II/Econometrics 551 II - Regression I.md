@@ -381,4 +381,3 @@ $$\begin{align}
 So there's a bias term. The bias grows worse with the relative variance of $X_2$ vs $X_1$ and the relative importance of $X_2$ vs $X_1$.  Note that if $X_1 \perp X_2$ the bias goes away. 
 
 
-Recall the definitions from the iterated projection framework: $\tilde X_1 = X_1 - L(X_1|X_2)$ and $\tilde Y = Y - L(Y|X_2)$. 

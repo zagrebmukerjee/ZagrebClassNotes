@@ -26,5 +26,7 @@ A <font color=gree>tree</font> is a digraph $T$ such that
 
 The <font color=gree>length</font> of a path is the number of edges in it. The <font color=gree>depth</font> of a tree is the length of the longest path in it.
 
+<font color=gree>Children</font> of node $x$ are all nodes $y \in X(T)$ such that $(x,y) \in E$. <font color=gree>Descendants</font> are all the children's children and so on. Same idea
+
 A <font color=gree>subtree:</font> given $x \in X(T)$, $T_x$ is a subtree starting with $x$ when $x$ can be a root for all its descendants in $T$. 
 

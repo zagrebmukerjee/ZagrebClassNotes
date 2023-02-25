@@ -16,9 +16,11 @@ tags:
 
 ## Definitions
 
-An <font color=gree>extensive form</font> is a graph representation of a game. Relevant definitions: 
-- A directed graph: $G = \{ V, E\}$ with an edge being an ordered pair 
-- A path is a sequence of nodes $x_1, x_2, \ldots$ in $V$ such that $x_1,x_2 \in E$, $x_2, x_3 \in E$ and so on. 
+### Baby's First Graphs
+
+Relevant definitions: 
+- A <font color=gree>directed graph</font>: $G = \{ V, E\}$ with an edge being an ordered pair 
+- A <font color=gree>path</font> is a sequence of nodes $x_1, x_2, \ldots$ in $V$ such that $x_1,x_2 \in E$, $x_2, x_3 \in E$ and so on. 
 
 A <font color=gree>tree</font> is a digraph $T$ such that 
 - There is a node $r$, a root, such that $\nexists x \in X(T)$ such that $(x, r) \in E$, and  
@@ -26,7 +28,16 @@ A <font color=gree>tree</font> is a digraph $T$ such that
 
 The <font color=gree>length</font> of a path is the number of edges in it. The <font color=gree>depth</font> of a tree is the length of the longest path in it.
 
-<font color=gree>Children</font> of node $x$ are all nodes $y \in X(T)$ such that $(x,y) \in E$. <font color=gree>Descendants</font> are all the children's children and so on. Same idea
+<font color=gree>Children</font> of node $x$ are all nodes $y \in X(T)$ such that $(x,y) \in E$. <font color=gree>Descendants</font> are all the children's children and so on. Same idea for  <font color=gree>parents</font> and <font color=gree>ancestors</font>
 
 A <font color=gree>subtree:</font> given $x \in X(T)$, $T_x$ is a subtree starting with $x$ when $x$ can be a root for all its descendants in $T$. 
 
+### Extensive Form
+
+An <font color=gree>extensive form</font> is a graph representation of a game. It consists of: 
+1) A tree $T = (X,E)$
+2) A partition of $X \setminus Z$ where $z \in Z$ means $z$ has no children: $P_0, P_1, \ldots, P_n$ which is a 'player partition'. This represents who's playing at that node 
+	1) By convention player $0$ is 'Nature'
+3) For each player $i$ a partion $H_i \subset P_i$. These are information sets; $h, h'$ in $H_i$ means that if a player is acting at $h$ or $h'$, she can't tell which. 
+	1) Necessarily we need $x \in h, x' \in h$ to mean that $x, x'$ are not on the same path - in other words I can't break the information set ambiguity by remembering what I have done in the path; and if $x, x'$ in $h$, then their number of children must be the same. 
+	2) In fact, there must be a partition  of edges, $C$, such that if $(x, x') \in c$, and $x \in h$, then $\forall \tilde x \in h$, there is some $x''$ such that $\tilde x, x'' \in C$. This represents the actions/choices available to players. The restriction is that I must have the same choices at every node in the information set:  

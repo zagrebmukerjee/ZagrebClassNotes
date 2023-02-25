@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Sunday, February 19th 2023, 1:05 pm
-date updated: Saturday, February 25th 2023, 2:35 pm
+date updated: Saturday, February 25th 2023, 2:46 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -52,13 +52,12 @@ We run into trouble if an information set contains $x$ and $x'$, a child of $x$.
 
 ### Strategies
 
-A pure strategy for player $i$ is a map $s_i: H_i \to A_i$, such that $s_i(h) \in A_i(h)$.  What do I do given that I am in some particular information set? The set of all strategies for player $i$ is $S_i$. 
+A pure strategy for player $i$ is a map $s_i: H_i \to A_i$, such that $s_i(h) \in A_i(h)$. What do I do given that I am in some particular information set? The set of all strategies for player $i$ is $S_i$. 
 - Note that this is a full specification of conditional actions, including responses to actions that'll never be taken in equilibrium.
 - Strategy profile $s$ is $\{s_1, \ldots, s_n\}$ for each player, with $S$ being the set of strategy profile 
 - A strategy profile and Nature's probability distribution determines some distribution over terminal nodes; so we can also talk about $u_i:S \to \R$. 
 
 #### Mixing
- A mixed strategy is some probability weights over $S_i$. A behavior straegy is a map $\sigma_i$ for player $i$, $\sigma_i: H_i \to \Delta A_i$ with $\sigma_i(h) \in \Delta
+ A mixed strategy $\l \in L_i$ is some probability weights over $S_i$. A behavior strategy is a map $\sigma_i \in \Sigma_i$ for player $i$, $\sigma_i: H_i \to \Delta A_i$ with $\sigma_i(h) \in \Delta(A_i(h))$. randomization at each node, rather than across strategies. note that $\Sigma_i \subset L_i$. But these strategies have special properties which is that the draws are independent across nodes.
 
-## Extensive vs Normal Form
-
+## Extensive Vs Normal Form

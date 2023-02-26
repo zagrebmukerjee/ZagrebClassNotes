@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Sunday, February 26th 2023, 12:57 pm
-date updated: Sunday, February 26th 2023, 2:57 pm
+date updated: Sunday, February 26th 2023, 3:26 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -57,4 +57,28 @@ c_1 + 3 &= \frac{\epsilon_2c_1}{\epsilon_1 -3c_1} \\
 &= 3c_1^2 - c_1(\epsilon_1 - \epsilon_2 - 9) - 3 \epsilon_1\\
 \end{align}$$
 
-##
+For simplicity, solve for the special case where $\epsilon_1 = \epsilon_2$. Then use the quadratic formula: 
+
+$$\begin{align}
+c_1 &= \frac{3 + \sqrt{9 +4 \epsilon}}{2}
+\end{align}$$
+
+### Public Goods Provision
+
+Two players simultaneously decide whether to pay for a public good. If at least one pays, both accrue a benefit of $1$. If none do, $0$. Cost of contributing is $c_i$. $c$ is drawn fro continuous and strictly increasing cdf $F$ on $[\underline c, \overline c]$. 
+
+A strategy, then, is a map from $\text{supp} \; c$ into $\{0,1\}$. Player $i$ maximizes utility: 
+
+$$ u_i = \max_j s_j - c_i s_i$$
+A best response is a function that, for any $c_i$, maximizes $E[u_(c_i|s_{-i})]$ . So a BNE has each player playing $s_i^*$ that maximizes $E[u(s_i, s_{-i}^*, c_i]$. $c_j$ doesn't directly matter for this maximization problem, but it'll enter into others' calculations. 
+
+Suppose I am player $i$. Then there's an equilibrium probability $z_j$ that $j$ contributes. So I will contribute if $c_i < 1- z_j$; ie if it's worth it to me to insure against the other guy not contributing. In other words, there's another cutoff strategy: Player $i$ contributes if $c_i \in [\underline c, c^*_i]$. 
+
+So Player $1$ knows that $z_j = F(c_j^*)$; the probability another will contribute is the probability that their cost is low enough. Then I can solve the above, again using the idea that at $c_i^*$ I am indifferent:
+
+$$\begin{align}
+E[u(s_i = 0, c_i^*)] &= E[u(s_i = 1, c_i^*)]\\
+1 - c_i &= z_j\\
+c_i &= 1-F(c_j)\\
+c_i &= 1-F(1 - F(c_j))\\
+\end{align}$$

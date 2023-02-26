@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Sunday, February 26th 2023, 12:57 pm
-date updated: Sunday, February 26th 2023, 1:07 pm
+date updated: Sunday, February 26th 2023, 2:55 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -37,9 +37,23 @@ But then Player $1$ needs to understand that Player $2$ understands the above; a
 
 A framework to analyze such games was developed by Harsanyi (with no particular basis in fact, but an eye to tractability). One may suppose that the game has a specific type of incomplete information: Nature draws $\theta_1, \theta_2$ from a commonly known distribution. So players have *common priors* and then can anchor their guesses about others' strategies in those priors. 
 
-Suppose $\theta_i$ is drawn from $\text{Unif}(0, \epsilon_i)$, and both players know that. Player $1$ doesn't know what Player $2$ will do, but knows that it will be increasing in $\theta_2$. Therefore, Player $2$'s choice can be represented as a cutoff: if $\theta_2 > c_2$, $s_2 = G$. 
+Suppose $\theta_i$ is drawn from $\text{Unif}(0, \epsilon_i)$, and both players know that. Player $1$ doesn't know what Player $2$ will do, but knows that it will be increasing in $\theta_2$. Therefore, Player $2$'s choice can be represented as a cutoff: if $\theta_2 > c_2$, $s_2 = G$.  
+
+Then we can reason about Player $1$'s choice by the same monotonicity logic, ie. finding $c_1$ such that $\theta_1 > c_1 \implies s_1 = P$. It follows that for $\theta_1 = c_1$, Player $1$ is indifferent between $P$ and $G$.
 
 $$\begin{align}
+E[u_1(P)] &= E[u_1(G)]\\
+(2 + \theta_1) P( \theta_2 < c_2) &= (1)P(\theta_2 > c_2)\\
+(2 + \theta_1) \frac{c_2}{\epsilon_2} &= 1 - \frac{c_2}{\epsilon_2}\\
+(2 + \theta_1) c_2 &= \epsilon_2 - c_2\\
+3c_2 + c_1c_2  &= \epsilon_2 \\
+c_1(c_2) &= \epsilon_2/c_2 - 3\\
+c_1^* &=  \epsilon_2/c_2(c_1^*) - 3\\
+&=  \epsilon_2/(\epsilon_1/c_1 -3) - 3\\
+c_1 + 3 &= \frac{\epsilon_2c_1}{\epsilon_1 -3c_1} \\
+0&=(c_1 + 3)(\epsilon_1 - 3c_1) - \epsilon_2 c_1 \\
+&=c_1 \epsilon_1  + 3\epsilon_1 - 3c_1^2 - 9c_1 - \epsilon_2 c_1 \\
+&= -3c_1^2 + c_1(\epsilon_1 - \epsilon_2 - 9) + 3 \epsilon_1
 
 \end{align}$$
 

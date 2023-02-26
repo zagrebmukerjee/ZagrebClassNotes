@@ -50,4 +50,21 @@ Iterative deletion algorithm can be written down formally but it's not that inte
 
 A strategy $\sigma_i$ is a <font color=gree>best response</font>  to $\sigma_{-i}$ if $\sigma_i \in \arg\max u_i(\sigma_i, \sigma_{-i})$. 
 
-Introduce here a notion of <font color=gree>rationalizability</font>. 
+Introduce here a notion of <font color=gree>rationalizability</font>. Rationalizable strategies are found as follows: Start with a game. Remove all strategies that are never best responses and then iterate. 
+
+The idea here is that we're requiring players to operate rationally, and think of others likewise - i.e. we're not allowing for me to form a strategy based on the idea that you're crazy. But I don't have to form a strategy based on you optimizing necessarily. 
+
+Every best response is undominated (it can't be a best response otherwise). So BR is a subset of undominated. 
+
+For $2$ players, any undominated pure strategy is a best response; doesn't generalize. 
+
+
+## Nash Equilibrium
+
+We're in a Nash Equilibrium if every player is best-responding to every other player. 
+
+Existence of NE comes from [[Brouwer Fixed Point Theorem]] or [[Fixed Point Theorems - Brouwer and Kakutani|Kakutani's Fixed Point Theorem]] - the 'best response to others' best response to my strategy' correspondence has a fixed point. Existence only guarantees mixed NE exists. 
+
+### Finding NE
+
+

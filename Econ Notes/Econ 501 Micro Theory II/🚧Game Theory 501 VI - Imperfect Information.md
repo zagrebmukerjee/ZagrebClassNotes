@@ -37,4 +37,8 @@ But then Player $1$ needs to understand that Player $2$ understands the above; a
 
 A framework to analyze such games was developed by Harsanyi (with no particular basis in fact, but an eye to tractability). One may suppose that the game has a specific type of incomplete information: Nature draws $\theta_1, \theta_2$ from a commonly known distribution. So players have *common priors* and then can anchor their guesses about others' strategies in those priors. 
 
-Suppose $\theta_1, \theta_2$ are drawn from $\text{Unif}(0, \epsilon)$, and bo
+Suppose $\theta_i$ is drawn from $\text{Unif}(0, \epsilon_i)$, and both players know that. Player $1$ doesn't know what Player $2$ will do, but knows that it will be increasing in $\theta_2$. Therefore, Player $2$'s choice can be represented as a cutoff: if $\theta_2 > c_2$, $s_2 = G$. 
+
+$$\begin{align}
+
+\end{align}$$

@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Sunday, February 26th 2023, 12:57 pm
-date updated: Sunday, February 26th 2023, 2:55 pm
+date updated: Sunday, February 26th 2023, 2:57 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -53,8 +53,8 @@ c_1^* &=  \epsilon_2/c_2(c_1^*) - 3\\
 c_1 + 3 &= \frac{\epsilon_2c_1}{\epsilon_1 -3c_1} \\
 0&=(c_1 + 3)(\epsilon_1 - 3c_1) - \epsilon_2 c_1 \\
 &=c_1 \epsilon_1  + 3\epsilon_1 - 3c_1^2 - 9c_1 - \epsilon_2 c_1 \\
-&= -3c_1^2 + c_1(\epsilon_1 - \epsilon_2 - 9) + 3 \epsilon_1
-
+&= -3c_1^2 + c_1(\epsilon_1 - \epsilon_2 - 9) + 3 \epsilon_1\\
+&= 3c_1^2 - c_1(\epsilon_1 - \epsilon_2 - 9) - 3 \epsilon_1\\
 \end{align}$$
 
 ##

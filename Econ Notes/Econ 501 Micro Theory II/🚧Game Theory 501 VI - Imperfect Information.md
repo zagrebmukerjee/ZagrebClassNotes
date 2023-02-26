@@ -42,3 +42,5 @@ Suppose $\theta_i$ is drawn from $\text{Unif}(0, \epsilon_i)$, and both players 
 $$\begin{align}
 
 \end{align}$$
+
+##

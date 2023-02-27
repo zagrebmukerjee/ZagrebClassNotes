@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Monday, February 20th 2023, 9:58 am
-date updated: Monday, February 27th 2023, 6:01 pm
+date updated: Monday, February 27th 2023, 6:13 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -78,7 +78,7 @@ More generally, a PSNE is the coincidence of pure-strategy (ie no-randomization)
 
 #### Mixed
 
-The core intuition is that mixing requires indifference. I'll only be willing to randomize across my options if I have the same expected utility for each of them. So this defines/restricts the probabilities being used by the other player. 
+The core intuition is that mixing requires indifference. I'll only be willing to randomize across my options if I have the same expected utility for each of them. So this defines/restricts the probabilities being used by the other players. Solving these probabilities one player at a time allows one to characterize mixed NEs. 
 
 
 ```ad-example 
@@ -104,7 +104,13 @@ This lets us find two pure-strategy NEs: P,P and G,G.
 For an MSNE, we need both players to be indifferent between P and G. With symmetry it suffices to look at Player 1 only. 
 $$\begin{align}
 E[u_1(P)] &= E[u_1(G)] \\
-E[u_1(P)|s_2 = P] E[u_1(P)|s_2 = P] &= +\\
+E[u_1(P)|s_2 = P]Pr(s_2= P)+  E[u_1(P)|s_2 = G]Pr(s_2= G) &= E[u_1(G)|s_2 = P] Pr(s_2= P) + E[u_1(G)|s_2 = G] Pr(s_2= G)\\
+2p  &= 1(1-p)\\
+p &= 1/3\\
 \end{align}$$
+
+So in order for Player $1$ to be willing to randomize, Player $2$ needs to play $P$ with probability $1/3$ and $G$ with probability $2/3$. The opposite calculation will give probabilities of $1/3 G$, $2/3P$. These randomization plans are a mixed strategy NE. 
+
+In this NE, PP is played with probability 2/9, PG with probability 1/9, GP with probability 4/9, and GG with probability $2/9$. So the expected utility of some player is $5/9$. 
 
 ```

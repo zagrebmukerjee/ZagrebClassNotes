@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Sunday, February 26th 2023, 12:57 pm
-date updated: Monday, February 27th 2023, 8:50 pm
+date updated: Monday, February 27th 2023, 8:57 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -233,5 +233,13 @@ Then plug in the above for $c_A$:
 $$\begin{align}
 c_P &= \frac{w(1/2  - \frac{w(1/2- c_P) - c}{\epsilon}) -h}{\epsilon}\\
 &= \frac{w\epsilon(1/2  - \frac{w/2- wc_P - c}{\epsilon}) -h\epsilon}{\epsilon^2}\\
-&= \frac{w\epsilon/2  - w\epsilon\frac{w/2- wc_P - c}{\epsilon}) -h\epsilon}{\epsilon^2}\\
+&= \frac{w\epsilon/2  - w[w/2- wc_P - c] -h\epsilon}{\epsilon^2}\\
+\epsilon^2 c_P&= w\epsilon/2  - w^2/2+ w^2c_P + wc -h\epsilon\\
+c_P&= \frac{\epsilon(w - 2h)  + w(2c-w)}{2(\epsilon^2 - w^2)}\\
 \end{align}$$
+So as $\epsilon \to 0$ this becomes 
+
+$$ -\frac{w(2c-w)}{2w^2} = -\frac{2c-w}{2w} = \frac{w- 2c}{2w} $$
+
+Then $Pr(\theta_P>c_P)$, in the limit, is 
+$$\frac{1}{2} - \frac{w - 2c}{2w} = \frac{1}{2} - \frac{1}{2} + \frac{c}{2} = \frac{c}{w}$$

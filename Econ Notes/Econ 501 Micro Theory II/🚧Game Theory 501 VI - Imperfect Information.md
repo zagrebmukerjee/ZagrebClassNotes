@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Sunday, February 26th 2023, 12:57 pm
-date updated: Monday, February 27th 2023, 8:17 pm
+date updated: Monday, February 27th 2023, 8:35 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -88,8 +88,10 @@ Symmetry lets you say that $c_i^* = c_j^* = c^*$; and then for a given $F$, the 
 
 ## Purification
 
+Theorem (Harsanyi): Every mixed strategy NE in a perfect-information game can be represented as the limit of a sequence of Bayesian NEs in an imperfect information game.
 
-Example:
+
+### Example 1
 
 |      | Left   | Right  |
 | ---- | ------ | ------ |
@@ -129,8 +131,16 @@ Player $1$ plays $U$ if $\theta_1 > c_1$, $D$ otherwise; and Player $2$ playes $
 $$\begin{align}
 E[u(U)] &= E[u(D)]\\ 
 \epsilon c_1  &= -p_L + 3(1- p_L)\\
-c_1 &= \frac{}{}
+c_1 &= \frac{3 - 4p_L}{\epsilon}\\
+&= \frac{3 - 4P(\epsilon \theta_2 > -p_U + 5 p_D)}{\epsilon}\\
+&= \frac{3 - 4P(\theta_2 > (-p_U + 5 p_D)/\epsilon)}{\epsilon}\\
+&= \frac{3 - 2(1- [(-6p_U + 5)/\epsilon])}{\epsilon}\\
+&= \frac{3 - 2(1+ [6p_U /\epsilon - 5/\epsilon])}{\epsilon}\\
+&= \frac{1  -12p_U/\epsilon + 10/\epsilon}{\epsilon}\\
+&= \frac{\epsilon  -12p_U + 10}{\epsilon^2}\\
 \end{align}$$
+
+
 
 
 
@@ -141,10 +151,12 @@ E[u(L)] &= E[u(R)]\\
 &= -1/2+c_1/2 + 5c_1/2 + 5/2\\
 c_2 &= (3c_1 + 2)/\epsilon\\
 &= \frac{3((2 c_2 + 1)/\epsilon) + 2}{\epsilon}\\
+&= \frac{6 c_2/\epsilon + 3/\epsilon + 2}{\epsilon}\\
 &= \frac{6 c_2 + 3 + 2\epsilon}{\epsilon^2}\\
 c_2 &= \frac{3 + 2 \epsilon}{\epsilon^2  -6 }\\
 \end{align}$$
 
+So in the limit, $c_2 = -1/2$; probability $\theta_2 > c_2 = 3/4$, so $p_L = 3/4$. 
 
 
 
@@ -157,7 +169,10 @@ c_2 &= \frac{3 + 2 \epsilon}{\epsilon^2  -6 }\\
 
 
 
-Inspection Game
+
+### Example 2 (Inspection Game)
+
+#### Base
 
 An agent chooses 'Work' or 'Shirk'. Working costs $c$. The principal has hired the agent to do work, and has to choose to inspect or not; inspection costs $h$. If the worker works, the principal gets $v$; the agent gets paid $w$ unless they are caught shirking. Then
 

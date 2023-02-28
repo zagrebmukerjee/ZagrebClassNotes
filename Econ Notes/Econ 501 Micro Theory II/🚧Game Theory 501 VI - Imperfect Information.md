@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Sunday, February 26th 2023, 12:57 pm
-date updated: Sunday, February 26th 2023, 3:26 pm
+date updated: Monday, February 27th 2023, 7:49 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -78,7 +78,45 @@ So Player $1$ knows that $z_j = F(c_j^*)$; the probability another will contribu
 
 $$\begin{align}
 E[u(s_i = 0, c_i^*)] &= E[u(s_i = 1, c_i^*)]\\
-1 - c_i &= z_j\\
-c_i &= 1-F(c_j)\\
-c_i &= 1-F(1 - F(c_j))\\
+1 - c_i^* &= z_j\\
+c_i^* &= 1-F(c_j^*)\\
+&= 1-F(1 - F(c_i^*))\\
+\end{align}$$
+
+Symmetry lets you say that $c_i^* = c_j^* = c^*$; and then for a given $F$, the above can be solved. 
+
+
+## Purification
+
+
+Inspection Game
+
+An agent chooses 'Work' or 'Shirk'. Working costs $c$. The principal has hired the agent to do work, and has to choose to inspect or not; inspection costs $h$. If the worker works, the principal gets $v$; the agent gets paid $w$ unless they are caught shirking. Then
+
+|       | Inspect      | Don't      |
+| ----- | ------------ | ---------- |
+| Shirk | $0, -h$      | $w, -w$     |
+| Work  | $w - c, v-h-w$ | $w - c, v-w$ |
+
+
+Suppose $w > c$ for interestingness - otherwise, shirk would be dominant strategy. Suppose also that $h < w$; otherwise never would inspect. 
+
+There's no pure strategy equilibrium: agent's BR to inspecting is to work, and to non-inspecting to shirk. Principal's BR to shirk is to inspect, and to work is to not inspect. So mixture is required. Let $p$ be the probability of inspection, $q$ of shirking.
+
+Agent's indifference condition.
+$$\begin{align}
+E[u(S)] &= E[u(W)]\\
+w(1-p) &= w-c\\
+1- p &= 1 - c/w\\
+p &= c/w\\
+\end{align}$$
+Principal's:
+
+$$\begin{align}
+E[u(I)] &= E[u(D)]\\
+q(-h) + (1-q)(v - h - w) &= q(-w) + (1-q)(v-w)\\
+q(w - h) &= (1-q)(v - w - v + h + w)\\
+q(w - h) &= (1-q)(h)\\
+qw - qh &= h - qh\\
+q &= h/w\\
 \end{align}$$

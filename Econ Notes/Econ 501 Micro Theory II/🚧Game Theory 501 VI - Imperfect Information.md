@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Sunday, February 26th 2023, 12:57 pm
-date updated: Monday, February 27th 2023, 8:05 pm
+date updated: Monday, February 27th 2023, 8:17 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -128,10 +128,24 @@ Player $1$ plays $U$ if $\theta_1 > c_1$, $D$ otherwise; and Player $2$ playes $
 
 $$\begin{align}
 E[u(U)] &= E[u(D)]\\ 
-\epsilon \theta_1  &= -1(P(s_2 = L)) + 3 P(s_2 = R)\\
-&= -1(P(\theta_2 > c_2)) + 3 P(\theta_2 < c_2)\\
-&= -1(
+\epsilon c_1  &= -p_L + 3(1- p_L)\\
+c_1 &= \frac{}{}
 \end{align}$$
+
+
+
+$$\begin{align}
+E[u(L)] &= E[u(R)]\\ 
+\epsilon c_2  &= -1(P(s_1 = U)) + 5 P(s_1 = D)\\
+&= -(1-c_1)/2 + 5(c_1 + 1)/2\\
+&= -1/2+c_1/2 + 5c_1/2 + 5/2\\
+c_2 &= (3c_1 + 2)/\epsilon\\
+&= \frac{3((2 c_2 + 1)/\epsilon) + 2}{\epsilon}\\
+&= \frac{6 c_2 + 3 + 2\epsilon}{\epsilon^2}\\
+c_2 &= \frac{3 + 2 \epsilon}{\epsilon^2  -6 }\\
+\end{align}$$
+
+
 
 
 

@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Sunday, February 26th 2023, 12:57 pm
-date updated: Monday, February 27th 2023, 8:35 pm
+date updated: Monday, February 27th 2023, 8:50 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -92,6 +92,7 @@ Theorem (Harsanyi): Every mixed strategy NE in a perfect-information game can be
 
 
 ### Example 1
+#### Perfect Information Game
 
 |      | Left   | Right  |
 | ---- | ------ | ------ |
@@ -115,7 +116,7 @@ p_U &= 5/6\\
 \end{align}$$
 
 
-
+#### Perturbed Game
 Introduce some perturbation based on a type. Suppose $\theta_i \sim \text{Unif}[-1,1]$, fix $\epsilon > 0$, and let the payoffs be 
 
 
@@ -132,12 +133,9 @@ $$\begin{align}
 E[u(U)] &= E[u(D)]\\ 
 \epsilon c_1  &= -p_L + 3(1- p_L)\\
 c_1 &= \frac{3 - 4p_L}{\epsilon}\\
-&= \frac{3 - 4P(\epsilon \theta_2 > -p_U + 5 p_D)}{\epsilon}\\
-&= \frac{3 - 4P(\theta_2 > (-p_U + 5 p_D)/\epsilon)}{\epsilon}\\
-&= \frac{3 - 2(1- [(-6p_U + 5)/\epsilon])}{\epsilon}\\
-&= \frac{3 - 2(1+ [6p_U /\epsilon - 5/\epsilon])}{\epsilon}\\
-&= \frac{1  -12p_U/\epsilon + 10/\epsilon}{\epsilon}\\
-&= \frac{\epsilon  -12p_U + 10}{\epsilon^2}\\
+&= \frac{3 - 4P(\theta_2 > c_2)}{\epsilon}\\
+&= \frac{3 - 2(1 - c_2)}{\epsilon}\\
+&= \frac{2c_2 + 1}{\epsilon}\\
 \end{align}$$
 
 
@@ -161,18 +159,9 @@ So in the limit, $c_2 = -1/2$; probability $\theta_2 > c_2 = 3/4$, so $p_L = 3/4
 
 
 
-
-
-
-
-
-
-
-
-
 ### Example 2 (Inspection Game)
 
-#### Base
+#### Perfect Information Game
 
 An agent chooses 'Work' or 'Shirk'. Working costs $c$. The principal has hired the agent to do work, and has to choose to inspect or not; inspection costs $h$. If the worker works, the principal gets $v$; the agent gets paid $w$ unless they are caught shirking. Then
 
@@ -202,4 +191,47 @@ q(w - h) &= (1-q)(v - w - v + h + w)\\
 q(w - h) &= (1-q)(h)\\
 qw - qh &= h - qh\\
 q &= h/w\\
+\end{align}$$
+#### Perturbation
+
+Perturb $c$ and $h$; draw $\theta_A, \theta_P$ from $\text{Unif}[-1/2,1/2]$, and let the game be: 
+
+|       | Inspect      | Don't      |
+| ----- | ------------ | ---------- |
+| Shirk | $0, -h - \epsilon \theta_P$      | $w, -w$     |
+| Work  | $w - c - \epsilon \theta_A, v-h- \epsilon \theta_P-w$ | $w - c- \epsilon \theta_A, v-w$ |
+
+The agent will shirk for sufficiently large $\theta_A$ and work otherwise; the principal will not inspect for sufficiently large $\theta_P$. Let the cutpoints be $c_A, c_P$. 
+
+Solve for $c_A$ as the value that makes the agent indifferent; let probabilities be $p, q$ as before. 
+
+$$\begin{align}
+E[u(S)] &= E[u(W)]\\
+w(1-p) &= w-c -\epsilon c_A\\
+w-wp &= w-c -c_A\\
+c_A &= \frac{wp - c}{\epsilon}\\
+&= \frac{wP(\theta_P>c_P) - c}{\epsilon}\\
+&= \frac{w(1/2- c_P) - c}{\epsilon}\\
+\end{align}$$
+
+For $c_P$: 
+$$\begin{align}
+E[u(I)] &= E[u(D)]\\
+q(-h - \epsilon c_P) + (1-q)(v - h - \epsilon c_P- w) &= q(-w) + (1-q)(v-w)\\
+q( w-h - \epsilon c_P)  &= (1-q)(v-w - (v - h - \epsilon c_P- w))\\
+q( w-h - \epsilon c_P)  &= (1-q)(h + \epsilon c_P)\\
+qw-qh - q\epsilon c_P  &= (h + \epsilon c_P) - qh - q\epsilon c_P\\
+qw&= h + \epsilon c_P\\
+c_P &= \frac{wq -h}{\epsilon}\\
+&= \frac{wP(\theta_A > c_A) -h}{\epsilon}\\
+&= \frac{w(1/2  - c_A) -h}{\epsilon}
+\end{align}$$
+
+
+Then plug in the above for $c_A$: 
+
+$$\begin{align}
+c_P &= \frac{w(1/2  - \frac{w(1/2- c_P) - c}{\epsilon}) -h}{\epsilon}\\
+&= \frac{w\epsilon(1/2  - \frac{w/2- wc_P - c}{\epsilon}) -h\epsilon}{\epsilon^2}\\
+&= \frac{w\epsilon/2  - w\epsilon\frac{w/2- wc_P - c}{\epsilon}) -h\epsilon}{\epsilon^2}\\
 \end{align}$$

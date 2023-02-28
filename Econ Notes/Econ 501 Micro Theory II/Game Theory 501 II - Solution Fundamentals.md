@@ -114,3 +114,5 @@ So in order for Player $1$ to be willing to randomize, Player $2$ needs to play 
 In this NE, PP is played with probability 2/9, PG with probability 1/9, GP with probability 4/9, and GG with probability $2/9$. So the expected utility of some player is $5/9$. 
 
 ```
+
+

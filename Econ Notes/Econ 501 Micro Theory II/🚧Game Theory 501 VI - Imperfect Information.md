@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Sunday, February 26th 2023, 12:57 pm
-date updated: Monday, February 27th 2023, 7:49 pm
+date updated: Monday, February 27th 2023, 8:05 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -87,6 +87,60 @@ Symmetry lets you say that $c_i^* = c_j^* = c^*$; and then for a given $F$, the 
 
 
 ## Purification
+
+
+Example:
+
+|      | Left   | Right  |
+| ---- | ------ | ------ |
+| Up   | $0,0$  | $0,-1$ |
+| Down | $-1,0$ | $3,5$  |
+
+PSNE exists: $D,R$. But an MSNE also exists. 
+
+Indifference conditions for Player $1$: 
+
+$$\begin{align}
+0 &= -p_L + 3(1-p_L)\\
+p_L &= 3/4\\
+\end{align}$$
+Player $2$: 
+
+
+$$\begin{align}
+0 &= -p_U + 5(1- p_U)\\
+p_U &= 5/6\\
+\end{align}$$
+
+
+
+Introduce some perturbation based on a type. Suppose $\theta_i \sim \text{Unif}[-1,1]$, fix $\epsilon > 0$, and let the payoffs be 
+
+
+|      | Left   | Right  |
+| ---- | ------ | ------ |
+| Up   | $\epsilon \theta_1,\epsilon \theta_2$  | $\epsilon \theta_1,-1$ |
+| Down | $-1,\epsilon \theta_2$ | $3,5$  |
+
+Still have $E[\epsilon \theta_1] = 0$. Now, solve for cut-point Bayesian Nash Equilibrium. 
+
+Player $1$ plays $U$ if $\theta_1 > c_1$, $D$ otherwise; and Player $2$ playes $L$ if $\theta_2 > c_2$, $R$ otherwise.  Start with Player $1$. 
+
+$$\begin{align}
+E[u(U)] &= E[u(D)]\\ 
+\epsilon \theta_1  &= -1(P(s_2 = L)) + 3 P(s_2 = R)\\
+&= -1(P(\theta_2 > c_2)) + 3 P(\theta_2 < c_2)\\
+&= -1(
+\end{align}$$
+
+
+
+
+
+
+
+
+
 
 
 Inspection Game

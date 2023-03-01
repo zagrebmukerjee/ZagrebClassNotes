@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Sunday, February 26th 2023, 12:57 pm
-date updated: Sunday, February 26th 2023, 3:26 pm
+date updated: Sunday, February 26th 2023, 3:29 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -74,11 +74,14 @@ A best response is a function that, for any $c_i$, maximizes $E[u_(c_i|s_{-i})]$
 
 Suppose I am player $i$. Then there's an equilibrium probability $z_j$ that $j$ contributes. So I will contribute if $c_i < 1- z_j$; ie if it's worth it to me to insure against the other guy not contributing. In other words, there's another cutoff strategy: Player $i$ contributes if $c_i \in [\underline c, c^*_i]$. 
 
-So Player $1$ knows that $z_j = F(c_j^*)$; the probability another will contribute is the probability that their cost is low enough. Then I can solve the above, again using the idea that at $c_i^*$ I am indifferent:
+So Player $1$ knows that $z_j = F(c_j^*)$; the probability another will contribute is the probability that their cost is low enough. Then I can solve the above in the two player case, again using the idea that at $c_i^*$ I am indifferent:
 
 $$\begin{align}
 E[u(s_i = 0, c_i^*)] &= E[u(s_i = 1, c_i^*)]\\
 1 - c_i &= z_j\\
-c_i &= 1-F(c_j)\\
-c_i &= 1-F(1 - F(c_j))\\
+&= F(c_j)\\
+&= F(1 - F(c_i))\\
+F\inv(1 - c_i) &= 1 - F(c_i)\\
 \end{align}$$
+
+This dictates a symmetry to the problem: $c_i = c_j = 1 - F(c_j)$. 

@@ -1,7 +1,11 @@
 ---
 aliases:
 creation date: Sunday, February 26th 2023, 12:57 pm
+<<<<<<< HEAD
 date updated: Sunday, February 26th 2023, 3:29 pm
+=======
+date updated: Monday, February 27th 2023, 8:57 pm
+>>>>>>> c87df8435b6b64748a1525cde800d4fa60b4256b
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -78,6 +82,7 @@ So Player $1$ knows that $z_j = F(c_j^*)$; the probability another will contribu
 
 $$\begin{align}
 E[u(s_i = 0, c_i^*)] &= E[u(s_i = 1, c_i^*)]\\
+<<<<<<< HEAD
 1 - c_i &= z_j\\
 &= F(c_j)\\
 &= F(1 - F(c_i))\\
@@ -85,3 +90,170 @@ F\inv(1 - c_i) &= 1 - F(c_i)\\
 \end{align}$$
 
 This dictates a symmetry to the problem: $c_i = c_j = 1 - F(c_j)$. 
+=======
+1 - c_i^* &= z_j\\
+c_i^* &= 1-F(c_j^*)\\
+&= 1-F(1 - F(c_i^*))\\
+\end{align}$$
+
+Symmetry lets you say that $c_i^* = c_j^* = c^*$; and then for a given $F$, the above can be solved. 
+
+
+## Purification
+
+Theorem (Harsanyi): Every mixed strategy NE in a perfect-information game can be represented as the limit of a sequence of Bayesian NEs in an imperfect information game.
+
+
+### Example 1
+#### Perfect Information Game
+
+|      | Left   | Right  |
+| ---- | ------ | ------ |
+| Up   | $0,0$  | $0,-1$ |
+| Down | $-1,0$ | $3,5$  |
+
+PSNE exists: $D,R$. But an MSNE also exists. 
+
+Indifference conditions for Player $1$: 
+
+$$\begin{align}
+0 &= -p_L + 3(1-p_L)\\
+p_L &= 3/4\\
+\end{align}$$
+Player $2$: 
+
+
+$$\begin{align}
+0 &= -p_U + 5(1- p_U)\\
+p_U &= 5/6\\
+\end{align}$$
+
+
+#### Perturbed Game
+Introduce some perturbation based on a type. Suppose $\theta_i \sim \text{Unif}[-1,1]$, fix $\epsilon > 0$, and let the payoffs be 
+
+
+|      | Left   | Right  |
+| ---- | ------ | ------ |
+| Up   | $\epsilon \theta_1,\epsilon \theta_2$  | $\epsilon \theta_1,-1$ |
+| Down | $-1,\epsilon \theta_2$ | $3,5$  |
+
+Still have $E[\epsilon \theta_1] = 0$. Now, solve for cut-point Bayesian Nash Equilibrium. 
+
+Player $1$ plays $U$ if $\theta_1 > c_1$, $D$ otherwise; and Player $2$ playes $L$ if $\theta_2 > c_2$, $R$ otherwise.  Start with Player $1$. 
+
+$$\begin{align}
+E[u(U)] &= E[u(D)]\\ 
+\epsilon c_1  &= -p_L + 3(1- p_L)\\
+c_1 &= \frac{3 - 4p_L}{\epsilon}\\
+&= \frac{3 - 4P(\theta_2 > c_2)}{\epsilon}\\
+&= \frac{3 - 2(1 - c_2)}{\epsilon}\\
+&= \frac{2c_2 + 1}{\epsilon}\\
+\end{align}$$
+
+
+
+
+
+$$\begin{align}
+E[u(L)] &= E[u(R)]\\ 
+\epsilon c_2  &= -1(P(s_1 = U)) + 5 P(s_1 = D)\\
+&= -(1-c_1)/2 + 5(c_1 + 1)/2\\
+&= -1/2+c_1/2 + 5c_1/2 + 5/2\\
+c_2 &= (3c_1 + 2)/\epsilon\\
+&= \frac{3((2 c_2 + 1)/\epsilon) + 2}{\epsilon}\\
+&= \frac{6 c_2/\epsilon + 3/\epsilon + 2}{\epsilon}\\
+&= \frac{6 c_2 + 3 + 2\epsilon}{\epsilon^2}\\
+c_2 &= \frac{3 + 2 \epsilon}{\epsilon^2  -6 }\\
+\end{align}$$
+
+So in the limit, $c_2 = -1/2$; probability $\theta_2 > c_2 = 3/4$, so $p_L = 3/4$. 
+
+
+
+
+### Example 2 (Inspection Game)
+
+#### Perfect Information Game
+
+An agent chooses 'Work' or 'Shirk'. Working costs $c$. The principal has hired the agent to do work, and has to choose to inspect or not; inspection costs $h$. If the worker works, the principal gets $v$; the agent gets paid $w$ unless they are caught shirking. Then
+
+|       | Inspect      | Don't      |
+| ----- | ------------ | ---------- |
+| Shirk | $0, -h$      | $w, -w$     |
+| Work  | $w - c, v-h-w$ | $w - c, v-w$ |
+
+
+Suppose $w > c$ for interestingness - otherwise, shirk would be dominant strategy. Suppose also that $h < w$; otherwise never would inspect. 
+
+There's no pure strategy equilibrium: agent's BR to inspecting is to work, and to non-inspecting to shirk. Principal's BR to shirk is to inspect, and to work is to not inspect. So mixture is required. Let $p$ be the probability of inspection, $q$ of shirking.
+
+Agent's indifference condition.
+$$\begin{align}
+E[u(S)] &= E[u(W)]\\
+w(1-p) &= w-c\\
+1- p &= 1 - c/w\\
+p &= c/w\\
+\end{align}$$
+Principal's:
+
+$$\begin{align}
+E[u(I)] &= E[u(D)]\\
+q(-h) + (1-q)(v - h - w) &= q(-w) + (1-q)(v-w)\\
+q(w - h) &= (1-q)(v - w - v + h + w)\\
+q(w - h) &= (1-q)(h)\\
+qw - qh &= h - qh\\
+q &= h/w\\
+\end{align}$$
+#### Perturbation
+
+Perturb $c$ and $h$; draw $\theta_A, \theta_P$ from $\text{Unif}[-1/2,1/2]$, and let the game be: 
+
+|       | Inspect      | Don't      |
+| ----- | ------------ | ---------- |
+| Shirk | $0, -h - \epsilon \theta_P$      | $w, -w$     |
+| Work  | $w - c - \epsilon \theta_A, v-h- \epsilon \theta_P-w$ | $w - c- \epsilon \theta_A, v-w$ |
+
+The agent will shirk for sufficiently large $\theta_A$ and work otherwise; the principal will not inspect for sufficiently large $\theta_P$. Let the cutpoints be $c_A, c_P$. 
+
+Solve for $c_A$ as the value that makes the agent indifferent; let probabilities be $p, q$ as before. 
+
+$$\begin{align}
+E[u(S)] &= E[u(W)]\\
+w(1-p) &= w-c -\epsilon c_A\\
+w-wp &= w-c -c_A\\
+c_A &= \frac{wp - c}{\epsilon}\\
+&= \frac{wP(\theta_P>c_P) - c}{\epsilon}\\
+&= \frac{w(1/2- c_P) - c}{\epsilon}\\
+\end{align}$$
+
+For $c_P$: 
+$$\begin{align}
+E[u(I)] &= E[u(D)]\\
+q(-h - \epsilon c_P) + (1-q)(v - h - \epsilon c_P- w) &= q(-w) + (1-q)(v-w)\\
+q( w-h - \epsilon c_P)  &= (1-q)(v-w - (v - h - \epsilon c_P- w))\\
+q( w-h - \epsilon c_P)  &= (1-q)(h + \epsilon c_P)\\
+qw-qh - q\epsilon c_P  &= (h + \epsilon c_P) - qh - q\epsilon c_P\\
+qw&= h + \epsilon c_P\\
+c_P &= \frac{wq -h}{\epsilon}\\
+&= \frac{wP(\theta_A > c_A) -h}{\epsilon}\\
+&= \frac{w(1/2  - c_A) -h}{\epsilon}
+\end{align}$$
+
+
+Then plug in the above for $c_A$: 
+
+$$\begin{align}
+c_P &= \frac{w(1/2  - \frac{w(1/2- c_P) - c}{\epsilon}) -h}{\epsilon}\\
+&= \frac{w\epsilon(1/2  - \frac{w/2- wc_P - c}{\epsilon}) -h\epsilon}{\epsilon^2}\\
+&= \frac{w\epsilon/2  - w[w/2- wc_P - c] -h\epsilon}{\epsilon^2}\\
+\epsilon^2 c_P&= w\epsilon/2  - w^2/2+ w^2c_P + wc -h\epsilon\\
+c_P&= \frac{\epsilon(w - 2h)  + w(2c-w)}{2(\epsilon^2 - w^2)}\\
+\end{align}$$
+So as $\epsilon \to 0$ this becomes 
+
+$$ -\frac{w(2c-w)}{2w^2} = -\frac{2c-w}{2w} = \frac{w- 2c}{2w} $$
+
+Then $Pr(\theta_P>c_P)$, in the limit, is 
+$$\frac{1}{2} - \frac{w - 2c}{2w} = \frac{1}{2} - \frac{1}{2} + \frac{c}{2} = \frac{c}{w}$$
+>>>>>>> c87df8435b6b64748a1525cde800d4fa60b4256b

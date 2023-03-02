@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Thursday, March 2nd 2023, 1:35 pm
-date updated: Thursday, March 2nd 2023, 1:56 pm
+date updated: Thursday, March 2nd 2023, 2:06 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -25,7 +25,15 @@ Some problems arise with [[🚧Game Theory 501 VI - Imperfect Information#Perfec
 ![[Game Theory 501 VII - Sequential Equilibrium 2023-03-02 13.58.13.excalidraw]]
 
 
-### Signaling what you don't know
+Suppose that $\mu_3(x) =1$; then Player $3$ will play $L_3$ at $x$ or $x'$. So Player $1$ will prefer to play $L_1$; Player $2$ playes $R_2$; we're all set with sequential rationality. The above then is a PBE: I don't need to check Bayes' Rule because everything is off the path except $L1$. 
+
+
+But $R_2$ dominates $L_2$ conditional on reaching this subgame. So it doesn't seem very reasonable for Player $3$ to hold this belief (on which the whole equilibrium hinges). This is a subgame imperfection that PBE doesn't pick up (we could say that the stated intention to play $s_2 = R_2, s_3 = L3$ is not credible). 
+
+This example serves to demonstrate that PBE and SPNE may be overlapping categories, but neither contains the other. 
+
+
+### Signaling What You Don't Know
 
 Consider the following game:
 
@@ -48,3 +56,26 @@ We can't use Bayes' Rule here because we are off the path. But intuitively this 
 
 So this motivates another solution concept desideratum: Nobody should be able to signal something they don't know. 
 
+
+## Sequential Equilibrium
+
+```ad-warning
+title:
+Warning: despite years of efforts by pointy-headed theory nerds, this concept is not extensible to infinite extensive forms. 
+```
+
+
+We might be able to salvage PBE: we could add 'don't signal what you don't know', and also subgame perfection or something. At this point, though, why not ditch this frankenconcept and come up with a new one? 
+
+This new concept is called 'sequential rationality' and addresses the problems with PBE by tackling the issue of off-path beliefs by mixing a little bit over everything; but then uses a clever limiting trick to avoid suggesting that players e.g. play strictly dominated strategies with positive probability. 
+
+
+
+$\sigma, \mu$ constitutes a <font color=gree>consistent assessment</font> if there exist sequences of strategies/beliefs $\sigma_n, \mu_n$ such that 
+1) $\sigma_n$ implies $\mu_n$ by Bayes' Rule; 
+2) $\sigma_n \to \sigma$; and 
+3) $\mu_n \to \mu$. 
+A sequential equilibrium occurs when $\sigma, \mu$ are best responses, but also that $\sigma_n$ and $\mu_n$ exist. We do not require that $\sigma_n$ and $\mu_n$ be sequentially rational. The trick is using the sequence $\sigma_n$ to put a bit of positive probability on every strategy, and then have that go away as needed. 
+
+
+### Solve t

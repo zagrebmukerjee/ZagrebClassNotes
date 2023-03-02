@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Thursday, March 2nd 2023, 1:35 pm
-date updated: Thursday, March 2nd 2023, 2:06 pm
+date updated: Thursday, March 2nd 2023, 2:20 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -77,5 +77,21 @@ $\sigma, \mu$ constitutes a <font color=gree>consistent assessment</font> if the
 3) $\mu_n \to \mu$. 
 A sequential equilibrium occurs when $\sigma, \mu$ are best responses, but also that $\sigma_n$ and $\mu_n$ exist. We do not require that $\sigma_n$ and $\mu_n$ be sequentially rational. The trick is using the sequence $\sigma_n$ to put a bit of positive probability on every strategy, and then have that go away as needed. 
 
+In perfect-information games, the Seq. Eq. is an SPNE. 
 
-### Solve t
+## Solves the Problems
+
+### Subgame Problem
+
+![[Game Theory 501 VII - Sequential Equilibrium 2023-03-02 13.58.13.excalidraw]]
+
+
+Sequential equilibrium doesn't permit for $\mu(x) =1$. 
+
+Specifically, by Bayes' Rule:
+
+$$\mu_n(x) = \frac{P(\sigma_{2,n} = L_2 \cap \sigma_{1,n} = R_1)}{P( \sigma_{1,n} = R_1)}$$
+We know that $P(\sigma_{1.n} = L_1) \to 1$ in the limit; so we can call it $1 - \epsilon_{1,n}$; similarly $P(\sigma_{2,n} = R_2) = $1 - \epsilon_{2,n}$. Then 
+
+$$\mu_n(x) = \frac{\epsilon_{1,n}\epsilon_{2,n}}{\epsilon_{1,n}} = \epsilon_{2,N} \to 0$$
+In other words, it's impossible to create some $\mu_n$ that allows for this sequential equilibrium. 

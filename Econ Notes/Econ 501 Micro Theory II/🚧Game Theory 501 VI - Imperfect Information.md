@@ -67,6 +67,8 @@ $$\begin{align}
 c_1 &= \frac{3 + \sqrt{9 +4 \epsilon}}{2}
 \end{align}$$
 
+## Bayesian Nash Equilibrium
+
 ### Public Goods Provision
 
 Two players simultaneously decide whether to pay for a public good. If at least one pays, both accrue a benefit of $1$. If none do, $0$. Cost of contributing is $c_i$. $c$ is drawn fro continuous and strictly increasing cdf $F$ on $[\underline c, \overline c]$. 
@@ -82,7 +84,6 @@ So Player $1$ knows that $z_j = F(c_j^*)$; the probability another will contribu
 
 $$\begin{align}
 E[u(s_i = 0, c_i^*)] &= E[u(s_i = 1, c_i^*)]\\
-<<<<<<< HEAD
 1 - c_i &= z_j\\
 &= F(c_j)\\
 &= F(1 - F(c_i))\\
@@ -90,11 +91,13 @@ F\inv(1 - c_i) &= 1 - F(c_i)\\
 \end{align}$$
 
 This dictates a symmetry to the problem: $c_i = c_j = 1 - F(c_j)$. 
-=======
+
+$$\begin{align}
 1 - c_i^* &= z_j\\
 c_i^* &= 1-F(c_j^*)\\
 &= 1-F(1 - F(c_i^*))\\
 \end{align}$$
+
 
 Symmetry lets you say that $c_i^* = c_j^* = c^*$; and then for a given $F$, the above can be solved. 
 
@@ -256,4 +259,4 @@ $$ -\frac{w(2c-w)}{2w^2} = -\frac{2c-w}{2w} = \frac{w- 2c}{2w} $$
 
 Then $Pr(\theta_P>c_P)$, in the limit, is 
 $$\frac{1}{2} - \frac{w - 2c}{2w} = \frac{1}{2} - \frac{1}{2} + \frac{c}{2} = \frac{c}{w}$$
->>>>>>> c87df8435b6b64748a1525cde800d4fa60b4256b
+## Perfect Bayesian Equilibrium

@@ -1,12 +1,7 @@
 ---
 aliases:
 creation date: Sunday, February 26th 2023, 12:57 pm
-<<<<<<< HEAD
-date updated: Sunday, February 26th 2023, 3:29 pm
-=======
-date updated: Monday, February 27th 2023, 8:57 pm
->>>>>>> c87df8435b6b64748a1525cde800d4fa60b4256b
-
+date updated: Friday, March 3rd 2023, 5:51 pm
 notetype: "Math Class Note"
 cssclass: math-class-note
 
@@ -37,7 +32,7 @@ But to turn this into a strategy, Player $1$ also needs to think about Player $2
 
 But then Player $1$ needs to understand that Player $2$ understands the above; and so Player $2$ will incorporate some guess about Player $1$'s guess about Player $2$'s guess about Player $1$. We can very quickly enter some sort of problem of infinite regress.
 
-### Imperfect Information
+### A Simplifying Assumption
 Suppose $\theta_i$ is drawn from $\text{Unif}(0, \epsilon_i)$, and both players know that. Player $1$ doesn't know what Player $2$ will do, but knows that it will be increasing in $\theta_2$. Therefore, Player $2$'s choice can be represented as a cutoff: if $\theta_2 > c_2$, $s_2 = G$.  
 
 Then we can reason about Player $1$'s choice by the same monotonicity logic, ie. finding $c_1$ such that $\theta_1 > c_1 \implies s_1 = P$. It follows that for $\theta_1 = c_1$, Player $1$ is indifferent between $P$ and $G$.
@@ -64,18 +59,27 @@ $$\begin{align}
 c_1 &= \frac{3 + \sqrt{9 +4 \epsilon}}{2}
 \end{align}$$
 
-## Bayesian Nash Equilibrium
+### Imperfect Information
 
 
 A framework to analyze such games was developed by Harsanyi (with no particular basis in fact, but an eye to tractability). One may suppose that the game has a specific type of incomplete information: Nature draws $\theta_1, \theta_2$ from a commonly known distribution. So players have *common priors* and then can anchor their guesses about others' strategies in those priors. We can call the non-public information a <font color=gree>type</font>  (eg. an incumbent deterring a challenger might be of the strong or weak type). 
 
 
-This turns in
+This turns incomplete information into <font color=gree>imperfect information</font>. 
 
+## Bayesian Nash Equilibrium
 
+Suppose types $\theta = \theta_1, \ldots, \theta_n$ in $\Theta_1 \times \ldots \times \Theta_n$, a joint distribution $P \in \Delta \Theta$, and utilities of the form $u_i(\sigma_i |\theta_i, \theta_{-i})$. Note that my utility can depend on others' type.  
 
+Players are told their type. Form beliefs based on private information, $P(\theta_{-i}|\theta_i)$. They form strategies $\sigma_i : \Theta \to \Delta(A_i)$. 
 
-### Public Goods Provision
+Then they have expected utility 
+$$ E(u) = \sum_{\theta_{-i}} P(\theta_{-i}|\theta_i) u(\sigma_i|\theta_{-i},\theta_i)$$
+
+The <font color=gree>Bayesian Nash Equilibrium</font> occurs when $\sigma_i$ is preferable to any other $\sigma_i$. Note: if there exists a profitable deviation, there exists a profitable pure deviation. 
+
+```ad-example
+title: Public Goods Provision
 
 Two players simultaneously decide whether to pay for a public good. If at least one pays, both accrue a benefit of $1$. If none do, $0$. Cost of contributing is $c_i$. $c$ is drawn fro continuous and strictly increasing cdf $F$ on $[\underline c, \overline c]$. 
 
@@ -106,6 +110,8 @@ c_i^* &= 1-F(c_j^*)\\
 
 
 Symmetry lets you say that $c_i^* = c_j^* = c^*$; and then for a given $F$, the above can be solved. 
+```
+
 
 
 ## Purification
@@ -265,4 +271,7 @@ $$ -\frac{w(2c-w)}{2w^2} = -\frac{2c-w}{2w} = \frac{w- 2c}{2w} $$
 
 Then $Pr(\theta_P>c_P)$, in the limit, is 
 $$\frac{1}{2} - \frac{w - 2c}{2w} = \frac{1}{2} - \frac{1}{2} + \frac{c}{2} = \frac{c}{w}$$
+
 ## Perfect Bayesian Equilibrium
+
+The PBE consists of two components: sequential rationality and Bayes' Rule. 

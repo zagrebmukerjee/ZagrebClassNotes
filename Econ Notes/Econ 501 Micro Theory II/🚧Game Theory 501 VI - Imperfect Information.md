@@ -38,9 +38,6 @@ But to turn this into a strategy, Player $1$ also needs to think about Player $2
 But then Player $1$ needs to understand that Player $2$ understands the above; and so Player $2$ will incorporate some guess about Player $1$'s guess about Player $2$'s guess about Player $1$. We can very quickly enter some sort of problem of infinite regress.
 
 ### Imperfect Information
-
-A framework to analyze such games was developed by Harsanyi (with no particular basis in fact, but an eye to tractability). One may suppose that the game has a specific type of incomplete information: Nature draws $\theta_1, \theta_2$ from a commonly known distribution. So players have *common priors* and then can anchor their guesses about others' strategies in those priors. 
-
 Suppose $\theta_i$ is drawn from $\text{Unif}(0, \epsilon_i)$, and both players know that. Player $1$ doesn't know what Player $2$ will do, but knows that it will be increasing in $\theta_2$. Therefore, Player $2$'s choice can be represented as a cutoff: if $\theta_2 > c_2$, $s_2 = G$.  
 
 Then we can reason about Player $1$'s choice by the same monotonicity logic, ie. finding $c_1$ such that $\theta_1 > c_1 \implies s_1 = P$. It follows that for $\theta_1 = c_1$, Player $1$ is indifferent between $P$ and $G$.
@@ -68,6 +65,15 @@ c_1 &= \frac{3 + \sqrt{9 +4 \epsilon}}{2}
 \end{align}$$
 
 ## Bayesian Nash Equilibrium
+
+
+A framework to analyze such games was developed by Harsanyi (with no particular basis in fact, but an eye to tractability). One may suppose that the game has a specific type of incomplete information: Nature draws $\theta_1, \theta_2$ from a commonly known distribution. So players have *common priors* and then can anchor their guesses about others' strategies in those priors. We can call the non-public information a <font color=gree>type</font>  (eg. an incumbent deterring a challenger might be of the strong or weak type). 
+
+
+This turns in
+
+
+
 
 ### Public Goods Provision
 

@@ -274,4 +274,4 @@ $$\frac{1}{2} - \frac{w - 2c}{2w} = \frac{1}{2} - \frac{1}{2} + \frac{c}{2} = \f
 
 ## Perfect Bayesian Equilibrium
 
-The PBE consists of two components: sequential rationality and Bayes' Rule. 
+The PBE is generally an extensive form friendly solution concept. It consists of two components: sequential rationality and Bayes' Rule. 

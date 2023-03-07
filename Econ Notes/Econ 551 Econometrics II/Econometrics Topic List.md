@@ -31,6 +31,9 @@ Measurement Error
 - classical measurement error 
 
 Law of Iterated Expectations, how to use it in problems
-- example: PS2, Q4. 
+- example: PS2, Q4: missing at random creates unbiased if $E[e|X]=0$. See: aronow and miller 
 - example: PS3, Heckman Selection
 - example: PS3, propensity score theorem
+
+FWL theorem/partialling out/iterated projection
+

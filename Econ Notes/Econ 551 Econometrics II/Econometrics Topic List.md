@@ -37,8 +37,5 @@ Law of Iterated Expectations, how to use it in problems
 
 FWL theorem/partialling out/iterated projection
 
-
-Convergence in probability; properties
-
-Convergence in distribution; properties
-- especially if $C_n \to_p c$ and $Y_n \to_d Y$ then $C_n Y_n \to_d cY$. 
+Convergence in probability; properties; Convergence in distribution; properties
+- especially: if $C_n \to_p c$ and $Y_n \to_d Y$ then $C_n Y_n \to_d cY$. To find conv in d: try this first then CMT then delta method

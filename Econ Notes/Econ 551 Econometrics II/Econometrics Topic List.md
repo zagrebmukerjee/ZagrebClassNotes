@@ -31,6 +31,6 @@ Measurement Error
 - classical measurement error 
 
 Law of Iterated Expectations, how to use it in problems
-- example: PS2
+- example: PS2, Q4. 
 - example: PS3, Heckman Selection
 - example: PS3, propensity score theorem

@@ -1,7 +1,7 @@
 ---
 aliases:
-creation date: 2023-03-06 18:39
-date updated: 2023-03-06 18:39
+creation date: Monday, March 6th 2023, 6:39 pm
+date updated: Tuesday, March 7th 2023, 1:42 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -37,3 +37,8 @@ Law of Iterated Expectations, how to use it in problems
 
 FWL theorem/partialling out/iterated projection
 
+
+Convergence in probability; properties
+
+Convergence in distribution; properties
+- especially if $C_n \to_p c$ and $Y_n \to_d Y$ then $C_n Y_n \to_d cY$. 

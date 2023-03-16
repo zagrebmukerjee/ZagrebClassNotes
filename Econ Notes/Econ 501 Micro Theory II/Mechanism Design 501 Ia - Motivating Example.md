@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Thursday, March 16th 2023, 2:10 pm
-date updated: Thursday, March 16th 2023, 2:33 pm
+date updated: Thursday, March 16th 2023, 2:43 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -52,14 +52,13 @@ $$\begin{align}
 \overline \theta V(\overline q) - \overline T &> 0\\
 \end{align}$$
 
-This contradicts the above, meaning that $IR_1$ must hold in maximization. The intuition is that $\overline \theta > \underline \theta$, meaning that the marginal unit is better for the high type. So if there's some bundle for the low type that gives him positive utility, the high type could also consume that bundle for positive utility; and the incentive-compatibility means that his bundle must give him at least as much utility as that. 
+This contradicts the above, meaning that $IR_1$ must bind in maximization. The intuition is that $\overline \theta > \underline \theta$, meaning that the marginal unit is better for the high type. So if there's some bundle for the low type that gives him positive utility, the high type could also consume that bundle for positive utility; and the incentive-compatibility means that his bundle must give him at least as much utility as that. 
 
 The binding of $IR_1$ lets us say that $\underline T = \underline \theta V(\underline q)$.
 
-Now suppose $IC_2$ doesn't bind. Then 
+$IC_1$ is somewhat hollow. The low type consumer gets utility $0$ from participation. So if $IC_1$ binds then the low type consumer gets $0$ utility from both bundles since he is indifferent. But the indifference curve for the high type is steeper. $IC_2$ implies that they weakly prefer the high type bundle, so the indifference curve that crosses at the low type bundle must lie above at the high type, meaning that the monopolist is undercharging. So $IC_2$ must hold. A pictorial illustration: 
 
-$$\begin{align}
-\overline \theta V(\overline q) - \overline T &> \overline \theta V(\underline q) - \underline T \\
-&> \overline \theta V(\underline q) - \underline \theta V(\underline q)\\
-\overline \theta V(\overline q) - \overline T &> (\overline \theta - \underline \theta) V(\underline q)\\
-\end{align}$$
+![[Mechanism Design 501 Ia - Motivating Example 2023-03-16 14.45.11.excalidraw]]
+
+
+$IC_2$ implies that $\overline \theta

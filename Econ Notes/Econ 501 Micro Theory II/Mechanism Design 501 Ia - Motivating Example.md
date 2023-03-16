@@ -61,4 +61,10 @@ $IC_1$ is somewhat hollow. The low type consumer gets utility $0$ from participa
 ![[Mechanism Design 501 Ia - Motivating Example 2023-03-16 14.45.11.excalidraw]]
 
 
-$IC_2$ implies that $\overline \theta
+$IC_2$ implies that $\overline \theta V(\overline q) - \overline T = \overline \theta V(\underline q) - \underline T$. 
+
+So transform the profit maximization problem
+$$\begin{align}
+
+\end{align}$$
+

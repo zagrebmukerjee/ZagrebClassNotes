@@ -55,8 +55,8 @@ $$ E[Y] = E[E[Y|\text{Sex}]]$$
 If I want to know the earnings of, say, the male subpopulation, I can also subdivide that: 
 $$\begin{align}
 E[Y|\text{Sex} = \text{Male}] &= \int Y f(Y) \mathbb 1[\text{Male}]dy\\
-&= \text{Male}] = \int Y f(Y) \mathbb 1[\text{Male}]\mathbb 1[\text{College}]dy + \int Y f(Y) \mathbb 1[\text{Male}]\mathbb 1[\text{No College}]dy\\
-&= E[E[Y|\text{Sex} = \text{Male}, \text{College}]]\\
+& = \int Y f(Y) \mathbb 1[\text{Male}]\mathbb 1[\text{College}]dy + \int Y f(Y) \mathbb 1[\text{Male}]\mathbb 1[\text{No College}]dy\\
+&= E_\text{college}[E[Y|\text{Sex} = \text{Male}, \text{College}]]\\
 \end{align}$$
 
 And finally, I can use a double-breakdown to get the unconditional expectation of $Y$ again: 

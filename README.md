@@ -2,7 +2,7 @@
 #types/meta 
 These are notes I've taken in a variety of classes, transcribed into markdown and occasionally rendered to PDF. 
 It's a habit I acquired sometime in college - I find it's a great tool for synthesizing what I have learned, and testing my own understanding. 
-I think of it as writing a very rough and terse draft of a textbook.
+I think of it as writing a very rough draft of a textbook.
 As Feynman said, "If you want to master something, teach it."
 
 
@@ -13,6 +13,8 @@ As Feynman said, "If you want to master something, teach it."
 3. [Linear Algebra 3B1B](https://github.com/zagrebmukerjee/ZagrebClassNotes/tree/master/Math%20Notes/Linear%20Algebra%203B1B%20Notes): Introduction to Linear Algebra by 3Blue1Brown on Youtube. A high-level but thoughtful coverage of the topic. I recommend it as a companion to an LA class. Mostly complete.
 4. [Gov 2002](https://github.com/zagrebmukerjee/ZagrebClassNotes/tree/master/Stats%20Notes/Gov%202002%20Notes), Harvard Quantitative Methods II. Mid-level econometrics class with Gov focus. In progress
 5. 18.06, MIT Linear Algebra. Taught by Gilbert Strang, available on [OpenCourseWare](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/). In progress
+6. ECON 500: Yale Microeconomic Theory Pt 1 (Larry Samuelson: Consumer choice, Johannes Horner: General Equilibrium)
+7. ECON 550: Yale Econometrics Pt 1 (Don Andrews)
 
 To be added: Econ 1011a, Honors Microeconomic Theory, once I find it. Real Analysis.
 

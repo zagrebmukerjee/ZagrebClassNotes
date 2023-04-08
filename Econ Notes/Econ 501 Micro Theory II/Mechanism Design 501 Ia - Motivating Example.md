@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Thursday, March 16th 2023, 2:10 pm
-date updated: Thursday, March 16th 2023, 2:43 pm
+date updated: Saturday, April 8th 2023, 11:36 am
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -63,8 +63,8 @@ Since $IC_2$ binds:
 $$
 \begin{aligned}
 \overline \theta V(\overline q) - \overline t &= \overline \theta V(\underline q) - \underline t\\
-\overline t &= \overline \theta V(\overline q) - \overline \theta V(\underline q)  + \underline t\\
-&= \overline \theta V(\overline q) - \overline \theta V(\underline q)  + \underline \theta V(\underline q)\\
+\overline t &= \overline \theta V(\overline q) - \overline \theta V(\underline q) + \underline t\\
+&= \overline \theta V(\overline q) - \overline \theta V(\underline q) + \underline \theta V(\underline q)\\
 \end{aligned}
 $$
 
@@ -76,5 +76,6 @@ $$\begin{align}
 d\pi/d\overline q &= \overline p(\overline \theta V'(\overline q) - c)\\
 V'(\overline q) &= \overline p c/\overline \theta \\ 
 d\pi/d\underline q &= \overline p (\underline \theta - \overline \theta  )V'(q) + \underline p (\underline \theta V'(\underline q) - c)\\
-
+V'(\underline q) &= \frac{\underline p c}{
+\overline p (\underline \theta - \overline \theta  ) + \underline p \underline \theta}
 \end{align}$$

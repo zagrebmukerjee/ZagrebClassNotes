@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Saturday, April 8th 2023, 12:13 pm
-date updated: Saturday, April 8th 2023, 12:35 pm
+date updated: Saturday, April 8th 2023, 12:38 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -111,8 +111,19 @@ $$ t (\theta) = t(\underline \theta) - \theta v(q(\underline \theta)) + \theta v
 This is a cumbersome formula but lets us say that the transfer schedule is pinned down by the lowest transfer and the quantity schedule, which greatly reduces the dimensionality of the problem.  <font color=#F7B801>What is the intuition?</font>
 
 #### Proof
-Conditions imply IC: Suppose we have the conditions. Then 
+Conditions imply IC: Suppose we have the conditions. Assume without loss that $\theta > \theta'$. 
 $$\begin{align}
-U(\theta) - \theta V(q(\theta')) - t(\theta') &= U(\theta') +(\theta - \theta')V(q(\theta'))\\
-&= U(\underline \theta) + \int_{\underline \theta}^\theta V(q(x)) dx + (\theta - \theta')V(q(\theta'))
+U(\theta) - \theta V(q(\theta')) - t(\theta') &= U(\theta) - U(\theta') +(\theta' - \theta)V(q(\theta'))\\
+&= \int_{\theta'}^{\theta} V(q(x)) dx + (\theta - \theta')V(q(\theta'))\\
 \end{align}$$
+Both the integral term and the difference are positive; hence, IC is satisfied. 
+
+$IC$ implies conditions: 
+$IC$ implies that $U(\theta)$ is the maximized utility, $\max_{\theta'} \theta v(q(\theta')) - t(\theta')$. Can check that this is convex and absolutely continuous maximization problem. If differentiable, $U'(\theta) = V(q(\theta))$, so $U(\theta) = \int V(q(\theta)) + C$ which establishes the conditions <font color=#F7B801>how?</font>
+
+### Applying Lemma
+
+Returning to the screening problem, the lemma lets us pin down the screening problem objective function to a much greater degree: 
+
+$$ \pi = \int_{\underline \theta}^{\overline \theta} (t(\theta) - c(q(\theta)) f(\theta) d\theta$$ 
+such that $q$ is nondecreasing in $\theta$, and $U = U(\underline \theta) + \int \ldots$ as well as $U(\theta > 0$. Note: Given $IC$, $IR$/ participation constraint is satisfied iff $U(\underline \theta) \geq 0$. The $IR$ must bind for the lowest type. If it doesn't, it wouldn't break $IR$ to raise everyone's payment by a tiny amount (also keeping $IC$).

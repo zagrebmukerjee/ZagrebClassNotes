@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Saturday, April 8th 2023, 12:13 pm
-date updated: Saturday, April 8th 2023, 12:38 pm
+date updated: Saturday, April 8th 2023, 1:18 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -104,7 +104,7 @@ This is a very large problem and/or search space. To simplify, employ this lemma
 
 $(q,t)$ satisfies $IC$ if and only if: 
 1) q is nondecreasing, and 
-2) $\forall \theta,\; U(\theta) = U(\underline \theta) + \int_{\underline \theta}^\theta V(q(x)) dx$. This latter is the 'Envelope Formula' of Milgrom and Segal (2002). 
+2) $\forall \theta,\; U(\theta) = U(\underline \theta) + \int_{\underline \theta}^\theta V(q(x)) dx$. This latter is the 'Envelope Formula' of [[Milgrom and Segal 2002 Envelope Theorems for Arbitrary Choice Sets|Milgrom and Segal 2002]]. 
 
 The latter implies that 
 $$ t (\theta) = t(\underline \theta) - \theta v(q(\underline \theta)) + \theta v(q(\theta)) - \int_{\underline \theta}^\theta V(q(x)) dx$$
@@ -123,7 +123,16 @@ $IC$ implies that $U(\theta)$ is the maximized utility, $\max_{\theta'} \theta v
 
 ### Applying Lemma
 
-Returning to the screening problem, the lemma lets us pin down the screening problem objective function to a much greater degree: 
+Returning to the screening problem, the lemma lets us pin down the screening problem more. Recall:
 
 $$ \pi = \int_{\underline \theta}^{\overline \theta} (t(\theta) - c(q(\theta)) f(\theta) d\theta$$ 
-such that $q$ is nondecreasing in $\theta$, and $U = U(\underline \theta) + \int \ldots$ as well as $U(\theta > 0$. Note: Given $IC$, $IR$/ participation constraint is satisfied iff $U(\underline \theta) \geq 0$. The $IR$ must bind for the lowest type. If it doesn't, it wouldn't break $IR$ to raise everyone's payment by a tiny amount (also keeping $IC$).
+such that $q$ is nondecreasing in $\theta$, and $U = U(\underline \theta) + \int \ldots$ as well as $U(\theta > 0$. Note: Given $IC$, $IR$/ participation constraint is satisfied iff $U(\underline \theta) \geq 0$. The $IR$ must bind for the lowest type. If it doesn't, it wouldn't break $IR$ to raise everyone's payment by a tiny amount (also keeping $IC$). So we have $U(\underline \theta) = 0$, simplifying the problem further: 
+
+$$ U(\theta) = \int_{\underline \theta}^\theta V(q(x)) dx$$
+
+In general, this is positive. We can think of this as the consumer managing to retain some of the consumer surplus - or, as the book/class calls it, 'information rent extracted by the buyer'. The tariff becomes 
+
+$$ t(\theta) = \theta v(q(\theta)) - \int_{\underline \theta}^\theta v(q(x))dx$$ as a rearrangement of the lemma condition. Then the seller's problem can be written as a function of $q$ alone: 
+
+$$ \max_{q \text{ non-decreasing}} \int_{\underline \theta}^{\overline \theta} f(\theta) \bigg(\theta v(q(\theta)) - \left[\int_{\underline \theta}^\theta v(q(x))dx \right]- c(q(\theta)) \bigg)d\theta$$
+Rearranging finds a term $f(\theta) 

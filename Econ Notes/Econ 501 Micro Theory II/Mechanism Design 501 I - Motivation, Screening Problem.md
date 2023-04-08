@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Saturday, April 8th 2023, 12:13 pm
-date updated: Saturday, April 8th 2023, 1:34 pm
+date updated: Saturday, April 8th 2023, 1:44 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -141,13 +141,24 @@ $$\begin{align}
 &= F(\theta)\int_{\underline \theta}^\theta v(q(x))dx \bigg|_{\theta = \underline \theta} ^{\overline \theta} - \int_{\underline \theta}^{\overline \theta}  F(x)v(q(x))dx\\
 F(\theta)\int_{\underline \theta}^\theta v(q(x))dx \bigg|_{\theta = \underline \theta} ^{\overline \theta}&= F(\overline \theta)\int_{\underline \theta}^{\overline\theta} v(q(x))dx - F(\underline \theta)\int_{\underline \theta}^{\underline\theta} v(q(x))dx \\
 &= \int_{\underline \theta}^{\overline\theta} v(q(x))dx \\
-\int_{\underline \theta}^{\overline \theta} f(\theta) \int_{\underline \theta}^\theta v(q(x))dx d\theta &= \int_{\underline \theta}^{\overline\theta} v(q(x))dx(1-  - F(x)v(q(x))dx\\
+\int_{\underline \theta}^{\overline \theta} f(\theta) \int_{\underline \theta}^\theta v(q(x))dx d\theta &= \int_{\underline \theta}^{\overline\theta} v(q(\theta))(1- F(\theta))d\theta\\
 \end{align}$$
 
 Then: 
 
 $$\begin{align}
 \pi(q) &= \int_{\underline \theta}^{\overline \theta} f(\theta) \bigg(\theta v(q(\theta)) - \left[\int_{\underline \theta}^\theta v(q(x))dx \right]- c(q(\theta)) \bigg)d\theta\\
-&= \int_{\underline \theta}^{\overline \theta} f(\theta)\theta v(q(\theta)) - f(\theta)\left[\int_{\underline \theta}^\theta v(q(x))dx \right]- f(\theta)c(q(\theta)) \bigg)d\theta\\
-&=\int_{\underline \theta}^{\overline \theta} f(\theta)\theta v(q(\theta)) - \left[F(\overline \theta)\int_{\underline \theta}^{\overline\theta} v(q(x))dx + \right]- f(\theta)c(q(\theta)) \bigg)d\theta\\
+&= \int_{\underline \theta}^{\overline \theta} f(\theta)\bigg(\theta v(q(\theta))- c(q(\theta)) \bigg)d\theta - \int_{\underline \theta}^{\overline \theta}  f(\theta)\left[\int_{\underline \theta}^\theta v(q(x))dx \right]d\theta\\
+&= \ldots -\int_{\underline \theta}^{\overline\theta} v(q(\theta))(1- F(\theta))d\theta\\
+&= \ldots  -\int_{\underline \theta}^{\overline\theta} f(\theta)v(q(\theta))\left(\frac{1- F(\theta)}{f(\theta}\right)d\theta\\
+&= \int_{\underline \theta}^{\overline\theta} f(\theta) \left[ v(q(\theta)) \left(\theta - \frac{1- F(\theta)}{f(\theta} \right)- c(q(\theta) \right] \\
+&=  \int_{\underline \theta}^{\overline\theta} f(\theta) \left[ v(q(\theta)) \psi(\theta)- c(q(\theta) \right] \\
+&= E_\theta[v(q(\theta)) \psi(\theta)- c(q(\theta)]\\
+\end{align}$$
+
+In other words, the monopolist has to maximize considering this $\psi(\theta)$, called the <font color=gree>virtual type</font>. Then we can conceive of this as a social surplus plus a distortion term. In other words, rewriting an equation from above: 
+
+$$\begin{align}
+\pi &=  \int_{\underline \theta}^{\overline \theta} f(\theta)\bigg(\theta v(q(\theta))- c(q(\theta)) \bigg)d\theta - \int_{\underline \theta}^{\overline \theta}  f(\theta)\left[\int_{\underline \theta}^\theta v(q(x))dx \right]d\theta\\
+&= \underbracket{E_\theta\bigg[\theta v(q(\theta))- c(q(\theta)) \bigg]}_\text{Social surplus} - \underbracket{E_\theta\left[\int_{\underline \theta}^\theta v(q(x))dx \right]}_\text{Distortion Term}\\
 \end{align}$$

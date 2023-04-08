@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Saturday, April 8th 2023, 12:13 pm
-date updated: Saturday, April 8th 2023, 1:18 pm
+date updated: Saturday, April 8th 2023, 1:34 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -135,4 +135,19 @@ In general, this is positive. We can think of this as the consumer managing to r
 $$ t(\theta) = \theta v(q(\theta)) - \int_{\underline \theta}^\theta v(q(x))dx$$ as a rearrangement of the lemma condition. Then the seller's problem can be written as a function of $q$ alone: 
 
 $$ \max_{q \text{ non-decreasing}} \int_{\underline \theta}^{\overline \theta} f(\theta) \bigg(\theta v(q(\theta)) - \left[\int_{\underline \theta}^\theta v(q(x))dx \right]- c(q(\theta)) \bigg)d\theta$$
-Rearranging finds a term $f(\theta) 
+Rearranging finds a term $\int_{\underline \theta}^{\overline \theta} f(\theta) \int_{\underline \theta}^\theta v(q(x))dx d\theta$ which lends itself to integration by parts: let $u = \int v(q(x)) dx$ and $dv = f(\theta) d\theta$. Then 
+$$\begin{align}
+\int_a^b u dv &= uv\bigg |_{a}^{b} - \int_{a}^b v du\\
+&= F(\theta)\int_{\underline \theta}^\theta v(q(x))dx \bigg|_{\theta = \underline \theta} ^{\overline \theta} - \int_{\underline \theta}^{\overline \theta}  F(x)v(q(x))dx\\
+F(\theta)\int_{\underline \theta}^\theta v(q(x))dx \bigg|_{\theta = \underline \theta} ^{\overline \theta}&= F(\overline \theta)\int_{\underline \theta}^{\overline\theta} v(q(x))dx - F(\underline \theta)\int_{\underline \theta}^{\underline\theta} v(q(x))dx \\
+&= \int_{\underline \theta}^{\overline\theta} v(q(x))dx \\
+\int_{\underline \theta}^{\overline \theta} f(\theta) \int_{\underline \theta}^\theta v(q(x))dx d\theta &= \int_{\underline \theta}^{\overline\theta} v(q(x))dx(1-  - F(x)v(q(x))dx\\
+\end{align}$$
+
+Then: 
+
+$$\begin{align}
+\pi(q) &= \int_{\underline \theta}^{\overline \theta} f(\theta) \bigg(\theta v(q(\theta)) - \left[\int_{\underline \theta}^\theta v(q(x))dx \right]- c(q(\theta)) \bigg)d\theta\\
+&= \int_{\underline \theta}^{\overline \theta} f(\theta)\theta v(q(\theta)) - f(\theta)\left[\int_{\underline \theta}^\theta v(q(x))dx \right]- f(\theta)c(q(\theta)) \bigg)d\theta\\
+&=\int_{\underline \theta}^{\overline \theta} f(\theta)\theta v(q(\theta)) - \left[F(\overline \theta)\int_{\underline \theta}^{\overline\theta} v(q(x))dx + \right]- f(\theta)c(q(\theta)) \bigg)d\theta\\
+\end{align}$$

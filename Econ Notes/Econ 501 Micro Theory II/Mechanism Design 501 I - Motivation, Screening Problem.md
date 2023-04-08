@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Saturday, April 8th 2023, 12:13 pm
-date updated: Saturday, April 8th 2023, 12:13 pm
+date updated: Saturday, April 8th 2023, 12:35 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -92,4 +92,27 @@ $$\max_{q \geq 0} \max \{\theta v(q) - p(q),0 \}$$ where $0$ represents an outsi
 $$ \max_{q: \theta \to \R; \; t: \theta \to \R} \int_{\underline \theta}^{\overline \theta} [t(\theta) - c(q(\theta))] f(\theta) d\theta$$
 subject to $IC$ and $IR$ constraints. For convenience, create the following notation:  <font color=#F7B801>Is this interim utility</font>
 $$U(\theta): \theta V(q(\theta)) - t(\theta)$$
-for the utility of a consumer 
+for the utility of a consumer when they truthfully report their own type. So then the IC constraint is, as before, that no agent wants to pretend to be of another type. 
+
+$$ \forall \theta \;, \forall \theta'\; U(\theta) \geq \theta V(q(\theta')) - t(\theta'))$$
+The $IR$ or participation constraint is simply that $U(\theta) \geq 0 \; \forall \theta$. 
+
+This is a very large problem and/or search space. To simplify, employ this lemma: 
+
+
+### Lemma
+
+$(q,t)$ satisfies $IC$ if and only if: 
+1) q is nondecreasing, and 
+2) $\forall \theta,\; U(\theta) = U(\underline \theta) + \int_{\underline \theta}^\theta V(q(x)) dx$. This latter is the 'Envelope Formula' of Milgrom and Segal (2002). 
+
+The latter implies that 
+$$ t (\theta) = t(\underline \theta) - \theta v(q(\underline \theta)) + \theta v(q(\theta)) - \int_{\underline \theta}^\theta V(q(x)) dx$$
+This is a cumbersome formula but lets us say that the transfer schedule is pinned down by the lowest transfer and the quantity schedule, which greatly reduces the dimensionality of the problem.  <font color=#F7B801>What is the intuition?</font>
+
+#### Proof
+Conditions imply IC: Suppose we have the conditions. Then 
+$$\begin{align}
+U(\theta) - \theta V(q(\theta')) - t(\theta') &= U(\theta') +(\theta - \theta')V(q(\theta'))\\
+&= U(\underline \theta) + \int_{\underline \theta}^\theta V(q(x)) dx + (\theta - \theta')V(q(\theta'))
+\end{align}$$

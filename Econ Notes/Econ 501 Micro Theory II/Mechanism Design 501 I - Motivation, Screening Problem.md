@@ -162,3 +162,7 @@ $$\begin{align}
 \pi &=  \int_{\underline \theta}^{\overline \theta} f(\theta)\bigg(\theta v(q(\theta))- c(q(\theta)) \bigg)d\theta - \int_{\underline \theta}^{\overline \theta}  f(\theta)\left[\int_{\underline \theta}^\theta v(q(x))dx \right]d\theta\\
 &= \underbracket{E_\theta\bigg[\theta v(q(\theta))- c(q(\theta)) \bigg]}_\text{Social surplus} - \underbracket{E_\theta\left[\int_{\underline \theta}^\theta v(q(x))dx \right]}_\text{Distortion Term}\\
 \end{align}$$
+
+### Solving the Problem 
+
+To solve this, assume that $\psi(\theta)$, the virtual type, is nondecreasing in $\theta$. In other words, we want $\frac{1 - F(\theta)}{f(\theta)}$ to be nonincreasing, or $\frac{f(\theta)}{1 - F(\theta)}$, the <font color=gree>hazard rate</font>, to be nondecreasing. It turns out this is not so bad of a condition. 

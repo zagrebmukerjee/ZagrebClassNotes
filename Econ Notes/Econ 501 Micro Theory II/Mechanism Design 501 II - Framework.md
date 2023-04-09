@@ -31,3 +31,7 @@ A mechanism is a specification $((M_i), g)$ where $M_i$ is the set of actions av
 ![[Mechanism Design 501 II - Framework 2023-04-08 14.37.53.excalidraw|200]]
 
 The mechanism creates an incomplete information game: player $i$ has strategy $\sigma_i: \Theta_i \to M_i$, defining how she reacts to her available information, and utility $u_i(g(M), \Theta_i)$. eg. in the screening problem, we had $g$ as the price bundles, $M_i = \R$, and $g(q) = (q, p(q))$. 
+
+Then the planner has to look at the BNE of this game, which is characterized by: 
+
+$$ \forall i,\; \forall $$

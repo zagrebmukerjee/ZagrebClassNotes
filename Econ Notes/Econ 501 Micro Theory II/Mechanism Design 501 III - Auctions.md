@@ -4,7 +4,7 @@ aliases:
 - 'Second Price Auction' 
 - 'Revenue Equivalence'
 creation date: Saturday, April 8th 2023, 12:47 pm
-date updated: Sunday, April 9th 2023, 9:55 am
+date updated: Sunday, April 9th 2023, 9:59 am
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -63,9 +63,9 @@ $$ \forall i\; \forall \theta_i\; \beta^*_i \in \arg\max_{b_i \in \R_+} U_i(b_i,
 4) Equate the expressions and solve for $\beta^*$. 
 5) Check that it fulfils the conditions of symmetry, monotonicity, $0$ payoff to the lowest. 
 
-Very often, the expected payoff $U_i$ is quasilinear $\theta_i Q_i (\ldots) - T_i(\ldots)$. The $q$ function is frequently 'highest bidder wins', as in the first and second price auctions above. In that case, $Q_i = E[\mathbb 1\{ b_i(\theta_i) \geq \max_{i \neq j}\{\beta_j^*(\theta_j)\}$
+Very often, the expected payoff $U_i$ is quasilinear $\theta_i Q_i (\ldots) - T_i(\ldots)$. The $q$ function is frequently 'highest bidder wins', as in the first and second price auctions above. In that case, $Q_i = E[\mathbb 1\{ b_i(\theta_i) \geq \max_{i \neq j}\{\beta_j^*(\theta_j)\}]$
 
-By symmetry then we can say $Q_i = E[\mathbb 1\{ b_i(\theta_i) \geq \max_{i \neq j}\{{\color{red} \sigma(\theta_j)}\}$; and with monotonicity reduce it further to $E[\mathbb 1\{\theta_i \geq \max_{i \neq j} \theta_j\}$, or $Pr(\theta_i \geq \max_{i \neq j} \theta_j)$; is my type the biggest? 
+By symmetry then we can say $Q_i = E[\mathbb 1\{ b_i(\theta_i) \geq \max_{i \neq j}\{\sigma(\theta_j)\}$; and with monotonicity reduce it further to $E[\mathbb 1\{\theta_i \geq \max_{i \neq j} \theta_j\}$, or $Pr(\theta_i \geq \max_{i \neq j} \theta_j)$; is my type the biggest? 
 
 Write this as $H(\max_{j \neq i} \theta_j)$; if $\theta_j$ are iid, then this is $F^{n-1}(\theta)$.
 
@@ -74,7 +74,10 @@ title: Example: Symmetric First-Price Auction
 
 In this case: 
 $$\begin{align}
-Q_i
+Q_i &= H(\theta_i)\\
+T_i &= \sigma(\theta_i)H(\theta_i)\\
+U_i(\beta^*(\theta_i), \beta^*_{-i}) &= \theta_i H(\theta_i) - \sigma(\theta_i)H(\theta_i)\\
 \end{align}$$
 
 ```
+

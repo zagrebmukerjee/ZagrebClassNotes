@@ -11,7 +11,7 @@ tags:
 - '#status/🚧'
 ---
 
-# [[Mechanism Design 501 II - Framework]]
+# [[Mechanism Design 501 II - Framework and Revelation Principle]]
 <span style = "font-size:120%"><i >Zagreb Mukerjee </i></span>
 
 ## What is Mechanism Design?

@@ -87,7 +87,7 @@ V'(\underline q) &= \frac{\underline p c}{
 ## Continuous Form
 
 Suppose now a continuum of types $\theta$ distributed according to df $F$ with support $[\underline \theta, \overline \theta]$. The monopolist chooses $p: Q \to \R$, and the buyer solves 
-$$\max_{q \geq 0} \max \{\theta v(q) - p(q),0 \}$$ where $0$ represents an outside option. The [[Mechanism Design 501 III - Revelation Principle|Revelation Principle]] allows the monopolist's problem to become one of inducing type revelation: 
+$$\max_{q \geq 0} \max \{\theta v(q) - p(q),0 \}$$ where $0$ represents an outside option. The [[Mechanism Design 501 II - Framework and Revelation Principle|Revelation Principle]] allows the monopolist's problem to become one of inducing type revelation: 
 
 $$ \max_{q: \theta \to \R; \; t: \theta \to \R} \int_{\underline \theta}^{\overline \theta} [t(\theta) - c(q(\theta))] f(\theta) d\theta$$
 subject to $IC$ and $IR$ constraints. For convenience, create the following notation:  <font color=#F7B801>Is this interim utility</font>

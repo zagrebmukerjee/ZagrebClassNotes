@@ -1,7 +1,8 @@
 ---
 aliases:
+- 'Envelope Formula'
 creation date: Saturday, April 8th 2023, 12:13 pm
-date updated: Sunday, April 9th 2023, 9:33 am
+date updated: Sunday, April 9th 2023, 9:51 am
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -100,13 +101,22 @@ The $IR$ or participation constraint is simply that $U(\theta) \geq 0 \; \forall
 This is a very large problem and/or search space. To simplify, employ this lemma: 
 
 
-### Lemma
+### Lemma and Envelope Formula
 
 Due to Myerson 1981. 
 
 $(q,t)$ satisfies $IC$ if and only if: 
 1) q is nondecreasing, and 
-2) $\forall \theta,\; U(\theta) = U(\underline \theta) + \int_{\underline \theta}^\theta V(q(x)) dx$. This latter is the 'Envelope Formula' of [[Milgrom and Segal 2002 Envelope Theorems for Arbitrary Choice Sets|Milgrom and Segal 2002]]. 
+2) We can apply the 'Envelope Formula' of [[Milgrom and Segal 2002 Envelope Theorems for Arbitrary Choice Sets|Milgrom and Segal 2002]]. 
+
+``` ad-important
+title: Envelope Formula
+
+This formula will recur several times in this setting. In the general case, it says that if $U$ is absolutely continuous, then 
+$$U(\theta) = U(\underline \theta) + \int_{\underline \theta}^\theta V(q(\theta))$$
+
+
+```
 
 The latter implies that 
 $$ t (\theta) = t(\underline \theta) - \theta v(q(\underline \theta)) + \theta v(q(\theta)) - \int_{\underline \theta}^\theta V(q(x)) dx$$

@@ -1,14 +1,13 @@
 ---
 aliases:
 creation date: Saturday, April 8th 2023, 3:31 pm
-date updated: Sunday, April 9th 2023, 9:25 am
+date updated: Sunday, April 9th 2023, 9:30 am
 
 notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags: 
-- '#types/classes'
-- '#status/🚧'
+- '#types/classes/econ/theory'
 ---
 
 # [[Mechanism Design 501 II - Framework and Revelation Principle]]
@@ -43,7 +42,7 @@ in other words, the strategies that maximize expected utility.
 This problem is very unstructured with a huge search space. To narrow it down we can make use of the Revelation Principle. 
 
 ```ad-important
-title: Definition
+title: Definition: Direct Mechanism
 
 A <font color=gree>direct mechanism</font> is a mechanism with $M_i = \Theta_i$: one action per type. Intuitively it's a mechanism where each agent reveals a type.
 ```
@@ -51,3 +50,4 @@ A <font color=gree>direct mechanism</font> is a mechanism with $M_i = \Theta_i$:
 The Revelation Principle states that: if there exists some mechanism that implements $\xi$, then there is a direct mechanism that implements $\xi$; i.e., 
 $$\forall \theta_i,\theta_i', E_{\theta_{-i}}\bigg[u_i(\xi({\color{red}\theta_i}, \theta_{-i}), \theta_i \bigg| \theta_i\bigg] \geq E_{\theta_{-i}}\bigg[u_i(\xi({\color{red}\theta_i'}, \theta_{-i}), \theta_i \bigg| \theta_i\bigg] $$
 
+#status/section/🚧 Proof: to be added

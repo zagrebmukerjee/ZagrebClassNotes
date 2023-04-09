@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Saturday, April 8th 2023, 12:13 pm
-date updated: Saturday, April 8th 2023, 1:44 pm
+date updated: Sunday, April 9th 2023, 9:33 am
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -102,6 +102,8 @@ This is a very large problem and/or search space. To simplify, employ this lemma
 
 ### Lemma
 
+Due to Myerson 1981. 
+
 $(q,t)$ satisfies $IC$ if and only if: 
 1) q is nondecreasing, and 
 2) $\forall \theta,\; U(\theta) = U(\underline \theta) + \int_{\underline \theta}^\theta V(q(x)) dx$. This latter is the 'Envelope Formula' of [[Milgrom and Segal 2002 Envelope Theorems for Arbitrary Choice Sets|Milgrom and Segal 2002]]. 
@@ -163,10 +165,8 @@ $$\begin{align}
 &= \underbracket{E_\theta\bigg[\theta v(q(\theta))- c(q(\theta)) \bigg]}_\text{Social surplus} - \underbracket{E_\theta\left[\int_{\underline \theta}^\theta v(q(x))dx \right]}_\text{Distortion Term}\\
 \end{align}$$
 
-### Solving the Problem 
+### Solving the Problem
 
 To solve this, assume that $\psi(\theta)$, the virtual type, is nondecreasing in $\theta$. In other words, we want $\frac{1 - F(\theta)}{f(\theta)}$ to be nonincreasing, or $\frac{f(\theta)}{1 - F(\theta)}$, the <font color=gree>hazard rate</font>, to be nondecreasing. It turns out this is not so bad of a condition - it is satisfied for lots of commonly used distributions. Given that: ignore for now $q$ nondecreasing. Maximize type by type, for each value of $\theta$ - ie choose $q$ to maximize the integrand. Then 
 $$q^*(\theta) \in \arg \max v(q(\theta))\psi(\theta) - c(q(\theta))$$
-and since $\psi$ is nondecreasing, so is $q^*$. 
-
-
+and since $\psi$ is nondecreasing, so is $q^*$.  So this $q^*$, with $q(\underline \theta) = 0$, characterizes the solution. 

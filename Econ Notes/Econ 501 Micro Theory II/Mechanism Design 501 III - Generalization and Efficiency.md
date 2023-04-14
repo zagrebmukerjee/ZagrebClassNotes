@@ -29,4 +29,17 @@ An <font color=gree>allocation</font> $X$ is a bundle $\{(k, t_1, \ldots, t_n) \
 
 We commonly assume $\sum t_i \geq 0$ - there is no 'outside funding'. 
 
-Let's have utility take a quasilinear form $v(k, \theta_i) - t_i$. This is linear in the numeraire-denominated transfers $t_i$ and not necessarily linear in $k, \theta_i$. For the auctions we simply had $v(k, \theta_i) = k_i \times \theta_i$. where $
+Let's have utility take a quasilinear form $v(k, \theta_i) - t_i$ with $v$ continuous. This is linear in the numeraire-denominated transfers $t_i$ and not necessarily linear in $k, \theta_i$. For the auctions we simply had $v(k, \theta_i) = k_i \times \theta_i$. where $k_i$ was $1$ if you get the good, $0$ otherwise. 
+
+A <font color=gree>social choice function</font> is some $Ft$ with $F: \Theta \to \kappa$ and $t: \Theta \to \R^n$ with $\sum t > 0$. $F,t$ is <font color=gree>ex post Pareto Efficient</font> if, for ALL type profiles $\theta \in \Theta$, $\nexists k', \theta'$ such that $\forall i$ $u(k', t', \theta_i) \geq u(k, t, \theta_i)$, and for at least one $j$, $u_j(k', t', \theta_j) > u_j(k, t, \theta_j)$. That is to say, no alternative $k, t$ that makes everyone better off. 
+
+### Efficiency Lemma
+
+$k, t$ is Pareto efficient if and only if: 
+1) $\forall \theta$ $k(\theta) \in \arg \max \sumn{i} v_i(k, \theta_i)$ (decision efficient), and 
+2) $\forall \theta$, $\sumn{i} t_i(\theta_i) = 0$ (budget balance)
+
+#### Proof: 
+
+$\implies$: Suppose k pareto efficient. Suppose for a contradiction that either ∃ k′ with better decision efficiency or that t is not budget balanced.  If the former, 
+$$ \sumn{i} v_i(k', \theta_i) > \sumn{i} v_i(k, \theta_i)$$ Then under $k'$ there is an aggregate lump sum of consumption utility left behind. Let $D = \sumn{i} v_i(k', \theta_i) - \sumn{i} v_i(k, \theta_i)$, so $D > 0$ and $D/n > 0.$ Let $x_i$ be the allocation of the c Given the supposition, there are some agents with $v_i$ increasing in $x_i$

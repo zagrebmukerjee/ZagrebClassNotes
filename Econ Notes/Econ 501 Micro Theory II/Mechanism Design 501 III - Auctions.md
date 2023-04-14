@@ -81,3 +81,8 @@ U_i(\beta^*(\theta_i), \beta^*_{-i}) &= \theta_i H(\theta_i) - \sigma(\theta_i)H
 
 ```
 
+## Revenue Maximization 
+
+### First-Price Auction
+
+Augment the format. Winner pays own bid, but you can't win unes

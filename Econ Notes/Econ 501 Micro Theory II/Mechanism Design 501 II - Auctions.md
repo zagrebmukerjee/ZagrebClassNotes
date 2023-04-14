@@ -173,3 +173,20 @@ We can verify that these $b()$ form a BNE: given that others are bidding this di
 
 ## Seller Revenue 
 
+<font color=#F7B801>to ask about</font>
+
+Optimize over all direct mechanisms. Assume $F$ regular. Then optimal revenue is achieved by setting $r = \psi \inv(0)$, where $\psi(\theta) = \theta - \frac{1 - F(\theta)}{f(\theta)}$. The latter quantity is decreasing for most commonly used $F$. 
+
+Induced functions $q,t$ in this construction satisfy incentive compatibility, $q(\theta) > 0$
+
+## Second Price Auction
+
+This is an auction where truthtelling is the BNE. Let $\hat b$ be the second price, $\max_{j \neq i} b_j$. Then my utility as a function of truthful bidding looks like this: 
+
+![[Drawing 2023-04-14 14.29.36.excalidraw|300]]
+
+So if my type is $> \hat b$ I'm indifferent between all $b_i > \hat b$. If my type is $< \hat b$ then betting $\theta$ guarantees me $0$ which is what I want. 
+
+### Compared to First Price
+
+Considering the induced direct (IC) mechanisms, the $q$ function is the same. The $t$ is not the same ex ante. But in expected value the revenue is the same, given that $t(0)$ is the same (by the Myerson 1981 Lemma). 

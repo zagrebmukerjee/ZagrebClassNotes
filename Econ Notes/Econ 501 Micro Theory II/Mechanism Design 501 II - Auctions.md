@@ -76,4 +76,7 @@ Augment the format. Winner pays own bid, but you can't win unless your bid excee
 
 Write a bidder's strategy as some function $b: \Theta \to \R$. Conjecture that we can find a BNE with $b_i$ identical, increasing, with $\theta = r \implies b(\theta) = r$. Then we'll try to find this BNE, i.e. derive $b$. 
 
-If $\theta < r$ then $b_i < r$ is optimal (I don't want to win). If $\theta_i \in (r, \overline \theta]$ then $b_i \in \arg \max_{\theta_i \in (r, \overline \theta]} \{ (\theta_i - b_i)Pr(b_i > \max_{i \neq j} b(\theta_j))\}$; in other words, $b_i$ maximizes the expected value of winning, a tradeoff between the value of winning and the probability of winning. As above let $H$ eb
+If $\theta < r$ then $b_i < r$ is optimal (I don't want to win). If $\theta_i \in (r, \overline \theta]$ then $b_i \in \arg \max_{\theta_i \in (r, \overline \theta]} \{ (\theta_i - b_i)Pr(b_i > \max_{i \neq j} b(\theta_j))\}$; in other words, $b_i$ maximizes the expected value of winning, a tradeoff between the value of winning and the probability of winning. As above let $H$ be the distribution of $\max_{i \neq j} \theta_j$. Then use the monotonicity assumption:
+$$ Pr(b_i > \max_{i \neq j} b(\theta_j)) = Pr(b\inv(b_i) > \max_{i \neq j} \theta_j) = H(b\inv(b_i))$$ Here, $H$ can be calculated exactly as $F^{n-1}(b\inv(b_i))$ given the i.i.d. assumption. 
+
+To find the FOC of the buyer's problem, note that the derivative of $f\inv(x)$ is $\dfrac{1}{f'(f\inv(x))}$. 

@@ -4,7 +4,7 @@ aliases:
 - 'Second Price Auction' 
 - 'Revenue Equivalence'
 creation date: Saturday, April 8th 2023, 12:47 pm
-date updated: Friday, April 14th 2023, 11:18 am
+date updated: Friday, April 14th 2023, 11:30 am
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -91,8 +91,39 @@ H(b\inv(b_i)) &= (\theta_i - b_i) h(b\inv(b_i)) \left[ \frac{d}{dx} b\inv(b_i) \
 Now conjecture that $b_i = b(\theta)$. 
 
 $$\begin{align}
-\frac{H(\theta)}{ h(\theta) } &= \frac{(\theta_i - b(\theta))}{b'(\theta)} \\
-\frac{h(\theta)}{ H(\theta) } &= \frac{b'(\theta)}{(\theta_i - b(\theta))} \\
-\frac{d}{d\theta} \ln(H(\theta))&= \frac{d}{d\theta} \left[-\ln( \theta_i - b(\theta))\right]\\
-b_i (\theta) 
+H(\theta) &= \frac{(\theta_i - b(\theta))h(\theta)}{b'(\theta)} \\
+b'(\theta)H(\theta)&= \theta_i h(\theta) - b(\theta)h(\theta)\\
+\theta_i \frac{h(\theta)}{H(\theta)} = b'(\theta) + b(\theta)\frac{h(\theta)}{H(\theta)}
+\end{align}$$
+
+This is a linear differential equation. 
+
+But can also approach by writing as 
+
+$$\begin{align}
+b'(\theta)H(\theta) + b(\theta)h(\theta) &= \theta_i h(\theta)\\
+\frac{d}{d\theta} b(\theta)H(\theta) &= \theta_i h(\theta)\\
+b(\theta)&= \frac{1}{ H(\theta)}\int_{r}^{\overline \theta} xh(x) dx\\
+\end{align}$$
+
+Now use integration by parts to simplify RHS:
+
+$$\begin{align}
+u &= x\\
+dv &= h(x)dx\\
+v &= H(x) + c \\
+\int u(x)dv(x) &= u(a)v(a) - u(b)v(b) - \int_a^b v(x)du(x)\\
+&= \theta_iH(\theta_i) - 0(H(r)) - \int_r^{\theta_i} H(x) \\
+\end{align}$$
+
+So: 
+
+$$b(\theta_i) = \theta_i - \int_r^{\theta_i} \frac{H(x)}{ H(\theta)} dx$$
+
+Do our assumptions hold? If $\theta = r$, then 
+
+$$\begin{align}
+b(r) &= r - \int_{r}^{r}H(x)/H(r)dx
+0 &= r - \frac{1}{H(r)}\int_{r}^{r}H(x)dx
+0 &= r - \frac{rH(r)}{H(r)}\int_{r}^{r}H(x)dx
 \end{align}$$

@@ -5,7 +5,7 @@ aliases:
 - 'Power Rule' 
 - 'Chain Rule'
 creation date: Friday, April 14th 2023, 10:37 am
-date updated: Friday, April 14th 2023, 11:02 am
+date updated: Friday, April 14th 2023, 11:09 am
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -51,7 +51,8 @@ $$\begin{align}
 &=  \lim_{t \to 0} \frac{1}{t}\left[f(x+t)g(x+t) - f(x)g(x) - f(x)g(x+t) + f(x)g(x+t) \right]\\
 &=  \lim_{t \to 0} \left[\frac{[f(x+t)-f(x)]g(x+t)}{t} +  \frac{[g(x+t) - g(x)]f(x)}{t} \right]\\
 &=  \lim_{t \to 0} \left[\frac{[f(x+t)-f(x)]g(x+t)}{t}\right] + f(x)g'(x)\\
-&=  \lim_{t \to 0} \left[\frac{[f(x+t)-f(x)]g(x+t)}{t}\right] + f(x)g'(x)\\
+&=  \lim_{t \to 0}g(x+t)\lim_{t \to 0} \left[\frac{[f(x+t)-f(x)]}{t}\right] + f(x)g'(x)\\
+&=  g(x)f'(x) + f(x)g'(x)\\
 \end{align}$$
 
 ## Derivative of Compositions
@@ -77,9 +78,12 @@ $$\begin{align}
 
 ## Derivative of Inverse Functions
 
-$$\frac{d}{dx} f\inv(x) $$
+$$\frac{d}{dx} f\inv(x)=  \frac{1}{f'(f\inv(x))} $$
 
 ### Proof
 $$\begin{align}
-\frac{d}{dx} f\inv(x) &= \frac{d}{dx}
+x &= f(f\inv(x))\\
+\frac{d}{dx} x &= \frac{d}{dx} f(f\inv(x))\\
+1&= [f^{-1'}(x)]f'(f\inv(x))\\
+f^{-1'}(x) &= \frac{1}{f'(f\inv(x))}
 \end{align}$$

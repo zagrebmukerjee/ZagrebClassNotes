@@ -4,7 +4,7 @@ aliases:
 - 'Second Price Auction' 
 - 'Revenue Equivalence'
 creation date: Saturday, April 8th 2023, 12:47 pm
-date updated: Friday, April 14th 2023, 12:57 pm
+date updated: Friday, April 14th 2023, 1:16 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -144,13 +144,32 @@ The first term is constant, the latter is increasing; so this is increasing in $
 
 By the revelation principle, if there's an IC mechanism induced by FP auction there is an IC direct mechanism $q,t$. We can deduce $q$ and $t$: 
 
-$$ q = \begin{cases} 1 \text{ if } \theta_i \geq \max\{\max_{j \neq i} \theta_j, r\} \\ 0 \text{ otherwise } \end{cases} $$
+$$ q = \begin{cases} 1 &\text{ if } \theta_i \geq \max\{\max_{j \neq i} \theta_j, r\} \\ 0 &\text{ otherwise } \end{cases} $$
 
-$$ t = \begin{cases} b_i \text{ if } \theta_i \geq  \max\{\max_{j \neq i} \theta_j, r\} \\ 0 \text{ otherwise } \end{cases} $$
+$$ t = \begin{cases} b_i &\text{ if } \theta_i \geq  \max\{\max_{j \neq i} \theta_j, r\} \\ 0 &\text{ otherwise } \end{cases} $$
 
+In BNE, 
+
+$$ U(\theta_i) =
+\begin{cases} 0 & \text{ if } \theta_i < r \\
+(\theta_i - b_i)H(\theta_i) &\text{ if } \theta_i \geq r
+\end{cases}$$
 
 By applying the [[Mechanism Design 501 I - Motivation, Screening Problem#Lemma and Envelope Formula|Myerson 1981 lemma]], incentive compatibility requires $q$ nondecreasing, and $U(\theta_i) = U(\underline \theta) + \int_{\underline \theta}^\theta q(x) dx$. $U(\underline \theta)$ is $0$, as is $U(\theta$) for $\theta < r$. Otherwise $U(\theta_i) = \int_r^{\theta_i} q(x) dx$. But since $q$ is simply $H$ (from the interim perspective of the agent), $U(\theta_i) = \int_r^{\theta_i} H(x)dx$. 
 
-So in BNE, 
 
-$$ U(\theta_i) = \begin{cases} \end{cases}
+The Envelope formulation and this formulation should be equal.
+$$\begin{align}
+(\theta_i - b_i)H(\theta_i) &= \int_r^{\theta_i} H(x)dx\\
+b_i &= \theta_i - \frac{1}{H(\theta_i)}\int_r^{\theta_i} H(x)dx 
+\end{align}$$
+```ad-note
+title: Intuition
+
+We've described the bid $b_i$ in the first-price auction as the expected value of the next highest bid. Note that this is the same as what you'd expect to pay for the same item, with the same type, in a second price auction. 
+```
+
+We can verify that these $b()$ form a BNE: given that others are bidding this discounted type you have no reason to bid more. And the corresponding $(q,t)$ satisfy IC because they satisfy the Myerson 1981 lemma by construction. 
+
+## Seller Revenue 
+

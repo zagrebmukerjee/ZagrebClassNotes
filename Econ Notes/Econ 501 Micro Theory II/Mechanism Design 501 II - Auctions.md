@@ -4,7 +4,7 @@ aliases:
 - 'Second Price Auction' 
 - 'Revenue Equivalence'
 creation date: Saturday, April 8th 2023, 12:47 pm
-date updated: Friday, April 14th 2023, 12:52 pm
+date updated: Friday, April 14th 2023, 12:57 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -140,7 +140,17 @@ b(\theta_i) &= \theta_i - \int_r^{\theta_i} \frac{H(x)}{ H(\theta)} dx\\
 
 The first term is constant, the latter is increasing; so this is increasing in $\theta$. 
 
-### Different Approach 
+### Different Approach
 
-By the revelation principle, if there's an IC mechahnsim there is an IC direct mechanism $q,t$. 
+By the revelation principle, if there's an IC mechanism induced by FP auction there is an IC direct mechanism $q,t$. We can deduce $q$ and $t$: 
 
+$$ q = \begin{cases} 1 \text{ if } \theta_i \geq \max\{\max_{j \neq i} \theta_j, r\} \\ 0 \text{ otherwise } \end{cases} $$
+
+$$ t = \begin{cases} b_i \text{ if } \theta_i \geq  \max\{\max_{j \neq i} \theta_j, r\} \\ 0 \text{ otherwise } \end{cases} $$
+
+
+By applying the [[Mechanism Design 501 I - Motivation, Screening Problem#Lemma and Envelope Formula|Myerson 1981 lemma]], incentive compatibility requires $q$ nondecreasing, and $U(\theta_i) = U(\underline \theta) + \int_{\underline \theta}^\theta q(x) dx$. $U(\underline \theta)$ is $0$, as is $U(\theta$) for $\theta < r$. Otherwise $U(\theta_i) = \int_r^{\theta_i} q(x) dx$. But since $q$ is simply $H$ (from the interim perspective of the agent), $U(\theta_i) = \int_r^{\theta_i} H(x)dx$. 
+
+So in BNE, 
+
+$$ U(\theta_i) = \begin{cases} \end{cases}

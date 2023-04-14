@@ -2,7 +2,7 @@
 aliases:
 - 'Envelope Formula'
 creation date: Saturday, April 8th 2023, 12:13 pm
-date updated: Sunday, April 9th 2023, 9:51 am
+date updated: Friday, April 14th 2023, 12:58 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -101,9 +101,7 @@ The $IR$ or participation constraint is simply that $U(\theta) \geq 0 \; \forall
 This is a very large problem and/or search space. To simplify, employ this lemma: 
 
 
-### Lemma and Envelope Formula
-
-Due to Myerson 1981. 
+### Myerson 1981 Lemma and Envelope Formula
 
 $(q,t)$ satisfies $IC$ if and only if: 
 1) q is nondecreasing, and 

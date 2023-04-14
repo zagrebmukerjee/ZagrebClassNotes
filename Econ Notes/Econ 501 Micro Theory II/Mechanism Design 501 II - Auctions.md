@@ -4,7 +4,7 @@ aliases:
 - 'Second Price Auction' 
 - 'Revenue Equivalence'
 creation date: Saturday, April 8th 2023, 12:47 pm
-date updated: Friday, April 14th 2023, 11:30 am
+date updated: Friday, April 14th 2023, 12:52 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -123,7 +123,24 @@ $$b(\theta_i) = \theta_i - \int_r^{\theta_i} \frac{H(x)}{ H(\theta)} dx$$
 Do our assumptions hold? If $\theta = r$, then 
 
 $$\begin{align}
-b(r) &= r - \int_{r}^{r}H(x)/H(r)dx
-0 &= r - \frac{1}{H(r)}\int_{r}^{r}H(x)dx
-0 &= r - \frac{rH(r)}{H(r)}\int_{r}^{r}H(x)dx
+b(r) &= r - \int_{r}^{r}H(x)/H(r)dx\\
+&= r - \frac{1}{H(r)}\int_{r}^{r}H(x)dx\\
+&= r - \frac{rH(r)}{H(r)}\int_{r}^{r}H(x)dx\\
+&= 0
 \end{align}$$
+
+And $b$ is increasing in $\theta$ - to see this, interpret as the expected value of the next highest bid.
+
+$$\begin{align}
+b(\theta_i) &= \theta_i - \int_r^{\theta_i} \frac{H(x)}{ H(\theta)} dx\\
+&=\frac{\theta_iH(\theta_i) - \int_r^{\theta_i} H(x)}{H(\theta_i)}\\
+&= \frac{\int_{\underline \theta}^{\theta_i}  H(x)dx + \int_{\underline \theta}^{\theta_i}  xh(x)dx  - \int_r^{\theta_i} H(x)}{H(\theta_i)}\\
+&= \frac{\int_{\underline \theta}^{r}  H(x)dx + E[\theta|\theta < \theta_i]}{H(\theta_i)}\\
+\end{align}$$
+
+The first term is constant, the latter is increasing; so this is increasing in $\theta$. 
+
+### Different Approach 
+
+By the revelation principle, if there's an IC mechahnsim there is an IC direct mechanism $q,t$. 
+

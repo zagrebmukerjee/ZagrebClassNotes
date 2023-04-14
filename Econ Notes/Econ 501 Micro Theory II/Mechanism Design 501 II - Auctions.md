@@ -4,7 +4,7 @@ aliases:
 - 'Second Price Auction' 
 - 'Revenue Equivalence'
 creation date: Saturday, April 8th 2023, 12:47 pm
-date updated: Sunday, April 9th 2023, 9:59 am
+date updated: Friday, April 14th 2023, 10:32 am
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -14,9 +14,10 @@ tags:
 - '#status/🚧'
 ---
 
-# [[Mechanism Design 501 III - Auctions]]
+# [[Mechanism Design 501 II - Auctions]]
 <span style = "font-size:120%"><i >Zagreb Mukerjee </i></span>
 
+We can think of auctions as an extension of the screening problem. Given a set of auction rules I want to understand how the players will behave (using the BNE solution concept) and then maximize seller revenue given that response. 
 
 ## Setup
 
@@ -25,7 +26,7 @@ An auction is a profile of functions $(q, t_1, \ldots, t_n)$. $q: \R^n \to \Delt
 
 
 ```ad-important
-Definitions: Auctions
+title:Definitions: Auctions
 
 A <font color=gree>first price auction</font> has the winner being the highest bid, and paying his bid; others pay nothing. In the notation above: 
 $$\hspace{10pt} $$
@@ -69,20 +70,10 @@ By symmetry then we can say $Q_i = E[\mathbb 1\{ b_i(\theta_i) \geq \max_{i \neq
 
 Write this as $H(\max_{j \neq i} \theta_j)$; if $\theta_j$ are iid, then this is $F^{n-1}(\theta)$.
 
-```ad-example
-title: Example: Symmetric First-Price Auction
+## Example: First-Price Auction
 
-In this case: 
-$$\begin{align}
-Q_i &= H(\theta_i)\\
-T_i &= \sigma(\theta_i)H(\theta_i)\\
-U_i(\beta^*(\theta_i), \beta^*_{-i}) &= \theta_i H(\theta_i) - \sigma(\theta_i)H(\theta_i)\\
-\end{align}$$
+Augment the format. Winner pays own bid, but you can't win unless your bid exceeds a reservation price $r$ which the deisgner chooses. Have $n$ buyers with type $\theta_i$ i.i.d with CDF $F$ having support $[\underline \theta, \overline \theta]$. Buyer utility is $\theta_i - b_i$. Ties broken uniformly at random (not that important). Then, what is revenue maximizing?
 
-```
+Write a bidder's strategy as some function $b: \Theta \to \R$. Conjecture that we can find a BNE with $b_i$ identical, increasing, with $\theta = r \implies b(\theta) = r$. Then we'll try to find this BNE, i.e. derive $b$. 
 
-## Revenue Maximization 
-
-### First-Price Auction
-
-Augment the format. Winner pays own bid, but you can't win unes
+If $\theta < r$ then $b_i < r$ is optimal (I don't want to win). If $\theta_i \in (r, \overline \theta]$ then $b_i \in \arg \max_{\theta_i \in (r, \overline \theta]} \{ (\theta_i - b_i)Pr(b_i > \max_{i \neq j} b(\theta_j))\}$; in other words, $b_i$ maximizes the expected value of winning, a tradeoff between the value of winning and the probability of winning. As above let $H$ eb

@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Saturday, April 15th 2023, 4:00 pm
-date updated: Saturday, April 15th 2023, 4:34 pm
+date updated: Saturday, April 15th 2023, 4:47 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -40,9 +40,23 @@ Proof from Class
 
 Suppose a contradiction, ie. $\Theta_B \cap \Theta_S \neq \emptyset$ but there is a mechanism with the $4$ properties. Then since $q$ is decision-efficient, there is a Groves mechanism with $h(\theta_{-i}) = k_i$, some constants, with the same $q$. By $IC$ lemma, agents' interim payoffs are pinned down as the same in the supposed mechanism and this Groves mechanism. So the transfers are the same, and the indirect utility is the same. 
 
-The Groves transfers are: 
+The Groves transfers are, with $k_i > 0$ (for budget balance):
 
-$$ t_B^G = \begin{cases} \end{cases}$$
+$$ t_S^G = \begin{cases} 
+\theta_B - k_S &\text{ if } \theta_B > \theta_S\\
+0 - k_S &\text{ otherwise}
+\end{cases}$$
+$$ t_B^G = \begin{cases} 
+-\theta_S - k_B &\text{ if } \theta_B > \theta_S\\
+0 - k_B &\text{ otherwise}
+\end{cases}$$
+
+This lets us write the interim utilities: 
+
+$$U^G_B(\theta_B) = E[ \max \{ \theta_B - \theta_S, 0 \} | \theta_B] + k_B$$
+$$U^G_S(\theta_S) = E[ \max \{ \theta_S - \theta_B, 0 \} | \theta_S] + k_S$$
+So $E(U_B^G + U_S^G)$ is $2S + k_B + k_S$, where $S$ is the social surplus. But we also have $E[U_B^G + U_S^G] = S$. So $k_B + k_S = -S < 0$, but then this contradicts budget balance. 
+
 
 %%Proof from Masaki slides - incomplete%%
 %%First recall the [[Mechanism Design 501 I - Motivation, Screening Problem#Myerson 1981 Lemma and Envelope Formula|Myerson 1981 Lemma]]. A mechanism is IC if and only if $q$ is increasing in $\theta$ and $U(\theta_i) = U(\underline \theta) + \int_{\underline \theta}^{\theta_i} q(x)dx$. 

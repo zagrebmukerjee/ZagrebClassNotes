@@ -5,7 +5,7 @@ aliases:
 - 'Expected Externality Mechanism'
 
 creation date: Saturday, April 8th 2023, 11:41 am
-date updated: Saturday, April 15th 2023, 11:00 am
+date updated: Saturday, April 15th 2023, 1:30 pm
 notetype: "Math Class Note"
 cssclass: math-class-note
 
@@ -88,6 +88,23 @@ But this contradicts the assumed decision efficiency.
 
 ## Pivot Mechanism
 
-The pivot mechanism is a special case of the Groves/ VCG class. In this case, you're paid based on the marginal effect of your presence. 
+The pivot mechanism is a special case of the Groves/ VCG class. In this case, you're told to pay based on the marginal effect of your presence. 
 
-Define counterfactual $\kappa \in \arg \max_k \sum_{j \neq i} v_j (k, \theta_{-i})$
+Define counterfactual $\kappa_i \in \arg \max_k \sum_{j \neq i} v_j (k, \theta_{-i})$, the decision-efficient  allocation that'd attain with only other agents. Then we can set
+
+$$ h(\theta_{-i}) = \sum_{j \neq i} v_i(\kappa_i, \theta_{-i})$$
+
+Alternatively, set 
+$$ h(\theta_{-i}) = \max_{x \in X} \sum_{i \neq j} v_j(x, \theta_j) $$
+So the total payment is 
+
+
+$$t_i =  \sum_{j \neq i} v_j(k, \theta_i, \theta_{-i}) -  \sum_{j \neq i} v_j(\kappa_i, \theta_{-i})$$
+or 
+$$t_i =  \max_{x \in X} \sum_{i \neq j} v_j(x, \theta_i,\theta_j) -  \max_{x \in X} \sum_{i \neq j} v_j(x, \theta_j)$$
+```ad-example
+title: Example: An Indivisible Good
+
+Suppose I have $k$ such that $q_i = 1$ if $\theta_i > \max_{j \neq i} \theta_j$, $0$ otherwise. Then my Groves payment is $0$ if my type is lower than the current highest type, and $1$ otherwise, leaving me no incentive to lie (albeit no particular benefit from the game).
+```
+

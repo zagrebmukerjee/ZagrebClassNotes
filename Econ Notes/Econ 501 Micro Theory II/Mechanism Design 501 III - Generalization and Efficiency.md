@@ -40,6 +40,20 @@ $k, t$ is Pareto efficient if and only if:
 2) $\forall \theta$, $\sumn{i} t_i(\theta_i) = 0$ (budget balance)
 
 #### Proof: 
-
+<font color=#F7B801>by me</font>
 $\implies$: Suppose k pareto efficient. Suppose for a contradiction that either ∃ k′ with better decision efficiency or that t is not budget balanced.  If the former, 
-$$ \sumn{i} v_i(k', \theta_i) > \sumn{i} v_i(k, \theta_i)$$ Then under $k'$ there is an aggregate lump sum of consumption utility left behind. Let $D = \sumn{i} v_i(k', \theta_i) - \sumn{i} v_i(k, \theta_i)$, so $D > 0$ and $D/n > 0.$ Let $x_i$ be the allocation of the c Given the supposition, there are some agents with $v_i$ increasing in $x_i$
+$$ \sumn{i} v_i(k', \theta_i) > \sumn{i} v_i(k, \theta_i)$$ Then under $k'$ there is an aggregate lump sum of consumption utility left behind. Let $D = \sumn{i} v_i(k', \theta_i) - \sumn{i} v_i(k, \theta_i)$, so $D > 0$ Let $x = x_1, \ldots, x_n$ be the allocation of the consumption good or whatever, with $x_i$ being the value given to agent $i$ under $k$, and $x'_i$ under $k'$. Given the supposition, there are some agents with $v_i$ increasing in $x$. For all such agents, define $x''_i$ as allocating them $x_i + \epsilon/n$. Then, given that $D>0$, there is some $\epsilon$  such that this reallocation describes a Pareto improvment. 
+
+If $t$ is not budget balanced, i.e. $\sum t_i \neq 0$, then we must have $\sum t_i > 0$, under no outside funds. But then we can simply reduce everyone's contribution by $\sum t_i/n$ and create a pareto improvement. 
+
+$\impliedby$: Suppose the conditions hold. A Pareto improvement will increase someone's utility, and decrease no-one's: so if $k'$ is a Pareto improvement, then 
+$$\sumn{i} \big( v_i(k', \theta_i) - t'_i(\theta_i)\big) > \sumn{i} \big( v_i(k, \theta_i) - t_i(\theta_i)\big)$$
+
+So one of the following must hold: 
+
+$$\sumn{i} v_i(k', \theta_i) > \sumn{i} v_i(k, \theta_i) \text{ or } \sumn{i}t'_i(\theta_i)  < \sumn{i}t_i(\theta_i)$$
+
+The first is impossible, since $k \in \arg \max \sum v_i$; and the second is also impossible, since $\sumn{i} t_i(\theta_i) = 0$ and $\sumn{i} t_i$ cannot be negative (no outside funding). 
+
+
+

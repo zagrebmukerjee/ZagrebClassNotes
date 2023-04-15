@@ -86,7 +86,7 @@ v_i(k(\theta', \theta_{-i}), \theta_i) +\sum_{j \neq i} v_j(k', \theta', \theta_
 But this contradicts the assumed decision efficiency. 
 
 
-## Pivot Mechanism
+### Pivot Mechanism
 
 The pivot mechanism is a special case of the Groves/ VCG class. In this case, you're told to pay based on the marginal effect of your presence. 
 
@@ -108,3 +108,18 @@ title: Example: An Indivisible Good
 Suppose I have $k$ such that $q_i = 1$ if $\theta_i > \max_{j \neq i} \theta_j$, $0$ otherwise. Then my Groves payment is $0$ if my type is lower than the current highest type, and $1$ otherwise, leaving me no incentive to lie (albeit no particular benefit from the game).
 ```
 
+### Groves and Budget Balance
+
+The Groves mechanisms do not, in general, satisfy budget balance $\sum t_i = 0$. Proof in MWG. 
+
+
+## Expected Externality Mechanism
+
+Similar concept to Groves, but rather than ask about my externality, I take the expected externality over the true types of others. 
+
+$$ - t_i = h(\theta_{-i}) + E\left[\sum_{j \neq i} v_j(k, \theta_i, \theta_{-i})|\theta_i\right]$$
+
+### EEM Truthfulness
+Proposition: If types are independently distributed, then the $EEM$ makes truth-telling optimal behavior. 
+
+Proof: Similar to Groves proof. 

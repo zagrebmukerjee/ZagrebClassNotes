@@ -90,4 +90,4 @@ But this contradicts the assumed decision efficiency.
 
 The pivot mechanism is a special case of the Groves/ VCG class. In this case, you're paid based on the marginal effect of your presence. 
 
-Define counterfactual 
+Define counterfactual $\kappa$ as $\arg \max_k \sum_{j \neq i} v_j (k

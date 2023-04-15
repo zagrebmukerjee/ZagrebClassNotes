@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Saturday, April 15th 2023, 4:00 pm
-date updated: Saturday, April 15th 2023, 4:26 pm
+date updated: Saturday, April 15th 2023, 4:34 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -36,7 +36,16 @@ The intuition is that in nondegenerate cases, there is simply too much informati
 ### Proof
 $\impliedby$ is easy. If in the degenerate case, a mechanism exists that satisfies the 4 properties - just let $q=1$ or $0$ always. and pick some $t$ in $[\overline \theta_s, \underline \theta_B]$. 
 For $\implies$: 
-First recall the [[Mechanism Design 501 I - Motivation, Screening Problem#Myerson 1981 Lemma and Envelope Formula|Myerson 1981 Lemma]]. A mechanism is IC if and only if $q$ is increasing in $\theta$ and $U(\theta_i) = U(\underline \theta) + \int_{\underline \theta}^{\theta_i} q(x)dx$. 
+Proof from Class
+
+Suppose a contradiction, ie. $\Theta_B \cap \Theta_S \neq \emptyset$ but there is a mechanism with the $4$ properties. Then since $q$ is decision-efficient, there is a Groves mechanism with $h(\theta_{-i}) = k_i$, some constants, with the same $q$. By $IC$ lemma, agents' interim payoffs are pinned down as the same in the supposed mechanism and this Groves mechanism. So the transfers are the same, and the indirect utility is the same. 
+
+The Groves transfers are: 
+
+$$ t_B^G = \begin{cases} \end{cases}$$
+
+%%Proof from Masaki slides - incomplete%%
+%%First recall the [[Mechanism Design 501 I - Motivation, Screening Problem#Myerson 1981 Lemma and Envelope Formula|Myerson 1981 Lemma]]. A mechanism is IC if and only if $q$ is increasing in $\theta$ and $U(\theta_i) = U(\underline \theta) + \int_{\underline \theta}^{\theta_i} q(x)dx$. 
 
 Suppose a contradiction, ie. $\Theta_B \cap \Theta_S \neq \emptyset$ but there is a mechanism with the $4$ properties. Then we will compute two expressions for the ex-ante social welfare, from budget balance and from IC, and show them to be contradictory. 
 
@@ -44,6 +53,22 @@ Suppose a contradiction, ie. $\Theta_B \cap \Theta_S \neq \emptyset$ but there i
 W &= E[U_B(\theta_B) + U_S(\theta_S)]\\
 &= E[\theta_BQ_B(\theta_B) - T_B(\theta_B) + T_S(\theta_S) -  \theta_S Q_S(\theta_S)]\\
 &= E[\theta_BQ_B(\theta_B) -  \theta_S Q_S(\theta_S)] + E[T_S(\theta_S)- T_B(\theta_B) ]\\
-&=  E[\theta_BQ_B(\theta_B) -  \theta_S Q_S(\theta_S)] \\
+&=  E[(\theta_B-  \theta_S)q(\theta_b, \theta_s)] \\
 \end{align}$$
-using the law of 
+So far so good. Now, 
+2) Using the envelope formula. 
+$$\begin{align}
+U_B(\theta_B) &= U_B(\underline \theta_B) + \int_{\underline \theta_B}^{\theta_B} Q_B(x)dx\\
+U_S(\theta_B) &= U_S(\underline \theta_S) + \int_{\underline \theta_S}^{\theta_S} Q_S(x)dx\\
+W &= E[U_B(\theta_B) + U_S(\theta_S)]\\
+&= E[U_B(\underline \theta_B) + U_S(\underline \theta_S) + \int \ldots ]\\
+&= U_B(\underline \theta_B) + U_S(\underline \theta_S) + E[\int \ldots ]\\
+\end{align}$$
+
+$$\begin{align}
+E\left[  \int_{\underline \theta_B}^{\theta_B} Q_B(x)dx\\ +  \int_{\underline \theta_S}^{\theta_S} Q_S(x)dx\right] &= \int_{\underline \theta_B}^{\overline \theta_B}\left[\int_{\underline \theta_B}^{\theta_B} Q_B(x)dx  \right]f_B(\theta_B)d\theta_B + \ldots \\
+\int_{\underline \theta_B}^{\overline \theta_B}\left[\int_{\underline \theta_B}^{\theta_B} Q_B(x)dx  \right]f_B(\theta_B)d\theta_B &= \int u dv \\\
+&= \int \left[\int_{\underline \theta_B}^{\theta_B} Q_B(x)dx  \right] d\left[ f_b(\theta_B)d\theta_B\right]\\
+&= uv - \int vdu\\
+&= \left[\int_{\underline \theta_B}^{\theta_B} Q_B(x)dx  \right] F(\theta_B)d\theta_B - \int Q_B(x)f(x)dx
+\end{align}$$%%

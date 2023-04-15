@@ -1,8 +1,11 @@
 ---
 aliases:
-creation date: Saturday, April 8th 2023, 11:41 am
-date updated: Friday, April 14th 2023, 10:26 am
+- 'Groves Mechanism'
+- 'EEM'
+- 'Expected Externality Mechanism'
 
+creation date: Saturday, April 8th 2023, 11:41 am
+date updated: Saturday, April 15th 2023, 10:47 am
 notetype: "Math Class Note"
 cssclass: math-class-note
 
@@ -11,7 +14,7 @@ tags:
 - '#status/🚧'
 ---
 
-# [[Mechanism Design 501 III - Generalization and Efficiency]]
+# [[Mechanism Design 501 III - Generalization, Efficient Mechanisms]]
 
 <span style = "font-size:120%"><i >Zagreb Mukerjee </i></span>
 
@@ -25,7 +28,7 @@ So far we have considered various mechanisms that sellers may use to generate an
 
 $I = \{ 1, \ldots, n \}$ agents. $\theta_i$ are type distributions with joint distribution $\Theta = \prod \Theta_i$. $\theta$ (the aggregate profile) is distributed according to some $M \in \Delta(\Theta)$, allowing for correlated types. 
 
-An <font color=gree>allocation</font> $X$ is a bundle $\{(k, t_1, \ldots, t_n) \in \kappa \times \R^n\}$.  Here $k$ describes the distribution of some good, generally non-monetary, such as an item being auctioned. $\kappa$ is the compact set of all nonmonetary outcomes. And $t_i$ is a monetary transfer to/from agent $i$. 
+An <font color=gree>allocation</font> $X$ is a bundle $\{(k, t_1, \ldots, t_n) \in \kappa \times \R^n\}$. Here $k$ describes the distribution of some good, generally non-monetary, such as an item being auctioned. $\kappa$ is the compact set of all nonmonetary outcomes. And $t_i$ is a monetary transfer to/from agent $i$. 
 
 We commonly assume $\sum t_i \geq 0$ - there is no 'outside funding'. 
 
@@ -33,16 +36,17 @@ Let's have utility take a quasilinear form $v(k, \theta_i) - t_i$ with $v$ conti
 
 A <font color=gree>social choice function</font> is some $Ft$ with $F: \Theta \to \kappa$ and $t: \Theta \to \R^n$ with $\sum t > 0$. $F,t$ is <font color=gree>ex post Pareto Efficient</font> if, for ALL type profiles $\theta \in \Theta$, $\nexists k', \theta'$ such that $\forall i$ $u(k', t', \theta_i) \geq u(k, t, \theta_i)$, and for at least one $j$, $u_j(k', t', \theta_j) > u_j(k, t, \theta_j)$. That is to say, no alternative $k, t$ that makes everyone better off. 
 
+
 ### Efficiency Lemma
 
 $k, t$ is Pareto efficient if and only if: 
 1) $\forall \theta$ $k(\theta) \in \arg \max \sumn{i} v_i(k, \theta_i)$ (decision efficient), and 
 2) $\forall \theta$, $\sumn{i} t_i(\theta_i) = 0$ (budget balance)
 
-#### Proof: 
+#### Proof:
 <font color=#F7B801>by me</font>
-$\implies$: Suppose k pareto efficient. Suppose for a contradiction that either ∃ k′ with better decision efficiency or that t is not budget balanced.  If the former, 
-$$ \sumn{i} v_i(k', \theta_i) > \sumn{i} v_i(k, \theta_i)$$ Then under $k'$ there is an aggregate lump sum of consumption utility left behind. Let $D = \sumn{i} v_i(k', \theta_i) - \sumn{i} v_i(k, \theta_i)$, so $D > 0$ Let $x = x_1, \ldots, x_n$ be the allocation of the consumption good or whatever, with $x_i$ being the value given to agent $i$ under $k$, and $x'_i$ under $k'$. Given the supposition, there are some agents with $v_i$ increasing in $x$. For all such agents, define $x''_i$ as allocating them $x_i + \epsilon/n$. Then, given that $D>0$, there is some $\epsilon$  such that this reallocation describes a Pareto improvment. 
+$\implies$: Suppose k pareto efficient. Suppose for a contradiction that either ∃ k′ with better decision efficiency or that t is not budget balanced. If the former, 
+$$ \sumn{i} v_i(k', \theta_i) > \sumn{i} v_i(k, \theta_i)$$ Then under $k'$ there is an aggregate lump sum of consumption utility left behind. Let $D = \sumn{i} v_i(k', \theta_i) - \sumn{i} v_i(k, \theta_i)$, so $D > 0$ Let $x = x_1, \ldots, x_n$ be the allocation of the consumption good or whatever, with $x_i$ being the value given to agent $i$ under $k$, and $x'_i$ under $k'$. Given the supposition, there are some agents with $v_i$ increasing in $x$. For all such agents, define $x''_i$ as allocating them $x_i + \epsilon/n$. Then, given that $D>0$, there is some $\epsilon$ such that this reallocation describes a Pareto improvment. 
 
 If $t$ is not budget balanced, i.e. $\sum t_i \neq 0$, then we must have $\sum t_i > 0$, under no outside funds. But then we can simply reduce everyone's contribution by $\sum t_i/n$ and create a pareto improvement. 
 
@@ -57,3 +61,11 @@ The first is impossible, since $k \in \arg \max \sum v_i$; and the second is als
 
 
 
+## Groves Mechanism
+
+The Groves Mechanism is a class of mechanisms of a particular form, with desirable properties. Let $h: \Theta_{-i} \to \R$ be some arbitrary function. A Groves Mechanism has: 
+
+$$ -t_i(\theta_i) = h_i(\theta_{-i}) + \sum_{j \neq i} v_j(k, \theta_i, \theta_{-i}) $$
+The first term is simply something that agents can't manipulate through their reports, and the second term is the externality of this agents' report on the other agents. So we are internalizing the externality by incentivizing the agent to maximize others' utiility. 
+
+### Proposition (Groves T

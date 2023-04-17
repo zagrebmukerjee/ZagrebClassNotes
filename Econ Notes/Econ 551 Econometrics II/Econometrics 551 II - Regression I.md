@@ -1,14 +1,15 @@
 ---
 aliases:
+- 'Omitted Variable Bias'
 creation date: Friday, February 17th 2023, 11:12 am
-date updated: Friday, February 24th 2023, 4:04 pm
+date updated: Monday, April 17th 2023, 5:21 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags: 
-- '#types/classes'
-- '#status/🚧'
+- '#types/classes/econ'
+- '#types/classes/stats'
 ---
 
 # [[Econometrics 551 II - Regression I]]
@@ -227,7 +228,7 @@ Potential outcomes in the case of a vaccine are very clear: what happens if the 
 
 ```
 
-## Omitted Variable Bias
+## Multiple Regressors and OVB
 
 
 ### Motivating Example: Wages and Human Capital
@@ -379,5 +380,3 @@ $$\begin{align}
 &= \beta_1 + \var(X_1)\inv \cov(X_1,X_2')\beta_2  \\
 \end{align}$$
 So there's a bias term. The bias grows worse with the relative variance of $X_2$ vs $X_1$ and the relative importance of $X_2$ vs $X_1$.  Note that if $X_1 \perp X_2$ the bias goes away. 
-
-

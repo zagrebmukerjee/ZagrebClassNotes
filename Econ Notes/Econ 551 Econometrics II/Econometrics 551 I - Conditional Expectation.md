@@ -1,13 +1,14 @@
 ---
 aliases:
 creation date: Friday, January 27th 2023, 1:06 pm
-date updated: Sunday, February 19th 2023, 1:06 pm
+date updated: Monday, April 17th 2023, 5:20 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags: 
 - '#types/classes/econ'
+- '#types/classes/stats'
 ---
 
 # [[Econometrics 551 I - Conditional Expectation]]

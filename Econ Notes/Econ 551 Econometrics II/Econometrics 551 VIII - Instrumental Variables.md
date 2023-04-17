@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Monday, April 17th 2023, 5:02 pm
-date updated: Monday, April 17th 2023, 6:32 pm
+date updated: Monday, April 17th 2023, 6:45 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -113,13 +113,15 @@ In other words, price is linear in $Z$:
 $$\cov(P,Z) = \frac{\beta_2^s}{\beta_1^d - \beta_1^s}$$
 assuming $\beta_2^S$ nonzero. 
 
-So now to find our $\beta_1^d$, use the fact that $E[Ze^d] = 0$: 
+Since $\cov(Q, Z) = \beta_1^d \cov(P,Z)$, that lets us back out $\beta_1^d$:
+
+$$\beta_1^d = \frac{\cov(Q, Z)}{\cov(P,Z)}$$
+
 $$\begin{align}
 E[Ze^d] &=\frac{1}{\beta_2^s} E[e^d\left((\beta_1^d - \beta_1^s)P -  (\beta_0^s - \beta_0^d + e^s -e^d)\right)]\\
-& =\frac{\beta_1^d - \beta_1^s}{\beta_2^s} E[e^dP] -  E[e^d(\beta_0^s - \beta_0^d + e^s -e^d)]\\
-& =\left(\frac{\beta_1^d - \beta_1^s}{\beta_2^s}\right)\left( \right) -  E[e^d(\beta_0^s - \beta_0^d + e^s -e^d)]\\
-& =
-
+& =\frac{\beta_1^d - \beta_1^s}{\beta_2^s} E[e^dP]+  \frac{1}{\beta_2^s}E[e^d(\beta_0^d - \beta_0^s + e^d -e^s)]\\
+& =\cov(P,Z)\inv \var(e^d)  + \frac{\beta_1^d - \beta_1^s}{\beta_2^s}E[e^d(\beta_0^d - \beta_0^s) + e^d(e^d -e^s)]\\
+&= \cov(P,Z)\inv + (\beta_1^d - \beta_1^s)/\beta_2^s
 \end{align}$$
 
 
@@ -129,3 +131,9 @@ title: Aside
 'LATE' style IV: no sense of a correct specification of the outcome model, i.e. no functional form. But there is a functional form at the first stage - vs traditional form involves assumptions about the second stage. 
 
 ```
+
+
+## Instrumental Variables 
+
+
+Suppose $Y_i = X_i' \beta + e_i$; let $X_i = [X_{1i}' \; X_{2i} ']'$ 

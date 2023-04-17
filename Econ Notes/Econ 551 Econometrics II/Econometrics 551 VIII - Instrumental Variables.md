@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Monday, April 17th 2023, 5:02 pm
-date updated: Monday, April 17th 2023, 5:11 pm
+date updated: Monday, April 17th 2023, 5:33 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -60,6 +60,24 @@ Then $Z$ is a <font color=gree>valid instrument</font> for X.
 Relevance is testable - simply look at it. But exogeneity is not. 
 
 $$\begin{align}
-E[Y - \beta_0 - \beta_1S] &= 0 \text{ by construction } \\
-E[ Z(Y - \beta_0 - \beta_1 S] &= 0
+E[Y - \beta_0 - \beta_1S] &= E[e] = 0 \text{ by construction } \\
+E[ Z(Y - \beta_0 - \beta_1 S)] &= 0 \text{ exogeneity }\\
+\end{align}$$ 
+From the first expression we can remove $\beta_0$. 
+$$\begin{align}
+\beta_0 &= E[Y] - \beta_1 E[S]\\
+0&= E[Z((Y - EY) - \beta_1(S - ES))] \\
+0&= E[Z(Y - EY)] - \beta_1E[Z(S - ES)] \\
+\beta_1 &= \frac{\cov(Z, Y)}{\cov(Z,S)}
 \end{align}$$
+
+Note the difference between this and an OLS on $Z$. 
+
+
+```ad-example
+title: Simultaneity: Supply and Demand 
+
+```
+
+
+Suppose I have 

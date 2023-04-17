@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Monday, April 17th 2023, 5:02 pm
-date updated: Monday, April 17th 2023, 5:33 pm
+date updated: Monday, April 17th 2023, 6:07 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -19,7 +19,8 @@ tags:
 
 Instrumental variables are a very popular way to deal with endogeneity - when I think that my regressors are correlated with the (true) error term.
 
-### Example: Wages and Schooling
+### Endogeneity: Wages and Schooling
+
 Consider a common problem - that of omitted ability bias in determining the effect of schooling on wages. 
 
 $$ Y = \ln w $$
@@ -34,7 +35,7 @@ title: Aside
 "Economists doing semi-structural work will reverse engineer a model to correspond (in linearity) to the regression they're going to run." - Ed Vytlacil
 ```
 
-I can write this also as $Y_i = \beta_0 + \beta_1 S_i + e_i$ where $e = (u - Eu) + \gamma(A - EA)$ - note I've separated $u$ and $\gamma A$ into average parts that will be in $\beta_0$ and individual variation which will be in my error term. But I have a problem: 
+I can write this also as $Y_i = \beta_0 + \beta_1 S_i + e_i$ where $e = (u - Eu) + \gamma(A - EA)$ - note I've separated $u$ and $\gamma A$ into average parts that will be in $\beta_0$ and individual variation which will be in my error term. But I have a problem. Suppose $S$ is independent of $u$.  
 
 $$\begin{align}
 E[eS] &= E[((u - Eu) + \gamma(A - EA))S] \\
@@ -73,11 +74,30 @@ $$\begin{align}
 
 Note the difference between this and an OLS on $Z$. 
 
+### Simultaneity
+Another use case - we can think of this as a form of exogeneity, but it has its own rich history as a problem. 
 
-```ad-example
-title: Simultaneity: Supply and Demand 
+A market has the following demand and supply schedules, as functions of clearing price $\tilde P$:
 
-```
+$$ Q^d = \beta_0^d + \beta_1^d \widetilde P + e^d $$
+$$ Q^s = \beta_0^s + \beta_1^s \widetilde P + e^s $$
+where $E[e^s] = E[e^d] = E[e^se^d] = 0$. $P$ and $Q$ are observable, with $Q = Q^s(P) = Q^d(P)$ - the market clears. This gives us an expression for that price: 
 
+$$\begin{align}
+Q^d(P) &= Q^s(P)\\
+\beta_0^d + \beta_1^d P + e^d &=  \beta_0^s + \beta_1^s  P + e^s \\
+(\beta_1^d - \beta_1^s)P &= \beta_0^s - \beta_0^d + e^s - e^d\\
+P &= \frac{\beta_0^s - \beta_0^d + e^s - e^d}{\beta_1^d - \beta_1^s}
+\end{align}$$
+So: 
+$$\begin{align}
+E[Pe^s] &= E\left[\frac{\beta_0^s - \beta_0^d + e^s - e^d}{\beta_1^d - \beta_1^s}e_s\right]\\
+&= \frac{1}{\beta_1^d - \beta_1^s}\left(E\left[(e^s)^2] - E[e^d e^s\right] + (\beta_0^s - \beta_0^d\right)E[e^s])\\
+&= \frac{E[(e^s)^2]}{\beta_1^d - \beta_1^s}\\
+&= \frac{\var(e^s)}{\beta_1^d - \beta_1^s}\\
+E[Pe^d] &= \frac{\var(e^d)}{\beta_1^s - \beta_1^d}
+\end{align}$$
 
-Suppose I have 
+#### Instrument Approach
+
+Su

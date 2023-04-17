@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Monday, April 17th 2023, 5:02 pm
-date updated: Monday, April 17th 2023, 6:07 pm
+date updated: Monday, April 17th 2023, 6:32 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -100,4 +100,32 @@ E[Pe^d] &= \frac{\var(e^d)}{\beta_1^s - \beta_1^d}
 
 #### Instrument Approach
 
-Su
+Suppose an instrument $Z$ that moves supply but not demand. I can use this as a lever for the estimation of the $\beta$ parameters. (What would such a thing look like? Whether I have one or not needs to be based on a 'story'). 
+
+So 
+
+$$ Q^s = \beta_0^s + \beta_1^s P + \beta_2^s Z+  e^s$$ with $E[e^sZ] = E[e^dZ] = 0$. 
+Then 
+$$ P = \frac{\beta_0^s - \beta_0^d + \beta_2^sZ + e^s - e^d }{\beta_1^d - \beta_1^s}$$
+
+In other words, price is linear in $Z$: 
+
+$$\cov(P,Z) = \frac{\beta_2^s}{\beta_1^d - \beta_1^s}$$
+assuming $\beta_2^S$ nonzero. 
+
+So now to find our $\beta_1^d$, use the fact that $E[Ze^d] = 0$: 
+$$\begin{align}
+E[Ze^d] &=\frac{1}{\beta_2^s} E[e^d\left((\beta_1^d - \beta_1^s)P -  (\beta_0^s - \beta_0^d + e^s -e^d)\right)]\\
+& =\frac{\beta_1^d - \beta_1^s}{\beta_2^s} E[e^dP] -  E[e^d(\beta_0^s - \beta_0^d + e^s -e^d)]\\
+& =\left(\frac{\beta_1^d - \beta_1^s}{\beta_2^s}\right)\left( \right) -  E[e^d(\beta_0^s - \beta_0^d + e^s -e^d)]\\
+& =
+
+\end{align}$$
+
+
+```ad-note
+title: Aside
+
+'LATE' style IV: no sense of a correct specification of the outcome model, i.e. no functional form. But there is a functional form at the first stage - vs traditional form involves assumptions about the second stage. 
+
+```

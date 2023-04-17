@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Monday, April 17th 2023, 5:02 pm
-date updated: Monday, April 17th 2023, 6:45 pm
+date updated: Monday, April 17th 2023, 7:13 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -133,7 +133,27 @@ title: Aside
 ```
 
 
-## Instrumental Variables 
+## Instrumental Variables
 
 
-Suppose $Y_i = X_i' \beta + e_i$; let $X_i = [X_{1i}' \; X_{2i} ']'$, and $\beta = [\beta_1 \; \beta_2]'$, so we can 
+Suppose $Y_i = X_i' \beta + e_i$; let $\underset{K + 1 \times 1}{X_i} = [\underset{K_1 + 1\times 1}{X_{1i}}' \; \underset{K_2 \times 1}{X_{2i}} ']'$, and $\underset{K + 1 \times 1}{\beta} = [\beta_1 \; \beta_2]'$, so we can write $Y_i = X_{1i}'\beta_1+ X_{2i}\beta_2 + e_i$. We have $X_{1i}$ exogenous, so $E[X_{1i}e_i] = 0$, but $X_{2i}$ endogenous, so $E[X_{2i}e_i] \neq 0$. 
+
+Then $\underset{L \times 1}{Z_i}$ (with no perfect collinearity) is a <font color=gree>valid instrumental variable</font> for $X_i$ if:
+1) $E[Z_ie_i] = 0$ and 
+2) $E[Z_iX_i']$ is full rank , ie. rank $K+1$. 
+
+By pre-multiplying both sides of the structural model  by $Z_i$ we can find a system of equations:
+
+$$\underset{L \times 1}{E[Z_i Y_i]} = \underset{L \times K + 1}{ E[Z_i X_i']}\underset{K + 1 \times 1} \beta$$
+The full rank condition means that this system has a unique solution $\beta$. If $L = K$ we say 'exactly identified', and if $L > K$ we call it "overidentified". 
+
+Typically we'll take $Z_i = [X_{1i}' \; \underset{L_2 \times 1}{Z_{2i}}]'$, i.e. instrument for the exogenous regressors with themselves (some skip this step altogether). In that framework you can talk about $X_{1i}$ as 'included exogenous variables' and $X_{2i}$ as 'excluded exogenous variables'. Assume $L_2 > K_2$. 
+
+Then we can expand the model: 
+
+$$ Y_i = X_i'\beta + e_i; \; \; X_i = \Pi' Z_i + u_i$$
+
+The latter is a linear projection. So by definition, $\Pi'Z_i = \mathbf L(X_i |Z_i)$ and $E[ u_iZ_i ] = 0$, and $\Pi = E[Z_iZ_i']E[ZX_i'[$. 
+
+The second equation is the 'first stage' or a 'reduced form' for $X$. Given our stipulation that $Z_{1i} = X_
+

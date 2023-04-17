@@ -136,4 +136,4 @@ title: Aside
 ## Instrumental Variables 
 
 
-Suppose $Y_i = X_i' \beta + e_i$; let $X_i = [X_{1i}' \; X_{2i} ']'$ 
+Suppose $Y_i = X_i' \beta + e_i$; let $X_i = [X_{1i}' \; X_{2i} ']'$, and $\beta = [\beta_1 \; \beta_2]'$, so we can 

@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Monday, April 17th 2023, 5:02 pm
-date updated: Monday, April 17th 2023, 7:30 pm
+date updated: Monday, April 17th 2023, 7:42 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -187,6 +187,18 @@ $$\begin{align}
 Y_i &= X_i' \beta + e\\
 Z_iY_i &= Z_iX_i'\beta + Z_i e\\
 \Pi'E[Z_i Y_i] &= \Pi'E[Z_iX_i']\beta\\
-\beta &= (\Pi'E[Z_iX_i']\inv E[Z_iY_i]\\
-	&= (E[Z_iZ_i']\Pi)
+\beta &= (\Pi'E[Z_iX_i'])\inv \Pi'E[Z_iY_i]\\
+	&= (E[Z_iX_i'])\inv\Pi'\inv \Pi'E[Z_iY_i]\\
+	&= E[Z_iX_i']\inv E[Z_iY_i]
 \end{align}$$
+Let $\widetilde X_i = \Pi'Z_i$ (or $X_i - u_i$). We can think of this as having recovered the exogeneous parts of $X$ - the 'good variation'. Then in the above we can also write
+
+$$\begin{align}
+\beta &= (\Pi'E[Z_iX_i'])\inv \Pi'E[Z_iY_i]\\
+&= (E[\Pi'Z_iX_i'])\inv E[\Pi'Z_iY_i]\\
+&= E[\widetilde X_i X_i']\inv E[\widetilde X_i Y_i] \\
+\end{align}$$
+or 
+$$ \beta = (E[\widetilde X_i \widetilde X_i']) \inv E[\widetilde X_i Y_i] $$
+$$ L(Y_i | \widetilde X_i) = \widetilde X_i '\beta $$
+These are two different interpretations of the TSLS estimator. 

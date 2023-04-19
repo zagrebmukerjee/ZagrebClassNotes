@@ -202,3 +202,5 @@ or
 $$ \beta = (E[\widetilde X_i \widetilde X_i']) \inv E[\widetilde X_i Y_i] $$
 $$ L(Y_i | \widetilde X_i) = \widetilde X_i '\beta $$
 These are two different interpretations of the TSLS estimator. 
+
+### Control Variate

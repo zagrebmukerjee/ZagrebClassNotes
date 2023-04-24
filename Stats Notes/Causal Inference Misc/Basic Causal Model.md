@@ -35,3 +35,6 @@ $$E[Y_1|D=1] - E[Y_0|D = 0]$$
 Doesn't become $E[Y_1-Y_0]$ unless treatment is independent of other covariates. (e.g. people can self-select into experimental medication). So $Y_1$ and $D$ are not independent.
 
 Also can be interested in ATT: average treatment effect on the treated. Which is $E[Y_1 - Y_0|D=1]$. What effect did the medicine have on those who took it? Also hard to observe without counterfactual. 
+
+
+## Heterogenous Treatment Effect

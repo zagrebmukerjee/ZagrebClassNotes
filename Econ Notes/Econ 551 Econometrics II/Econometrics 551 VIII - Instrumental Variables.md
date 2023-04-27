@@ -15,6 +15,8 @@ tags:
 # [[Econometrics 551 VIII - Instrumental Variables]]
 <span style = "font-size:120%"><i >Zagreb Mukerjee </i></span>
 
+[[Instrumental Variables]]
+
 ## Motivation
 
 Instrumental variables are a very popular way to deal with endogeneity - when I think that my regressors are correlated with the (true) error term.
@@ -60,9 +62,11 @@ Then $Z$ is a <font color=gree>valid instrument</font> for X.
 
 Relevance is testable - simply look at it. But exogeneity is not. 
 
+With these assumptions I can write: 
+
 $$\begin{align}
-E[Y - \beta_0 - \beta_1S] &= E[e] = 0 \text{ by construction } \\
-E[ Z(Y - \beta_0 - \beta_1 S)] &= 0 \text{ exogeneity }\\
+E[Y - \beta_0 - \beta_1S] &= E[e] = 0 \text{ by construction of the structural model } \\
+E[ Z(Y - \beta_0 - \beta_1 S)] &= 0 \text{ by exogeneity }\\
 \end{align}$$ 
 From the first expression we can remove $\beta_0$. 
 $$\begin{align}

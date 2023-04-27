@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Monday, April 17th 2023, 5:02 pm
-date updated: Monday, April 17th 2023, 7:42 pm
+date updated: Thursday, April 27th 2023, 2:43 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -140,14 +140,15 @@ title: Aside
 ## Instrumental Variables
 
 
-Suppose $Y_i = X_i' \beta + e_i$; let $\underset{K + 1 \times 1}{X_i} = [\underset{K_1 + 1\times 1}{X_{1i}}' \; \underset{K_2 \times 1}{X_{2i}} ']'$, and $\underset{K + 1 \times 1}{\beta} = [\beta_1 \; \beta_2]'$, so we can write $Y_i = X_{1i}'\beta_1+ X_{2i}\beta_2 + e_i$. We have $X_{1i}$ exogenous, so $E[X_{1i}e_i] = 0$, but $X_{2i}$ endogenous, so $E[X_{2i}e_i] \neq 0$. 
+Let's now look at a general matrix form. Suppose $Y_i = \underset {1 \times K +1 }{X_i'} \underset{K +1  \times 1}{\beta} + e_i$; let $\underset{K + 1 \times 1}{X_i} = [\underset{1 \times K_1 + 1}{X_{1i}}' \; \underset{1 \times K_2}{X_{2i}} ']'$, and $\underset{K + 1 \times 1}{\beta} = [\beta_1 \; \beta_2]'$, so we can write $Y_i = X_{1i}'\beta_1+ X_{2i}\beta_2 + e_i$. We have $X_{1i}$ exogenous, so $E[X_{1i}e_i] = 0$, but $X_{2i}$ endogenous, so $E[X_{2i}e_i] \neq 0$. 
 
 
 ```ad-important 
 title: Definition: Valid IV (2)
-Then $\underset{L \times 1}{Z_i}$ (with no perfect collinearity) is a <font color=gree>valid instrumental variable</font> for $X_i$ if:
+$\underset{L \times 1}{Z_i}$ (with no perfect collinearity) is a <font color=gree>valid instrumental variable</font> for $X_i$ if:
 1) $E[Z_ie_i] = 0$ and 
 2) $E[Z_iX_i']$ is full rank , ie. rank $K+1$. 
+Note that this requires $L \geq K+1$.
 ```
 
 
@@ -162,11 +163,11 @@ Then we can expand the model:
 
 $$ Y_i = X_i'\beta + e_i; \; \; X_i = \Pi' Z_i + u_i$$
 
-The latter is a linear projection. So by definition, $\Pi'Z_i = \mathbf L(X_i |Z_i)$ and $E[ u_iZ_i ] = 0$, and $\Pi = E[Z_iZ_i']\inv E[Z_iX_i']$. 
 
 ### First Stage
+This is a linear projection, $\Pi'Z_i = \mathbf L(X_i |Z_i)$ and so by definition $E[ u_iZ_i ] = 0$, and $\Pi = E[Z_iZ_i']\inv E[Z_iX_i']$. 
 
-The second equation is the 'first stage' or a 'reduced form' for $X$. Given our stipulation that $Z_{1i} = X_{1i}$ we can rewrite 
+The second equation is the 'first stage' or a 'reduced form' for $X$. Given that $Z_{1i} = X_{1i}$ we can rewrite 
 
 $$ \Pi = \begin{bmatrix} \underset{K_1 + 1 \times K_1 + 1 + 1} I & \underset{K_2 }{\Pi_{12}} \\ 0 & \underset{}{\Pi_{22}}\end{bmatrix}$$
 which implies that 
@@ -176,11 +177,26 @@ X_{1i}\\
 \end{bmatrix} +  \begin{bmatrix} 0 \\ u_{2i} \end{bmatrix}$$
 or 
 $$\begin{align}X_{1i} &= Z_{1i}\\
-X_{2i} &= \Pi_{12}X_{1i} + \Pi_{22}Z_{2i} + u_{2i}\\
+X_{2i} &= \Pi_{12}'X_{1i} + \Pi_{22}'Z_{2i} + u_{2i}\\
 \end{align}$$
 
 Here we're writing $u_{2i}$ to remind us where that error term is coming from. 
 
+So far this 'first stage' has not used the assumptions at all. But I need to use the assumptions to describe why I care about $\Pi$ and $Z$. 
+
+$$\begin{align}
+Y_i &= X_i'\beta + e \\\
+&= (\Pi'Z_i + u_{2i})'\beta + e\\
+&= \underset{1 \times L}{Z_i'} \underset{L \times K + 1}{\Pi}\underset{K + 1 \times 1}\beta + u_{2i}'\beta +  e\\
+&\equiv \underset{1 \times L}{Z_i'} \underset{L \times 1}{\lambda} +u_{1i}
+\end{align}$$
+
+To expand: 
+
+$$ \lambda = \begin{bmatrix} \lambda_1 \\ \lambda_2\end{bmatrix} = \begin{bmatrix} \underset{K_1 + 1 \times K_1 + 1 + 1} I & \underset{K_2 }{\Pi_{12}} \\ 0 & \underset{}{\Pi_{22}}\end{bmatrix} \begin{bmatrix} \beta_1 \\ \beta_2 \end{bmatrix} = \begin{bmatrix} \beta_1 + \Gamma_{21}\beta_2 \\\Gamma_{22}\beta_2\end{bmatrix}$$
+
+and 
+$u_{1i} = u
 ### Identification
 
 We know that $\Pi = E[Z_iZ_i']\inv E[Z_iX_i']$, so $E[Z_iX_i'] = E[Z_iZ_i']\Pi$. This means that $E[Z_iX_i]$ is full rank if and only if $\Pi$ is full rank. So instrument exogeneity implies that $\Pi' E[Z_i X_i'] = \Pi' E[Z_i Z_i'] \Pi$ is invertible. 

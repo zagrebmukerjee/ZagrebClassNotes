@@ -167,7 +167,7 @@ $$ Y_i = X_i'\beta + e_i; \; \; X_i = \Pi' Z_i + u_i$$
 ### First Stage
 This is a linear projection, $\Pi'Z_i = \mathbf L(X_i |Z_i)$ and so by definition $E[ u_iZ_i ] = 0$, and $\Pi = E[Z_iZ_i']\inv E[Z_iX_i']$. 
 
-The second equation is the 'first stage' or a 'reduced form' for $X$. Given that $Z_{1i} = X_{1i}$ we can rewrite 
+The second equation is the <font color=gree>first stage</font> or <font color=gree>reduced form</font> for $X$. Given that $Z_{1i} = X_{1i}$ we can rewrite 
 
 $$ \Pi = \begin{bmatrix} \underset{K_1 + 1 \times K_1 + 1 + 1} I & \underset{K_2 }{\Pi_{12}} \\ 0 & \underset{}{\Pi_{22}}\end{bmatrix}$$
 which implies that 
@@ -196,7 +196,10 @@ To expand:
 $$ \lambda = \begin{bmatrix} \lambda_1 \\ \lambda_2\end{bmatrix} = \begin{bmatrix} \underset{K_1 + 1 \times K_1 + 1 + 1} I & \underset{K_2 }{\Pi_{12}} \\ 0 & \underset{}{\Pi_{22}}\end{bmatrix} \begin{bmatrix} \beta_1 \\ \beta_2 \end{bmatrix} = \begin{bmatrix} \beta_1 + \Gamma_{21}\beta_2 \\\Gamma_{22}\beta_2\end{bmatrix}$$
 
 and 
-$u_{1i} = u
+$$u_{1i} = u_{2i}' \beta + e$$
+
+
+
 ### Identification
 
 We know that $\Pi = E[Z_iZ_i']\inv E[Z_iX_i']$, so $E[Z_iX_i'] = E[Z_iZ_i']\Pi$. This means that $E[Z_iX_i]$ is full rank if and only if $\Pi$ is full rank. So instrument exogeneity implies that $\Pi' E[Z_i X_i'] = \Pi' E[Z_i Z_i'] \Pi$ is invertible. 

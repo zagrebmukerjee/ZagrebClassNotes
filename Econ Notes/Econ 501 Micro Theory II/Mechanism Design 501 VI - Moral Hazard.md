@@ -1,7 +1,7 @@
 ---
 aliases:
-creation date: 2023-05-05 10:21
-date updated: 2023-05-05 10:21
+creation date: Thursday, May 4th 2023, 6:53 pm
+date updated: Friday, May 5th 2023, 10:36 am
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -33,7 +33,7 @@ Timing of the game:
 
 The problem is, for the principal, how do I design a contract to motivate my desired level of effort?
 
-Start with the case in which effort  is observable. Here, the contract enforces $e$. The principal's optimization problem is 
+Start with the case in which effort is observable. Here, the contract enforces $e$. The principal's optimization problem is 
 
 $$ \max_{w(\cdot)} \sum_{i=0}^n P(\pi_i |e(w))(\pi_i - w)$$
 subject to the participation constraint on the agent, 
@@ -46,4 +46,5 @@ The optimum constant wage constitutes "full insurance", by the same logic - ie. 
 
 The constant optimum wage can be backed out of the participation constraint with $v(\bar w) = ce$. Then the principal can just compare $e=0$ payoff to $e=1$: 
 
-$$e^* = 1 \iff \sum P(\pi|1) - \sum P)$$
+
+$$e^* = 1 \iff \sum P(\pi|1) - P(\pi|0) > v\inv (c) - v\inv(0)$$

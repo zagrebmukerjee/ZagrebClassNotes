@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Thursday, May 4th 2023, 6:53 pm
-date updated: Friday, May 5th 2023, 10:36 am
+date updated: Friday, May 5th 2023, 10:50 am
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -13,6 +13,8 @@ tags:
 
 # [[Mechanism Design 501 VI - Moral Hazard]]
 <span style = "font-size:120%"><i >Zagreb Mukerjee </i></span>
+
+## Problem
 
 In previous problems we've considered the idea that agents' types are unobservable. We now consider the idea that agents' effort is unobservable - the asymmetric information in this sort of problem arises from agents who choose effort that has a noisy effect on outcomes, and principals who only observe the outcomes. 
 
@@ -33,6 +35,8 @@ Timing of the game:
 
 The problem is, for the principal, how do I design a contract to motivate my desired level of effort?
 
+## Observable Actions
+
 Start with the case in which effort is observable. Here, the contract enforces $e$. The principal's optimization problem is 
 
 $$ \max_{w(\cdot)} \sum_{i=0}^n P(\pi_i |e(w))(\pi_i - w)$$
@@ -48,3 +52,30 @@ The constant optimum wage can be backed out of the participation constraint with
 
 
 $$e^* = 1 \iff \sum P(\pi|1) - P(\pi|0) > v\inv (c) - v\inv(0)$$
+## Unobservable Action
+
+Now the principal only sees $\pi$ and so has a function $w(\pi)$. It's useful to think of the principal as minimizing wage expenditure to attain a given effort $e$. 
+
+$$ \min_{w()} \sum P(\pi|e) w(\pi) \text{ subject to } \sum P(\pi|e)v(w(\pi) - ce \geq 0$$
+
+But there is a new constraint, the incentive compatibility. The principal needs to get the worker not to choose $e' \neq e$. So
+$$ \sum P(\pi|e)v(w(\pi)) - ce \geq \sum P(\pi|e')v(w(\pi)) - ce'$$
+
+It's easy to imlement $e= 0$, by setting constant wage $\bar w = v\inv(0)$. In this case the worker does nothing and has no utility. IC is trivially respected, since work is monotonically bad. The principal's payoff is the same in the observable action case. 
+
+The principal might choose this if they think that, observable or not, an agent's effort is unrelated to the profits. 
+
+### Incentive to Work
+
+It's when I'd want to implement $e=1$ that things get fun. Now IC is going to matter. The constant wage is incompatible with the IC constraint, which means that the outcome involves the principal putting risk onto the agent - 'inefficient'. 
+
+The cost minimization dictates that both IC and participation constraint are going to bind. Our employer will pay no more than they have to but will also have to incentivize effort. 
+
+Can qualitatively describe the loss for the principal. From the PC get:
+$$ \sum P(\pi|1) v(w^*(\pi)) = c $$
+From [[Jensen's inequality]], since $v$ is concave:
+$$ v\left(E[w(\pi)\right]) > E[v(w(\pi))]$$
+so, since $\bar w = v \inv(c)
+$$ v\left( \sum P(\pi|1)w^*(\pi) \right) > c$$
+$$  \sum P(\pi|1)w^*(\pi)  > \bar w$$
+ <font color=#F7B801>hide your effort, kids!</font>

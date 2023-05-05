@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Friday, January 27th 2023, 1:06 pm
-date updated: Monday, April 17th 2023, 5:20 pm
+date updated: Thursday, May 4th 2023, 6:53 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note

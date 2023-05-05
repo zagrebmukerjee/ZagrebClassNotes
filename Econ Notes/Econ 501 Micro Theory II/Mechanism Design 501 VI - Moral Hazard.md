@@ -37,7 +37,12 @@ The problem is, for the principal, how do I design a contract to motivate my des
 
 ## Observable Actions
 
-Start with the case in which effort is observable. Here, the contract enforces $e$. The principal's optimization problem is 
+Start with the case in which effort is observable. Here, the contract enforces $e$. The principal problem has two parts: 
+1) Find the $w$ that motivates each level of effort and 
+2) choose the highest profit effort level. 
+
+
+The principal's optimization problem is 
 
 $$ \max_{w(\cdot)} \sum_{i=0}^n P(\pi_i |e(w))(\pi_i - w)$$
 subject to the participation constraint on the agent, 
@@ -54,7 +59,13 @@ The constant optimum wage can be backed out of the participation constraint with
 $$e^* = 1 \iff \sum P(\pi|1) - P(\pi|0) > v\inv (c) - v\inv(0)$$
 ## Unobservable Action
 
-Now the principal only sees $\pi$ and so has a function $w(\pi)$. It's useful to think of the principal as minimizing wage expenditure to attain a given effort $e$. 
+Now the principal only sees $\pi$ and so has a function $w(\pi)$. The principal problem has three parts: 
+1) Determine the set of implementable efforts/actions;
+2) Find the $w$ that motivates each level of effort and 
+3) choose the highest profit effort level. 
+
+
+It's useful to think of the principal as minimizing wage expenditure to attain a given effort $e$. 
 
 $$ \min_{w()} \sum P(\pi|e) w(\pi) \text{ subject to } \sum P(\pi|e)v(w(\pi) - ce \geq 0$$
 

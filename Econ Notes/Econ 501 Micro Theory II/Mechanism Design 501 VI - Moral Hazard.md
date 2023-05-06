@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Thursday, May 4th 2023, 6:53 pm
-date updated: Friday, May 5th 2023, 10:50 am
+date updated: Saturday, May 6th 2023, 10:24 am
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -90,3 +90,34 @@ so, since $\bar w = v \inv(c)$
 $$ v\left( \sum P(\pi|1)w^*(\pi) \right) > c$$
 $$  \sum P(\pi|1)w^*(\pi)  > \bar w$$
  <font color=#F7B801>hide your effort, kids!</font>
+
+
+### Optimal Contract
+
+So far we have made observations about efficiency purely from the constraint, without actually finding optimal contract. What is the optimum? Suppose we want to incentivize effort $e = 1$. Then we can describe the cheapest way to do so: 
+
+$$ \min_{w(\cdot)} \sum P(\pi|1)w(\pi) \text{ subject to } \sum P(\pi|1)v(w(\pi)) -c \geq 0$$
+with also the IC constraint, 
+$$ \sum P(\pi|1) v(w(\pi)) - c \geq \sum P(\pi|0)v(w(\pi))$$
+We can do a chance of variables $u( \pi) \equiv v(w(\pi))$ whcih makes the problem 
+$$\max - \sum p(\pi|1) v\inv [u(\pi)] \text{ subject to } \sum P(\pi|1) u(\pi) - c = 0$$
+$$ \sum P(\pi|1)u(\pi) - c \geq \sum P(\pi|0)$$
+The objective function is concave: $v$ is concave, so $v\inv$ is convex, so $-v\inv$ is concave again. So Kuhn Tucker conditions can be used and solving this reparametrized problem will solve the main one.
+
+The KT conditions take the form
+
+$$ - P(\pi|1) (v\inv)' (u(\pi)) + \lambda  P(\pi|1) + \mu[ P(\pi|1) - P(\pi|0)] =0 $$
+so this is linear in $u$. Here, $\lambda$ is the multiplier on the participation constraint and $\mu$ the multiplier on the IC constraint. Using the [[Derivative Rules|Derivative of an Inverse]] we have 
+
+$$(v\inv)' (u(\pi)) = v'[v\inv(u(\pi))]\inv = v'(w^*(\pi))\inv $$
+where the latter holds at equilibrium. Then some algebra on the condtiions: 
+
+$$\begin{align}
+0 &=  - P(\pi|1) (v\inv)' (u(\pi)) + \lambda  P(\pi|1) + \mu[ P(\pi|1) - P(\pi|0)] \\
+&=  - \frac{P(\pi|1)}{ v'(w^*(\pi))}+ \lambda  P(\pi|1) + \mu[ P(\pi|1) - P(\pi|0)] \\
+&= -\frac{1}{v'(w^*(\pi))} + \lambda + \mu\left[1 - \frac{P(\pi|0)}{P(\pi|1)}\right]\\
+\frac{1}{v'(w^*(\pi))}  &= \lambda + \mu\left[1 - \frac{P(\pi|0)}{P(\pi|1)}\right]\\
+\end{align}$$
+There is no general closed form solution to find this - after all we must describe it at all $\pi$ - but this form allows for some descriptions of the optimal contract. 
+
+We 

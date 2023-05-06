@@ -4,15 +4,15 @@ aliases:
 - 'Quotient Rule'
 - 'Power Rule' 
 - 'Chain Rule'
+- 'Derivative of an Inverse'
 creation date: Friday, April 14th 2023, 10:37 am
-date updated: Friday, April 14th 2023, 11:09 am
+date updated: Saturday, May 6th 2023, 10:19 am
 
 notetype: "Math Class Note"
 cssclass: math-class-note
 
 tags: 
 - '#types/classes/math/calculus'
-- '#status/🚧'
 ---
 
 # [[Derivative Rules]]

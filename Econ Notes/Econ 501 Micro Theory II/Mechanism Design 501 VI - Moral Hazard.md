@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Thursday, May 4th 2023, 6:53 pm
-date updated: Saturday, May 6th 2023, 10:24 am
+date updated: Saturday, May 6th 2023, 10:27 am
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -120,4 +120,30 @@ $$\begin{align}
 \end{align}$$
 There is no general closed form solution to find this - after all we must describe it at all $\pi$ - but this form allows for some descriptions of the optimal contract. 
 
-We 
+We know from this that the PC binds: 
+- $v'()> 0$
+- For some $\pi$ it must be the case that $P(\pi|0)\geq P(\pi|1)$
+- so  $1- \frac{P(\pi|0) }{P(\pi|1) }$ is nonpositive somewhere. 
+- This necessitates that $\lambda$ is positive. 
+
+Therefore the participation constraint binds. 
+
+
+We also know that $\mu$ is positive. If $\mu = 0$ the wage is constant, which is incompatible with the IC constraint/equilibrium <font color=#F7B801> why can't mu be negative</font>. So the IC constraint also binds at optimum. 
+
+We can also see that $w^*$ is larger whereever if $P(\pi|0)/P(\pi|1)$ is smaller. So the agent should be rewarded at those points where their effort makes mroe of a difference in the outcomes. 
+
+This condition is called the Monotone Likelikhood Ratio Condition/Property MLRP. It's stronger than first-order stochastic dominance. 
+
+
+### Risk Neutral Agent
+
+Observable action case has any $w^*$ optimal where the participation constraint binds.  But in the unobservable case the principal is not worse off. They can simply set $w(\pi) = \pi - \alpha$ where $\alpha$ causes the participation constraint to bind again. 
+
+
+## Limited Liability
+
+We might be interested in the scenario in which wages cannot be negative. Then we have three constraints:
+
+
+## Continuous Effort

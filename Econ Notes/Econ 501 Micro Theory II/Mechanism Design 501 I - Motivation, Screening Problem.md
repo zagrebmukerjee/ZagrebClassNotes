@@ -111,7 +111,7 @@ $(q,t)$ satisfies $IC$ if and only if:
 title: Envelope Formula
 
 This formula will recur several times in this setting. In the general case, it says that if $U$ is absolutely continuous, then 
-$$U(\theta) = U(\underline \theta) + \int_{\underline \theta}^\theta V(q(\theta))$$
+$$U(\theta) = U(\underline \theta) + \int_{\underline \theta}^\theta V(q(x))dx$$
 
 
 ```

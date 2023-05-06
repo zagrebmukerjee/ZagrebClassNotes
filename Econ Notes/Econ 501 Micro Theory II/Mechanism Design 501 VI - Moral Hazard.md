@@ -86,7 +86,7 @@ Can qualitatively describe the loss for the principal. From the PC get:
 $$ \sum P(\pi|1) v(w^*(\pi)) = c $$
 From [[Jensen's inequality]], since $v$ is concave:
 $$ v\left(E[w(\pi)\right]) > E[v(w(\pi))]$$
-so, since $\bar w = v \inv(c)
+so, since $\bar w = v \inv(c)$
 $$ v\left( \sum P(\pi|1)w^*(\pi) \right) > c$$
 $$  \sum P(\pi|1)w^*(\pi)  > \bar w$$
  <font color=#F7B801>hide your effort, kids!</font>

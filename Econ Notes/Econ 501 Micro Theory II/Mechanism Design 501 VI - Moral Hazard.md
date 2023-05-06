@@ -143,7 +143,7 @@ Observable action case has any $w^*$ optimal where the participation constraint 
 
 ## Limited Liability
 
-We might be interested in the scenario in which wages cannot be negative. Then we have three constraints:
+We might be interested in the scenario in which wages cannot be negative. Then we have three constraints on the principal problem. 
 
 
 ## Continuous Effort

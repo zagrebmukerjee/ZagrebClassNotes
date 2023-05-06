@@ -34,7 +34,7 @@ We commonly assume $\sum t_i \geq 0$ - there is no 'outside funding'.
 
 Let's have utility take a quasilinear form $v(k, \theta_i) - t_i$ with $v$ continuous. This is linear in the numeraire-denominated transfers $t_i$ and not necessarily linear in $k, \theta_i$. For the auctions we simply had $v(k, \theta_i) = k_i \times \theta_i$. where $k_i$ was $1$ if you get the good, $0$ otherwise. 
 
-A <font color=gree>social choice function</font> is some $F, t$ with $F: \Theta \to \kappa$ and $t: \Theta \to \R^n$ with $\sum t > 0$. $F,t$ is <font color=gree>ex post Pareto Efficient</font> if, for ALL type profiles $\theta \in \Theta$, $\nexists k', \theta'$ such that $\forall i$ $u(k', t', \theta_i) \geq u(k, t, \theta_i)$, and for at least one $j$, $u_j(k', t', \theta_j) > u_j(k, t, \theta_j)$. That is to say, no alternative $k, t$ that makes everyone better off. 
+A <font color=gree>social choice function</font> is some $F, t$ with $F: \Theta \to \kappa$ and $t: \Theta \to \R^n$ with $\sum t > 0$. $F,t$ is <font color=gree>ex post Pareto Efficient</font> if, for ALL type profiles $\theta \in \Theta$, $\nexists k', t'$ such that $\forall i$ $u(k', t', \theta_i) \geq u(k, t, \theta_i)$, and for at least one $j$, $u_j(k', t', \theta_j) > u_j(k, t, \theta_j)$. That is to say, no alternative $k, t$ that makes everyone better off. 
 
 
 ### Efficiency Lemma

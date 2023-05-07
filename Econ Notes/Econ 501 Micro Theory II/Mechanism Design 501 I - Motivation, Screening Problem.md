@@ -175,6 +175,7 @@ $$\begin{align}
 
 ### Solving the Problem
 
-To solve this, assume that $\psi(\theta)$, the virtual type, is nondecreasing in $\theta$. In other words, we want $\frac{1 - F(\theta)}{f(\theta)}$ to be nonincreasing, or $\frac{f(\theta)}{1 - F(\theta)}$, the <font color=gree>hazard rate</font>, to be nondecreasing. It turns out this is not so bad of a condition - it is satisfied for lots of commonly used distributions. Given that: ignore for now $q$ nondecreasing. Maximize type by type, for each value of $\theta$ - ie choose $q$ to maximize the integrand. Then 
-$$q^*(\theta) \in \arg \max v(q(\theta))\psi(\theta) - c(q(\theta))$$
-and since $\psi$ is nondecreasing, so is $q^*$.  So this $q^*$, with $q(\underline \theta) = 0$, characterizes the solution. 
+To solve this, assume that $\psi(\theta)$, the virtual type, is nondecreasing in $\theta$. In other words, we want $\frac{1 - F(\theta)}{f(\theta)}$ to be nonincreasing, or $\frac{f(\theta)}{1 - F(\theta)}$, the <font color=gree>hazard rate</font>, to be nondecreasing. It turns out this is not so bad of a condition - it is satisfied for lots of commonly used distributions. Given that: ignore for now $q$ nondecreasing. Maximize type by type, for each value of $\theta$ - ie choose $q$ to maximize the integrand pointwise. Then 
+$$q^*(\theta) \in \underset{q}{\arg \max} v(q)\psi(\theta) - c(q)$$
+$$ \text{FOC: } 0 = \psi(\theta)v'(q) - c'(q)$$
+\and since $\psi$ is nondecreasing, so is $q^*$.  So this $q^*$, with $q(\underline \theta) = 0$, characterizes the solution. 

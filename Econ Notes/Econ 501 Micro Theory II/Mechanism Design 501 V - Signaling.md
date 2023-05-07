@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Thursday, May 4th 2023, 6:53 pm
-date updated: Sunday, May 7th 2023, 3:42 pm
+date updated: Sunday, May 7th 2023, 5:15 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -93,3 +93,22 @@ w(e(\theta')) - c(e(\theta'), \theta') &< \theta_H - c(e, \theta')\\
 In other words. Consider the payoffs under the firms' most optimistic belief for type $\theta$: $\theta_H - c(e, \theta)$. If one $\theta$ has expected utility above that cutoff, and another below, I need to believe that the one below has the low type and above the high type. 
 
 This criterion will rule out all pooling equilbria, and all but the most efficient separating equilibrium. 
+
+
+### Separating Equilibria
+
+We have $e(\theta_L) = 0$ and $e(\theta_H) \in [\underline e, \overline e]$ with $c(\underline e, \theta_L) = \theta_H - \theta_L = c(\underline e, \underline H)$, from the logic before. Now suppose there exists a PBE with $e^* > \underline e$. Fix $e \in (\underline e ,e^*)$. By the intuitive criterion we have 
+
+$$\begin{align}
+w(e(\theta_H) - c(e(\theta_H), \theta_H) &> \theta_H - c(e, \theta_H)\\
+\theta_H - c(e(\theta_H), \theta_H) &> \theta_H - c(e, \theta_H)
+\end{align}$$
+
+For the low type: $w(e(\theta_L)) - c(e(\theta_L), \theta_L) = \theta_L < \theta_H - c(e, \theta_L)$
+
+Using the definition of $\underline e$ can show that $e > \underline e \implies c(e, \theta_L) > c(\underline e, \theta_L) = \theta_H - \theta_L$. In other words the intutive criterion conditions are satisfied <font color=#F7B801>check algebra here</font>. So the firm must have $\mu(e) =1$ even though $e < e^*$. So why bother working more. 
+
+
+Can show that $e^* = \underline e$ is in fact supportable as a PBE with intuitive criterion. 
+
+

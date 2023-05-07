@@ -11,7 +11,7 @@ tags:
 - '#status/🚧'
 ---
 
-# [[Mechanism Design 501 VI - Moral Hazard]]
+# [[Mechanism Design 501 VI - Contracts and Moral Hazard]]
 <span style = "font-size:120%"><i >Zagreb Mukerjee </i></span>
 
 ## Problem

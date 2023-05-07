@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Thursday, May 4th 2023, 6:53 pm
-date updated: Sunday, May 7th 2023, 3:39 pm
+date updated: Sunday, May 7th 2023, 3:42 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -85,9 +85,11 @@ $$\begin{align}
 w(e(\theta)) - c(e(\theta), 0) &> \theta_H - c(e, \theta)\\
 w(e(\theta')) - c(e(\theta'), \theta') &< \theta_H - c(e, \theta')\\
 \implies \mu(e) = \begin{cases} 
-0 &\text{ if } \theta = \theta_L, \theta' = \theta_H\\
-1 &\text{ if } \theta = \theta_H, \theta' = \theta_L\\
+0 &\text{ if } \theta = \theta_H, \theta' = \theta_L\\
+1 &\text{ if } \theta = \theta_L, \theta' = \theta_H\\
 \end{cases}
 \end{align}$$
 
 In other words. Consider the payoffs under the firms' most optimistic belief for type $\theta$: $\theta_H - c(e, \theta)$. If one $\theta$ has expected utility above that cutoff, and another below, I need to believe that the one below has the low type and above the high type. 
+
+This criterion will rule out all pooling equilbria, and all but the most efficient separating equilibrium. 

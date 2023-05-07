@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Thursday, May 4th 2023, 6:53 pm
-date updated: Sunday, May 7th 2023, 2:56 pm
+date updated: Sunday, May 7th 2023, 3:39 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -56,7 +56,38 @@ Given separation the firm will have $w(e^*(\theta_i)) = \theta_i$. So the above 
 
 $$ \theta_H - \theta_L \leq c(e^*(\theta_H), \theta_L) - c(e^*(\theta_L), \theta_L)$$
 
-This makes intuitive sense. The test needs to be costly enough that the low type does not find it worthwhile to pretend. 
+as a requirement for a separating equilibrium. This makes intuitive sense. The test needs to be costly enough that the low type does not find it worthwhile to pretend. 
 
 
 The firm can support any $e^*$ in $[\underline e, \overline e]$ by having an off-path belief that $e \neq e^* \implies \theta = \theta_L$. 
+
+
+The payoffs are $\theta_L$ for the low type and $\theta_H - c(e^*, \theta_H)$ for the high type. There are an infinity of separating PBEs, even though they can clearly be Pareto ranked (since again the effort is useless). 
+
+### Pooling Partial Bayes Equilibrium
+
+This has $e(\theta_L) = e(\theta_H) = \bar e'$. Need $\lambda \theta_H + (1 - \lambda) \theta_L - c(\bar e', \theta_L) = 0$ or $\lambda (\theta_H - \theta_L) = c(\bar e', \theta_L)$. In other words, the firm will pay the wage $E[\theta]$ since they have no info - and this needs to be worth it for the low type. Here, we have $\bar e ' < \underline e$ from the separating equilibrium.
+
+This follows from the optimality condition for the low type: 
+
+$$w(\theta_L) - c(e(\theta_L),\theta_L) \geq \underbrace{w(0)}_{\geq \theta_L} - \underbrace{c(0, \theta_L)}_{=0}$$
+$$\lambda(\theta_H) + (1 - \lambda) \theta_L - c(e(\theta_L),\theta_L) \geq \theta_L$$
+
+Consider some $e^*$ in $[0, \overline e']$ This characterizes a pooling PBE: set $\mu(e) = \lambda$ if $e = e^*$ and $0$ otherwise. Again a sort of silly belief. 
+
+Again, a continuum of PBEs exists. 
+
+## Intuitive Criterion
+
+The <font color=gree>intuitive criterion</font> or <font color=gree>Cho-Kreps Criterion</font>: a PBE satisfies the criterion if 
+$$ \forall e \notin \{ e(\theta_H), e(\theta_L)\}, \forall \theta \neq \theta':$$
+$$\begin{align}
+w(e(\theta)) - c(e(\theta), 0) &> \theta_H - c(e, \theta)\\
+w(e(\theta')) - c(e(\theta'), \theta') &< \theta_H - c(e, \theta')\\
+\implies \mu(e) = \begin{cases} 
+0 &\text{ if } \theta = \theta_L, \theta' = \theta_H\\
+1 &\text{ if } \theta = \theta_H, \theta' = \theta_L\\
+\end{cases}
+\end{align}$$
+
+In other words. Consider the payoffs under the firms' most optimistic belief for type $\theta$: $\theta_H - c(e, \theta)$. If one $\theta$ has expected utility above that cutoff, and another below, I need to believe that the one below has the low type and above the high type. 

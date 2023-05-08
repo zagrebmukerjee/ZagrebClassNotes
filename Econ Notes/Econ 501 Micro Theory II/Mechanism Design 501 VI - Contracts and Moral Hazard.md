@@ -110,7 +110,7 @@ $$ - P(\pi|1) (v\inv)' (u(\pi)) + \lambda  P(\pi|1) + \mu[ P(\pi|1) - P(\pi|0)] 
 so this is linear in $u$. Here, $\lambda$ is the multiplier on the participation constraint and $\mu$ the multiplier on the IC constraint. Using the [[Derivative Rules|Derivative of an Inverse]] we have 
 
 $$(v\inv)' (u(\pi)) = v'[v\inv(u(\pi))]\inv = v'(w^*(\pi))\inv $$
-where the latter holds at equilibrium. Then some algebra on the condtiions: 
+where the latter holds at equilibrium. Then some algebra on the conditions: 
 
 $$\begin{align}
 0 &=  - P(\pi|1) (v\inv)' (u(\pi)) + \lambda  P(\pi|1) + \mu[ P(\pi|1) - P(\pi|0)] \\

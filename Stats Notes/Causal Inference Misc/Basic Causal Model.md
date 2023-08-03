@@ -1,7 +1,8 @@
 ---
 aliases: 
 - "Fundamental Problem of Causal Inference"
-date updated: Monday, January 2nd 2023, 2:27 pm
+date updated: Thursday, August 3rd 2023, 2:55 pm
+creation date: Thursday, April 7th 2022, 3:48 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -9,7 +10,6 @@ cssclass: math-class-note
 tags: 
 - '#types/classes/stats/causalinf'
 - '#topics/methods/causalinf'
-creation date: Thursday, April 7th 2022, 3:48 pm
 ---
 
 [[Permanent/Network/MOC/Causal Inference|Causal Inference]]

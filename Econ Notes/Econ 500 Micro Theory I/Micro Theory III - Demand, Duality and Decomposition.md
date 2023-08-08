@@ -178,7 +178,7 @@ $$\begin{align}
 &= h_i(p,u)+ \begin{bmatrix} p_1 & p_2 & \ldots \end{bmatrix}\begin{bmatrix} dh_1/dp_i \\ dh_2/dp_i\\ \vdots \end{bmatrix} \\
 &= h_i(p,u) + \sum_k^L p_k dh_k/dp_i\\
 \end{align}$$
-The sum $\sum p_k d h_k/dp_i$ is how much expenditure changes on good $k$ with a marginal change in the price of $i$. But since Hicksian demand is compensated, the total expenditure change must be $0$ - thus this becomes 
+The sum $\sum p_k d h_k/dp_i$ is how much optimal expenditure changes on good $k$ with a marginal change in the price of $i$. But since Hicksian demand is compensated, the total expenditure change must be $0$ - thus this becomes 
 
 $$ \frac{d}{dp_i}e(p,u) = h_i(p,u)$$
 This is Shepard's lemma. 

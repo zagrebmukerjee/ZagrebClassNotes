@@ -11,7 +11,7 @@ tags:
 - '#status/🚧'
 ---
 
-# [[Econometrics 551 VII - Bootstrap]]
+# [[🚧Econometrics 551 VII - Bootstrap]]
 <span style = "font-size:120%"><i >Zagreb Mukerjee </i></span>
 
 

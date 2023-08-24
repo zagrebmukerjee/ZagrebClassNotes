@@ -33,7 +33,7 @@ New game:
 ![[Game Theory III - Bayesian Games 2022-10-18 17.13.17.excalidraw|300]]
 
 children fighting in sandbox - a nice toy. do i take it? Will the toy's owner fight me? fighting is strictly dominated, conditional on my taking the toy? so I should take it. this is a normal formization type of result
-but another NE result is: don't take (player 1 believes player 2 will fight, so doesn't take)
+but another NE result is: don't take/fight (player 1 believes player 2 will fight, so doesn't take)
 
 
 Need another criterion to rule that out: don't include anticipation of non credible actions. this gets rid of (take, fight) as a strategy. 

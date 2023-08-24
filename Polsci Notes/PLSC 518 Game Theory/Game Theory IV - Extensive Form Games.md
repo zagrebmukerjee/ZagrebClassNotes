@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Tuesday, October 25th 2022, 3:42 pm
-date updated: Thursday, December 1st 2022, 9:57 am
+date updated: Thursday, August 24th 2023, 7:40 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -36,7 +36,7 @@ children fighting in sandbox - a nice toy. do i take it? Will the toy's owner fi
 but another NE result is: don't take/fight (player 1 believes player 2 will fight, so doesn't take)
 
 
-Need another criterion to rule that out: don't include anticipation of non credible actions. this gets rid of (take, fight) as a strategy. 
+Need another criterion to rule that out: don't include anticipation of non credible actions. this gets rid of (no take, fight) and (take, fight) as strat profiles. 
 
 Two related concepts:
 - backwards induction

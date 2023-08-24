@@ -149,9 +149,9 @@ This new demand is called the <font color=gree>Hicksian demand</font>, or compen
 - Strictly convex preferences mean that $h$ is SCX, and unique.
 
 
-For the latter: we want to show that $h$ is a convex set, given concave preferences. This is relatively straightforward. Consider $h'' = \lambda h + (1-\lambda) h'$ with $h, h' \in h(p, \bar u)$. By the concavity of preference it follows that $u$ is quasiconcave; then $u(h'') \geq u(h), u(h')$. So $h''$ is feasible under constraint $\bar u$. Given that $h, h' \in h(p, \bar u)$, then $ph = ph' = e(p,u)$, so $p h'' = \lambda ph + (1-\lambda) ph' = e(p, \bar u)$. 
+For the latter: we want to show that $h(p,u)$ is a convex set, given concave preferences. This is relatively straightforward. Consider convex combination $h'' = \lambda h + (1-\lambda) h'$ with $h, h' \in h(p, \bar u)$. By the concavity of preference it follows that $u$ is quasiconcave; then $u(h'') \geq u(h), u(h')$. So $h''$ is feasible under constraint $\bar u$. Given that $h, h' \in h(p, \bar u)$, then $ph = ph' = e(p,u)$, so $p h'' = \lambda ph + (1-\lambda) ph' = e(p, \bar u)$. 
 
-Under strictly convex preferences, $h'' \neq h', h \implies u(h'') > u(h), u(h')$; but $ph'' = e(p, \bar u)$, i.e. $h''$ an expenditure-minimizing bundle. If $ph'' = ph$, and $u(h'') > u(h)$, then we can reduce $h''$ to $j$ so that $pj < ph$ and $u(j) = \bar u$. Thus $h$ cannot be an expenditure minimizing bundle unless $h = h''$. So under strictly convex preferences, the Hicksian is a function. 
+Under strictly concave preferences, $h'' \neq h', h \implies u(h'') > u(h), u(h')$; but $ph'' = e(p, \bar u)$, i.e. $h''$ an expenditure-minimizing bundle. If $ph'' = ph$, and $u(h'') > u(h)$, then we can reduce $h''$ to $j$ so that $pj < ph$ and $u(j) = \bar u$. Thus $h$ cannot be an expenditure minimizing bundle unless $h = h''$. So under strictly convex preferences, the Hicksian is a function. 
 
 #### Hicksian Duality
 We can see the following: 

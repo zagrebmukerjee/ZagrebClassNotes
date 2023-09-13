@@ -1,7 +1,7 @@
 ---
 aliases:
 creation date: Wednesday, September 21st 2022, 3:49 pm
-date updated: Thursday, September 22nd 2022, 6:36 pm
+date updated: Wednesday, September 13th 2023, 2:59 pm
 
 notetype: "Math Class Note"
 cssclass: math-class-note
@@ -21,7 +21,7 @@ Integrating both sides can get us
 
 $$ \int \frac{d}{dx} f(x) \cdot g(x) dx = \int f'(x)g(x) dx + \int g'(x)f(x)dx $$
 $$f(x)g(x) - \int g'(x)f(x)dx = \int f'(x)g(x) dx $$
-Rewriting this result gets us IbP. Suppose I have the integral of a product:
+Rewriting this result gets us I.bP. Suppose I have the integral of a product:
 $$\int u(x) v(x) dx$$
 Looking at this, I might think that I'd rather integrate $u$ and differentiate $v$. So then I can write $U(x) = d/dx \, u(x)$, and use the rearrangement of the product rule.
 

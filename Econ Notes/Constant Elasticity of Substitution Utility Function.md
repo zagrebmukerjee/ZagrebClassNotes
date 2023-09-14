@@ -3,7 +3,7 @@ aliases:
   - CES Utility
   - CES utility function
 creation date: Thursday, September 14th 2023, 1:51 pm
-date updated: Thursday, September 14th 2023, 2:58 pm
+date updated: Thursday, September 14th 2023, 3:04 pm
 notetype: Math Class Note
 cssclasses:
   - math-class-note
@@ -50,6 +50,19 @@ $$\begin{align}
 &= \exp \lim_{\rho \to 0}  \frac{\ln [ax_1^\rho + (1-a)x_2^\rho]}{\rho}\\
 &= \exp \lim_{\rho \to 0}  \frac{\frac{d}{d\rho}\ln [ax_1^\rho + (1-a)x_2^\rho]}{\frac{d}{d\rho}\rho}\\
 &=\exp \lim_{\rho \to 0}  \frac{\frac{d}{d\rho}[ax_1^\rho + (1-a)x_2^\rho]}{ax_1^\rho + (1-a)x_2^\rho}\\
-&=\exp \lim_{\rho \to 0}  \frac{\rho ax_1^{\rho-1} + \rho (1-a)x_2^{\rho-1}}{ax_1^\rho + (1-a)x_2^\rho}\\
-&= \exp \frac{}{}
+&=\exp  \frac{ax_1^0 \ln x_1+ (1-a)x_2^0\ln x_2}{ax_1^0 + (1-a)x_2^0}\\
+&= x_1^ax_2^{1-a}\\
+\end{align}$$
+which is recognizable as the Cobb-Douglas. 
+
+#### Leontief
+
+The most annoying. 
+Again take the log and then use L'Hopital's Rule: 
+
+$$\begin{align}
+\lim_{\rho \to -\infty} U(x; \rho) &= \exp \lim_{\rho \to  -\infty} \ln U(x; \rho)\\
+&= \exp \lim_{\rho \to  -\infty}  \frac{\ln [ax_1^\rho + (1-a)x_2^\rho]}{\rho}\\
+&= \exp \lim_{\rho \to  -\infty}  \frac{\frac{d}{d\rho}\ln [ax_1^\rho + (1-a)x_2^\rho]}{\frac{d}{d\rho}\rho}\\
+&=\exp \lim_{\rho \to  -\infty}  \frac{\frac{d}{d\rho}[ax_1^\rho + (1-a)x_2^\rho]}{ax_1^\rho + (1-a)x_2^\rho}\\
 \end{align}$$

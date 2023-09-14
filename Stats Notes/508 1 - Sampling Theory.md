@@ -143,3 +143,13 @@ $$ f(D) = \begin{cases}
 1/3 &\text{ if } D = (0,0,1)\\
 0 &\text{ otherwise } 
 \end{cases}$$
+if potential outcomes are 
+$$ y(0) = (1,0,2)$$
+$$y(1) = (0,0,0)$$
+🚧
+
+
+Note - no generally unbiased/consistent est of variance of HT estimator
+
+
+

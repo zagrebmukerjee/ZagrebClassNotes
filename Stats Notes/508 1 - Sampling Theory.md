@@ -52,6 +52,7 @@ What about our nice properties like asymptotics and such, in this 'finite popula
 
 But HT sucks! Not location invariant. Very high estimate. 
 
+
 ### Hajek Estimator
 
 Pronounce Hayek
@@ -152,4 +153,14 @@ $$y(1) = (0,0,0)$$
 Note - no generally unbiased/consistent est of variance of HT estimator
 
 
+---
 
+How to choose $D$ to minimize sampling variability
+
+
+
+- 'simple random assignment' $\pi_i = \pi \forall i$ 
+- 'complete random assignment' - pick half
+- DiM estimator is the same as Hajek is also HT
+
+thad dunning thinks DiM is the only acceptable estimator for experiments, which is wrong

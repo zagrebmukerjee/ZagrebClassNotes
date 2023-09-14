@@ -164,3 +164,11 @@ How to choose $D$ to minimize sampling variability
 - DiM estimator is the same as Hajek is also HT
 
 thad dunning thinks DiM is the only acceptable estimator for experiments, which is wrong
+lengthy digression on how thad quit because they hired P
+and P set a trap for Thad in 
+
+regression $\beta_0 + \beta_1 D_i + \epsilon$ gets you HT estimator also
+
+
+assume IID to conservatively estimate the sampling variance of HT
+

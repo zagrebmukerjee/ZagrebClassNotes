@@ -79,3 +79,43 @@ then I can evaluate the instruments with agreement
 
 
 or if you have multiple outcomes. I know sometimes the answer is zero. if I get nonzero. 
+
+
+
+---
+why do this
+one major application - networks want finite population analysis. 
+
+can do a finite population central limit theorem
+chen and xiao? result
+- central limit theorems can be obtained like sO:
+- Assume there is some $c$
+$$Y_i/\pi_i \leq c \; \forall i$$
+then sufficiently understand $R_i$s 
+so central limit theorem can come from only the design world
+also need SUTVA though. which is nontrivial! if guy 2 sees me surveying guy 1 and changes their answer...
+
+in this case, $y_i$ being non random is in fact SUTVA
+
+-> aside
+missing data is also a causal inference problem
+
+
+---
+Fixed real-valued potential outcomes: 
+
+$$y(0) = (y_1(0), \ldots, y_n(0)$$ $$ y(1) = (y_1(1), \ldots, y_n(1))$$
+SUTVA: $Y_i = D_i y_i(1) + (1 - D_i)y_i(0)$
+$D_i$ are not necessarily iid
+We know $D$ and $Y$ but not the counterfactuals
+
+
+Desideratum $\Delta$ is ATE for finite population 
+
+$$ \Delta = \frac{1}{n} \sumn{i} \tau_i = n\inv \sumn{i} y_i(1) - y_i(0)$$
+Can have $P(D_i = 1)$ the 'marginal' probability of treatment for any unit 
+
+HT estimator is finite sample unbiased for $\Delta$ 
+which is 
+
+$$n \inv \sumn{i} \left[ \frac{Y_iD_i}{p_i}- \frac{Y_i(1-D_i)}{1 - p_i}\right]$$

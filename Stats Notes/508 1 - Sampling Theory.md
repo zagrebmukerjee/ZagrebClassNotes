@@ -1,7 +1,7 @@
 ---
 aliases: []
 creation date: Thursday, September 7th 2023, 4:07 pm
-date updated: Sunday, September 10th 2023, 1:51 pm
+date updated: Thursday, September 14th 2023, 4:29 pm
 notetype: Math Class Note
 cssclasses:
   - math-class-note
@@ -119,3 +119,27 @@ HT estimator is finite sample unbiased for $\Delta$
 which is 
 
 $$n \inv \sumn{i} \left[ \frac{Y_iD_i}{p_i}- \frac{Y_i(1-D_i)}{1 - p_i}\right]$$
+In fact this is unbiased for each $Y_i$. 
+
+-> aside
+differentiate between asymptotically unbiased and unbiased asymptotically
+
+$$\hat \theta = \begin{cases} 
+\theta &\text{ with probability } n-1/n\\
+\theta + N &\text{ with probability } 1/n
+\end{cases}$$
+so $E(\hat \theta)$ = $\theta + 1$
+Always biased! 
+But asymptotically unbiased
+
+
+---
+
+Example: Choose 1 of three units to treat with equal probability. 
+
+$$ f(D) = \begin{cases}
+1/3 &\text{ if } D = (1,0,0)\\
+1/3 &\text{ if } D = (0,1,0)\\
+1/3 &\text{ if } D = (0,0,1)\\
+0 &\text{ otherwise } 
+\end{cases}$$

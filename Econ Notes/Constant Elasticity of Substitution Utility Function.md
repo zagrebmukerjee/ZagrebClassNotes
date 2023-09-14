@@ -3,7 +3,7 @@ aliases:
   - CES Utility
   - CES utility function
 creation date: Thursday, September 14th 2023, 1:51 pm
-date updated: Thursday, September 14th 2023, 1:57 pm
+date updated: Thursday, September 14th 2023, 2:58 pm
 notetype: Math Class Note
 cssclasses:
   - math-class-note
@@ -33,9 +33,23 @@ i.e. preferences are homothetic.
 
 ### Limits of CES
 
-Many old friends are special cases of the CES utility function. 
+Many old friends are special cases of the CES utility function. I will make the case with the simple form $U(x_1, x_2) = (a x_1 ^\rho + (1 - a)x_2^\rho)^{1/\rho}$ for simplicity, where $\rho = \frac{\sigma-1}{\sigma}$
 
-As $\sigma \to \infty$ we get linear utility function
+#### Linear Utility
+Let $\sigma \to \infty$ which means $\rho \to 1$; then 
+$$U(x) = ax_1 + (1 - a)x)2$$
+
+
+#### Cobb-Douglas
+Let $\sigma \to 1$ which means $\rho \to 0$. 
+
+Take the log and then use L'Hopital's Rule: 
+
 $$\begin{align}
- \lim_{\sigma \to \infty} \left(\int_{\omega \in \Omega} x(\omega)^\frac{\sigma-1}{\sigma} d \omega\right)^\frac{\sigma}{\sigma-1} &=  \int_{\omega \in \Omega} x(\omega) d \omega
+\lim_{\rho \to 0} U(x; \rho) &= \exp \lim_{\rho \to 0} \ln U(x; \rho)\\
+&= \exp \lim_{\rho \to 0}  \frac{\ln [ax_1^\rho + (1-a)x_2^\rho]}{\rho}\\
+&= \exp \lim_{\rho \to 0}  \frac{\frac{d}{d\rho}\ln [ax_1^\rho + (1-a)x_2^\rho]}{\frac{d}{d\rho}\rho}\\
+&=\exp \lim_{\rho \to 0}  \frac{\frac{d}{d\rho}[ax_1^\rho + (1-a)x_2^\rho]}{ax_1^\rho + (1-a)x_2^\rho}\\
+&=\exp \lim_{\rho \to 0}  \frac{\rho ax_1^{\rho-1} + \rho (1-a)x_2^{\rho-1}}{ax_1^\rho + (1-a)x_2^\rho}\\
+&= \exp \frac{}{}
 \end{align}$$

@@ -57,7 +57,7 @@ which is recognizable as the Cobb-Douglas.
 
 #### Leontief
 
-The most annoying. 
+The most annoying. Let $\sigma \to 0$ which means $\rho \to - \infty$.
 Again take the log and then use L'Hopital's Rule: 
 
 $$\begin{align}

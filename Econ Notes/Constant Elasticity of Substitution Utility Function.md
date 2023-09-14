@@ -3,7 +3,7 @@ aliases:
   - CES Utility
   - CES utility function
 creation date: Thursday, September 14th 2023, 1:51 pm
-date updated: Thursday, September 14th 2023, 3:04 pm
+date updated: Thursday, September 14th 2023, 3:51 pm
 notetype: Math Class Note
 cssclasses:
   - math-class-note
@@ -65,4 +65,5 @@ $$\begin{align}
 &= \exp \lim_{\rho \to  -\infty}  \frac{\ln [ax_1^\rho + (1-a)x_2^\rho]}{\rho}\\
 &= \exp \lim_{\rho \to  -\infty}  \frac{\frac{d}{d\rho}\ln [ax_1^\rho + (1-a)x_2^\rho]}{\frac{d}{d\rho}\rho}\\
 &=\exp \lim_{\rho \to  -\infty}  \frac{\frac{d}{d\rho}[ax_1^\rho + (1-a)x_2^\rho]}{ax_1^\rho + (1-a)x_2^\rho}\\
+&=\exp \lim_{\rho \to  -\infty}  \frac{[ax_1^\rho \ln x_1 + (1-a)x_2^\rho \ln x_2}{ax_1^\rho + (1-a)x_2^\rho}\\
 \end{align}$$

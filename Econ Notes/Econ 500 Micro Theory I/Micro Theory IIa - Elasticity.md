@@ -1,13 +1,13 @@
 ---
 aliases:
+  - Elasticity
 creation date: Wednesday, September 14th 2022, 2:34 pm
 date updated: Friday, October 7th 2022, 11:40 am
-
-notetype: "Math Class Note"
-cssclass: math-class-note
-
-tags: 
-- '#types/classes'
+notetype: Math Class Note
+cssclasses:
+  - math-class-note
+tags:
+  - "#types/classes"
 ---
 
 # [[Micro Theory IIa - Elasticity]]

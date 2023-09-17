@@ -14,8 +14,8 @@ tags:
 
 # [[Constant Elasticity of Substitution Utility Function]]
 <span style = "font-size:120%"><i >Zagreb Mukerjee </i></span>
-
-###
+[[Micro Theory IIa - Elasticity]]
+### Intro
 
 A utility function that has a constant elasticity of substitution across goods. One example of the form is in terms of a Lebesgue integral over a set of goods $\Omega = \{ \omega\}$, with consumption $x(\omega)$: 
 
@@ -67,3 +67,9 @@ $$\begin{align}
 &=\exp \lim_{\rho \to  -\infty}  \frac{\frac{d}{d\rho}[ax_1^\rho + (1-a)x_2^\rho]}{ax_1^\rho + (1-a)x_2^\rho}\\
 &=\exp \lim_{\rho \to  -\infty}  \frac{[ax_1^\rho \ln x_1 + (1-a)x_2^\rho \ln x_2}{ax_1^\rho + (1-a)x_2^\rho}\\
 \end{align}$$
+Now define $m$ as $\min \{x_1, x_2\}$. Let $y_1, y_2$ = $x_1/m, x_2/m$. Then 
+
+$$\begin{align}
+\lim_{\rho \to -\infty} U(x; \rho) &= \exp \lim_{\rho \to  -\infty}  \frac{[ay_1^\rho \ln x_1 + (1-a)y_2^\rho \ln x_2}{ay_1^\rho + (1-a)y_2^\rho}\\
+\end{align}$$
+Suppose WLOG $x_1 < x_2$; then $y_2 > 1$ and so $y_2^{\rho}$ g

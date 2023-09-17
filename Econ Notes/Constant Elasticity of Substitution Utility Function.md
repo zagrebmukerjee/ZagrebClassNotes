@@ -3,7 +3,7 @@ aliases:
   - CES Utility
   - CES utility function
 creation date: Thursday, September 14th 2023, 1:51 pm
-date updated: Sunday, September 17th 2023, 4:22 pm
+date updated: Sunday, September 17th 2023, 4:32 pm
 notetype: Math Class Note
 cssclasses:
   - math-class-note
@@ -45,12 +45,20 @@ $$\begin{align}
 x(\omega) &= \left(\frac{p(\omega)}{p(\omega')} \right)^{-\sigma} x(\omega')
 \end{align}$$
 
-From the $\lambda$ FOC we have
+Fix some $\omega'$. From the $\lambda$ FOC we have
 
 $$\begin{align}
 E &= \int_{\omega \in \Omega} x(\omega)p(\omega) d\omega \\
-& 
+&= \int_{\omega \in \Omega} \frac{p(\omega)^{-\sigma}}{p(\omega')^{-\sigma}}  x(\omega')p(\omega) d\omega\\
+&= x(\omega')p(\omega')^{\sigma} \int_{\omega \in \Omega} p(\omega)^{1-\sigma}  d\omega\\
+x(w') &= \frac{p(\omega')^{-\sigma}}{\int_{\omega \in \Omega} p(\omega)^{1-\sigma}  d\omega}E
 \end{align}$$
+This is the Marshallian demand for good $\omega'$. We can simplify this further by defining the Spence-Dixit-Stiglitz Price Index specific to set $\Omega$, prices $p()$, and $\sigma$:
+
+$$ P \equiv \left( \int_{\omega \in \Omega} p(\omega)^{1-\sigma}\right)^\frac{1}{1-\sigma}$$
+Then 
+
+$$x(w') = \frac{p(\omega')^{-\sigma}}{P^{1-\sigma}}E$$
 
 
 ## Constancy of Elasticity

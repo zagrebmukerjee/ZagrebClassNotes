@@ -3,7 +3,7 @@ aliases:
   - CES Utility
   - CES utility function
 creation date: Thursday, September 14th 2023, 1:51 pm
-date updated: Sunday, September 17th 2023, 4:07 pm
+date updated: Sunday, September 17th 2023, 4:22 pm
 notetype: Math Class Note
 cssclasses:
   - math-class-note
@@ -31,21 +31,45 @@ U(\{\lambda x(\omega)\}) &= \left(\int_{\omega \in \Omega} (\lambda x(\omega))^\
 i.e. preferences are homothetic. 
 
 ### UMP
+With income $E$ and prices $p(\omega)$ the Lagrangian is:
 
-$$ \mathcal L = \left(\int_{\omega \in \Omega} x(\omega)^\frac{\sigma-1}{\sigma} d \omega\right)^\frac{\sigma}{\sigma-1} - \lambda \int_{\omega \in \Omega} c(\omega)p(\omega) d\omega$$
+$$ \mathcal L = \left(\int_{\omega \in \Omega} x(\omega)^\frac{\sigma-1}{\sigma} d \omega\right)^\frac{\sigma}{\sigma-1} + \lambda\left( E -  \int_{\omega \in \Omega} x(\omega)p(\omega) d\omega\right)$$
 
-Fix some $\omega$. The first order condition for $x(\omega)$ is 
+Fix some $\omega, \omega'$. The first order condition for $x(\omega)$ is 
 
 $$\begin{align}
 \frac{d\mathcal L}{dx(\omega)} &= \frac{\sigma}{\sigma-1}  \left(\int_{\omega \in \Omega} x(\omega)^\frac{\sigma-1}{\sigma} d \omega\right)^{\frac{\sigma}{\sigma-1}-1} \frac{\sigma-1}{\sigma} x(\omega)^{\frac{\sigma - 1}{\sigma} -1} - \lambda p(\omega)\\
-\lambda p(\omega)&= \left(\int_{\omega \in \Omega} x(\omega)^\frac{\sigma-1}{\sigma} d \omega\right)^{\frac{1}{\sigma-1}}\frac{\sigma-1}{\sigma} x(\omega)^{\frac{- 1}{\sigma}}
+\lambda p(\omega)&= \left(\int_{\omega \in \Omega} x(\omega)^\frac{\sigma-1}{\sigma} d \omega\right)^{\frac{1}{\sigma-1}}x(\omega)^{-\frac{1}{\sigma}}\\
+\frac{p(\omega)}{p(\omega')} &= \frac{x(\omega)^{-\frac{1}{\sigma}}}{x(\omega')^{-\frac{1}{\sigma}}}\\
+\frac{x(\omega)}{x(\omega')} &= \left(\frac{p(\omega)}{p(\omega')} \right)^{-\sigma}\\
+x(\omega) &= \left(\frac{p(\omega)}{p(\omega')} \right)^{-\sigma} x(\omega')
 \end{align}$$
+
+From the $\lambda$ FOC we have
+
+$$\begin{align}
+E &= \int_{\omega \in \Omega} x(\omega)p(\omega) d\omega \\
+& 
+\end{align}$$
+
+
 ## Constancy of Elasticity
 
 The [[Micro Theory IIa - Elasticity|Elasticity]] of substitution - in expenditure terms - is defined as 
 $$\begin{align}
-\varepsilon_{\omega\omega'} &= \frac{d \ln \left[ p(\omega) c(\omega)/p(\omega') c(\omega')\right] }{d\ln \left[p(\omega)/p (\omega') \right]}\\
+\varepsilon_{\omega\omega'} &= \frac{d \ln \left[ p(\omega) x(\omega)/p(\omega') x(\omega')\right] }{d\ln \left[p(\omega)/p (\omega') \right]}\\
 \end{align}$$
+Use the first order conditions to find 
+$$ \ln \left[p(\omega)/p (\omega') \right] = -\frac{1}{\sigma}\ln \left[x(\omega)/x(\omega') \right] $$
+Then
+$$\begin{align}
+\varepsilon_{\omega\omega'} &= \frac{d \ln \left[ p(\omega)/p(\omega')] + \ln[ x(\omega)/x(\omega')\right] }{d-\frac{1}{\sigma}\ln \ln \left[x(\omega)/x(\omega') \right]}\\
+&= \frac{d \ln \left[ p(\omega)/p(\omega')] + \ln[ x(\omega)/x(\omega')\right] }{d-\frac{1}{\sigma}\ln \ln \left[x(\omega)/x(\omega') \right]}\\
+&= \frac{d -\frac{1}{\sigma}\ln \left[x(\omega)/x(\omega') \right]}{d-\frac{1}{\sigma}\ln  \left[x(\omega)/x(\omega') \right]} - \frac{d\ln[ x(\omega)/x(\omega')]}{d\frac{1}{\sigma}\ln  \left[x(\omega)/x(\omega') \right]}\\
+&= 1 - \sigma
+\end{align}$$
+as desired.
+
 ## Limits of CES
 
 Many old friends are special cases of the CES utility function. I will make the case with the simple form $U(x_1, x_2) = (a x_1 ^\rho + (1 - a)x_2^\rho)^{1/\rho}$ for simplicity, where $\rho = \frac{\sigma-1}{\sigma}$

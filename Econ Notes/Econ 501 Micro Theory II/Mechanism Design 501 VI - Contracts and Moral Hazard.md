@@ -72,7 +72,7 @@ $$ \min_{w()} \sum P(\pi|e) w(\pi) \text{ subject to } \sum P(\pi|e)v(w(\pi) - c
 But there is a new constraint, the incentive compatibility. The principal needs to get the worker not to choose $e' \neq e$. So
 $$ \sum P(\pi|e)v(w(\pi)) - ce \geq \sum P(\pi|e')v(w(\pi)) - ce'$$
 
-It's easy to imlement $e= 0$, by setting constant wage $\bar w = v\inv(0)$. In this case the worker does nothing and has no utility. IC is trivially respected, since work is monotonically bad. The principal's payoff is the same in the observable action case. 
+It's easy to implement $e= 0$, by setting constant wage $\bar w = v\inv(0)$. In this case the worker does nothing and has no utility. IC is trivially respected, since work is monotonically bad. The principal's payoff is the same in the observable action case. 
 
 The principal might choose this if they think that, observable or not, an agent's effort is unrelated to the profits. 
 
@@ -99,7 +99,7 @@ So far we have made observations about efficiency purely from the constraint, wi
 $$ \min_{w(\cdot)} \sum P(\pi|1)w(\pi) \text{ subject to } \sum P(\pi|1)v(w(\pi)) -c \geq 0$$
 with also the IC constraint, 
 $$ \sum P(\pi|1) v(w(\pi)) - c \geq \sum P(\pi|0)v(w(\pi))$$
-We can do a chance of variables $u( \pi) \equiv v(w(\pi))$ whcih makes the problem 
+We can do a chance of variables $u( \pi) \equiv v(w(\pi))$ which makes the problem 
 $$\max - \sum p(\pi|1) v\inv [u(\pi)] \text{ subject to } \sum P(\pi|1) u(\pi) - c = 0$$
 $$ \sum P(\pi|1)u(\pi) - c \geq \sum P(\pi|0)$$
 The objective function is concave: $v$ is concave, so $v\inv$ is convex, so $-v\inv$ is concave again. So Kuhn Tucker conditions can be used and solving this reparametrized problem will solve the main one.

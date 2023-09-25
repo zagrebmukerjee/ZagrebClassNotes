@@ -2,7 +2,7 @@
 aliases:
   - Elasticity
 creation date: Wednesday, September 14th 2022, 2:34 pm
-date updated: Friday, October 7th 2022, 11:40 am
+date updated: Monday, September 25th 2023, 11:20 am
 notetype: Math Class Note
 cssclasses:
   - math-class-note

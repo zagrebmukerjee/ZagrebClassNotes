@@ -3,7 +3,7 @@ aliases:
   - CES Utility
   - CES utility function
 creation date: Thursday, September 14th 2023, 1:51 pm
-date updated: Sunday, September 17th 2023, 4:32 pm
+date updated: Tuesday, September 26th 2023, 11:11 pm
 notetype: Math Class Note
 cssclasses:
   - math-class-note
@@ -80,7 +80,7 @@ as desired.
 
 ## Limits of CES
 
-Many old friends are special cases of the CES utility function. I will make the case with the simple form $U(x_1, x_2) = (a x_1 ^\rho + (1 - a)x_2^\rho)^{1/\rho}$ for simplicity, where $\rho = \frac{\sigma-1}{\sigma}$
+Many old friends are special cases of the CES utility function. I will make the case with the form $U(x_1, x_2) = (a x_1 ^\rho + (1 - a)x_2^\rho)^{1/\rho}$ for simplicity, where $\rho = \frac{\sigma-1}{\sigma}$
 
 #### Linear Utility
 Let $\sigma \to \infty$ which means $\rho \to 1$; then 

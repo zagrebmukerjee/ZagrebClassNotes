@@ -4,7 +4,7 @@ aliases:
   - CES utility function
   - Constant Elasticity of Substitution
 creation date: Thursday, September 14th 2023, 1:51 pm
-date updated: Wednesday, September 27th 2023, 3:57 pm
+date updated: Thursday, September 28th 2023, 8:34 pm
 notetype: Math Class Note
 cssclasses:
   - math-class-note
@@ -60,6 +60,9 @@ $$ P \equiv \left( \int_{\omega \in \Omega} p(\omega)^{1-\sigma}\right)^\frac{1}
 Then 
 
 $$x(w') = \frac{p(\omega')^{-\sigma}}{P^{1-\sigma}}E$$
+In terms of expenditure share: 
+
+$$x(w')p(\omega') = \frac{p(\omega')^{1-\sigma}}{P^{1-\sigma}}E$$
 
 ## Constancy of Elasticity
 

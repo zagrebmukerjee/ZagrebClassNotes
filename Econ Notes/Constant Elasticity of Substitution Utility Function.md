@@ -4,7 +4,7 @@ aliases:
   - CES utility function
   - Constant Elasticity of Substitution
 creation date: Thursday, September 14th 2023, 1:51 pm
-date updated: Thursday, September 28th 2023, 8:34 pm
+date updated: Friday, September 29th 2023, 10:35 pm
 notetype: Math Class Note
 cssclasses:
   - math-class-note
@@ -31,7 +31,7 @@ U(\{\lambda x(\omega)\}) &= \left(\int_{\omega \in \Omega} (\lambda x(\omega))^\
 \end{align}$$
 i.e. preferences are homothetic. 
 
-### UMP
+## Utility Maximization/Cost Minimization
 With income $E$ and prices $p(\omega)$ the Lagrangian is:
 
 $$ \mathcal L = \left(\int_{\omega \in \Omega} x(\omega)^\frac{\sigma-1}{\sigma} d \omega\right)^\frac{\sigma}{\sigma-1} + \lambda\left( E -  \int_{\omega \in \Omega} x(\omega)p(\omega) d\omega\right)$$
@@ -45,6 +45,9 @@ $$\begin{align}
 \frac{x(\omega)}{x(\omega')} &= \left(\frac{p(\omega)}{p(\omega')} \right)^{-\sigma}\\
 x(\omega) &= \left(\frac{p(\omega)}{p(\omega')} \right)^{-\sigma} x(\omega')
 \end{align}$$
+
+
+### Marshallian
 
 Fix some $\omega'$. From the $\lambda$ FOC we have
 
@@ -63,6 +66,8 @@ $$x(w') = \frac{p(\omega')^{-\sigma}}{P^{1-\sigma}}E$$
 In terms of expenditure share: 
 
 $$x(w')p(\omega') = \frac{p(\omega')^{1-\sigma}}{P^{1-\sigma}}E$$
+###
+
 
 ## Constancy of Elasticity
 

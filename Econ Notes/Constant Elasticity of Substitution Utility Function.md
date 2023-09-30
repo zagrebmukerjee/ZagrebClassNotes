@@ -4,7 +4,7 @@ aliases:
   - CES utility function
   - Constant Elasticity of Substitution
 creation date: Thursday, September 14th 2023, 1:51 pm
-date updated: Friday, September 29th 2023, 10:35 pm
+date updated: Friday, September 29th 2023, 10:46 pm
 notetype: Math Class Note
 cssclasses:
   - math-class-note
@@ -31,7 +31,7 @@ U(\{\lambda x(\omega)\}) &= \left(\int_{\omega \in \Omega} (\lambda x(\omega))^\
 \end{align}$$
 i.e. preferences are homothetic. 
 
-## Utility Maximization/Cost Minimization
+## Utility Maximization
 With income $E$ and prices $p(\omega)$ the Lagrangian is:
 
 $$ \mathcal L = \left(\int_{\omega \in \Omega} x(\omega)^\frac{\sigma-1}{\sigma} d \omega\right)^\frac{\sigma}{\sigma-1} + \lambda\left( E -  \int_{\omega \in \Omega} x(\omega)p(\omega) d\omega\right)$$
@@ -63,10 +63,22 @@ $$ P \equiv \left( \int_{\omega \in \Omega} p(\omega)^{1-\sigma}\right)^\frac{1}
 Then 
 
 $$x(w') = \frac{p(\omega')^{-\sigma}}{P^{1-\sigma}}E$$
-In terms of expenditure share: 
+In terms of expenditure: 
 
-$$x(w')p(\omega') = \frac{p(\omega')^{1-\sigma}}{P^{1-\sigma}}E$$
-###
+$$x(w')= \frac{p(\omega')^{1-\sigma}}{P^{1-\sigma}}E$$
+
+Expenditure share: 
+$$x(w')= \frac{p(\omega')^{1-\sigma}}{P^{1-\sigma}}$$ 
+### Indirect Utility
+
+Plug the Marshallians into the utility function 
+$$\begin{align}
+U(\{x(\omega)\}) &= \left(\int_{\omega \in \Omega} x(\omega)^\frac{\sigma-1}{\sigma} d \omega\right)^\frac{\sigma}{\sigma-1}\\
+&= \left(\int_{\omega \in \Omega} \left(\frac{p(\omega)^{-\sigma}}{P^{1-\sigma}}E \right)^\frac{\sigma-1}{\sigma} d \omega\right)^\frac{\sigma}{\sigma-1}\\
+&= \frac{E}{P^{1-\sigma}}  \left(\int_{\omega \in \Omega} (p(\omega)^{-\sigma})^\frac{\sigma-1}{\sigma}d \omega\right)^\frac{\sigma}{\sigma-1}\\
+&= \frac{E}{P^{1-\sigma}}  \left(\int_{\omega \in \Omega} (p(\omega)^{-\sigma})^\frac{\sigma-1}{\sigma}d \omega\right)^\frac{\sigma}{\sigma-1}\\
+\end{align}$$
+## Cost Minimization
 
 
 ## Constancy of Elasticity

@@ -4,7 +4,7 @@ aliases:
   - CES utility function
   - Constant Elasticity of Substitution
 creation date: Thursday, September 14th 2023, 1:51 pm
-date updated: Friday, September 29th 2023, 10:46 pm
+date updated: Friday, September 29th 2023, 10:55 pm
 notetype: Math Class Note
 cssclasses:
   - math-class-note
@@ -60,6 +60,8 @@ x(w') &= \frac{p(\omega')^{-\sigma}}{\int_{\omega \in \Omega} p(\omega)^{1-\sigm
 This is the Marshallian demand for good $\omega'$. We can simplify this further by defining the Spence-Dixit-Stiglitz Price Index specific to set $\Omega$, prices $p()$, and $\sigma$:
 
 $$ P \equiv \left( \int_{\omega \in \Omega} p(\omega)^{1-\sigma}\right)^\frac{1}{1-\sigma}$$
+
+<font color=#F7B801>Is this the price of a util</font>
 Then 
 
 $$x(w') = \frac{p(\omega')^{-\sigma}}{P^{1-\sigma}}E$$
@@ -76,8 +78,9 @@ $$\begin{align}
 U(\{x(\omega)\}) &= \left(\int_{\omega \in \Omega} x(\omega)^\frac{\sigma-1}{\sigma} d \omega\right)^\frac{\sigma}{\sigma-1}\\
 &= \left(\int_{\omega \in \Omega} \left(\frac{p(\omega)^{-\sigma}}{P^{1-\sigma}}E \right)^\frac{\sigma-1}{\sigma} d \omega\right)^\frac{\sigma}{\sigma-1}\\
 &= \frac{E}{P^{1-\sigma}}  \left(\int_{\omega \in \Omega} (p(\omega)^{-\sigma})^\frac{\sigma-1}{\sigma}d \omega\right)^\frac{\sigma}{\sigma-1}\\
-&= \frac{E}{P^{1-\sigma}}  \left(\int_{\omega \in \Omega} (p(\omega)^{-\sigma})^\frac{\sigma-1}{\sigma}d \omega\right)^\frac{\sigma}{\sigma-1}\\
 \end{align}$$
+
+somehow becomes $E/P$
 ## Cost Minimization
 
 

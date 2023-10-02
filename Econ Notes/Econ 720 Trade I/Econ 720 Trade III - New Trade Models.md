@@ -1,7 +1,7 @@
 ---
 aliases: []
 creation date: Wednesday, September 13th 2023, 3:36 pm
-date updated: Thursday, September 14th 2023, 1:53 pm
+date updated: Monday, October 2nd 2023, 7:47 pm
 notetype: Math Class Note
 cssclasses:
   - math-class-note
@@ -27,7 +27,7 @@ A bottoms-up consumer theory/GE approach.
 
 Aggregate across goods with a Lebesgue integral, i.e. total expenditure is $\int_{\omega \in \Omega} c_j(\omega) p_j(\omega) d\omega$
 
-Focus on the [[CES Uti, with parameter $\sigma >1$ the elasticity of substitution. 
+Focus on the CES Uti, with parameter $\sigma >1$ the elasticity of substitution. 
 
 $$ V_j(\{c_j(\omega)\}_{\omega \in \Omega}) = \left( \int_{\omega \in \Omega} c_j(\omega)^\frac{\sigma - 1}{\sigma}d\omega\right)^\frac{\sigma}{\sigma - 1} \text{ subject to } \int_{\omega \in \Omega} c_j(\omega) p_j(\omega)d\omega = E_j$$
 The first order conditions are: 

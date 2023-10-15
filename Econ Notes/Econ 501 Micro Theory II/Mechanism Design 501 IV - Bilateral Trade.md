@@ -59,7 +59,7 @@ So $E(U_B^G + U_S^G)$ is $2S + k_B + k_S$, where $S$ is the social surplus. But 
 
 
 %%Proof from Masaki slides - incomplete%%
-%%First recall the [[Mechanism Design 501 I - Motivation, Screening Problem#Myerson 1981 Lemma and Envelope Formula|Myerson 1981 Lemma]]. A mechanism is IC if and only if $q$ is increasing in $\theta$ and $U(\theta_i) = U(\underline \theta) + \int_{\underline \theta}^{\theta_i} q(x)dx$. 
+%%First recall th[](Mechanism%20Design%20501%20I%20-%20Motivation,%20Screening%20Problem.md#Myerson%201981%20Lemma%20and%20Envelope%20Formula)]]. A mechanism is IC if and only if $q$ is increasing in $\theta$ and $U(\theta_i) = U(\underline \theta) + \int_{\underline \theta}^{\theta_i} q(x)dx$. 
 
 Suppose a contradiction, ie. $\Theta_B \cap \Theta_S \neq \emptyset$ but there is a mechanism with the $4$ properties. Then we will compute two expressions for the ex-ante social welfare, from budget balance and from IC, and show them to be contradictory. 
 

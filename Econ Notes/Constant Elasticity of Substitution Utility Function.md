@@ -4,7 +4,7 @@ aliases:
   - CES utility function
   - Constant Elasticity of Substitution
 creation date: Thursday, September 14th 2023, 1:51 pm
-date updated: Friday, September 29th 2023, 10:55 pm
+date updated: Monday, October 2nd 2023, 3:03 pm
 notetype: Math Class Note
 cssclasses:
   - math-class-note
@@ -18,50 +18,49 @@ tags:
 [[Micro Theory IIa - Elasticity]]
 ## Intro
 
-A utility function that has a constant elasticity of substitution across goods. One example of the form is in terms of a Lebesgue integral over a set of goods $\Omega = \{ \omega\}$, with consumption $x(\omega)$: 
+A utility function that has a constant elasticity of substitution across goods. A fairly general example of the form is in terms of a Lebesgue integral over a set of goods $\Omega = \{ \omega\}$, with consumption $c(\omega)$: 
 
-$$U(\{x(\omega)\}) = \left(\int_{\omega \in \Omega} x(\omega)^\frac{\sigma-1}{\sigma} d \omega\right)^\frac{\sigma}{\sigma-1}$$
+$$U(\{c(\omega)\}) = \left(\int_{\omega \in \Omega} c(\omega)^\frac{\sigma-1}{\sigma} d \omega\right)^\frac{\sigma}{\sigma-1}$$
 Has many nice properties. Most obviously homogeneous of degree $1$: 
 
 $$\begin{align}
-U(\{\lambda x(\omega)\}) &= \left(\int_{\omega \in \Omega} (\lambda x(\omega))^\frac{\sigma-1}{\sigma} d \omega\right)^\frac{\sigma}{\sigma-1}\\
-&=  \left(\lambda^\frac{\sigma - 1}{\sigma} \int_{\omega \in \Omega} x(\omega)^\frac{\sigma-1}{\sigma} d \omega\right)^\frac{\sigma}{\sigma-1}\\
-&= \lambda \left(\int_{\omega \in \Omega} x(\omega)^\frac{\sigma-1}{\sigma} d \omega\right)^\frac{\sigma}{\sigma-1}\\
-&= \lambda U(\{x(\omega\})\\
+U(\{\lambda c(\omega)\}) &= \left(\int_{\omega \in \Omega} (\lambda c(\omega))^\frac{\sigma-1}{\sigma} d \omega\right)^\frac{\sigma}{\sigma-1}\\
+&=  \left(\lambda^\frac{\sigma - 1}{\sigma} \int_{\omega \in \Omega} c(\omega)^\frac{\sigma-1}{\sigma} d \omega\right)^\frac{\sigma}{\sigma-1}\\
+&= \lambda \left(\int_{\omega \in \Omega} c(\omega)^\frac{\sigma-1}{\sigma} d \omega\right)^\frac{\sigma}{\sigma-1}\\
+&= \lambda U(\{c(\omega\})\\
 \end{align}$$
 i.e. preferences are homothetic. 
 
 ## Utility Maximization
 With income $E$ and prices $p(\omega)$ the Lagrangian is:
 
-$$ \mathcal L = \left(\int_{\omega \in \Omega} x(\omega)^\frac{\sigma-1}{\sigma} d \omega\right)^\frac{\sigma}{\sigma-1} + \lambda\left( E -  \int_{\omega \in \Omega} x(\omega)p(\omega) d\omega\right)$$
+$$ \mathcal L = \left(\int_{\omega \in \Omega} c(\omega)^\frac{\sigma-1}{\sigma} d \omega\right)^\frac{\sigma}{\sigma-1} + \lambda\left( E -  \int_{\omega \in \Omega} c(\omega)p(\omega) d\omega\right)$$
 
-Fix some $\omega, \omega'$. The first order condition for $x(\omega)$ is 
+Fix some $\omega, \omega'$. The first order condition for $c(\omega)$ is 
 
 $$\begin{align}
-\frac{d\mathcal L}{dx(\omega)} &= \frac{\sigma}{\sigma-1}  \left(\int_{\omega \in \Omega} x(\omega)^\frac{\sigma-1}{\sigma} d \omega\right)^{\frac{\sigma}{\sigma-1}-1} \frac{\sigma-1}{\sigma} x(\omega)^{\frac{\sigma - 1}{\sigma} -1} - \lambda p(\omega)\\
-\lambda p(\omega)&= \left(\int_{\omega \in \Omega} x(\omega)^\frac{\sigma-1}{\sigma} d \omega\right)^{\frac{1}{\sigma-1}}x(\omega)^{-\frac{1}{\sigma}}\\
-\frac{p(\omega)}{p(\omega')} &= \frac{x(\omega)^{-\frac{1}{\sigma}}}{x(\omega')^{-\frac{1}{\sigma}}}\\
-\frac{x(\omega)}{x(\omega')} &= \left(\frac{p(\omega)}{p(\omega')} \right)^{-\sigma}\\
-x(\omega) &= \left(\frac{p(\omega)}{p(\omega')} \right)^{-\sigma} x(\omega')
+\frac{d\mathcal L}{dc(\omega)} &= \frac{\sigma}{\sigma-1}  \left(\int_{\omega \in \Omega} x(\omega)^\frac{\sigma-1}{\sigma} d \omega\right)^{\frac{\sigma}{\sigma-1}-1} \frac{\sigma-1}{\sigma} c(\omega)^{\frac{\sigma - 1}{\sigma} -1} - \lambda p(\omega)\\
+\lambda p(\omega)&= \left(\int_{\omega \in \Omega} c(\omega)^\frac{\sigma-1}{\sigma} d \omega\right)^{\frac{1}{\sigma-1}}c(\omega)^{-\frac{1}{\sigma}}\\
+\frac{p(\omega)}{p(\omega')} &= \frac{c(\omega)^{-\frac{1}{\sigma}}}{c(\omega')^{-\frac{1}{\sigma}}}\\
+\frac{c(\omega)}{c(\omega')} &= \left(\frac{p(\omega)}{p(\omega')} \right)^{-\sigma}\\
+c(\omega) &= \left(\frac{p(\omega)}{p(\omega')} \right)^{-\sigma} c(\omega')
 \end{align}$$
 
 
 ### Marshallian
 
-Fix some $\omega'$. From the $\lambda$ FOC we have
+Fix some $\omega'$. Let $x(\omega')$ be the Marshallian demand for good $\omega'$. From the $\lambda$ FOC we have
 
 $$\begin{align}
-E &= \int_{\omega \in \Omega} x(\omega)p(\omega) d\omega \\
+E &= \int_{\omega \in \Omega} c(\omega)p(\omega) d\omega \\
 &= \int_{\omega \in \Omega} \frac{p(\omega)^{-\sigma}}{p(\omega')^{-\sigma}}  x(\omega')p(\omega) d\omega\\
 &= x(\omega')p(\omega')^{\sigma} \int_{\omega \in \Omega} p(\omega)^{1-\sigma}  d\omega\\
 x(w') &= \frac{p(\omega')^{-\sigma}}{\int_{\omega \in \Omega} p(\omega)^{1-\sigma}  d\omega}E
 \end{align}$$
-This is the Marshallian demand for good $\omega'$. We can simplify this further by defining the Spence-Dixit-Stiglitz Price Index specific to set $\Omega$, prices $p()$, and $\sigma$:
+We can simplify this further by defining the Spence-Dixit-Stiglitz Price Index specific to set $\Omega$, prices $p()$, and $\sigma$:
 
 $$ P \equiv \left( \int_{\omega \in \Omega} p(\omega)^{1-\sigma}\right)^\frac{1}{1-\sigma}$$
 
-<font color=#F7B801>Is this the price of a util</font>
 Then 
 
 $$x(w') = \frac{p(\omega')^{-\sigma}}{P^{1-\sigma}}E$$
@@ -75,13 +74,52 @@ $$x(w')= \frac{p(\omega')^{1-\sigma}}{P^{1-\sigma}}$$
 
 Plug the Marshallians into the utility function 
 $$\begin{align}
-U(\{x(\omega)\}) &= \left(\int_{\omega \in \Omega} x(\omega)^\frac{\sigma-1}{\sigma} d \omega\right)^\frac{\sigma}{\sigma-1}\\
+V(\{p(\omega)\}, E) &= U(\{x(\omega)\}) \\
+&= \left(\int_{\omega \in \Omega} x(\omega)^\frac{\sigma-1}{\sigma} d \omega\right)^\frac{\sigma}{\sigma-1}\\
 &= \left(\int_{\omega \in \Omega} \left(\frac{p(\omega)^{-\sigma}}{P^{1-\sigma}}E \right)^\frac{\sigma-1}{\sigma} d \omega\right)^\frac{\sigma}{\sigma-1}\\
 &= \frac{E}{P^{1-\sigma}}  \left(\int_{\omega \in \Omega} (p(\omega)^{-\sigma})^\frac{\sigma-1}{\sigma}d \omega\right)^\frac{\sigma}{\sigma-1}\\
 \end{align}$$
 
-somehow becomes $E/P$
+somehow becomes $E/P$ <font color=#F7B801>why</font>
+
 ## Cost Minimization
+
+Problem is dual to above: 
+$$\begin{align}
+\mathcal L &= \int_{\Omega} p(\omega)c(\omega) - \lambda(\bar u - U(\{c(\omega)\})\\ 
+\frac{d\mathcal L}{dc(\omega)} &= p(\omega') - \lambda \frac{dU}{dc(\omega')}  \\
+p(\omega') &= \lambda \left( \int_\Omega c(\omega)^\frac{\sigma-1}{\sigma}\right)^\frac{1}{\sigma-1}c(\omega')^{-1/\sigma}\\
+\frac{p(\omega)}{p(\omega')} &= \frac{ c(\omega')^{1/\sigma}}{ c(\omega)^{1/\sigma}}\\
+c(\omega) &= c(\omega') \left(\frac{p(\omega')}{p(\omega)}\right)^\sigma
+\end{align}$$
+
+### Hicksian
+
+Plug into the other FOC:
+
+$$\begin{align}
+\bar U &= U(\{c(\omega)\})\\
+&= \left(\int_{\omega \in \Omega} c(\omega)^\frac{\sigma-1}{\sigma} d \omega\right)^\frac{\sigma}{\sigma-1} \\
+&= \left(\int_{\omega \in \Omega} \left( h(\omega') \left(\frac{p(\omega')}{p(\omega)}\right)^\sigma\right)^\frac{\sigma-1}{\sigma} d \omega\right)^\frac{\sigma}{\sigma-1} \\
+&= h(\omega')p(\omega')^{\sigma}\left( \int p(\omega)^{1-\sigma} d\omega\right)^\frac{\sigma}{\sigma-1} \\
+&= h(\omega')p(\omega')^{\sigma}\left( P^\frac{1}{1-\sigma}\right)^\frac{\sigma}{\sigma-1} \\
+&= h(\omega')p(\omega')^{\sigma}P^{-\omega} \\
+h(\omega'; \{p(\omega)\}, \bar U) &= \frac{p(\omega')^{-\sigma}}{P^{-\sigma}} \bar U
+\end{align}$$
+
+Can then plug back in to the FOC:
+$$\begin{align}
+p(\omega') &= \lambda \frac{dU}{dc(\omega')}\\
+\frac{dU}{dc(\omega')}\bigg|_{c(\omega) = h}&= \left( \int_\Omega h(\omega)^\frac{\sigma-1}{\sigma}d\omega\right)^\frac{1}{\sigma-1}h(\omega')^{-1/\sigma}\\
+&= \left( \int_\Omega\left(  \frac{p(\omega)^{-\sigma}}{P^{-\sigma}} \bar Ud\omega\right)^\frac{\sigma-1}{\sigma}\right)^\frac{1}{\sigma-1}\left( \frac{p(\omega')^{-\sigma}}{P^{-\sigma}} \bar U \right)^{-1/\sigma}\\
+&= \bar U^{1/\sigma}\left( \frac{p(\omega')}{P} \right)\bar U^{-1/\sigma}\\
+\end{align}$$
+As an aside:
+$$
+\begin{align}\lambda &= p(\omega')\bigg/ \frac{dU}{dc(\omega')}\\
+&= p(\omega')\big/ (p(\omega')/P)\\
+&= P
+\end{align}$$
 
 
 ## Constancy of Elasticity
@@ -90,6 +128,7 @@ The [[Micro Theory IIa - Elasticity|Elasticity]] of substitution - in expenditur
 $$\begin{align}
 \varepsilon_{\omega\omega'} &= \frac{d \ln \left[ p(\omega) x(\omega)/p(\omega') x(\omega')\right] }{d\ln \left[p(\omega)/p (\omega') \right]}\\
 \end{align}$$
+ie. if the price of $\omega$ rises $1\%$ more than that of $\omega'$, how will the expenditures shift?
 Use the first order conditions to find 
 $$ \ln \left[p(\omega)/p (\omega') \right] = -\frac{1}{\sigma}\ln \left[x(\omega)/x(\omega') \right] $$
 Then
@@ -148,3 +187,9 @@ $$\lim_{\rho \to -\infty} U(x; \rho) = \exp \lim_{\rho \to  -\infty}  \ln x_1 = 
 Since $x_1$ was chosen as the minimum: 
 
 $$ \lim_{\rho \to -\infty} U(x; \rho) = \min \{x_1, x_2\}$$
+
+
+## Two-Stage Property
+
+Shared by all homothetic utility functions. I know that $\lambda = P$ the price index. So 
+🚧

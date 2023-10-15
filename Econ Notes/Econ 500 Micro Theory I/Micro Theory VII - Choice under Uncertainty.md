@@ -128,4 +128,8 @@ This can be extended to a more complex density by induction.
 
 ## Problems with VNM EU
 Oh no
+
+Allais
+
+story about Allais and Savage
 #status/section/🚧 

@@ -1,15 +1,16 @@
 ---
 aliases:
-- "Hicksian demand"
+  - Hicksian demand
+  - Shepard's Lemma
+  - Slutsky Equation (micro)
 creation date: Friday, September 23rd 2022, 11:46 am
-date updated: Saturday, November 26th 2022, 3:48 pm
-
-notetype: "Math Class Note"
-cssclass: math-class-note
-
-tags: 
-- '#types/classes/econ'
-- '#topics/econ/theory/micro'
+date updated: Sunday, October 1st 2023, 7:29 pm
+notetype: Math Class Note
+cssclasses:
+  - math-class-note
+tags:
+  - "#types/classes/econ"
+  - "#topics/econ/theory/micro"
 ---
 
 # [[Micro Theory III - Demand, Duality and Decomposition]]
@@ -217,3 +218,16 @@ v(p,w) &= u(x(p,w))\\
 \end{align}$$
 or 
 $$ x_i(p,w) = -\frac{\partial v/\partial p_i}{\partial v/\partial w}$$
+
+
+## Slutsky Equation
+
+$$\frac{\partial x_i(p,w)}{\partial p_j} = \frac{\partial h_i(p, v(p,w))}{\partial p_j} -  \frac{\partial x_i(p,w)}{\partial w} x_j(p,w) $$
+Decomposition of price change effects into 'substitution effect' and 'income effect'. If a price rises, I will substitute away from the good, but I will still be weakly worse off from decreased real income. 
+
+Because Hicksian demand is compensated it isolates the 'pure' substitution effect - i.e. I bring you back to $v(p,w)$. The second term can be thought of as 'uncompensating' the Hicksian. 
+
+Can also write this in elasticity terms: 
+
+$$ \varepsilon^M_{ij}(p,w) = \varepsilon^H_{ij}(p,w) - x_j(p,w)\varepsilon^M_{iw}$$
+where $\varepsilon^H_{ij}$ is a log change in Hicksian demand for good $i$ given a log change in price $j$, $\varepsilon^M$ the same concept but for Marshallian demand..

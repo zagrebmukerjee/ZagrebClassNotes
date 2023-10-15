@@ -1,14 +1,15 @@
 ---
 aliases:
+  - Compensating Variation
+  - Equivalent Variation
 creation date: Monday, September 26th 2022, 10:58 am
 date updated: Thursday, September 29th 2022, 4:00 pm
-
-notetype: "Math Class Note"
-cssclass: math-class-note
-
-tags: 
-- '#types/classes'
-- '#status/🚧'
+notetype: Math Class Note
+cssclasses:
+  - math-class-note
+tags:
+  - "#types/classes"
+  - "#status/🚧"
 ---
 
 # [[Micro Theory V - Welfare]]

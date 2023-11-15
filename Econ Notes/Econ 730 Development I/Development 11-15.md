@@ -47,7 +47,22 @@ in eqm, $\tau>0$ and so $W^{ii}(q) > W^{ij}(q)$. can see this differentiating $W
 So all agents want to match in restricted pool. only date coethnics. 
 cost of entry is increasing + convex in probability $\alpha^i$, $C(\alpha^i)$. effort in eqm is decreasing as $q^i$ increases - not necess to be homogenous.  
 or match in common pool
+The stochasticity lets u get rid of individual heterogeneity
 
 Cost - your optimal partner in pool will be almost certainly less nice than outside the pool
 <font color=#F7B801>is there an externality? strategic decision</font>
-The stochasticity lets u get rid of individual heterogeneity
+$A^i$ and $A^j$ are probs that individuals are matched in restricted pools
+
+So prob of homogamous marriage for someone in common pool: 
+
+$$\Pi = \frac{(1 - A^i)q^i}{(1 - A^i)q^i + (1 - A^j)q^j}$$
+so prob of homogamous marriage is 
+$$ \alpha^i + (1 - \alpha_i)\Pi$$
+argument from symmetry shows NE $\alpha^i = A_i$, $\alpha^j = A^j$ 
+
+then choose $\alpha^i$ based on backwards induction on child decision
+
+then solve out for eqm $\alpha, q$, and $\pi^i$, prob that someone in $i$ world will have homogam 
+
+### Dynamics
+now we have $q^i_t$. Probability that father trait $i$ -> kid with type $i$ is $P_{ii}\pi^i (q^i)[\tau] + (1 - \pi^j(q^i))q^i$

@@ -65,4 +65,19 @@ then choose $\alpha^i$ based on backwards induction on child decision
 then solve out for eqm $\alpha, q$, and $\pi^i$, prob that someone in $i$ world will have homogam 
 
 ### Dynamics
-now we have $q^i_t$. Probability that father trait $i$ -> kid with type $i$ is $P_{ii}\pi^i (q^i)[\tau] + (1 - \pi^j(q^i))q^i$
+now we have $q^i_t$. Probability that father trait $i$ -> kid with type $i$ is $P_{ii} = \pi^i[\tau^i + (1 - \tau^i)q^i] + (1 - \pi^i)q^i$
+cross pollination: 
+$P_{ji}$ is a fun of $q_j$ $= \pi^j [1- \tau^j]q^j + [1  - \pi^j]q^i$
+
+So these are transition equations or difference equations or whatever. so 
+
+$q^i_{t+1} - q^i_t = q_t^i(1 - q^i_t)\Phi(q_t^i)$ 
+where $\Phi = \pi^i \tau^i  - \pi^j \tau^j$ 
+
+Steady state when 
+$$\begin{align}
+0 &= q_{t+1}^i - q_t^i\\
+&= q_t^i(1 - q^i_t)\Phi(q_t^i)
+\end{align}$$
+Can have $q = 0$ but also can have $\Phi=0$
+Since $\pi$ is increasing in $q$, $\tau$ decreasing, we can have this thing balance out at some point to have $\pi^i \tau^i = \pi^j \tau^j$

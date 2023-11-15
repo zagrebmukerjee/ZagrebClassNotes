@@ -50,3 +50,25 @@ Then: rely on Helpman Itskhoki Muendler Redding 2016 on estimating wage bill cha
 
 Also compute indirect exposures: how many degrees are you away from trade shock, look at buyers/sellers who trade; in the lit
 
+Then a result: firm exposure to trade -> big boost in probability of vote (3.4%)
+Indirect exposure also big effect, 2/3 of direct
+
+a concern, worker select themselves into firms
+"the identification police, they are always going to have concerns"
+not a dealbreaker, usually a way to convince people that the concern is surmountable. Build the case
+- eg indirect exports was a big concern for identification! Soln: model the spillovers
+
+### Mechanisms
+poeple seeemed very informed about the FTA. (from a survey)
+'when you're doing a seminar, an anecdote never hurts': public broadcast of the FTA debate was more watched than anything else besides when CR opened world cup against DE
+
+
+
+Explore role of political views: there was a pres election result year before. classroom changes were v small. So controlled for pro FTA political candidate (proxy of pol affiliation). If it survives, really good test
+
+
+expenditures channel
+get cons bundle imputed for HH based on income, occ, etc
+heroically assume price delta for the basket based on some ideas in the lit
+
+not ideal but impossible to speak to otherwise. 

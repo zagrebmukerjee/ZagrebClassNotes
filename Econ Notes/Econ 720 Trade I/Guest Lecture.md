@@ -31,8 +31,22 @@ why might individual care about FTA: some discussion of real incomes; lower pric
 ### Voting Mechanics
 
 people are assigned a school to vote based on geography, a classroom alphabetically. 1 classroom/voting board has about 500 on average. 
-For each: list of !Ds assigned to voting board; referendum at 
+For each: list of !Ds assigned to voting board; referendum outcomes
 Decisions FTA Y/N
 59% of 18+ voted
 
+link IDs to employer-employee data but only 42% match. many male-breadwinner HHs. how to capture their exposure? Happened to know that PLSC folks in PR had used marriage records so she knew the merge was possible, went to National Registry to get it
+
+after that 62% of voters mapped to firm
+NOTE: this paper WAS published in a great journal (review of economic studies) despite that
+The authors framed the 62% as - this is huge, way beyond what anyone has, given the secret ballot! 
+	- qs: selection into electorate/missingness; ecological inf at classroom levels
+
+Then: rely on Helpman Itskhoki Muendler Redding 2016 on estimating wage bill change from tariffs
+- for firm i product j can compute exposure 
+	- merge imports data to firm data. tons of imports didn't merge what. realized this is imports by individuals (eg purchase from Amazon) - a cool paper in itself. 
+	- France also has individual imports data of this sort. US is in bills of lading (expensive)
+- Changes in tariffs are from MFN tozero. sort of like an exo shift. 
+
+Also compute indirect exposures: how many degrees are you away from trade shock, look at buyers/sellers who trade; in the lit
 

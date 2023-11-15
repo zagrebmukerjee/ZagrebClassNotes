@@ -36,4 +36,18 @@ Cost $H(\tau^i)$ increasig and convex, $H(0) = 0$. Effort choice.
 
 So parents do a backward induction type: depending on what happens. <font color=#F7B801>immediate conclusion is that minorities try super hard to socialize their child. But then what are the dynamics</font>
 
-Let $V_{ij}$ be parent utility from child $i$
+Let $V^{ij}$ be parent of type $i$ utility from chil of type $j$, so $i \neq j \implies $V^{ii}> V^{ij}$
+
+Then utility maximand is straightforward: 
+$$[\tau^i  + (1 - \tau^i) q^i] V^{ii} + (1 - \tau^i)(1 - q^i)V^{ij}$$
+So indirect function then is $W^{ii}(q)$ which is EU for type $i$ in homogamous marriage. 
+EU for parent in heterogamous - no agreement, so 
+$$W^{ij}(q) = q^iV^{ii} + (1-q^i)V^{ij}$$
+in eqm, $\tau>0$ and so $W^{ii}(q) > W^{ij}(q)$. can see this differentiating $W^{ii}$. 
+So all agents want to match in restricted pool. only date coethnics. 
+cost of entry is increasing + convex in probability $\alpha^i$, $C(\alpha^i)$. effort in eqm is decreasing as $q^i$ increases - not necess to be homogenous.  
+or match in common pool
+
+Cost - your optimal partner in pool will be almost certainly less nice than outside the pool
+<font color=#F7B801>is there an externality? strategic decision</font>
+The stochasticity lets u get rid of individual heterogeneity

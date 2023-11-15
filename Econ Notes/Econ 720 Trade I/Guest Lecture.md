@@ -85,3 +85,21 @@ Instrument. link costa rican migrants in US cities to relatives in costa rica, m
 
 If product becomes popular in US City A. then look at the relatives of the X country migrants in City A. An exogenous shock to demand for this product on those social networks in X country. Do local retailers respond
 - seems yes. is the mechanism product discovery, or new info about/creation of demand
+
+Crucially from customs one has data on _individual_ level 'imports' ie online purchases 
+domestic networks from a venmo equivalent to get at friends network. family is known. coworkers also. 
+
+and we have retailers frm tax data
+
+
+yale has nielsen data which has BARCODE level data on consumption (locationally?) a lot of this is from supermarkets.
+<font color=#F7B801> can I use this to get location level data on gains from trade OR on pricing </font>
+<font color=#F7B801> amazon primed question - individual level online shopping? Problem, no variations</font>
+
+cons expenditure quarterly by MSA, bridge: fruman et al 17, hottman monarch 20' HS4/HS6 level
+imports: monthly by customs districts, 20K product codes, 2015-19 - Most variation at HS6/10. Acosta cox 23. Peter schott has this data
+validate with US custom districts data, debit card transactions data
+
+
+Melissa Dell has a cool paper on trade induced violence
+also a cool test. take ur observed whatever and see vs. placebo randomization of shifts and/or shares. 

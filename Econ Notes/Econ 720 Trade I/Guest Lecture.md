@@ -72,3 +72,16 @@ get cons bundle imputed for HH based on income, occ, etc
 heroically assume price delta for the basket based on some ideas in the lit
 
 not ideal but impossible to speak to otherwise. 
+
+
+## Second paper
+
+online shopping woohoo. 1/3 ppl is online shopper. Breaks link between geo and cons bundle/varieties available
+
+something about peer effects: impact of online shopping adoption on indiv networks, firm behvr
+'internet penetration' instrument not good enough any more
+
+Instrument. link costa rican migrants in US cities to relatives in costa rica, merging voter data from consulates (mandatory voting) with data on family links. 
+
+If product becomes popular in US City A. then look at the relatives of the X country migrants in City A. An exogenous shock to demand for this product on those social networks in X country. Do local retailers respond
+- seems yes. is the mechanism product discovery, or new info about/creation of demand

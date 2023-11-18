@@ -3,6 +3,7 @@ aliases:
   - CES Utility
   - CES utility function
   - Constant Elasticity of Substitution
+  - Cobb-Douglas
 creation date: Thursday, September 14th 2023, 1:51 pm
 date updated: Monday, October 2nd 2023, 3:03 pm
 notetype: Math Class Note
@@ -193,3 +194,8 @@ $$ \lim_{\rho \to -\infty} U(x; \rho) = \min \{x_1, x_2\}$$
 
 Shared by all homothetic utility functions. I know that $\lambda = P$ the price index. So 
 🚧
+
+
+## Cobb-Douglas: Expansion
+
+Suppose Cobb-Douglas production. Minimize unit 

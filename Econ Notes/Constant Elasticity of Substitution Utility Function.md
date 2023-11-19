@@ -198,4 +198,9 @@ Shared by all homothetic utility functions. I know that $\lambda = P$ the price 
 
 ## Cobb-Douglas: Expansion
 
-Suppose Cobb-Douglas production. Minimize unit 
+Suppose Cobb-Douglas production. The firm wants to maximize profit
+
+$$\pi = \max_x p \prod x_i^{\alpha_i} - \sum_i w_i x_i$$
+May be salutary to approach this from the direction of cost minimization. Minimize the unit cost: 
+
+$$ c_1 = \min_{x} \sum_i w_i x_i \text{ subject to } $$

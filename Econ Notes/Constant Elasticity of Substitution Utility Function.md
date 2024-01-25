@@ -5,7 +5,7 @@ aliases:
   - Constant Elasticity of Substitution
   - Cobb-Douglas
 creation date: Thursday, September 14th 2023, 1:51 pm
-date updated: Monday, October 2nd 2023, 3:03 pm
+date updated: Thursday, January 25th 2024, 10:09 am
 notetype: Math Class Note
 cssclasses:
   - math-class-note
@@ -22,6 +22,10 @@ tags:
 A utility function that has a constant elasticity of substitution across goods. A fairly general example of the form is in terms of a Lebesgue integral over a set of goods $\Omega = \{ \omega\}$, with consumption $c(\omega)$: 
 
 $$U(\{c(\omega)\}) = \left(\int_{\omega \in \Omega} c(\omega)^\frac{\sigma-1}{\sigma} d \omega\right)^\frac{\sigma}{\sigma-1}$$
+
+Alternatively written in terms of $\rho = \sigma-1/\sigma$: 
+$$U(\{c(\omega)\}) = \left(\int_{\omega \in \Omega} c(\omega)^\rho d \omega\right)^\frac{1}{\rho}$$
+
 Has many nice properties. Most obviously homogeneous of degree $1$: 
 
 $$\begin{align}
@@ -31,6 +35,7 @@ U(\{\lambda c(\omega)\}) &= \left(\int_{\omega \in \Omega} (\lambda c(\omega))^\
 &= \lambda U(\{c(\omega\})\\
 \end{align}$$
 i.e. preferences are homothetic. 
+
 
 ## Utility Maximization
 With income $E$ and prices $p(\omega)$ the Lagrangian is:

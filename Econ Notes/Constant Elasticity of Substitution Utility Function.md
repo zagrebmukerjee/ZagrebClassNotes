@@ -5,7 +5,7 @@ aliases:
   - Constant Elasticity of Substitution
   - Cobb-Douglas
 creation date: Thursday, September 14th 2023, 1:51 pm
-date updated: Thursday, January 25th 2024, 10:09 am
+date updated: Friday, April 4th 2025, 10:34 pm
 notetype: Math Class Note
 cssclasses:
   - math-class-note
@@ -85,6 +85,9 @@ V(\{p(\omega)\}, E) &= U(\{x(\omega)\}) \\
 &= \left(\int_{\omega \in \Omega} \left(\frac{p(\omega)^{-\sigma}}{P^{1-\sigma}}E \right)^\frac{\sigma-1}{\sigma} d \omega\right)^\frac{\sigma}{\sigma-1}\\
 &= \frac{E}{P^{1-\sigma}}  \left(\int_{\omega \in \Omega} (p(\omega)^{-\sigma})^\frac{\sigma-1}{\sigma}d \omega\right)^\frac{\sigma}{\sigma-1}\\
 &= \frac{E}{P^{1-\sigma}}  \left(\int_{\omega \in \Omega} (p(\omega)^{1- \sigma}d \omega\right)^\frac{\sigma}{\sigma-1}\\
+&= \frac{E}{P^{1-\sigma}}  \left(\left(\int_{\omega \in \Omega} (p(\omega)^{1- \sigma}d \omega\right)^\frac{1}{\sigma-1}\right)^\sigma\\
+&= \frac{E}{P^{1-\sigma}}  P^\sigma\\
+&= E/P
 \end{align}$$
 
 

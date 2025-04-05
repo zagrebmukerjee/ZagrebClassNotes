@@ -84,9 +84,10 @@ V(\{p(\omega)\}, E) &= U(\{x(\omega)\}) \\
 &= \left(\int_{\omega \in \Omega} x(\omega)^\frac{\sigma-1}{\sigma} d \omega\right)^\frac{\sigma}{\sigma-1}\\
 &= \left(\int_{\omega \in \Omega} \left(\frac{p(\omega)^{-\sigma}}{P^{1-\sigma}}E \right)^\frac{\sigma-1}{\sigma} d \omega\right)^\frac{\sigma}{\sigma-1}\\
 &= \frac{E}{P^{1-\sigma}}  \left(\int_{\omega \in \Omega} (p(\omega)^{-\sigma})^\frac{\sigma-1}{\sigma}d \omega\right)^\frac{\sigma}{\sigma-1}\\
+&= \frac{E}{P^{1-\sigma}}  \left(\int_{\omega \in \Omega} (p(\omega)^{1- \sigma}d \omega\right)^\frac{\sigma}{\sigma-1}\\
 \end{align}$$
 
-somehow becomes $E/P$ <font color=#F7B801>why</font>
+
 
 ## Cost Minimization
 
